@@ -157,10 +157,10 @@ class fx_biquad_filter: public fx_effect {
    *                                1.0,
    *                                BIQUAD_TYPE_LPF ); 
    * ```
-    * 
+   * 
 	 * @param[in]  filt_freq   This is the cutoff frequency or center frequency of the filter in Hertz.  
 	 * @param[in]  filt_resonance  This is how quickly the filter “rolls off” – is it a gentle, wide filter or a tight narrow filter?  A value of 1.0 is no resonance; > 1.0 is more resonant, < 1.0 is less resonant.
-	 * @param[in]  filt_type   Filters come in lots of colors.  Low-pass filters (LPF) cut higher frequencies.  High-pass filters (HPF) cut lower frequencies.  Band-pass filters (BPF) cut frequencies on both sides of the filter frequency.  And notch filters cut the frequencies at the filter frequency and allow others to pass.
+   * @param[in]  filt_type   Filters come in lots of colors.  Low-pass filters (LPF) cut higher frequencies.  High-pass filters (HPF) cut lower frequencies.  Band-pass filters (BPF) cut frequencies on both sides of the filter frequency.  And notch filters cut the frequencies at the filter frequency and allow others to pass.
 	 */
   fx_biquad_filter(float filt_freq, float filt_resonance, BIQUAD_FILTER_TYPE filt_type) :
     node_ctrl_freq(NODE_IN, NODE_FLOAT, "node_ctrl_freq", this, FX_BIQUAD_PARAM_ID_FREQ),
@@ -187,7 +187,7 @@ class fx_biquad_filter: public fx_effect {
   /**
    * @brief      Basic constructor for biquad filter
    *
-  * ``` CPP
+   * ``` CPP
    * // A stronger 6th order 200Hz low-pass filter to just let bass frequencies through
    * fx_biquad_filter   simple_filt(200.0, 
    *                                1.0,
@@ -344,7 +344,7 @@ class fx_biquad_filter: public fx_effect {
   /**
    * @brief      Sets the resonance; 1.0 is none (0.7071)
    *
-   * @param[in]  resonance     The resonance (must be between 0.01 and 100.0)
+   * @param[in]  filt_resonance     The resonance (must be between 0.01 and 100.0)
    */
   void set_resonance(float filt_resonance) { 
 

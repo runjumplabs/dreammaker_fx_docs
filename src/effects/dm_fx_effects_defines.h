@@ -93,18 +93,18 @@ typedef enum {
 /**
  * @brief: Type of biquad filter
  *
- * YTIDrkwS6vigSyEDITY
+ * Here's a nice video explaining the various types of filters: https://www.youtube.com/watch?v=rkwS6vigSyE
  *
  * \ingroup Enumerations
  */
 typedef enum {
-    BIQUAD_TYPE_LPF,            /**< Low-pass filter */
-    BIQUAD_TYPE_HPF,            /**< High-pass filter */
-    BIQUAD_TYPE_BPF,            /**< Band-pass filter */
-    BIQUAD_TYPE_NOTCH,          /**< Notch filter */
-    BIQUAD_TYPE_PEAKING,        /**< Peaking filter (used in parametric filters) */
-    BIQUAD_TYPE_L_SHELF,        /**< Low shelf */
-    BIQUAD_TYPE_H_SHELF,        /**< High shelf */
+    BIQUAD_TYPE_LPF,            /**< Low pass filter – cuts high frequencies, allows low frequencies to pass */
+    BIQUAD_TYPE_HPF,            /**< High pass filter – cuts low frequencies, allows high frequencies to pass */
+    BIQUAD_TYPE_BPF,            /**< Band pass filter – cuts low and high frequencies outside of center/cutoff frequency of filter (like wah pedal) */
+    BIQUAD_TYPE_NOTCH,          /**< Notch filter – cuts a specific frequency and lets other frequencies pass (basically opposite of a band-pass filter)  */
+    BIQUAD_TYPE_PEAKING,        /**< Peaking filter – increases or decreases gain at a specific frequency (like those used in parametric filters) */
+    BIQUAD_TYPE_L_SHELF,        /**< Low shelf filter – lets all frequencies pass but increases or reduces frequencies below the shelf frequency by specified amount */
+    BIQUAD_TYPE_H_SHELF,        /**< High shelf filter – lets all frequencies pass but increases or reduces frequencies above the shelf frequency by specified amount */
     BIQUAD_TYPE_TOTAL
 } BIQUAD_FILTER_TYPE;
 
@@ -114,10 +114,10 @@ typedef enum {
  * \ingroup Enumerations
  */
 typedef enum {
-    BIQUAD_ORDER_2=1,           /**< 2nd order  */
+    BIQUAD_ORDER_2=1,           /**< 2nd order  (less intense filtering effect) */
     BIQUAD_ORDER_4=2,           /**< 4th order  */
     BIQUAD_ORDER_6=3,           /**< 6th order  */
-    BIQUAD_ORDER_8=4,           /**< 8th order  */
+    BIQUAD_ORDER_8=4,           /**< 8th order  (more intense filtering effect) */
     BIQUAD_ORDER_TOTAL
 } BIQUAD_FILTER_ORDER;
 
@@ -135,14 +135,14 @@ typedef enum {
  * \ingroup Enumerations
  */
 typedef enum {
-    SMOOTH_CLIP,                /**< Smooth polynomial clipping like tube distortion  */
-    SMOOTHER_CLIP,              /**< Smoother polynomial clipping like tube distortion  */
-    SMOOTH_FUZZ,                /**< Smooth polynomial clipping that is rectified like a fuzz pedal  */
-    BIT_CRUSHER,                /**< Digital bit reduction */
-    SAMPLE_RATE_CRUSHER,        /**< Digital sample-rate reduction */
-    SHAPER,                      /**< Wave shaping with sine function - introduces interesting high frequencies components */
-    DIGITAL_PULVERIZER,         /**< Digital destruction */
-    FLIP_FLOP_OCTAVE,           /**< Flip flop octave circuit emulation */
+    SMOOTH_CLIP,                /**< A warm clipping function (based on polynomial expansion) that mimics the analog warmth of a tube amp. Parameters: `param_1` : The Clipping threshold is typically (0.01 to 1.0).  Values closer to 0.0 are more aggressive.  Start with 0.1. `param_2` : input drive The input drive is a multiplier that determines how input signal is multiplied.  Values between 2 and 6 will be warmer, softer clipping whereas values greater than 10 will heavier distortions. */
+    SMOOTHER_CLIP,              /**< A warmer clipping function (based on polynomial expansion) that mimics the analog warmth of a tube amp.Parameters `param_1` : The Clipping threshold is typically (0.01 to 1.0).  Values closer to 0.0 are more aggressive.  Start with 0.1.  `param_2` : input drive The input drive is a multiplier that determines how input signal is multiplied.  Values between 2 and 6 will be warmer, softer clipping whereas values greater than 10 will heavier distortions. */
+    SMOOTH_FUZZ,                /**< A warm clipping function (based on polynomial expansion) that mimics the analog warmth of a tube amp and also rectifies the signal creating an octave multiplying effect.Parameters `param_1` : he Clipping threshold is typically (0.01 to 1.0).  Values closer to 0.0 are more aggressive.  Start with 0.1. `param_2` : input drive is a multiplier that determines how input signal is multiplied.  Values between 2 and 6 will be warmer, softer clipping whereas values greater than 10 will heavier distortions. */
+    BIT_CRUSHER,                /**< A bit crusher simulates reduction in the number of bits used to store audio samples and creates quantization noise, a very “digital” sounding distortion. Parameters `param_1` : bit shift coefficient determines how extreme the effect is.  0.0 provides a gentle bit reduction while 1.0 is an aggressive bit reduction.  `param_2` : (not used) */
+    SAMPLE_RATE_CRUSHER,        /**< A sample rate crusher reduces the sample rate without any anti-aliasing.  The result is a remapping of upper harmonics into different audio bands.  Parameters : `param_1` : sample rate reduction coefficient - determines how extreme the effect is.  0.0 provides a gentle bit reduction while 1.0 is an aggressive sample rate reduction. `param_2` : (not used) */
+    SHAPER,                      /**< A shaper uses a sine function to “wrap” values outside of the clipping threshold.  The result is louder notes end up with new higher-order harmonics.Parameters: `param_1` : scale determines how extreme the effect is.  0.0 provides a gentle bit reduction while 1.0 (or higher in this case) is an aggressive clipping function. `param_2` : (not used) */
+    DIGITAL_PULVERIZER,         /**< Creates nasty, beautiful digital destruction of the incoming waveform.Parameters `param_1` : death - pla around with it – typically between 0.0 and 1.0 `param_2` : and destruction - play around with it – typically between 0.0 and 1.0 */
+    FLIP_FLOP_OCTAVE,           /**< Emulates a flip-flop circuit used in early synth and octave pedals.Parameters `param_1` : octaves to drop down - a value of 1.0 is same frequency, 2.0 is one octave down, 3.0 is two octaves down, etc.  Doesn’t do anything with fractional values – input rounded to whole number. `param_2` : (not used)  */
     POLY_TOTAL
 } DESTRUCTOR_TYPE;
 
