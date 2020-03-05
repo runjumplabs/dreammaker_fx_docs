@@ -196,12 +196,15 @@ typedef enum {
  * @brief      Routines to control the LEDs on the pedal.
  * 
  * To turn on the left LED:
+ * ``` CPP
  *   pedal.led_left.turn_on();
+ * ```
  *   
  * Fade the right LED from red to blue over 1 second
+ * ``` CPP
  *   pedal.led_right.set_rgb(RED);
  *   pedal.led_right.fade_to_rgb(BLUE, 1000.0);
- * 
+ * ```
  */
 class fx_led {
 

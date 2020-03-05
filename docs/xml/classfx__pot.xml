@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="310" column="1" bodyfile="src/dreammakerfx.h" bodystart="310" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="313" column="1" bodyfile="src/dreammakerfx.h" bodystart="313" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pot_1ad8c29b41737703546fe1f7f4c03bc99b" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="311" column="1" bodyfile="src/dreammakerfx.h" bodystart="311" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="314" column="1" bodyfile="src/dreammakerfx.h" bodystart="314" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pot_1ace4646a41772fa327b4acf95b625c148" prot="private" static="no" mutable="no">
         <type>float</type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="312" column="1" bodyfile="src/dreammakerfx.h" bodystart="312" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="315" column="1" bodyfile="src/dreammakerfx.h" bodystart="315" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pot_1a70fc842dd144cbfb635a99f1b1b91ebc" prot="private" static="no" mutable="no">
         <type>float</type>
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="313" column="1" bodyfile="src/dreammakerfx.h" bodystart="313" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="316" column="1" bodyfile="src/dreammakerfx.h" bodystart="316" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pot_1ae2c1a90709292bca8a03e449b70e78d1" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -67,7 +67,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="314" column="1" bodyfile="src/dreammakerfx.h" bodystart="314" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="317" column="1" bodyfile="src/dreammakerfx.h" bodystart="317" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pot_1af810d6a31996f435482819576a9efc7d" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -80,7 +80,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="315" column="1" bodyfile="src/dreammakerfx.h" bodystart="315" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="318" column="1" bodyfile="src/dreammakerfx.h" bodystart="318" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pot_1aa97288b5324c2c1a87ae9795b2bbdc1f" prot="private" static="no" mutable="no">
         <type>float</type>
@@ -93,7 +93,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="316" column="1" bodyfile="src/dreammakerfx.h" bodystart="316" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="319" column="1" bodyfile="src/dreammakerfx.h" bodystart="319" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pot_1af9259e5bc4609e2c382f57e2a30e087a" prot="private" static="no" mutable="no">
         <type>float</type>
@@ -106,7 +106,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="317" column="1" bodyfile="src/dreammakerfx.h" bodystart="317" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="320" column="1" bodyfile="src/dreammakerfx.h" bodystart="320" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pot_1ac05975d4d2b3cbffcbb7c6afe23c558e" prot="private" static="no" mutable="no">
         <type>float</type>
@@ -119,7 +119,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="318" column="1" bodyfile="src/dreammakerfx.h" bodystart="318" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="321" column="1" bodyfile="src/dreammakerfx.h" bodystart="321" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pot_1a8035caa2cade9f03206c2de9e0b5bcda" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -132,7 +132,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="319" column="1" bodyfile="src/dreammakerfx.h" bodystart="319" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="322" column="1" bodyfile="src/dreammakerfx.h" bodystart="322" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pot_1a7bf32ddf49e22e4e3a14d0d19707d45c" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -145,7 +145,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="319" column="1" bodyfile="src/dreammakerfx.h" bodystart="319" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="322" column="1" bodyfile="src/dreammakerfx.h" bodystart="322" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pot_1a7308d530700fff59f00cd59b77d935cb" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -158,7 +158,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="320" column="1" bodyfile="src/dreammakerfx.h" bodystart="320" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="323" column="1" bodyfile="src/dreammakerfx.h" bodystart="323" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-attrib">
@@ -174,7 +174,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="358" column="1" bodyfile="src/dreammakerfx.h" bodystart="358" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="361" column="1" bodyfile="src/dreammakerfx.h" bodystart="361" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pot_1a7a73a38834d630586ad5c34af00b7f38" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -188,7 +188,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="359" column="1" bodyfile="src/dreammakerfx.h" bodystart="359" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="362" column="1" bodyfile="src/dreammakerfx.h" bodystart="362" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pot_1a2eaafdea7b4165b981ee08c15c34f57b" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -202,7 +202,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="360" column="1" bodyfile="src/dreammakerfx.h" bodystart="360" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="363" column="1" bodyfile="src/dreammakerfx.h" bodystart="363" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -225,7 +225,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="325" column="1" bodyfile="src/dreammakerfx.h" bodystart="325" bodyend="333"/>
+        <location file="src/dreammakerfx.h" line="328" column="1" bodyfile="src/dreammakerfx.h" bodystart="328" bodyend="336"/>
       </memberdef>
       <memberdef kind="function" id="classfx__pot_1ad67a8edbc41a8dc9b9abdcf6b7ac264f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -246,7 +246,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="335" column="1" bodyfile="src/dreammakerfx.h" bodystart="335" bodyend="352"/>
+        <location file="src/dreammakerfx.h" line="338" column="1" bodyfile="src/dreammakerfx.h" bodystart="338" bodyend="355"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -268,7 +268,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="367" column="1" bodyfile="src/dreammakerfx.h" bodystart="367" bodyend="371"/>
+        <location file="src/dreammakerfx.h" line="370" column="1" bodyfile="src/dreammakerfx.h" bodystart="370" bodyend="374"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -276,7 +276,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/dreammakerfx.h" line="304" column="1" bodyfile="src/dreammakerfx.h" bodystart="304" bodyend="463"/>
+    <location file="src/dreammakerfx.h" line="307" column="1" bodyfile="src/dreammakerfx.h" bodystart="307" bodyend="466"/>
     <listofallmembers>
       <member refid="classfx__pot_1ae2c1a90709292bca8a03e449b70e78d1" prot="private" virt="non-virtual"><scope>fx_pot</scope><name>avg_ptr</name></member>
       <member refid="classfx__pot_1ace4646a41772fa327b4acf95b625c148" prot="private" virt="non-virtual"><scope>fx_pot</scope><name>avg_val</name></member>

@@ -198,8 +198,15 @@
 <dt id="_CPPv46fx_led">
 <span id="_CPPv36fx_led"></span><span id="_CPPv26fx_led"></span><span id="fx_led"></span><span class="target" id="classfx__led"></span><em class="property">class </em><code class="sig-name descname">fx_led</code><a class="headerlink" href="#_CPPv46fx_led" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Routines to control the LEDs on the pedal. </p>
-<p>To turn on the left LED: pedal.led_left.turn_on();</p>
-<p>Fade the right LED from red to blue over 1 second pedal.led_right.set_rgb(RED); pedal.led_right.fade_to_rgb(BLUE, 1000.0); </p>
+<p>To turn on the left LED: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">pedal</span><span class="p">.</span><span class="n">led_left</span><span class="p">.</span><span class="n">turn_on</span><span class="p">();</span>
+</pre></div>
+</div>
+</p>
+<p>Fade the right LED from red to blue over 1 second <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">pedal</span><span class="p">.</span><span class="n">led_right</span><span class="p">.</span><span class="n">set_rgb</span><span class="p">(</span><span class="n">RED</span><span class="p">);</span>
+<span class="n">pedal</span><span class="p">.</span><span class="n">led_right</span><span class="p">.</span><span class="n">fade_to_rgb</span><span class="p">(</span><span class="n">BLUE</span><span class="p">,</span> <span class="mf">1000.0</span><span class="p">);</span>
+</pre></div>
+</div>
+ </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
@@ -211,7 +218,7 @@
 <dt id="_CPPv4N6fx_led7turn_onEv">
 <span id="_CPPv3N6fx_led7turn_onEv"></span><span id="_CPPv2N6fx_led7turn_onEv"></span><span id="fx_led::turn_on"></span><span class="target" id="classfx__led_1a812d50bb14fb3cb90c387e630cefe631"></span>void <code class="sig-name descname">turn_on</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6fx_led7turn_onEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Turns on this LED. When using an RGB LED, this turns it on to red. </p>
-<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">pedal</span><span class="p">.</span><span class="n">led_right</span><span class="p">.</span><span class="n">turn_on</span><span class="p">;</span>  <span class="c1">// turns on the LED</span>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">pedal</span><span class="p">.</span><span class="n">led_right</span><span class="p">.</span><span class="n">turn_on</span><span class="p">();</span>  <span class="c1">// turns on the LED</span>
 </pre></div>
 </div>
  </p>

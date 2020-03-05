@@ -6,16 +6,16 @@
     <includes local="yes">Arduino.h</includes>
     <includes refid="dreammakerfx_8h" local="yes">dreammakerfx.h</includes>
     <incdepgraph>
+      <node id="209">
+        <label>effects/dm_fx_destructor.h</label>
+        <link refid="dm__fx__destructor_8h_source"/>
+      </node>
+      <node id="217">
+        <label>effects/dm_fx_mixers.h</label>
+        <link refid="dm__fx__mixers_8h_source"/>
+      </node>
       <node id="194">
         <label>SPI.h</label>
-      </node>
-      <node id="197">
-        <label>dm_fx_dsp.h</label>
-        <link refid="dm__fx__dsp_8h_source"/>
-      </node>
-      <node id="200">
-        <label>dm_fx_ui.h</label>
-        <link refid="dm__fx__ui_8h_source"/>
       </node>
       <node id="191">
         <label>stdlib.h</label>
@@ -24,9 +24,40 @@
         <label>effects/dm_fx_slicer.h</label>
         <link refid="dm__fx__slicer_8h_source"/>
       </node>
-      <node id="204">
-        <label>effects/dm_fx_effect_macros.h</label>
-        <link refid="dm__fx__effect__macros_8h_source"/>
+      <node id="197">
+        <label>dm_fx_dsp.h</label>
+        <link refid="dm__fx__dsp_8h_source"/>
+      </node>
+      <node id="202">
+        <label>dm_fx_platform_constants.h</label>
+        <link refid="dm__fx__platform__constants_8h_source"/>
+      </node>
+      <node id="200">
+        <label>dm_fx_ui.h</label>
+        <link refid="dm__fx__ui_8h_source"/>
+      </node>
+      <node id="221">
+        <label>effects/dm_fx_ring_modulator.h</label>
+        <link refid="dm__fx__ring__modulator_8h_source"/>
+      </node>
+      <node id="201">
+        <label>dm_fx_debug.h</label>
+        <link refid="dm__fx__debug_8h_source"/>
+      </node>
+      <node id="219">
+        <label>effects/dm_fx_phase_shifter.h</label>
+        <link refid="dm__fx__phase__shifter_8h_source"/>
+      </node>
+      <node id="214">
+        <label>effects/dm_fx_gain.h</label>
+        <link refid="dm__fx__gain_8h_source"/>
+      </node>
+      <node id="223">
+        <label>effects/dm_fx_variable_delay.h</label>
+        <link refid="dm__fx__variable__delay_8h_source"/>
+      </node>
+      <node id="195">
+        <label>Wire.h</label>
       </node>
       <node id="193">
         <label>dreammakerfx.h</label>
@@ -94,103 +125,6 @@
         <childnode refid="223" relation="include">
         </childnode>
       </node>
-      <node id="216">
-        <label>effects/dm_fx_looper.h</label>
-        <link refid="dm__fx__looper_8h_source"/>
-      </node>
-      <node id="206">
-        <label>effects/dm_fx_allpass_filter.h</label>
-        <link refid="dm__fx__allpass__filter_8h_source"/>
-      </node>
-      <node id="214">
-        <label>effects/dm_fx_gain.h</label>
-        <link refid="dm__fx__gain_8h_source"/>
-      </node>
-      <node id="203">
-        <label>effects/dm_fx_effects_defines.h</label>
-        <link refid="dm__fx__effects__defines_8h"/>
-      </node>
-      <node id="218">
-        <label>effects/dm_fx_oscillators.h</label>
-        <link refid="dm__fx__oscillators_8h_source"/>
-      </node>
-      <node id="210">
-        <label>effects/dm_fx_compressor.h</label>
-        <link refid="dm__fx__compressor_8h_source"/>
-      </node>
-      <node id="207">
-        <label>effects/dm_fx_amplitude_modulator.h</label>
-        <link refid="dm__fx__amplitude__modulator_8h_source"/>
-      </node>
-      <node id="198">
-        <label>dm_fx_spi_proto.h</label>
-        <link refid="dm__fx__spi__proto_8h_source"/>
-      </node>
-      <node id="220">
-        <label>effects/dm_fx_pitch_shift.h</label>
-        <link refid="dm__fx__pitch__shift_8h_source"/>
-      </node>
-      <node id="195">
-        <label>Wire.h</label>
-      </node>
-      <node id="199">
-        <label>dm_fx_codec.h</label>
-        <link refid="dm__fx__codec_8h_source"/>
-      </node>
-      <node id="219">
-        <label>effects/dm_fx_phase_shifter.h</label>
-        <link refid="dm__fx__phase__shifter_8h_source"/>
-      </node>
-      <node id="221">
-        <label>effects/dm_fx_ring_modulator.h</label>
-        <link refid="dm__fx__ring__modulator_8h_source"/>
-      </node>
-      <node id="213">
-        <label>effects/dm_fx_envelope_tracker.h</label>
-        <link refid="dm__fx__envelope__tracker_8h_source"/>
-      </node>
-      <node id="205">
-        <label>effects/dm_fx_adsr_envelope.h</label>
-        <link refid="dm__fx__adsr__envelope_8h_source"/>
-      </node>
-      <node id="215">
-        <label>effects/dm_fx_instrument_synth.h</label>
-        <link refid="dm__fx__instrument__synth_8h_source"/>
-      </node>
-      <node id="196">
-        <label>math.h</label>
-      </node>
-      <node id="192">
-        <label>Arduino.h</label>
-      </node>
-      <node id="201">
-        <label>dm_fx_debug.h</label>
-        <link refid="dm__fx__debug_8h_source"/>
-      </node>
-      <node id="208">
-        <label>effects/dm_fx_biquad_filter.h</label>
-        <link refid="dm__fx__biquad__filter_8h_source"/>
-      </node>
-      <node id="209">
-        <label>effects/dm_fx_destructor.h</label>
-        <link refid="dm__fx__destructor_8h_source"/>
-      </node>
-      <node id="223">
-        <label>effects/dm_fx_variable_delay.h</label>
-        <link refid="dm__fx__variable__delay_8h_source"/>
-      </node>
-      <node id="202">
-        <label>dm_fx_platform_constants.h</label>
-        <link refid="dm__fx__platform__constants_8h_source"/>
-      </node>
-      <node id="212">
-        <label>effects/dm_fx_delay_multitap.h</label>
-        <link refid="dm__fx__delay__multitap_8h_source"/>
-      </node>
-      <node id="211">
-        <label>effects/dm_fx_delay.h</label>
-        <link refid="dm__fx__delay_8h_source"/>
-      </node>
       <node id="190">
         <label>src/dreammakerfx.cpp</label>
         <link refid="dreammakerfx_8cpp"/>
@@ -201,9 +135,75 @@
         <childnode refid="193" relation="include">
         </childnode>
       </node>
-      <node id="217">
-        <label>effects/dm_fx_mixers.h</label>
-        <link refid="dm__fx__mixers_8h_source"/>
+      <node id="218">
+        <label>effects/dm_fx_oscillators.h</label>
+        <link refid="dm__fx__oscillators_8h_source"/>
+      </node>
+      <node id="211">
+        <label>effects/dm_fx_delay.h</label>
+        <link refid="dm__fx__delay_8h_source"/>
+      </node>
+      <node id="212">
+        <label>effects/dm_fx_delay_multitap.h</label>
+        <link refid="dm__fx__delay__multitap_8h_source"/>
+      </node>
+      <node id="199">
+        <label>dm_fx_codec.h</label>
+        <link refid="dm__fx__codec_8h_source"/>
+      </node>
+      <node id="196">
+        <label>math.h</label>
+      </node>
+      <node id="192">
+        <label>Arduino.h</label>
+      </node>
+      <node id="206">
+        <label>effects/dm_fx_allpass_filter.h</label>
+        <link refid="dm__fx__allpass__filter_8h_source"/>
+      </node>
+      <node id="198">
+        <label>dm_fx_spi_proto.h</label>
+        <link refid="dm__fx__spi__proto_8h_source"/>
+      </node>
+      <node id="205">
+        <label>effects/dm_fx_adsr_envelope.h</label>
+        <link refid="dm__fx__adsr__envelope_8h_source"/>
+      </node>
+      <node id="213">
+        <label>effects/dm_fx_envelope_tracker.h</label>
+        <link refid="dm__fx__envelope__tracker_8h_source"/>
+      </node>
+      <node id="204">
+        <label>effects/dm_fx_effect_macros.h</label>
+        <link refid="dm__fx__effect__macros_8h_source"/>
+      </node>
+      <node id="210">
+        <label>effects/dm_fx_compressor.h</label>
+        <link refid="dm__fx__compressor_8h_source"/>
+      </node>
+      <node id="216">
+        <label>effects/dm_fx_looper.h</label>
+        <link refid="dm__fx__looper_8h_source"/>
+      </node>
+      <node id="220">
+        <label>effects/dm_fx_pitch_shift.h</label>
+        <link refid="dm__fx__pitch__shift_8h_source"/>
+      </node>
+      <node id="215">
+        <label>effects/dm_fx_instrument_synth.h</label>
+        <link refid="dm__fx__instrument__synth_8h_source"/>
+      </node>
+      <node id="208">
+        <label>effects/dm_fx_biquad_filter.h</label>
+        <link refid="dm__fx__biquad__filter_8h_source"/>
+      </node>
+      <node id="203">
+        <label>effects/dm_fx_effects_defines.h</label>
+        <link refid="dm__fx__effects__defines_8h"/>
+      </node>
+      <node id="207">
+        <label>effects/dm_fx_amplitude_modulator.h</label>
+        <link refid="dm__fx__amplitude__modulator_8h_source"/>
       </node>
     </incdepgraph>
       <sectiondef kind="var">

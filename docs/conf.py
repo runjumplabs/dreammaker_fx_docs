@@ -14,7 +14,7 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
-import sphinx_bootstrap_theme
+# import sphinx_bootstrap_theme
 
 # -- Project information -----------------------------------------------------
 
@@ -45,7 +45,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # a list of builtin themes.
 #
 html_theme = 'sphinx_rtd_theme'
-html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
+#html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -65,7 +65,7 @@ primary_domain = 'cpp'
 highlight_language = 'cpp'
 
 # Breathe Configuration
-breathe_projects = {'DreamMaker FX Documentation': "/Users/danledger/Github/Dreammaker_FX/documentation/dmfx-docs-sphinx/docs/xml/"}
+breathe_projects = {'DreamMaker FX Documentation': "xml/"}
 breathe_default_project = 'DreamMaker FX Documentation'
 
 

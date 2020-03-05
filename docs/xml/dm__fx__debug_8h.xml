@@ -5,15 +5,15 @@
     <includedby refid="dreammakerfx_8h" local="yes">src/dreammakerfx.h</includedby>
     <includedby refid="dm__fx__debug_8cpp" local="yes">src/dm_fx_debug.cpp</includedby>
     <invincdepgraph>
-      <node id="73">
-        <label>src/dreammakerfx.h</label>
-        <link refid="dreammakerfx_8h_source"/>
-      </node>
       <node id="72">
         <label>src/dm_fx_debug.h</label>
         <link refid="dm__fx__debug_8h"/>
         <childnode refid="73" relation="include">
         </childnode>
+      </node>
+      <node id="73">
+        <label>src/dreammakerfx.h</label>
+        <link refid="dreammakerfx_8h_source"/>
       </node>
     </invincdepgraph>
       <sectiondef kind="enum">

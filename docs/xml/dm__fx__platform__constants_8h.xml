@@ -4,15 +4,15 @@
     <compoundname>dm_fx_platform_constants.h</compoundname>
     <includedby refid="dreammakerfx_8h" local="yes">src/dreammakerfx.h</includedby>
     <invincdepgraph>
-      <node id="115">
-        <label>src/dreammakerfx.h</label>
-        <link refid="dreammakerfx_8h_source"/>
-      </node>
       <node id="114">
         <label>src/dm_fx_platform_constants.h</label>
         <link refid="dm__fx__platform__constants_8h"/>
         <childnode refid="115" relation="include">
         </childnode>
+      </node>
+      <node id="115">
+        <label>src/dreammakerfx.h</label>
+        <link refid="dreammakerfx_8h_source"/>
       </node>
     </invincdepgraph>
     <briefdescription>

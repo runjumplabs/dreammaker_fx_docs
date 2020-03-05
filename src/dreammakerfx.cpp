@@ -1931,8 +1931,8 @@ void  fx_led::service() {
 /**
  * @brief      Turns on this LED.  When using an RGB LED, this turns it on to red.
  * 
- * ``` C
- * pedal.led_right.turn_on();  // turns on the LED
+ * ``` CPP
+ * pedal.led_right.turn_on();  // turns on the right LED
  * ```
  */
 void  fx_led::turn_on() {
@@ -1951,7 +1951,9 @@ void  fx_led::turn_on() {
 /**
  * @brief      Turns on this LED to a specific RGB color
  * 
- * Example: ````pedal.led_left.turn_on();```
+ * ``` CPP
+ * pedal.led_left.turn_on(100, 0, 75); // turn left LED purple
+ * ```
  *
  * @param[in]  red    The red component (0-255)
  * @param[in]  green  The green component (0-255)
@@ -1965,7 +1967,9 @@ void  fx_led::turn_on(uint8_t red, uint8_t green, uint8_t blue) {
  * @brief      Turns on this LED to a specific RGB color.  If the 
  * LED is not an RGB LED, it will just turn on the LED anyway.
  *
- * Example: ```pedal.led_left.turn_on(GREEN);```
+ * ``` CPP
+ * pedal.led_left.turn_on(GREEN);
+ * ```
  *
  * @param[in]  rgb   The color from LED_COLOR type
  */
@@ -1976,6 +1980,10 @@ void  fx_led::turn_on(LED_COLOR rgb) {
 
 /**
  * @brief      Turns off this LED
+ * 
+ * ``` CPP
+ * pedal.led_center.turn_off(); // turn off center LED
+ * ``` 
  */
 void  fx_led::turn_off() {
   switch(led_pos) {
