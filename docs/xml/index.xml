@@ -348,7 +348,6 @@
     <member refid="classfx__led_1a81a263c2adda899e90860581ec345f9b" kind="variable"><name>steps</name></member>
     <member refid="classfx__led_1a489c3e1fd418597cdf90442fa9e97fc6" kind="variable"><name>last_scan</name></member>
     <member refid="classfx__led_1a7b4107739ffa5a524ccb610938670940" kind="function"><name>update_rgb_led</name></member>
-    <member refid="classfx__led_1a05cae5d2d4a44e3c22d74ea2332682d8" kind="function"><name>fx_led</name></member>
     <member refid="classfx__led_1a812d50bb14fb3cb90c387e630cefe631" kind="function"><name>turn_on</name></member>
     <member refid="classfx__led_1a00b55092c45885a16044f355f0287037" kind="function"><name>turn_on</name></member>
     <member refid="classfx__led_1a5a956ec3f2d61b25441670c0da62dff9" kind="function"><name>turn_on</name></member>
@@ -683,7 +682,7 @@
     <member refid="classfx__switch_1ab78621eb24452c18d7173986e7b3f50f" kind="variable"><name>up_pin</name></member>
     <member refid="classfx__switch_1aa1d835a58b1cae15c6704fb7b4597082" kind="variable"><name>down_pin</name></member>
     <member refid="classfx__switch_1a116faed18ae90c52cca9af906c9a7cae" kind="variable"><name>switch_pos_last</name></member>
-    <member refid="classfx__switch_1aaf55be7752571b572e9c4f502613e915" kind="variable"><name>switch_pos</name></member>
+    <member refid="classfx__switch_1a76d9aa494f2369eb421296d8f1bb8847" kind="variable"><name>position</name></member>
     <member refid="classfx__switch_1a45bf873b49a6cda9eb4c3cfad8bb8bbe" kind="function"><name>has_changed</name></member>
   </compound>
   <compound refid="classfx__variable__delay" kind="class"><name>fx_variable_delay</name>
@@ -783,6 +782,8 @@
     <member refid="dreammakerfx_8h_1a1f3289eeddfbcff1515a3786dc0518faaf80f9a890089d211842d59625e561f88" kind="enumvalue"><name>RED</name></member>
     <member refid="dreammakerfx_8h_1a1f3289eeddfbcff1515a3786dc0518faaa60bd322f93178d68184e30e162571ca" kind="enumvalue"><name>GREEN</name></member>
     <member refid="dreammakerfx_8h_1a1f3289eeddfbcff1515a3786dc0518faa35d6719cb4d7577c031b3d79057a1b79" kind="enumvalue"><name>BLUE</name></member>
+    <member refid="dreammakerfx_8h_1a1f3289eeddfbcff1515a3786dc0518faae735a848bf82163a19236ead1c3ef2d2" kind="enumvalue"><name>YELLOW</name></member>
+    <member refid="dreammakerfx_8h_1a1f3289eeddfbcff1515a3786dc0518faa2772ad7cd64f03c2aed60f91c69fa69d" kind="enumvalue"><name>PURPLE</name></member>
     <member refid="dreammakerfx_8h_1a3d7c3257df400de2c91753ba11c64ec7" kind="enum"><name>SWITCH_POS</name></member>
     <member refid="dreammakerfx_8h_1a3d7c3257df400de2c91753ba11c64ec7adfac3b16e0a9ab43612a62b4fd996937" kind="enumvalue"><name>SWITCH_POS_UP</name></member>
     <member refid="dreammakerfx_8h_1a3d7c3257df400de2c91753ba11c64ec7abc6964e839532107702ce291725dff20" kind="enumvalue"><name>SWITCH_POS_MIDDLE</name></member>

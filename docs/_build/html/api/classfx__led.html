@@ -197,8 +197,17 @@
 <dl class="class">
 <dt id="_CPPv46fx_led">
 <span id="_CPPv36fx_led"></span><span id="_CPPv26fx_led"></span><span id="fx_led"></span><span class="target" id="classfx__led"></span><em class="property">class </em><code class="sig-name descname">fx_led</code><a class="headerlink" href="#_CPPv46fx_led" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Routines to control the LEDs on the pedal. </p>
-<p>To turn on the left LED: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">pedal</span><span class="p">.</span><span class="n">led_left</span><span class="p">.</span><span class="n">turn_on</span><span class="p">();</span>
+<dd><p>These functions are used to control the LEDs on the pedal. </p>
+<p>The LEDs are part of the <code class="docutils literal notranslate"><span class="pre">pedal</span></code> object. The LEDs available on the first version of hardware are <code class="docutils literal notranslate"><span class="pre">pedal.led_left</span></code> and <code class="docutils literal notranslate"><span class="pre">pedal.led_right</span></code>. On the second generation of hardware, there is also a <code class="docutils literal notranslate"><span class="pre">pedal.led_center</span></code>. Add the routines described below to these like so:</p>
+<p>To turn on the left LED: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">pedal</span><span class="p">.</span><span class="n">led_left</span><span class="p">.</span><span class="n">turn_on</span><span class="p">();</span>    <span class="c1">// Turn on left LED</span>
+</pre></div>
+</div>
+</p>
+<p>To turn off the right LED; <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">pedal</span><span class="p">.</span><span class="n">led_right</span><span class="p">.</span><span class="n">turn_off</span><span class="p">();</span>  <span class="c1">// Turn off right LED</span>
+</pre></div>
+</div>
+</p>
+<p>To set the center LED to a purplish color: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">pedal</span><span class="p">.</span><span class="n">led_center</span><span class="p">.</span><span class="n">turn_on</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">);</span> <span class="c1">// Red = 40, Blue = 50</span>
 </pre></div>
 </div>
 </p>
@@ -210,15 +219,10 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
-<dt id="_CPPv4N6fx_led6fx_ledE7LED_POS">
-<span id="_CPPv3N6fx_led6fx_ledE7LED_POS"></span><span id="_CPPv2N6fx_led6fx_ledE7LED_POS"></span><span id="fx_led::fx_led__LED_POS"></span><span class="target" id="classfx__led_1a05cae5d2d4a44e3c22d74ea2332682d8"></span><code class="sig-name descname">fx_led</code><span class="sig-paren">(</span>LED_POS <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6fx_led6fx_ledE7LED_POS" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="function">
 <dt id="_CPPv4N6fx_led7turn_onEv">
 <span id="_CPPv3N6fx_led7turn_onEv"></span><span id="_CPPv2N6fx_led7turn_onEv"></span><span id="fx_led::turn_on"></span><span class="target" id="classfx__led_1a812d50bb14fb3cb90c387e630cefe631"></span>void <code class="sig-name descname">turn_on</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6fx_led7turn_onEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Turns on this LED. When using an RGB LED, this turns it on to red. </p>
-<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">pedal</span><span class="p">.</span><span class="n">led_right</span><span class="p">.</span><span class="n">turn_on</span><span class="p">();</span>  <span class="c1">// turns on the LED</span>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">pedal</span><span class="p">.</span><span class="n">led_right</span><span class="p">.</span><span class="n">turn_on</span><span class="p">();</span>  <span class="c1">// turns on the right LED</span>
 </pre></div>
 </div>
  </p>
@@ -228,7 +232,10 @@
 <dt id="_CPPv4N6fx_led7turn_onE7uint8_t7uint8_t7uint8_t">
 <span id="_CPPv3N6fx_led7turn_onE7uint8_t7uint8_t7uint8_t"></span><span id="_CPPv2N6fx_led7turn_onE7uint8_t7uint8_t7uint8_t"></span><span id="fx_led::turn_on__uint8_t.uint8_t.uint8_t"></span><span class="target" id="classfx__led_1a00b55092c45885a16044f355f0287037"></span>void <code class="sig-name descname">turn_on</code><span class="sig-paren">(</span>uint8_t <em>red</em>, uint8_t <em>green</em>, uint8_t <em>blue</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6fx_led7turn_onE7uint8_t7uint8_t7uint8_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Turns on this LED to a specific RGB color. </p>
-<p>Example: `<code class="docutils literal notranslate"><span class="pre">pedal.led_left.turn_on();</span></code></p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">pedal</span><span class="p">.</span><span class="n">led_left</span><span class="p">.</span><span class="n">turn_on</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">75</span><span class="p">);</span> <span class="c1">// turn left LED purple</span>
+</pre></div>
+</div>
+</p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">red</span></code>: The red component (0-255) </p></li>
@@ -244,7 +251,10 @@
 <dt id="_CPPv4N6fx_led7turn_onE9LED_COLOR">
 <span id="_CPPv3N6fx_led7turn_onE9LED_COLOR"></span><span id="_CPPv2N6fx_led7turn_onE9LED_COLOR"></span><span id="fx_led::turn_on__LED_COLOR"></span><span class="target" id="classfx__led_1a5a956ec3f2d61b25441670c0da62dff9"></span>void <code class="sig-name descname">turn_on</code><span class="sig-paren">(</span><a class="reference internal" href="enum_dreammakerfx_8h_1a1f3289eeddfbcff1515a3786dc0518fa.html#_CPPv49LED_COLOR" title="LED_COLOR">LED_COLOR</a> <em>rgb</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6fx_led7turn_onE9LED_COLOR" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Turns on this LED to a specific RGB color. If the LED is not an RGB LED, it will just turn on the LED anyway. </p>
-<p>Example: <code class="docutils literal notranslate"><span class="pre">pedal.led_left.turn_on(GREEN);</span></code></p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">pedal</span><span class="p">.</span><span class="n">led_left</span><span class="p">.</span><span class="n">turn_on</span><span class="p">(</span><span class="n">GREEN</span><span class="p">);</span>
+</pre></div>
+</div>
+</p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">rgb</span></code>: The color from LED_COLOR type </p></li>
@@ -258,12 +268,20 @@
 <dt id="_CPPv4N6fx_led8turn_offEv">
 <span id="_CPPv3N6fx_led8turn_offEv"></span><span id="_CPPv2N6fx_led8turn_offEv"></span><span id="fx_led::turn_off"></span><span class="target" id="classfx__led_1ad58dd290eb4f4b662f7cb150e4bf866a"></span>void <code class="sig-name descname">turn_off</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6fx_led8turn_offEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Turns off this LED. </p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">pedal</span><span class="p">.</span><span class="n">led_center</span><span class="p">.</span><span class="n">turn_off</span><span class="p">();</span> <span class="c1">// turn off center LED</span>
+</pre></div>
+</div>
+ </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv4N6fx_led7set_rgbE7uint8_t7uint8_t7uint8_t">
 <span id="_CPPv3N6fx_led7set_rgbE7uint8_t7uint8_t7uint8_t"></span><span id="_CPPv2N6fx_led7set_rgbE7uint8_t7uint8_t7uint8_t"></span><span id="fx_led::set_rgb__uint8_t.uint8_t.uint8_t"></span><span class="target" id="classfx__led_1ad504f325108b97061d41163917898faa"></span>void <code class="sig-name descname">set_rgb</code><span class="sig-paren">(</span>uint8_t <em>red</em>, uint8_t <em>green</em>, uint8_t <em>blue</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6fx_led7set_rgbE7uint8_t7uint8_t7uint8_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets the RGB color value for this LED. </p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">pedal</span><span class="p">.</span><span class="n">led_center</span><span class="p">.</span><span class="n">set_rgb</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">);</span> <span class="c1">// Set center LED to purplish color</span>
+</pre></div>
+</div>
+</p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">red</span></code>: The new red component (0-255) </p></li>
@@ -279,6 +297,10 @@
 <dt id="_CPPv4N6fx_led7set_rgbE9LED_COLOR">
 <span id="_CPPv3N6fx_led7set_rgbE9LED_COLOR"></span><span id="_CPPv2N6fx_led7set_rgbE9LED_COLOR"></span><span id="fx_led::set_rgb__LED_COLOR"></span><span class="target" id="classfx__led_1a7482016cc0fba0782b8df45259858398"></span>void <code class="sig-name descname">set_rgb</code><span class="sig-paren">(</span><a class="reference internal" href="enum_dreammakerfx_8h_1a1f3289eeddfbcff1515a3786dc0518fa.html#_CPPv49LED_COLOR" title="LED_COLOR">LED_COLOR</a> <em>rgb</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6fx_led7set_rgbE9LED_COLOR" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets the RGB color value for this LED. </p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">pedal</span><span class="p">.</span><span class="n">led_right</span><span class="p">.</span><span class="n">set_rgb</span><span class="p">(</span><span class="n">RED</span><span class="p">);</span>  <span class="c1">// set right LED to red color</span>
+</pre></div>
+</div>
+</p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">rgb</span></code>: The color from LED_COLOR type </p></li>
@@ -291,7 +313,14 @@
 <dl class="function">
 <dt id="_CPPv4N6fx_led11fade_to_rgbE7uint8_t7uint8_t7uint8_t8uint32_t">
 <span id="_CPPv3N6fx_led11fade_to_rgbE7uint8_t7uint8_t7uint8_t8uint32_t"></span><span id="_CPPv2N6fx_led11fade_to_rgbE7uint8_t7uint8_t7uint8_t8uint32_t"></span><span id="fx_led::fade_to_rgb__uint8_t.uint8_t.uint8_t.uint32_t"></span><span class="target" id="classfx__led_1a0913d46695186026a41f958dafcd4027"></span>void <code class="sig-name descname">fade_to_rgb</code><span class="sig-paren">(</span>uint8_t <em>red</em>, uint8_t <em>green</em>, uint8_t <em>blue</em>, uint32_t <em>milliseconds</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6fx_led11fade_to_rgbE7uint8_t7uint8_t7uint8_t8uint32_t" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Fade this LED to a new RGB value. </p>
+<dd><p>Fade this LED to a new RGB value. The fade happens in the background. </p>
+<p>Fade the right LED from red to blue over 1 second.</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">pedal</span><span class="p">.</span><span class="n">led_right</span><span class="p">.</span><span class="n">set_rgb</span><span class="p">(</span><span class="n">RED</span><span class="p">);</span>
+<span class="n">pedal</span><span class="p">.</span><span class="n">led_right</span><span class="p">.</span><span class="n">fade_to_rgb</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mf">1000.0</span><span class="p">);</span>
+</pre></div>
+</div>
+</p>
+<p>The fade happens in the background so the code execution will not wait until the fade completes.</p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">red</span></code>: The red component (0-255) </p></li>
@@ -308,6 +337,12 @@
 <dt id="_CPPv4N6fx_led11fade_to_rgbE9LED_COLOR8uint32_t">
 <span id="_CPPv3N6fx_led11fade_to_rgbE9LED_COLOR8uint32_t"></span><span id="_CPPv2N6fx_led11fade_to_rgbE9LED_COLOR8uint32_t"></span><span id="fx_led::fade_to_rgb__LED_COLOR.uint32_t"></span><span class="target" id="classfx__led_1afc261e711f845a0e5740e234a5fd0900"></span>void <code class="sig-name descname">fade_to_rgb</code><span class="sig-paren">(</span><a class="reference internal" href="enum_dreammakerfx_8h_1a1f3289eeddfbcff1515a3786dc0518fa.html#_CPPv49LED_COLOR" title="LED_COLOR">LED_COLOR</a> <em>rgb</em>, uint32_t <em>milliseconds</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6fx_led11fade_to_rgbE9LED_COLOR8uint32_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Fade this LED to a new RGB value. </p>
+<p>Fade the right LED from red to blue over 1 second <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">pedal</span><span class="p">.</span><span class="n">led_right</span><span class="p">.</span><span class="n">set_rgb</span><span class="p">(</span><span class="n">RED</span><span class="p">);</span>
+<span class="n">pedal</span><span class="p">.</span><span class="n">led_right</span><span class="p">.</span><span class="n">fade_to_rgb</span><span class="p">(</span><span class="n">BLUE</span><span class="p">,</span> <span class="mf">1000.0</span><span class="p">);</span>
+</pre></div>
+</div>
+</p>
+<p>The fade happens in the background so the code execution will not wait until the fade completes.</p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">rgb</span></code>: The color from LED_COLOR type </p></li>

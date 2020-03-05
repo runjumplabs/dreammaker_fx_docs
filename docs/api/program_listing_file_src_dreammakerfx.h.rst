@@ -181,7 +181,9 @@ Program Listing for File dreammakerfx.h
    typedef enum {
      RED     = 0x800000,
      GREEN   = 0x008000,
-     BLUE    = 0x000080 
+     BLUE    = 0x000080,
+     YELLOW  = 0x808000,
+     PURPLE  = 0x800080
    } LED_COLOR;
    
    
@@ -199,7 +201,9 @@ Program Listing for File dreammakerfx.h
    
      public:
    
-       fx_led(LED_POS pos);
+       #ifndef DOXYGEN_SHOULD_SKIP_THIS
+         fx_led(LED_POS pos);
+       #endif 
        void  turn_on();
        void  turn_on(uint8_t red, uint8_t green, uint8_t blue);
        void  turn_on(LED_COLOR rgb);
@@ -217,9 +221,9 @@ Program Listing for File dreammakerfx.h
    
    
    typedef enum {
-     SWITCH_POS_UP,
-     SWITCH_POS_MIDDLE,
-     SWITCH_POS_DOWN,
+     SWITCH_POS_UP,      
+     SWITCH_POS_MIDDLE,  
+     SWITCH_POS_DOWN,    
    } SWITCH_POS;
    
    class fx_switch {
@@ -229,10 +233,10 @@ Program Listing for File dreammakerfx.h
        SWITCH_POS switch_pos_last;
    
      public:
-       SWITCH_POS  switch_pos;   
+       SWITCH_POS  position;   
        bool has_changed(void) {      
-         bool res = (switch_pos==switch_pos_last?false:true);
-         switch_pos_last = switch_pos;
+         bool res = (position==switch_pos_last?false:true);
+         switch_pos_last = position;
          return res;
        }   
    
@@ -240,17 +244,17 @@ Program Listing for File dreammakerfx.h
      #ifndef DOXYGEN_SHOULD_SKIP_THIS
        void read_switch(void) {
    
-         switch_pos_last = switch_pos;
+         switch_pos_last = position;
    
          bool down_pos = digitalRead(down_pin);
          bool up_pos = digitalRead(up_pin);
    
          if (!up_pos) {
-           switch_pos = SWITCH_POS_UP;
+           position = SWITCH_POS_UP;
          } else if (!down_pos) {
-           switch_pos = SWITCH_POS_DOWN;
+           position = SWITCH_POS_DOWN;
          } else {
-           switch_pos = SWITCH_POS_MIDDLE;
+           position = SWITCH_POS_MIDDLE;
          }
    
        }   

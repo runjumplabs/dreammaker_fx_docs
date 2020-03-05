@@ -1950,74 +1950,74 @@
 <codeline lineno="1948"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="1949"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="1950"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1960"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><ref refid="classfx__led_1a812d50bb14fb3cb90c387e630cefe631" kindref="member">fx_led::turn_on</ref>(uint8_t<sp/>red,<sp/>uint8_t<sp/>green,<sp/>uint8_t<sp/>blue)<sp/>{</highlight></codeline>
-<codeline lineno="1961"><highlight class="normal"><sp/><sp/><ref refid="classfx__led_1ad504f325108b97061d41163917898faa" kindref="member">set_rgb</ref>(red,<sp/>green,<sp/>blue);</highlight></codeline>
-<codeline lineno="1962"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="1963"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1972"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><ref refid="classfx__led_1a812d50bb14fb3cb90c387e630cefe631" kindref="member">fx_led::turn_on</ref>(LED_COLOR<sp/>rgb)<sp/>{</highlight></codeline>
-<codeline lineno="1973"><highlight class="normal"><sp/><sp/><ref refid="classfx__led_1ad504f325108b97061d41163917898faa" kindref="member">set_rgb</ref>((uint32_t)<sp/>rgb);</highlight></codeline>
-<codeline lineno="1974"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="1975"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1976"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1980"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><ref refid="classfx__led_1ad58dd290eb4f4b662f7cb150e4bf866a" kindref="member">fx_led::turn_off</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="1981"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(led_pos)<sp/>{</highlight></codeline>
-<codeline lineno="1982"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>LED_RIGHT:<sp/>turn_off_right_footsw_led();<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="1983"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>LED_CENTER:<sp/>turn_off_center_footsw_led();<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="1984"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>LED_LEFT:<sp/>turn_off_left_footsw_led();<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="1985"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="1986"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="1987"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="1988"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1996"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><ref refid="classfx__led_1ad504f325108b97061d41163917898faa" kindref="member">fx_led::set_rgb</ref>(uint8_t<sp/>red,<sp/>uint8_t<sp/>green,<sp/>uint8_t<sp/>blue)<sp/>{</highlight></codeline>
-<codeline lineno="1997"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#if<sp/>defined<sp/>(DM_FX)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="1998"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classfx__led_1a812d50bb14fb3cb90c387e630cefe631" kindref="member">turn_on</ref>();</highlight></codeline>
-<codeline lineno="1999"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#elif<sp/>defined<sp/>(DM_FX_TWO)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2000"><highlight class="normal"><sp/><sp/><sp/><sp/>cur_r<sp/>=<sp/>red;</highlight></codeline>
-<codeline lineno="2001"><highlight class="normal"><sp/><sp/><sp/><sp/>cur_g<sp/>=<sp/>green;</highlight></codeline>
-<codeline lineno="2002"><highlight class="normal"><sp/><sp/><sp/><sp/>cur_b<sp/>=<sp/>blue;</highlight></codeline>
-<codeline lineno="2003"><highlight class="normal"><sp/><sp/><sp/><sp/>steps<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="2004"><highlight class="normal"><sp/><sp/><sp/><sp/>update_rgb_led();<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="2005"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#endif<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2006"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="2007"><highlight class="normal"></highlight></codeline>
-<codeline lineno="2013"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><ref refid="classfx__led_1ad504f325108b97061d41163917898faa" kindref="member">fx_led::set_rgb</ref>(LED_COLOR<sp/>rgb)<sp/>{</highlight></codeline>
-<codeline lineno="2014"><highlight class="normal"></highlight></codeline>
-<codeline lineno="2015"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#if<sp/>defined<sp/>(DM_FX_TWO)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2016"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>red<sp/>=<sp/>((uint32_t)<sp/>rgb<sp/>&gt;&gt;<sp/>16)<sp/>&amp;<sp/>0xFF;</highlight></codeline>
-<codeline lineno="2017"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>green<sp/>=<sp/>((uint32_t)<sp/>rgb<sp/>&gt;&gt;<sp/>8)<sp/>&amp;<sp/>0xFF;</highlight></codeline>
-<codeline lineno="2018"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>blue<sp/>=<sp/>(uint32_t)<sp/>rgb<sp/>&amp;<sp/>0xFF;</highlight></codeline>
-<codeline lineno="2019"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classfx__led_1ad504f325108b97061d41163917898faa" kindref="member">set_rgb</ref>(red,<sp/>green,<sp/>blue);<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="2020"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#endif<sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2021"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="2022"><highlight class="normal"></highlight></codeline>
-<codeline lineno="2031"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><ref refid="classfx__led_1a0913d46695186026a41f958dafcd4027" kindref="member">fx_led::fade_to_rgb</ref>(uint8_t<sp/>red,<sp/>uint8_t<sp/>green,<sp/>uint8_t<sp/>blue,<sp/>uint32_t<sp/>milliseconds)<sp/>{</highlight></codeline>
-<codeline lineno="2032"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#if<sp/>defined<sp/>(DM_FX_TWO)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2033"><highlight class="normal"><sp/><sp/><sp/><sp/>target_r<sp/>=<sp/>red;</highlight></codeline>
-<codeline lineno="2034"><highlight class="normal"><sp/><sp/><sp/><sp/>target_g<sp/>=<sp/>green;</highlight></codeline>
-<codeline lineno="2035"><highlight class="normal"><sp/><sp/><sp/><sp/>target_b<sp/>=<sp/>blue;</highlight></codeline>
-<codeline lineno="2036"><highlight class="normal"></highlight></codeline>
-<codeline lineno="2037"><highlight class="normal"><sp/><sp/><sp/><sp/>steps<sp/>=<sp/>(uint32_t)<sp/>((</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)<sp/>milliseconds<sp/>*<sp/>(1.0/LED_UPDATE_RATE_MS));</highlight></codeline>
-<codeline lineno="2038"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>inc<sp/>=<sp/>1.0/(float)<sp/>steps;</highlight></codeline>
-<codeline lineno="2039"><highlight class="normal"></highlight></codeline>
-<codeline lineno="2040"><highlight class="normal"><sp/><sp/><sp/><sp/>inc_r<sp/>=<sp/>(target_r<sp/>-<sp/>cur_r)<sp/>*<sp/>inc;</highlight></codeline>
-<codeline lineno="2041"><highlight class="normal"><sp/><sp/><sp/><sp/>inc_g<sp/>=<sp/>(target_g<sp/>-<sp/>cur_g)<sp/>*<sp/>inc;</highlight></codeline>
-<codeline lineno="2042"><highlight class="normal"><sp/><sp/><sp/><sp/>inc_b<sp/>=<sp/>(target_b<sp/>-<sp/>cur_b)<sp/>*<sp/>inc;</highlight></codeline>
-<codeline lineno="2043"><highlight class="normal"></highlight></codeline>
-<codeline lineno="2044"><highlight class="normal"><sp/><sp/><sp/><sp/>update_rgb_led();</highlight></codeline>
-<codeline lineno="2045"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#endif<sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2046"><highlight class="normal"></highlight></codeline>
-<codeline lineno="2047"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="2048"><highlight class="normal"></highlight></codeline>
-<codeline lineno="2055"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><ref refid="classfx__led_1a0913d46695186026a41f958dafcd4027" kindref="member">fx_led::fade_to_rgb</ref>(LED_COLOR<sp/>rgb,<sp/>uint32_t<sp/>milliseconds)<sp/>{</highlight></codeline>
-<codeline lineno="2056"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>red<sp/>=<sp/>(rgb<sp/>&gt;&gt;<sp/>16)<sp/>&amp;<sp/>0xFF;</highlight></codeline>
-<codeline lineno="2057"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>green<sp/>=<sp/>(rgb<sp/>&gt;&gt;<sp/>8)<sp/>&amp;<sp/>0xFF;</highlight></codeline>
-<codeline lineno="2058"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>blue<sp/>=<sp/>rgb<sp/>&amp;<sp/>0xFF;</highlight></codeline>
-<codeline lineno="2059"><highlight class="normal"><sp/><sp/><ref refid="classfx__led_1a0913d46695186026a41f958dafcd4027" kindref="member">fade_to_rgb</ref>(red,<sp/>green,<sp/>blue,<sp/>milliseconds);</highlight></codeline>
-<codeline lineno="2060"><highlight class="normal"></highlight></codeline>
-<codeline lineno="2061"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="2062"><highlight class="normal"></highlight></codeline>
-<codeline lineno="2063"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1962"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><ref refid="classfx__led_1a812d50bb14fb3cb90c387e630cefe631" kindref="member">fx_led::turn_on</ref>(uint8_t<sp/>red,<sp/>uint8_t<sp/>green,<sp/>uint8_t<sp/>blue)<sp/>{</highlight></codeline>
+<codeline lineno="1963"><highlight class="normal"><sp/><sp/><ref refid="classfx__led_1ad504f325108b97061d41163917898faa" kindref="member">set_rgb</ref>(red,<sp/>green,<sp/>blue);</highlight></codeline>
+<codeline lineno="1964"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="1965"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1976"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><ref refid="classfx__led_1a812d50bb14fb3cb90c387e630cefe631" kindref="member">fx_led::turn_on</ref>(LED_COLOR<sp/>rgb)<sp/>{</highlight></codeline>
+<codeline lineno="1977"><highlight class="normal"><sp/><sp/><ref refid="classfx__led_1ad504f325108b97061d41163917898faa" kindref="member">set_rgb</ref>((uint32_t)<sp/>rgb);</highlight></codeline>
+<codeline lineno="1978"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="1979"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1980"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1988"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><ref refid="classfx__led_1ad58dd290eb4f4b662f7cb150e4bf866a" kindref="member">fx_led::turn_off</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="1989"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(led_pos)<sp/>{</highlight></codeline>
+<codeline lineno="1990"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>LED_RIGHT:<sp/>turn_off_right_footsw_led();<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="1991"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>LED_CENTER:<sp/>turn_off_center_footsw_led();<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="1992"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>LED_LEFT:<sp/>turn_off_left_footsw_led();<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="1993"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="1994"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="1995"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="1996"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2010"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><ref refid="classfx__led_1ad504f325108b97061d41163917898faa" kindref="member">fx_led::set_rgb</ref>(uint8_t<sp/>red,<sp/>uint8_t<sp/>green,<sp/>uint8_t<sp/>blue)<sp/>{</highlight></codeline>
+<codeline lineno="2011"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#if<sp/>defined<sp/>(DM_FX)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2012"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classfx__led_1a812d50bb14fb3cb90c387e630cefe631" kindref="member">turn_on</ref>();</highlight></codeline>
+<codeline lineno="2013"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#elif<sp/>defined<sp/>(DM_FX_TWO)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2014"><highlight class="normal"><sp/><sp/><sp/><sp/>cur_r<sp/>=<sp/>red;</highlight></codeline>
+<codeline lineno="2015"><highlight class="normal"><sp/><sp/><sp/><sp/>cur_g<sp/>=<sp/>green;</highlight></codeline>
+<codeline lineno="2016"><highlight class="normal"><sp/><sp/><sp/><sp/>cur_b<sp/>=<sp/>blue;</highlight></codeline>
+<codeline lineno="2017"><highlight class="normal"><sp/><sp/><sp/><sp/>steps<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="2018"><highlight class="normal"><sp/><sp/><sp/><sp/>update_rgb_led();<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="2019"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#endif<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2020"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="2021"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2031"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><ref refid="classfx__led_1ad504f325108b97061d41163917898faa" kindref="member">fx_led::set_rgb</ref>(LED_COLOR<sp/>rgb)<sp/>{</highlight></codeline>
+<codeline lineno="2032"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2033"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#if<sp/>defined<sp/>(DM_FX_TWO)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2034"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>red<sp/>=<sp/>((uint32_t)<sp/>rgb<sp/>&gt;&gt;<sp/>16)<sp/>&amp;<sp/>0xFF;</highlight></codeline>
+<codeline lineno="2035"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>green<sp/>=<sp/>((uint32_t)<sp/>rgb<sp/>&gt;&gt;<sp/>8)<sp/>&amp;<sp/>0xFF;</highlight></codeline>
+<codeline lineno="2036"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>blue<sp/>=<sp/>(uint32_t)<sp/>rgb<sp/>&amp;<sp/>0xFF;</highlight></codeline>
+<codeline lineno="2037"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classfx__led_1ad504f325108b97061d41163917898faa" kindref="member">set_rgb</ref>(red,<sp/>green,<sp/>blue);<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="2038"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#endif<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2039"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="2040"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2059"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><ref refid="classfx__led_1a0913d46695186026a41f958dafcd4027" kindref="member">fx_led::fade_to_rgb</ref>(uint8_t<sp/>red,<sp/>uint8_t<sp/>green,<sp/>uint8_t<sp/>blue,<sp/>uint32_t<sp/>milliseconds)<sp/>{</highlight></codeline>
+<codeline lineno="2060"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#if<sp/>defined<sp/>(DM_FX_TWO)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2061"><highlight class="normal"><sp/><sp/><sp/><sp/>target_r<sp/>=<sp/>red;</highlight></codeline>
+<codeline lineno="2062"><highlight class="normal"><sp/><sp/><sp/><sp/>target_g<sp/>=<sp/>green;</highlight></codeline>
+<codeline lineno="2063"><highlight class="normal"><sp/><sp/><sp/><sp/>target_b<sp/>=<sp/>blue;</highlight></codeline>
 <codeline lineno="2064"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2065"><highlight class="normal"><sp/><sp/><sp/><sp/>steps<sp/>=<sp/>(uint32_t)<sp/>((</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)<sp/>milliseconds<sp/>*<sp/>(1.0/LED_UPDATE_RATE_MS));</highlight></codeline>
+<codeline lineno="2066"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>inc<sp/>=<sp/>1.0/(float)<sp/>steps;</highlight></codeline>
+<codeline lineno="2067"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2068"><highlight class="normal"><sp/><sp/><sp/><sp/>inc_r<sp/>=<sp/>(target_r<sp/>-<sp/>cur_r)<sp/>*<sp/>inc;</highlight></codeline>
+<codeline lineno="2069"><highlight class="normal"><sp/><sp/><sp/><sp/>inc_g<sp/>=<sp/>(target_g<sp/>-<sp/>cur_g)<sp/>*<sp/>inc;</highlight></codeline>
+<codeline lineno="2070"><highlight class="normal"><sp/><sp/><sp/><sp/>inc_b<sp/>=<sp/>(target_b<sp/>-<sp/>cur_b)<sp/>*<sp/>inc;</highlight></codeline>
+<codeline lineno="2071"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2072"><highlight class="normal"><sp/><sp/><sp/><sp/>update_rgb_led();</highlight></codeline>
+<codeline lineno="2073"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#endif<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2074"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2075"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="2076"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2092"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><ref refid="classfx__led_1a0913d46695186026a41f958dafcd4027" kindref="member">fx_led::fade_to_rgb</ref>(LED_COLOR<sp/>rgb,<sp/>uint32_t<sp/>milliseconds)<sp/>{</highlight></codeline>
+<codeline lineno="2093"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>red<sp/>=<sp/>(rgb<sp/>&gt;&gt;<sp/>16)<sp/>&amp;<sp/>0xFF;</highlight></codeline>
+<codeline lineno="2094"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>green<sp/>=<sp/>(rgb<sp/>&gt;&gt;<sp/>8)<sp/>&amp;<sp/>0xFF;</highlight></codeline>
+<codeline lineno="2095"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>blue<sp/>=<sp/>rgb<sp/>&amp;<sp/>0xFF;</highlight></codeline>
+<codeline lineno="2096"><highlight class="normal"><sp/><sp/><ref refid="classfx__led_1a0913d46695186026a41f958dafcd4027" kindref="member">fade_to_rgb</ref>(red,<sp/>green,<sp/>blue,<sp/>milliseconds);</highlight></codeline>
+<codeline lineno="2097"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2098"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="2099"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2101"><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="src/dreammakerfx.cpp"/>
   </compounddef>

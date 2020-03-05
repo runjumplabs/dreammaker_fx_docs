@@ -197,7 +197,30 @@
 <dl class="class">
 <dt id="_CPPv49fx_switch">
 <span id="_CPPv39fx_switch"></span><span id="_CPPv29fx_switch"></span><span id="fx_switch"></span><span class="target" id="classfx__switch"></span><em class="property">class </em><code class="sig-name descname">fx_switch</code><a class="headerlink" href="#_CPPv49fx_switch" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Manages the state of any hardware toggle switches. </p>
+<dd><p>These functions are used to control the toggle switches on the pedal. </p>
+<p>The switches, which are available on the second generation hardware, are part of the <code class="docutils literal notranslate"><span class="pre">pedal</span></code> object. The available switches are <code class="docutils literal notranslate"><span class="pre">pedal.toggle_left</span></code> and <code class="docutils literal notranslate"><span class="pre">pedal.toggle_right</span></code>.</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// When the user changes the left toggle switch, change the color of the LED</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">pedal</span><span class="p">.</span><span class="n">toggle_left</span><span class="p">.</span><span class="n">has_changed</span><span class="p">())</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">pedal</span><span class="p">.</span><span class="n">toggle_left</span><span class="p">.</span><span class="n">position</span> <span class="o">==</span> <span class="n">SWITCH_POS_UP</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">pedal</span><span class="p">.</span><span class="n">led_left</span><span class="p">.</span><span class="n">turn_on</span><span class="p">(</span><span class="n">RED</span><span class="p">);</span>
+    <span class="p">}</span> 
+   
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">pedal</span><span class="p">.</span><span class="n">toggle_left</span><span class="p">.</span><span class="n">position</span> <span class="o">==</span> <span class="n">SWITCH_POS_MIDDLE</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">pedal</span><span class="p">.</span><span class="n">led_left</span><span class="p">.</span><span class="n">turn_on</span><span class="p">(</span><span class="n">GREEN</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">pedal</span><span class="p">.</span><span class="n">toggle_left</span><span class="p">.</span><span class="n">position</span> <span class="o">==</span> <span class="n">SWITCH_POS_DOWN</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">pedal</span><span class="p">.</span><span class="n">led_left</span><span class="p">.</span><span class="n">turn_on</span><span class="p">(</span><span class="n">BLUE</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  
+  <span class="c1">// Other code in loop()...</span>
+  
+<span class="p">}</span>
+</pre></div>
+</div>
+ </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
@@ -215,8 +238,8 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Members</p>
 <dl class="member">
-<dt id="_CPPv4N9fx_switch10switch_posE">
-<span id="_CPPv3N9fx_switch10switch_posE"></span><span id="_CPPv2N9fx_switch10switch_posE"></span><span id="fx_switch::switch_pos__SWITCH_POS"></span><span class="target" id="classfx__switch_1aaf55be7752571b572e9c4f502613e915"></span><a class="reference internal" href="enum_dreammakerfx_8h_1a3d7c3257df400de2c91753ba11c64ec7.html#_CPPv410SWITCH_POS" title="SWITCH_POS">SWITCH_POS</a> <code class="sig-name descname">switch_pos</code><a class="headerlink" href="#_CPPv4N9fx_switch10switch_posE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N9fx_switch8positionE">
+<span id="_CPPv3N9fx_switch8positionE"></span><span id="_CPPv2N9fx_switch8positionE"></span><span id="fx_switch::position__SWITCH_POS"></span><span class="target" id="classfx__switch_1a76d9aa494f2369eb421296d8f1bb8847"></span><a class="reference internal" href="enum_dreammakerfx_8h_1a3d7c3257df400de2c91753ba11c64ec7.html#_CPPv410SWITCH_POS" title="SWITCH_POS">SWITCH_POS</a> <code class="sig-name descname">position</code><a class="headerlink" href="#_CPPv4N9fx_switch8positionE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Current switch position (SWITCH_POS_UP, SWITCH_POS_MIDDLE, SWITCH_POS_DOWN) </p>
 </dd></dl>
 

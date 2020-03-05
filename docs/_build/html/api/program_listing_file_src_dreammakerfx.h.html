@@ -356,7 +356,9 @@
 <span class="k">typedef</span> <span class="k">enum</span> <span class="p">{</span>
   <span class="n">RED</span>     <span class="o">=</span> <span class="mh">0x800000</span><span class="p">,</span>
   <span class="n">GREEN</span>   <span class="o">=</span> <span class="mh">0x008000</span><span class="p">,</span>
-  <span class="n">BLUE</span>    <span class="o">=</span> <span class="mh">0x000080</span>
+  <span class="n">BLUE</span>    <span class="o">=</span> <span class="mh">0x000080</span><span class="p">,</span>
+  <span class="n">YELLOW</span>  <span class="o">=</span> <span class="mh">0x808000</span><span class="p">,</span>
+  <span class="n">PURPLE</span>  <span class="o">=</span> <span class="mh">0x800080</span>
 <span class="p">}</span> <span class="n">LED_COLOR</span><span class="p">;</span>
 
 
@@ -374,7 +376,9 @@
 
   <span class="k">public</span><span class="o">:</span>
 
-    <span class="n">fx_led</span><span class="p">(</span><span class="n">LED_POS</span> <span class="n">pos</span><span class="p">);</span>
+    <span class="cp">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span>
+      <span class="n">fx_led</span><span class="p">(</span><span class="n">LED_POS</span> <span class="n">pos</span><span class="p">);</span>
+    <span class="cp">#endif</span>
     <span class="kt">void</span>  <span class="nf">turn_on</span><span class="p">();</span>
     <span class="kt">void</span>  <span class="nf">turn_on</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">red</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">green</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">blue</span><span class="p">);</span>
     <span class="kt">void</span>  <span class="nf">turn_on</span><span class="p">(</span><span class="n">LED_COLOR</span> <span class="n">rgb</span><span class="p">);</span>
@@ -404,10 +408,10 @@
     <span class="n">SWITCH_POS</span> <span class="n">switch_pos_last</span><span class="p">;</span>
 
   <span class="k">public</span><span class="o">:</span>
-    <span class="n">SWITCH_POS</span>  <span class="n">switch_pos</span><span class="p">;</span>
+    <span class="n">SWITCH_POS</span>  <span class="n">position</span><span class="p">;</span>
     <span class="kt">bool</span> <span class="nf">has_changed</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
-      <span class="kt">bool</span> <span class="n">res</span> <span class="o">=</span> <span class="p">(</span><span class="n">switch_pos</span><span class="o">==</span><span class="n">switch_pos_last</span><span class="o">?</span><span class="nb">false</span><span class="o">:</span><span class="nb">true</span><span class="p">);</span>
-      <span class="n">switch_pos_last</span> <span class="o">=</span> <span class="n">switch_pos</span><span class="p">;</span>
+      <span class="kt">bool</span> <span class="n">res</span> <span class="o">=</span> <span class="p">(</span><span class="n">position</span><span class="o">==</span><span class="n">switch_pos_last</span><span class="o">?</span><span class="nb">false</span><span class="o">:</span><span class="nb">true</span><span class="p">);</span>
+      <span class="n">switch_pos_last</span> <span class="o">=</span> <span class="n">position</span><span class="p">;</span>
       <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
     <span class="p">}</span>
 
@@ -415,17 +419,17 @@
   <span class="cp">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span>
     <span class="kt">void</span> <span class="nf">read_switch</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
 
-      <span class="n">switch_pos_last</span> <span class="o">=</span> <span class="n">switch_pos</span><span class="p">;</span>
+      <span class="n">switch_pos_last</span> <span class="o">=</span> <span class="n">position</span><span class="p">;</span>
 
       <span class="kt">bool</span> <span class="n">down_pos</span> <span class="o">=</span> <span class="n">digitalRead</span><span class="p">(</span><span class="n">down_pin</span><span class="p">);</span>
       <span class="kt">bool</span> <span class="n">up_pos</span> <span class="o">=</span> <span class="n">digitalRead</span><span class="p">(</span><span class="n">up_pin</span><span class="p">);</span>
 
       <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">up_pos</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">switch_pos</span> <span class="o">=</span> <span class="n">SWITCH_POS_UP</span><span class="p">;</span>
+        <span class="n">position</span> <span class="o">=</span> <span class="n">SWITCH_POS_UP</span><span class="p">;</span>
       <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">down_pos</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">switch_pos</span> <span class="o">=</span> <span class="n">SWITCH_POS_DOWN</span><span class="p">;</span>
+        <span class="n">position</span> <span class="o">=</span> <span class="n">SWITCH_POS_DOWN</span><span class="p">;</span>
       <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="n">switch_pos</span> <span class="o">=</span> <span class="n">SWITCH_POS_MIDDLE</span><span class="p">;</span>
+        <span class="n">position</span> <span class="o">=</span> <span class="n">SWITCH_POS_MIDDLE</span><span class="p">;</span>
       <span class="p">}</span>
 
     <span class="p">}</span>

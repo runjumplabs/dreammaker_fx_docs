@@ -1997,6 +1997,12 @@ void  fx_led::turn_off() {
 /**
  * @brief      Sets the RGB color value for this LED
  *
+ * ``` CPP
+ * 
+ * pedal.led_center.set_rgb(40, 0, 50); // Set center LED to purplish color
+ * ```
+ * 
+ *
  * @param[in]  red    The new red component (0-255)
  * @param[in]  green  The new green component (0-255)
  * @param[in]  blue   The new blue component (0-255)
@@ -2016,6 +2022,10 @@ void  fx_led::set_rgb(uint8_t red, uint8_t green, uint8_t blue) {
 /**
  * @brief      Sets the RGB color value for this LED
  *
+ * ``` CPP
+ * pedal.led_right.set_rgb(RED);  // set right LED to red color
+ * ``` 
+ *
  * @param[in]  rgb   The color from LED_COLOR type
  */
 void  fx_led::set_rgb(LED_COLOR rgb) {
@@ -2029,7 +2039,17 @@ void  fx_led::set_rgb(LED_COLOR rgb) {
 }
 
 /**
- * @brief      Fade this LED to a new RGB value
+ * @brief      Fade this LED to a new RGB value.  The fade happens in the background.
+ * 
+ * Fade the right LED from red to blue over 1 second.
+ * 
+ * ``` CPP
+ *   pedal.led_right.set_rgb(RED);
+ *   pedal.led_right.fade_to_rgb(0, 0, 100, 1000.0);
+ * ```
+ *
+ * The fade happens in the background so the code execution will not wait until the
+ * fade completes.
  *
  * @param[in]  red           The red component (0-255)
  * @param[in]  green         The green component (0-255)
@@ -2055,7 +2075,16 @@ void  fx_led::fade_to_rgb(uint8_t red, uint8_t green, uint8_t blue, uint32_t mil
 }
 
 /**
- * @brief      Fade this LED to a new RGB value
+ * @brief      Fade this LED to a new RGB value.
+ *
+ * Fade the right LED from red to blue over 1 second
+ * ``` CPP
+ *   pedal.led_right.set_rgb(RED);
+ *   pedal.led_right.fade_to_rgb(BLUE, 1000.0);
+ * ```
+ *
+ * The fade happens in the background so the code execution will not wait until the
+ * fade completes.
  *
  * @param[in]  rgb           The color from LED_COLOR type
  * @param[in]  milliseconds  The milliseconds to perform fade over

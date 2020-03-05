@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="212" column="1" bodyfile="src/dreammakerfx.h" bodystart="212" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="230" column="1" bodyfile="src/dreammakerfx.h" bodystart="230" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__led_1ad05443c6e1937f24b9a5f4d233efd440" prot="private" static="no" mutable="no">
         <type>float</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="213" column="1" bodyfile="src/dreammakerfx.h" bodystart="213" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="231" column="1" bodyfile="src/dreammakerfx.h" bodystart="231" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__led_1a5132f5c452e3fbf86e04122ced8e253e" prot="private" static="no" mutable="no">
         <type>float</type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="213" column="1" bodyfile="src/dreammakerfx.h" bodystart="213" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="231" column="1" bodyfile="src/dreammakerfx.h" bodystart="231" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__led_1ac3b9c2a673264b6fac9c60663fd09358" prot="private" static="no" mutable="no">
         <type>float</type>
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="213" column="1" bodyfile="src/dreammakerfx.h" bodystart="213" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="231" column="1" bodyfile="src/dreammakerfx.h" bodystart="231" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__led_1ac4f97262d471654624569156a30fc0e4" prot="private" static="no" mutable="no">
         <type>float</type>
@@ -67,7 +67,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="214" column="1" bodyfile="src/dreammakerfx.h" bodystart="214" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="232" column="1" bodyfile="src/dreammakerfx.h" bodystart="232" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__led_1ac772c900248f30a0fc6caa9eb9cb6c12" prot="private" static="no" mutable="no">
         <type>float</type>
@@ -80,7 +80,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="214" column="1" bodyfile="src/dreammakerfx.h" bodystart="214" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="232" column="1" bodyfile="src/dreammakerfx.h" bodystart="232" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__led_1a4ea8e984c9035a378ff06964c37b1b38" prot="private" static="no" mutable="no">
         <type>float</type>
@@ -93,7 +93,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="214" column="1" bodyfile="src/dreammakerfx.h" bodystart="214" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="232" column="1" bodyfile="src/dreammakerfx.h" bodystart="232" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__led_1acba092466ad006077d3053eececa5631" prot="private" static="no" mutable="no">
         <type>float</type>
@@ -106,7 +106,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="215" column="1" bodyfile="src/dreammakerfx.h" bodystart="215" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="233" column="1" bodyfile="src/dreammakerfx.h" bodystart="233" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__led_1af06d156cc9df29186179332e90feecb8" prot="private" static="no" mutable="no">
         <type>float</type>
@@ -119,7 +119,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="215" column="1" bodyfile="src/dreammakerfx.h" bodystart="215" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="233" column="1" bodyfile="src/dreammakerfx.h" bodystart="233" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__led_1acf87bdac2c310be22c582421c4326c10" prot="private" static="no" mutable="no">
         <type>float</type>
@@ -132,7 +132,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="215" column="1" bodyfile="src/dreammakerfx.h" bodystart="215" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="233" column="1" bodyfile="src/dreammakerfx.h" bodystart="233" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__led_1a81a263c2adda899e90860581ec345f9b" prot="private" static="no" mutable="no">
         <type>uint32_t</type>
@@ -145,7 +145,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="216" column="1" bodyfile="src/dreammakerfx.h" bodystart="216" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="234" column="1" bodyfile="src/dreammakerfx.h" bodystart="234" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__led_1a489c3e1fd418597cdf90442fa9e97fc6" prot="private" static="no" mutable="no">
         <type>uint32_t</type>
@@ -158,7 +158,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="217" column="1" bodyfile="src/dreammakerfx.h" bodystart="217" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="235" column="1" bodyfile="src/dreammakerfx.h" bodystart="235" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -176,27 +176,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="219" column="1"/>
+        <location file="src/dreammakerfx.h" line="237" column="1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="classfx__led_1a05cae5d2d4a44e3c22d74ea2332682d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>fx_led::fx_led</definition>
-        <argsstring>(LED_POS pos)</argsstring>
-        <name>fx_led</name>
-        <param>
-          <type>LED_POS</type>
-          <declname>pos</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/dreammakerfx.h" line="223" column="1"/>
-      </memberdef>
       <memberdef kind="function" id="classfx__led_1a812d50bb14fb3cb90c387e630cefe631" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void fx_led::turn_on</definition>
@@ -206,12 +189,12 @@
 <para>Turns on this LED. When using an RGB LED, this turns it on to red. </para>
         </briefdescription>
         <detaileddescription>
-<para><programlisting><codeline><highlight class="normal">pedal.led_right.turn_on();<sp/><sp/>//<sp/>turns<sp/>on<sp/>the<sp/>LED</highlight></codeline>
+<para><programlisting><codeline><highlight class="normal">pedal.led_right.turn_on();<sp/><sp/>//<sp/>turns<sp/>on<sp/>the<sp/>right<sp/>LED</highlight></codeline>
 </programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="224" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1938" bodyend="1949"/>
+        <location file="src/dreammakerfx.h" line="244" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1938" bodyend="1949"/>
       </memberdef>
       <memberdef kind="function" id="classfx__led_1a00b55092c45885a16044f355f0287037" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -234,7 +217,8 @@
 <para>Turns on this LED to a specific RGB color. </para>
         </briefdescription>
         <detaileddescription>
-<para>Example: `<computeroutput>pedal.led_left.turn_on();</computeroutput></para>
+<para><programlisting><codeline><highlight class="normal">pedal.led_left.turn_on(100,<sp/>0,<sp/>75);<sp/>//<sp/>turn<sp/>left<sp/>LED<sp/>purple</highlight></codeline>
+</programlisting></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername direction="in">red</parametername>
@@ -264,7 +248,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="225" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1960" bodyend="1962"/>
+        <location file="src/dreammakerfx.h" line="245" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1962" bodyend="1964"/>
       </memberdef>
       <memberdef kind="function" id="classfx__led_1a5a956ec3f2d61b25441670c0da62dff9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -279,7 +263,8 @@
 <para>Turns on this LED to a specific RGB color. If the LED is not an RGB LED, it will just turn on the LED anyway. </para>
         </briefdescription>
         <detaileddescription>
-<para>Example: <computeroutput>pedal.led_left.turn_on(GREEN);</computeroutput></para>
+<para><programlisting><codeline><highlight class="normal">pedal.led_left.turn_on(GREEN);</highlight></codeline>
+</programlisting></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername direction="in">rgb</parametername>
@@ -293,7 +278,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="226" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1972" bodyend="1974"/>
+        <location file="src/dreammakerfx.h" line="246" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1976" bodyend="1978"/>
       </memberdef>
       <memberdef kind="function" id="classfx__led_1ad58dd290eb4f4b662f7cb150e4bf866a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -304,10 +289,12 @@
 <para>Turns off this LED. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">pedal.led_center.turn_off();<sp/>//<sp/>turn<sp/>off<sp/>center<sp/>LED</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="227" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1980" bodyend="1987"/>
+        <location file="src/dreammakerfx.h" line="247" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1988" bodyend="1995"/>
       </memberdef>
       <memberdef kind="function" id="classfx__led_1ad504f325108b97061d41163917898faa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -330,6 +317,8 @@
 <para>Sets the RGB color value for this LED. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">pedal.led_center.set_rgb(40,<sp/>0,<sp/>50);<sp/>//<sp/>Set<sp/>center<sp/>LED<sp/>to<sp/>purplish<sp/>color</highlight></codeline>
+</programlisting></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername direction="in">red</parametername>
@@ -359,7 +348,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="229" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1996" bodyend="2006"/>
+        <location file="src/dreammakerfx.h" line="249" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="2010" bodyend="2020"/>
       </memberdef>
       <memberdef kind="function" id="classfx__led_1a7482016cc0fba0782b8df45259858398" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -374,6 +363,8 @@
 <para>Sets the RGB color value for this LED. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">pedal.led_right.set_rgb(RED);<sp/><sp/>//<sp/>set<sp/>right<sp/>LED<sp/>to<sp/>red<sp/>color</highlight></codeline>
+</programlisting></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername direction="in">rgb</parametername>
@@ -387,7 +378,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="230" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="2013" bodyend="2021"/>
+        <location file="src/dreammakerfx.h" line="250" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="2031" bodyend="2039"/>
       </memberdef>
       <memberdef kind="function" id="classfx__led_1a0913d46695186026a41f958dafcd4027" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -411,9 +402,14 @@
           <declname>milliseconds</declname>
         </param>
         <briefdescription>
-<para>Fade this LED to a new RGB value. </para>
+<para>Fade this LED to a new RGB value. The fade happens in the background. </para>
         </briefdescription>
         <detaileddescription>
+<para>Fade the right LED from red to blue over 1 second.</para>
+<para><programlisting><codeline><highlight class="normal">pedal.led_right.set_rgb(RED);</highlight></codeline>
+<codeline><highlight class="normal">pedal.led_right.fade_to_rgb(0,<sp/>0,<sp/>100,<sp/>1000.0);</highlight></codeline>
+</programlisting></para>
+<para>The fade happens in the background so the code execution will not wait until the fade completes.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername direction="in">red</parametername>
@@ -451,7 +447,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="231" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="2031" bodyend="2047"/>
+        <location file="src/dreammakerfx.h" line="251" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="2059" bodyend="2075"/>
       </memberdef>
       <memberdef kind="function" id="classfx__led_1afc261e711f845a0e5740e234a5fd0900" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -470,6 +466,10 @@
 <para>Fade this LED to a new RGB value. </para>
         </briefdescription>
         <detaileddescription>
+<para>Fade the right LED from red to blue over 1 second <programlisting><codeline><highlight class="normal">pedal.led_right.set_rgb(RED);</highlight></codeline>
+<codeline><highlight class="normal">pedal.led_right.fade_to_rgb(BLUE,<sp/>1000.0);</highlight></codeline>
+</programlisting></para>
+<para>The fade happens in the background so the code execution will not wait until the fade completes.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername direction="in">rgb</parametername>
@@ -491,7 +491,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="232" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="2055" bodyend="2061"/>
+        <location file="src/dreammakerfx.h" line="252" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="2092" bodyend="2098"/>
       </memberdef>
       <memberdef kind="function" id="classfx__led_1a5e50708d241365d44b804ca364b51a0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -504,27 +504,31 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="233" column="1"/>
+        <location file="src/dreammakerfx.h" line="253" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>Routines to control the LEDs on the pedal. </para>
+<para>These functions are used to control the LEDs on the pedal. </para>
     </briefdescription>
     <detaileddescription>
-<para>To turn on the left LED: <programlisting><codeline><highlight class="normal">pedal.led_left.turn_on();</highlight></codeline>
+<para>The LEDs are part of the <computeroutput>pedal</computeroutput> object. The LEDs available on the first version of hardware are <computeroutput>pedal.led_left</computeroutput> and <computeroutput>pedal.led_right</computeroutput>. On the second generation of hardware, there is also a <computeroutput>pedal.led_center</computeroutput>. Add the routines described below to these like so:</para>
+<para>To turn on the left LED: <programlisting><codeline><highlight class="normal">pedal.led_left.turn_on();<sp/><sp/><sp/><sp/>//<sp/>Turn<sp/>on<sp/>left<sp/>LED</highlight></codeline>
+</programlisting></para>
+<para>To turn off the right LED; <programlisting><codeline><highlight class="normal">pedal.led_right.turn_off();<sp/><sp/>//<sp/>Turn<sp/>off<sp/>right<sp/>LED</highlight></codeline>
+</programlisting></para>
+<para>To set the center LED to a purplish color: <programlisting><codeline><highlight class="normal">pedal.led_center.turn_on(40,<sp/>0,<sp/>50);<sp/>//<sp/>Red<sp/>=<sp/>40,<sp/>Blue<sp/>=<sp/>50</highlight></codeline>
 </programlisting></para>
 <para>Fade the right LED from red to blue over 1 second <programlisting><codeline><highlight class="normal">pedal.led_right.set_rgb(RED);</highlight></codeline>
 <codeline><highlight class="normal">pedal.led_right.fade_to_rgb(BLUE,<sp/>1000.0);</highlight></codeline>
 </programlisting> </para>
     </detaileddescription>
-    <location file="src/dreammakerfx.h" line="209" column="1" bodyfile="src/dreammakerfx.h" bodystart="209" bodyend="235"/>
+    <location file="src/dreammakerfx.h" line="227" column="1" bodyfile="src/dreammakerfx.h" bodystart="227" bodyend="255"/>
     <listofallmembers>
       <member refid="classfx__led_1ac3b9c2a673264b6fac9c60663fd09358" prot="private" virt="non-virtual"><scope>fx_led</scope><name>cur_b</name></member>
       <member refid="classfx__led_1a5132f5c452e3fbf86e04122ced8e253e" prot="private" virt="non-virtual"><scope>fx_led</scope><name>cur_g</name></member>
       <member refid="classfx__led_1ad05443c6e1937f24b9a5f4d233efd440" prot="private" virt="non-virtual"><scope>fx_led</scope><name>cur_r</name></member>
       <member refid="classfx__led_1a0913d46695186026a41f958dafcd4027" prot="public" virt="non-virtual"><scope>fx_led</scope><name>fade_to_rgb</name></member>
       <member refid="classfx__led_1afc261e711f845a0e5740e234a5fd0900" prot="public" virt="non-virtual"><scope>fx_led</scope><name>fade_to_rgb</name></member>
-      <member refid="classfx__led_1a05cae5d2d4a44e3c22d74ea2332682d8" prot="public" virt="non-virtual"><scope>fx_led</scope><name>fx_led</name></member>
       <member refid="classfx__led_1acf87bdac2c310be22c582421c4326c10" prot="private" virt="non-virtual"><scope>fx_led</scope><name>inc_b</name></member>
       <member refid="classfx__led_1af06d156cc9df29186179332e90feecb8" prot="private" virt="non-virtual"><scope>fx_led</scope><name>inc_g</name></member>
       <member refid="classfx__led_1acba092466ad006077d3053eececa5631" prot="private" virt="non-virtual"><scope>fx_led</scope><name>inc_r</name></member>

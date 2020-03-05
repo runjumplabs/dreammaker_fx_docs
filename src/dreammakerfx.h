@@ -188,17 +188,35 @@ class fx_control_node {
 typedef enum {
   RED     = 0x800000,
   GREEN   = 0x008000,
-  BLUE    = 0x000080 
+  BLUE    = 0x000080,
+  YELLOW  = 0x808000,
+  PURPLE  = 0x800080
 } LED_COLOR;
 
 
 /**
- * @brief      Routines to control the LEDs on the pedal.
+ * @brief      These functions are used to control the LEDs on the pedal.
+ * 
+ * The LEDs are part of the `pedal` object.  The LEDs available on the first
+ * version of hardware are `pedal.led_left` and `pedal.led_right`.  On the second
+ * generation of hardware, there is also a `pedal.led_center`.  Add the routines
+ * described below to these like so:
  * 
  * To turn on the left LED:
  * ``` CPP
- *   pedal.led_left.turn_on();
+ *   pedal.led_left.turn_on();    // Turn on left LED
  * ```
+ * 
+ * To turn off the right LED;
+ * ``` CPP
+ *   pedal.led_right.turn_off();  // Turn off right LED
+ * ```
+ * 
+ * To set the center LED to a purplish color:
+ * ``` CPP
+ *   pedal.led_center.turn_on(40, 0, 50); // Red = 40, Blue = 50
+ * ```
+ * 
  *   
  * Fade the right LED from red to blue over 1 second
  * ``` CPP
@@ -220,7 +238,9 @@ class fx_led {
 
   public:
 
-    fx_led(LED_POS pos);
+    #ifndef DOXYGEN_SHOULD_SKIP_THIS
+      fx_led(LED_POS pos);
+    #endif 
     void  turn_on();
     void  turn_on(uint8_t red, uint8_t green, uint8_t blue);
     void  turn_on(LED_COLOR rgb);
@@ -238,16 +258,45 @@ class fx_led {
 
 
 /**
- * Switch positions
+ * Toggle switch positions
  */
 typedef enum {
-  SWITCH_POS_UP,
-  SWITCH_POS_MIDDLE,
-  SWITCH_POS_DOWN,
+  SWITCH_POS_UP,      /**< Toggle switch is in up position (towards back of pedal) */
+  SWITCH_POS_MIDDLE,  /**< Toggle switch is in center position (in the middle) */
+  SWITCH_POS_DOWN,    /**< Toggle switch is in down position (towards front of pedal) */
 } SWITCH_POS;
 
 /**
- * @brief      Manages the state of any hardware toggle switches
+ * @brief      These functions are used to control the toggle switches on the pedal.
+ * 
+ * The switches, which are available on the second generation hardware, are part of the `pedal`
+ * object.   The available switches are `pedal.toggle_left` and `pedal.toggle_right`.
+ * 
+ * ``` CPP
+ * 
+ * void loop() {
+ *   // When the user changes the left toggle switch, change the color of the LED
+ *   if (pedal.toggle_left.has_changed()) {
+ *     if (pedal.toggle_left.position == SWITCH_POS_UP) {
+ *       pedal.led_left.turn_on(RED);
+ *     } 
+ *    
+ *     else if (pedal.toggle_left.position == SWITCH_POS_MIDDLE) {
+*        pedal.led_left.turn_on(GREEN);
+ *     }
+ *
+ *     else if (pedal.toggle_left.position == SWITCH_POS_DOWN) {
+ *       pedal.led_left.turn_on(BLUE);
+ *     }
+ *   }
+ *   
+ *   // Other code in loop()...
+ *   
+ * }
+ * 
+ * ```
+ * 
+ * 
  */
 class fx_switch {
 
@@ -256,16 +305,21 @@ class fx_switch {
     SWITCH_POS switch_pos_last;
 
   public:
-    SWITCH_POS  switch_pos;   /**< Current switch position (SWITCH_POS_UP, SWITCH_POS_MIDDLE, SWITCH_POS_DOWN) */
+    SWITCH_POS  position;   /**< Current switch position (SWITCH_POS_UP, SWITCH_POS_MIDDLE, SWITCH_POS_DOWN) */
 
     /**
      * @brief      Determines if the swtich has changed
+     * 
+     * ``` CPP
+     * if (pedal.toggle_right.has_changed()) {
+     *    // Add code to read toggle position and respond
+     * }
      *
      * @return     True if changed, False otherwise.
      */
     bool has_changed(void) {      
-      bool res = (switch_pos==switch_pos_last?false:true);
-      switch_pos_last = switch_pos;
+      bool res = (position==switch_pos_last?false:true);
+      switch_pos_last = position;
       return res;
     }   
 
@@ -273,17 +327,17 @@ class fx_switch {
   #ifndef DOXYGEN_SHOULD_SKIP_THIS
     void read_switch(void) {
 
-      switch_pos_last = switch_pos;
+      switch_pos_last = position;
 
       bool down_pos = digitalRead(down_pin);
       bool up_pos = digitalRead(up_pin);
 
       if (!up_pos) {
-        switch_pos = SWITCH_POS_UP;
+        position = SWITCH_POS_UP;
       } else if (!down_pos) {
-        switch_pos = SWITCH_POS_DOWN;
+        position = SWITCH_POS_DOWN;
       } else {
-        switch_pos = SWITCH_POS_MIDDLE;
+        position = SWITCH_POS_MIDDLE;
       }
 
     }   
