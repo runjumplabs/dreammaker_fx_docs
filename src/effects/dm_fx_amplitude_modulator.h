@@ -6,15 +6,51 @@
 /**
  * @brief      Effect: Amplitude modulator for creating tremelo-like effects.
  * 
- * An amplitude modulator will change the volume or "amplitude" of the audio
- * to create various types of tremelo effects.  
+ * Amplitude modulators are the basic building blocks of tremelos and rhythmic effects.  
+ * They essentially use an oscillator / waveform or an external control signal to vary 
+ * the amplitude / volume of a signal.
  * 
- * Here's a video demonstrating how amplitude modulators work: 
- * YTIDAxZVMyIFqcADITY
  * 
- * Code example:
- *   ___amp_mod_1.c___
- *     
+ * ``` CPP
+ * #include <dreammakerfx.h>
+ * 
+ * fx_amplitude_mod    mod1(1.0,     // Rate (Hz) is once per second
+ *                          0.8,     // Depth (0.0->1.0)
+ *                          0,       // Initial phase (degrees)
+ *                          OSC_SINE,// Oscillator type is a sine wave
+ *                          false);  // Don't use external LFO
+ * 
+ * void setup() {
+ * 
+ *   pedal.init();   // Initialize pedal
+ * 
+ *   // Route audio through effects
+ *   pedal.route_audio(pedal.instr_in, mod1.input);
+ *   pedal.route_audio(mod1.output, pedal.amp_out);
+ * 
+ *   pedal.add_bypass_button(FOOTSWITCH_LEFT); // Use left footswitch/LED to bypass effect
+ * 
+ *   pedal.run();    // Run effects
+ * }
+ * 
+ * void loop() {
+ * 
+ *   // Pot 0 changes the rate of the tremelo from 0 to 4Hz
+ *   if (pedal.pot_0.has_changed()) {
+ *     mod1.set_rate_hz(pedal.pot_0.val*4.0);
+ *   }
+ * 
+ *   // Pot 1 changes the depth from 0.0 to 1.0
+ *   if (pedal.pot_1.has_changed()) {
+ *     mod1.set_depth(pedal.pot_1);
+ *   }
+ * 
+ *    pedal.service(); // Run pedal service to take care of stuff
+ * }
+ * ```
+ * 
+ * There are lots of cool things you can try with amplitude modulators: use tap function to set rate, use a instrument input through a pitch shifter as the external modulator, use high modulation frequency like 440.0Hz, try a few in parallel running through filters with different initial phase values (to create harmonic tremelos).
+ * 
  * 
  */
 class fx_amplitude_mod: public fx_effect {
@@ -106,10 +142,12 @@ class fx_amplitude_mod: public fx_effect {
   /**
    * @brief      Basic constructor/initializer for amplitude modulator
    *
-   * @param[in]  modulation_rate   The amp modifier rate in Hertz (cycles /
-   *                               second)
-   * @param[in]  modulation_depth  The amp modifier depth (0.0 is no modulation
-   *                               -> 1.0 is full modulation)
+   * ``` CPP
+   * fx_amplitude_mod    mod1(1.0,     // Rate (Hz) is once per second
+   *                          0.8);     // Depth (0.0->1.0)
+   * ```
+   * @param[in]  modulation_rate   When using an internal oscillator, the “modulation” rate is oscillation (cycles per second).  When in doubt, start with 1.0 (one cycle per second)   
+   * @param[in]  modulation_depth  How much the volume is “modulated”.  A value of 0.0 is none at all and a value of 1.0  means  full volume to zero volume.
    */
 	fx_amplitude_mod(float rate_hz, float depth) : 
     node_loop_ext_mod(NODE_IN, "external modulator", this),
@@ -129,16 +167,19 @@ class fx_amplitude_mod: public fx_effect {
   /**
    * @brief      Advanced constructor for the amplitude modulator
    *
-   * @param[in]  rate_hz            The amp modifier rate in Hertz (cycles /
-   *                                second)
-   * @param[in]  depth              The amp modifier depth (0.0 is no modulation
-   *                                -> 1.0 is full modulation)
-   * @param[in]  initial_phase_deg  The initial phase of the oscillator in degrees (0-360)                                         
-   * @param[in]  modulation_type    The amp modifier type - see the definition
-   *                                of OSC_TYPES to see the different waveform
-   *                                options
-   * @param[in]  use_ext_modulator  Whether or not to use an externally
-   *                                generated waveform as the modulation source
+   *
+   * ``` CPP
+   * fx_amplitude_mod    mod1(1.0,     // Rate (Hz) is once per second
+   *                          0.8,     // Depth (0.0->1.0)
+   *                          0,       // Initial phase (degrees)
+   *                          OSC_SINE,// Oscillator type is a sine wave
+   *                          false);  // Don't use external LFO
+   * ```
+   * @param[in]  rate_hz            When using an internal oscillator, the “modulation” rate is oscillation (cycles per second).  When in doubt, start with 1.0 (one cycle per second)
+   * @param[in]  depth              How much the volume is “modulated”.  A value of 0.0 is none at all and a value of 1.0  means  full volume to zero volume.
+   * @param[in]  initial_phase_deg  The initial phase of the oscillator in degrees.  When in doubt, use 0.0.  This is useful when you want to have multiple oscillators running at different phases such as in harmonic tremelo where one may be at 0.0 and the other at 180.0.                                 
+   * @param[in]  modulation_type    See `OSC_TYPES` for available waveforms (sine, square, triangle, random, pulse, etc.) as the modulation source.
+   * @param[in]  use_ext_modulator  Rather than using an internal modulator, you can also use an external audio source.  Route audio to the .ext_mod_in audio to use it as the external modulator.
    */
   fx_amplitude_mod(float rate_hz, float depth, float initial_phase_deg, OSC_TYPES modulation_type, bool use_ext_modulator) :
     node_loop_ext_mod(NODE_IN, "external modulator", this),
@@ -176,6 +217,11 @@ class fx_amplitude_mod: public fx_effect {
 
   /**
    * @brief      Sets the depth of the amplitude modululator 
+   *
+   * ``` CPP
+   * 
+   *   mod1.set_depth(0.5);  // Sets the depth of the modulator to a fixed value
+   * ```
    *
    * @param[in]  depth  The depth fom 0.0 -> 1.0.  0.0 is no modulation at all,
    *                    1.0 is full modulation.

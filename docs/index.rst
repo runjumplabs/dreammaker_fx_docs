@@ -43,7 +43,7 @@ DreamMaker FX Documentation
 
    ADSR Envelope<api/classfx__adsr__envelope.rst>
    Amplitude Modulator<api/classfx__amplitude__mod.rst>
-   Filter<api/classfx__biquad__filter__mod.rst>
+   Biquad Filter<api/classfx__biquad__filter.rst>
    Compressor<api/classfx__compressor.rst>
    Delay<api/classfx__delay.rst>
    Destructor<api/classfx__destructor.rst>

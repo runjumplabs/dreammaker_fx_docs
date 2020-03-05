@@ -275,6 +275,7 @@ typedef enum {
  * ``` CPP
  * 
  * void loop() {
+ * 
  *   // When the user changes the left toggle switch, change the color of the LED
  *   if (pedal.toggle_left.has_changed()) {
  *     if (pedal.toggle_left.position == SWITCH_POS_UP) {
@@ -371,9 +372,14 @@ class fx_switch {
  * Use the `.has_changed()` function to determine when a pot has been adjusted by the user.
  * 
  * ```CPP
- * if (pedal.pot_left.has_changed()) {
- *   delay_effect.set_feedback(pedal.pot_left.val);   // Set feedback of delay using left pot
- * }
+ * void loop() {
+ * 
+ *   if (pedal.pot_left.has_changed()) {
+ *     delay_effect.set_feedback(pedal.pot_left.val);   // Set feedback of delay using left pot
+ *   }
+ *   
+ *   // Other code in loop()...
+ *   
  * ```
  * 
  */
@@ -666,7 +672,7 @@ class fx_pedal {
 
 
     #if defined (DM_FX)
-      fx_pot  pot_right;
+      fx_pot  pot_right;              
       fx_pot  pot_center;
       fx_pot  pot_left;
 
@@ -695,18 +701,18 @@ class fx_pedal {
 
     #endif 
 
-    fx_audio_node * instr_in;   // Alias
-    fx_audio_node * instr_in_l;
-    fx_audio_node * instr_in_r;
-    fx_audio_node * amp_out;    // Alias
-    fx_audio_node * amp_out_l;
-    fx_audio_node * amp_out_r;
+    fx_audio_node * instr_in;       /**< Alias for left instrument in (mono) */
+    fx_audio_node * instr_in_l;     /**< Left instrument in node */
+    fx_audio_node * instr_in_r;     /**< Right instrument in node */
+    fx_audio_node * amp_out;        /**< Alias for left instrument out (mono) */
+    fx_audio_node * amp_out_l;      /**< Left amp out node */
+    fx_audio_node * amp_out_r;      /**< Right amp out node */
     fx_audio_node * mic_in_l;
     fx_audio_node * mic_in_r;
 
-    fx_control_node * note_frequency;
-    fx_control_node * note_duration;
-    fx_control_node * new_note;
+    fx_control_node * note_frequency; /**< Pedal variable of current note frequency */
+    fx_control_node * note_duration;  /**< Pedal variable of current note duration in milliseconds */
+    fx_control_node * new_note;       /**< Pedal variable of when a new note is played */
 
     #ifndef DOXYGEN_SHOULD_SKIP_THIS
     fx_pedal():
@@ -963,6 +969,7 @@ class fx_effect {
 
     friend class fx_pedal;
 
+     #ifndef DOXYGEN_SHOULD_SKIP_THIS
       // String name of current effect    
       char  effect_name[32];
       
@@ -1009,7 +1016,7 @@ class fx_effect {
         return type;
       }
 
-    
+      #endif // DOXYGEN_SHOULD_SKIP_THIS
     /**
      * @brief      Enables this effect
      */
