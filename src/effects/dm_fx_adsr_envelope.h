@@ -10,7 +10,9 @@
  * from the instrument or an oscillator.  
  * 
  * Here's a good explanation of what ADSR means:
- * YTIDJT6rixgu4s4DITY
+ * .. raw:: html
+ * 
+ *     <iframe width="560" height="315" src="https://www.youtube.com/embed/JT6rixgu4s4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
  */
 
 class fx_adsr_envelope: public fx_effect {
@@ -296,6 +298,7 @@ private:
     }
 
 
+#ifndef DOXYGEN_SHOULD_SKIP_THIS
     /**
      * @brief  Prints the parameters for the delay effect
      */
@@ -335,7 +338,7 @@ private:
 
       Serial.println();
     }
-
+#endif 
 
 };
 

@@ -3,6 +3,26 @@
 #ifndef DM_FX_MULTITAP_DELAY_H
 #define DM_FX_MULTITAP_DELAY_H
 
+/**
+ * @brief      Effect: Multi-tap delay
+ * 
+ * A multi-tap delay is a delay line that has multiple read "taps" set a different delay lenghts.  
+ * Multi-tap delays can be used to create interesting rhythmic effects and are also a foundational
+ * building block of reverbs.
+ * 
+ * Here an example of using a multi-tap delay to generate early reflections in a reverb algorithm
+ * 
+ *  ``` CPP
+ *  fx_multitap_delay     early_reflections(10.5, 0.2,     // Tap 1 (length and gain)
+ *                                          13.5, 0.2,     // Tap 2 (length and gain)
+ *                                          16.0, 0.2,     // Tap 3 (length and gain)
+ *                                          19.5, 0.2,     // Tap 4 (length and gain)
+ *                                          0.5,          // Dry mix
+ *                                          0.5);         // Effect mix
+ *  
+ *  
+ *  ```
+ */
 class fx_multitap_delay: public fx_effect {
 
   private:
@@ -69,14 +89,16 @@ class fx_multitap_delay: public fx_effect {
     /**
      * @brief      Basic constructor for the multi-tap delay effect
      *
-     * @param[in]  tap_len_1_ms  The tap length 1 milliseconds
-     * @param[in]  gain_1        The gain 1
-     * @param[in]  tap_len_2_ms  The tap length 2 milliseconds
-     * @param[in]  gain_2        The gain 2
-     * @param[in]  tap_len_3_ms  The tap length 3 milliseconds
-     * @param[in]  gain_3        The gain 3
-     * @param[in]  tap_len_4_ms  The tap length 4 milliseconds
-     * @param[in]  gain_4        The gain 4
+     * If a tap isn't being used, set its delay length to zero
+     *
+     * @param[in]  tap_len_1_ms  The tap 1 length 1 milliseconds
+     * @param[in]  gain_1        The gain of tap
+     * @param[in]  tap_len_2_ms  The tap 2 length 2 milliseconds
+     * @param[in]  gain_2        The gain of tap
+     * @param[in]  tap_len_3_ms  The tap 3 length 3 milliseconds
+     * @param[in]  gain_3        The gain of tap
+     * @param[in]  tap_len_4_ms  The tap 4 length 4 milliseconds
+     * @param[in]  gain_4        The gain of tap 
      * @param[in]  dry_mix       The dry mix
      * @param[in]  wet_mix       The wet mix
      */
@@ -124,6 +146,8 @@ class fx_multitap_delay: public fx_effect {
 
     /**
      * @brief      Updates the dry / clean mix of the multitap delay (0.0 to 1.0)
+     *
+     * @param[in]  dry_mix  The new dry mix
      */
     void set_dry_mix(float dry_mix) { 
       
@@ -134,9 +158,10 @@ class fx_multitap_delay: public fx_effect {
       parent_canvas->spi_transmit_param(FX_DELAY_MULTITAP, instance_id, T_FLOAT, FX_MULTITAP_DELAY_PARAM_ID_DRY_MIX, &param_dry_mix);
     }
 
-
     /**
      * @brief      Updates the wet / delay mix of the multitap delay (0.0 to 1.0)
+     *
+     * @param[in]  wet_mix  The new wet mix
      */
     void set_wet_mix(float wet_mix) { 
       
@@ -146,6 +171,7 @@ class fx_multitap_delay: public fx_effect {
       parent_canvas->spi_transmit_param(FX_DELAY_MULTITAP, instance_id, T_FLOAT, FX_MULTITAP_DELAY_PARAM_ID_WET_MIX, &param_wet_mix);
     }
 
+#ifndef DOXYGEN_SHOULD_SKIP_THIS
   /**
    * @brief      Print the parameters for this effect
    */
@@ -170,7 +196,7 @@ class fx_multitap_delay: public fx_effect {
 
     Serial.println();
   }    
-    	
+#endif     	
 
 };
 

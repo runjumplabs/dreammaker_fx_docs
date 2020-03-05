@@ -9,9 +9,10 @@ DreamMaker FX Documentation
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: Contents:
+   :caption: Tutorial:
 
    markdown/intro.md
+   rst/examples.rst
    markdown/install.md
    markdown/echo_basic.md
    markdown/adding_effects.md
@@ -27,7 +28,7 @@ DreamMaker FX Documentation
    :maxdepth: 2
    :glob: 
    :hidden:
-   :caption: Pedal Reference:
+   :caption: Pedal Functions:
 
    Pedal<api/classfx__pedal.rst>
    LEDs<api/classfx__led.rst>
@@ -39,7 +40,7 @@ DreamMaker FX Documentation
    :maxdepth: 2
    :glob: 
    :hidden:
-   :caption: Effect Reference:
+   :caption: Effect Blocks:
 
    ADSR Envelope<api/classfx__adsr__envelope.rst>
    Amplitude Modulator<api/classfx__amplitude__mod.rst>
