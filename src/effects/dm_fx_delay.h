@@ -7,13 +7,49 @@
 /**
  * @brief      Effect: Delay/echo 
  * 
- * This is basically an echo effect.
+ * A delay effect is basically an echo machine.  Unlike other delay pedals, we have a massive amount of delay memory so you can create delays that are several seconds long.  Also, this delay block allows you to add your own effects to the “feedback” path of the echo so each echo can run though an effects chain.  Put a pitch shifter in here and each echo changes pitch.  Add a phase shifter and each echo gets progressively “phasey”.  Put another echo effect in there and create effects like the movie Inception.
+ *
+ * This example creates a delay and places a low-pass dampening filter in the feedback loop so each echo gets darker and darker.  
  * 
- * <iframe width="560" height="315" src="https://www.youtube.com/embed/E36AkCAzGWo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ * ``` CPP
  * 
- *  Example:
- *   ___delay_1.c___
- */
+ * #include <dreammakerfx.h>
+ * 
+ * fx_delay    delay_1(1000.0, // Initial delay length of 1 second / 1000ms
+ *                          5000.0, // Max delay of 5 seconds
+ *                          0.7,    // Initial feedback value of 0.7
+ *                          1.0,    // Clean mix
+ *                          0.7,    // Delay / echo mix
+ *                          true);  // Enable fx send/receive loop
+ * 
+ * fx_biquad_filter  fb_filt(1200.0,                // 1200 Hz starting frequency
+ *                           FILTER_WIDTH_NORMAL,   // Width of the filter is narrow
+ *                           BIQUAD_TYPE_LPF);      // Type is low-pass
+ * 
+ * void setup() {
+ *   pedal.init(); // Initialize pedal
+ *   
+ *   // Route audio through effects
+ *   pedal.route_audio(pedal.instr_in, delay_1.input);
+ *   pedal.route_audio(delay_1.output, pedal.amp_out);
+ *   
+ *   // Route filter through delay fx send/receive loop
+ *   pedal.route_audio(delay_1.fx_send, fb_filt.input);
+ *   pedal.route_audio(fb_filt.output, delay_1.fx_receive);
+ * 
+ *   pedal.add_bypass_button(FOOTSWITCH_LEFT); // Use left footswitch/LED to bypass effect 
+ *   
+ *   pedal.run();    // Run effects
+ * }
+ * 
+ * void loop() {
+ *   pedal.service(); // Run pedal service to take care of stuff
+ * }
+ * 
+ * ```
+ * 
+ * There are lots of cool things you can do with delays: Create a set of delays in parallel with lengths (1000ms, 750ms, 333ms) to create cool rhythmic echoes, create elaborate effects chains in the delay’s feedback loop, add delays into the feedback fx send/receive loop of the delay, control a filter from a delayed version of a signal
+ *  */
 class fx_delay: public fx_effect {
 
   private:
@@ -106,11 +142,35 @@ class fx_delay: public fx_effect {
 
     /**
      * Audio routing node [output]: effect loop send before entering delay line of this effect
+     * 
+     * ``` CPP
+     *  
+     *   // Route audio through effects
+     *   pedal.route_audio(pedal.instr_in, delay_1.input);
+     *   pedal.route_audio(delay_1.output, pedal.amp_out);
+     *   
+     *   // Route filter through delay fx send/receive loop
+     *   pedal.route_audio(delay_1.fx_send, fb_filt.input);
+     *   pedal.route_audio(fb_filt.output, delay_1.fx_receive);
+     *   
+     * ```  
      */
     fx_audio_node * fx_send;
 
     /**
      * Audio routing node [output]: effect loop return before entering delay line of this effect
+     * 
+     * ``` CPP
+     *  
+     *   // Route audio through effects
+     *   pedal.route_audio(pedal.instr_in, delay_1.input);
+     *   pedal.route_audio(delay_1.output, pedal.amp_out);
+     *   
+     *   // Route filter through delay fx send/receive loop
+     *   pedal.route_audio(delay_1.fx_send, fb_filt.input);
+     *   pedal.route_audio(fb_filt.output, delay_1.fx_receive);
+     *   
+     * ``` 
      */
     fx_audio_node * fx_receive;
 
@@ -140,8 +200,16 @@ class fx_delay: public fx_effect {
     /**
      * @brief      Basic constructor for delay effect
      *
-     * @param[in]  delay_len_ms   The length of the delay in milliseconds (1/1000s of a second)
-     * @param[in]  feedback       The feedback ration (between 0.0 and 1.0)
+     * ``` CPP
+     * 
+     * // Set up a basic 1 second echo
+     * fx_delay    delay_1(1000.0, // Initial delay length of 1 second / 1000ms
+     *                     0.7);    // Initial feedback value of 0.7
+     *
+     * ```
+     *
+     * @param[in]  delay_len_ms   The length of the echo in milliseconds (1000.0 milliseconds = 1 second).  For the advanced constructor, the delay_len_max_ms determines the total memory allocated for this delay and will be the max length.  In the basic constructor, the initial length is also the maximum delay length.
+     * @param[in]  feedback       How much of the output is feedback to the input.  A value of 0.0 will product a single delay.  A value of 1.0 will produce endless echoes.  0.5-0.7 is a nice decaying echo.
      *                            
      */
     fx_delay(float delay_len_ms, float feedback) : 
@@ -168,13 +236,25 @@ class fx_delay: public fx_effect {
 
     /**
      * @brief      Advanced constructor for delay effect
+     * 
+     * ``` CPP
+     * 
+     * // Set up a delay with max delay of 5 seconds and an fx send/receive loop
+     * fx_delay    delay_1(1000.0, // Initial delay length of 1 second / 1000ms
+     *                     5000.0, // Max delay of 5 seconds
+     *                     0.7,    // Initial feedback value of 0.7
+     *                     1.0,    // Clean mix
+     *                     0.7,    // Delay / echo mix
+     *                     true);  // Enable fx send/receive loop
      *
-     * @param[in]  delay_len_ms   The length of the delay in milliseconds (1/1000s of a second)
-     * @param[in]  delay_len_max_ms   The maximum length of the delay (if the delay length is modified)
-     * @param[in]  feedback       The feedback ration (between 0.0 and 1.0)
-     * @param[in]  feedthrough    The delay feed through ratio (between 0.0 and 1.0)
-     * @param[in]  enable_ext_fx  Enable the send/receive FX loop
-     *                            
+     * ```
+     * 
+     * @param[in]  delay_len_ms      The length of the echo in milliseconds (1000.0 milliseconds = 1 second).  For the advanced constructor, the delay_len_max_ms determines the total memory allocated for this delay and will be the max length.  In the basic constructor, the initial length is also the maximum delay length.
+     * @param[in]  delay_len_max_ms  The maximum length of the delay (if the delay length is modified)
+     * @param[in]  feedback          How much of the output is feedback to the input.  A value of 0.0 will product a single delay.  A value of 1.0 will produce endless echoes.  0.5-0.7 is a nice decaying echo.
+     * @param[in]  mix_dry           The mix of the clean signal (0.0 to 1.0)
+     * @param[in]  mix_wet           The mix of the delayed/echo signal (0.0 to 1.0)
+     * @param[in]  enable_ext_fx     Whether or not to enable the fx send / receive loop (true or false)
      */
     fx_delay(float delay_len_ms, float delay_len_max_ms, float feedback, float mix_dry, float mix_wet, bool enable_ext_fx) : 
         node_delay_tx(NODE_OUT, "delay_fb_tx", this), 
@@ -198,7 +278,7 @@ class fx_delay: public fx_effect {
 
 
     /**
-     * @brief      Enable the __this_effect__ (it is enabled by default)
+     * @brief      Enables the delay effect
      */
     void enable() {
       CHECK_LAST_ENABLED();
@@ -207,7 +287,7 @@ class fx_delay: public fx_effect {
     }
 
     /**
-     * @brief      Bypass the __this_effect__ (will just pass clean audio through)
+     * @brief      Bypass the delay effect (will just pass clean audio through)
      */
     void bypass() {
       CHECK_LAST_DISABLED();
@@ -235,7 +315,9 @@ class fx_delay: public fx_effect {
     }
 
     /**
-     * @brief      Updates the feedback parameter of the delay
+     * @brief       Updates the feedback parameter of the delay
+     *
+     * @param[in]  feedback  How much of the output is feedback to the input.  A value of 0.0 will product a single delay.  A value of 1.0 will produce endless echoes.  0.5-0.7 is a nice decaying echo.
      */
     void set_feedback(float feedback) { 
 
@@ -251,7 +333,9 @@ class fx_delay: public fx_effect {
     }
 
     /**
-     * @brief      Updates the dry / clean mix of the delay (0.0 to 1.0)
+     * @brief      Sets the dry mix.
+     *
+     * @param[in]  dry_mix  The mix of the clean signal (0.0 to 1.0)
      */
     void set_dry_mix(float dry_mix) { 
       
@@ -268,7 +352,13 @@ class fx_delay: public fx_effect {
 
 
     /**
+     * @brief      
+     */
+
+    /**
      * @brief      Updates the wet / delay mix of the delay (0.0 to 1.0)
+     *
+     * @param[in]  wet_mix  The mix of the delayed/echo signal (0.0 to 1.0)
      */
     void set_wet_mix(float wet_mix) { 
       
@@ -285,6 +375,7 @@ class fx_delay: public fx_effect {
 
   
 
+#ifndef DOXYGEN_SHOULD_SKIP_THIS
     /**
      * @brief  Prints the parameters for the delay effect
      */
@@ -363,7 +454,7 @@ class fx_delay: public fx_effect {
 
       Serial.println();
     }
-
+#endif 
 };
 
 #endif // DM_FX_DELAY_H
