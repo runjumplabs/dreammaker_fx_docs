@@ -477,7 +477,7 @@ static bool    spi_flash_page_write(uint32_t address, const uint8_t * vals, uint
 
 
 const PROGMEM uint8_t firmware_image[] = {
-    #include "dm_fx_dsp_firmware_image.h"
+    #include "dm_fx_dsp_firmware_image.dat"
 };
 
 /**

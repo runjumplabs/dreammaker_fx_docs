@@ -36,7 +36,7 @@ templates_path = ['_templates']
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'dm_fx_dsp_firmware_image.h']
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -82,5 +82,5 @@ exhale_args = {
     # TIP: if using the sphinx-bootstrap-theme, you need
     # "treeViewIsBootstrap": True,
     "exhaleExecutesDoxygen": True,
-    "exhaleDoxygenStdin":    "INPUT = ../src"
+    "exhaleDoxygenStdin":    "INPUT = ../src\nPREDEFINED += DOXYGEN_SHOULD_SKIP_THIS\nENABLE_PREPROCESSING = YES"
 }
