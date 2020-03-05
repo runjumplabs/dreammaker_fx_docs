@@ -2,19 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
   <compounddef id="dm__fx__gain_8h" kind="file" language="C++">
     <compoundname>dm_fx_gain.h</compoundname>
-    <includedby refid="dreammakerfx_8h" local="yes">src/dreammakerfx.h</includedby>
-    <invincdepgraph>
-      <node id="292">
-        <label>src/effects/dm_fx_gain.h</label>
-        <link refid="dm__fx__gain_8h"/>
-        <childnode refid="293" relation="include">
-        </childnode>
-      </node>
-      <node id="293">
-        <label>src/dreammakerfx.h</label>
-        <link refid="dreammakerfx_8h_source"/>
-      </node>
-    </invincdepgraph>
     <innerclass refid="classfx__gain" prot="public">fx_gain</innerclass>
     <briefdescription>
     </briefdescription>

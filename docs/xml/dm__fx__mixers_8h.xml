@@ -2,19 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
   <compounddef id="dm__fx__mixers_8h" kind="file" language="C++">
     <compoundname>dm_fx_mixers.h</compoundname>
-    <includedby refid="dreammakerfx_8h" local="yes">src/dreammakerfx.h</includedby>
-    <invincdepgraph>
-      <node id="301">
-        <label>src/effects/dm_fx_mixers.h</label>
-        <link refid="dm__fx__mixers_8h"/>
-        <childnode refid="302" relation="include">
-        </childnode>
-      </node>
-      <node id="302">
-        <label>src/dreammakerfx.h</label>
-        <link refid="dreammakerfx_8h_source"/>
-      </node>
-    </invincdepgraph>
     <innerclass refid="classfx__mixer__2" prot="public">fx_mixer_2</innerclass>
     <innerclass refid="classfx__mixer__3" prot="public">fx_mixer_3</innerclass>
     <innerclass refid="classfx__mixer__4" prot="public">fx_mixer_4</innerclass>

@@ -6,204 +6,84 @@
     <includes local="yes">Arduino.h</includes>
     <includes refid="dreammakerfx_8h" local="yes">dreammakerfx.h</includes>
     <incdepgraph>
-      <node id="209">
-        <label>effects/dm_fx_destructor.h</label>
-        <link refid="dm__fx__destructor_8h_source"/>
-      </node>
-      <node id="217">
-        <label>effects/dm_fx_mixers.h</label>
-        <link refid="dm__fx__mixers_8h_source"/>
-      </node>
-      <node id="194">
+      <node id="94">
         <label>SPI.h</label>
       </node>
-      <node id="191">
+      <node id="91">
         <label>stdlib.h</label>
       </node>
-      <node id="222">
-        <label>effects/dm_fx_slicer.h</label>
-        <link refid="dm__fx__slicer_8h_source"/>
-      </node>
-      <node id="197">
+      <node id="97">
         <label>dm_fx_dsp.h</label>
         <link refid="dm__fx__dsp_8h_source"/>
       </node>
-      <node id="202">
+      <node id="102">
         <label>dm_fx_platform_constants.h</label>
         <link refid="dm__fx__platform__constants_8h_source"/>
       </node>
-      <node id="200">
+      <node id="100">
         <label>dm_fx_ui.h</label>
         <link refid="dm__fx__ui_8h_source"/>
       </node>
-      <node id="221">
-        <label>effects/dm_fx_ring_modulator.h</label>
-        <link refid="dm__fx__ring__modulator_8h_source"/>
-      </node>
-      <node id="201">
+      <node id="101">
         <label>dm_fx_debug.h</label>
         <link refid="dm__fx__debug_8h_source"/>
       </node>
-      <node id="219">
-        <label>effects/dm_fx_phase_shifter.h</label>
-        <link refid="dm__fx__phase__shifter_8h_source"/>
-      </node>
-      <node id="214">
-        <label>effects/dm_fx_gain.h</label>
-        <link refid="dm__fx__gain_8h_source"/>
-      </node>
-      <node id="223">
-        <label>effects/dm_fx_variable_delay.h</label>
-        <link refid="dm__fx__variable__delay_8h_source"/>
-      </node>
-      <node id="195">
+      <node id="95">
         <label>Wire.h</label>
       </node>
-      <node id="193">
+      <node id="93">
         <label>dreammakerfx.h</label>
         <link refid="dreammakerfx_8h_source"/>
-        <childnode refid="192" relation="include">
+        <childnode refid="92" relation="include">
         </childnode>
-        <childnode refid="194" relation="include">
+        <childnode refid="94" relation="include">
         </childnode>
-        <childnode refid="195" relation="include">
+        <childnode refid="95" relation="include">
         </childnode>
-        <childnode refid="196" relation="include">
+        <childnode refid="96" relation="include">
         </childnode>
-        <childnode refid="197" relation="include">
+        <childnode refid="97" relation="include">
         </childnode>
-        <childnode refid="198" relation="include">
+        <childnode refid="98" relation="include">
         </childnode>
-        <childnode refid="199" relation="include">
+        <childnode refid="99" relation="include">
         </childnode>
-        <childnode refid="200" relation="include">
+        <childnode refid="100" relation="include">
         </childnode>
-        <childnode refid="201" relation="include">
+        <childnode refid="101" relation="include">
         </childnode>
-        <childnode refid="202" relation="include">
+        <childnode refid="102" relation="include">
         </childnode>
-        <childnode refid="203" relation="include">
-        </childnode>
-        <childnode refid="204" relation="include">
-        </childnode>
-        <childnode refid="205" relation="include">
-        </childnode>
-        <childnode refid="206" relation="include">
-        </childnode>
-        <childnode refid="207" relation="include">
-        </childnode>
-        <childnode refid="208" relation="include">
-        </childnode>
-        <childnode refid="209" relation="include">
-        </childnode>
-        <childnode refid="210" relation="include">
-        </childnode>
-        <childnode refid="211" relation="include">
-        </childnode>
-        <childnode refid="212" relation="include">
-        </childnode>
-        <childnode refid="213" relation="include">
-        </childnode>
-        <childnode refid="214" relation="include">
-        </childnode>
-        <childnode refid="215" relation="include">
-        </childnode>
-        <childnode refid="216" relation="include">
-        </childnode>
-        <childnode refid="217" relation="include">
-        </childnode>
-        <childnode refid="218" relation="include">
-        </childnode>
-        <childnode refid="219" relation="include">
-        </childnode>
-        <childnode refid="220" relation="include">
-        </childnode>
-        <childnode refid="221" relation="include">
-        </childnode>
-        <childnode refid="222" relation="include">
-        </childnode>
-        <childnode refid="223" relation="include">
+        <childnode refid="103" relation="include">
         </childnode>
       </node>
-      <node id="190">
+      <node id="90">
         <label>src/dreammakerfx.cpp</label>
         <link refid="dreammakerfx_8cpp"/>
-        <childnode refid="191" relation="include">
+        <childnode refid="91" relation="include">
         </childnode>
-        <childnode refid="192" relation="include">
+        <childnode refid="92" relation="include">
         </childnode>
-        <childnode refid="193" relation="include">
+        <childnode refid="93" relation="include">
         </childnode>
       </node>
-      <node id="218">
-        <label>effects/dm_fx_oscillators.h</label>
-        <link refid="dm__fx__oscillators_8h_source"/>
-      </node>
-      <node id="211">
-        <label>effects/dm_fx_delay.h</label>
-        <link refid="dm__fx__delay_8h_source"/>
-      </node>
-      <node id="212">
-        <label>effects/dm_fx_delay_multitap.h</label>
-        <link refid="dm__fx__delay__multitap_8h_source"/>
-      </node>
-      <node id="199">
+      <node id="99">
         <label>dm_fx_codec.h</label>
         <link refid="dm__fx__codec_8h_source"/>
       </node>
-      <node id="196">
+      <node id="96">
         <label>math.h</label>
       </node>
-      <node id="192">
+      <node id="92">
         <label>Arduino.h</label>
       </node>
-      <node id="206">
-        <label>effects/dm_fx_allpass_filter.h</label>
-        <link refid="dm__fx__allpass__filter_8h_source"/>
-      </node>
-      <node id="198">
+      <node id="98">
         <label>dm_fx_spi_proto.h</label>
         <link refid="dm__fx__spi__proto_8h_source"/>
       </node>
-      <node id="205">
-        <label>effects/dm_fx_adsr_envelope.h</label>
-        <link refid="dm__fx__adsr__envelope_8h_source"/>
-      </node>
-      <node id="213">
-        <label>effects/dm_fx_envelope_tracker.h</label>
-        <link refid="dm__fx__envelope__tracker_8h_source"/>
-      </node>
-      <node id="204">
-        <label>effects/dm_fx_effect_macros.h</label>
-        <link refid="dm__fx__effect__macros_8h_source"/>
-      </node>
-      <node id="210">
-        <label>effects/dm_fx_compressor.h</label>
-        <link refid="dm__fx__compressor_8h_source"/>
-      </node>
-      <node id="216">
-        <label>effects/dm_fx_looper.h</label>
-        <link refid="dm__fx__looper_8h_source"/>
-      </node>
-      <node id="220">
-        <label>effects/dm_fx_pitch_shift.h</label>
-        <link refid="dm__fx__pitch__shift_8h_source"/>
-      </node>
-      <node id="215">
-        <label>effects/dm_fx_instrument_synth.h</label>
-        <link refid="dm__fx__instrument__synth_8h_source"/>
-      </node>
-      <node id="208">
-        <label>effects/dm_fx_biquad_filter.h</label>
-        <link refid="dm__fx__biquad__filter_8h_source"/>
-      </node>
-      <node id="203">
+      <node id="103">
         <label>effects/dm_fx_effects_defines.h</label>
         <link refid="dm__fx__effects__defines_8h"/>
-      </node>
-      <node id="207">
-        <label>effects/dm_fx_amplitude_modulator.h</label>
-        <link refid="dm__fx__amplitude__modulator_8h_source"/>
       </node>
     </incdepgraph>
       <sectiondef kind="var">
@@ -1300,10 +1180,10 @@
 <codeline lineno="1173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_MSG(</highlight><highlight class="stringliteral">&quot;Toggle<sp/>bypass&quot;</highlight><highlight class="normal">,<sp/>MSG_DEBUG);</highlight></codeline>
 <codeline lineno="1174"><highlight class="normal"></highlight></codeline>
 <codeline lineno="1175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bypassed)<sp/>{</highlight></codeline>
-<codeline lineno="1176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>led_right.turn_on();</highlight></codeline>
+<codeline lineno="1176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>led_right.<ref refid="classfx__led_1a812d50bb14fb3cb90c387e630cefe631" kindref="member">turn_on</ref>();</highlight></codeline>
 <codeline lineno="1177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enable_fx();</highlight></codeline>
 <codeline lineno="1178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="1179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>led_right.turn_off();</highlight></codeline>
+<codeline lineno="1179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>led_right.<ref refid="classfx__led_1ad58dd290eb4f4b662f7cb150e4bf866a" kindref="member">turn_off</ref>();</highlight></codeline>
 <codeline lineno="1180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bypass_fx();</highlight></codeline>
 <codeline lineno="1181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="1182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bypassed<sp/>=<sp/>!bypassed;</highlight></codeline>
@@ -1318,12 +1198,12 @@
 <codeline lineno="1191"><highlight class="normal"></highlight></codeline>
 <codeline lineno="1192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bypassed)<sp/>{</highlight></codeline>
 <codeline lineno="1193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Serial.println(&quot;Turning<sp/>on<sp/>left<sp/>LED&quot;);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="1194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>led_left.turn_on();</highlight></codeline>
+<codeline lineno="1194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>led_left.<ref refid="classfx__led_1a812d50bb14fb3cb90c387e630cefe631" kindref="member">turn_on</ref>();</highlight></codeline>
 <codeline lineno="1195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//turn_on_left_footsw_led();</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="1196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enable_fx();</highlight></codeline>
 <codeline lineno="1197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
 <codeline lineno="1198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Serial.println(&quot;Turning<sp/>off<sp/>left<sp/>LED&quot;);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="1199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>led_left.turn_off();</highlight></codeline>
+<codeline lineno="1199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>led_left.<ref refid="classfx__led_1ad58dd290eb4f4b662f7cb150e4bf866a" kindref="member">turn_off</ref>();</highlight></codeline>
 <codeline lineno="1200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//turn_off_left_footsw_led();</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="1201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bypass_fx();</highlight></codeline>
 <codeline lineno="1202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -1426,14 +1306,14 @@
 <codeline lineno="1359"><highlight class="normal"><sp/><sp/><sp/><sp/>footswitch_left_pressed<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="1360"><highlight class="normal"><sp/><sp/><sp/><sp/>footswitch_left_released<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="1361"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(enable_led)<sp/>{</highlight></codeline>
-<codeline lineno="1362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>led_left.turn_on();</highlight></codeline>
+<codeline lineno="1362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>led_left.<ref refid="classfx__led_1a812d50bb14fb3cb90c387e630cefe631" kindref="member">turn_on</ref>();</highlight></codeline>
 <codeline lineno="1363"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="1364"><highlight class="normal"><sp/><sp/><sp/><sp/>result<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="1365"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(footswitch<sp/>==<sp/>FOOTSWITCH_RIGHT<sp/>&amp;&amp;<sp/>footswitch_right_pressed)<sp/>{</highlight></codeline>
 <codeline lineno="1366"><highlight class="normal"><sp/><sp/><sp/><sp/>footswitch_right_pressed<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="1367"><highlight class="normal"><sp/><sp/><sp/><sp/>footswitch_right_released<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="1368"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(enable_led)<sp/>{</highlight></codeline>
-<codeline lineno="1369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>led_right.turn_on();</highlight></codeline>
+<codeline lineno="1369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>led_right.<ref refid="classfx__led_1a812d50bb14fb3cb90c387e630cefe631" kindref="member">turn_on</ref>();</highlight></codeline>
 <codeline lineno="1370"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="1371"><highlight class="normal"><sp/><sp/><sp/><sp/>result<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="1372"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
@@ -1446,7 +1326,7 @@
 <codeline lineno="1390"><highlight class="normal"><sp/><sp/><sp/><sp/>footswitch_left_pressed<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="1391"><highlight class="normal"><sp/><sp/><sp/><sp/>footswitch_left_released<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="1392"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(enable_led)<sp/>{</highlight></codeline>
-<codeline lineno="1393"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>led_left.turn_off();</highlight></codeline>
+<codeline lineno="1393"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>led_left.<ref refid="classfx__led_1ad58dd290eb4f4b662f7cb150e4bf866a" kindref="member">turn_off</ref>();</highlight></codeline>
 <codeline lineno="1394"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//turn_off_left_footsw_led();</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="1395"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="1396"><highlight class="normal"><sp/><sp/><sp/><sp/>result<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
@@ -1454,7 +1334,7 @@
 <codeline lineno="1398"><highlight class="normal"><sp/><sp/><sp/><sp/>footswitch_right_pressed<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="1399"><highlight class="normal"><sp/><sp/><sp/><sp/>footswitch_right_released<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="1400"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(enable_led)<sp/>{</highlight></codeline>
-<codeline lineno="1401"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>led_right.turn_off();</highlight></codeline>
+<codeline lineno="1401"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>led_right.<ref refid="classfx__led_1ad58dd290eb4f4b662f7cb150e4bf866a" kindref="member">turn_off</ref>();</highlight></codeline>
 <codeline lineno="1402"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//turn_off_right_footsw_led();</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="1403"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="1404"><highlight class="normal"><sp/><sp/><sp/><sp/>result<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>

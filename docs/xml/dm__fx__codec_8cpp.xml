@@ -3,22 +3,9 @@
   <compounddef id="dm__fx__codec_8cpp" kind="file" language="C++">
     <compoundname>dm_fx_codec.cpp</compoundname>
     <includes refid="dreammakerfx_8h" local="yes">dreammakerfx.h</includes>
-    <includes refid="dm__fx__codec_8h" local="yes">dm_fx_codec.h</includes>
     <incdepgraph>
-      <node id="18">
-        <label>effects/dm_fx_destructor.h</label>
-        <link refid="dm__fx__destructor_8h_source"/>
-      </node>
-      <node id="26">
-        <label>effects/dm_fx_mixers.h</label>
-        <link refid="dm__fx__mixers_8h_source"/>
-      </node>
       <node id="3">
         <label>SPI.h</label>
-      </node>
-      <node id="31">
-        <label>effects/dm_fx_slicer.h</label>
-        <link refid="dm__fx__slicer_8h_source"/>
       </node>
       <node id="6">
         <label>dm_fx_dsp.h</label>
@@ -32,32 +19,14 @@
         <label>dm_fx_ui.h</label>
         <link refid="dm__fx__ui_8h_source"/>
       </node>
-      <node id="30">
-        <label>effects/dm_fx_ring_modulator.h</label>
-        <link refid="dm__fx__ring__modulator_8h_source"/>
-      </node>
       <node id="10">
         <label>dm_fx_debug.h</label>
         <link refid="dm__fx__debug_8h_source"/>
-      </node>
-      <node id="28">
-        <label>effects/dm_fx_phase_shifter.h</label>
-        <link refid="dm__fx__phase__shifter_8h_source"/>
-      </node>
-      <node id="23">
-        <label>effects/dm_fx_gain.h</label>
-        <link refid="dm__fx__gain_8h_source"/>
-      </node>
-      <node id="32">
-        <label>effects/dm_fx_variable_delay.h</label>
-        <link refid="dm__fx__variable__delay_8h_source"/>
       </node>
       <node id="0">
         <label>src/dm_fx_codec.cpp</label>
         <link refid="dm__fx__codec_8cpp"/>
         <childnode refid="1" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
         </childnode>
       </node>
       <node id="4">
@@ -88,58 +57,6 @@
         </childnode>
         <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="15" relation="include">
-        </childnode>
-        <childnode refid="16" relation="include">
-        </childnode>
-        <childnode refid="17" relation="include">
-        </childnode>
-        <childnode refid="18" relation="include">
-        </childnode>
-        <childnode refid="19" relation="include">
-        </childnode>
-        <childnode refid="20" relation="include">
-        </childnode>
-        <childnode refid="21" relation="include">
-        </childnode>
-        <childnode refid="22" relation="include">
-        </childnode>
-        <childnode refid="23" relation="include">
-        </childnode>
-        <childnode refid="24" relation="include">
-        </childnode>
-        <childnode refid="25" relation="include">
-        </childnode>
-        <childnode refid="26" relation="include">
-        </childnode>
-        <childnode refid="27" relation="include">
-        </childnode>
-        <childnode refid="28" relation="include">
-        </childnode>
-        <childnode refid="29" relation="include">
-        </childnode>
-        <childnode refid="30" relation="include">
-        </childnode>
-        <childnode refid="31" relation="include">
-        </childnode>
-        <childnode refid="32" relation="include">
-        </childnode>
-      </node>
-      <node id="27">
-        <label>effects/dm_fx_oscillators.h</label>
-        <link refid="dm__fx__oscillators_8h_source"/>
-      </node>
-      <node id="20">
-        <label>effects/dm_fx_delay.h</label>
-        <link refid="dm__fx__delay_8h_source"/>
-      </node>
-      <node id="21">
-        <label>effects/dm_fx_delay_multitap.h</label>
-        <link refid="dm__fx__delay__multitap_8h_source"/>
       </node>
       <node id="8">
         <label>dm_fx_codec.h</label>
@@ -151,55 +68,159 @@
       <node id="2">
         <label>Arduino.h</label>
       </node>
-      <node id="15">
-        <label>effects/dm_fx_allpass_filter.h</label>
-        <link refid="dm__fx__allpass__filter_8h_source"/>
-      </node>
       <node id="7">
         <label>dm_fx_spi_proto.h</label>
         <link refid="dm__fx__spi__proto_8h_source"/>
-      </node>
-      <node id="14">
-        <label>effects/dm_fx_adsr_envelope.h</label>
-        <link refid="dm__fx__adsr__envelope_8h_source"/>
-      </node>
-      <node id="22">
-        <label>effects/dm_fx_envelope_tracker.h</label>
-        <link refid="dm__fx__envelope__tracker_8h_source"/>
-      </node>
-      <node id="13">
-        <label>effects/dm_fx_effect_macros.h</label>
-        <link refid="dm__fx__effect__macros_8h_source"/>
-      </node>
-      <node id="19">
-        <label>effects/dm_fx_compressor.h</label>
-        <link refid="dm__fx__compressor_8h_source"/>
-      </node>
-      <node id="25">
-        <label>effects/dm_fx_looper.h</label>
-        <link refid="dm__fx__looper_8h_source"/>
-      </node>
-      <node id="29">
-        <label>effects/dm_fx_pitch_shift.h</label>
-        <link refid="dm__fx__pitch__shift_8h_source"/>
-      </node>
-      <node id="24">
-        <label>effects/dm_fx_instrument_synth.h</label>
-        <link refid="dm__fx__instrument__synth_8h_source"/>
-      </node>
-      <node id="17">
-        <label>effects/dm_fx_biquad_filter.h</label>
-        <link refid="dm__fx__biquad__filter_8h_source"/>
       </node>
       <node id="12">
         <label>effects/dm_fx_effects_defines.h</label>
         <link refid="dm__fx__effects__defines_8h"/>
       </node>
-      <node id="16">
-        <label>effects/dm_fx_amplitude_modulator.h</label>
-        <link refid="dm__fx__amplitude__modulator_8h_source"/>
-      </node>
     </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="dm__fx__codec_8cpp_1a34851a3a59098d3f42a892e876ab05a1" prot="public" static="no" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t adau1761_tx_buffer[]</definition>
+        <argsstring>[]</argsstring>
+        <name>adau1761_tx_buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dm_fx_codec.cpp" line="59" column="1" bodyfile="src/dm_fx_codec.cpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dm__fx__codec_8cpp_1a6471e34735afba6c81b7c4dfaab70231" prot="public" static="no" mutable="no">
+        <type>const uint16_t</type>
+        <definition>const uint16_t adau1761_num_bytes[]</definition>
+        <argsstring>[]</argsstring>
+        <name>adau1761_num_bytes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dm_fx_codec.cpp" line="327" column="1" bodyfile="src/dm_fx_codec.cpp" bodystart="327" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="dm__fx__codec_8cpp_1afe156c770c921685a8c5bc4d83b07bc0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wm8731_write_register</definition>
+        <argsstring>(uint8_t addr, uint8_t val)</argsstring>
+        <name>wm8731_write_register</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Writes a register in the WM8731 codec. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dm_fx_codec.cpp" line="15" column="1" bodyfile="src/dm_fx_codec.cpp" bodystart="15" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="dm__fx__codec_8cpp_1a6f7c6fbc8928767ac679ce69f6bfe5ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wm8731_initialize</definition>
+        <argsstring>(void)</argsstring>
+        <name>wm8731_initialize</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initializes the WM8731 codec. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dm_fx_codec.cpp" line="25" column="1" bodyfile="src/dm_fx_codec.cpp" bodystart="25" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="dm__fx__codec_8cpp_1a14a62071ce44d9a638949776c8116e6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void adau1761_write_register</definition>
+        <argsstring>(uint16_t addr, uint8_t val)</argsstring>
+        <name>adau1761_write_register</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Writes a register in the ADAU1761 SigmaDSP. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dm_fx_codec.cpp" line="50" column="1" bodyfile="src/dm_fx_codec.cpp" bodystart="50" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="dm__fx__codec_8cpp_1a2a94dbdb7832243345427205e152f984" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void adau1761_initialize</definition>
+        <argsstring>(void)</argsstring>
+        <name>adau1761_initialize</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initializes the ADAU1761. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dm_fx_codec.cpp" line="367" column="1" bodyfile="src/dm_fx_codec.cpp" bodystart="367" bodyend="384"/>
+      </memberdef>
+      </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

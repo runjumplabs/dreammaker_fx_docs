@@ -551,32 +551,66 @@
 <para>Example: ___destructor_1.c___ </para>
     </detaileddescription>
     <inheritancegraph>
-      <node id="35">
+      <node id="53">
         <label>fx_destructor</label>
         <link refid="classfx__destructor"/>
-        <childnode refid="36" relation="public-inheritance">
+        <childnode refid="54" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="36">
+      <node id="54">
         <label>fx_effect</label>
         <link refid="classfx__effect"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="37">
+      <node id="59">
+        <label>fx_switch</label>
+        <link refid="classfx__switch"/>
+      </node>
+      <node id="55">
         <label>fx_destructor</label>
         <link refid="classfx__destructor"/>
-        <childnode refid="38" relation="public-inheritance">
+        <childnode refid="56" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="39">
+      <node id="60">
+        <label>fx_led</label>
+        <link refid="classfx__led"/>
+      </node>
+      <node id="58">
+        <label>fx_pot</label>
+        <link refid="classfx__pot"/>
+      </node>
+      <node id="57">
         <label>fx_pedal</label>
         <link refid="classfx__pedal"/>
+        <childnode refid="58" relation="usage">
+          <edgelabel>pot_bot_right</edgelabel>
+          <edgelabel>exp_pedal</edgelabel>
+          <edgelabel>pot_top_left</edgelabel>
+          <edgelabel>pot_left</edgelabel>
+          <edgelabel>pot_top_right</edgelabel>
+          <edgelabel>pot_right</edgelabel>
+          <edgelabel>pot_bot_center</edgelabel>
+          <edgelabel>pot_bot_left</edgelabel>
+          <edgelabel>pot_center</edgelabel>
+        </childnode>
+        <childnode refid="59" relation="usage">
+          <edgelabel>toggle_left</edgelabel>
+          <edgelabel>toggle_right</edgelabel>
+        </childnode>
+        <childnode refid="60" relation="usage">
+          <edgelabel>led_right</edgelabel>
+          <edgelabel>left_led</edgelabel>
+          <edgelabel>led_left</edgelabel>
+          <edgelabel>right_led</edgelabel>
+          <edgelabel>led_center</edgelabel>
+        </childnode>
       </node>
-      <node id="38">
+      <node id="56">
         <label>fx_effect</label>
         <link refid="classfx__effect"/>
-        <childnode refid="39" relation="usage">
+        <childnode refid="57" relation="usage">
           <edgelabel>parent_canvas</edgelabel>
         </childnode>
       </node>
@@ -622,6 +656,9 @@
       <member refid="classfx__destructor_1a548ddc3f4f2c037ec6d0092f6f800e0d" prot="private" virt="non-virtual"><scope>fx_destructor</scope><name>param_type</name></member>
       <member refid="classfx__destructor_1a5cb0e8a6e3e7c4b5084c0505e3edbeb9" prot="private" virt="non-virtual"><scope>fx_destructor</scope><name>param_upsample</name></member>
       <member refid="classfx__effect_1a69bef0da54cedf8e558d65b755716999" prot="protected" virt="non-virtual"><scope>fx_destructor</scope><name>parent_canvas</name></member>
+      <member refid="classfx__effect_1ac3c8548118e3870dbc4bf71ae6b049af" prot="public" virt="non-virtual"><scope>fx_destructor</scope><name>print_audio_node_status</name></member>
+      <member refid="classfx__effect_1a5823fdcf4e43d7a67e78773aff5bb817" prot="public" virt="non-virtual"><scope>fx_destructor</scope><name>print_ctrl_node_status</name></member>
+      <member refid="classfx__effect_1a994c4bc631b10cf9dde1ac6d10144b3a" prot="public" virt="non-virtual"><scope>fx_destructor</scope><name>print_parameter</name></member>
       <member refid="classfx__destructor_1afad28fe3b74e9866b03558bcfa6b9bb6" prot="public" virt="non-virtual"><scope>fx_destructor</scope><name>print_params</name></member>
       <member refid="classfx__effect_1aaeececeee434ea76afdf649c3bed7698" prot="protected" virt="non-virtual"><scope>fx_destructor</scope><name>serialize_params</name></member>
       <member refid="classfx__effect_1a4c513243328d3b715822e74d21dffe99" prot="public" virt="non-virtual"><scope>fx_destructor</scope><name>service</name></member>

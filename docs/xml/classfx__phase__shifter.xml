@@ -491,32 +491,66 @@
 <para>Example: <bold>phase_shifter_1.c</bold> </para>
     </detaileddescription>
     <inheritancegraph>
-      <node id="113">
+      <node id="167">
         <label>fx_phase_shifter</label>
         <link refid="classfx__phase__shifter"/>
-        <childnode refid="114" relation="public-inheritance">
+        <childnode refid="168" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="114">
+      <node id="168">
         <label>fx_effect</label>
         <link refid="classfx__effect"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="115">
+      <node id="169">
         <label>fx_phase_shifter</label>
         <link refid="classfx__phase__shifter"/>
-        <childnode refid="116" relation="public-inheritance">
+        <childnode refid="170" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="117">
+      <node id="173">
+        <label>fx_switch</label>
+        <link refid="classfx__switch"/>
+      </node>
+      <node id="174">
+        <label>fx_led</label>
+        <link refid="classfx__led"/>
+      </node>
+      <node id="172">
+        <label>fx_pot</label>
+        <link refid="classfx__pot"/>
+      </node>
+      <node id="171">
         <label>fx_pedal</label>
         <link refid="classfx__pedal"/>
+        <childnode refid="172" relation="usage">
+          <edgelabel>pot_bot_right</edgelabel>
+          <edgelabel>exp_pedal</edgelabel>
+          <edgelabel>pot_top_left</edgelabel>
+          <edgelabel>pot_left</edgelabel>
+          <edgelabel>pot_top_right</edgelabel>
+          <edgelabel>pot_right</edgelabel>
+          <edgelabel>pot_bot_center</edgelabel>
+          <edgelabel>pot_bot_left</edgelabel>
+          <edgelabel>pot_center</edgelabel>
+        </childnode>
+        <childnode refid="173" relation="usage">
+          <edgelabel>toggle_left</edgelabel>
+          <edgelabel>toggle_right</edgelabel>
+        </childnode>
+        <childnode refid="174" relation="usage">
+          <edgelabel>led_right</edgelabel>
+          <edgelabel>left_led</edgelabel>
+          <edgelabel>led_left</edgelabel>
+          <edgelabel>right_led</edgelabel>
+          <edgelabel>led_center</edgelabel>
+        </childnode>
       </node>
-      <node id="116">
+      <node id="170">
         <label>fx_effect</label>
         <link refid="classfx__effect"/>
-        <childnode refid="117" relation="usage">
+        <childnode refid="171" relation="usage">
           <edgelabel>parent_canvas</edgelabel>
         </childnode>
       </node>
@@ -560,6 +594,9 @@
       <member refid="classfx__effect_1a0ea0d3bfe30592895fa23d241a9baa38" prot="protected" virt="non-virtual"><scope>fx_phase_shifter</scope><name>param_stack_types</name></member>
       <member refid="classfx__phase__shifter_1aa68ff59fded56af11a07f55b403af8db" prot="private" virt="non-virtual"><scope>fx_phase_shifter</scope><name>param_type</name></member>
       <member refid="classfx__effect_1a69bef0da54cedf8e558d65b755716999" prot="protected" virt="non-virtual"><scope>fx_phase_shifter</scope><name>parent_canvas</name></member>
+      <member refid="classfx__effect_1ac3c8548118e3870dbc4bf71ae6b049af" prot="public" virt="non-virtual"><scope>fx_phase_shifter</scope><name>print_audio_node_status</name></member>
+      <member refid="classfx__effect_1a5823fdcf4e43d7a67e78773aff5bb817" prot="public" virt="non-virtual"><scope>fx_phase_shifter</scope><name>print_ctrl_node_status</name></member>
+      <member refid="classfx__effect_1a994c4bc631b10cf9dde1ac6d10144b3a" prot="public" virt="non-virtual"><scope>fx_phase_shifter</scope><name>print_parameter</name></member>
       <member refid="classfx__phase__shifter_1a4bd5e5a813c8b07fba88fb1b689fc25f" prot="public" virt="non-virtual"><scope>fx_phase_shifter</scope><name>print_params</name></member>
       <member refid="classfx__phase__shifter_1aee41f77d8694d6267ae46aff7bafe052" prot="public" virt="non-virtual"><scope>fx_phase_shifter</scope><name>rate_hz</name></member>
       <member refid="classfx__effect_1aaeececeee434ea76afdf649c3bed7698" prot="protected" virt="non-virtual"><scope>fx_phase_shifter</scope><name>serialize_params</name></member>

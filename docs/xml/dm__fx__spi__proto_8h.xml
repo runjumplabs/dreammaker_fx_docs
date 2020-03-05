@@ -5,14 +5,14 @@
     <includedby refid="dreammakerfx_8h" local="yes">src/dreammakerfx.h</includedby>
     <includedby refid="dm__fx__spi__proto_8cpp" local="yes">src/dm_fx_spi_proto.cpp</includedby>
     <invincdepgraph>
-      <node id="152">
+      <node id="72">
         <label>src/dreammakerfx.h</label>
         <link refid="dreammakerfx_8h_source"/>
       </node>
-      <node id="151">
+      <node id="71">
         <label>src/dm_fx_spi_proto.h</label>
         <link refid="dm__fx__spi__proto_8h"/>
-        <childnode refid="152" relation="include">
+        <childnode refid="72" relation="include">
         </childnode>
       </node>
     </invincdepgraph>

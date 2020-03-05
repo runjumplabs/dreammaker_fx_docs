@@ -327,6 +327,7 @@ Program Listing for File dreammakerfx.h
      public:
    
        float val;            
+       float val_inv;        
        float val_log;        
        float val_log_inv;    
        bool has_changed(void) {
@@ -396,7 +397,7 @@ Program Listing for File dreammakerfx.h
          #if defined (DM_FX_TWO)
            val = 1.0 - val;
          #endif 
-   
+         val_inv = -val;
          val_log = log10(1.0 + (val*9.0));
          val_log_inv = 1.0 - log10(1.0 + ((1.0-val)*9.0));
        }
@@ -408,6 +409,7 @@ Program Listing for File dreammakerfx.h
          pin_number = pin;
          first_read = true;
          val = 0;
+         val_inv = 0;
    
          for (int i=0;i<POT_LONG_HIST_LEN;i++) {
            pot_history_long[i] = 0;

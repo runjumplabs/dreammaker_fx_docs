@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="305" column="1" bodyfile="src/dreammakerfx.h" bodystart="305" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="304" column="1" bodyfile="src/dreammakerfx.h" bodystart="304" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__switch_1aa1d835a58b1cae15c6704fb7b4597082" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="305" column="1" bodyfile="src/dreammakerfx.h" bodystart="305" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="304" column="1" bodyfile="src/dreammakerfx.h" bodystart="304" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__switch_1a116faed18ae90c52cca9af906c9a7cae" prot="private" static="no" mutable="no">
         <type>SWITCH_POS</type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="306" column="1" bodyfile="src/dreammakerfx.h" bodystart="306" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="305" column="1" bodyfile="src/dreammakerfx.h" bodystart="305" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-attrib">
@@ -53,33 +53,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Current switch position (SWITCH_POS_UP, SWITCH_POS_MIDDLE, SWITCH_POS_DOWN) </para>
+<para>Current switch position (<computeroutput>SWITCH_POS_UP</computeroutput>, <computeroutput>SWITCH_POS_MIDDLE</computeroutput>, <computeroutput>SWITCH_POS_DOWN</computeroutput>) </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="309" column="1" bodyfile="src/dreammakerfx.h" bodystart="309" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="public-func">
-      <memberdef kind="function" id="classfx__switch_1a45bf873b49a6cda9eb4c3cfad8bb8bbe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool fx_switch::has_changed</definition>
-        <argsstring>(void)</argsstring>
-        <name>has_changed</name>
-        <param>
-          <type>void</type>
-        </param>
-        <briefdescription>
-<para>Determines if the swtich has changed. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="return"><para>True if changed, False otherwise. </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/dreammakerfx.h" line="316" column="1" bodyfile="src/dreammakerfx.h" bodystart="316" bodyend="320"/>
+        <location file="src/dreammakerfx.h" line="308" column="1" bodyfile="src/dreammakerfx.h" bodystart="308" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -108,10 +86,9 @@
 <codeline><highlight class="normal">}</highlight></codeline>
 </programlisting> </para>
     </detaileddescription>
-    <location file="src/dreammakerfx.h" line="302" column="1" bodyfile="src/dreammakerfx.h" bodystart="302" bodyend="352"/>
+    <location file="src/dreammakerfx.h" line="301" column="1" bodyfile="src/dreammakerfx.h" bodystart="301" bodyend="356"/>
     <listofallmembers>
       <member refid="classfx__switch_1aa1d835a58b1cae15c6704fb7b4597082" prot="private" virt="non-virtual"><scope>fx_switch</scope><name>down_pin</name></member>
-      <member refid="classfx__switch_1a45bf873b49a6cda9eb4c3cfad8bb8bbe" prot="public" virt="non-virtual"><scope>fx_switch</scope><name>has_changed</name></member>
       <member refid="classfx__switch_1a76d9aa494f2369eb421296d8f1bb8847" prot="public" virt="non-virtual"><scope>fx_switch</scope><name>position</name></member>
       <member refid="classfx__switch_1a116faed18ae90c52cca9af906c9a7cae" prot="private" virt="non-virtual"><scope>fx_switch</scope><name>switch_pos_last</name></member>
       <member refid="classfx__switch_1ab78621eb24452c18d7173986e7b3f50f" prot="private" virt="non-virtual"><scope>fx_switch</scope><name>up_pin</name></member>

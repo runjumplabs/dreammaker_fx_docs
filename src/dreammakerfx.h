@@ -305,7 +305,7 @@ class fx_switch {
     SWITCH_POS switch_pos_last;
 
   public:
-    SWITCH_POS  position;   /**< Current switch position (SWITCH_POS_UP, SWITCH_POS_MIDDLE, SWITCH_POS_DOWN) */
+    SWITCH_POS  position;   /**< Current switch position (`SWITCH_POS_UP`, `SWITCH_POS_MIDDLE`, `SWITCH_POS_DOWN`) */
 
     /**
      * @brief      Determines if the swtich has changed
@@ -356,7 +356,26 @@ class fx_switch {
 };
 
 /**
- * @brief      Manages the state of any pots
+ * @brief      These functions are used to read the pots (aka the knobs) of the pedal.
+ * 
+ * Each knob has a value ranging from 0.0 (full counter-clockwise) to 1.0 (full clock-wise).
+ * 
+ * The first generation hardware has three pots (`pedal.pot_left`, `pedal.pot_center`, and 
+ * `pedal.pot_right`). 
+ * 
+ * The second generation hardware has five pots (`pedal.pot_top_left`, 'pedal.pot_top_right', 
+ * 'pedal.pot_bot_left`, `pedal.pot_bot_center` and `pedal.pot_bot_right`).  To preserve
+ * backwards compatibility with sketches developed on the first generation hardware, the
+ * `pedal.pot_left` will map to 'pedal.pot_bot_left` (and same for center and right pots).
+ * 
+ * Use the `.has_changed()` function to determine when a pot has been adjusted by the user.
+ * 
+ * ```CPP
+ * if (pedal.pot_left.has_changed()) {
+ *   delay_effect.set_feedback(pedal.pot_left.val);   // Set feedback of delay using left pot
+ * }
+ * ```
+ * 
  */
 class fx_pot {
 
@@ -413,12 +432,17 @@ class fx_pot {
   public:
 
     float val;            /**< Current value of pot (0.0 to 1.0) */
+    float val_inv;        /**< Current value of pot (1.0 to 0.0) */
     float val_log;        /**< Current value of pot with log curve applied (still 0.0 to 1.0) */
     float val_log_inv;    /**< Current value of pot with inverse log curve applied (still 0.0 to 1.0)  */
 
     /**
      * @brief      Returns true if this pot has been changed by the user
-     *
+     * ```CPP
+     * if (pedal.pot_left.has_changed()) {
+     *   delay_effect.set_feedback(pedal.pot_left.val);   // Set feedback of delay using left pot
+     * }
+     * ```    
      * @return     True if changed, False otherwise.
      */
     bool has_changed(void) {
@@ -488,7 +512,7 @@ class fx_pot {
       #if defined (DM_FX_TWO)
         val = 1.0 - val;
       #endif 
-
+      val_inv = -val;
       val_log = log10(1.0 + (val*9.0));
       val_log_inv = 1.0 - log10(1.0 + ((1.0-val)*9.0));
     }
@@ -500,6 +524,7 @@ class fx_pot {
       pin_number = pin;
       first_read = true;
       val = 0;
+      val_inv = 0;
 
       for (int i=0;i<POT_LONG_HIST_LEN;i++) {
         pot_history_long[i] = 0;

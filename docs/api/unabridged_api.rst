@@ -207,6 +207,16 @@ Functions
 .. toctree::
    :maxdepth: 5
 
+   function_dm__fx__codec_8cpp_1a2a94dbdb7832243345427205e152f984.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_dm__fx__codec_8cpp_1a14a62071ce44d9a638949776c8116e6f.rst
+
+.. toctree::
+   :maxdepth: 5
+
    function_dm__fx__ui_8h_1ac99039b413f124d5e14d0ed424db126b.rst
 
 .. toctree::
@@ -274,9 +284,29 @@ Functions
 
    function_dm__fx__ui_8h_1a20b2f6f9e8582e455c32ddd31aab0649.rst
 
+.. toctree::
+   :maxdepth: 5
+
+   function_dm__fx__codec_8cpp_1a6f7c6fbc8928767ac679ce69f6bfe5ba.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_dm__fx__codec_8cpp_1afe156c770c921685a8c5bc4d83b07bc0.rst
+
 Variables
 *********
 
+
+.. toctree::
+   :maxdepth: 5
+
+   variable_dm__fx__codec_8cpp_1a6471e34735afba6c81b7c4dfaab70231.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   variable_dm__fx__codec_8cpp_1a34851a3a59098d3f42a892e876ab05a1.rst
 
 .. toctree::
    :maxdepth: 5
@@ -331,13 +361,3 @@ Defines
    :maxdepth: 5
 
    define_dm__fx__effect__macros_8h_1a9eb89bc7024105092c75f656648d4f1e.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   define_dreammakerfx_8h_1a620b130ff59eac1a13b71beead2367e3.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   define_dreammakerfx_8h_1a05e30ed4888413f8259f427cb3dd1bf9.rst

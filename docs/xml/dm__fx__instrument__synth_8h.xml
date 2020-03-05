@@ -2,19 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
   <compounddef id="dm__fx__instrument__synth_8h" kind="file" language="C++">
     <compoundname>dm_fx_instrument_synth.h</compoundname>
-    <includedby refid="dreammakerfx_8h" local="yes">src/dreammakerfx.h</includedby>
-    <invincdepgraph>
-      <node id="296">
-        <label>src/dreammakerfx.h</label>
-        <link refid="dreammakerfx_8h_source"/>
-      </node>
-      <node id="295">
-        <label>src/effects/dm_fx_instrument_synth.h</label>
-        <link refid="dm__fx__instrument__synth_8h"/>
-        <childnode refid="296" relation="include">
-        </childnode>
-      </node>
-    </invincdepgraph>
     <innerclass refid="classfx__instrument__synth" prot="public">fx_instrument_synth</innerclass>
     <briefdescription>
     </briefdescription>

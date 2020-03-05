@@ -2,19 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
   <compounddef id="dm__fx__destructor_8h" kind="file" language="C++">
     <compoundname>dm_fx_destructor.h</compoundname>
-    <includedby refid="dreammakerfx_8h" local="yes">src/dreammakerfx.h</includedby>
-    <invincdepgraph>
-      <node id="280">
-        <label>src/effects/dm_fx_destructor.h</label>
-        <link refid="dm__fx__destructor_8h"/>
-        <childnode refid="281" relation="include">
-        </childnode>
-      </node>
-      <node id="281">
-        <label>src/dreammakerfx.h</label>
-        <link refid="dreammakerfx_8h_source"/>
-      </node>
-    </invincdepgraph>
     <innerclass refid="classfx__destructor" prot="public">fx_destructor</innerclass>
     <briefdescription>
     </briefdescription>

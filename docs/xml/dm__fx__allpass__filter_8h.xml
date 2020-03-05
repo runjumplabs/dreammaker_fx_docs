@@ -2,19 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
   <compounddef id="dm__fx__allpass__filter_8h" kind="file" language="C++">
     <compoundname>dm_fx_allpass_filter.h</compoundname>
-    <includedby refid="dreammakerfx_8h" local="yes">src/dreammakerfx.h</includedby>
-    <invincdepgraph>
-      <node id="263">
-        <label>src/dreammakerfx.h</label>
-        <link refid="dreammakerfx_8h_source"/>
-      </node>
-      <node id="262">
-        <label>src/effects/dm_fx_allpass_filter.h</label>
-        <link refid="dm__fx__allpass__filter_8h"/>
-        <childnode refid="263" relation="include">
-        </childnode>
-      </node>
-    </invincdepgraph>
     <innerclass refid="classfx__allpass__filter" prot="public">fx_allpass_filter</innerclass>
     <briefdescription>
     </briefdescription>

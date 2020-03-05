@@ -6,201 +6,81 @@
     <includes refid="dreammakerfx_8h" local="yes">dreammakerfx.h</includes>
     <includes refid="dm__fx__dsp_8h" local="yes">dm_fx_dsp.h</includes>
     <incdepgraph>
-      <node id="92">
-        <label>effects/dm_fx_destructor.h</label>
-        <link refid="dm__fx__destructor_8h_source"/>
-      </node>
-      <node id="100">
-        <label>effects/dm_fx_mixers.h</label>
-        <link refid="dm__fx__mixers_8h_source"/>
-      </node>
-      <node id="75">
+      <node id="35">
         <label>SPI.h</label>
       </node>
-      <node id="105">
-        <label>effects/dm_fx_slicer.h</label>
-        <link refid="dm__fx__slicer_8h_source"/>
-      </node>
-      <node id="80">
+      <node id="40">
         <label>dm_fx_dsp.h</label>
         <link refid="dm__fx__dsp_8h_source"/>
       </node>
-      <node id="85">
+      <node id="45">
         <label>dm_fx_platform_constants.h</label>
         <link refid="dm__fx__platform__constants_8h_source"/>
       </node>
-      <node id="83">
+      <node id="43">
         <label>dm_fx_ui.h</label>
         <link refid="dm__fx__ui_8h_source"/>
       </node>
-      <node id="104">
-        <label>effects/dm_fx_ring_modulator.h</label>
-        <link refid="dm__fx__ring__modulator_8h_source"/>
-      </node>
-      <node id="84">
+      <node id="44">
         <label>dm_fx_debug.h</label>
         <link refid="dm__fx__debug_8h_source"/>
       </node>
-      <node id="102">
-        <label>effects/dm_fx_phase_shifter.h</label>
-        <link refid="dm__fx__phase__shifter_8h_source"/>
-      </node>
-      <node id="97">
-        <label>effects/dm_fx_gain.h</label>
-        <link refid="dm__fx__gain_8h_source"/>
-      </node>
-      <node id="106">
-        <label>effects/dm_fx_variable_delay.h</label>
-        <link refid="dm__fx__variable__delay_8h_source"/>
-      </node>
-      <node id="78">
+      <node id="38">
         <label>Wire.h</label>
       </node>
-      <node id="76">
+      <node id="36">
         <label>dreammakerfx.h</label>
         <link refid="dreammakerfx_8h_source"/>
-        <childnode refid="77" relation="include">
+        <childnode refid="37" relation="include">
         </childnode>
-        <childnode refid="75" relation="include">
+        <childnode refid="35" relation="include">
         </childnode>
-        <childnode refid="78" relation="include">
+        <childnode refid="38" relation="include">
         </childnode>
-        <childnode refid="79" relation="include">
+        <childnode refid="39" relation="include">
         </childnode>
-        <childnode refid="80" relation="include">
+        <childnode refid="40" relation="include">
         </childnode>
-        <childnode refid="81" relation="include">
+        <childnode refid="41" relation="include">
         </childnode>
-        <childnode refid="82" relation="include">
+        <childnode refid="42" relation="include">
         </childnode>
-        <childnode refid="83" relation="include">
+        <childnode refid="43" relation="include">
         </childnode>
-        <childnode refid="84" relation="include">
+        <childnode refid="44" relation="include">
         </childnode>
-        <childnode refid="85" relation="include">
+        <childnode refid="45" relation="include">
         </childnode>
-        <childnode refid="86" relation="include">
-        </childnode>
-        <childnode refid="87" relation="include">
-        </childnode>
-        <childnode refid="88" relation="include">
-        </childnode>
-        <childnode refid="89" relation="include">
-        </childnode>
-        <childnode refid="90" relation="include">
-        </childnode>
-        <childnode refid="91" relation="include">
-        </childnode>
-        <childnode refid="92" relation="include">
-        </childnode>
-        <childnode refid="93" relation="include">
-        </childnode>
-        <childnode refid="94" relation="include">
-        </childnode>
-        <childnode refid="95" relation="include">
-        </childnode>
-        <childnode refid="96" relation="include">
-        </childnode>
-        <childnode refid="97" relation="include">
-        </childnode>
-        <childnode refid="98" relation="include">
-        </childnode>
-        <childnode refid="99" relation="include">
-        </childnode>
-        <childnode refid="100" relation="include">
-        </childnode>
-        <childnode refid="101" relation="include">
-        </childnode>
-        <childnode refid="102" relation="include">
-        </childnode>
-        <childnode refid="103" relation="include">
-        </childnode>
-        <childnode refid="104" relation="include">
-        </childnode>
-        <childnode refid="105" relation="include">
-        </childnode>
-        <childnode refid="106" relation="include">
+        <childnode refid="46" relation="include">
         </childnode>
       </node>
-      <node id="101">
-        <label>effects/dm_fx_oscillators.h</label>
-        <link refid="dm__fx__oscillators_8h_source"/>
-      </node>
-      <node id="94">
-        <label>effects/dm_fx_delay.h</label>
-        <link refid="dm__fx__delay_8h_source"/>
-      </node>
-      <node id="95">
-        <label>effects/dm_fx_delay_multitap.h</label>
-        <link refid="dm__fx__delay__multitap_8h_source"/>
-      </node>
-      <node id="82">
+      <node id="42">
         <label>dm_fx_codec.h</label>
         <link refid="dm__fx__codec_8h_source"/>
       </node>
-      <node id="79">
+      <node id="39">
         <label>math.h</label>
       </node>
-      <node id="77">
+      <node id="37">
         <label>Arduino.h</label>
       </node>
-      <node id="89">
-        <label>effects/dm_fx_allpass_filter.h</label>
-        <link refid="dm__fx__allpass__filter_8h_source"/>
-      </node>
-      <node id="81">
+      <node id="41">
         <label>dm_fx_spi_proto.h</label>
         <link refid="dm__fx__spi__proto_8h_source"/>
       </node>
-      <node id="88">
-        <label>effects/dm_fx_adsr_envelope.h</label>
-        <link refid="dm__fx__adsr__envelope_8h_source"/>
-      </node>
-      <node id="96">
-        <label>effects/dm_fx_envelope_tracker.h</label>
-        <link refid="dm__fx__envelope__tracker_8h_source"/>
-      </node>
-      <node id="87">
-        <label>effects/dm_fx_effect_macros.h</label>
-        <link refid="dm__fx__effect__macros_8h_source"/>
-      </node>
-      <node id="93">
-        <label>effects/dm_fx_compressor.h</label>
-        <link refid="dm__fx__compressor_8h_source"/>
-      </node>
-      <node id="99">
-        <label>effects/dm_fx_looper.h</label>
-        <link refid="dm__fx__looper_8h_source"/>
-      </node>
-      <node id="103">
-        <label>effects/dm_fx_pitch_shift.h</label>
-        <link refid="dm__fx__pitch__shift_8h_source"/>
-      </node>
-      <node id="98">
-        <label>effects/dm_fx_instrument_synth.h</label>
-        <link refid="dm__fx__instrument__synth_8h_source"/>
-      </node>
-      <node id="91">
-        <label>effects/dm_fx_biquad_filter.h</label>
-        <link refid="dm__fx__biquad__filter_8h_source"/>
-      </node>
-      <node id="86">
+      <node id="46">
         <label>effects/dm_fx_effects_defines.h</label>
         <link refid="dm__fx__effects__defines_8h"/>
       </node>
-      <node id="74">
+      <node id="34">
         <label>src/dm_fx_dsp.cpp</label>
         <link refid="dm__fx__dsp_8cpp"/>
-        <childnode refid="75" relation="include">
+        <childnode refid="35" relation="include">
         </childnode>
-        <childnode refid="76" relation="include">
+        <childnode refid="36" relation="include">
         </childnode>
-        <childnode refid="80" relation="include">
+        <childnode refid="40" relation="include">
         </childnode>
-      </node>
-      <node id="90">
-        <label>effects/dm_fx_amplitude_modulator.h</label>
-        <link refid="dm__fx__amplitude__modulator_8h_source"/>
       </node>
     </incdepgraph>
     <briefdescription>

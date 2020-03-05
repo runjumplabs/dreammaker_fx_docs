@@ -47,47 +47,7 @@ Includes
 
 - ``dm_fx_ui.h`` (:ref:`file_src_dm_fx_ui.h`)
 
-- ``effects/dm_fx_adsr_envelope.h`` (:ref:`file_src_effects_dm_fx_adsr_envelope.h`)
-
-- ``effects/dm_fx_allpass_filter.h`` (:ref:`file_src_effects_dm_fx_allpass_filter.h`)
-
-- ``effects/dm_fx_amplitude_modulator.h`` (:ref:`file_src_effects_dm_fx_amplitude_modulator.h`)
-
-- ``effects/dm_fx_biquad_filter.h`` (:ref:`file_src_effects_dm_fx_biquad_filter.h`)
-
-- ``effects/dm_fx_compressor.h`` (:ref:`file_src_effects_dm_fx_compressor.h`)
-
-- ``effects/dm_fx_delay.h`` (:ref:`file_src_effects_dm_fx_delay.h`)
-
-- ``effects/dm_fx_delay_multitap.h`` (:ref:`file_src_effects_dm_fx_delay_multitap.h`)
-
-- ``effects/dm_fx_destructor.h`` (:ref:`file_src_effects_dm_fx_destructor.h`)
-
-- ``effects/dm_fx_effect_macros.h`` (:ref:`file_src_effects_dm_fx_effect_macros.h`)
-
 - ``effects/dm_fx_effects_defines.h`` (:ref:`file_src_effects_dm_fx_effects_defines.h`)
-
-- ``effects/dm_fx_envelope_tracker.h`` (:ref:`file_src_effects_dm_fx_envelope_tracker.h`)
-
-- ``effects/dm_fx_gain.h`` (:ref:`file_src_effects_dm_fx_gain.h`)
-
-- ``effects/dm_fx_instrument_synth.h`` (:ref:`file_src_effects_dm_fx_instrument_synth.h`)
-
-- ``effects/dm_fx_looper.h`` (:ref:`file_src_effects_dm_fx_looper.h`)
-
-- ``effects/dm_fx_mixers.h`` (:ref:`file_src_effects_dm_fx_mixers.h`)
-
-- ``effects/dm_fx_oscillators.h`` (:ref:`file_src_effects_dm_fx_oscillators.h`)
-
-- ``effects/dm_fx_phase_shifter.h`` (:ref:`file_src_effects_dm_fx_phase_shifter.h`)
-
-- ``effects/dm_fx_pitch_shift.h`` (:ref:`file_src_effects_dm_fx_pitch_shift.h`)
-
-- ``effects/dm_fx_ring_modulator.h`` (:ref:`file_src_effects_dm_fx_ring_modulator.h`)
-
-- ``effects/dm_fx_slicer.h`` (:ref:`file_src_effects_dm_fx_slicer.h`)
-
-- ``effects/dm_fx_variable_delay.h`` (:ref:`file_src_effects_dm_fx_variable_delay.h`)
 
 - ``math.h``
 
@@ -141,10 +101,6 @@ Defines
 
 
 - :ref:`exhale_define_dreammakerfx_8h_1ad97188edfdd667de971027b35330fa41`
-
-- :ref:`exhale_define_dreammakerfx_8h_1a620b130ff59eac1a13b71beead2367e3`
-
-- :ref:`exhale_define_dreammakerfx_8h_1a05e30ed4888413f8259f427cb3dd1bf9`
 
 
 Variables

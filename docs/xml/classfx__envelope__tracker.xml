@@ -442,32 +442,66 @@
 <para>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/gFltSCZVqx0&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;=&quot;&quot;&gt;&lt;/iframe&gt; </para>
     </detaileddescription>
     <inheritancegraph>
-      <node id="64">
+      <node id="88">
         <label>fx_envelope_tracker</label>
         <link refid="classfx__envelope__tracker"/>
-        <childnode refid="65" relation="public-inheritance">
+        <childnode refid="89" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="65">
+      <node id="89">
         <label>fx_effect</label>
         <link refid="classfx__effect"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="66">
+      <node id="90">
         <label>fx_envelope_tracker</label>
         <link refid="classfx__envelope__tracker"/>
-        <childnode refid="67" relation="public-inheritance">
+        <childnode refid="91" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="68">
+      <node id="94">
+        <label>fx_switch</label>
+        <link refid="classfx__switch"/>
+      </node>
+      <node id="95">
+        <label>fx_led</label>
+        <link refid="classfx__led"/>
+      </node>
+      <node id="93">
+        <label>fx_pot</label>
+        <link refid="classfx__pot"/>
+      </node>
+      <node id="92">
         <label>fx_pedal</label>
         <link refid="classfx__pedal"/>
+        <childnode refid="93" relation="usage">
+          <edgelabel>pot_bot_right</edgelabel>
+          <edgelabel>exp_pedal</edgelabel>
+          <edgelabel>pot_top_left</edgelabel>
+          <edgelabel>pot_left</edgelabel>
+          <edgelabel>pot_top_right</edgelabel>
+          <edgelabel>pot_right</edgelabel>
+          <edgelabel>pot_bot_center</edgelabel>
+          <edgelabel>pot_bot_left</edgelabel>
+          <edgelabel>pot_center</edgelabel>
+        </childnode>
+        <childnode refid="94" relation="usage">
+          <edgelabel>toggle_left</edgelabel>
+          <edgelabel>toggle_right</edgelabel>
+        </childnode>
+        <childnode refid="95" relation="usage">
+          <edgelabel>led_right</edgelabel>
+          <edgelabel>left_led</edgelabel>
+          <edgelabel>led_left</edgelabel>
+          <edgelabel>right_led</edgelabel>
+          <edgelabel>led_center</edgelabel>
+        </childnode>
       </node>
-      <node id="67">
+      <node id="91">
         <label>fx_effect</label>
         <link refid="classfx__effect"/>
-        <childnode refid="68" relation="usage">
+        <childnode refid="92" relation="usage">
           <edgelabel>parent_canvas</edgelabel>
         </childnode>
       </node>
@@ -515,6 +549,9 @@
       <member refid="classfx__envelope__tracker_1acd1cdada1962af840f746336d72b8674" prot="private" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>param_triggered</name></member>
       <member refid="classfx__envelope__tracker_1a7b7104066117441072749e36c130520e" prot="private" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>param_type</name></member>
       <member refid="classfx__effect_1a69bef0da54cedf8e558d65b755716999" prot="protected" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>parent_canvas</name></member>
+      <member refid="classfx__effect_1ac3c8548118e3870dbc4bf71ae6b049af" prot="public" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>print_audio_node_status</name></member>
+      <member refid="classfx__effect_1a5823fdcf4e43d7a67e78773aff5bb817" prot="public" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>print_ctrl_node_status</name></member>
+      <member refid="classfx__effect_1a994c4bc631b10cf9dde1ac6d10144b3a" prot="public" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>print_parameter</name></member>
       <member refid="classfx__envelope__tracker_1a7b51364941f46e57860cfbaae1d315db" prot="public" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>print_params</name></member>
       <member refid="classfx__envelope__tracker_1afc7b87142acdae8f5d16dd2ce0de7769" prot="public" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>scale</name></member>
       <member refid="classfx__effect_1aaeececeee434ea76afdf649c3bed7698" prot="protected" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>serialize_params</name></member>

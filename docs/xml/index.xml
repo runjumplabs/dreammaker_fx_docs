@@ -251,6 +251,9 @@
     <member refid="classfx__effect_1a14e0cb29cd7e86d0b8f566b3066dbf32" kind="function"><name>get_type</name></member>
     <member refid="classfx__effect_1a84c05df07c1cd73de91d38e8ddfcc351" kind="function"><name>enable</name></member>
     <member refid="classfx__effect_1a659acc5bca268cb1ae1568cc4d48c2ac" kind="function"><name>bypass</name></member>
+    <member refid="classfx__effect_1a5823fdcf4e43d7a67e78773aff5bb817" kind="function"><name>print_ctrl_node_status</name></member>
+    <member refid="classfx__effect_1ac3c8548118e3870dbc4bf71ae6b049af" kind="function"><name>print_audio_node_status</name></member>
+    <member refid="classfx__effect_1a994c4bc631b10cf9dde1ac6d10144b3a" kind="function"><name>print_parameter</name></member>
   </compound>
   <compound refid="classfx__envelope__tracker" kind="class"><name>fx_envelope_tracker</name>
     <member refid="classfx__envelope__tracker_1a391c038c35f020db4528091c9a4c9ab9" kind="variable"><name>param_decay_ms</name></member>
@@ -518,6 +521,29 @@
     <member refid="classfx__pedal_1a225d7dd7f54c88e15d7cffae29885ded" kind="variable"><name>sys_new_note</name></member>
     <member refid="classfx__pedal_1a09870edaa6462260acd376f08a87f142" kind="variable"><name>audio_node_stack</name></member>
     <member refid="classfx__pedal_1a6c540a4cb9f53b0607d01a6c7cabab2f" kind="variable"><name>control_node_stack</name></member>
+    <member refid="classfx__pedal_1ac0676ce118a518f32523c412a7fb75fe" kind="friend"><name>fx_effect</name></member>
+    <member refid="classfx__pedal_1a45be1beb189aee108b41cea5cc11e9c9" kind="variable"><name>bypass_control_enabled</name></member>
+    <member refid="classfx__pedal_1a88e8b17d0a405956913b862d6bd5cafd" kind="variable"><name>bypassed</name></member>
+    <member refid="classfx__pedal_1a025dc2e4175abbc59e4d3a198707d317" kind="variable"><name>bypass_footswitch</name></member>
+    <member refid="classfx__pedal_1a79b6745ac397bf42598246636c58bd74" kind="variable"><name>tap_control_enabled</name></member>
+    <member refid="classfx__pedal_1af62e3eb61b4adc56ec7a3bbcb76d7e99" kind="variable"><name>tap_blink_only_enabled</name></member>
+    <member refid="classfx__pedal_1adbb98a754feddab9f7c9c3e23693d24a" kind="variable"><name>tap_footswitch</name></member>
+    <member refid="classfx__pedal_1a7a3c0f416f4cbfc6b3b4f40d3d58f786" kind="variable"><name>pot_right</name></member>
+    <member refid="classfx__pedal_1a0e74e3a1d4fbea11142dfc5a7bf60c51" kind="variable"><name>pot_center</name></member>
+    <member refid="classfx__pedal_1a1e13e98d019bb531b3a8b1009206f010" kind="variable"><name>pot_left</name></member>
+    <member refid="classfx__pedal_1aec999dc0f0c3889ebbc66af92d5b169e" kind="variable"><name>left_led</name></member>
+    <member refid="classfx__pedal_1ad1f16db9d634518de0a1df6299631ed8" kind="variable"><name>right_led</name></member>
+    <member refid="classfx__pedal_1ab59146cbb9f7326f565ee1a21918c938" kind="variable"><name>pot_top_left</name></member>
+    <member refid="classfx__pedal_1a9842a8a92bd190615b152a13e29383fc" kind="variable"><name>pot_top_right</name></member>
+    <member refid="classfx__pedal_1a5cc73944c0d796a36f4c672d3918c1ea" kind="variable"><name>pot_bot_left</name></member>
+    <member refid="classfx__pedal_1ade8c0f3e53f829c6b9887b2e784d1e5d" kind="variable"><name>pot_bot_center</name></member>
+    <member refid="classfx__pedal_1af2e1da6045cb3a91b28aff901eb90498" kind="variable"><name>pot_bot_right</name></member>
+    <member refid="classfx__pedal_1ab05386d2b8aaf606d08c332cfb8490f5" kind="variable"><name>exp_pedal</name></member>
+    <member refid="classfx__pedal_1a77e5558b9ad4b20f9bddc9fee4406c1f" kind="variable"><name>toggle_left</name></member>
+    <member refid="classfx__pedal_1a0e1ac6a7b3fd3fe5af33a5aab49eb654" kind="variable"><name>toggle_right</name></member>
+    <member refid="classfx__pedal_1a097956e97d36fe066c3ccd752c3088fc" kind="variable"><name>led_left</name></member>
+    <member refid="classfx__pedal_1adb5b583dd7f1a37ef9c9bfce16fe0a90" kind="variable"><name>led_center</name></member>
+    <member refid="classfx__pedal_1ac20846e9d64a962a3782dc4e5676d323" kind="variable"><name>led_right</name></member>
     <member refid="classfx__pedal_1ac663c7f4236dca2b131e3d42b37a1c98" kind="variable"><name>instr_in</name></member>
     <member refid="classfx__pedal_1af9224fc19efa6115d4fadf8c74b894bf" kind="variable"><name>instr_in_l</name></member>
     <member refid="classfx__pedal_1a202ea144ad8fa3d7620a27b7916e1e36" kind="variable"><name>instr_in_r</name></member>
@@ -543,6 +569,7 @@
     <member refid="classfx__pedal_1a92cc196fb9d64fa209bc7b5fbbffdf99" kind="function"><name>get_audio_node_index</name></member>
     <member refid="classfx__pedal_1a9d2ad0b3b22aa1f4e9f5fc5244414710" kind="function"><name>get_control_node_index</name></member>
     <member refid="classfx__pedal_1a97e3693a5dfd198ae3f484fc90960c3a" kind="function"><name>get_name</name></member>
+    <member refid="classfx__pedal_1a21d0be4d4111ede2f20e845abb55a4ce" kind="function"><name>fx_pedal</name></member>
     <member refid="classfx__pedal_1aa7ec165e5660a0d484add96ec19cfb8d" kind="function"><name>init</name></member>
     <member refid="classfx__pedal_1a9575fbfd47c4fcfed424c4a82ce84f1f" kind="function"><name>init</name></member>
     <member refid="classfx__pedal_1a579a8e9a697226ed755be972aa047887" kind="function"><name>init</name></member>
@@ -566,10 +593,15 @@
     <member refid="classfx__pedal_1af064f5cfc0fc2f5a439ec50b808a6e92" kind="function"><name>set_tap_blink_rate_ms</name></member>
     <member refid="classfx__pedal_1a0b37d83e55eb57f01a21d1e82a65a962" kind="function"><name>button_pressed</name></member>
     <member refid="classfx__pedal_1a6846245fdae141df03fc96fd49e033c9" kind="function"><name>button_released</name></member>
+    <member refid="classfx__pedal_1a4dd09decd98b6d2cbace1f907b16feff" kind="function"><name>register_tap</name></member>
+    <member refid="classfx__pedal_1a0bf2fe061eec8dc506aaabd9b73563ff" kind="function"><name>button_press_check</name></member>
+    <member refid="classfx__pedal_1aafeeae68db6899dd7f671b9be65d89a2" kind="function"><name>service_button_events</name></member>
     <member refid="classfx__pedal_1aa591b730a9748432e6106275289bd525" kind="function"><name>print_instance_stack</name></member>
     <member refid="classfx__pedal_1aafc924cc4d965716545368e4dfcf85c4" kind="function"><name>print_routing_table</name></member>
     <member refid="classfx__pedal_1a9383c75a2dd8557f0bd4927846113836" kind="function"><name>print_param_tables</name></member>
     <member refid="classfx__pedal_1ac28cbf7f885ce543abdf7484ef48de91" kind="function"><name>print_processor_load</name></member>
+    <member refid="classfx__pedal_1a3c550ad0d1bd29b4a954123b6be38a1c" kind="function"><name>spi_transmit_param</name></member>
+    <member refid="classfx__pedal_1ac3f27eeae45a17f3ce467cc290bf1f24" kind="function"><name>parameter_service</name></member>
   </compound>
   <compound refid="classfx__phase__shifter" kind="class"><name>fx_phase_shifter</name>
     <member refid="classfx__phase__shifter_1ab1b57d3bd7372a21c16e512f63b78d5d" kind="variable"><name>param_depth</name></member>
@@ -616,17 +648,20 @@
     <member refid="classfx__pot_1ae2c1a90709292bca8a03e449b70e78d1" kind="variable"><name>avg_ptr</name></member>
     <member refid="classfx__pot_1af810d6a31996f435482819576a9efc7d" kind="variable"><name>pin_number</name></member>
     <member refid="classfx__pot_1aa97288b5324c2c1a87ae9795b2bbdc1f" kind="variable"><name>coeff</name></member>
-    <member refid="classfx__pot_1af9259e5bc4609e2c382f57e2a30e087a" kind="variable"><name>pot_history_long</name></member>
-    <member refid="classfx__pot_1ac05975d4d2b3cbffcbb7c6afe23c558e" kind="variable"><name>pot_history_short</name></member>
+    <member refid="classfx__pot_1a55db2480436bcdf61c6d7e517943cfa2" kind="variable"><name>pot_history_long</name></member>
+    <member refid="classfx__pot_1a1525675a8527e0bdbe1e5794c1c99114" kind="variable"><name>pot_history_short</name></member>
     <member refid="classfx__pot_1a8035caa2cade9f03206c2de9e0b5bcda" kind="variable"><name>pot_long_hist_indx</name></member>
     <member refid="classfx__pot_1a7bf32ddf49e22e4e3a14d0d19707d45c" kind="variable"><name>pot_short_hist_indx</name></member>
     <member refid="classfx__pot_1a7308d530700fff59f00cd59b77d935cb" kind="variable"><name>last_poll</name></member>
     <member refid="classfx__pot_1a9703ce4b97774e1ff2aa5f0b9cc12366" kind="variable"><name>val</name></member>
+    <member refid="classfx__pot_1ae6cd44f06b9b10f0a6290e91a13e220a" kind="variable"><name>val_inv</name></member>
     <member refid="classfx__pot_1a7a73a38834d630586ad5c34af00b7f38" kind="variable"><name>val_log</name></member>
     <member refid="classfx__pot_1a2eaafdea7b4165b981ee08c15c34f57b" kind="variable"><name>val_log_inv</name></member>
     <member refid="classfx__pot_1aebf7fa32acdaa0c3963c0b7829ecebf3" kind="function"><name>pot_mean</name></member>
     <member refid="classfx__pot_1ad67a8edbc41a8dc9b9abdcf6b7ac264f" kind="function"><name>pot_variance</name></member>
     <member refid="classfx__pot_1ac471e9287cfc03db4c8e4644c2d8b236" kind="function"><name>has_changed</name></member>
+    <member refid="classfx__pot_1a3c021c899eb1182ae49604d35dcb0eb1" kind="function"><name>read_pot</name></member>
+    <member refid="classfx__pot_1a9fff8656ae346ef17b35b916a730d409" kind="function"><name>fx_pot</name></member>
   </compound>
   <compound refid="classfx__ring__mod" kind="class"><name>fx_ring_mod</name>
     <member refid="classfx__ring__mod_1ac75ffafcb3ae0981f44e6dc4768aad72" kind="variable"><name>param_freq</name></member>
@@ -683,7 +718,6 @@
     <member refid="classfx__switch_1aa1d835a58b1cae15c6704fb7b4597082" kind="variable"><name>down_pin</name></member>
     <member refid="classfx__switch_1a116faed18ae90c52cca9af906c9a7cae" kind="variable"><name>switch_pos_last</name></member>
     <member refid="classfx__switch_1a76d9aa494f2369eb421296d8f1bb8847" kind="variable"><name>position</name></member>
-    <member refid="classfx__switch_1a45bf873b49a6cda9eb4c3cfad8bb8bbe" kind="function"><name>has_changed</name></member>
   </compound>
   <compound refid="classfx__variable__delay" kind="class"><name>fx_variable_delay</name>
     <member refid="classfx__variable__delay_1a2b3232d83ab76157bae0dcd292eb31b9" kind="variable"><name>param_depth</name></member>
@@ -726,6 +760,12 @@
     <member refid="classfx__variable__delay_1a69e0bdf848f4f2ab1de57a7f23fb5088" kind="function"><name>print_params</name></member>
   </compound>
   <compound refid="dm__fx__codec_8cpp" kind="file"><name>dm_fx_codec.cpp</name>
+    <member refid="dm__fx__codec_8cpp_1a34851a3a59098d3f42a892e876ab05a1" kind="variable"><name>adau1761_tx_buffer</name></member>
+    <member refid="dm__fx__codec_8cpp_1a6471e34735afba6c81b7c4dfaab70231" kind="variable"><name>adau1761_num_bytes</name></member>
+    <member refid="dm__fx__codec_8cpp_1afe156c770c921685a8c5bc4d83b07bc0" kind="function"><name>wm8731_write_register</name></member>
+    <member refid="dm__fx__codec_8cpp_1a6f7c6fbc8928767ac679ce69f6bfe5ba" kind="function"><name>wm8731_initialize</name></member>
+    <member refid="dm__fx__codec_8cpp_1a14a62071ce44d9a638949776c8116e6f" kind="function"><name>adau1761_write_register</name></member>
+    <member refid="dm__fx__codec_8cpp_1a2a94dbdb7832243345427205e152f984" kind="function"><name>adau1761_initialize</name></member>
   </compound>
   <compound refid="dm__fx__codec_8h" kind="file"><name>dm_fx_codec.h</name>
   </compound>
@@ -776,8 +816,6 @@
   </compound>
   <compound refid="dreammakerfx_8h" kind="file"><name>dreammakerfx.h</name>
     <member refid="dreammakerfx_8h_1ad97188edfdd667de971027b35330fa41" kind="define"><name>API_VERSION</name></member>
-    <member refid="dreammakerfx_8h_1a620b130ff59eac1a13b71beead2367e3" kind="define"><name>POT_LONG_HIST_LEN</name></member>
-    <member refid="dreammakerfx_8h_1a05e30ed4888413f8259f427cb3dd1bf9" kind="define"><name>POT_SHORT_HIST_LEN</name></member>
     <member refid="dreammakerfx_8h_1a1f3289eeddfbcff1515a3786dc0518fa" kind="enum"><name>LED_COLOR</name></member>
     <member refid="dreammakerfx_8h_1a1f3289eeddfbcff1515a3786dc0518faaf80f9a890089d211842d59625e561f88" kind="enumvalue"><name>RED</name></member>
     <member refid="dreammakerfx_8h_1a1f3289eeddfbcff1515a3786dc0518faaa60bd322f93178d68184e30e162571ca" kind="enumvalue"><name>GREEN</name></member>

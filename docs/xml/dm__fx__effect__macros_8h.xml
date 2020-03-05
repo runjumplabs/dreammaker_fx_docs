@@ -2,19 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
   <compounddef id="dm__fx__effect__macros_8h" kind="file" language="C++">
     <compoundname>dm_fx_effect_macros.h</compoundname>
-    <includedby refid="dreammakerfx_8h" local="yes">src/dreammakerfx.h</includedby>
-    <invincdepgraph>
-      <node id="284">
-        <label>src/dreammakerfx.h</label>
-        <link refid="dreammakerfx_8h_source"/>
-      </node>
-      <node id="283">
-        <label>src/effects/dm_fx_effect_macros.h</label>
-        <link refid="dm__fx__effect__macros_8h"/>
-        <childnode refid="284" relation="include">
-        </childnode>
-      </node>
-    </invincdepgraph>
       <sectiondef kind="define">
       <memberdef kind="define" id="dm__fx__effect__macros_8h_1a9eb89bc7024105092c75f656648d4f1e" prot="public" static="no">
         <name>CHECK_LAST_RUN</name>

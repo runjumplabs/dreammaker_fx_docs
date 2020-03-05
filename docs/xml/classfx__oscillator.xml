@@ -492,32 +492,66 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="106">
+      <node id="154">
         <label>fx_oscillator</label>
         <link refid="classfx__oscillator"/>
-        <childnode refid="107" relation="public-inheritance">
+        <childnode refid="155" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="107">
+      <node id="155">
         <label>fx_effect</label>
         <link refid="classfx__effect"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="108">
+      <node id="160">
+        <label>fx_switch</label>
+        <link refid="classfx__switch"/>
+      </node>
+      <node id="156">
         <label>fx_oscillator</label>
         <link refid="classfx__oscillator"/>
-        <childnode refid="109" relation="public-inheritance">
+        <childnode refid="157" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="110">
+      <node id="161">
+        <label>fx_led</label>
+        <link refid="classfx__led"/>
+      </node>
+      <node id="159">
+        <label>fx_pot</label>
+        <link refid="classfx__pot"/>
+      </node>
+      <node id="158">
         <label>fx_pedal</label>
         <link refid="classfx__pedal"/>
+        <childnode refid="159" relation="usage">
+          <edgelabel>pot_bot_right</edgelabel>
+          <edgelabel>exp_pedal</edgelabel>
+          <edgelabel>pot_top_left</edgelabel>
+          <edgelabel>pot_left</edgelabel>
+          <edgelabel>pot_top_right</edgelabel>
+          <edgelabel>pot_right</edgelabel>
+          <edgelabel>pot_bot_center</edgelabel>
+          <edgelabel>pot_bot_left</edgelabel>
+          <edgelabel>pot_center</edgelabel>
+        </childnode>
+        <childnode refid="160" relation="usage">
+          <edgelabel>toggle_left</edgelabel>
+          <edgelabel>toggle_right</edgelabel>
+        </childnode>
+        <childnode refid="161" relation="usage">
+          <edgelabel>led_right</edgelabel>
+          <edgelabel>left_led</edgelabel>
+          <edgelabel>led_left</edgelabel>
+          <edgelabel>right_led</edgelabel>
+          <edgelabel>led_center</edgelabel>
+        </childnode>
       </node>
-      <node id="109">
+      <node id="157">
         <label>fx_effect</label>
         <link refid="classfx__effect"/>
-        <childnode refid="110" relation="usage">
+        <childnode refid="158" relation="usage">
           <edgelabel>parent_canvas</edgelabel>
         </childnode>
       </node>
@@ -564,6 +598,9 @@
       <member refid="classfx__effect_1a0ea0d3bfe30592895fa23d241a9baa38" prot="protected" virt="non-virtual"><scope>fx_oscillator</scope><name>param_stack_types</name></member>
       <member refid="classfx__oscillator_1a9e110d275f84e00d0d51d8f65308018a" prot="private" virt="non-virtual"><scope>fx_oscillator</scope><name>param_type</name></member>
       <member refid="classfx__effect_1a69bef0da54cedf8e558d65b755716999" prot="protected" virt="non-virtual"><scope>fx_oscillator</scope><name>parent_canvas</name></member>
+      <member refid="classfx__effect_1ac3c8548118e3870dbc4bf71ae6b049af" prot="public" virt="non-virtual"><scope>fx_oscillator</scope><name>print_audio_node_status</name></member>
+      <member refid="classfx__effect_1a5823fdcf4e43d7a67e78773aff5bb817" prot="public" virt="non-virtual"><scope>fx_oscillator</scope><name>print_ctrl_node_status</name></member>
+      <member refid="classfx__effect_1a994c4bc631b10cf9dde1ac6d10144b3a" prot="public" virt="non-virtual"><scope>fx_oscillator</scope><name>print_parameter</name></member>
       <member refid="classfx__oscillator_1a630f9545124147322faea04790240e61" prot="public" virt="non-virtual"><scope>fx_oscillator</scope><name>print_params</name></member>
       <member refid="classfx__effect_1aaeececeee434ea76afdf649c3bed7698" prot="protected" virt="non-virtual"><scope>fx_oscillator</scope><name>serialize_params</name></member>
       <member refid="classfx__effect_1a4c513243328d3b715822e74d21dffe99" prot="public" virt="non-virtual"><scope>fx_oscillator</scope><name>service</name></member>

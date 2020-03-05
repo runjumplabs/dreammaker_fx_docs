@@ -12,7 +12,7 @@ Program Listing for File dm_fx_dsp_firmware_image.h
 
    // Copyright (c) 2020 Run Jump Labs LLC.  All right reserved. 
    // This code is licensed under MIT license (see license.txt for details)
-   
+   #ifndef DOXYGEN_SHOULD_SKIP_THIS
    
    0x00,
    0x00,
@@ -151769,3 +151769,6 @@ Program Listing for File dm_fx_dsp_firmware_image.h
    0x00,
    0x00,
    0x00
+   
+   
+   #endif

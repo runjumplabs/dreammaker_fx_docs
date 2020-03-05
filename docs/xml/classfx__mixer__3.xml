@@ -145,32 +145,66 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="91">
+      <node id="130">
         <label>fx_mixer_3</label>
         <link refid="classfx__mixer__3"/>
-        <childnode refid="92" relation="public-inheritance">
+        <childnode refid="131" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="92">
+      <node id="131">
         <label>fx_effect</label>
         <link refid="classfx__effect"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="93">
+      <node id="136">
+        <label>fx_switch</label>
+        <link refid="classfx__switch"/>
+      </node>
+      <node id="132">
         <label>fx_mixer_3</label>
         <link refid="classfx__mixer__3"/>
-        <childnode refid="94" relation="public-inheritance">
+        <childnode refid="133" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="95">
+      <node id="137">
+        <label>fx_led</label>
+        <link refid="classfx__led"/>
+      </node>
+      <node id="135">
+        <label>fx_pot</label>
+        <link refid="classfx__pot"/>
+      </node>
+      <node id="134">
         <label>fx_pedal</label>
         <link refid="classfx__pedal"/>
+        <childnode refid="135" relation="usage">
+          <edgelabel>pot_bot_right</edgelabel>
+          <edgelabel>exp_pedal</edgelabel>
+          <edgelabel>pot_top_left</edgelabel>
+          <edgelabel>pot_left</edgelabel>
+          <edgelabel>pot_top_right</edgelabel>
+          <edgelabel>pot_right</edgelabel>
+          <edgelabel>pot_bot_center</edgelabel>
+          <edgelabel>pot_bot_left</edgelabel>
+          <edgelabel>pot_center</edgelabel>
+        </childnode>
+        <childnode refid="136" relation="usage">
+          <edgelabel>toggle_left</edgelabel>
+          <edgelabel>toggle_right</edgelabel>
+        </childnode>
+        <childnode refid="137" relation="usage">
+          <edgelabel>led_right</edgelabel>
+          <edgelabel>left_led</edgelabel>
+          <edgelabel>led_left</edgelabel>
+          <edgelabel>right_led</edgelabel>
+          <edgelabel>led_center</edgelabel>
+        </childnode>
       </node>
-      <node id="94">
+      <node id="133">
         <label>fx_effect</label>
         <link refid="classfx__effect"/>
-        <childnode refid="95" relation="usage">
+        <childnode refid="134" relation="usage">
           <edgelabel>parent_canvas</edgelabel>
         </childnode>
       </node>
@@ -207,6 +241,9 @@
       <member refid="classfx__effect_1aaf455e34fced9667a8cf26cdb9fb6641" prot="protected" virt="non-virtual"><scope>fx_mixer_3</scope><name>param_stack</name></member>
       <member refid="classfx__effect_1a0ea0d3bfe30592895fa23d241a9baa38" prot="protected" virt="non-virtual"><scope>fx_mixer_3</scope><name>param_stack_types</name></member>
       <member refid="classfx__effect_1a69bef0da54cedf8e558d65b755716999" prot="protected" virt="non-virtual"><scope>fx_mixer_3</scope><name>parent_canvas</name></member>
+      <member refid="classfx__effect_1ac3c8548118e3870dbc4bf71ae6b049af" prot="public" virt="non-virtual"><scope>fx_mixer_3</scope><name>print_audio_node_status</name></member>
+      <member refid="classfx__effect_1a5823fdcf4e43d7a67e78773aff5bb817" prot="public" virt="non-virtual"><scope>fx_mixer_3</scope><name>print_ctrl_node_status</name></member>
+      <member refid="classfx__effect_1a994c4bc631b10cf9dde1ac6d10144b3a" prot="public" virt="non-virtual"><scope>fx_mixer_3</scope><name>print_parameter</name></member>
       <member refid="classfx__mixer__3_1a0593fdf1d54570a4b719151823e080a5" prot="public" virt="non-virtual"><scope>fx_mixer_3</scope><name>print_params</name></member>
       <member refid="classfx__effect_1aaeececeee434ea76afdf649c3bed7698" prot="protected" virt="non-virtual"><scope>fx_mixer_3</scope><name>serialize_params</name></member>
       <member refid="classfx__effect_1a4c513243328d3b715822e74d21dffe99" prot="public" virt="non-virtual"><scope>fx_mixer_3</scope><name>service</name></member>

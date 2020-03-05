@@ -197,19 +197,44 @@
 <dl class="class">
 <dt id="_CPPv46fx_pot">
 <span id="_CPPv36fx_pot"></span><span id="_CPPv26fx_pot"></span><span id="fx_pot"></span><span class="target" id="classfx__pot"></span><em class="property">class </em><code class="sig-name descname">fx_pot</code><a class="headerlink" href="#_CPPv46fx_pot" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Manages the state of any pots. </p>
+<dd><p>These functions are used to read the pots (aka the knobs) of the pedal. </p>
+<p>Each knob has a value ranging from 0.0 (full counter-clockwise) to 1.0 (full clock-wise).</p>
+<p>The first generation hardware has three pots (<code class="docutils literal notranslate"><span class="pre">pedal.pot_left</span></code>, <code class="docutils literal notranslate"><span class="pre">pedal.pot_center</span></code>, and <code class="docutils literal notranslate"><span class="pre">pedal.pot_right</span></code>).</p>
+<p>The second generation hardware has five pots (<code class="docutils literal notranslate"><span class="pre">pedal.pot_top_left</span></code>, ‘pedal.pot_top_right’, ‘pedal.pot_bot_left&lt;tt&gt;,pedal.pot_bot_center&lt;tt&gt;andpedal.pot_bot_right`). To preserve backwards compatibility with sketches developed on the first generation hardware, the <code class="docutils literal notranslate"><span class="pre">pedal.pot_left</span></code> will map to ‘pedal.pot_bot_left` (and same for center and right pots).</p>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">.</span><a class="reference internal" href="#classfx__pot_1ac471e9287cfc03db4c8e4644c2d8b236"><span class="std std-ref"><span class="pre">has_changed()</span></span></a></code> function to determine when a pot has been adjusted by the user.</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">pedal</span><span class="p">.</span><span class="n">pot_left</span><span class="p">.</span><span class="n">has_changed</span><span class="p">())</span> <span class="p">{</span>
+  <span class="n">delay_effect</span><span class="p">.</span><span class="n">set_feedback</span><span class="p">(</span><span class="n">pedal</span><span class="p">.</span><span class="n">pot_left</span><span class="p">.</span><span class="n">val</span><span class="p">);</span>   <span class="c1">// Set feedback of delay using left pot</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+ </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
 <dt id="_CPPv4N6fx_pot11has_changedEv">
 <span id="_CPPv3N6fx_pot11has_changedEv"></span><span id="_CPPv2N6fx_pot11has_changedEv"></span><span id="fx_pot::has_changed__void"></span><span class="target" id="classfx__pot_1ac471e9287cfc03db4c8e4644c2d8b236"></span>bool <code class="sig-name descname">has_changed</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6fx_pot11has_changedEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Returns true if this pot has been changed by the user. </p>
-<p><dl class="simple">
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">pedal</span><span class="p">.</span><span class="n">pot_left</span><span class="p">.</span><span class="n">has_changed</span><span class="p">())</span> <span class="p">{</span>
+  <span class="n">delay_effect</span><span class="p">.</span><span class="n">set_feedback</span><span class="p">(</span><span class="n">pedal</span><span class="p">.</span><span class="n">pot_left</span><span class="p">.</span><span class="n">val</span><span class="p">);</span>   <span class="c1">// Set feedback of delay using left pot</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+ <dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>True if changed, False otherwise. </p>
 </dd>
 </dl>
 </p>
 </dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6fx_pot8read_potEv">
+<span id="_CPPv3N6fx_pot8read_potEv"></span><span id="_CPPv2N6fx_pot8read_potEv"></span><span id="fx_pot::read_pot"></span><span class="target" id="classfx__pot_1a3c021c899eb1182ae49604d35dcb0eb1"></span>void <code class="sig-name descname">read_pot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6fx_pot8read_potEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6fx_pot6fx_potEi">
+<span id="_CPPv3N6fx_pot6fx_potEi"></span><span id="_CPPv2N6fx_pot6fx_potEi"></span><span id="fx_pot::fx_pot__i"></span><span class="target" id="classfx__pot_1a9fff8656ae346ef17b35b916a730d409"></span><code class="sig-name descname">fx_pot</code><span class="sig-paren">(</span>int <em>pin</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6fx_pot6fx_potEi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
 
 </div>
 <div class="breathe-sectiondef docutils container">
@@ -218,6 +243,12 @@
 <dt id="_CPPv4N6fx_pot3valE">
 <span id="_CPPv3N6fx_pot3valE"></span><span id="_CPPv2N6fx_pot3valE"></span><span id="fx_pot::val__float"></span><span class="target" id="classfx__pot_1a9703ce4b97774e1ff2aa5f0b9cc12366"></span>float <code class="sig-name descname">val</code><a class="headerlink" href="#_CPPv4N6fx_pot3valE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Current value of pot (0.0 to 1.0) </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N6fx_pot7val_invE">
+<span id="_CPPv3N6fx_pot7val_invE"></span><span id="_CPPv2N6fx_pot7val_invE"></span><span id="fx_pot::val_inv__float"></span><span class="target" id="classfx__pot_1ae6cd44f06b9b10f0a6290e91a13e220a"></span>float <code class="sig-name descname">val_inv</code><a class="headerlink" href="#_CPPv4N6fx_pot7val_invE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Current value of pot (1.0 to 0.0) </p>
 </dd></dl>
 
 <dl class="member">

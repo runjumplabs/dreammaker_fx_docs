@@ -787,32 +787,66 @@
 <para>The instrument synth does not have an input. It is hard-wired into the instrument in jack of the pedal. </para>
     </detaileddescription>
     <inheritancegraph>
-      <node id="74">
+      <node id="104">
         <label>fx_instrument_synth</label>
         <link refid="classfx__instrument__synth"/>
-        <childnode refid="75" relation="public-inheritance">
+        <childnode refid="105" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="75">
+      <node id="105">
         <label>fx_effect</label>
         <link refid="classfx__effect"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="76">
+      <node id="110">
+        <label>fx_switch</label>
+        <link refid="classfx__switch"/>
+      </node>
+      <node id="106">
         <label>fx_instrument_synth</label>
         <link refid="classfx__instrument__synth"/>
-        <childnode refid="77" relation="public-inheritance">
+        <childnode refid="107" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="78">
+      <node id="111">
+        <label>fx_led</label>
+        <link refid="classfx__led"/>
+      </node>
+      <node id="109">
+        <label>fx_pot</label>
+        <link refid="classfx__pot"/>
+      </node>
+      <node id="108">
         <label>fx_pedal</label>
         <link refid="classfx__pedal"/>
+        <childnode refid="109" relation="usage">
+          <edgelabel>pot_bot_right</edgelabel>
+          <edgelabel>exp_pedal</edgelabel>
+          <edgelabel>pot_top_left</edgelabel>
+          <edgelabel>pot_left</edgelabel>
+          <edgelabel>pot_top_right</edgelabel>
+          <edgelabel>pot_right</edgelabel>
+          <edgelabel>pot_bot_center</edgelabel>
+          <edgelabel>pot_bot_left</edgelabel>
+          <edgelabel>pot_center</edgelabel>
+        </childnode>
+        <childnode refid="110" relation="usage">
+          <edgelabel>toggle_left</edgelabel>
+          <edgelabel>toggle_right</edgelabel>
+        </childnode>
+        <childnode refid="111" relation="usage">
+          <edgelabel>led_right</edgelabel>
+          <edgelabel>left_led</edgelabel>
+          <edgelabel>led_left</edgelabel>
+          <edgelabel>right_led</edgelabel>
+          <edgelabel>led_center</edgelabel>
+        </childnode>
       </node>
-      <node id="77">
+      <node id="107">
         <label>fx_effect</label>
         <link refid="classfx__effect"/>
-        <childnode refid="78" relation="usage">
+        <childnode refid="108" relation="usage">
           <edgelabel>parent_canvas</edgelabel>
         </childnode>
       </node>
@@ -865,6 +899,9 @@
       <member refid="classfx__effect_1aaf455e34fced9667a8cf26cdb9fb6641" prot="protected" virt="non-virtual"><scope>fx_instrument_synth</scope><name>param_stack</name></member>
       <member refid="classfx__effect_1a0ea0d3bfe30592895fa23d241a9baa38" prot="protected" virt="non-virtual"><scope>fx_instrument_synth</scope><name>param_stack_types</name></member>
       <member refid="classfx__effect_1a69bef0da54cedf8e558d65b755716999" prot="protected" virt="non-virtual"><scope>fx_instrument_synth</scope><name>parent_canvas</name></member>
+      <member refid="classfx__effect_1ac3c8548118e3870dbc4bf71ae6b049af" prot="public" virt="non-virtual"><scope>fx_instrument_synth</scope><name>print_audio_node_status</name></member>
+      <member refid="classfx__effect_1a5823fdcf4e43d7a67e78773aff5bb817" prot="public" virt="non-virtual"><scope>fx_instrument_synth</scope><name>print_ctrl_node_status</name></member>
+      <member refid="classfx__effect_1a994c4bc631b10cf9dde1ac6d10144b3a" prot="public" virt="non-virtual"><scope>fx_instrument_synth</scope><name>print_parameter</name></member>
       <member refid="classfx__instrument__synth_1afa5b73d3cdffb153cb4d660f0e4afcd3" prot="public" virt="non-virtual"><scope>fx_instrument_synth</scope><name>print_params</name></member>
       <member refid="classfx__instrument__synth_1a88100b10543cb0fa7db1961bb18e6988" prot="public" virt="non-virtual"><scope>fx_instrument_synth</scope><name>resonance</name></member>
       <member refid="classfx__instrument__synth_1a9c4c1a3f55ddeb3ce0e7d4dc3db0aeba" prot="public" virt="non-virtual"><scope>fx_instrument_synth</scope><name>response</name></member>

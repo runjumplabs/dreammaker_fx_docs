@@ -3,16 +3,15 @@
   <compounddef id="dm__fx__codec_8h" kind="file" language="C++">
     <compoundname>dm_fx_codec.h</compoundname>
     <includedby refid="dreammakerfx_8h" local="yes">src/dreammakerfx.h</includedby>
-    <includedby refid="dm__fx__codec_8cpp" local="yes">src/dm_fx_codec.cpp</includedby>
     <invincdepgraph>
-      <node id="36">
+      <node id="16">
         <label>src/dreammakerfx.h</label>
         <link refid="dreammakerfx_8h_source"/>
       </node>
-      <node id="35">
+      <node id="15">
         <label>src/dm_fx_codec.h</label>
         <link refid="dm__fx__codec_8h"/>
-        <childnode refid="36" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
       </node>
     </invincdepgraph>

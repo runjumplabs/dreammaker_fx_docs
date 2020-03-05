@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="531" column="1" bodyfile="src/dreammakerfx.h" bodystart="531" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="560" column="1" bodyfile="src/dreammakerfx.h" bodystart="560" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1abba68cfcad2670c3606b38605ddca129" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="532" column="1" bodyfile="src/dreammakerfx.h" bodystart="532" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="561" column="1" bodyfile="src/dreammakerfx.h" bodystart="561" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1a53eafeedef47f300f5bfaf7f344bc750" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="533" column="1" bodyfile="src/dreammakerfx.h" bodystart="533" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="562" column="1" bodyfile="src/dreammakerfx.h" bodystart="562" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1a2b6787f7565fee47764e5601d1c34e88" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="534" column="1" bodyfile="src/dreammakerfx.h" bodystart="534" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="563" column="1" bodyfile="src/dreammakerfx.h" bodystart="563" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1a746fe1486b557f8037bd48c853185093" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -67,7 +67,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="534" column="1" bodyfile="src/dreammakerfx.h" bodystart="534" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="563" column="1" bodyfile="src/dreammakerfx.h" bodystart="563" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1a3b211bcf0cfc3ae3ae4f943160f369c7" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -80,7 +80,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="534" column="1" bodyfile="src/dreammakerfx.h" bodystart="534" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="563" column="1" bodyfile="src/dreammakerfx.h" bodystart="563" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1a731575557b0c84978bfce8408e1ad88b" prot="private" static="no" mutable="no">
         <type>uint32_t</type>
@@ -93,7 +93,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="536" column="1" bodyfile="src/dreammakerfx.h" bodystart="536" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="565" column="1" bodyfile="src/dreammakerfx.h" bodystart="565" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1a10612ba20b4284e642122e75c6c391d5" prot="private" static="no" mutable="no">
         <type>uint32_t</type>
@@ -106,7 +106,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="538" column="1" bodyfile="src/dreammakerfx.h" bodystart="538" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="567" column="1" bodyfile="src/dreammakerfx.h" bodystart="567" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1a99116eaf4ca79e97e1124241e4810d41" prot="private" static="no" mutable="no">
         <type>uint16_t</type>
@@ -120,7 +120,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="539" column="1" bodyfile="src/dreammakerfx.h" bodystart="539" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="568" column="1" bodyfile="src/dreammakerfx.h" bodystart="568" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1a4188d3db0bb63b28308438f3aa1ea1c9" prot="private" static="no" mutable="no">
         <type>float</type>
@@ -133,7 +133,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="540" column="1" bodyfile="src/dreammakerfx.h" bodystart="540" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="569" column="1" bodyfile="src/dreammakerfx.h" bodystart="569" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1a655343f02a9c408a8192a95fc42dd2ab" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -146,7 +146,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="541" column="1" bodyfile="src/dreammakerfx.h" bodystart="541" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="570" column="1" bodyfile="src/dreammakerfx.h" bodystart="570" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1af12aee328ab0a2f059d2910a4f29095a" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -159,7 +159,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="542" column="1" bodyfile="src/dreammakerfx.h" bodystart="542" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="571" column="1" bodyfile="src/dreammakerfx.h" bodystart="571" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1af3a94f92811f1efd210029cb58cd2e74" prot="private" static="no" mutable="no">
         <type>uint32_t</type>
@@ -172,7 +172,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="543" column="1" bodyfile="src/dreammakerfx.h" bodystart="543" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="572" column="1" bodyfile="src/dreammakerfx.h" bodystart="572" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1aa8b8c59ae90882c0b5c9e1cecf4523a7" prot="private" static="no" mutable="no">
         <type>uint32_t</type>
@@ -185,7 +185,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="544" column="1" bodyfile="src/dreammakerfx.h" bodystart="544" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="573" column="1" bodyfile="src/dreammakerfx.h" bodystart="573" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1a527d9dd581fc9dee1628c5b7404af54f" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -198,7 +198,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="545" column="1" bodyfile="src/dreammakerfx.h" bodystart="545" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="574" column="1" bodyfile="src/dreammakerfx.h" bodystart="574" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1a48e81858a0595d89c82570f496f1b9e2" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -211,7 +211,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="547" column="1" bodyfile="src/dreammakerfx.h" bodystart="547" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="576" column="1" bodyfile="src/dreammakerfx.h" bodystart="576" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1a60a7c145cf9c7ea787dae82e1ff182be" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -224,7 +224,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="547" column="1" bodyfile="src/dreammakerfx.h" bodystart="547" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="576" column="1" bodyfile="src/dreammakerfx.h" bodystart="576" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1a0dc1959d22e23fdf52e21fec70fade0e" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -237,7 +237,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="548" column="1" bodyfile="src/dreammakerfx.h" bodystart="548" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="577" column="1" bodyfile="src/dreammakerfx.h" bodystart="577" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1acf3c36c9c3bb1f0740b5759f0a61fe36" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -250,7 +250,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="548" column="1" bodyfile="src/dreammakerfx.h" bodystart="548" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="577" column="1" bodyfile="src/dreammakerfx.h" bodystart="577" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1ad421de7dde2fb83c8e944cadb6757433" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -263,7 +263,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="549" column="1" bodyfile="src/dreammakerfx.h" bodystart="549" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="578" column="1" bodyfile="src/dreammakerfx.h" bodystart="578" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1a31442f526aa6af72dcf5ed8244b03778" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -276,7 +276,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="549" column="1" bodyfile="src/dreammakerfx.h" bodystart="549" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="578" column="1" bodyfile="src/dreammakerfx.h" bodystart="578" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1ac52003f6322b069a101e796471298e7b" prot="private" static="no" mutable="no">
         <type><ref refid="struct_d_s_p___s_t_a_t_u_s" kindref="compound">DSP_STATUS</ref> *</type>
@@ -289,7 +289,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="551" column="1" bodyfile="src/dreammakerfx.h" bodystart="551" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="580" column="1" bodyfile="src/dreammakerfx.h" bodystart="580" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1a7ff81bd65d953449e2e4753688832754" prot="private" static="no" mutable="no">
         <type>FX_INSTANCE</type>
@@ -302,7 +302,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="556" column="1" bodyfile="src/dreammakerfx.h" bodystart="556" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="585" column="1" bodyfile="src/dreammakerfx.h" bodystart="585" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1af7811fd3dfc4243748fb0bdcfd8bfc43" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -315,7 +315,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="557" column="1" bodyfile="src/dreammakerfx.h" bodystart="557" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="586" column="1" bodyfile="src/dreammakerfx.h" bodystart="586" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1a331204aa1cf1f856481032ef10c91ed1" prot="private" static="no" mutable="no">
         <type>AUDIO_ROUTE</type>
@@ -328,7 +328,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="560" column="1" bodyfile="src/dreammakerfx.h" bodystart="560" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="589" column="1" bodyfile="src/dreammakerfx.h" bodystart="589" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1aad5fe4f8432a082ed6cc6726de0b558a" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -341,7 +341,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="561" column="1" bodyfile="src/dreammakerfx.h" bodystart="561" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="590" column="1" bodyfile="src/dreammakerfx.h" bodystart="590" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1a3ef49c357d73a323eaa693274e409597" prot="private" static="no" mutable="no">
         <type>CTRL_ROUTE</type>
@@ -354,7 +354,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="564" column="1" bodyfile="src/dreammakerfx.h" bodystart="564" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="593" column="1" bodyfile="src/dreammakerfx.h" bodystart="593" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1a54fe2ce8124365c4c404fdf60cfd2f9f" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -367,7 +367,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="565" column="1" bodyfile="src/dreammakerfx.h" bodystart="565" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="594" column="1" bodyfile="src/dreammakerfx.h" bodystart="594" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1a524e9dbf27519d2045434486f291f805" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -380,7 +380,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="568" column="1" bodyfile="src/dreammakerfx.h" bodystart="568" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="597" column="1" bodyfile="src/dreammakerfx.h" bodystart="597" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1a28c96755b0ba4d5014b0072ee6fb468f" prot="private" static="no" mutable="no">
         <type>fx_audio_node</type>
@@ -393,7 +393,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="571" column="1" bodyfile="src/dreammakerfx.h" bodystart="571" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="600" column="1" bodyfile="src/dreammakerfx.h" bodystart="600" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1ad21f5d8d64cd28d5081d7f34235633c9" prot="private" static="no" mutable="no">
         <type>fx_audio_node</type>
@@ -406,7 +406,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="572" column="1" bodyfile="src/dreammakerfx.h" bodystart="572" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="601" column="1" bodyfile="src/dreammakerfx.h" bodystart="601" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1aa43e51926becacededefa1c15660ac01" prot="private" static="no" mutable="no">
         <type>fx_audio_node</type>
@@ -419,7 +419,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="573" column="1" bodyfile="src/dreammakerfx.h" bodystart="573" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="602" column="1" bodyfile="src/dreammakerfx.h" bodystart="602" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1a9a3c143a73ae532ad32b707b09fd49f9" prot="private" static="no" mutable="no">
         <type>fx_audio_node</type>
@@ -432,7 +432,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="574" column="1" bodyfile="src/dreammakerfx.h" bodystart="574" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="603" column="1" bodyfile="src/dreammakerfx.h" bodystart="603" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1a4ca893876a08837abeae3fed5e1d1592" prot="private" static="no" mutable="no">
         <type>fx_audio_node</type>
@@ -445,7 +445,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="575" column="1" bodyfile="src/dreammakerfx.h" bodystart="575" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="604" column="1" bodyfile="src/dreammakerfx.h" bodystart="604" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1a43a4b20c0602ffea6bd833c46a10f43a" prot="private" static="no" mutable="no">
         <type>fx_audio_node</type>
@@ -458,7 +458,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="576" column="1" bodyfile="src/dreammakerfx.h" bodystart="576" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="605" column="1" bodyfile="src/dreammakerfx.h" bodystart="605" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1ae68914b04435fc508ce5b38a87ad078d" prot="private" static="no" mutable="no">
         <type>fx_control_node</type>
@@ -471,7 +471,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="579" column="1" bodyfile="src/dreammakerfx.h" bodystart="579" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="608" column="1" bodyfile="src/dreammakerfx.h" bodystart="608" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1a33d37b1541dbaa5a52b9ae8675cfefdc" prot="private" static="no" mutable="no">
         <type>fx_control_node</type>
@@ -484,7 +484,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="580" column="1" bodyfile="src/dreammakerfx.h" bodystart="580" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="609" column="1" bodyfile="src/dreammakerfx.h" bodystart="609" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1a225d7dd7f54c88e15d7cffae29885ded" prot="private" static="no" mutable="no">
         <type>fx_control_node</type>
@@ -497,7 +497,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="581" column="1" bodyfile="src/dreammakerfx.h" bodystart="581" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="610" column="1" bodyfile="src/dreammakerfx.h" bodystart="610" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-attrib">
@@ -512,7 +512,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="616" column="1" bodyfile="src/dreammakerfx.h" bodystart="616" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="645" column="1" bodyfile="src/dreammakerfx.h" bodystart="645" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1a6c540a4cb9f53b0607d01a6c7cabab2f" prot="protected" static="no" mutable="no">
         <type>fx_control_node *</type>
@@ -525,10 +525,311 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="617" column="1" bodyfile="src/dreammakerfx.h" bodystart="617" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="646" column="1" bodyfile="src/dreammakerfx.h" bodystart="646" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classfx__pedal_1ac0676ce118a518f32523c412a7fb75fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class fx_effect</definition>
+        <argsstring></argsstring>
+        <name>fx_effect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="656" column="1" bodyfile="src/dreammakerfx.h" bodystart="656" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classfx__pedal_1a45be1beb189aee108b41cea5cc11e9c9" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool fx_pedal::bypass_control_enabled</definition>
+        <argsstring></argsstring>
+        <name>bypass_control_enabled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="658" column="1" bodyfile="src/dreammakerfx.h" bodystart="658" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a88e8b17d0a405956913b862d6bd5cafd" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool fx_pedal::bypassed</definition>
+        <argsstring></argsstring>
+        <name>bypassed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="659" column="1" bodyfile="src/dreammakerfx.h" bodystart="659" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a025dc2e4175abbc59e4d3a198707d317" prot="public" static="no" mutable="no">
+        <type>FOOTSWITCH</type>
+        <definition>FOOTSWITCH fx_pedal::bypass_footswitch</definition>
+        <argsstring></argsstring>
+        <name>bypass_footswitch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="660" column="1" bodyfile="src/dreammakerfx.h" bodystart="660" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a79b6745ac397bf42598246636c58bd74" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool fx_pedal::tap_control_enabled</definition>
+        <argsstring></argsstring>
+        <name>tap_control_enabled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="662" column="1" bodyfile="src/dreammakerfx.h" bodystart="662" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1af62e3eb61b4adc56ec7a3bbcb76d7e99" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool fx_pedal::tap_blink_only_enabled</definition>
+        <argsstring></argsstring>
+        <name>tap_blink_only_enabled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="663" column="1" bodyfile="src/dreammakerfx.h" bodystart="663" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1adbb98a754feddab9f7c9c3e23693d24a" prot="public" static="no" mutable="no">
+        <type>FOOTSWITCH</type>
+        <definition>FOOTSWITCH fx_pedal::tap_footswitch</definition>
+        <argsstring></argsstring>
+        <name>tap_footswitch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="664" column="1" bodyfile="src/dreammakerfx.h" bodystart="664" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a7a3c0f416f4cbfc6b3b4f40d3d58f786" prot="public" static="no" mutable="no">
+        <type><ref refid="classfx__pot" kindref="compound">fx_pot</ref></type>
+        <definition>fx_pot fx_pedal::pot_right</definition>
+        <argsstring></argsstring>
+        <name>pot_right</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="669" column="1" bodyfile="src/dreammakerfx.h" bodystart="669" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a0e74e3a1d4fbea11142dfc5a7bf60c51" prot="public" static="no" mutable="no">
+        <type><ref refid="classfx__pot" kindref="compound">fx_pot</ref></type>
+        <definition>fx_pot fx_pedal::pot_center</definition>
+        <argsstring></argsstring>
+        <name>pot_center</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="670" column="1" bodyfile="src/dreammakerfx.h" bodystart="670" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a1e13e98d019bb531b3a8b1009206f010" prot="public" static="no" mutable="no">
+        <type><ref refid="classfx__pot" kindref="compound">fx_pot</ref></type>
+        <definition>fx_pot fx_pedal::pot_left</definition>
+        <argsstring></argsstring>
+        <name>pot_left</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="671" column="1" bodyfile="src/dreammakerfx.h" bodystart="671" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1aec999dc0f0c3889ebbc66af92d5b169e" prot="public" static="no" mutable="no">
+        <type><ref refid="classfx__led" kindref="compound">fx_led</ref></type>
+        <definition>fx_led fx_pedal::left_led</definition>
+        <argsstring></argsstring>
+        <name>left_led</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="673" column="1" bodyfile="src/dreammakerfx.h" bodystart="673" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1ad1f16db9d634518de0a1df6299631ed8" prot="public" static="no" mutable="no">
+        <type><ref refid="classfx__led" kindref="compound">fx_led</ref></type>
+        <definition>fx_led fx_pedal::right_led</definition>
+        <argsstring></argsstring>
+        <name>right_led</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="674" column="1" bodyfile="src/dreammakerfx.h" bodystart="674" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1ab59146cbb9f7326f565ee1a21918c938" prot="public" static="no" mutable="no">
+        <type><ref refid="classfx__pot" kindref="compound">fx_pot</ref></type>
+        <definition>fx_pot fx_pedal::pot_top_left</definition>
+        <argsstring></argsstring>
+        <name>pot_top_left</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="677" column="1" bodyfile="src/dreammakerfx.h" bodystart="677" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a9842a8a92bd190615b152a13e29383fc" prot="public" static="no" mutable="no">
+        <type><ref refid="classfx__pot" kindref="compound">fx_pot</ref></type>
+        <definition>fx_pot fx_pedal::pot_top_right</definition>
+        <argsstring></argsstring>
+        <name>pot_top_right</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="678" column="1" bodyfile="src/dreammakerfx.h" bodystart="678" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a5cc73944c0d796a36f4c672d3918c1ea" prot="public" static="no" mutable="no">
+        <type><ref refid="classfx__pot" kindref="compound">fx_pot</ref></type>
+        <definition>fx_pot fx_pedal::pot_bot_left</definition>
+        <argsstring></argsstring>
+        <name>pot_bot_left</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="679" column="1" bodyfile="src/dreammakerfx.h" bodystart="679" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1ade8c0f3e53f829c6b9887b2e784d1e5d" prot="public" static="no" mutable="no">
+        <type><ref refid="classfx__pot" kindref="compound">fx_pot</ref></type>
+        <definition>fx_pot fx_pedal::pot_bot_center</definition>
+        <argsstring></argsstring>
+        <name>pot_bot_center</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="680" column="1" bodyfile="src/dreammakerfx.h" bodystart="680" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1af2e1da6045cb3a91b28aff901eb90498" prot="public" static="no" mutable="no">
+        <type><ref refid="classfx__pot" kindref="compound">fx_pot</ref></type>
+        <definition>fx_pot fx_pedal::pot_bot_right</definition>
+        <argsstring></argsstring>
+        <name>pot_bot_right</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="681" column="1" bodyfile="src/dreammakerfx.h" bodystart="681" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1ab05386d2b8aaf606d08c332cfb8490f5" prot="public" static="no" mutable="no">
+        <type><ref refid="classfx__pot" kindref="compound">fx_pot</ref></type>
+        <definition>fx_pot fx_pedal::exp_pedal</definition>
+        <argsstring></argsstring>
+        <name>exp_pedal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="682" column="1" bodyfile="src/dreammakerfx.h" bodystart="682" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a77e5558b9ad4b20f9bddc9fee4406c1f" prot="public" static="no" mutable="no">
+        <type><ref refid="classfx__switch" kindref="compound">fx_switch</ref></type>
+        <definition>fx_switch fx_pedal::toggle_left</definition>
+        <argsstring></argsstring>
+        <name>toggle_left</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="689" column="1" bodyfile="src/dreammakerfx.h" bodystart="689" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a0e1ac6a7b3fd3fe5af33a5aab49eb654" prot="public" static="no" mutable="no">
+        <type><ref refid="classfx__switch" kindref="compound">fx_switch</ref></type>
+        <definition>fx_switch fx_pedal::toggle_right</definition>
+        <argsstring></argsstring>
+        <name>toggle_right</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="690" column="1" bodyfile="src/dreammakerfx.h" bodystart="690" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a097956e97d36fe066c3ccd752c3088fc" prot="public" static="no" mutable="no">
+        <type><ref refid="classfx__led" kindref="compound">fx_led</ref></type>
+        <definition>fx_led fx_pedal::led_left</definition>
+        <argsstring></argsstring>
+        <name>led_left</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="692" column="1" bodyfile="src/dreammakerfx.h" bodystart="692" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1adb5b583dd7f1a37ef9c9bfce16fe0a90" prot="public" static="no" mutable="no">
+        <type><ref refid="classfx__led" kindref="compound">fx_led</ref></type>
+        <definition>fx_led fx_pedal::led_center</definition>
+        <argsstring></argsstring>
+        <name>led_center</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="693" column="1" bodyfile="src/dreammakerfx.h" bodystart="693" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1ac20846e9d64a962a3782dc4e5676d323" prot="public" static="no" mutable="no">
+        <type><ref refid="classfx__led" kindref="compound">fx_led</ref></type>
+        <definition>fx_led fx_pedal::led_right</definition>
+        <argsstring></argsstring>
+        <name>led_right</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="694" column="1" bodyfile="src/dreammakerfx.h" bodystart="694" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1ac663c7f4236dca2b131e3d42b37a1c98" prot="public" static="no" mutable="no">
         <type>fx_audio_node *</type>
         <definition>fx_audio_node* fx_pedal::instr_in</definition>
@@ -540,7 +841,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="669" column="1" bodyfile="src/dreammakerfx.h" bodystart="669" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="698" column="1" bodyfile="src/dreammakerfx.h" bodystart="698" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1af9224fc19efa6115d4fadf8c74b894bf" prot="public" static="no" mutable="no">
         <type>fx_audio_node *</type>
@@ -553,7 +854,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="670" column="1" bodyfile="src/dreammakerfx.h" bodystart="670" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="699" column="1" bodyfile="src/dreammakerfx.h" bodystart="699" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1a202ea144ad8fa3d7620a27b7916e1e36" prot="public" static="no" mutable="no">
         <type>fx_audio_node *</type>
@@ -566,7 +867,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="671" column="1" bodyfile="src/dreammakerfx.h" bodystart="671" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="700" column="1" bodyfile="src/dreammakerfx.h" bodystart="700" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1af2c3f21279f9ed7ba8ce5a9bf42b50f8" prot="public" static="no" mutable="no">
         <type>fx_audio_node *</type>
@@ -579,7 +880,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="672" column="1" bodyfile="src/dreammakerfx.h" bodystart="672" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="701" column="1" bodyfile="src/dreammakerfx.h" bodystart="701" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1a2197f98cc5292da8b7eb60dca3dcecb1" prot="public" static="no" mutable="no">
         <type>fx_audio_node *</type>
@@ -592,7 +893,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="673" column="1" bodyfile="src/dreammakerfx.h" bodystart="673" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="702" column="1" bodyfile="src/dreammakerfx.h" bodystart="702" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1a7f9bf7fbdce7cd0878137576ea72a8d2" prot="public" static="no" mutable="no">
         <type>fx_audio_node *</type>
@@ -605,7 +906,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="674" column="1" bodyfile="src/dreammakerfx.h" bodystart="674" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="703" column="1" bodyfile="src/dreammakerfx.h" bodystart="703" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1a1f66e0252e5493bbe1dae78924385cf9" prot="public" static="no" mutable="no">
         <type>fx_audio_node *</type>
@@ -618,7 +919,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="675" column="1" bodyfile="src/dreammakerfx.h" bodystart="675" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="704" column="1" bodyfile="src/dreammakerfx.h" bodystart="704" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1a41247c0ad00c30ae6c889c87aeff1c7e" prot="public" static="no" mutable="no">
         <type>fx_audio_node *</type>
@@ -631,7 +932,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="676" column="1" bodyfile="src/dreammakerfx.h" bodystart="676" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="705" column="1" bodyfile="src/dreammakerfx.h" bodystart="705" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1a7d2e1a8979062862355f4f2699937652" prot="public" static="no" mutable="no">
         <type>fx_control_node *</type>
@@ -644,7 +945,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="678" column="1" bodyfile="src/dreammakerfx.h" bodystart="678" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="707" column="1" bodyfile="src/dreammakerfx.h" bodystart="707" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1a7ec1d597a0beb9e0205f860b18c5e1ac" prot="public" static="no" mutable="no">
         <type>fx_control_node *</type>
@@ -657,7 +958,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="679" column="1" bodyfile="src/dreammakerfx.h" bodystart="679" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="708" column="1" bodyfile="src/dreammakerfx.h" bodystart="708" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfx__pedal_1ae4ae206679e31a8e26c1fc1693f79691" prot="public" static="no" mutable="no">
         <type>fx_control_node *</type>
@@ -670,7 +971,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="680" column="1" bodyfile="src/dreammakerfx.h" bodystart="680" bodyend="-1"/>
+        <location file="src/dreammakerfx.h" line="709" column="1" bodyfile="src/dreammakerfx.h" bodystart="709" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -689,7 +990,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="553" column="1"/>
+        <location file="src/dreammakerfx.h" line="582" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classfx__pedal_1a0719213cd261cb235bb6804d2bc3be7c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -755,7 +1056,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="584" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="479" bodyend="490"/>
+        <location file="src/dreammakerfx.h" line="613" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="479" bodyend="490"/>
       </memberdef>
       <memberdef kind="function" id="classfx__pedal_1a32006db11e4faa5908ef7973ad7b66c2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -841,7 +1142,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="585" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="502" bodyend="525"/>
+        <location file="src/dreammakerfx.h" line="614" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="502" bodyend="525"/>
       </memberdef>
       <memberdef kind="function" id="classfx__pedal_1a7a8b6377141f3eff436a2d24c15bf7af" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -857,7 +1158,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="596" column="1"/>
+        <location file="src/dreammakerfx.h" line="625" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classfx__pedal_1a40f659bee3104ae06792b29b95f8caba" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -873,7 +1174,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="597" column="1"/>
+        <location file="src/dreammakerfx.h" line="626" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classfx__pedal_1a09dadc9cfe3b0afa152644c2598134d0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -890,7 +1191,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="598" column="1"/>
+        <location file="src/dreammakerfx.h" line="627" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classfx__pedal_1a2f336e539e9ab173e3ba97afebcfcab3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -906,7 +1207,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="599" column="1"/>
+        <location file="src/dreammakerfx.h" line="628" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classfx__pedal_1a1efdd562365d660149fe1a316b9a63dd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -923,7 +1224,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="600" column="1"/>
+        <location file="src/dreammakerfx.h" line="629" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classfx__pedal_1a9bb11697b3853d2ad34726153585597f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -939,7 +1240,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="601" column="1"/>
+        <location file="src/dreammakerfx.h" line="630" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classfx__pedal_1a458edf9bda4301c29119fde798c921f6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -955,7 +1256,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="602" column="1"/>
+        <location file="src/dreammakerfx.h" line="631" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classfx__pedal_1a62d6096e84d1b50881766e93655fb470" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -971,7 +1272,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="603" column="1"/>
+        <location file="src/dreammakerfx.h" line="632" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classfx__pedal_1a92cc196fb9d64fa209bc7b5fbbffdf99" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -992,7 +1293,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="606" column="1"/>
+        <location file="src/dreammakerfx.h" line="635" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classfx__pedal_1a9d2ad0b3b22aa1f4e9f5fc5244414710" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1013,7 +1314,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="607" column="1"/>
+        <location file="src/dreammakerfx.h" line="636" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classfx__pedal_1a97e3693a5dfd198ae3f484fc90960c3a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>const char *</type>
@@ -1026,10 +1327,23 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="609" column="1" bodyfile="src/dreammakerfx.h" bodystart="609" bodyend="611"/>
+        <location file="src/dreammakerfx.h" line="638" column="1" bodyfile="src/dreammakerfx.h" bodystart="638" bodyend="640"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
+      <memberdef kind="function" id="classfx__pedal_1a21d0be4d4111ede2f20e845abb55a4ce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>fx_pedal::fx_pedal</definition>
+        <argsstring>()</argsstring>
+        <name>fx_pedal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="712" column="1" bodyfile="src/dreammakerfx.h" bodystart="712" bodyend="838"/>
+      </memberdef>
       <memberdef kind="function" id="classfx__pedal_1aa7ec165e5660a0d484add96ec19cfb8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void fx_pedal::init</definition>
@@ -1045,7 +1359,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="813" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="18" bodyend="20"/>
+        <location file="src/dreammakerfx.h" line="842" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="18" bodyend="20"/>
       </memberdef>
       <memberdef kind="function" id="classfx__pedal_1a9575fbfd47c4fcfed424c4a82ce84f1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1073,7 +1387,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="814" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="28" bodyend="30"/>
+        <location file="src/dreammakerfx.h" line="843" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="28" bodyend="30"/>
       </memberdef>
       <memberdef kind="function" id="classfx__pedal_1a579a8e9a697226ed755be972aa047887" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1114,7 +1428,7 @@
         <inbodydescription>
 <para>Next check to see if we need to do a firmware update</para>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="815" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="57" bodyend="184"/>
+        <location file="src/dreammakerfx.h" line="844" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="57" bodyend="184"/>
       </memberdef>
       <memberdef kind="function" id="classfx__pedal_1a4cfa12f479e0ab02f6e7be2e848cc2d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1131,7 +1445,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="818" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="34" bodyend="40"/>
+        <location file="src/dreammakerfx.h" line="847" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="34" bodyend="40"/>
       </memberdef>
       <memberdef kind="function" id="classfx__pedal_1ab7344a94319c473e6fe825bfd1ec6563" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1152,7 +1466,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="819" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="43" bodyend="49"/>
+        <location file="src/dreammakerfx.h" line="848" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="43" bodyend="49"/>
       </memberdef>
       <memberdef kind="function" id="classfx__pedal_1a63cae666ada50e751c504f440d9c0d7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1172,7 +1486,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="822" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1015" bodyend="1081"/>
+        <location file="src/dreammakerfx.h" line="851" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1015" bodyend="1081"/>
       </memberdef>
       <memberdef kind="function" id="classfx__pedal_1a9cf36229c478131fa67a57f34fd907dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1189,7 +1503,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="823" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="919" bodyend="996"/>
+        <location file="src/dreammakerfx.h" line="852" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="919" bodyend="996"/>
       </memberdef>
       <memberdef kind="function" id="classfx__pedal_1a97423b3ef60a4a8c8986db1cb17b6be6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1233,7 +1547,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="828" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="536" bodyend="672"/>
+        <location file="src/dreammakerfx.h" line="857" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="536" bodyend="672"/>
       </memberdef>
       <memberdef kind="function" id="classfx__pedal_1a0d3262d0d26edcfdc559193091991f32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1275,7 +1589,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="829" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="683" bodyend="685"/>
+        <location file="src/dreammakerfx.h" line="858" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="683" bodyend="685"/>
       </memberdef>
       <memberdef kind="function" id="classfx__pedal_1a23e3239c2fe59fe105d7edeaa1141bce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1341,7 +1655,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="830" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="697" bodyend="822"/>
+        <location file="src/dreammakerfx.h" line="859" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="697" bodyend="822"/>
       </memberdef>
       <memberdef kind="function" id="classfx__pedal_1a20c19252b60841577d921c82da7a5526" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1370,7 +1684,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="833" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="833" bodyend="837"/>
+        <location file="src/dreammakerfx.h" line="862" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="833" bodyend="837"/>
       </memberdef>
       <memberdef kind="function" id="classfx__pedal_1a57af6a51bd289393d1fcc3c20dfa80af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1410,7 +1724,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="834" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="845" bodyend="857"/>
+        <location file="src/dreammakerfx.h" line="863" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="845" bodyend="857"/>
       </memberdef>
       <memberdef kind="function" id="classfx__pedal_1a957ee7e9cc84482790d7b2dd360457de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1426,7 +1740,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="837" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="998" bodyend="1001"/>
+        <location file="src/dreammakerfx.h" line="866" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="998" bodyend="1001"/>
       </memberdef>
       <memberdef kind="function" id="classfx__pedal_1a22d9d469c49a435f03e3bcc349d570a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1442,7 +1756,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="838" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1004" bodyend="1007"/>
+        <location file="src/dreammakerfx.h" line="867" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1004" bodyend="1007"/>
       </memberdef>
       <memberdef kind="function" id="classfx__pedal_1ab4e00784f9ba6b5a720d19bafa5c5988" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1462,7 +1776,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="844" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1217" bodyend="1224"/>
+        <location file="src/dreammakerfx.h" line="873" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1217" bodyend="1224"/>
       </memberdef>
       <memberdef kind="function" id="classfx__pedal_1a0acead76c8c144c406d95029804d5164" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -1482,7 +1796,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="845" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1232" bodyend="1238"/>
+        <location file="src/dreammakerfx.h" line="874" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1232" bodyend="1238"/>
       </memberdef>
       <memberdef kind="function" id="classfx__pedal_1a2be1ee8787cf3c949429eb6295432225" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -1502,7 +1816,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="846" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1245" bodyend="1251"/>
+        <location file="src/dreammakerfx.h" line="875" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1245" bodyend="1251"/>
       </memberdef>
       <memberdef kind="function" id="classfx__pedal_1a9afe97a2261468b36a870bdd14c4af28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1531,7 +1845,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="847" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1262" bodyend="1271"/>
+        <location file="src/dreammakerfx.h" line="876" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1262" bodyend="1271"/>
       </memberdef>
       <memberdef kind="function" id="classfx__pedal_1aa7da84fc35b770df37ddea35fcd1fa8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1572,7 +1886,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="848" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1282" bodyend="1293"/>
+        <location file="src/dreammakerfx.h" line="877" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1282" bodyend="1293"/>
       </memberdef>
       <memberdef kind="function" id="classfx__pedal_1ab5f94f1197ebcd5be2200586bf730154" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1601,7 +1915,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="849" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1304" bodyend="1313"/>
+        <location file="src/dreammakerfx.h" line="878" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1304" bodyend="1313"/>
       </memberdef>
       <memberdef kind="function" id="classfx__pedal_1af064f5cfc0fc2f5a439ec50b808a6e92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1642,7 +1956,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="850" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1324" bodyend="1334"/>
+        <location file="src/dreammakerfx.h" line="879" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1324" bodyend="1334"/>
       </memberdef>
       <memberdef kind="function" id="classfx__pedal_1a0b37d83e55eb57f01a21d1e82a65a962" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1685,7 +1999,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="853" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1349" bodyend="1374"/>
+        <location file="src/dreammakerfx.h" line="882" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1349" bodyend="1374"/>
       </memberdef>
       <memberdef kind="function" id="classfx__pedal_1a6846245fdae141df03fc96fd49e033c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1728,7 +2042,55 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="854" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1387" bodyend="1407"/>
+        <location file="src/dreammakerfx.h" line="883" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1387" bodyend="1407"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1a4dd09decd98b6d2cbace1f907b16feff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_pedal::register_tap</definition>
+        <argsstring>(void)</argsstring>
+        <name>register_tap</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="887" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1a0bf2fe061eec8dc506aaabd9b73563ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_pedal::button_press_check</definition>
+        <argsstring>(void)</argsstring>
+        <name>button_press_check</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="888" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1aafeeae68db6899dd7f671b9be65d89a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_pedal::service_button_events</definition>
+        <argsstring>(void)</argsstring>
+        <name>service_button_events</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="889" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classfx__pedal_1aa591b730a9748432e6106275289bd525" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1745,7 +2107,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="864" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1443" bodyend="1469"/>
+        <location file="src/dreammakerfx.h" line="893" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1443" bodyend="1469"/>
       </memberdef>
       <memberdef kind="function" id="classfx__pedal_1aafc924cc4d965716545368e4dfcf85c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1762,7 +2124,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="865" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1474" bodyend="1520"/>
+        <location file="src/dreammakerfx.h" line="894" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1474" bodyend="1520"/>
       </memberdef>
       <memberdef kind="function" id="classfx__pedal_1a9383c75a2dd8557f0bd4927846113836" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1779,7 +2141,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="866" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1525" bodyend="1677"/>
+        <location file="src/dreammakerfx.h" line="895" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1525" bodyend="1677"/>
       </memberdef>
       <memberdef kind="function" id="classfx__pedal_1ac28cbf7f885ce543abdf7484ef48de91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1796,7 +2158,56 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dreammakerfx.h" line="867" column="1"/>
+        <location file="src/dreammakerfx.h" line="896" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1a3c550ad0d1bd29b4a954123b6be38a1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_pedal::spi_transmit_param</definition>
+        <argsstring>(EFFECT_TYPE instance_type, uint32_t instance_id, PARAM_TYPES param_type, uint8_t param_id, void *value)</argsstring>
+        <name>spi_transmit_param</name>
+        <param>
+          <type>EFFECT_TYPE</type>
+          <declname>instance_type</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>instance_id</declname>
+        </param>
+        <param>
+          <type>PARAM_TYPES</type>
+          <declname>param_type</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>param_id</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="900" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1ac3f27eeae45a17f3ce467cc290bf1f24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_pedal::parameter_service</definition>
+        <argsstring>(void)</argsstring>
+        <name>parameter_service</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="904" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -1804,7 +2215,47 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/dreammakerfx.h" line="526" column="1" bodyfile="src/dreammakerfx.h" bodystart="526" bodyend="878"/>
+    <collaborationgraph>
+      <node id="165">
+        <label>fx_switch</label>
+        <link refid="classfx__switch"/>
+      </node>
+      <node id="166">
+        <label>fx_led</label>
+        <link refid="classfx__led"/>
+      </node>
+      <node id="164">
+        <label>fx_pot</label>
+        <link refid="classfx__pot"/>
+      </node>
+      <node id="163">
+        <label>fx_pedal</label>
+        <link refid="classfx__pedal"/>
+        <childnode refid="164" relation="usage">
+          <edgelabel>pot_bot_right</edgelabel>
+          <edgelabel>exp_pedal</edgelabel>
+          <edgelabel>pot_top_left</edgelabel>
+          <edgelabel>pot_left</edgelabel>
+          <edgelabel>pot_top_right</edgelabel>
+          <edgelabel>pot_right</edgelabel>
+          <edgelabel>pot_bot_center</edgelabel>
+          <edgelabel>pot_bot_left</edgelabel>
+          <edgelabel>pot_center</edgelabel>
+        </childnode>
+        <childnode refid="165" relation="usage">
+          <edgelabel>toggle_left</edgelabel>
+          <edgelabel>toggle_right</edgelabel>
+        </childnode>
+        <childnode refid="166" relation="usage">
+          <edgelabel>led_right</edgelabel>
+          <edgelabel>left_led</edgelabel>
+          <edgelabel>led_left</edgelabel>
+          <edgelabel>right_led</edgelabel>
+          <edgelabel>led_center</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/dreammakerfx.h" line="555" column="1" bodyfile="src/dreammakerfx.h" bodystart="555" bodyend="907"/>
     <listofallmembers>
       <member refid="classfx__pedal_1a0719213cd261cb235bb6804d2bc3be7c" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>add_audio_route_to_stack</name></member>
       <member refid="classfx__pedal_1a20c19252b60841577d921c82da7a5526" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>add_bypass_button</name></member>
@@ -1815,21 +2266,28 @@
       <member refid="classfx__pedal_1a7f9bf7fbdce7cd0878137576ea72a8d2" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>amp_out_r</name></member>
       <member refid="classfx__pedal_1a09870edaa6462260acd376f08a87f142" prot="protected" virt="non-virtual"><scope>fx_pedal</scope><name>audio_node_stack</name></member>
       <member refid="classfx__pedal_1a331204aa1cf1f856481032ef10c91ed1" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>audio_routing_stack</name></member>
+      <member refid="classfx__pedal_1a0bf2fe061eec8dc506aaabd9b73563ff" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>button_press_check</name></member>
       <member refid="classfx__pedal_1a0b37d83e55eb57f01a21d1e82a65a962" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>button_pressed</name></member>
       <member refid="classfx__pedal_1a6846245fdae141df03fc96fd49e033c9" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>button_released</name></member>
+      <member refid="classfx__pedal_1a45be1beb189aee108b41cea5cc11e9c9" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>bypass_control_enabled</name></member>
+      <member refid="classfx__pedal_1a025dc2e4175abbc59e4d3a198707d317" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>bypass_footswitch</name></member>
       <member refid="classfx__pedal_1a957ee7e9cc84482790d7b2dd360457de" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>bypass_fx</name></member>
+      <member refid="classfx__pedal_1a88e8b17d0a405956913b862d6bd5cafd" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>bypassed</name></member>
       <member refid="classfx__pedal_1a6c540a4cb9f53b0607d01a6c7cabab2f" prot="protected" virt="non-virtual"><scope>fx_pedal</scope><name>control_node_stack</name></member>
       <member refid="classfx__pedal_1a3ef49c357d73a323eaa693274e409597" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>control_routing_stack</name></member>
       <member refid="classfx__pedal_1a746fe1486b557f8037bd48c853185093" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>debug_dsp_telemetry</name></member>
       <member refid="classfx__pedal_1a2b6787f7565fee47764e5601d1c34e88" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>debug_mode</name></member>
       <member refid="classfx__pedal_1a3b211bcf0cfc3ae3ae4f943160f369c7" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>debug_no_reset</name></member>
       <member refid="classfx__pedal_1a22d9d469c49a435f03e3bcc349d570a7" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>enable_fx</name></member>
+      <member refid="classfx__pedal_1ab05386d2b8aaf606d08c332cfb8490f5" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>exp_pedal</name></member>
       <member refid="classfx__pedal_1ad421de7dde2fb83c8e944cadb6757433" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>footswitch_left_last_state</name></member>
       <member refid="classfx__pedal_1a48e81858a0595d89c82570f496f1b9e2" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>footswitch_left_pressed</name></member>
       <member refid="classfx__pedal_1a0dc1959d22e23fdf52e21fec70fade0e" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>footswitch_left_released</name></member>
       <member refid="classfx__pedal_1a31442f526aa6af72dcf5ed8244b03778" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>footswitch_right_last_state</name></member>
       <member refid="classfx__pedal_1a60a7c145cf9c7ea787dae82e1ff182be" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>footswitch_right_pressed</name></member>
       <member refid="classfx__pedal_1acf3c36c9c3bb1f0740b5759f0a61fe36" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>footswitch_right_released</name></member>
+      <member refid="classfx__pedal_1ac0676ce118a518f32523c412a7fb75fe" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>fx_effect</name></member>
+      <member refid="classfx__pedal_1a21d0be4d4111ede2f20e845abb55a4ce" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>fx_pedal</name></member>
       <member refid="classfx__pedal_1a92cc196fb9d64fa209bc7b5fbbffdf99" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>get_audio_node_index</name></member>
       <member refid="classfx__pedal_1a9d2ad0b3b22aa1f4e9f5fc5244414710" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>get_control_node_index</name></member>
       <member refid="classfx__pedal_1aaf8e52834338fcd104d327787f400334" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>get_effect_type</name></member>
@@ -1847,21 +2305,37 @@
       <member refid="classfx__pedal_1af9224fc19efa6115d4fadf8c74b894bf" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>instr_in_l</name></member>
       <member refid="classfx__pedal_1a202ea144ad8fa3d7620a27b7916e1e36" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>instr_in_r</name></member>
       <member refid="classfx__pedal_1a731575557b0c84978bfce8408e1ad88b" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>last_service_ts</name></member>
+      <member refid="classfx__pedal_1adb5b583dd7f1a37ef9c9bfce16fe0a90" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>led_center</name></member>
+      <member refid="classfx__pedal_1a097956e97d36fe066c3ccd752c3088fc" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>led_left</name></member>
+      <member refid="classfx__pedal_1ac20846e9d64a962a3782dc4e5676d323" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>led_right</name></member>
+      <member refid="classfx__pedal_1aec999dc0f0c3889ebbc66af92d5b169e" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>left_led</name></member>
       <member refid="classfx__pedal_1a1f66e0252e5493bbe1dae78924385cf9" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>mic_in_l</name></member>
       <member refid="classfx__pedal_1a41247c0ad00c30ae6c889c87aeff1c7e" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>mic_in_r</name></member>
       <member refid="classfx__pedal_1ae4ae206679e31a8e26c1fc1693f79691" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>new_note</name></member>
       <member refid="classfx__pedal_1ab4e00784f9ba6b5a720d19bafa5c5988" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>new_tap_interval</name></member>
       <member refid="classfx__pedal_1a7ec1d597a0beb9e0205f860b18c5e1ac" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>note_duration</name></member>
       <member refid="classfx__pedal_1a7d2e1a8979062862355f4f2699937652" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>note_frequency</name></member>
+      <member refid="classfx__pedal_1ac3f27eeae45a17f3ce467cc290bf1f24" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>parameter_service</name></member>
+      <member refid="classfx__pedal_1ade8c0f3e53f829c6b9887b2e784d1e5d" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>pot_bot_center</name></member>
+      <member refid="classfx__pedal_1a5cc73944c0d796a36f4c672d3918c1ea" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>pot_bot_left</name></member>
+      <member refid="classfx__pedal_1af2e1da6045cb3a91b28aff901eb90498" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>pot_bot_right</name></member>
+      <member refid="classfx__pedal_1a0e74e3a1d4fbea11142dfc5a7bf60c51" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>pot_center</name></member>
+      <member refid="classfx__pedal_1a1e13e98d019bb531b3a8b1009206f010" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>pot_left</name></member>
+      <member refid="classfx__pedal_1a7a3c0f416f4cbfc6b3b4f40d3d58f786" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>pot_right</name></member>
+      <member refid="classfx__pedal_1ab59146cbb9f7326f565ee1a21918c938" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>pot_top_left</name></member>
+      <member refid="classfx__pedal_1a9842a8a92bd190615b152a13e29383fc" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>pot_top_right</name></member>
       <member refid="classfx__pedal_1aa591b730a9748432e6106275289bd525" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>print_instance_stack</name></member>
       <member refid="classfx__pedal_1a9383c75a2dd8557f0bd4927846113836" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>print_param_tables</name></member>
       <member refid="classfx__pedal_1ac28cbf7f885ce543abdf7484ef48de91" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>print_processor_load</name></member>
       <member refid="classfx__pedal_1aafc924cc4d965716545368e4dfcf85c4" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>print_routing_table</name></member>
+      <member refid="classfx__pedal_1a4dd09decd98b6d2cbace1f907b16feff" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>register_tap</name></member>
+      <member refid="classfx__pedal_1ad1f16db9d634518de0a1df6299631ed8" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>right_led</name></member>
       <member refid="classfx__pedal_1a97423b3ef60a4a8c8986db1cb17b6be6" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>route_audio</name></member>
       <member refid="classfx__pedal_1a0d3262d0d26edcfdc559193091991f32" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>route_control</name></member>
       <member refid="classfx__pedal_1a23e3239c2fe59fe105d7edeaa1141bce" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>route_control</name></member>
       <member refid="classfx__pedal_1a63cae666ada50e751c504f440d9c0d7c" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>run</name></member>
       <member refid="classfx__pedal_1a9cf36229c478131fa67a57f34fd907dd" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>service</name></member>
+      <member refid="classfx__pedal_1aafeeae68db6899dd7f671b9be65d89a2" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>service_button_events</name></member>
       <member refid="classfx__pedal_1a9afe97a2261468b36a870bdd14c4af28" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>set_tap_blink_rate_hz</name></member>
       <member refid="classfx__pedal_1aa7da84fc35b770df37ddea35fcd1fa8f" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>set_tap_blink_rate_hz</name></member>
       <member refid="classfx__pedal_1ab5f94f1197ebcd5be2200586bf730154" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>set_tap_blink_rate_ms</name></member>
@@ -1873,6 +2347,7 @@
       <member refid="classfx__pedal_1a09dadc9cfe3b0afa152644c2598134d0" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>spi_transmit_bypass</name></member>
       <member refid="classfx__pedal_1a458edf9bda4301c29119fde798c921f6" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>spi_transmit_control_routing_stack</name></member>
       <member refid="classfx__pedal_1a62d6096e84d1b50881766e93655fb470" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>spi_transmit_instance_stack</name></member>
+      <member refid="classfx__pedal_1a3c550ad0d1bd29b4a954123b6be38a1c" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>spi_transmit_param</name></member>
       <member refid="classfx__pedal_1a1efdd562365d660149fe1a316b9a63dd" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>spi_transmit_params</name></member>
       <member refid="classfx__pedal_1ac52003f6322b069a101e796471298e7b" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>status</name></member>
       <member refid="classfx__pedal_1ae68914b04435fc508ce5b38a87ad078d" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>sys_current_frequency</name></member>
@@ -1884,6 +2359,9 @@
       <member refid="classfx__pedal_1a33d37b1541dbaa5a52b9ae8675cfefdc" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>sys_note_duration_ms</name></member>
       <member refid="classfx__pedal_1aa43e51926becacededefa1c15660ac01" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>sys_output_amp_l</name></member>
       <member refid="classfx__pedal_1a9a3c143a73ae532ad32b707b09fd49f9" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>sys_output_amp_r</name></member>
+      <member refid="classfx__pedal_1af62e3eb61b4adc56ec7a3bbcb76d7e99" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>tap_blink_only_enabled</name></member>
+      <member refid="classfx__pedal_1a79b6745ac397bf42598246636c58bd74" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>tap_control_enabled</name></member>
+      <member refid="classfx__pedal_1adbb98a754feddab9f7c9c3e23693d24a" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>tap_footswitch</name></member>
       <member refid="classfx__pedal_1a10612ba20b4284e642122e75c6c391d5" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>tap_history</name></member>
       <member refid="classfx__pedal_1a99116eaf4ca79e97e1124241e4810d41" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>tap_indx</name></member>
       <member refid="classfx__pedal_1a4188d3db0bb63b28308438f3aa1ea1c9" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>tap_interval_ms</name></member>
@@ -1892,6 +2370,8 @@
       <member refid="classfx__pedal_1af3a94f92811f1efd210029cb58cd2e74" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>tap_led_flash_cntr</name></member>
       <member refid="classfx__pedal_1a655343f02a9c408a8192a95fc42dd2ab" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>tap_locked</name></member>
       <member refid="classfx__pedal_1a527d9dd581fc9dee1628c5b7404af54f" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>tap_new_val</name></member>
+      <member refid="classfx__pedal_1a77e5558b9ad4b20f9bddc9fee4406c1f" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>toggle_left</name></member>
+      <member refid="classfx__pedal_1a0e1ac6a7b3fd3fe5af33a5aab49eb654" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>toggle_right</name></member>
       <member refid="classfx__pedal_1aad5fe4f8432a082ed6cc6726de0b558a" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>total_audio_routes</name></member>
       <member refid="classfx__pedal_1a54fe2ce8124365c4c404fdf60cfd2f9f" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>total_control_routes</name></member>
       <member refid="classfx__pedal_1af7811fd3dfc4243748fb0bdcfd8bfc43" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>total_instances</name></member>

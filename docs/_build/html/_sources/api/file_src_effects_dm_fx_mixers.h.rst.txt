@@ -27,12 +27,6 @@ Definition (``src/effects/dm_fx_mixers.h``)
 
 
 
-Included By
------------
-
-
-- :ref:`file_src_dreammakerfx.h`
-
 
 
 

@@ -601,32 +601,66 @@
 <para>Example: ___looper_1.c___ </para>
     </detaileddescription>
     <inheritancegraph>
-      <node id="81">
+      <node id="114">
         <label>fx_looper</label>
         <link refid="classfx__looper"/>
-        <childnode refid="82" relation="public-inheritance">
+        <childnode refid="115" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="82">
+      <node id="115">
         <label>fx_effect</label>
         <link refid="classfx__effect"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="83">
+      <node id="120">
+        <label>fx_switch</label>
+        <link refid="classfx__switch"/>
+      </node>
+      <node id="116">
         <label>fx_looper</label>
         <link refid="classfx__looper"/>
-        <childnode refid="84" relation="public-inheritance">
+        <childnode refid="117" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="85">
+      <node id="121">
+        <label>fx_led</label>
+        <link refid="classfx__led"/>
+      </node>
+      <node id="119">
+        <label>fx_pot</label>
+        <link refid="classfx__pot"/>
+      </node>
+      <node id="118">
         <label>fx_pedal</label>
         <link refid="classfx__pedal"/>
+        <childnode refid="119" relation="usage">
+          <edgelabel>pot_bot_right</edgelabel>
+          <edgelabel>exp_pedal</edgelabel>
+          <edgelabel>pot_top_left</edgelabel>
+          <edgelabel>pot_left</edgelabel>
+          <edgelabel>pot_top_right</edgelabel>
+          <edgelabel>pot_right</edgelabel>
+          <edgelabel>pot_bot_center</edgelabel>
+          <edgelabel>pot_bot_left</edgelabel>
+          <edgelabel>pot_center</edgelabel>
+        </childnode>
+        <childnode refid="120" relation="usage">
+          <edgelabel>toggle_left</edgelabel>
+          <edgelabel>toggle_right</edgelabel>
+        </childnode>
+        <childnode refid="121" relation="usage">
+          <edgelabel>led_right</edgelabel>
+          <edgelabel>left_led</edgelabel>
+          <edgelabel>led_left</edgelabel>
+          <edgelabel>right_led</edgelabel>
+          <edgelabel>led_center</edgelabel>
+        </childnode>
       </node>
-      <node id="84">
+      <node id="117">
         <label>fx_effect</label>
         <link refid="classfx__effect"/>
-        <childnode refid="85" relation="usage">
+        <childnode refid="118" relation="usage">
           <edgelabel>parent_canvas</edgelabel>
         </childnode>
       </node>
@@ -681,6 +715,9 @@
       <member refid="classfx__looper_1a597a390c7ef64c1c71a79a0727f1a3ea" prot="public" virt="non-virtual"><scope>fx_looper</scope><name>playback_rate</name></member>
       <member refid="classfx__looper_1aee08a93da19655a0e7c344d0249a49ea" prot="public" virt="non-virtual"><scope>fx_looper</scope><name>preproc_receive</name></member>
       <member refid="classfx__looper_1aac75ac7e57037d128831bff2bcb68513" prot="public" virt="non-virtual"><scope>fx_looper</scope><name>preproc_send</name></member>
+      <member refid="classfx__effect_1ac3c8548118e3870dbc4bf71ae6b049af" prot="public" virt="non-virtual"><scope>fx_looper</scope><name>print_audio_node_status</name></member>
+      <member refid="classfx__effect_1a5823fdcf4e43d7a67e78773aff5bb817" prot="public" virt="non-virtual"><scope>fx_looper</scope><name>print_ctrl_node_status</name></member>
+      <member refid="classfx__effect_1a994c4bc631b10cf9dde1ac6d10144b3a" prot="public" virt="non-virtual"><scope>fx_looper</scope><name>print_parameter</name></member>
       <member refid="classfx__looper_1a7f16134ea6c25fcde6d1e2fab601cf37" prot="public" virt="non-virtual"><scope>fx_looper</scope><name>print_params</name></member>
       <member refid="classfx__effect_1aaeececeee434ea76afdf649c3bed7698" prot="protected" virt="non-virtual"><scope>fx_looper</scope><name>serialize_params</name></member>
       <member refid="classfx__effect_1a4c513243328d3b715822e74d21dffe99" prot="public" virt="non-virtual"><scope>fx_looper</scope><name>service</name></member>

@@ -284,33 +284,67 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="70">
+      <node id="97">
         <label>fx_effect</label>
         <link refid="classfx__effect"/>
       </node>
-      <node id="69">
+      <node id="96">
         <label>fx_gain</label>
         <link refid="classfx__gain"/>
-        <childnode refid="70" relation="public-inheritance">
+        <childnode refid="97" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="73">
+      <node id="102">
+        <label>fx_switch</label>
+        <link refid="classfx__switch"/>
+      </node>
+      <node id="103">
+        <label>fx_led</label>
+        <link refid="classfx__led"/>
+      </node>
+      <node id="101">
+        <label>fx_pot</label>
+        <link refid="classfx__pot"/>
+      </node>
+      <node id="100">
         <label>fx_pedal</label>
         <link refid="classfx__pedal"/>
+        <childnode refid="101" relation="usage">
+          <edgelabel>pot_bot_right</edgelabel>
+          <edgelabel>exp_pedal</edgelabel>
+          <edgelabel>pot_top_left</edgelabel>
+          <edgelabel>pot_left</edgelabel>
+          <edgelabel>pot_top_right</edgelabel>
+          <edgelabel>pot_right</edgelabel>
+          <edgelabel>pot_bot_center</edgelabel>
+          <edgelabel>pot_bot_left</edgelabel>
+          <edgelabel>pot_center</edgelabel>
+        </childnode>
+        <childnode refid="102" relation="usage">
+          <edgelabel>toggle_left</edgelabel>
+          <edgelabel>toggle_right</edgelabel>
+        </childnode>
+        <childnode refid="103" relation="usage">
+          <edgelabel>led_right</edgelabel>
+          <edgelabel>left_led</edgelabel>
+          <edgelabel>led_left</edgelabel>
+          <edgelabel>right_led</edgelabel>
+          <edgelabel>led_center</edgelabel>
+        </childnode>
       </node>
-      <node id="72">
+      <node id="99">
         <label>fx_effect</label>
         <link refid="classfx__effect"/>
-        <childnode refid="73" relation="usage">
+        <childnode refid="100" relation="usage">
           <edgelabel>parent_canvas</edgelabel>
         </childnode>
       </node>
-      <node id="71">
+      <node id="98">
         <label>fx_gain</label>
         <link refid="classfx__gain"/>
-        <childnode refid="72" relation="public-inheritance">
+        <childnode refid="99" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
@@ -347,6 +381,9 @@
       <member refid="classfx__effect_1aaf455e34fced9667a8cf26cdb9fb6641" prot="protected" virt="non-virtual"><scope>fx_gain</scope><name>param_stack</name></member>
       <member refid="classfx__effect_1a0ea0d3bfe30592895fa23d241a9baa38" prot="protected" virt="non-virtual"><scope>fx_gain</scope><name>param_stack_types</name></member>
       <member refid="classfx__effect_1a69bef0da54cedf8e558d65b755716999" prot="protected" virt="non-virtual"><scope>fx_gain</scope><name>parent_canvas</name></member>
+      <member refid="classfx__effect_1ac3c8548118e3870dbc4bf71ae6b049af" prot="public" virt="non-virtual"><scope>fx_gain</scope><name>print_audio_node_status</name></member>
+      <member refid="classfx__effect_1a5823fdcf4e43d7a67e78773aff5bb817" prot="public" virt="non-virtual"><scope>fx_gain</scope><name>print_ctrl_node_status</name></member>
+      <member refid="classfx__effect_1a994c4bc631b10cf9dde1ac6d10144b3a" prot="public" virt="non-virtual"><scope>fx_gain</scope><name>print_parameter</name></member>
       <member refid="classfx__gain_1a6f25cf909faf42ab9b543be6abe780ca" prot="public" virt="non-virtual"><scope>fx_gain</scope><name>print_params</name></member>
       <member refid="classfx__effect_1aaeececeee434ea76afdf649c3bed7698" prot="protected" virt="non-virtual"><scope>fx_gain</scope><name>serialize_params</name></member>
       <member refid="classfx__effect_1a4c513243328d3b715822e74d21dffe99" prot="public" virt="non-virtual"><scope>fx_gain</scope><name>service</name></member>
