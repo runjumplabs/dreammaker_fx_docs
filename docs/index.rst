@@ -61,8 +61,4 @@ DreamMaker FX Documentation
 
 
 
-Docs
-====
-
-.. doxygenclass:: fx_canvas
-   :members:
+.. include:: rst/welcome.rst

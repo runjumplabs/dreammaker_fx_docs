@@ -6,7 +6,7 @@ There are a few different resources that are available for debugging a sketch th
 When initializing a sketch, you can enable debug by calling `pedal.init(true)` instead of `pedal.init()`.  This will put the pedal in
 "debug mode" which means it will send information to the Serial Monitor (Tools->Serial Monitor).  Open the Serial Monitor before downloading your sketch.  Once the sketch is running, you'll see status info and any errors that were encountered while processing the routing information.
 
-``` C
+``` CPP
 // Include our library of effects routines
 #include <dreammakerfx.h> 
 
@@ -16,7 +16,7 @@ fx_delay my_echo_1(1000.0,   // 1 second echo
 
 void setup() {
 
-   pedal.init(true); // Initialize the system
+   pedal.init(MSG_INFO); // Initialize the system and display additional information
 
    // Connect our effect(s) to input and output jacks
    pedal.route_audio(pedal.instr_in, my_echo_1.input);
@@ -31,7 +31,7 @@ void setup() {
 
 You can also generate a report of the final routing and parameters by adding a few additional commands before calling `pedal.run()`.  `print_instance_stack()` will show you all of the instances in the sketch.  `print_routing_table()` will show you how the audio and control are wired up.  And `print_param_tables()` will show you the parameters for each instance.
 
-``` C
+``` CPP
 // Include our library of effects routines
 #include <dreammakerfx.h> 
 
@@ -42,7 +42,7 @@ fx_delay my_echo_1(1000.0,   // 1 second echo
 
 void setup() {
 
-   pedal.init(true); // Initialize the system
+   pedal.init(MSG_INFO); // Initialize the system
 
    // Connect our effect(s) to input and output jacks
    pedal.route_audio(pedal.instr_in, my_echo_1.input);
