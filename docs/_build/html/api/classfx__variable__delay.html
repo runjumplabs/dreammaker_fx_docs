@@ -1,0 +1,481 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Class fx_variable_delay &mdash; DreamMaker FX Documentation  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Class fx_slicer" href="classfx__slicer.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> DreamMaker FX Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/echo_basic.html">Building a Basic Echo Pedal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/adding_effects.html">The basics of creating / adding effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/routing_audio.html">The basics of routing audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/controlling_effects.html">The basics of controlling effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/using_api.html">Using the API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/debugging.html">Debugging Sketches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/troubleshooting.html">General troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Pedal Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__pedal.html">Pedal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__led.html">LEDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__pot.html">Pots/Knobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__switch.html">Switches</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Effect Reference:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="classfx__adsr__envelope.html">ADSR Envelope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__amplitude__mod.html">Amplitude Modulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__compressor.html">Compressor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__delay.html">Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__destructor.html">Destructor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__envelope__tracker.html">Envelope Follower</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__gain.html">Gain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__instrument__synth.html">Instrument Synth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__looper.html">Looper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__multitap__delay.html">Multi-tap Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__oscillator.html">Oscillator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__phase__shifter.html">Phase Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__pitch__shift.html">Pitch Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__ring__mod.html">Ring Modulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__slicer.html">Slicer</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Variable Delay</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DreamMaker FX Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Class fx_variable_delay</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/classfx__variable__delay.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="class-fx-variable-delay">
+<span id="exhale-class-classfx-variable-delay"></span><h1>Class fx_variable_delay<a class="headerlink" href="#class-fx-variable-delay" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_src_effects_dm_fx_variable_delay.h.html#file-src-effects-dm-fx-variable-delay-h"><span class="std std-ref">File dm_fx_variable_delay.h</span></a></p></li>
+</ul>
+<div class="section" id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="base-type">
+<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">fx_effect</span></code> (<a class="reference internal" href="classfx__effect.html#exhale-class-classfx-effect"><span class="std std-ref">Class fx_effect</span></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv417fx_variable_delay">
+<span id="_CPPv317fx_variable_delay"></span><span id="_CPPv217fx_variable_delay"></span><span id="fx_variable_delay"></span><span class="target" id="classfx__variable__delay"></span><em class="property">class </em><code class="sig-name descname">fx_variable_delay</code> : <em class="property">public</em> <a class="reference internal" href="classfx__effect.html#_CPPv49fx_effect" title="fx_effect">fx_effect</a><a class="headerlink" href="#_CPPv417fx_variable_delay" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Effect: Variable delay - foundational block of flangers and choruses. </p>
+<p>The variable delay effect is the basis for a number of time-varying delay effects like chorus, flanger, phaser, vibrato, Leslie simulator, etc.</p>
+<p>Here’s a nice tutorial on how variable delays work in these various building blocks: <a class="reference external" href="https://www.dsprelated.com/freebooks/pasp/Time_Varying_Delay_Effects.html">https://www.dsprelated.com/freebooks/pasp/Time_Varying_Delay_Effects.html</a></p>
+<p>Example: ___var_del_1.c___ </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N17fx_variable_delay17fx_variable_delayEfff9OSC_TYPES">
+<span id="_CPPv3N17fx_variable_delay17fx_variable_delayEfff9OSC_TYPES"></span><span id="_CPPv2N17fx_variable_delay17fx_variable_delayEfff9OSC_TYPES"></span><span id="fx_variable_delay::fx_variable_delay__float.float.float.OSC_TYPES"></span><span class="target" id="classfx__variable__delay_1a217641554df3b9eec906c3ee1d0e4f78"></span><code class="sig-name descname">fx_variable_delay</code><span class="sig-paren">(</span>float <em>rate_hz</em>, float <em>depth</em>, float <em>feedback</em>, <a class="reference internal" href="enum_group___enumerations_1gada898a149424188b3a23010c8fe89176.html#_CPPv49OSC_TYPES" title="OSC_TYPES">OSC_TYPES</a> <em>mod_type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17fx_variable_delay17fx_variable_delayEfff9OSC_TYPES" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Basic constructor/initializer for variable delay. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">rate_hz</span></code>: The modulation rate in Hz </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">depth</span></code>: The modulation depth (0.0 -&gt; 1.0) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">feedback</span></code>: The feedback from output to input (-1.0 -&gt; 1.0) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">mod_type</span></code>: The shape of the waveform used to modulate (e.g. OSC_SINE, OSC_TRI, etc.) </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N17fx_variable_delay17fx_variable_delayEffffff9OSC_TYPESb">
+<span id="_CPPv3N17fx_variable_delay17fx_variable_delayEffffff9OSC_TYPESb"></span><span id="_CPPv2N17fx_variable_delay17fx_variable_delayEffffff9OSC_TYPESb"></span><span id="fx_variable_delay::fx_variable_delay__float.float.float.float.float.float.OSC_TYPES.b"></span><span class="target" id="classfx__variable__delay_1abcd127b2061165c91cebb9b15ce302ad"></span><code class="sig-name descname">fx_variable_delay</code><span class="sig-paren">(</span>float <em>rate_hz</em>, float <em>depth</em>, float <em>feedback</em>, float <em>buf_size_ms</em>, float <em>mix_clean</em>, float <em>mix_delayed</em>, <a class="reference internal" href="enum_group___enumerations_1gada898a149424188b3a23010c8fe89176.html#_CPPv49OSC_TYPES" title="OSC_TYPES">OSC_TYPES</a> <em>mod_type</em>, bool <em>ext_mod</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17fx_variable_delay17fx_variable_delayEffffff9OSC_TYPESb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Basic constructor/initializer for variable delay. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">rate_hz</span></code>: The modulation rate in Hz </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">depth</span></code>: The modulation depth (0.0 -&gt; 1.0) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">feedback</span></code>: The feedback from output to input (-1.0 -&gt;1.0) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">buf_size_ms</span></code>: The size of the audio in milliseconds (start wtih a value around 30) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">mix_clean</span></code>: The clean mix. If this is set to 0.0, then you’ll just get the pitch changing aspect of the wave that can used for tape delay simulators, etc. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">mix_delayed</span></code>: The delayed signal mix. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">mod_type</span></code>: The shape of the waveform used to modulate (e.g. OSC_SINE, OSC_TRI, etc.) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">ext_mod</span></code>: whether to use an external modulation source (set to true or false) </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N17fx_variable_delay17fx_variable_delayEffffff9OSC_TYPESbf">
+<span id="_CPPv3N17fx_variable_delay17fx_variable_delayEffffff9OSC_TYPESbf"></span><span id="_CPPv2N17fx_variable_delay17fx_variable_delayEffffff9OSC_TYPESbf"></span><span id="fx_variable_delay::fx_variable_delay__float.float.float.float.float.float.OSC_TYPES.b.float"></span><span class="target" id="classfx__variable__delay_1a9477d5ff572a08f4e8cfe6be7208c97a"></span><code class="sig-name descname">fx_variable_delay</code><span class="sig-paren">(</span>float <em>rate_hz</em>, float <em>depth</em>, float <em>feedback</em>, float <em>buf_size_ms</em>, float <em>mix_clean</em>, float <em>mix_delayed</em>, <a class="reference internal" href="enum_group___enumerations_1gada898a149424188b3a23010c8fe89176.html#_CPPv49OSC_TYPES" title="OSC_TYPES">OSC_TYPES</a> <em>mod_type</em>, bool <em>ext_mod</em>, float <em>initial_phase</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17fx_variable_delay17fx_variable_delayEffffff9OSC_TYPESbf" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Basic constructor/initializer for variable delay. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">rate_hz</span></code>: The modulation rate in Hz </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">depth</span></code>: The modulation depth (0.0 -&gt; 1.0) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">feedback</span></code>: The feedback from output to input (-1.0 -&gt;1.0) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">buf_size_ms</span></code>: The size of the audio in milliseconds (start wtih a value around 30) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">mix_clean</span></code>: The clean mix. If this is set to 0.0, then you’ll just get the pitch changing aspect of the wave that can used for tape delay simulators, etc. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">mix_delayed</span></code>: The delayed signal mix. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">mod_type</span></code>: The shape of the waveform used to modulate (e.g. OSC_SINE, OSC_TRI, etc.) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">ext_mod</span></code>: whether to use an external modulation source (set to true or false) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">initial_phase</span></code>: Initial phase in degrees </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N17fx_variable_delay6enableEv">
+<span id="_CPPv3N17fx_variable_delay6enableEv"></span><span id="_CPPv2N17fx_variable_delay6enableEv"></span><span id="fx_variable_delay::enable"></span><span class="target" id="classfx__variable__delay_1ad40a88ff09f879bcb21a6ee55d8771e8"></span>void <code class="sig-name descname">enable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17fx_variable_delay6enableEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Enable the <strong>this_effect</strong> (it is enabled by default) </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N17fx_variable_delay6bypassEv">
+<span id="_CPPv3N17fx_variable_delay6bypassEv"></span><span id="_CPPv2N17fx_variable_delay6bypassEv"></span><span id="fx_variable_delay::bypass"></span><span class="target" id="classfx__variable__delay_1a2b5aa0e4bdba02a38397a8d58fe9882a"></span>void <code class="sig-name descname">bypass</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17fx_variable_delay6bypassEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Bypass the <strong>this_effect</strong> (will just pass clean audio through) </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N17fx_variable_delay9set_depthEf">
+<span id="_CPPv3N17fx_variable_delay9set_depthEf"></span><span id="_CPPv2N17fx_variable_delay9set_depthEf"></span><span id="fx_variable_delay::set_depth__float"></span><span class="target" id="classfx__variable__delay_1a3ac8a8f3aae24224158d17e8d8582815"></span>void <code class="sig-name descname">set_depth</code><span class="sig-paren">(</span>float <em>depth</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17fx_variable_delay9set_depthEf" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Updates the depth of the variable delay. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">depth</span></code>: The new depth value </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N17fx_variable_delay11set_rate_hzEf">
+<span id="_CPPv3N17fx_variable_delay11set_rate_hzEf"></span><span id="_CPPv2N17fx_variable_delay11set_rate_hzEf"></span><span id="fx_variable_delay::set_rate_hz__float"></span><span class="target" id="classfx__variable__delay_1a92efbe931e213229ee52c76ad9ff806b"></span>void <code class="sig-name descname">set_rate_hz</code><span class="sig-paren">(</span>float <em>rate_hz</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17fx_variable_delay11set_rate_hzEf" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Updates the rate (Hz) of the variable delay. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">rate_hz</span></code>: The new rate hz </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N17fx_variable_delay12set_feedbackEf">
+<span id="_CPPv3N17fx_variable_delay12set_feedbackEf"></span><span id="_CPPv2N17fx_variable_delay12set_feedbackEf"></span><span id="fx_variable_delay::set_feedback__float"></span><span class="target" id="classfx__variable__delay_1ad3b9ef61ed0db2e93bd15c01d6f98536"></span>void <code class="sig-name descname">set_feedback</code><span class="sig-paren">(</span>float <em>feedback</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17fx_variable_delay12set_feedbackEf" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Updates the feedback parameter of the variable delay. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">feedback</span></code>: The new feedback value (-1.0-&gt;1.0) </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N17fx_variable_delay13set_mix_cleanEf">
+<span id="_CPPv3N17fx_variable_delay13set_mix_cleanEf"></span><span id="_CPPv2N17fx_variable_delay13set_mix_cleanEf"></span><span id="fx_variable_delay::set_mix_clean__float"></span><span class="target" id="classfx__variable__delay_1afa615e6ee413dd5c4066e798f55df959"></span>void <code class="sig-name descname">set_mix_clean</code><span class="sig-paren">(</span>float <em>mix_clean</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17fx_variable_delay13set_mix_cleanEf" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Updates the clean mix of the variable delay. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">mix_clean</span></code>: The new clean mix value </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N17fx_variable_delay15set_mix_delayedEf">
+<span id="_CPPv3N17fx_variable_delay15set_mix_delayedEf"></span><span id="_CPPv2N17fx_variable_delay15set_mix_delayedEf"></span><span id="fx_variable_delay::set_mix_delayed__float"></span><span class="target" id="classfx__variable__delay_1ae1faf9d93f2469fa201a2216ad773dfa"></span>void <code class="sig-name descname">set_mix_delayed</code><span class="sig-paren">(</span>float <em>mix_delayed</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17fx_variable_delay15set_mix_delayedEf" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Updates the delayed signal mix of the variable delay. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">mix_delayed</span></code>: The new delayed mix value </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N17fx_variable_delay12set_lfo_typeE9OSC_TYPES">
+<span id="_CPPv3N17fx_variable_delay12set_lfo_typeE9OSC_TYPES"></span><span id="_CPPv2N17fx_variable_delay12set_lfo_typeE9OSC_TYPES"></span><span id="fx_variable_delay::set_lfo_type__OSC_TYPES"></span><span class="target" id="classfx__variable__delay_1ad33df6056fe62e2403c86ae4b5c84757"></span>void <code class="sig-name descname">set_lfo_type</code><span class="sig-paren">(</span><a class="reference internal" href="enum_group___enumerations_1gada898a149424188b3a23010c8fe89176.html#_CPPv49OSC_TYPES" title="OSC_TYPES">OSC_TYPES</a> <em>new_type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17fx_variable_delay12set_lfo_typeE9OSC_TYPES" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sets the the type of oscillator used as the LFO. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">new_type</span></code>: The new type of LFO (OSC_TYPES) </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N17fx_variable_delay12print_paramsEv">
+<span id="_CPPv3N17fx_variable_delay12print_paramsEv"></span><span id="_CPPv2N17fx_variable_delay12print_paramsEv"></span><span id="fx_variable_delay::print_params__void"></span><span class="target" id="classfx__variable__delay_1a69e0bdf848f4f2ab1de57a7f23fb5088"></span>void <code class="sig-name descname">print_params</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17fx_variable_delay12print_paramsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Prints the parameters for this effect. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv4N17fx_variable_delay5inputE">
+<span id="_CPPv3N17fx_variable_delay5inputE"></span><span id="_CPPv2N17fx_variable_delay5inputE"></span><span id="fx_variable_delay::input__fx_audio_nodeP"></span><span class="target" id="classfx__variable__delay_1adfe9817234303c0a7a3447391e882af6"></span>fx_audio_node *<code class="sig-name descname">input</code><a class="headerlink" href="#_CPPv4N17fx_variable_delay5inputE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Audio routing node [input]: primary audio input </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N17fx_variable_delay6outputE">
+<span id="_CPPv3N17fx_variable_delay6outputE"></span><span id="_CPPv2N17fx_variable_delay6outputE"></span><span id="fx_variable_delay::output__fx_audio_nodeP"></span><span class="target" id="classfx__variable__delay_1a34e31eab5e3d155aafa553a5fa66c369"></span>fx_audio_node *<code class="sig-name descname">output</code><a class="headerlink" href="#_CPPv4N17fx_variable_delay6outputE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Audio routing node [output]: primary audio output </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N17fx_variable_delay10ext_mod_inE">
+<span id="_CPPv3N17fx_variable_delay10ext_mod_inE"></span><span id="_CPPv2N17fx_variable_delay10ext_mod_inE"></span><span id="fx_variable_delay::ext_mod_in__fx_audio_nodeP"></span><span class="target" id="classfx__variable__delay_1aeb3230729a9af6c6112e90350fe869e6"></span>fx_audio_node *<code class="sig-name descname">ext_mod_in</code><a class="headerlink" href="#_CPPv4N17fx_variable_delay10ext_mod_inE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Audio routine node [input]: use another signal as the modulator source such as an <a class="reference internal" href="classfx__oscillator.html#classfx__oscillator"><span class="std std-ref">fx_oscillator</span></a>. The oscillator can be run though the clipper for example to create new types of waveforms. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N17fx_variable_delay13modulated_outE">
+<span id="_CPPv3N17fx_variable_delay13modulated_outE"></span><span id="_CPPv2N17fx_variable_delay13modulated_outE"></span><span id="fx_variable_delay::modulated_out__fx_audio_nodeP"></span><span class="target" id="classfx__variable__delay_1ad4379f17a31b9b270b3a1c8f3beb3d81"></span>fx_audio_node *<code class="sig-name descname">modulated_out</code><a class="headerlink" href="#_CPPv4N17fx_variable_delay13modulated_outE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Audio routing node [output]: just the pitch modulated signal without mixing in the original signal </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N17fx_variable_delay5depthE">
+<span id="_CPPv3N17fx_variable_delay5depthE"></span><span id="_CPPv2N17fx_variable_delay5depthE"></span><span id="fx_variable_delay::depth__fx_control_nodeP"></span><span class="target" id="classfx__variable__delay_1a6d200c4f53d486513be7c18fc7d948d6"></span>fx_control_node *<code class="sig-name descname">depth</code><a class="headerlink" href="#_CPPv4N17fx_variable_delay5depthE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Control routing node [input]: modulation depth </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N17fx_variable_delay7rate_hzE">
+<span id="_CPPv3N17fx_variable_delay7rate_hzE"></span><span id="_CPPv2N17fx_variable_delay7rate_hzE"></span><span id="fx_variable_delay::rate_hz__fx_control_nodeP"></span><span class="target" id="classfx__variable__delay_1a4b8417112ba1196b03f0d29b8998ce9f"></span>fx_control_node *<code class="sig-name descname">rate_hz</code><a class="headerlink" href="#_CPPv4N17fx_variable_delay7rate_hzE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Control routing node [input]: modulation rate in Hz </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N17fx_variable_delay8feedbackE">
+<span id="_CPPv3N17fx_variable_delay8feedbackE"></span><span id="_CPPv2N17fx_variable_delay8feedbackE"></span><span id="fx_variable_delay::feedback__fx_control_nodeP"></span><span class="target" id="classfx__variable__delay_1a8d402d84f9415c711d72d72c4a92c77b"></span>fx_control_node *<code class="sig-name descname">feedback</code><a class="headerlink" href="#_CPPv4N17fx_variable_delay8feedbackE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Control routing node [input]: feedback </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N17fx_variable_delay9mix_cleanE">
+<span id="_CPPv3N17fx_variable_delay9mix_cleanE"></span><span id="_CPPv2N17fx_variable_delay9mix_cleanE"></span><span id="fx_variable_delay::mix_clean__fx_control_nodeP"></span><span class="target" id="classfx__variable__delay_1a096fd463ac9e92608bcdc825efcfabe9"></span>fx_control_node *<code class="sig-name descname">mix_clean</code><a class="headerlink" href="#_CPPv4N17fx_variable_delay9mix_cleanE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Control routing node [input]: clean signal mix </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N17fx_variable_delay11mix_delayedE">
+<span id="_CPPv3N17fx_variable_delay11mix_delayedE"></span><span id="_CPPv2N17fx_variable_delay11mix_delayedE"></span><span id="fx_variable_delay::mix_delayed__fx_control_nodeP"></span><span class="target" id="classfx__variable__delay_1a04c53cceef811141829a7c3a4ceeb780"></span>fx_control_node *<code class="sig-name descname">mix_delayed</code><a class="headerlink" href="#_CPPv4N17fx_variable_delay11mix_delayedE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Control routing node [input]: delayed signal mix </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="classfx__slicer.html" class="btn btn-neutral float-left" title="Class fx_slicer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Run Jump Labs
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

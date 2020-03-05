@@ -1,0 +1,298 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>General troubleshooting &mdash; DreamMaker FX Documentation  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class fx_pedal" href="../api/classfx__pedal.html" />
+    <link rel="prev" title="Debugging Sketches" href="debugging.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> DreamMaker FX Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="echo_basic.html">Building a Basic Echo Pedal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adding_effects.html">The basics of creating / adding effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="routing_audio.html">The basics of routing audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controlling_effects.html">The basics of controlling effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_api.html">Using the API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debugging.html">Debugging Sketches</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">General troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#issue-dm-fx-volume-not-showing-up-when-plugging-pedal-into-usb-port">Issue: DM_FX volume not showing up when plugging pedal into USB port</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#issue-sam-ba-operation-failed-error-while-downloading-an-arduino-sketch">Issue: SAM-BA operation failed error while downloading an Arduino sketch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#issue-after-downloading-my-sketch-one-footswitch-led-is-on-and-the-other-is-periodically-strobing">Issue: After downloading my sketch, one footswitch LED is on and the other is periodically strobing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#issue-i-am-getting-a-bad-cpu-type-in-executable-error-when-compiling-my-sketch">Issue: I am getting a “bad CPU type in executable” error when compiling my sketch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#issue-when-building-my-sketch-error-dreammakerfx-h-no-such-file-or-directory">Issue: When building my sketch, error “dreammakerfx.h: No such file or directory”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#placing-the-pedal-in-bootloader-mode">Placing the pedal in bootloader mode</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Pedal Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__pedal.html">Pedal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__led.html">LEDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__pot.html">Pots/Knobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__switch.html">Switches</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Effect Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__adsr__envelope.html">ADSR Envelope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__amplitude__mod.html">Amplitude Modulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__compressor.html">Compressor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__delay.html">Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__destructor.html">Destructor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__envelope__tracker.html">Envelope Follower</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__gain.html">Gain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__instrument__synth.html">Instrument Synth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__looper.html">Looper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__multitap__delay.html">Multi-tap Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__oscillator.html">Oscillator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__phase__shifter.html">Phase Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__pitch__shift.html">Pitch Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__ring__mod.html">Ring Modulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__slicer.html">Slicer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__variable__delay.html">Variable Delay</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DreamMaker FX Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>General troubleshooting</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/markdown/troubleshooting.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="general-troubleshooting">
+<h1>General troubleshooting<a class="headerlink" href="#general-troubleshooting" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<div class="section" id="issue-dm-fx-volume-not-showing-up-when-plugging-pedal-into-usb-port">
+<h2>Issue: DM_FX volume not showing up when plugging pedal into USB port<a class="headerlink" href="#issue-dm-fx-volume-not-showing-up-when-plugging-pedal-into-usb-port" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>There are a few common reasons why a pedal doesn’t show up when plugging it into USB</p>
+<ul class="simple">
+<li><p>The pedal also needs to be plugged into the wall as it is not USB powered.  Go plug it in.</p></li>
+<li><p>The cable is a USB charging cable and doesn’t have any data wires.  Find a different cable.</p></li>
+<li><p>The pedal needs to be placed in bootloader mode.  Place the pedal in bootloader mode per the description below.</p></li>
+<li><p>If you’re running Linux or Windows 7, this may be an Arduino driver issue.  Make sure you’re running the latest version of the Arduino IDE.</p></li>
+</ul>
+</div>
+<div class="section" id="issue-sam-ba-operation-failed-error-while-downloading-an-arduino-sketch">
+<h2>Issue: SAM-BA operation failed error while downloading an Arduino sketch<a class="headerlink" href="#issue-sam-ba-operation-failed-error-while-downloading-an-arduino-sketch" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>When clicking the download button, sometimes the download process will stop.</p>
+<p>When this happens, wait for the Arduino IDE to display the message <code class="docutils literal notranslate"><span class="pre">&quot;SAM-BA</span> <span class="pre">operation</span> <span class="pre">failed&quot;</span></code> which usually happens a few seconds after the download process stops.  Then, put the pedal into bootloader mode as shown below.  You should see the DM_FX drive/volume appear on your computer after you do this.  You should now be able to download without issue.</p>
+</div>
+<div class="section" id="issue-after-downloading-my-sketch-one-footswitch-led-is-on-and-the-other-is-periodically-strobing">
+<h2>Issue: After downloading my sketch, one footswitch LED is on and the other is periodically strobing<a class="headerlink" href="#issue-after-downloading-my-sketch-one-footswitch-led-is-on-and-the-other-is-periodically-strobing" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>If the pedal encounters an error while downloading your sketch, it will turn on the left LED and periodically strobe the right LED.  The number of times the right LED strobes in quick succession indicates the issue the pedal encountered.</p>
+<ul class="simple">
+<li><p>2 flashes - the pedal encountered an illegal routing combination (e.g. two output nodes connected to an input node).  Try using debug mode as described in the Debugging Sketches article.</p></li>
+<li><p>3 flashes - the firmware running on the DSP does not match the Arduino package version.  Make sure your firmware is up to date.</p></li>
+<li><p>5 flashes - the DSP is not running or responding.  Run for the hills.</p></li>
+</ul>
+</div>
+<div class="section" id="issue-i-am-getting-a-bad-cpu-type-in-executable-error-when-compiling-my-sketch">
+<h2>Issue: I am getting a “bad CPU type in executable” error when compiling my sketch<a class="headerlink" href="#issue-i-am-getting-a-bad-cpu-type-in-executable-error-when-compiling-my-sketch" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>Upgrade your Arduino tools to version 1.8.10 or later.  This is a known issue running Arduino on OS X Catalina.</p>
+</div>
+<div class="section" id="issue-when-building-my-sketch-error-dreammakerfx-h-no-such-file-or-directory">
+<h2>Issue: When building my sketch, error “dreammakerfx.h: No such file or directory”<a class="headerlink" href="#issue-when-building-my-sketch-error-dreammakerfx-h-no-such-file-or-directory" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>If you encounter the following error while compiling your sketch, it likely means you don’t have the right board selected in the Arduino tools.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">exit</span> <span class="n">status</span> <span class="mi">1</span>
+<span class="n">Dreammakerfx</span><span class="p">.</span><span class="nl">h</span><span class="p">:</span> <span class="n">No</span> <span class="n">such</span> <span class="n">file</span> <span class="n">or</span> <span class="n">directory</span>
+</pre></div>
+</div>
+<p>First, make sure you have the DreamMakerFX package installed as described in the Installing section.  Then, make sure you have the DreamMakerFX hardware selected.  Go to Tools-&gt;Boards and you’ll see a number of different Arduino boards listed in the menu.  At the end of the list in the menu, you should see DreamMaker FX (SAMD51/ARM Cortex M4 Core).  Select this and try compiling again.</p>
+</div>
+<div class="section" id="placing-the-pedal-in-bootloader-mode">
+<h2>Placing the pedal in bootloader mode<a class="headerlink" href="#placing-the-pedal-in-bootloader-mode" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>To place the pedal into bootloader mode, follow this process:</p>
+<p><img alt="Placing DreamMaker FX into bootloader mode" src="https://runjumplabs.github.io/dreammaker_fx/assets/images/bootloader-1.gif" /></p>
+<p>In rare circumstances, the pedal may not respond to the bootloader sequence.  In this case, remove the back cover of the pedal and press the reset button on the circuit board twice in quick succession while the pedal is powered up.  A small LED near the USB connector should flash a few times and then slowly strobe in and out (like it is breathing).   This will also put the pedal into bootloader mode.  You should see the DM_FX drive/volume appear on your computer after you do this.  You should now be able to download without issue.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../api/classfx__pedal.html" class="btn btn-neutral float-right" title="Class fx_pedal" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="debugging.html" class="btn btn-neutral float-left" title="Debugging Sketches" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Run Jump Labs
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,254 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="struct_d_s_p___s_t_a_t_u_s" kind="struct" language="C++" prot="public">
+    <compoundname>DSP_STATUS</compoundname>
+    <includes refid="dm__fx__dsp_8h" local="no">dm_fx_dsp.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_d_s_p___s_t_a_t_u_s_1a0588c0e9e6df64c438a91d0fb59f34dc" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DSP_STATUS::firmware_valid</definition>
+        <argsstring></argsstring>
+        <name>firmware_valid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dm_fx_dsp.h" line="19" column="1" bodyfile="src/dm_fx_dsp.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_s_p___s_t_a_t_u_s_1abde927f954fc6e5657d54f9c5286d556" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t DSP_STATUS::firmware_ver</definition>
+        <argsstring></argsstring>
+        <name>firmware_ver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dm_fx_dsp.h" line="20" column="1" bodyfile="src/dm_fx_dsp.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_s_p___s_t_a_t_u_s_1acbbd3167aa4c56a723e42a1977128f97" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float DSP_STATUS::loading_percentage</definition>
+        <argsstring></argsstring>
+        <name>loading_percentage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dm_fx_dsp.h" line="21" column="1" bodyfile="src/dm_fx_dsp.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_s_p___s_t_a_t_u_s_1ac9fed07d56ac0d72e0e12c4655acd299" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float DSP_STATUS::amplitude</definition>
+        <argsstring></argsstring>
+        <name>amplitude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dm_fx_dsp.h" line="22" column="1" bodyfile="src/dm_fx_dsp.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_s_p___s_t_a_t_u_s_1a9af6e3602d6781960e1257682bbd37b1" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_d_s_p___n_o_t_e" kindref="compound">DSP_NOTE</ref></type>
+        <definition>DSP_NOTE DSP_STATUS::notes</definition>
+        <argsstring></argsstring>
+        <name>notes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dm_fx_dsp.h" line="23" column="1" bodyfile="src/dm_fx_dsp.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_s_p___s_t_a_t_u_s_1acf57b32d80ad8a8f0d3e524e2efb800f" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DSP_STATUS::new_note</definition>
+        <argsstring></argsstring>
+        <name>new_note</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dm_fx_dsp.h" line="24" column="1" bodyfile="src/dm_fx_dsp.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_s_p___s_t_a_t_u_s_1aa35b1a1a2326c7566567aca123f46e7a" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DSP_STATUS::state_booted</definition>
+        <argsstring></argsstring>
+        <name>state_booted</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dm_fx_dsp.h" line="25" column="1" bodyfile="src/dm_fx_dsp.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_s_p___s_t_a_t_u_s_1a24dd22cba6d94d7452c44a8968a4e703" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DSP_STATUS::state_initialized</definition>
+        <argsstring></argsstring>
+        <name>state_initialized</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dm_fx_dsp.h" line="26" column="1" bodyfile="src/dm_fx_dsp.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_s_p___s_t_a_t_u_s_1a323305b39863692bdcf047a0cf093fd8" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DSP_STATUS::state_lf_audio_running</definition>
+        <argsstring></argsstring>
+        <name>state_lf_audio_running</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dm_fx_dsp.h" line="27" column="1" bodyfile="src/dm_fx_dsp.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_s_p___s_t_a_t_u_s_1ab3781aceaf7cc9f2ff1370acc26c8ee2" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DSP_STATUS::state_hf_audio_running</definition>
+        <argsstring></argsstring>
+        <name>state_hf_audio_running</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dm_fx_dsp.h" line="28" column="1" bodyfile="src/dm_fx_dsp.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_s_p___s_t_a_t_u_s_1a6f3b013116fec75e40bdfedb64736aa4" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DSP_STATUS::state_canvas_running</definition>
+        <argsstring></argsstring>
+        <name>state_canvas_running</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dm_fx_dsp.h" line="29" column="1" bodyfile="src/dm_fx_dsp.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_s_p___s_t_a_t_u_s_1a4e55cccf1a497f637bd6ce78922de800" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DSP_STATUS::state_err_allocation</definition>
+        <argsstring></argsstring>
+        <name>state_err_allocation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dm_fx_dsp.h" line="30" column="1" bodyfile="src/dm_fx_dsp.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_s_p___s_t_a_t_u_s_1a73bd2618d1a5431a8ca55568f6edef10" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DSP_STATUS::state_err_param</definition>
+        <argsstring></argsstring>
+        <name>state_err_param</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dm_fx_dsp.h" line="31" column="1" bodyfile="src/dm_fx_dsp.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_s_p___s_t_a_t_u_s_1af9930e9aeb0ba5ba10285305d9d15a83" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DSP_STATUS::state_err_corrupt</definition>
+        <argsstring></argsstring>
+        <name>state_err_corrupt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dm_fx_dsp.h" line="32" column="1" bodyfile="src/dm_fx_dsp.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_s_p___s_t_a_t_u_s_1a199976d7062a9440d657fb1dc5c08626" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DSP_STATUS::state_err_other</definition>
+        <argsstring></argsstring>
+        <name>state_err_other</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dm_fx_dsp.h" line="33" column="1" bodyfile="src/dm_fx_dsp.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_s_p___s_t_a_t_u_s_1ad98b5ae30938dad710394bc628dce263" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t DSP_STATUS::state_flags</definition>
+        <argsstring></argsstring>
+        <name>state_flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dm_fx_dsp.h" line="34" column="1" bodyfile="src/dm_fx_dsp.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Current state of the DSP </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>DSP_STATUS</label>
+        <link refid="struct_d_s_p___s_t_a_t_u_s"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>notes</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>DSP_NOTE</label>
+        <link refid="struct_d_s_p___n_o_t_e"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/dm_fx_dsp.h" line="18" column="1" bodyfile="src/dm_fx_dsp.h" bodystart="18" bodyend="35"/>
+    <listofallmembers>
+      <member refid="struct_d_s_p___s_t_a_t_u_s_1ac9fed07d56ac0d72e0e12c4655acd299" prot="public" virt="non-virtual"><scope>DSP_STATUS</scope><name>amplitude</name></member>
+      <member refid="struct_d_s_p___s_t_a_t_u_s_1a0588c0e9e6df64c438a91d0fb59f34dc" prot="public" virt="non-virtual"><scope>DSP_STATUS</scope><name>firmware_valid</name></member>
+      <member refid="struct_d_s_p___s_t_a_t_u_s_1abde927f954fc6e5657d54f9c5286d556" prot="public" virt="non-virtual"><scope>DSP_STATUS</scope><name>firmware_ver</name></member>
+      <member refid="struct_d_s_p___s_t_a_t_u_s_1acbbd3167aa4c56a723e42a1977128f97" prot="public" virt="non-virtual"><scope>DSP_STATUS</scope><name>loading_percentage</name></member>
+      <member refid="struct_d_s_p___s_t_a_t_u_s_1acf57b32d80ad8a8f0d3e524e2efb800f" prot="public" virt="non-virtual"><scope>DSP_STATUS</scope><name>new_note</name></member>
+      <member refid="struct_d_s_p___s_t_a_t_u_s_1a9af6e3602d6781960e1257682bbd37b1" prot="public" virt="non-virtual"><scope>DSP_STATUS</scope><name>notes</name></member>
+      <member refid="struct_d_s_p___s_t_a_t_u_s_1aa35b1a1a2326c7566567aca123f46e7a" prot="public" virt="non-virtual"><scope>DSP_STATUS</scope><name>state_booted</name></member>
+      <member refid="struct_d_s_p___s_t_a_t_u_s_1a6f3b013116fec75e40bdfedb64736aa4" prot="public" virt="non-virtual"><scope>DSP_STATUS</scope><name>state_canvas_running</name></member>
+      <member refid="struct_d_s_p___s_t_a_t_u_s_1a4e55cccf1a497f637bd6ce78922de800" prot="public" virt="non-virtual"><scope>DSP_STATUS</scope><name>state_err_allocation</name></member>
+      <member refid="struct_d_s_p___s_t_a_t_u_s_1af9930e9aeb0ba5ba10285305d9d15a83" prot="public" virt="non-virtual"><scope>DSP_STATUS</scope><name>state_err_corrupt</name></member>
+      <member refid="struct_d_s_p___s_t_a_t_u_s_1a199976d7062a9440d657fb1dc5c08626" prot="public" virt="non-virtual"><scope>DSP_STATUS</scope><name>state_err_other</name></member>
+      <member refid="struct_d_s_p___s_t_a_t_u_s_1a73bd2618d1a5431a8ca55568f6edef10" prot="public" virt="non-virtual"><scope>DSP_STATUS</scope><name>state_err_param</name></member>
+      <member refid="struct_d_s_p___s_t_a_t_u_s_1ad98b5ae30938dad710394bc628dce263" prot="public" virt="non-virtual"><scope>DSP_STATUS</scope><name>state_flags</name></member>
+      <member refid="struct_d_s_p___s_t_a_t_u_s_1ab3781aceaf7cc9f2ff1370acc26c8ee2" prot="public" virt="non-virtual"><scope>DSP_STATUS</scope><name>state_hf_audio_running</name></member>
+      <member refid="struct_d_s_p___s_t_a_t_u_s_1a24dd22cba6d94d7452c44a8968a4e703" prot="public" virt="non-virtual"><scope>DSP_STATUS</scope><name>state_initialized</name></member>
+      <member refid="struct_d_s_p___s_t_a_t_u_s_1a323305b39863692bdcf047a0cf093fd8" prot="public" virt="non-virtual"><scope>DSP_STATUS</scope><name>state_lf_audio_running</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

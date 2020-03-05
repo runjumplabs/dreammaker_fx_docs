@@ -1,0 +1,273 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>The basics of creating / adding effects &mdash; DreamMaker FX Documentation  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="The basics of routing audio" href="routing_audio.html" />
+    <link rel="prev" title="Building a Basic Echo Pedal" href="echo_basic.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> DreamMaker FX Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="echo_basic.html">Building a Basic Echo Pedal</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">The basics of creating / adding effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="routing_audio.html">The basics of routing audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controlling_effects.html">The basics of controlling effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_api.html">Using the API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debugging.html">Debugging Sketches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">General troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Pedal Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__pedal.html">Pedal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__led.html">LEDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__pot.html">Pots/Knobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__switch.html">Switches</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Effect Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__adsr__envelope.html">ADSR Envelope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__amplitude__mod.html">Amplitude Modulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__compressor.html">Compressor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__delay.html">Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__destructor.html">Destructor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__envelope__tracker.html">Envelope Follower</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__gain.html">Gain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__instrument__synth.html">Instrument Synth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__looper.html">Looper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__multitap__delay.html">Multi-tap Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__oscillator.html">Oscillator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__phase__shifter.html">Phase Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__pitch__shift.html">Pitch Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__ring__mod.html">Ring Modulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__slicer.html">Slicer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__variable__delay.html">Variable Delay</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DreamMaker FX Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>The basics of creating / adding effects</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/markdown/adding_effects.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="the-basics-of-creating-adding-effects">
+<h1>The basics of creating / adding effects<a class="headerlink" href="#the-basics-of-creating-adding-effects" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<p>As you hopefully remember from 12 seconds ago, we create/declare the effects we want to use at the top of program.</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="c1">// Create/declare one echo effect and configure it</span>
+<span class="n">fx_delay</span>   <span class="nf">my_echo_1</span><span class="p">(</span><span class="mf">1000.0</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">);</span>    
+</pre></div>
+</div>
+<p>The first word (which in this case is <code class="docutils literal notranslate"><span class="pre">fx_delay</span></code>) is the <em>type</em> of effect we want to create.  The API docs (and the next section) contain the complete list of the effects that are available.</p>
+<p>We then provide a name for our effect object (which in the example above is <code class="docutils literal notranslate"><span class="pre">my_echo_1</span></code>).  This needs to be a unique word with no spaces (just characters and underscores really).</p>
+<p>And finally, we provide the initial parameters for that effect (i.e. where the knobs are set initially).</p>
+<p>Again, the The API docs contain more details on this.</p>
+<p>What’s neat is that this <em>object</em> then becomes its own stand-alone effect.  We can create multiple objects of the same type in our program (i.e. multiple delays in this case) that each have their own parameters and which are each wired-in in their own ways.</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="c1">// Create/declare one echo effect and configure it</span>
+<span class="n">fx_delay</span>   <span class="nf">my_echo_1</span><span class="p">(</span><span class="mf">1000.0</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">);</span>    
+<span class="n">fx_delay</span>   <span class="nf">my_echo_2</span><span class="p">(</span><span class="mf">2000.0</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">);</span>    <span class="c1">// Totally legit!    </span>
+</pre></div>
+</div>
+<p>Just make sure each object you create/declare in your system has a unique name even if they are different effect types.  For example, don’t do this:</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="c1">// Create/declare one echo effect and configure it</span>
+<span class="n">fx_delay</span>        <span class="nf">ricky_bobby</span><span class="p">(</span><span class="mf">1000.0</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">);</span>    
+<span class="n">fx_pitch_shift</span>  <span class="nf">ricky_bobby</span><span class="p">(</span><span class="mf">0.8</span><span class="p">);</span>    <span class="c1">// BAD! DON&#39;T DO THIS, ricky_bobby already exists!   </span>
+</pre></div>
+</div>
+<p>Oh yeah, this is important: in some cases an effect will have a few different ways you can initialize it.  Most effects have a <em>simple</em> initializer that you just need to pass one or two values to.  And, they may have a more <em>advanced</em> initializer that allows you to do ever more things with that effect. Usually the advanced initializer is a super-set of the simple initializer.</p>
+<p>Here’s an example of us initializing two <code class="docutils literal notranslate"><span class="pre">fx_amplitude_mod</span></code> objects with both the simple and advanced initializer functions:</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="n">fx_amplitude_mod</span>    <span class="nf">tremelo_1</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span>     <span class="c1">// Rate is 1Hz</span>
+                              <span class="mf">0.5</span><span class="p">);</span>    <span class="c1">// Depth is 0.5 (0-&gt;1)</span>
+<span class="n">fx_amplitude_mod</span>    <span class="nf">tremelo_2</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span>      <span class="c1">// Rate is 1Hz</span>
+                              <span class="mf">0.5</span><span class="p">,</span>      <span class="o">//</span> <span class="n">Depth</span> <span class="n">is</span> <span class="mf">0.5</span> <span class="p">(</span><span class="mi">0</span><span class="o">-&gt;</span><span class="mi">1</span><span class="p">)</span>
+                              <span class="n">OSC_TRI</span><span class="p">,</span>  <span class="c1">// Modulation waveform is triangle instead of sine</span>
+                              <span class="nb">false</span><span class="p">);</span>   <span class="c1">// Not using an external signal as our modulator                           </span>
+</pre></div>
+</div>
+<p>The beauty of this is that we have a DSP platform with tons of memory and lots of DSP processing power so you can create effects that incorporate several different individual effect objects / instances.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="routing_audio.html" class="btn btn-neutral float-right" title="The basics of routing audio" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="echo_basic.html" class="btn btn-neutral float-left" title="Building a Basic Echo Pedal" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Run Jump Labs
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

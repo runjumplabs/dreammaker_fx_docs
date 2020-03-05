@@ -1,0 +1,435 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Class fx_adsr_envelope &mdash; DreamMaker FX Documentation  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class fx_amplitude_mod" href="classfx__amplitude__mod.html" />
+    <link rel="prev" title="Class fx_switch" href="classfx__switch.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> DreamMaker FX Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/echo_basic.html">Building a Basic Echo Pedal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/adding_effects.html">The basics of creating / adding effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/routing_audio.html">The basics of routing audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/controlling_effects.html">The basics of controlling effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/using_api.html">Using the API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/debugging.html">Debugging Sketches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/troubleshooting.html">General troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Pedal Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__pedal.html">Pedal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__led.html">LEDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__pot.html">Pots/Knobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__switch.html">Switches</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Effect Reference:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">ADSR Envelope</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__amplitude__mod.html">Amplitude Modulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__compressor.html">Compressor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__delay.html">Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__destructor.html">Destructor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__envelope__tracker.html">Envelope Follower</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__gain.html">Gain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__instrument__synth.html">Instrument Synth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__looper.html">Looper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__multitap__delay.html">Multi-tap Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__oscillator.html">Oscillator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__phase__shifter.html">Phase Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__pitch__shift.html">Pitch Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__ring__mod.html">Ring Modulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__slicer.html">Slicer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__variable__delay.html">Variable Delay</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DreamMaker FX Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Class fx_adsr_envelope</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/classfx__adsr__envelope.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="class-fx-adsr-envelope">
+<span id="exhale-class-classfx-adsr-envelope"></span><h1>Class fx_adsr_envelope<a class="headerlink" href="#class-fx-adsr-envelope" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_src_effects_dm_fx_adsr_envelope.h.html#file-src-effects-dm-fx-adsr-envelope-h"><span class="std std-ref">File dm_fx_adsr_envelope.h</span></a></p></li>
+</ul>
+<div class="section" id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="base-type">
+<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">fx_effect</span></code> (<a class="reference internal" href="classfx__effect.html#exhale-class-classfx-effect"><span class="std std-ref">Class fx_effect</span></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv416fx_adsr_envelope">
+<span id="_CPPv316fx_adsr_envelope"></span><span id="_CPPv216fx_adsr_envelope"></span><span id="fx_adsr_envelope"></span><span class="target" id="classfx__adsr__envelope"></span><em class="property">class </em><code class="sig-name descname">fx_adsr_envelope</code> : <em class="property">public</em> <a class="reference internal" href="classfx__effect.html#_CPPv49fx_effect" title="fx_effect">fx_effect</a><a class="headerlink" href="#_CPPv416fx_adsr_envelope" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Effect: Envelope generator. </p>
+<p>An envelope generator creates a volume envelope that can applied to either the audio from the instrument or an oscillator.</p>
+<p>Here’s a good explanation of what ADSR means: YTIDJT6rixgu4s4DITY </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N16fx_adsr_envelope16fx_adsr_envelopeEffffff">
+<span id="_CPPv3N16fx_adsr_envelope16fx_adsr_envelopeEffffff"></span><span id="_CPPv2N16fx_adsr_envelope16fx_adsr_envelopeEffffff"></span><span id="fx_adsr_envelope::fx_adsr_envelope__float.float.float.float.float.float"></span><span class="target" id="classfx__adsr__envelope_1aff938401ea980aeb3099462eb146c30f"></span><code class="sig-name descname">fx_adsr_envelope</code><span class="sig-paren">(</span>float <em>attack_ms</em>, float <em>decay_ms</em>, float <em>sustain_ms</em>, float <em>release_ms</em>, float <em>sustain_ratio</em>, float <em>gain_out</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16fx_adsr_envelope16fx_adsr_envelopeEffffff" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Constructs a new instance of the envelope. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">attack_ms</span></code>: The attack in milliseconds </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">decay_ms</span></code>: The decay in milliseconds </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">sustain_ms</span></code>: The sustain in milliseconds </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">release_ms</span></code>: The release in milliseconds </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">sustain_ratio</span></code>: Ratio of sustain volume to peak volume between attack / decay </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">gain_out</span></code>: The gain out (linear: 0.0 to 1.0) </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N16fx_adsr_envelope6enableEv">
+<span id="_CPPv3N16fx_adsr_envelope6enableEv"></span><span id="_CPPv2N16fx_adsr_envelope6enableEv"></span><span id="fx_adsr_envelope::enable"></span><span class="target" id="classfx__adsr__envelope_1ac132a4a318fd9e90d683ddbf1a27a1e9"></span>void <code class="sig-name descname">enable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16fx_adsr_envelope6enableEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Enable the <strong>this_effect</strong> (it is enabled by default) </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N16fx_adsr_envelope6bypassEv">
+<span id="_CPPv3N16fx_adsr_envelope6bypassEv"></span><span id="_CPPv2N16fx_adsr_envelope6bypassEv"></span><span id="fx_adsr_envelope::bypass"></span><span class="target" id="classfx__adsr__envelope_1af33ba71099aa662fa4f559449f044545"></span>void <code class="sig-name descname">bypass</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16fx_adsr_envelope6bypassEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Bypass the <strong>this_effect</strong> (will just pass clean audio through) </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N16fx_adsr_envelope13set_attack_msEf">
+<span id="_CPPv3N16fx_adsr_envelope13set_attack_msEf"></span><span id="_CPPv2N16fx_adsr_envelope13set_attack_msEf"></span><span id="fx_adsr_envelope::set_attack_ms__float"></span><span class="target" id="classfx__adsr__envelope_1a782f20ca99119474449a4cbe2d7121e2"></span>void <code class="sig-name descname">set_attack_ms</code><span class="sig-paren">(</span>float <em>attack</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16fx_adsr_envelope13set_attack_msEf" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sets the attack time in milliseconds. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">attack</span></code>: The attack time in milliseconds </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N16fx_adsr_envelope12set_decay_msEf">
+<span id="_CPPv3N16fx_adsr_envelope12set_decay_msEf"></span><span id="_CPPv2N16fx_adsr_envelope12set_decay_msEf"></span><span id="fx_adsr_envelope::set_decay_ms__float"></span><span class="target" id="classfx__adsr__envelope_1a34dfa68c89d9d20181a3ac228c6ad7a5"></span>void <code class="sig-name descname">set_decay_ms</code><span class="sig-paren">(</span>float <em>decay</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16fx_adsr_envelope12set_decay_msEf" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sets the decay time in milliseconds. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">decay</span></code>: The decay time in milliseconds </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N16fx_adsr_envelope14set_sustain_msEf">
+<span id="_CPPv3N16fx_adsr_envelope14set_sustain_msEf"></span><span id="_CPPv2N16fx_adsr_envelope14set_sustain_msEf"></span><span id="fx_adsr_envelope::set_sustain_ms__float"></span><span class="target" id="classfx__adsr__envelope_1ab0645ea4e21a3df454ffaaf0325f86c1"></span>void <code class="sig-name descname">set_sustain_ms</code><span class="sig-paren">(</span>float <em>sustain</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16fx_adsr_envelope14set_sustain_msEf" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sets the release time in milliseconds. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">sustain</span></code>: The sustain time in milliseconds </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N16fx_adsr_envelope14set_release_msEf">
+<span id="_CPPv3N16fx_adsr_envelope14set_release_msEf"></span><span id="_CPPv2N16fx_adsr_envelope14set_release_msEf"></span><span id="fx_adsr_envelope::set_release_ms__float"></span><span class="target" id="classfx__adsr__envelope_1ac0a58845e9c5597fd636f083f74f21ad"></span>void <code class="sig-name descname">set_release_ms</code><span class="sig-paren">(</span>float <em>release</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16fx_adsr_envelope14set_release_msEf" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N16fx_adsr_envelope15set_output_gainEf">
+<span id="_CPPv3N16fx_adsr_envelope15set_output_gainEf"></span><span id="_CPPv2N16fx_adsr_envelope15set_output_gainEf"></span><span id="fx_adsr_envelope::set_output_gain__float"></span><span class="target" id="classfx__adsr__envelope_1ac721f29073c4de090948e8d31e914973"></span>void <code class="sig-name descname">set_output_gain</code><span class="sig-paren">(</span>float <em>gain</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16fx_adsr_envelope15set_output_gainEf" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sets the output gain (linear) </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">gain</span></code>: The gain value (linear) </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N16fx_adsr_envelope12print_paramsEv">
+<span id="_CPPv3N16fx_adsr_envelope12print_paramsEv"></span><span id="_CPPv2N16fx_adsr_envelope12print_paramsEv"></span><span id="fx_adsr_envelope::print_params__void"></span><span class="target" id="classfx__adsr__envelope_1ac647da40810a3c82b9ded89709ad1cc2"></span>void <code class="sig-name descname">print_params</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16fx_adsr_envelope12print_paramsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Prints the parameters for the delay effect. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv4N16fx_adsr_envelope5inputE">
+<span id="_CPPv3N16fx_adsr_envelope5inputE"></span><span id="_CPPv2N16fx_adsr_envelope5inputE"></span><span id="fx_adsr_envelope::input__fx_audio_nodeP"></span><span class="target" id="classfx__adsr__envelope_1aa8413d27edd9d165fda5b54a20fbcc9f"></span>fx_audio_node *<code class="sig-name descname">input</code><a class="headerlink" href="#_CPPv4N16fx_adsr_envelope5inputE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Audio routing node: primary audio input </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N16fx_adsr_envelope6outputE">
+<span id="_CPPv3N16fx_adsr_envelope6outputE"></span><span id="_CPPv2N16fx_adsr_envelope6outputE"></span><span id="fx_adsr_envelope::output__fx_audio_nodeP"></span><span class="target" id="classfx__adsr__envelope_1a77decae0c991138a2d6124c45ecf1768"></span>fx_audio_node *<code class="sig-name descname">output</code><a class="headerlink" href="#_CPPv4N16fx_adsr_envelope6outputE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Audio routing node: primary audio output </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N16fx_adsr_envelope9attack_msE">
+<span id="_CPPv3N16fx_adsr_envelope9attack_msE"></span><span id="_CPPv2N16fx_adsr_envelope9attack_msE"></span><span id="fx_adsr_envelope::attack_ms__fx_control_nodeP"></span><span class="target" id="classfx__adsr__envelope_1a8755a83229b0613181c6b967e656683d"></span>fx_control_node *<code class="sig-name descname">attack_ms</code><a class="headerlink" href="#_CPPv4N16fx_adsr_envelope9attack_msE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Control routing node [input]: envelope attack in milliseconds </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N16fx_adsr_envelope8decay_msE">
+<span id="_CPPv3N16fx_adsr_envelope8decay_msE"></span><span id="_CPPv2N16fx_adsr_envelope8decay_msE"></span><span id="fx_adsr_envelope::decay_ms__fx_control_nodeP"></span><span class="target" id="classfx__adsr__envelope_1a95f3ec921f735408c042981442071bd0"></span>fx_control_node *<code class="sig-name descname">decay_ms</code><a class="headerlink" href="#_CPPv4N16fx_adsr_envelope8decay_msE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Control routing node [input]: envelope decay in milliseconds </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N16fx_adsr_envelope10sustain_msE">
+<span id="_CPPv3N16fx_adsr_envelope10sustain_msE"></span><span id="_CPPv2N16fx_adsr_envelope10sustain_msE"></span><span id="fx_adsr_envelope::sustain_ms__fx_control_nodeP"></span><span class="target" id="classfx__adsr__envelope_1a356007e4c07a711605921859b50d1e10"></span>fx_control_node *<code class="sig-name descname">sustain_ms</code><a class="headerlink" href="#_CPPv4N16fx_adsr_envelope10sustain_msE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Control routing node [input]: envelope sustain in milliseconds </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N16fx_adsr_envelope10release_msE">
+<span id="_CPPv3N16fx_adsr_envelope10release_msE"></span><span id="_CPPv2N16fx_adsr_envelope10release_msE"></span><span id="fx_adsr_envelope::release_ms__fx_control_nodeP"></span><span class="target" id="classfx__adsr__envelope_1a1e346c77984b262a02b941210cd72bca"></span>fx_control_node *<code class="sig-name descname">release_ms</code><a class="headerlink" href="#_CPPv4N16fx_adsr_envelope10release_msE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Control routing node [input]: envelope release in milliseconds </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N16fx_adsr_envelope10peak_ratioE">
+<span id="_CPPv3N16fx_adsr_envelope10peak_ratioE"></span><span id="_CPPv2N16fx_adsr_envelope10peak_ratioE"></span><span id="fx_adsr_envelope::peak_ratio__fx_control_nodeP"></span><span class="target" id="classfx__adsr__envelope_1aa3c412db728213b42ef53cadb78ede10"></span>fx_control_node *<code class="sig-name descname">peak_ratio</code><a class="headerlink" href="#_CPPv4N16fx_adsr_envelope10peak_ratioE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Control routing node [input]: relative volume after attack (0.0 to 1.0) - will be scaled by output volume </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N16fx_adsr_envelope13sustain_ratioE">
+<span id="_CPPv3N16fx_adsr_envelope13sustain_ratioE"></span><span id="_CPPv2N16fx_adsr_envelope13sustain_ratioE"></span><span id="fx_adsr_envelope::sustain_ratio__fx_control_nodeP"></span><span class="target" id="classfx__adsr__envelope_1aa9a3053c74f419a8b74933f5771da34d"></span>fx_control_node *<code class="sig-name descname">sustain_ratio</code><a class="headerlink" href="#_CPPv4N16fx_adsr_envelope13sustain_ratioE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Control routing node [input]: relative volume during sustain (0.0 to 1.0) - will be scaled by output volume </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N16fx_adsr_envelope8gain_outE">
+<span id="_CPPv3N16fx_adsr_envelope8gain_outE"></span><span id="_CPPv2N16fx_adsr_envelope8gain_outE"></span><span id="fx_adsr_envelope::gain_out__fx_control_nodeP"></span><span class="target" id="classfx__adsr__envelope_1a4e0eb91c963904e693f0916bac693e2c"></span>fx_control_node *<code class="sig-name descname">gain_out</code><a class="headerlink" href="#_CPPv4N16fx_adsr_envelope8gain_outE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Control routing node [input]: output pain </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N16fx_adsr_envelope5startE">
+<span id="_CPPv3N16fx_adsr_envelope5startE"></span><span id="_CPPv2N16fx_adsr_envelope5startE"></span><span id="fx_adsr_envelope::start__fx_control_nodeP"></span><span class="target" id="classfx__adsr__envelope_1a3546b07c79683065b852da2bd046e081"></span>fx_control_node *<code class="sig-name descname">start</code><a class="headerlink" href="#_CPPv4N16fx_adsr_envelope5startE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Control routing node [input]: start - start a new ADSR envelope run </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N16fx_adsr_envelope5valueE">
+<span id="_CPPv3N16fx_adsr_envelope5valueE"></span><span id="_CPPv2N16fx_adsr_envelope5valueE"></span><span id="fx_adsr_envelope::value__fx_control_nodeP"></span><span class="target" id="classfx__adsr__envelope_1ae138d6a98e84e3790feb24750fbc82ad"></span>fx_control_node *<code class="sig-name descname">value</code><a class="headerlink" href="#_CPPv4N16fx_adsr_envelope5valueE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Control routing node [output]: value of the envelope </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="classfx__amplitude__mod.html" class="btn btn-neutral float-right" title="Class fx_amplitude_mod" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="classfx__switch.html" class="btn btn-neutral float-left" title="Class fx_switch" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Run Jump Labs
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

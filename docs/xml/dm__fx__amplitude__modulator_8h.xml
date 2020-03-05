@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dm__fx__amplitude__modulator_8h" kind="file" language="C++">
+    <compoundname>dm_fx_amplitude_modulator.h</compoundname>
+    <includedby refid="dreammakerfx_8h" local="yes">src/dreammakerfx.h</includedby>
+    <invincdepgraph>
+      <node id="266">
+        <label>src/dreammakerfx.h</label>
+        <link refid="dreammakerfx_8h_source"/>
+      </node>
+      <node id="265">
+        <label>src/effects/dm_fx_amplitude_modulator.h</label>
+        <link refid="dm__fx__amplitude__modulator_8h"/>
+        <childnode refid="266" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classfx__amplitude__mod" prot="public">fx_amplitude_mod</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2020<sp/>Run<sp/>Jump<sp/>Labs<sp/>LLC.<sp/><sp/>All<sp/>right<sp/>reserved.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>code<sp/>is<sp/>licensed<sp/>under<sp/>MIT<sp/>license<sp/>(see<sp/>license.txt<sp/>for<sp/>details)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DM_FX_AMP_MOD_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DM_FX_AMP_MOD_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="classfx__amplitude__mod" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classfx__amplitude__mod" kindref="compound">fx_amplitude_mod</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classfx__effect" kindref="compound">fx_effect</ref><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>param_depth;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>param_rate_hz;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___enumerations_1gada898a149424188b3a23010c8fe89176" kindref="member">OSC_TYPES</ref><sp/>param_type;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>param_phase_deg;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>param_ext_modulator;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___enumerations_1gada898a149424188b3a23010c8fe89176" kindref="member">OSC_TYPES</ref><sp/>last_type;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init()<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>class</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>type<sp/>=<sp/>FX_AMPLITUDE_MODULATOR;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strcpy(effect_name,<sp/></highlight><highlight class="stringliteral">&quot;amplitude<sp/>modulator&quot;</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Assign<sp/>programmable<sp/>node<sp/>names</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfx__amplitude__mod_1a52c5dce1e56a9efbceb9f0aa572e35d4" kindref="member">input</ref><sp/>=<sp/>&amp;node_input;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfx__amplitude__mod_1a3ffb0f78f55a24d56ad40ed71b9c3655" kindref="member">output</ref><sp/>=<sp/>&amp;node_output;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfx__amplitude__mod_1aeedd96b1c4e5e8e1cbf93fb4e134362b" kindref="member">ext_mod_in</ref><sp/>=<sp/>&amp;node_loop_ext_mod;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>parameter<sp/>stack</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>indx<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_stack[indx]<sp/>=<sp/>&amp;param_rate_hz;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_stack_types[indx++]<sp/>=<sp/>T_FLOAT;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>param_stack[indx]<sp/>=<sp/>&amp;param_phase_deg;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>param_stack_types[indx++]<sp/>=<sp/>T_FLOAT;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_stack[indx]<sp/>=<sp/>&amp;param_depth;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_stack_types[indx++]<sp/>=<sp/>T_FLOAT;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_stack[indx]<sp/>=<sp/>&amp;param_type;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_stack_types[indx++]<sp/>=<sp/>T_INT16;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_stack[indx]<sp/>=<sp/>&amp;param_ext_modulator;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_stack_types[indx++]<sp/>=<sp/>T_BOOL;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>total_params<sp/>=<sp/>indx;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>additional<sp/>nodes<sp/>to<sp/>the<sp/>audio<sp/>stack</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>audio_node_stack[total_audio_nodes++]<sp/>=<sp/>&amp;node_loop_ext_mod;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Assign<sp/>controls</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfx__amplitude__mod_1a25ef00aa85c14e895710a505a9c6e0bd" kindref="member">depth</ref><sp/>=<sp/>&amp;node_ctrl_depth;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfx__amplitude__mod_1ad85024759667cd9decc11e4fb24461ef" kindref="member">rate_hz</ref><sp/>=<sp/>&amp;node_ctrl_rate_hz;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Additional<sp/>audio<sp/>nodes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fx_audio_node<sp/>node_loop_ext_mod;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Control<sp/>nodes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fx_control_node<sp/>node_ctrl_depth;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fx_control_node<sp/>node_ctrl_rate_hz;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="classfx__amplitude__mod_1a52c5dce1e56a9efbceb9f0aa572e35d4" refkind="member"><highlight class="normal"><sp/><sp/>fx_audio_node<sp/>*<sp/><ref refid="classfx__amplitude__mod_1a52c5dce1e56a9efbceb9f0aa572e35d4" kindref="member">input</ref>;</highlight></codeline>
+<codeline lineno="90" refid="classfx__amplitude__mod_1a3ffb0f78f55a24d56ad40ed71b9c3655" refkind="member"><highlight class="normal"><sp/><sp/>fx_audio_node<sp/>*<sp/><ref refid="classfx__amplitude__mod_1a3ffb0f78f55a24d56ad40ed71b9c3655" kindref="member">output</ref>;</highlight></codeline>
+<codeline lineno="94" refid="classfx__amplitude__mod_1aeedd96b1c4e5e8e1cbf93fb4e134362b" refkind="member"><highlight class="normal"><sp/><sp/>fx_audio_node<sp/>*<sp/><ref refid="classfx__amplitude__mod_1aeedd96b1c4e5e8e1cbf93fb4e134362b" kindref="member">ext_mod_in</ref>;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="classfx__amplitude__mod_1a25ef00aa85c14e895710a505a9c6e0bd" refkind="member"><highlight class="normal"><sp/><sp/>fx_control_node<sp/>*<sp/><ref refid="classfx__amplitude__mod_1a25ef00aa85c14e895710a505a9c6e0bd" kindref="member">depth</ref>;</highlight></codeline>
+<codeline lineno="104" refid="classfx__amplitude__mod_1ad85024759667cd9decc11e4fb24461ef" refkind="member"><highlight class="normal"><sp/><sp/>fx_control_node<sp/>*<sp/><ref refid="classfx__amplitude__mod_1ad85024759667cd9decc11e4fb24461ef" kindref="member">rate_hz</ref>;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="classfx__amplitude__mod_1acfe6780b005b6b34ba58e82b9b64cf50" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classfx__amplitude__mod_1acfe6780b005b6b34ba58e82b9b64cf50" kindref="member">fx_amplitude_mod</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classfx__amplitude__mod_1ad85024759667cd9decc11e4fb24461ef" kindref="member">rate_hz</ref>,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classfx__amplitude__mod_1a25ef00aa85c14e895710a505a9c6e0bd" kindref="member">depth</ref>)<sp/>:<sp/></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>node_loop_ext_mod(NODE_IN,<sp/></highlight><highlight class="stringliteral">&quot;external<sp/>modulator&quot;</highlight><highlight class="normal">,<sp/>this),</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>node_ctrl_depth(NODE_IN,<sp/>NODE_FLOAT,<sp/></highlight><highlight class="stringliteral">&quot;node_ctrl_depth&quot;</highlight><highlight class="normal">,<sp/>this,<sp/>FX_AMP_MOD_PARAM_ID_MOD_DEPTH),</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>node_ctrl_rate_hz(NODE_IN,<sp/>NODE_FLOAT,<sp/></highlight><highlight class="stringliteral">&quot;node_ctrl_rate_hz&quot;</highlight><highlight class="normal">,<sp/>this,<sp/>FX_AMP_MOD_PARAM_ID_MOD_FREQ)<sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_depth<sp/>=<sp/><ref refid="classfx__amplitude__mod_1a25ef00aa85c14e895710a505a9c6e0bd" kindref="member">depth</ref>;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_rate_hz<sp/>=<sp/><ref refid="classfx__amplitude__mod_1ad85024759667cd9decc11e4fb24461ef" kindref="member">rate_hz</ref>;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>last_type<sp/>=<sp/>param_type<sp/>=<sp/><ref refid="group___enumerations_1ggada898a149424188b3a23010c8fe89176a182a96214217602b26ba39a69f5c9801" kindref="member">OSC_SINE</ref>;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_ext_modulator<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>param_phase_deg<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>init();</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143" refid="classfx__amplitude__mod_1a354b528d3a59d766b7fc3e1ed74427f9" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classfx__amplitude__mod_1a354b528d3a59d766b7fc3e1ed74427f9" kindref="member">fx_amplitude_mod</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classfx__amplitude__mod_1ad85024759667cd9decc11e4fb24461ef" kindref="member">rate_hz</ref>,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classfx__amplitude__mod_1a25ef00aa85c14e895710a505a9c6e0bd" kindref="member">depth</ref>,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>initial_phase_deg,<sp/><ref refid="group___enumerations_1gada898a149424188b3a23010c8fe89176" kindref="member">OSC_TYPES</ref><sp/>modulation_type,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>use_ext_modulator)<sp/>:</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>node_loop_ext_mod(NODE_IN,<sp/></highlight><highlight class="stringliteral">&quot;external<sp/>modulator&quot;</highlight><highlight class="normal">,<sp/>this),</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>node_ctrl_depth(NODE_IN,<sp/>NODE_FLOAT,<sp/></highlight><highlight class="stringliteral">&quot;node_ctrl_depth&quot;</highlight><highlight class="normal">,<sp/>this,<sp/>FX_AMP_MOD_PARAM_ID_MOD_DEPTH),</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>node_ctrl_rate_hz(NODE_IN,<sp/>NODE_FLOAT,<sp/></highlight><highlight class="stringliteral">&quot;node_ctrl_rate_hz&quot;</highlight><highlight class="normal">,<sp/>this,<sp/>FX_AMP_MOD_PARAM_ID_MOD_FREQ)<sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_depth<sp/>=<sp/><ref refid="classfx__amplitude__mod_1a25ef00aa85c14e895710a505a9c6e0bd" kindref="member">depth</ref>;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_rate_hz<sp/>=<sp/><ref refid="classfx__amplitude__mod_1ad85024759667cd9decc11e4fb24461ef" kindref="member">rate_hz</ref>;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>param_phase_deg<sp/>=<sp/>initial_phase_deg;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>last_type<sp/>=<sp/>param_type<sp/>=<sp/>modulation_type;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_ext_modulator<sp/>=<sp/>use_ext_modulator;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>init();</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="161" refid="classfx__amplitude__mod_1a4c21c0e9725c1dd515a2bf0b2fb8f99e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classfx__amplitude__mod_1a4c21c0e9725c1dd515a2bf0b2fb8f99e" kindref="member">enable</ref>()<sp/>{<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>CHECK_LAST_ENABLED();</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>param_enabled<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>parent_canvas-&gt;spi_transmit_param(FX_AMPLITUDE_MODULATOR,<sp/>instance_id,<sp/>T_BOOL,<sp/>FX_AMP_MOD_PARAM_ID_ENABLED,<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*)<sp/>&amp;param_enabled);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170" refid="classfx__amplitude__mod_1a5d5ef5ff79e9c553a9ee5116c3dfa516" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classfx__amplitude__mod_1a5d5ef5ff79e9c553a9ee5116c3dfa516" kindref="member">bypass</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>CHECK_LAST_DISABLED();</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>param_enabled<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>parent_canvas-&gt;spi_transmit_param(FX_AMPLITUDE_MODULATOR,<sp/>instance_id,<sp/>T_BOOL,<sp/>FX_AMP_MOD_PARAM_ID_ENABLED,<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*)<sp/>&amp;param_enabled);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/>}<sp/><sp/></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183" refid="classfx__amplitude__mod_1ac0c2c2ab77761c961cd569d36e26ab17" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classfx__amplitude__mod_1ac0c2c2ab77761c961cd569d36e26ab17" kindref="member">set_depth</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classfx__amplitude__mod_1a25ef00aa85c14e895710a505a9c6e0bd" kindref="member">depth</ref>)<sp/>{<sp/></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>CHECK_LAST(<ref refid="classfx__amplitude__mod_1a25ef00aa85c14e895710a505a9c6e0bd" kindref="member">depth</ref>,<sp/>param_depth);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(node_ctrl_depth.connected)<sp/>{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>param_depth<sp/>=<sp/><ref refid="classfx__amplitude__mod_1a25ef00aa85c14e895710a505a9c6e0bd" kindref="member">depth</ref>;<sp/></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>parent_canvas-&gt;spi_transmit_param(FX_AMPLITUDE_MODULATOR,<sp/>instance_id,<sp/>T_FLOAT,<sp/>FX_AMP_MOD_PARAM_ID_MOD_DEPTH,<sp/>&amp;param_depth);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200" refid="classfx__amplitude__mod_1a90b19e7b942c13979bddeba8579813a4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classfx__amplitude__mod_1a90b19e7b942c13979bddeba8579813a4" kindref="member">set_rate_hz</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classfx__amplitude__mod_1ad85024759667cd9decc11e4fb24461ef" kindref="member">rate_hz</ref>)<sp/>{<sp/></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>CHECK_LAST(<ref refid="classfx__amplitude__mod_1ad85024759667cd9decc11e4fb24461ef" kindref="member">rate_hz</ref>,<sp/>param_rate_hz);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(node_ctrl_rate_hz.connected)<sp/>{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>param_rate_hz<sp/>=<sp/><ref refid="classfx__amplitude__mod_1ad85024759667cd9decc11e4fb24461ef" kindref="member">rate_hz</ref>;<sp/></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>parent_canvas-&gt;spi_transmit_param(FX_AMPLITUDE_MODULATOR,<sp/>instance_id,<sp/>T_FLOAT,<sp/>FX_AMP_MOD_PARAM_ID_MOD_FREQ,<sp/>&amp;param_rate_hz);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/>}<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217" refid="classfx__amplitude__mod_1a2561e4ad01e6a629409b59d73a86caf3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classfx__amplitude__mod_1a2561e4ad01e6a629409b59d73a86caf3" kindref="member">set_lfo_type</ref>(<ref refid="group___enumerations_1gada898a149424188b3a23010c8fe89176" kindref="member">OSC_TYPES</ref><sp/>new_type)<sp/>{</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>CHECK_LAST(new_type,<sp/>param_type);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>param_type<sp/>=<sp/>new_type;<sp/></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(new_type<sp/>!=<sp/>last_type)<sp/>{</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>parent_canvas-&gt;spi_transmit_param(FX_AMPLITUDE_MODULATOR,<sp/>instance_id,<sp/>T_INT16,<sp/>FX_AMP_MOD_PARAM_ID_MOD_TYPE,<sp/>&amp;param_type);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/>last_type<sp/>=<sp/>new_type;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232" refid="classfx__amplitude__mod_1a62563870f85a17142b545e1e8b718fdf" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><ref refid="classfx__amplitude__mod_1a62563870f85a17142b545e1e8b718fdf" kindref="member">print_params</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>void<sp/>print_parameter(<sp/>void<sp/>*<sp/>val,<sp/>char<sp/>*<sp/>name,<sp/>PARAM_TYPES<sp/>type)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;Parameters:&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>print_parameter(<sp/>&amp;param_enabled,<sp/></highlight><highlight class="stringliteral">&quot;Enabled&quot;</highlight><highlight class="normal">,<sp/>T_BOOL<sp/>);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>print_parameter(<sp/>&amp;param_depth,<sp/></highlight><highlight class="stringliteral">&quot;Depth&quot;</highlight><highlight class="normal">,<sp/>T_FLOAT<sp/>);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/>print_parameter(<sp/>&amp;param_rate_hz,<sp/></highlight><highlight class="stringliteral">&quot;Rate<sp/>(Hz)&quot;</highlight><highlight class="normal">,<sp/>T_FLOAT<sp/>);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/>print_parameter(<sp/>&amp;param_phase_deg,<sp/></highlight><highlight class="stringliteral">&quot;Initial<sp/>phase<sp/>(degrees)&quot;</highlight><highlight class="normal">,<sp/>T_FLOAT<sp/>);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/>print_parameter(<sp/>&amp;param_type,<sp/></highlight><highlight class="stringliteral">&quot;Oscillator<sp/>type&quot;</highlight><highlight class="normal">,<sp/>T_INT16<sp/>);</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/>print_parameter(<sp/>&amp;param_ext_modulator,<sp/></highlight><highlight class="stringliteral">&quot;External<sp/>modulator&quot;</highlight><highlight class="normal">,<sp/>T_BOOL<sp/>);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;Control<sp/>Routing:&quot;</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/>print_ctrl_node_status(&amp;node_ctrl_depth);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/>print_ctrl_node_status(&amp;node_ctrl_rate_hz);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;Audio<sp/>Routing:&quot;</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/>print_audio_node_status(&amp;node_input);</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/>print_audio_node_status(&amp;node_output);</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/>print_audio_node_status(&amp;node_loop_ext_mod);</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.println();</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>DM_FX_AMP_MOD_H</highlight></codeline>
+    </programlisting>
+    <location file="src/effects/dm_fx_amplitude_modulator.h"/>
+  </compounddef>
+</doxygen>

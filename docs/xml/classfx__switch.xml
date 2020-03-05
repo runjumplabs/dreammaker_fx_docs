@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classfx__switch" kind="class" language="C++" prot="public">
+    <compoundname>fx_switch</compoundname>
+    <includes refid="dreammakerfx_8h" local="no">dreammakerfx.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classfx__switch_1ab78621eb24452c18d7173986e7b3f50f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int fx_switch::up_pin</definition>
+        <argsstring></argsstring>
+        <name>up_pin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="252" column="1" bodyfile="src/dreammakerfx.h" bodystart="252" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__switch_1aa1d835a58b1cae15c6704fb7b4597082" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int fx_switch::down_pin</definition>
+        <argsstring></argsstring>
+        <name>down_pin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="252" column="1" bodyfile="src/dreammakerfx.h" bodystart="252" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__switch_1a116faed18ae90c52cca9af906c9a7cae" prot="private" static="no" mutable="no">
+        <type>SWITCH_POS</type>
+        <definition>SWITCH_POS fx_switch::switch_pos_last</definition>
+        <argsstring></argsstring>
+        <name>switch_pos_last</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="253" column="1" bodyfile="src/dreammakerfx.h" bodystart="253" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classfx__switch_1aaf55be7752571b572e9c4f502613e915" prot="public" static="no" mutable="no">
+        <type>SWITCH_POS</type>
+        <definition>SWITCH_POS fx_switch::switch_pos</definition>
+        <argsstring></argsstring>
+        <name>switch_pos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Current switch position (SWITCH_POS_UP, SWITCH_POS_MIDDLE, SWITCH_POS_DOWN) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="256" column="1" bodyfile="src/dreammakerfx.h" bodystart="256" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classfx__switch_1a45bf873b49a6cda9eb4c3cfad8bb8bbe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool fx_switch::has_changed</definition>
+        <argsstring>(void)</argsstring>
+        <name>has_changed</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Determines if the swtich has changed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if changed, False otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="263" column="1" bodyfile="src/dreammakerfx.h" bodystart="263" bodyend="267"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Manages the state of any hardware toggle switches. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/dreammakerfx.h" line="249" column="1" bodyfile="src/dreammakerfx.h" bodystart="249" bodyend="299"/>
+    <listofallmembers>
+      <member refid="classfx__switch_1aa1d835a58b1cae15c6704fb7b4597082" prot="private" virt="non-virtual"><scope>fx_switch</scope><name>down_pin</name></member>
+      <member refid="classfx__switch_1a45bf873b49a6cda9eb4c3cfad8bb8bbe" prot="public" virt="non-virtual"><scope>fx_switch</scope><name>has_changed</name></member>
+      <member refid="classfx__switch_1aaf55be7752571b572e9c4f502613e915" prot="public" virt="non-virtual"><scope>fx_switch</scope><name>switch_pos</name></member>
+      <member refid="classfx__switch_1a116faed18ae90c52cca9af906c9a7cae" prot="private" virt="non-virtual"><scope>fx_switch</scope><name>switch_pos_last</name></member>
+      <member refid="classfx__switch_1ab78621eb24452c18d7173986e7b3f50f" prot="private" virt="non-virtual"><scope>fx_switch</scope><name>up_pin</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

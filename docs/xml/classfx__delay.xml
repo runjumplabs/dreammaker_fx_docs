@@ -1,0 +1,637 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classfx__delay" kind="class" language="C++" prot="public">
+    <compoundname>fx_delay</compoundname>
+    <basecompoundref refid="classfx__effect" prot="public" virt="non-virtual">fx_effect</basecompoundref>
+    <includes refid="dm__fx__delay_8h" local="no">dm_fx_delay.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classfx__delay_1a8419126a658801b195198e8947051400" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float fx_delay::param_len_ms</definition>
+        <argsstring></argsstring>
+        <name>param_len_ms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_delay.h" line="22" column="1" bodyfile="src/effects/dm_fx_delay.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__delay_1a5eb73e95cfcf05625b306fb28da3c610" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float fx_delay::param_len_max_ms</definition>
+        <argsstring></argsstring>
+        <name>param_len_max_ms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_delay.h" line="23" column="1" bodyfile="src/effects/dm_fx_delay.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__delay_1add436461c59b48074330a3377ee18308" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float fx_delay::param_feedback</definition>
+        <argsstring></argsstring>
+        <name>param_feedback</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_delay.h" line="24" column="1" bodyfile="src/effects/dm_fx_delay.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__delay_1a7b476ba328d6a3dfea3f4d9712b8d7d0" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float fx_delay::param_wet_mix</definition>
+        <argsstring></argsstring>
+        <name>param_wet_mix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_delay.h" line="25" column="1" bodyfile="src/effects/dm_fx_delay.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__delay_1aefe68131621906445c6d2b43c2ee5b69" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float fx_delay::param_dry_mix</definition>
+        <argsstring></argsstring>
+        <name>param_dry_mix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_delay.h" line="26" column="1" bodyfile="src/effects/dm_fx_delay.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__delay_1a7e36eaa42974d483efd8784939a961bd" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool fx_delay::param_ext_fb_processing</definition>
+        <argsstring></argsstring>
+        <name>param_ext_fb_processing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_delay.h" line="27" column="1" bodyfile="src/effects/dm_fx_delay.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__delay_1a9bff8e2784d2aba33411e46508ac02aa" prot="private" static="no" mutable="no">
+        <type>fx_audio_node</type>
+        <definition>fx_audio_node fx_delay::node_delay_tx</definition>
+        <argsstring></argsstring>
+        <name>node_delay_tx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_delay.h" line="31" column="1" bodyfile="src/effects/dm_fx_delay.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__delay_1a9d56566b8acfa2ddb3c92424c0e5beaa" prot="private" static="no" mutable="no">
+        <type>fx_audio_node</type>
+        <definition>fx_audio_node fx_delay::node_delay_rx</definition>
+        <argsstring></argsstring>
+        <name>node_delay_rx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_delay.h" line="32" column="1" bodyfile="src/effects/dm_fx_delay.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__delay_1a3504669e2b3a9a1da1642b8095c0aaaa" prot="private" static="no" mutable="no">
+        <type>fx_control_node</type>
+        <definition>fx_control_node fx_delay::node_ctrl_len_ms</definition>
+        <argsstring></argsstring>
+        <name>node_ctrl_len_ms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_delay.h" line="35" column="1" bodyfile="src/effects/dm_fx_delay.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__delay_1a8ffb33ec0fb00188bca866a6c0964ac7" prot="private" static="no" mutable="no">
+        <type>fx_control_node</type>
+        <definition>fx_control_node fx_delay::node_ctrl_feedback</definition>
+        <argsstring></argsstring>
+        <name>node_ctrl_feedback</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_delay.h" line="36" column="1" bodyfile="src/effects/dm_fx_delay.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__delay_1a0bcd012b845bd6d89b7a99870c5bd7c2" prot="private" static="no" mutable="no">
+        <type>fx_control_node</type>
+        <definition>fx_control_node fx_delay::node_ctrl_dry_mix</definition>
+        <argsstring></argsstring>
+        <name>node_ctrl_dry_mix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_delay.h" line="37" column="1" bodyfile="src/effects/dm_fx_delay.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__delay_1a5e25bbe83bfc7cb3d7c73ac8a2a0c9ea" prot="private" static="no" mutable="no">
+        <type>fx_control_node</type>
+        <definition>fx_control_node fx_delay::node_ctrl_wet_mix</definition>
+        <argsstring></argsstring>
+        <name>node_ctrl_wet_mix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_delay.h" line="38" column="1" bodyfile="src/effects/dm_fx_delay.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classfx__delay_1a07652b9b855e12f74705811f65670068" prot="public" static="no" mutable="no">
+        <type>fx_audio_node *</type>
+        <definition>fx_audio_node* fx_delay::input</definition>
+        <argsstring></argsstring>
+        <name>input</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Audio routing node [input]: primary audio input </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_delay.h" line="100" column="1" bodyfile="src/effects/dm_fx_delay.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__delay_1aa247832fc523f7a1d82dcd94e0c46757" prot="public" static="no" mutable="no">
+        <type>fx_audio_node *</type>
+        <definition>fx_audio_node* fx_delay::output</definition>
+        <argsstring></argsstring>
+        <name>output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Audio routing node [output]: primary audio output </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_delay.h" line="105" column="1" bodyfile="src/effects/dm_fx_delay.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__delay_1a47d0604757c9fae775e9dc1d0c8e0c43" prot="public" static="no" mutable="no">
+        <type>fx_audio_node *</type>
+        <definition>fx_audio_node* fx_delay::fx_send</definition>
+        <argsstring></argsstring>
+        <name>fx_send</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Audio routing node [output]: effect loop send before entering delay line of this effect </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_delay.h" line="110" column="1" bodyfile="src/effects/dm_fx_delay.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__delay_1a48f73cc2af7f37afde7a96e885961d4a" prot="public" static="no" mutable="no">
+        <type>fx_audio_node *</type>
+        <definition>fx_audio_node* fx_delay::fx_receive</definition>
+        <argsstring></argsstring>
+        <name>fx_receive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Audio routing node [output]: effect loop return before entering delay line of this effect </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_delay.h" line="115" column="1" bodyfile="src/effects/dm_fx_delay.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__delay_1ab3ab27196c40eaae2fc8f874642eca50" prot="public" static="no" mutable="no">
+        <type>fx_control_node *</type>
+        <definition>fx_control_node* fx_delay::length_ms</definition>
+        <argsstring></argsstring>
+        <name>length_ms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Control routing node [input]: Length of delay line in milliseconds (1/1000s of a second) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_delay.h" line="121" column="1" bodyfile="src/effects/dm_fx_delay.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__delay_1a632917c322f068445ab1772877b24661" prot="public" static="no" mutable="no">
+        <type>fx_control_node *</type>
+        <definition>fx_control_node* fx_delay::feedback</definition>
+        <argsstring></argsstring>
+        <name>feedback</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Control routing node [input]: Feedback ratio (between 0.0 and 1.0) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_delay.h" line="126" column="1" bodyfile="src/effects/dm_fx_delay.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__delay_1a38c230d5672d588c699b514f2dcbac39" prot="public" static="no" mutable="no">
+        <type>fx_control_node *</type>
+        <definition>fx_control_node* fx_delay::dry_mix</definition>
+        <argsstring></argsstring>
+        <name>dry_mix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Control routing node [input]: Dry mix (between 0.0 and 1.0) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_delay.h" line="131" column="1" bodyfile="src/effects/dm_fx_delay.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__delay_1a6f3bbdd01c6153ad211f12b122fe05bb" prot="public" static="no" mutable="no">
+        <type>fx_control_node *</type>
+        <definition>fx_control_node* fx_delay::wet_mix</definition>
+        <argsstring></argsstring>
+        <name>wet_mix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Control routing node [input]: Wet mix (between 0.0 and 1.0) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_delay.h" line="136" column="1" bodyfile="src/effects/dm_fx_delay.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classfx__delay_1aacf2fd4d5f39e68b4e7fd5efe38612b1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_delay::init</definition>
+        <argsstring>(void)</argsstring>
+        <name>init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_delay.h" line="41" column="1" bodyfile="src/effects/dm_fx_delay.h" bodystart="41" bodyend="91"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classfx__delay_1aac7eb3b50aeb93b9938456ca659e7cd4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>fx_delay::fx_delay</definition>
+        <argsstring>(float delay_len_ms, float feedback)</argsstring>
+        <name>fx_delay</name>
+        <param>
+          <type>float</type>
+          <declname>delay_len_ms</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>feedback</declname>
+        </param>
+        <briefdescription>
+<para>Basic constructor for delay effect. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">delay_len_ms</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the delay in milliseconds (1/1000s of a second) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">feedback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The feedback ration (between 0.0 and 1.0) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_delay.h" line="147" column="1" bodyfile="src/effects/dm_fx_delay.h" bodystart="147" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__delay_1ae7412fb1c040a2b1b2b515d32cf3513a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>fx_delay::fx_delay</definition>
+        <argsstring>(float delay_len_ms, float delay_len_max_ms, float feedback, float mix_dry, float mix_wet, bool enable_ext_fx)</argsstring>
+        <name>fx_delay</name>
+        <param>
+          <type>float</type>
+          <declname>delay_len_ms</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>delay_len_max_ms</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>feedback</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>mix_dry</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>mix_wet</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enable_ext_fx</declname>
+        </param>
+        <briefdescription>
+<para>Advanced constructor for delay effect. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">delay_len_ms</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the delay in milliseconds (1/1000s of a second) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">delay_len_max_ms</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The maximum length of the delay (if the delay length is modified) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">feedback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The feedback ration (between 0.0 and 1.0) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">feedthrough</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The delay feed through ratio (between 0.0 and 1.0) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">enable_ext_fx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Enable the send/receive FX loop </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_delay.h" line="179" column="1" bodyfile="src/effects/dm_fx_delay.h" bodystart="179" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__delay_1aa2b2f620ddfa1b85800aadc764a07f6f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_delay::enable</definition>
+        <argsstring>()</argsstring>
+        <name>enable</name>
+        <briefdescription>
+<para>Enable the <bold>this_effect</bold> (it is enabled by default) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_delay.h" line="203" column="1" bodyfile="src/effects/dm_fx_delay.h" bodystart="203" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__delay_1a01012a63d6c8ea4536f6b3dfbab32e73" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_delay::bypass</definition>
+        <argsstring>()</argsstring>
+        <name>bypass</name>
+        <briefdescription>
+<para>Bypass the <bold>this_effect</bold> (will just pass clean audio through) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_delay.h" line="212" column="1" bodyfile="src/effects/dm_fx_delay.h" bodystart="212" bodyend="216"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__delay_1ad2712b329a719dad80041f63cd5c39e1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_delay::set_length_ms</definition>
+        <argsstring>(float len_ms)</argsstring>
+        <name>set_length_ms</name>
+        <param>
+          <type>float</type>
+          <declname>len_ms</declname>
+        </param>
+        <briefdescription>
+<para>Update the length of the delay. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Note, if you used the simple constructor, the length of the delay needs to be less than or equal to the initial delay value. If you want the ability to set a longer delay than the initial value, use the advanced constructor as this will allow you to also specify the total amount of delay space to allocate which is then the maximum length of a delay. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_delay.h" line="224" column="1" bodyfile="src/effects/dm_fx_delay.h" bodystart="224" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__delay_1a27d2959ee0ad5ec9abfce93df89c865c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_delay::set_feedback</definition>
+        <argsstring>(float feedback)</argsstring>
+        <name>set_feedback</name>
+        <param>
+          <type>float</type>
+          <declname>feedback</declname>
+        </param>
+        <briefdescription>
+<para>Updates the feedback parameter of the delay. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_delay.h" line="240" column="1" bodyfile="src/effects/dm_fx_delay.h" bodystart="240" bodyend="251"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__delay_1a21441b57577d8996d5500a5d15a79afc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_delay::set_dry_mix</definition>
+        <argsstring>(float dry_mix)</argsstring>
+        <name>set_dry_mix</name>
+        <param>
+          <type>float</type>
+          <declname>dry_mix</declname>
+        </param>
+        <briefdescription>
+<para>Updates the dry / clean mix of the delay (0.0 to 1.0) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_delay.h" line="256" column="1" bodyfile="src/effects/dm_fx_delay.h" bodystart="256" bodyend="267"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__delay_1a0e7a8f0f8276ff4b0c1cfad589bd30b5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_delay::set_wet_mix</definition>
+        <argsstring>(float wet_mix)</argsstring>
+        <name>set_wet_mix</name>
+        <param>
+          <type>float</type>
+          <declname>wet_mix</declname>
+        </param>
+        <briefdescription>
+<para>Updates the wet / delay mix of the delay (0.0 to 1.0) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_delay.h" line="273" column="1" bodyfile="src/effects/dm_fx_delay.h" bodystart="273" bodyend="284"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__delay_1a0982e31da3096ac3d850e71eca18f6fc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_delay::print_params</definition>
+        <argsstring>(void)</argsstring>
+        <name>print_params</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Prints the parameters for the delay effect. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_delay.h" line="291" column="1" bodyfile="src/effects/dm_fx_delay.h" bodystart="291" bodyend="365"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Effect: Delay/echo. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This is basically an echo effect.</para>
+<para>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/E36AkCAzGWo&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;=&quot;&quot;&gt;&lt;/iframe&gt;</para>
+<para>Example: ___delay_1.c___ </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="30">
+        <label>fx_delay</label>
+        <link refid="classfx__delay"/>
+        <childnode refid="31" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>fx_effect</label>
+        <link refid="classfx__effect"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="32">
+        <label>fx_delay</label>
+        <link refid="classfx__delay"/>
+        <childnode refid="33" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>fx_pedal</label>
+        <link refid="classfx__pedal"/>
+      </node>
+      <node id="33">
+        <label>fx_effect</label>
+        <link refid="classfx__effect"/>
+        <childnode refid="34" relation="usage">
+          <edgelabel>parent_canvas</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/effects/dm_fx_delay.h" line="17" column="1" bodyfile="src/effects/dm_fx_delay.h" bodystart="17" bodyend="367"/>
+    <listofallmembers>
+      <member refid="classfx__effect_1ab69ae64deecdbc5915de9b66b4f3e987" prot="protected" virt="non-virtual"><scope>fx_delay</scope><name>audio_node_stack</name></member>
+      <member refid="classfx__effect_1abdbbc884fc92a23af5ec5b351a972b97" prot="protected" virt="non-virtual"><scope>fx_delay</scope><name>bool_param_updated</name></member>
+      <member refid="classfx__delay_1a01012a63d6c8ea4536f6b3dfbab32e73" prot="public" virt="non-virtual"><scope>fx_delay</scope><name>bypass</name></member>
+      <member refid="classfx__effect_1a700589ec8a30f3197cebce4eb955fa31" prot="protected" virt="non-virtual"><scope>fx_delay</scope><name>control_node_stack</name></member>
+      <member refid="classfx__delay_1a38c230d5672d588c699b514f2dcbac39" prot="public" virt="non-virtual"><scope>fx_delay</scope><name>dry_mix</name></member>
+      <member refid="classfx__effect_1af7d5319aca3b86b0e76418385d0478ea" prot="public" virt="non-virtual"><scope>fx_delay</scope><name>effect_name</name></member>
+      <member refid="classfx__delay_1aa2b2f620ddfa1b85800aadc764a07f6f" prot="public" virt="non-virtual"><scope>fx_delay</scope><name>enable</name></member>
+      <member refid="classfx__delay_1a632917c322f068445ab1772877b24661" prot="public" virt="non-virtual"><scope>fx_delay</scope><name>feedback</name></member>
+      <member refid="classfx__effect_1a56eefdb5f90e991e3f31d855e87e9213" prot="protected" virt="non-virtual"><scope>fx_delay</scope><name>float_param_updated</name></member>
+      <member refid="classfx__delay_1aac7eb3b50aeb93b9938456ca659e7cd4" prot="public" virt="non-virtual"><scope>fx_delay</scope><name>fx_delay</name></member>
+      <member refid="classfx__delay_1ae7412fb1c040a2b1b2b515d32cf3513a" prot="public" virt="non-virtual"><scope>fx_delay</scope><name>fx_delay</name></member>
+      <member refid="classfx__effect_1aab2d00a6784612158e41606297952873" prot="public" virt="non-virtual"><scope>fx_delay</scope><name>fx_effect</name></member>
+      <member refid="classfx__effect_1ae5be756c63862665f422aa25a14d3bef" prot="protected" virt="non-virtual"><scope>fx_delay</scope><name>fx_pedal</name></member>
+      <member refid="classfx__delay_1a48f73cc2af7f37afde7a96e885961d4a" prot="public" virt="non-virtual"><scope>fx_delay</scope><name>fx_receive</name></member>
+      <member refid="classfx__delay_1a47d0604757c9fae775e9dc1d0c8e0c43" prot="public" virt="non-virtual"><scope>fx_delay</scope><name>fx_send</name></member>
+      <member refid="classfx__effect_1a551b61721aadaeccb3cd2ba9fc826609" prot="protected" virt="non-virtual"><scope>fx_delay</scope><name>get_audio_node_index</name></member>
+      <member refid="classfx__effect_1aba27ace404ab75a174892cb5908f58b3" prot="protected" virt="non-virtual"><scope>fx_delay</scope><name>get_control_node_index</name></member>
+      <member refid="classfx__effect_1a3ddd0473c4a01e858a17b51f14995c70" prot="public" virt="non-virtual"><scope>fx_delay</scope><name>get_name</name></member>
+      <member refid="classfx__effect_1a14e0cb29cd7e86d0b8f566b3066dbf32" prot="public" virt="non-virtual"><scope>fx_delay</scope><name>get_type</name></member>
+      <member refid="classfx__delay_1aacf2fd4d5f39e68b4e7fd5efe38612b1" prot="private" virt="non-virtual"><scope>fx_delay</scope><name>init</name></member>
+      <member refid="classfx__delay_1a07652b9b855e12f74705811f65670068" prot="public" virt="non-virtual"><scope>fx_delay</scope><name>input</name></member>
+      <member refid="classfx__effect_1a35011b582dc3eb033f2174b404e15fd8" prot="protected" virt="non-virtual"><scope>fx_delay</scope><name>instance_id</name></member>
+      <member refid="classfx__delay_1ab3ab27196c40eaae2fc8f874642eca50" prot="public" virt="non-virtual"><scope>fx_delay</scope><name>length_ms</name></member>
+      <member refid="classfx__delay_1a0bcd012b845bd6d89b7a99870c5bd7c2" prot="private" virt="non-virtual"><scope>fx_delay</scope><name>node_ctrl_dry_mix</name></member>
+      <member refid="classfx__delay_1a8ffb33ec0fb00188bca866a6c0964ac7" prot="private" virt="non-virtual"><scope>fx_delay</scope><name>node_ctrl_feedback</name></member>
+      <member refid="classfx__delay_1a3504669e2b3a9a1da1642b8095c0aaaa" prot="private" virt="non-virtual"><scope>fx_delay</scope><name>node_ctrl_len_ms</name></member>
+      <member refid="classfx__delay_1a5e25bbe83bfc7cb3d7c73ac8a2a0c9ea" prot="private" virt="non-virtual"><scope>fx_delay</scope><name>node_ctrl_wet_mix</name></member>
+      <member refid="classfx__delay_1a9d56566b8acfa2ddb3c92424c0e5beaa" prot="private" virt="non-virtual"><scope>fx_delay</scope><name>node_delay_rx</name></member>
+      <member refid="classfx__delay_1a9bff8e2784d2aba33411e46508ac02aa" prot="private" virt="non-virtual"><scope>fx_delay</scope><name>node_delay_tx</name></member>
+      <member refid="classfx__effect_1a69b60011be5fc3ade57b937405aa835d" prot="protected" virt="non-virtual"><scope>fx_delay</scope><name>node_enabled</name></member>
+      <member refid="classfx__effect_1a61f6f19f2cd7be8762758512e9cd5097" prot="protected" virt="non-virtual"><scope>fx_delay</scope><name>node_index</name></member>
+      <member refid="classfx__effect_1a66c709a96dd59fd1e21c3407a160a8e8" prot="protected" virt="non-virtual"><scope>fx_delay</scope><name>node_input</name></member>
+      <member refid="classfx__effect_1aabadf3d22b48bc21227f72d38bb0d5fe" prot="protected" virt="non-virtual"><scope>fx_delay</scope><name>node_output</name></member>
+      <member refid="classfx__delay_1aa247832fc523f7a1d82dcd94e0c46757" prot="public" virt="non-virtual"><scope>fx_delay</scope><name>output</name></member>
+      <member refid="classfx__delay_1aefe68131621906445c6d2b43c2ee5b69" prot="private" virt="non-virtual"><scope>fx_delay</scope><name>param_dry_mix</name></member>
+      <member refid="classfx__effect_1a0774058f9db052bfc8a68159f13031f2" prot="protected" virt="non-virtual"><scope>fx_delay</scope><name>param_enabled</name></member>
+      <member refid="classfx__delay_1a7e36eaa42974d483efd8784939a961bd" prot="private" virt="non-virtual"><scope>fx_delay</scope><name>param_ext_fb_processing</name></member>
+      <member refid="classfx__delay_1add436461c59b48074330a3377ee18308" prot="private" virt="non-virtual"><scope>fx_delay</scope><name>param_feedback</name></member>
+      <member refid="classfx__delay_1a5eb73e95cfcf05625b306fb28da3c610" prot="private" virt="non-virtual"><scope>fx_delay</scope><name>param_len_max_ms</name></member>
+      <member refid="classfx__delay_1a8419126a658801b195198e8947051400" prot="private" virt="non-virtual"><scope>fx_delay</scope><name>param_len_ms</name></member>
+      <member refid="classfx__effect_1aaf455e34fced9667a8cf26cdb9fb6641" prot="protected" virt="non-virtual"><scope>fx_delay</scope><name>param_stack</name></member>
+      <member refid="classfx__effect_1a0ea0d3bfe30592895fa23d241a9baa38" prot="protected" virt="non-virtual"><scope>fx_delay</scope><name>param_stack_types</name></member>
+      <member refid="classfx__delay_1a7b476ba328d6a3dfea3f4d9712b8d7d0" prot="private" virt="non-virtual"><scope>fx_delay</scope><name>param_wet_mix</name></member>
+      <member refid="classfx__effect_1a69bef0da54cedf8e558d65b755716999" prot="protected" virt="non-virtual"><scope>fx_delay</scope><name>parent_canvas</name></member>
+      <member refid="classfx__delay_1a0982e31da3096ac3d850e71eca18f6fc" prot="public" virt="non-virtual"><scope>fx_delay</scope><name>print_params</name></member>
+      <member refid="classfx__effect_1aaeececeee434ea76afdf649c3bed7698" prot="protected" virt="non-virtual"><scope>fx_delay</scope><name>serialize_params</name></member>
+      <member refid="classfx__effect_1a4c513243328d3b715822e74d21dffe99" prot="public" virt="non-virtual"><scope>fx_delay</scope><name>service</name></member>
+      <member refid="classfx__delay_1a21441b57577d8996d5500a5d15a79afc" prot="public" virt="non-virtual"><scope>fx_delay</scope><name>set_dry_mix</name></member>
+      <member refid="classfx__delay_1a27d2959ee0ad5ec9abfce93df89c865c" prot="public" virt="non-virtual"><scope>fx_delay</scope><name>set_feedback</name></member>
+      <member refid="classfx__delay_1ad2712b329a719dad80041f63cd5c39e1" prot="public" virt="non-virtual"><scope>fx_delay</scope><name>set_length_ms</name></member>
+      <member refid="classfx__delay_1a0e7a8f0f8276ff4b0c1cfad589bd30b5" prot="public" virt="non-virtual"><scope>fx_delay</scope><name>set_wet_mix</name></member>
+      <member refid="classfx__effect_1a4f5dbb43e76ca1fa8b8a7c56aaa9f232" prot="protected" virt="non-virtual"><scope>fx_delay</scope><name>total_audio_nodes</name></member>
+      <member refid="classfx__effect_1a91d9c1dcd7542aaec7a969af78804caa" prot="protected" virt="non-virtual"><scope>fx_delay</scope><name>total_control_nodes</name></member>
+      <member refid="classfx__effect_1a140e1553b23532a2f09f12f94833713e" prot="protected" virt="non-virtual"><scope>fx_delay</scope><name>total_params</name></member>
+      <member refid="classfx__effect_1a5e78416b59c4a21367e58ffc09fcf137" prot="protected" virt="non-virtual"><scope>fx_delay</scope><name>type</name></member>
+      <member refid="classfx__effect_1a0b94adfa51991a989cd10f4122c9ac22" prot="protected" virt="non-virtual"><scope>fx_delay</scope><name>updated_parameters</name></member>
+      <member refid="classfx__delay_1a6f3bbdd01c6153ad211f12b122fe05bb" prot="public" virt="non-virtual"><scope>fx_delay</scope><name>wet_mix</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

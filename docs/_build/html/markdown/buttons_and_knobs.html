@@ -1,0 +1,411 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Buttons, Knobs and Lights &mdash; DreamMaker FX Documentation  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> DreamMaker FX Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="echo_basic.html">Building a Basic Echo Pedal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adding_effects.html">The basics of creating / adding effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="routing_audio.html">The basics of routing audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controlling_effects.html">The basics of controlling effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_api.html">Using the API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debugging.html">Debugging Sketches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">General troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Pedal Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__pedal.html">Pedal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__led.html">LEDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__pot.html">Pots/Knobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__switch.html">Switches</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Effect Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__adsr__envelope.html">ADSR Envelope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__amplitude__mod.html">Amplitude Modulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__compressor.html">Compressor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__delay.html">Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__destructor.html">Destructor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__envelope__tracker.html">Envelope Follower</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__gain.html">Gain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__instrument__synth.html">Instrument Synth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__looper.html">Looper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__multitap__delay.html">Multi-tap Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__oscillator.html">Oscillator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__phase__shifter.html">Phase Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__pitch__shift.html">Pitch Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__ring__mod.html">Ring Modulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__slicer.html">Slicer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__variable__delay.html">Variable Delay</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DreamMaker FX Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Buttons, Knobs and Lights</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/markdown/buttons_and_knobs.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="buttons-knobs-and-lights">
+<h1>Buttons, Knobs and Lights<a class="headerlink" href="#buttons-knobs-and-lights" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<p>The DreamMakerFX platform has a few buttons and knobs on it.  Each of these is completely programmable.</p>
+<div class="section" id="configuring-the-buttons-aka-footswitches">
+<h2>Configuring the Buttons (aka Footswitches)<a class="headerlink" href="#configuring-the-buttons-aka-footswitches" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>The buttons can be set up to do the following:</p>
+<ol class="simple">
+<li><p>Bypass the entire effect like a typical bypass switch on a pedal</p></li>
+<li><p>Tap in a tempo or delay lenght</p></li>
+<li><p>Behave as a momentary effect (i.e. while button is held down, do one thing and when it is release, do something else)</p></li>
+<li><p>Behave as a toggle for an effect (i.e. tap it once to turn something on, tap it again to turn it off).</p></li>
+</ol>
+</div>
+<div class="section" id="configuring-the-button-as-a-pedal-bypass-switch">
+<h2><strong>1. Configuring the button as a pedal bypass switch</strong><a class="headerlink" href="#configuring-the-button-as-a-pedal-bypass-switch" title="Permalink to this headline">¶</a></h2>
+<p>To configure either the left or right footswtich to become the bypass button for the effect, we use the <code class="docutils literal notranslate"><span class="pre">pedal.add_bypass_button()</span></code> function while defining our pedal routes in <code class="docutils literal notranslate"><span class="pre">setup()</span></code>.  When we <em>call</em> the <code class="docutils literal notranslate"><span class="pre">pedal.add_bypass_button()</span></code> function, we tell it which footswtich to use as the bypass button by using either <code class="docutils literal notranslate"><span class="pre">FOOTSWITCH_LEFT</span></code> or <code class="docutils literal notranslate"><span class="pre">FOOTSWITCH_RIGHT</span></code> as the <em>argument</em>.</p>
+<p>Let’s revisit our delay function and set it up to use the left footswitch as the bypass button.  If you don’t add a bypass switch, the effect will just start running out of the gate.</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+
+  <span class="n">pedal</span><span class="p">.</span><span class="n">init</span><span class="p">();</span>   <span class="c1">// Initialize the system </span>
+
+  <span class="c1">// Connect our effect(s) to input and output jacks</span>
+  <span class="n">pedal</span><span class="p">.</span><span class="n">route_audio</span><span class="p">(</span><span class="n">pedal</span><span class="p">.</span><span class="n">instr_in</span><span class="p">,</span> <span class="n">my_echo_1</span><span class="p">.</span><span class="n">input</span><span class="p">);</span>		<span class="c1">// Instr in -&gt; echo in</span>
+  <span class="n">pedal</span><span class="p">.</span><span class="n">route_audio</span><span class="p">(</span><span class="n">my_echo_1</span><span class="p">.</span><span class="n">output</span><span class="p">,</span> <span class="n">pedal</span><span class="p">.</span><span class="n">amp_out</span><span class="p">);</span>		<span class="c1">// Echo out -&gt; Amp out</span>
+
+  <span class="c1">// Left foot switch is bypass</span>
+  <span class="n">pedal</span><span class="p">.</span><span class="n">add_bypass_button</span><span class="p">(</span><span class="n">FOOTSWITCH_LEFT</span><span class="p">);</span>
+
+  <span class="n">pedal</span><span class="p">.</span><span class="n">run</span><span class="p">();</span>    <span class="c1">// Run the effect</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="configuring-the-button-to-be-a-tap-delay-tempo-button">
+<h2><strong>2. Configuring the button to be a tap delay/tempo button</strong><a class="headerlink" href="#configuring-the-button-to-be-a-tap-delay-tempo-button" title="Permalink to this headline">¶</a></h2>
+<p>A tap function allows you to tap the switch at a certain tempo/rate.  The Arduino will lock onto this tap rate and it can be used to update things like the rate of a tremelo and the length/time of an echo effect.</p>
+<p>To configure either of the footswitches to be a tap delay/tempo button, we use the <code class="docutils literal notranslate"><span class="pre">pedal.add_tap_interval_button()</span></code> function.  Just like the pedal bypass function, we can use either footswitch as our tap delay/tempo input.  We just can’t use the same footswitch that we’re using for bypass.  The <code class="docutils literal notranslate"><span class="pre">pedal.add_tap_interval_button()</span></code> takes two arguments.  The first is the foot switch we want to use (either <code class="docutils literal notranslate"><span class="pre">FOOTSWITCH_LEFT</span></code> or <code class="docutils literal notranslate"><span class="pre">FOOTSWITCH_RIGHT</span></code>).  The second argument determines if we want the LED next to the footswitch to flash at the same rate.  Setting the second argument to <code class="docutils literal notranslate"><span class="pre">true</span></code> will enable the LED strobe and setting it <code class="docutils literal notranslate"><span class="pre">false</span></code> will disable the LED strobe.</p>
+<p>Let’s again revisit the delay function and add the ability to “tap in” a new delay length using the right footswitch.</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+
+  <span class="n">pedal</span><span class="p">.</span><span class="n">init</span><span class="p">();</span>   <span class="c1">// Initialize the system </span>
+
+  <span class="c1">// Connect our effect(s) to input and output jacks</span>
+  <span class="n">pedal</span><span class="p">.</span><span class="n">route_audio</span><span class="p">(</span><span class="n">pedal</span><span class="p">.</span><span class="n">instr_in</span><span class="p">,</span> <span class="n">my_echo_1</span><span class="p">.</span><span class="n">input</span><span class="p">);</span>		<span class="c1">// Instr in -&gt; echo in</span>
+  <span class="n">pedal</span><span class="p">.</span><span class="n">route_audio</span><span class="p">(</span><span class="n">my_echo_1</span><span class="p">.</span><span class="n">output</span><span class="p">,</span> <span class="n">pedal</span><span class="p">.</span><span class="n">amp_out</span><span class="p">);</span>		<span class="c1">// Echo out -&gt; Amp out</span>
+
+  <span class="c1">// Left foot switch is bypass</span>
+  <span class="n">pedal</span><span class="p">.</span><span class="n">add_bypass_button</span><span class="p">(</span><span class="n">FOOTSWITCH_LEFT</span><span class="p">);</span>
+
+  <span class="c1">// Right foot switch is our tap delay lenght input and turn on LED strobe</span>
+  <span class="n">pedal</span><span class="p">.</span><span class="n">add_tap_interval_button</span><span class="p">(</span><span class="n">FOOTSWITCH_RIGHT</span><span class="p">,</span> <span class="nb">true</span><span class="p">);</span>
+
+  <span class="n">pedal</span><span class="p">.</span><span class="n">run</span><span class="p">();</span>    <span class="c1">// Run the effect</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>In our <code class="docutils literal notranslate"><span class="pre">loop()</span></code> function, we call <code class="docutils literal notranslate"><span class="pre">pedal.new_tap_interval()</span></code> to determine if the user has tapped in a new tempo and if so, what we want to do about it.  If the user has just tapped in a new tempo/delay lenght, this function will <strong>return</strong> <code class="docutils literal notranslate"><span class="pre">true</span></code> and if this user has not, it will return <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+<p>We then have two options in terms of how we read the tap interval.  Some effects take a period of time (tyically in milliseconds) as an argument like fx_delay.  Other effects that use an oscillator take a rate (typically cycles per second).</p>
+<p>If we are reading the newly tapped interval for a function that uses time in milliseconds, we use <code class="docutils literal notranslate"><span class="pre">pedal.get_tap_interval_ms()</span></code>.  And if we are reading the newly tapped interval for a function that uses rate in Hertz, we use <code class="docutils literal notranslate"><span class="pre">pedal.get_tap_freq_hz()</span></code>.</p>
+<p>In this case, we are using a delay function so when we detect that we have a new tap interval from the user, we’re going to update the length of the delay effect using the tap interval in milliseconds (e.g. using <code class="docutils literal notranslate"><span class="pre">pedal.get_tap_interval_ms()</span></code>).</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="n">loop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// If new delay time has been tapped in, use that</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">pedal</span><span class="p">.</span><span class="n">new_tap_interval</span><span class="p">())</span> <span class="p">{</span> 
+
+  	<span class="c1">// Update delay length with new tap interval</span>
+    <span class="n">my_delay</span><span class="p">.</span><span class="n">set_length_ms</span><span class="p">(</span><span class="n">pedal</span><span class="p">.</span><span class="n">get_tap_interval_ms</span><span class="p">());</span>
+  <span class="p">}</span> 
+
+  <span class="c1">// Service pedal</span>
+  <span class="n">pedal</span><span class="p">.</span><span class="n">service</span><span class="p">();</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>If we also have the option to change the tempo / time of an effect with other means (like a pot), we may want to update the rate the light is flashing.  In this case, we can use
+<code class="docutils literal notranslate"><span class="pre">pedal.set_tap_blink_rate_ms()</span></code> and <code class="docutils literal notranslate"><span class="pre">set_tap_blink_rate_ms()</span></code> to set a new blink rate.  First argument is which LED and the second is whether or not to flash the LED.</p>
+<p>So with just a few lines of code, we’ve added the ability to tap in a tempo into the pedal to control the rate of LFOs (flangers, phasers, tremelos, vibratos, etc.) or the length of our delays.</p>
+</div>
+<div class="section" id="configuring-the-button-to-be-a-momentary-switch">
+<h2><strong>3. Configuring the button to be a momentary switch</strong><a class="headerlink" href="#configuring-the-button-to-be-a-momentary-switch" title="Permalink to this headline">¶</a></h2>
+<p>Sometimes it’s nice to be able to hold a footswitch down to momentarily change the sound of the effect.</p>
+<p>Here, we can use the <code class="docutils literal notranslate"><span class="pre">pedal.button_pressed()</span></code> and <code class="docutils literal notranslate"><span class="pre">pedal.button_released()</span></code> functions.  The first argument is the footswitch to watch (either <code class="docutils literal notranslate"><span class="pre">FOOTSWITCH_LEFT</span></code> or <code class="docutils literal notranslate"><span class="pre">FOOTSWITCH_RIGHT</span></code>).  And the second argument is whether to set the LED next to that footswitch while it is being held down.  Similar to the others, this should be either <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="n">loop</span><span class="p">()</span> <span class="p">{</span>
+
+	  <span class="k">if</span> <span class="p">(</span><span class="n">pedal</span><span class="p">.</span><span class="n">button_pressed</span><span class="p">(</span><span class="n">FOOTSWITCH_RIGHT</span><span class="p">,</span> <span class="nb">true</span><span class="p">))</span> <span class="p">{</span>
+	    <span class="c1">// Adjust one or more effect parameters when button is held down</span>
+	  <span class="p">}</span>
+	  <span class="k">if</span> <span class="p">(</span><span class="n">pedal</span><span class="p">.</span><span class="n">button_released</span><span class="p">(</span><span class="n">FOOTSWITCH_RIGHT</span><span class="p">,</span> <span class="nb">true</span><span class="p">))</span> <span class="p">{</span>
+	    <span class="c1">// Adjust back one or more effect parameters when button is released</span>
+	  <span class="p">}</span>
+
+  <span class="c1">// Service pedal</span>
+  <span class="n">pedal</span><span class="p">.</span><span class="n">service</span><span class="p">();</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="configuring-the-button-to-be-a-toggle-switch">
+<h2><strong>4. Configuring the button to be a toggle switch</strong><a class="headerlink" href="#configuring-the-button-to-be-a-toggle-switch" title="Permalink to this headline">¶</a></h2>
+<p>This will be implemented soon!</p>
+<p>In the mean time, you can use the <code class="docutils literal notranslate"><span class="pre">pedal.button_pressed()</span></code> function like so to behave like a toggle:</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="n">loop</span><span class="p">()</span> <span class="p">{</span>
+
+	<span class="k">static</span> <span class="kt">bool</span> <span class="n">toggle</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+	<span class="k">static</span> <span class="kt">bool</span> <span class="n">first_press</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+
+	<span class="k">if</span> <span class="p">(</span><span class="n">pedal</span><span class="p">.</span><span class="n">button_pressed</span><span class="p">(</span><span class="n">FOOTSWITCH_RIGHT</span><span class="p">,</span> <span class="nb">false</span><span class="p">))</span> <span class="p">{</span>
+	  <span class="c1">// Is this the first time though where button is pressed?</span>
+	  <span class="k">if</span> <span class="p">(</span><span class="n">first_press</span><span class="p">)</span> <span class="p">{</span>
+	     <span class="n">toggle</span> <span class="o">=</span> <span class="o">!</span><span class="n">toggle</span><span class="p">;</span>
+	  <span class="p">}</span>
+	  <span class="n">first_press</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+	<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+	  <span class="c1">// Reset so next time button goes low, we can respond on first press</span>
+	  <span class="n">first_press</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="c1">// Do effect based on toggle state</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">toggle</span><span class="p">)</span> <span class="p">{</span>
+	  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">PIN_FOOTSW_LED_RIGHT</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+	  <span class="c1">// change effect parameter here when enabled</span>
+	<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+	  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">PIN_FOOTSW_LED_RIGHT</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
+	  <span class="c1">// change effect parameter here when not enabled</span>
+	<span class="p">}</span>
+
+  <span class="c1">// Service pedal</span>
+  <span class="n">pedal</span><span class="p">.</span><span class="n">service</span><span class="p">();</span>
+
+<span class="p">}</span>	
+</pre></div>
+</div>
+</div>
+<div class="section" id="configuring-the-knobs-aka-pots">
+<h2>Configuring the Knobs (aka Pots)<a class="headerlink" href="#configuring-the-knobs-aka-pots" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>Just like we have functions to detect when a user has pressed a button, we also have a similar function to detect when a user has adjusted one of the knobs (also known as potentiometerss or just “pots”).</p>
+<p>The fucnctions <code class="docutils literal notranslate"><span class="pre">pedal.pot_left.has_changed()</span></code>, <code class="docutils literal notranslate"><span class="pre">pedal.pot_center.has_changed()</span></code> and <code class="docutils literal notranslate"><span class="pre">pedal.pot_right.has_changed()</span></code> will return true if the corresponding knob / pot has been adjusted.</p>
+<p>We then have two options for reading the value of the pot: <code class="docutils literal notranslate"><span class="pre">pedal.pot_0.val</span></code> and <code class="docutils literal notranslate"><span class="pre">pedal.pot_0.val_log</span></code>.  In both cases, the range of values will be from 0.0 (full left / counter-clock-wise) to 1.0 (full right / clock-wise).  However, the <code class="docutils literal notranslate"><span class="pre">pedal.pot_0.val_log</span></code> function applies a logarithmic curve to the value.  This can be useful when you want a lot of precision at the low-end of the pot and less at the high end (such as setting frequencies).</p>
+<p>The value of the pots will always be between 0.0 and 1.0 so in many cases, we’ll need to scale these based on what aspect of the effect we are changing.  For example, if want to use a pot to change the frequency range of a filter from 200.0Hz to 800.0Hz, we’ll need to add an offset of 200.0 and then multiply by 600.0 (to map 0.0-&gt;1.0 to 200.0-&gt;800.0).</p>
+<p>Let’s add some pots to our delay effect to control time / length, feedback, and the wet/dry mix.  Let’s also add the ability to tap a delay and update the tap flash rate when the center pot has changed.</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+
+  <span class="c1">// If new delay time has been tapped in, use that</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">pedal</span><span class="p">.</span><span class="n">new_tap_interval</span><span class="p">())</span> <span class="p">{</span> 
+    <span class="n">my_delay</span><span class="p">.</span><span class="n">set_length_ms</span><span class="p">(</span><span class="n">pedal</span><span class="p">.</span><span class="n">get_tap_interval_ms</span><span class="p">());</span>
+  <span class="p">}</span> 
+
+  <span class="c1">// Left pot changes the volume of the first loop</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">pedal</span><span class="p">.</span><span class="n">pot_left</span><span class="p">.</span><span class="n">has_changed</span><span class="p">())</span> <span class="p">{</span>
+    <span class="n">my_delay</span><span class="p">.</span><span class="n">set_feedback</span><span class="p">(</span><span class="n">pedal</span><span class="p">.</span><span class="n">pot_left</span><span class="p">.</span><span class="n">val</span><span class="p">);</span>
+  <span class="p">}</span>
+  
+  <span class="c1">// Right pot changes the wet / dry mix</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">pedal</span><span class="p">.</span><span class="n">pot_right</span><span class="p">.</span><span class="n">has_changed</span><span class="p">())</span> <span class="p">{</span>
+    <span class="n">my_delay</span><span class="p">.</span><span class="n">set_dry_mix</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="n">pedal</span><span class="p">.</span><span class="n">pot_right</span><span class="p">.</span><span class="n">val</span><span class="p">);</span>
+    <span class="n">my_delay</span><span class="p">.</span><span class="n">set_wet_mix</span><span class="p">(</span><span class="n">pedal</span><span class="p">.</span><span class="n">pot_right</span><span class="p">.</span><span class="n">val</span><span class="p">);</span>
+  <span class="p">}</span>  
+  
+  <span class="c1">// Center pot can also be used to change the delay length </span>
+  <span class="c1">// from 100ms to 3000ms</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">pedal</span><span class="p">.</span><span class="n">pot_center</span><span class="p">.</span><span class="n">has_changed</span><span class="p">())</span> <span class="p">{</span>
+    <span class="kt">float</span> <span class="n">new_length_ms</span> <span class="o">=</span> <span class="mf">100.0</span> <span class="o">+</span> <span class="n">pedal</span><span class="p">.</span><span class="n">pot_center</span><span class="p">.</span><span class="n">val</span><span class="o">*</span><span class="mf">2900.0</span><span class="p">;</span>
+    <span class="n">my_delay</span><span class="p">.</span><span class="n">set_length_ms</span><span class="p">(</span><span class="n">new_length_ms</span><span class="p">);</span>
+    <span class="n">pedal</span><span class="p">.</span><span class="n">set_tap_blink_rate_ms</span><span class="p">(</span><span class="n">new_length_ms</span><span class="p">);</span>
+  <span class="p">}</span>    
+  
+  <span class="c1">// Service pedal</span>
+  <span class="n">pedal</span><span class="p">.</span><span class="n">service</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="turning-on-and-off-the-lights-aka-leds">
+<h2>Turning on and off the Lights (aka LEDs)<a class="headerlink" href="#turning-on-and-off-the-lights-aka-leds" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>The two lights (aka LEDs) next to each footswtich can be controlled using the Arduino <code class="docutils literal notranslate"><span class="pre">digitalWrite()</span></code> function.  The first argument is the footswitch LED <code class="docutils literal notranslate"><span class="pre">PIN_FOOTSW_LED_LEFT</span></code> or <code class="docutils literal notranslate"><span class="pre">PIN_FOOTSW_LED_RIGHT</span></code> and the next argument is whether is should be on / <code class="docutils literal notranslate"><span class="pre">HIGH</span></code> or off <code class="docutils literal notranslate"><span class="pre">LOW</span></code>.</p>
+<p>To turn on the left LED, we’d do this: <code class="docutils literal notranslate"><span class="pre">digitalWrite(PIN_FOOTSW_LED_LEFT,</span> <span class="pre">HIGH)</span></code>.  And to turn off that LED, we’d do this: <code class="docutils literal notranslate"><span class="pre">digitalWrite(PIN_FOOTSW_LED_LEFT,</span> <span class="pre">LOW)</span></code>.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Run Jump Labs
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

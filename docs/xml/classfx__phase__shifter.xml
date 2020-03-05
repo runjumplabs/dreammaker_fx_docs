@@ -1,0 +1,578 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classfx__phase__shifter" kind="class" language="C++" prot="public">
+    <compoundname>fx_phase_shifter</compoundname>
+    <basecompoundref refid="classfx__effect" prot="public" virt="non-virtual">fx_effect</basecompoundref>
+    <includes refid="dm__fx__phase__shifter_8h" local="no">dm_fx_phase_shifter.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classfx__phase__shifter_1ab1b57d3bd7372a21c16e512f63b78d5d" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float fx_phase_shifter::param_depth</definition>
+        <argsstring></argsstring>
+        <name>param_depth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_phase_shifter.h" line="18" column="1" bodyfile="src/effects/dm_fx_phase_shifter.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__phase__shifter_1a596769cdd7c6243da7de1925284601eb" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float fx_phase_shifter::param_rate_hz</definition>
+        <argsstring></argsstring>
+        <name>param_rate_hz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_phase_shifter.h" line="19" column="1" bodyfile="src/effects/dm_fx_phase_shifter.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__phase__shifter_1a58a0ef0d84b1ecfbf20537e5e09c31c4" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float fx_phase_shifter::param_feedback</definition>
+        <argsstring></argsstring>
+        <name>param_feedback</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_phase_shifter.h" line="20" column="1" bodyfile="src/effects/dm_fx_phase_shifter.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__phase__shifter_1ac4e9be5dddd33ec227bb15c6b6201b62" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float fx_phase_shifter::param_initial_phase_deg</definition>
+        <argsstring></argsstring>
+        <name>param_initial_phase_deg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_phase_shifter.h" line="21" column="1" bodyfile="src/effects/dm_fx_phase_shifter.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__phase__shifter_1aa68ff59fded56af11a07f55b403af8db" prot="private" static="no" mutable="no">
+        <type><ref refid="group___enumerations_1gada898a149424188b3a23010c8fe89176" kindref="member">OSC_TYPES</ref></type>
+        <definition>OSC_TYPES fx_phase_shifter::param_type</definition>
+        <argsstring></argsstring>
+        <name>param_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_phase_shifter.h" line="22" column="1" bodyfile="src/effects/dm_fx_phase_shifter.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__phase__shifter_1a8b6ccda99e350f77dda994f77366ef7f" prot="private" static="no" mutable="no">
+        <type>fx_control_node</type>
+        <definition>fx_control_node fx_phase_shifter::node_ctrl_depth</definition>
+        <argsstring></argsstring>
+        <name>node_ctrl_depth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_phase_shifter.h" line="68" column="1" bodyfile="src/effects/dm_fx_phase_shifter.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__phase__shifter_1a45c45fa7a98c84e6e6abf2e431c4a499" prot="private" static="no" mutable="no">
+        <type>fx_control_node</type>
+        <definition>fx_control_node fx_phase_shifter::node_ctrl_rate_hz</definition>
+        <argsstring></argsstring>
+        <name>node_ctrl_rate_hz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_phase_shifter.h" line="69" column="1" bodyfile="src/effects/dm_fx_phase_shifter.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__phase__shifter_1a1e5c9ef9836d95a50ca3f2c107489968" prot="private" static="no" mutable="no">
+        <type>fx_control_node</type>
+        <definition>fx_control_node fx_phase_shifter::node_ctrl_feedback</definition>
+        <argsstring></argsstring>
+        <name>node_ctrl_feedback</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_phase_shifter.h" line="70" column="1" bodyfile="src/effects/dm_fx_phase_shifter.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classfx__phase__shifter_1a6b3c2e7b30e37e8f39f4ea74edcc1da8" prot="public" static="no" mutable="no">
+        <type>fx_audio_node *</type>
+        <definition>fx_audio_node* fx_phase_shifter::input</definition>
+        <argsstring></argsstring>
+        <name>input</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Audio routing node: primary audio input </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_phase_shifter.h" line="77" column="1" bodyfile="src/effects/dm_fx_phase_shifter.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__phase__shifter_1a1516ae9bc8081a37bd4b587cc8cbdbdf" prot="public" static="no" mutable="no">
+        <type>fx_audio_node *</type>
+        <definition>fx_audio_node* fx_phase_shifter::output</definition>
+        <argsstring></argsstring>
+        <name>output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Audio routing node: primary audio output </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_phase_shifter.h" line="81" column="1" bodyfile="src/effects/dm_fx_phase_shifter.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__phase__shifter_1a09af8400b1ee18ceb91eb0def1d6d58d" prot="public" static="no" mutable="no">
+        <type>fx_control_node *</type>
+        <definition>fx_control_node* fx_phase_shifter::depth</definition>
+        <argsstring></argsstring>
+        <name>depth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Control routing node: phase shifter depth (should be between 0.0 and 1.0) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_phase_shifter.h" line="86" column="1" bodyfile="src/effects/dm_fx_phase_shifter.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__phase__shifter_1aee41f77d8694d6267ae46aff7bafe052" prot="public" static="no" mutable="no">
+        <type>fx_control_node *</type>
+        <definition>fx_control_node* fx_phase_shifter::rate_hz</definition>
+        <argsstring></argsstring>
+        <name>rate_hz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Control routing node: phase shifter rate (Hz) (i.e. 1.0 = once per second) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_phase_shifter.h" line="90" column="1" bodyfile="src/effects/dm_fx_phase_shifter.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__phase__shifter_1ad024eec3755afff22c3d79899a443370" prot="public" static="no" mutable="no">
+        <type>fx_control_node *</type>
+        <definition>fx_control_node* fx_phase_shifter::feedback</definition>
+        <argsstring></argsstring>
+        <name>feedback</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Control routing node: phase shifter feedback (should be between -1.0 and 1.0) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_phase_shifter.h" line="94" column="1" bodyfile="src/effects/dm_fx_phase_shifter.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classfx__phase__shifter_1ab7a26d265e5c54ec401606534c4e6738" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_phase_shifter::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_phase_shifter.h" line="25" column="1" bodyfile="src/effects/dm_fx_phase_shifter.h" bodystart="25" bodyend="65"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classfx__phase__shifter_1a3a121772ae94e0f4821bbc67349881d3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>fx_phase_shifter::fx_phase_shifter</definition>
+        <argsstring>(float rate_hz, float depth, float feedback)</argsstring>
+        <name>fx_phase_shifter</name>
+        <param>
+          <type>float</type>
+          <declname>rate_hz</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>depth</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>feedback</declname>
+        </param>
+        <briefdescription>
+<para>Basic constructor/initializer for the phase shifter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">rate_hz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rate hz of the LFO modulating the phase shifter </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">depth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The depth of the phase shifter </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">feedback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The feedback of the phase shifter </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_phase_shifter.h" line="103" column="1" bodyfile="src/effects/dm_fx_phase_shifter.h" bodystart="103" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__phase__shifter_1a4acc2b17739a801a72623dd645b1b32c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>fx_phase_shifter::fx_phase_shifter</definition>
+        <argsstring>(float rate_hz, float depth, float feedback, float inital_phase, OSC_TYPES mod_type)</argsstring>
+        <name>fx_phase_shifter</name>
+        <param>
+          <type>float</type>
+          <declname>rate_hz</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>depth</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>feedback</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>inital_phase</declname>
+        </param>
+        <param>
+          <type><ref refid="group___enumerations_1gada898a149424188b3a23010c8fe89176" kindref="member">OSC_TYPES</ref></type>
+          <declname>mod_type</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a new instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">rate_hz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rate hz of the LFO modulating the phase shifter </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">depth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The depth of the phase shifter (0.0 -&gt; 1.0) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">feedback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The feedback of the phase shifter (-1.0 -&gt; 1.0) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">inital_phase</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The inital phase in degrees of the LFO </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mod_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The modifier type (OSC_TYPES) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_phase_shifter.h" line="128" column="1" bodyfile="src/effects/dm_fx_phase_shifter.h" bodystart="128" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__phase__shifter_1a02b925c2b19530efcda28486ff7d286a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_phase_shifter::enable</definition>
+        <argsstring>()</argsstring>
+        <name>enable</name>
+        <briefdescription>
+<para>Enable the phase shifter (it is enabled by default) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_phase_shifter.h" line="148" column="1" bodyfile="src/effects/dm_fx_phase_shifter.h" bodystart="148" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__phase__shifter_1a361a5bd72a429333d3e1a0120332c19f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_phase_shifter::bypass</definition>
+        <argsstring>()</argsstring>
+        <name>bypass</name>
+        <briefdescription>
+<para>Bypass the phase shifter (will just pass clean audio through) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_phase_shifter.h" line="157" column="1" bodyfile="src/effects/dm_fx_phase_shifter.h" bodystart="157" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__phase__shifter_1a5775686b16e0adf4f44cfc7701a02b68" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_phase_shifter::set_depth</definition>
+        <argsstring>(float depth)</argsstring>
+        <name>set_depth</name>
+        <param>
+          <type>float</type>
+          <declname>depth</declname>
+        </param>
+        <briefdescription>
+<para>Sets the depth of the phase shifter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">depth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The depth fom 0.0 -&gt; 1.0. 0.0 is no modulation at all, 1.0 is full modulation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_phase_shifter.h" line="169" column="1" bodyfile="src/effects/dm_fx_phase_shifter.h" bodystart="169" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__phase__shifter_1acfdf8c4124e0e95cbaa3e5fbf6b23a9f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_phase_shifter::set_rate_hz</definition>
+        <argsstring>(float rate_hz)</argsstring>
+        <name>set_rate_hz</name>
+        <param>
+          <type>float</type>
+          <declname>rate_hz</declname>
+        </param>
+        <briefdescription>
+<para>Sets the rate of the phase shifter in Hertz (cycles per second) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">rate_hz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rate hz </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_phase_shifter.h" line="186" column="1" bodyfile="src/effects/dm_fx_phase_shifter.h" bodystart="186" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__phase__shifter_1a48317de95377711857ba1d660bbc4bd7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_phase_shifter::set_feedback</definition>
+        <argsstring>(float feedback)</argsstring>
+        <name>set_feedback</name>
+        <param>
+          <type>float</type>
+          <declname>feedback</declname>
+        </param>
+        <briefdescription>
+<para>Sets the feedback of the phase shifter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">feedback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Feedback value (between -1.0 and 1.0) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_phase_shifter.h" line="203" column="1" bodyfile="src/effects/dm_fx_phase_shifter.h" bodystart="203" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__phase__shifter_1a7089c1b4c3fc15c7f274835c345d3abc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_phase_shifter::set_lfo_type</definition>
+        <argsstring>(OSC_TYPES new_type)</argsstring>
+        <name>set_lfo_type</name>
+        <param>
+          <type><ref refid="group___enumerations_1gada898a149424188b3a23010c8fe89176" kindref="member">OSC_TYPES</ref></type>
+          <declname>new_type</declname>
+        </param>
+        <briefdescription>
+<para>Sets the the type of oscillator used as the LFO. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">new_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new type of LFO (OSC_TYPES) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_phase_shifter.h" line="220" column="1" bodyfile="src/effects/dm_fx_phase_shifter.h" bodystart="220" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__phase__shifter_1a4bd5e5a813c8b07fba88fb1b689fc25f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_phase_shifter::print_params</definition>
+        <argsstring>(void)</argsstring>
+        <name>print_params</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Print the parameters for this effect. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_phase_shifter.h" line="234" column="1" bodyfile="src/effects/dm_fx_phase_shifter.h" bodystart="234" bodyend="253"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Effect: Phase shifter for creating rich phase shifts. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Example: <bold>phase_shifter_1.c</bold> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="113">
+        <label>fx_phase_shifter</label>
+        <link refid="classfx__phase__shifter"/>
+        <childnode refid="114" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="114">
+        <label>fx_effect</label>
+        <link refid="classfx__effect"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="115">
+        <label>fx_phase_shifter</label>
+        <link refid="classfx__phase__shifter"/>
+        <childnode refid="116" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="117">
+        <label>fx_pedal</label>
+        <link refid="classfx__pedal"/>
+      </node>
+      <node id="116">
+        <label>fx_effect</label>
+        <link refid="classfx__effect"/>
+        <childnode refid="117" relation="usage">
+          <edgelabel>parent_canvas</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/effects/dm_fx_phase_shifter.h" line="13" column="1" bodyfile="src/effects/dm_fx_phase_shifter.h" bodystart="13" bodyend="255"/>
+    <listofallmembers>
+      <member refid="classfx__effect_1ab69ae64deecdbc5915de9b66b4f3e987" prot="protected" virt="non-virtual"><scope>fx_phase_shifter</scope><name>audio_node_stack</name></member>
+      <member refid="classfx__effect_1abdbbc884fc92a23af5ec5b351a972b97" prot="protected" virt="non-virtual"><scope>fx_phase_shifter</scope><name>bool_param_updated</name></member>
+      <member refid="classfx__phase__shifter_1a361a5bd72a429333d3e1a0120332c19f" prot="public" virt="non-virtual"><scope>fx_phase_shifter</scope><name>bypass</name></member>
+      <member refid="classfx__effect_1a700589ec8a30f3197cebce4eb955fa31" prot="protected" virt="non-virtual"><scope>fx_phase_shifter</scope><name>control_node_stack</name></member>
+      <member refid="classfx__phase__shifter_1a09af8400b1ee18ceb91eb0def1d6d58d" prot="public" virt="non-virtual"><scope>fx_phase_shifter</scope><name>depth</name></member>
+      <member refid="classfx__effect_1af7d5319aca3b86b0e76418385d0478ea" prot="public" virt="non-virtual"><scope>fx_phase_shifter</scope><name>effect_name</name></member>
+      <member refid="classfx__phase__shifter_1a02b925c2b19530efcda28486ff7d286a" prot="public" virt="non-virtual"><scope>fx_phase_shifter</scope><name>enable</name></member>
+      <member refid="classfx__phase__shifter_1ad024eec3755afff22c3d79899a443370" prot="public" virt="non-virtual"><scope>fx_phase_shifter</scope><name>feedback</name></member>
+      <member refid="classfx__effect_1a56eefdb5f90e991e3f31d855e87e9213" prot="protected" virt="non-virtual"><scope>fx_phase_shifter</scope><name>float_param_updated</name></member>
+      <member refid="classfx__effect_1aab2d00a6784612158e41606297952873" prot="public" virt="non-virtual"><scope>fx_phase_shifter</scope><name>fx_effect</name></member>
+      <member refid="classfx__effect_1ae5be756c63862665f422aa25a14d3bef" prot="protected" virt="non-virtual"><scope>fx_phase_shifter</scope><name>fx_pedal</name></member>
+      <member refid="classfx__phase__shifter_1a3a121772ae94e0f4821bbc67349881d3" prot="public" virt="non-virtual"><scope>fx_phase_shifter</scope><name>fx_phase_shifter</name></member>
+      <member refid="classfx__phase__shifter_1a4acc2b17739a801a72623dd645b1b32c" prot="public" virt="non-virtual"><scope>fx_phase_shifter</scope><name>fx_phase_shifter</name></member>
+      <member refid="classfx__effect_1a551b61721aadaeccb3cd2ba9fc826609" prot="protected" virt="non-virtual"><scope>fx_phase_shifter</scope><name>get_audio_node_index</name></member>
+      <member refid="classfx__effect_1aba27ace404ab75a174892cb5908f58b3" prot="protected" virt="non-virtual"><scope>fx_phase_shifter</scope><name>get_control_node_index</name></member>
+      <member refid="classfx__effect_1a3ddd0473c4a01e858a17b51f14995c70" prot="public" virt="non-virtual"><scope>fx_phase_shifter</scope><name>get_name</name></member>
+      <member refid="classfx__effect_1a14e0cb29cd7e86d0b8f566b3066dbf32" prot="public" virt="non-virtual"><scope>fx_phase_shifter</scope><name>get_type</name></member>
+      <member refid="classfx__phase__shifter_1ab7a26d265e5c54ec401606534c4e6738" prot="private" virt="non-virtual"><scope>fx_phase_shifter</scope><name>init</name></member>
+      <member refid="classfx__phase__shifter_1a6b3c2e7b30e37e8f39f4ea74edcc1da8" prot="public" virt="non-virtual"><scope>fx_phase_shifter</scope><name>input</name></member>
+      <member refid="classfx__effect_1a35011b582dc3eb033f2174b404e15fd8" prot="protected" virt="non-virtual"><scope>fx_phase_shifter</scope><name>instance_id</name></member>
+      <member refid="classfx__phase__shifter_1a8b6ccda99e350f77dda994f77366ef7f" prot="private" virt="non-virtual"><scope>fx_phase_shifter</scope><name>node_ctrl_depth</name></member>
+      <member refid="classfx__phase__shifter_1a1e5c9ef9836d95a50ca3f2c107489968" prot="private" virt="non-virtual"><scope>fx_phase_shifter</scope><name>node_ctrl_feedback</name></member>
+      <member refid="classfx__phase__shifter_1a45c45fa7a98c84e6e6abf2e431c4a499" prot="private" virt="non-virtual"><scope>fx_phase_shifter</scope><name>node_ctrl_rate_hz</name></member>
+      <member refid="classfx__effect_1a69b60011be5fc3ade57b937405aa835d" prot="protected" virt="non-virtual"><scope>fx_phase_shifter</scope><name>node_enabled</name></member>
+      <member refid="classfx__effect_1a61f6f19f2cd7be8762758512e9cd5097" prot="protected" virt="non-virtual"><scope>fx_phase_shifter</scope><name>node_index</name></member>
+      <member refid="classfx__effect_1a66c709a96dd59fd1e21c3407a160a8e8" prot="protected" virt="non-virtual"><scope>fx_phase_shifter</scope><name>node_input</name></member>
+      <member refid="classfx__effect_1aabadf3d22b48bc21227f72d38bb0d5fe" prot="protected" virt="non-virtual"><scope>fx_phase_shifter</scope><name>node_output</name></member>
+      <member refid="classfx__phase__shifter_1a1516ae9bc8081a37bd4b587cc8cbdbdf" prot="public" virt="non-virtual"><scope>fx_phase_shifter</scope><name>output</name></member>
+      <member refid="classfx__phase__shifter_1ab1b57d3bd7372a21c16e512f63b78d5d" prot="private" virt="non-virtual"><scope>fx_phase_shifter</scope><name>param_depth</name></member>
+      <member refid="classfx__effect_1a0774058f9db052bfc8a68159f13031f2" prot="protected" virt="non-virtual"><scope>fx_phase_shifter</scope><name>param_enabled</name></member>
+      <member refid="classfx__phase__shifter_1a58a0ef0d84b1ecfbf20537e5e09c31c4" prot="private" virt="non-virtual"><scope>fx_phase_shifter</scope><name>param_feedback</name></member>
+      <member refid="classfx__phase__shifter_1ac4e9be5dddd33ec227bb15c6b6201b62" prot="private" virt="non-virtual"><scope>fx_phase_shifter</scope><name>param_initial_phase_deg</name></member>
+      <member refid="classfx__phase__shifter_1a596769cdd7c6243da7de1925284601eb" prot="private" virt="non-virtual"><scope>fx_phase_shifter</scope><name>param_rate_hz</name></member>
+      <member refid="classfx__effect_1aaf455e34fced9667a8cf26cdb9fb6641" prot="protected" virt="non-virtual"><scope>fx_phase_shifter</scope><name>param_stack</name></member>
+      <member refid="classfx__effect_1a0ea0d3bfe30592895fa23d241a9baa38" prot="protected" virt="non-virtual"><scope>fx_phase_shifter</scope><name>param_stack_types</name></member>
+      <member refid="classfx__phase__shifter_1aa68ff59fded56af11a07f55b403af8db" prot="private" virt="non-virtual"><scope>fx_phase_shifter</scope><name>param_type</name></member>
+      <member refid="classfx__effect_1a69bef0da54cedf8e558d65b755716999" prot="protected" virt="non-virtual"><scope>fx_phase_shifter</scope><name>parent_canvas</name></member>
+      <member refid="classfx__phase__shifter_1a4bd5e5a813c8b07fba88fb1b689fc25f" prot="public" virt="non-virtual"><scope>fx_phase_shifter</scope><name>print_params</name></member>
+      <member refid="classfx__phase__shifter_1aee41f77d8694d6267ae46aff7bafe052" prot="public" virt="non-virtual"><scope>fx_phase_shifter</scope><name>rate_hz</name></member>
+      <member refid="classfx__effect_1aaeececeee434ea76afdf649c3bed7698" prot="protected" virt="non-virtual"><scope>fx_phase_shifter</scope><name>serialize_params</name></member>
+      <member refid="classfx__effect_1a4c513243328d3b715822e74d21dffe99" prot="public" virt="non-virtual"><scope>fx_phase_shifter</scope><name>service</name></member>
+      <member refid="classfx__phase__shifter_1a5775686b16e0adf4f44cfc7701a02b68" prot="public" virt="non-virtual"><scope>fx_phase_shifter</scope><name>set_depth</name></member>
+      <member refid="classfx__phase__shifter_1a48317de95377711857ba1d660bbc4bd7" prot="public" virt="non-virtual"><scope>fx_phase_shifter</scope><name>set_feedback</name></member>
+      <member refid="classfx__phase__shifter_1a7089c1b4c3fc15c7f274835c345d3abc" prot="public" virt="non-virtual"><scope>fx_phase_shifter</scope><name>set_lfo_type</name></member>
+      <member refid="classfx__phase__shifter_1acfdf8c4124e0e95cbaa3e5fbf6b23a9f" prot="public" virt="non-virtual"><scope>fx_phase_shifter</scope><name>set_rate_hz</name></member>
+      <member refid="classfx__effect_1a4f5dbb43e76ca1fa8b8a7c56aaa9f232" prot="protected" virt="non-virtual"><scope>fx_phase_shifter</scope><name>total_audio_nodes</name></member>
+      <member refid="classfx__effect_1a91d9c1dcd7542aaec7a969af78804caa" prot="protected" virt="non-virtual"><scope>fx_phase_shifter</scope><name>total_control_nodes</name></member>
+      <member refid="classfx__effect_1a140e1553b23532a2f09f12f94833713e" prot="protected" virt="non-virtual"><scope>fx_phase_shifter</scope><name>total_params</name></member>
+      <member refid="classfx__effect_1a5e78416b59c4a21367e58ffc09fcf137" prot="protected" virt="non-virtual"><scope>fx_phase_shifter</scope><name>type</name></member>
+      <member refid="classfx__effect_1a0b94adfa51991a989cd10f4122c9ac22" prot="protected" virt="non-virtual"><scope>fx_phase_shifter</scope><name>updated_parameters</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

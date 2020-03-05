@@ -1,0 +1,311 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Enum OSC_TYPES &mdash; DreamMaker FX Documentation  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> DreamMaker FX Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/echo_basic.html">Building a Basic Echo Pedal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/adding_effects.html">The basics of creating / adding effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/routing_audio.html">The basics of routing audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/controlling_effects.html">The basics of controlling effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/using_api.html">Using the API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/debugging.html">Debugging Sketches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/troubleshooting.html">General troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Pedal Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__pedal.html">Pedal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__led.html">LEDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__pot.html">Pots/Knobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__switch.html">Switches</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Effect Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__adsr__envelope.html">ADSR Envelope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__amplitude__mod.html">Amplitude Modulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__compressor.html">Compressor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__delay.html">Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__destructor.html">Destructor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__envelope__tracker.html">Envelope Follower</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__gain.html">Gain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__instrument__synth.html">Instrument Synth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__looper.html">Looper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__multitap__delay.html">Multi-tap Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__oscillator.html">Oscillator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__phase__shifter.html">Phase Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__pitch__shift.html">Pitch Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__ring__mod.html">Ring Modulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__slicer.html">Slicer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__variable__delay.html">Variable Delay</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DreamMaker FX Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Enum OSC_TYPES</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/enum_group___enumerations_1gada898a149424188b3a23010c8fe89176.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="enum-osc-types">
+<span id="exhale-enum-group-enumerations-1gada898a149424188b3a23010c8fe89176"></span><h1>Enum OSC_TYPES<a class="headerlink" href="#enum-osc-types" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_src_effects_dm_fx_effects_defines.h.html#file-src-effects-dm-fx-effects-defines-h"><span class="std std-ref">File dm_fx_effects_defines.h</span></a></p></li>
+</ul>
+<div class="section" id="enum-documentation">
+<h2>Enum Documentation<a class="headerlink" href="#enum-documentation" title="Permalink to this headline">¶</a></h2>
+<dl class="enum">
+<dt id="_CPPv49OSC_TYPES">
+<span id="_CPPv39OSC_TYPES"></span><span id="_CPPv29OSC_TYPES"></span><span class="target" id="group___enumerations_1gada898a149424188b3a23010c8fe89176"></span><em class="property">enum </em><code class="sig-name descname">OSC_TYPES</code><a class="headerlink" href="#_CPPv49OSC_TYPES" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>: Types of oscillators </p>
+<p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv48OSC_NONE">
+<span id="_CPPv38OSC_NONE"></span><span id="_CPPv28OSC_NONE"></span><span class="target" id="group___enumerations_1ggada898a149424188b3a23010c8fe89176ad0141591211e614c7ab62dc23cda6deb"></span><code class="sig-name descname">OSC_NONE</code><a class="headerlink" href="#_CPPv48OSC_NONE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv48OSC_SINE">
+<span id="_CPPv38OSC_SINE"></span><span id="_CPPv28OSC_SINE"></span><span class="target" id="group___enumerations_1ggada898a149424188b3a23010c8fe89176a182a96214217602b26ba39a69f5c9801"></span><code class="sig-name descname">OSC_SINE</code><a class="headerlink" href="#_CPPv48OSC_SINE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sine wave </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv412OSC_TRIANGLE">
+<span id="_CPPv312OSC_TRIANGLE"></span><span id="_CPPv212OSC_TRIANGLE"></span><span class="target" id="group___enumerations_1ggada898a149424188b3a23010c8fe89176a13fa69eaa86fbbb5d1e4b5be4fcb2627"></span><code class="sig-name descname">OSC_TRIANGLE</code><a class="headerlink" href="#_CPPv412OSC_TRIANGLE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Triangle wave </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv420OSC_TRIANGLE_CLIPPED">
+<span id="_CPPv320OSC_TRIANGLE_CLIPPED"></span><span id="_CPPv220OSC_TRIANGLE_CLIPPED"></span><span class="target" id="group___enumerations_1ggada898a149424188b3a23010c8fe89176a59839769ee5f5b66cf702005b47ebf9d"></span><code class="sig-name descname">OSC_TRIANGLE_CLIPPED</code><a class="headerlink" href="#_CPPv420OSC_TRIANGLE_CLIPPED" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Clipped triangle wave (param1 is the clipping threshold) </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv410OSC_SQUARE">
+<span id="_CPPv310OSC_SQUARE"></span><span id="_CPPv210OSC_SQUARE"></span><span class="target" id="group___enumerations_1ggada898a149424188b3a23010c8fe89176a70ed41ff89f4cf529af5da9df126b253"></span><code class="sig-name descname">OSC_SQUARE</code><a class="headerlink" href="#_CPPv410OSC_SQUARE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Square wave </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv415OSC_SQUARE_SOFT">
+<span id="_CPPv315OSC_SQUARE_SOFT"></span><span id="_CPPv215OSC_SQUARE_SOFT"></span><span class="target" id="group___enumerations_1ggada898a149424188b3a23010c8fe89176a351b5f10dea52080b6ea8069372ebfd7"></span><code class="sig-name descname">OSC_SQUARE_SOFT</code><a class="headerlink" href="#_CPPv415OSC_SQUARE_SOFT" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Square wave with smoothed transitions so no abrubt changes when used as a control source </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv49OSC_PULSE">
+<span id="_CPPv39OSC_PULSE"></span><span id="_CPPv29OSC_PULSE"></span><span class="target" id="group___enumerations_1ggada898a149424188b3a23010c8fe89176a7b8831542f39a60d0141a95df1555100"></span><code class="sig-name descname">OSC_PULSE</code><a class="headerlink" href="#_CPPv49OSC_PULSE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Pulse wave (param1 is the duty cycle from 0.0 to 1.0) </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv412OSC_RAMP_POS">
+<span id="_CPPv312OSC_RAMP_POS"></span><span id="_CPPv212OSC_RAMP_POS"></span><span class="target" id="group___enumerations_1ggada898a149424188b3a23010c8fe89176a6a182e87dd8af4aefd98e5fffbad0a31"></span><code class="sig-name descname">OSC_RAMP_POS</code><a class="headerlink" href="#_CPPv412OSC_RAMP_POS" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Ramp wave with positive slope </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv412OSC_RAMP_NEG">
+<span id="_CPPv312OSC_RAMP_NEG"></span><span id="_CPPv212OSC_RAMP_NEG"></span><span class="target" id="group___enumerations_1ggada898a149424188b3a23010c8fe89176a3c7c7f3efc392e763ab8e158838d3baa"></span><code class="sig-name descname">OSC_RAMP_NEG</code><a class="headerlink" href="#_CPPv412OSC_RAMP_NEG" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Ramp wave with negative slope </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv410OSC_RANDOM">
+<span id="_CPPv310OSC_RANDOM"></span><span id="_CPPv210OSC_RANDOM"></span><span class="target" id="group___enumerations_1ggada898a149424188b3a23010c8fe89176acb8f17afc2cb4583fd018092751169a1"></span><code class="sig-name descname">OSC_RANDOM</code><a class="headerlink" href="#_CPPv410OSC_RANDOM" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Random wave </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv415OSC_CLIPPED_TRI">
+<span id="_CPPv315OSC_CLIPPED_TRI"></span><span id="_CPPv215OSC_CLIPPED_TRI"></span><span class="target" id="group___enumerations_1ggada898a149424188b3a23010c8fe89176ae594788e6e32fcedaafe58c135139c0f"></span><code class="sig-name descname">OSC_CLIPPED_TRI</code><a class="headerlink" href="#_CPPv415OSC_CLIPPED_TRI" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv49OSC_TOTAL">
+<span id="_CPPv39OSC_TOTAL"></span><span id="_CPPv29OSC_TOTAL"></span><span class="target" id="group___enumerations_1ggada898a149424188b3a23010c8fe89176ade5d157c899a4bfe8141c586c057f0d0"></span><code class="sig-name descname">OSC_TOTAL</code><a class="headerlink" href="#_CPPv49OSC_TOTAL" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Run Jump Labs
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

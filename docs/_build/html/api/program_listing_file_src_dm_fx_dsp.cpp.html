@@ -1,0 +1,706 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Program Listing for File dm_fx_dsp.cpp &mdash; DreamMaker FX Documentation  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> DreamMaker FX Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/echo_basic.html">Building a Basic Echo Pedal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/adding_effects.html">The basics of creating / adding effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/routing_audio.html">The basics of routing audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/controlling_effects.html">The basics of controlling effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/using_api.html">Using the API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/debugging.html">Debugging Sketches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/troubleshooting.html">General troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Pedal Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__pedal.html">Pedal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__led.html">LEDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__pot.html">Pots/Knobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__switch.html">Switches</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Effect Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__adsr__envelope.html">ADSR Envelope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__amplitude__mod.html">Amplitude Modulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__compressor.html">Compressor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__delay.html">Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__destructor.html">Destructor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__envelope__tracker.html">Envelope Follower</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__gain.html">Gain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__instrument__synth.html">Instrument Synth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__looper.html">Looper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__multitap__delay.html">Multi-tap Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__oscillator.html">Oscillator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__phase__shifter.html">Phase Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__pitch__shift.html">Pitch Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__ring__mod.html">Ring Modulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__slicer.html">Slicer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__variable__delay.html">Variable Delay</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DreamMaker FX Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Program Listing for File dm_fx_dsp.cpp</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/program_listing_file_src_dm_fx_dsp.cpp.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="program-listing-for-file-dm-fx-dsp-cpp">
+<span id="program-listing-file-src-dm-fx-dsp-cpp"></span><h1>Program Listing for File dm_fx_dsp.cpp<a class="headerlink" href="#program-listing-for-file-dm-fx-dsp-cpp" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="file_src_dm_fx_dsp.cpp.html#file-src-dm-fx-dsp-cpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">src/dm_fx_dsp.cpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Copyright (c) 2020 Run Jump Labs LLC.  All right reserved.</span>
+<span class="c1">// This code is licensed under MIT license (see license.txt for details)</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;SPI.h&gt;</span><span class="cp"></span>
+
+<span class="cp">#include</span> <span class="cpf">&quot;dreammakerfx.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;dm_fx_dsp.h&quot;</span><span class="cp"></span>
+
+
+<span class="cp">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span>
+
+
+<span class="kt">bool</span>  <span class="nf">wait_for_dsp_spi_flash_access_to_cease</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+
+  <span class="c1">// Wait for SPI flash select line to stop strobing</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">PIN_DSP_SPI_FLASH_SELECT</span><span class="p">,</span> <span class="n">INPUT</span><span class="p">);</span>
+  <span class="kt">uint32_t</span> <span class="n">start</span> <span class="o">=</span> <span class="n">millis</span><span class="p">();</span>
+  <span class="kt">uint32_t</span> <span class="n">now</span> <span class="o">=</span> <span class="n">millis</span><span class="p">();</span>
+  <span class="kt">uint32_t</span> <span class="n">cntr</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="kt">uint32_t</span> <span class="n">iters</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">while</span> <span class="p">(</span><span class="n">cntr</span> <span class="o">&lt;</span> <span class="mi">250</span> <span class="o">&amp;&amp;</span> <span class="n">millis</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">start</span> <span class="o">+</span> <span class="mi">3000</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">digitalRead</span><span class="p">(</span><span class="n">PIN_DSP_SPI_FLASH_SELECT</span><span class="p">)</span> <span class="o">==</span> <span class="n">LOW</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">iters</span><span class="o">++</span><span class="p">;</span>
+      <span class="n">now</span> <span class="o">=</span> <span class="n">millis</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="n">cntr</span> <span class="o">=</span> <span class="n">millis</span><span class="p">()</span> <span class="o">-</span> <span class="n">now</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="c1">//Serial.println(iters);</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">millis</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">start</span> <span class="o">+</span> <span class="mi">3000</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">DEBUG_MSG</span><span class="p">(</span><span class="s">&quot;DSP boot timeout&quot;</span><span class="p">,</span> <span class="n">MSG_ERROR</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+
+<span class="p">}</span>
+
+
+<span class="kt">bool</span>  <span class="nf">dsp_reset</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+
+  <span class="c1">// Set reset pin to output</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">PIN_DSP_RESET</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">PIN_DSP_RESET</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+
+  <span class="c1">// Flush existing data from SPI fifo</span>
+  <span class="n">dsp_status</span><span class="p">.</span><span class="n">firmware_valid</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+  <span class="n">dsp_status</span><span class="p">.</span><span class="n">firmware_ver</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="n">spi_fifo_reset</span><span class="p">();</span>
+
+  <span class="c1">// Turn off SPI so there is no contention on the boot process</span>
+  <span class="n">spi_stop</span><span class="p">();</span>
+
+  <span class="c1">// Strobe reset</span>
+  <span class="n">delay</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">PIN_DSP_RESET</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
+  <span class="n">delay</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">PIN_DSP_RESET</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+  <span class="n">delay</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+
+
+  <span class="k">return</span> <span class="n">wait_for_dsp_spi_flash_access_to_cease</span><span class="p">();</span>
+
+<span class="p">}</span>
+
+
+<span class="kt">bool</span> <span class="nf">wait_for_canvas_to_start</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+
+  <span class="n">DEBUG_MSG</span><span class="p">(</span><span class="s">&quot;Starting&quot;</span><span class="p">,</span> <span class="n">MSG_DEBUG</span><span class="p">);</span>
+
+  <span class="n">dsp_status</span><span class="p">.</span><span class="n">state_canvas_running</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">delay</span> <span class="o">=</span> <span class="mi">25</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">timeout_cntr_1s</span> <span class="o">=</span> <span class="mi">1000</span><span class="o">/</span><span class="n">delay</span><span class="p">;</span>
+
+  <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">dsp_status</span><span class="p">.</span><span class="n">state_canvas_running</span> <span class="o">&amp;&amp;</span> <span class="n">timeout_cntr_1s</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">spi_fifo_push_emptry_frame</span><span class="p">();</span>
+    <span class="n">spi_transmit_buffered_frames</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
+    <span class="kt">int</span> <span class="n">now</span> <span class="o">=</span> <span class="n">millis</span><span class="p">();</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">millis</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">now</span> <span class="o">+</span> <span class="n">delay</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">display_data_from_sharc</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="n">timeout_cntr_1s</span><span class="o">--</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">timeout_cntr_1s</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">DEBUG_MSG</span><span class="p">(</span><span class="s">&quot;Canvas never started running&quot;</span><span class="p">,</span> <span class="n">MSG_ERROR</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="n">DEBUG_MSG</span><span class="p">(</span><span class="s">&quot;Complete&quot;</span><span class="p">,</span> <span class="n">MSG_DEBUG</span><span class="p">);</span>
+
+  <span class="k">return</span> <span class="n">dsp_status</span><span class="p">.</span><span class="n">state_canvas_running</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+
+
+
+<span class="kt">bool</span> <span class="nf">wait_for_dsp_firmware</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+
+
+  <span class="n">dsp_status</span><span class="p">.</span><span class="n">firmware_valid</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">delay_time</span> <span class="o">=</span> <span class="mi">25</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">timeout_cntr_1s</span> <span class="o">=</span> <span class="mi">5000</span><span class="o">/</span><span class="n">delay_time</span><span class="p">;</span>
+
+  <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">dsp_status</span><span class="p">.</span><span class="n">firmware_valid</span> <span class="o">&amp;&amp;</span> <span class="n">timeout_cntr_1s</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">spi_fifo_push_emptry_frame</span><span class="p">();</span>
+    <span class="n">spi_transmit_buffered_frames</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">dsp_status</span><span class="p">.</span><span class="n">firmware_valid</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">delay</span><span class="p">(</span><span class="n">delay_time</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">dsp_status</span><span class="p">.</span><span class="n">firmware_valid</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+  <span class="p">}</span>
+
+<span class="p">}</span>
+
+<span class="kt">void</span>  <span class="nf">display_dsp_firmware</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// Display firmwware version</span>
+  <span class="kt">char</span> <span class="n">msg</span><span class="p">[</span><span class="mi">64</span><span class="p">],</span> <span class="n">ver</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
+  <span class="n">String</span> <span class="n">firmware_str</span> <span class="o">=</span> <span class="n">String</span><span class="p">(</span><span class="n">dsp_status</span><span class="p">.</span><span class="n">firmware_ver</span><span class="p">);</span>
+  <span class="n">firmware_str</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&quot;0&quot;</span><span class="p">,</span><span class="s">&quot;.&quot;</span><span class="p">);</span>
+  <span class="n">firmware_str</span><span class="p">.</span><span class="n">toCharArray</span><span class="p">(</span><span class="n">ver</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">ver</span><span class="p">));</span>
+  <span class="n">sprintf</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="s">&quot;DSP firmware version: %s&quot;</span><span class="p">,</span> <span class="n">ver</span><span class="p">);</span>
+  <span class="n">DEBUG_MSG</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">MSG_INFO</span><span class="p">);</span>
+<span class="p">}</span>
+
+
+<span class="kt">void</span>  <span class="nf">wait_for_dsp_to_boot</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+
+  <span class="n">DEBUG_MSG</span><span class="p">(</span><span class="s">&quot;Starting&quot;</span><span class="p">,</span> <span class="n">MSG_DEBUG</span><span class="p">);</span>
+
+  <span class="kt">int</span> <span class="n">success_cntr</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+  <span class="kt">bool</span> <span class="n">booted</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+  <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">booted</span> <span class="o">&amp;&amp;</span> <span class="n">success_cntr</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">spi_start</span><span class="p">();</span>
+    <span class="n">booted</span> <span class="o">=</span> <span class="n">wait_for_dsp_firmware</span><span class="p">();</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">booted</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">DEBUG_MSG</span><span class="p">(</span><span class="s">&quot;DSP did not boot, attempting reset&quot;</span><span class="p">,</span> <span class="n">MSG_WARN</span><span class="p">);</span>
+      <span class="n">spi_stop</span><span class="p">();</span>
+      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">dmfx_debug_no_reset</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">dsp_reset</span><span class="p">();</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">DEBUG_MSG</span><span class="p">(</span><span class="s">&quot;DSP does not appear to be running but cannot reset since we&#39;re in no reset mode&quot;</span><span class="p">,</span> <span class="n">MSG_ERROR</span><span class="p">);</span>
+        <span class="n">display_error_status</span><span class="p">(</span><span class="n">ERROR_CODE_DSP_NOT_BOOTING</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">success_cntr</span><span class="o">--</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">success_cntr</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">DEBUG_MSG</span><span class="p">(</span><span class="s">&quot;DSP was not able to boot&quot;</span><span class="p">,</span> <span class="n">MSG_ERROR</span><span class="p">);</span>
+    <span class="n">display_error_status</span><span class="p">(</span><span class="n">ERROR_CODE_DSP_NOT_BOOTING</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="n">display_dsp_firmware</span><span class="p">();</span>
+
+  <span class="n">DEBUG_MSG</span><span class="p">(</span><span class="s">&quot;Complete&quot;</span><span class="p">,</span> <span class="n">MSG_DEBUG</span><span class="p">);</span>
+
+<span class="p">}</span>
+
+<span class="kt">void</span>  <span class="nf">wait_for_dsp_to_be_ready</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+
+  <span class="n">DEBUG_MSG</span><span class="p">(</span><span class="s">&quot;Starting&quot;</span><span class="p">,</span> <span class="n">MSG_DEBUG</span><span class="p">);</span>
+
+  <span class="kt">int</span> <span class="n">delay</span> <span class="o">=</span> <span class="mi">25</span><span class="p">;</span>
+
+
+  <span class="kt">bool</span> <span class="n">ready</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">success_cntr</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+  <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">ready</span> <span class="o">&amp;&amp;</span> <span class="n">success_cntr</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">timeout_cntr_3s</span> <span class="o">=</span> <span class="mi">3000</span><span class="o">/</span><span class="n">delay</span><span class="p">;</span>
+    <span class="c1">// wait for audio to start</span>
+    <span class="k">while</span> <span class="p">((</span><span class="n">dsp_status</span><span class="p">.</span><span class="n">state_flags</span> <span class="o">&amp;</span> <span class="mh">0x70</span><span class="p">)</span> <span class="o">!=</span> <span class="mh">0x70</span> <span class="o">&amp;&amp;</span> <span class="n">timeout_cntr_3s</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">spi_fifo_push_emptry_frame</span><span class="p">();</span>
+      <span class="n">spi_transmit_buffered_frames</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
+      <span class="kt">int</span> <span class="n">now</span> <span class="o">=</span> <span class="n">millis</span><span class="p">();</span>
+      <span class="k">while</span> <span class="p">(</span><span class="n">millis</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">now</span> <span class="o">+</span> <span class="n">delay</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">display_data_from_sharc</span><span class="p">();</span>
+      <span class="p">}</span>
+      <span class="n">timeout_cntr_3s</span><span class="o">--</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">timeout_cntr_3s</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">ready</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="n">success_cntr</span><span class="o">--</span><span class="p">;</span>
+      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">dmfx_debug_no_reset</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">DEBUG_MSG</span><span class="p">(</span><span class="s">&quot;Timeout waiting for DSP to start-up: resetting&quot;</span><span class="p">,</span> <span class="n">MSG_ERROR</span><span class="p">);</span>
+        <span class="n">dsp_reset</span><span class="p">();</span>
+        <span class="n">wait_for_dsp_to_boot</span><span class="p">();</span>
+      <span class="p">}</span>  <span class="k">else</span> <span class="p">{</span>
+        <span class="n">DEBUG_MSG</span><span class="p">(</span><span class="s">&quot;DSP does not appear to be running but cannot reset since we&#39;re in no reset mode&quot;</span><span class="p">,</span> <span class="n">MSG_ERROR</span><span class="p">);</span>
+        <span class="n">display_error_status</span><span class="p">(</span><span class="n">ERROR_CODE_DSP_NOT_BOOTING</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="n">DEBUG_MSG</span><span class="p">(</span><span class="s">&quot;Complete&quot;</span><span class="p">,</span> <span class="n">MSG_DEBUG</span><span class="p">);</span>
+
+<span class="p">}</span>
+
+
+<span class="kt">void</span> <span class="nf">report_canvas_errors</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">dsp_status</span><span class="p">.</span><span class="n">state_err_allocation</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">DEBUG_MSG</span><span class="p">(</span><span class="s">&quot;Allocation error encountered while initializing effects&quot;</span><span class="p">,</span> <span class="n">MSG_ERROR</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">dsp_status</span><span class="p">.</span><span class="n">state_err_param</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">DEBUG_MSG</span><span class="p">(</span><span class="s">&quot;Parameter error encountered while initializing effects&quot;</span><span class="p">,</span> <span class="n">MSG_ERROR</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">dsp_status</span><span class="p">.</span><span class="n">state_err_corrupt</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">DEBUG_MSG</span><span class="p">(</span><span class="s">&quot;Corruption error encountered while initializing effects&quot;</span><span class="p">,</span> <span class="n">MSG_ERROR</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">dsp_status</span><span class="p">.</span><span class="n">state_err_other</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">DEBUG_MSG</span><span class="p">(</span><span class="s">&quot;Other error encountered while initializing effects&quot;</span><span class="p">,</span> <span class="n">MSG_ERROR</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+
+
+
+<span class="kt">void</span> <span class="nf">display_data_from_sharc</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">static</span> <span class="kt">int</span> <span class="n">line_indx</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">static</span> <span class="kt">char</span> <span class="n">line</span><span class="p">[</span><span class="mi">256</span><span class="p">];</span>
+
+  <span class="k">while</span> <span class="p">(</span><span class="n">Serial1</span><span class="p">.</span><span class="n">available</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">char</span> <span class="n">b</span> <span class="o">=</span> <span class="n">Serial1</span><span class="p">.</span><span class="n">read</span><span class="p">();</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">b</span> <span class="o">==</span> <span class="sc">&#39;\n&#39;</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">line_indx</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">line</span><span class="p">[</span><span class="n">line_indx</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">DEBUG_MSG</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">MSG_INFO</span><span class="p">);</span>
+      <span class="p">}</span>
+      <span class="n">line_indx</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="n">line</span><span class="p">[</span><span class="n">line_indx</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">line_indx</span> <span class="o">&gt;=</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">line</span><span class="p">))</span> <span class="p">{</span>
+        <span class="n">line_indx</span> <span class="o">=</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+
+
+
+<span class="c1">// Defines for the SPI flash memory</span>
+<span class="cp">#define CMD_SPI_READ            (0x03)</span>
+<span class="cp">#define CMD_SPI_PROG_PAGE       (0x02)</span>
+<span class="cp">#define CMD_SPI_SECTOR_ERASE    (0x20)</span>
+<span class="cp">#define CMD_SPI_BLOCK_ERASE     (0xD8)</span>
+<span class="cp">#define CMD_SPI_CHIP_ERASE      (0xC7)</span>
+<span class="cp">#define CMD_SPI_READ_STATUS     (0x05)</span>
+<span class="cp">#define CMD_SPI_WRITE_STATUS    (0x05)</span>
+<span class="cp">#define CMD_SPI_WRITE_EN        (0x06)</span>
+<span class="cp">#define CMD_SPI_WRITE_EN_NV     (0x50)</span>
+
+
+<span class="cp">#define SPI_STATUS_BUSY         (0x1)</span>
+<span class="cp">#define SPI_STATUS_WRITE_EN     (0x2)</span>
+
+
+<span class="kt">void</span>  <span class="nf">dsp_assert_reset</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">SPI_SHARC_RESET</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
+  <span class="n">delay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span>  <span class="nf">dsp_deassert_reset</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">SPI_SHARC_RESET</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">static</span> <span class="kt">void</span>  <span class="nf">spi_flash_start_transfer</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="c1">// SHARC bootloader defaults to LSB first</span>
+    <span class="n">SPI</span><span class="p">.</span><span class="n">beginTransaction</span><span class="p">(</span><span class="n">SPISettings</span><span class="p">(</span><span class="mi">4000000</span><span class="p">,</span> <span class="n">MSBFIRST</span><span class="p">,</span> <span class="n">SPI_MODE0</span><span class="p">));</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">SPI_SHARC_SELECT</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">static</span> <span class="kt">void</span>  <span class="nf">spi_flash_end_transfer</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="n">SPI</span><span class="p">.</span><span class="n">endTransaction</span><span class="p">();</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">SPI_SHARC_SELECT</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+    <span class="n">delay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="p">}</span>
+
+
+<span class="k">static</span> <span class="kt">uint8_t</span> <span class="nf">spi_flash_read_status_register</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="kt">uint8_t</span> <span class="n">result</span><span class="p">;</span>
+
+    <span class="n">spi_flash_start_transfer</span><span class="p">();</span>
+
+    <span class="n">SPI</span><span class="p">.</span><span class="n">transfer</span><span class="p">(</span><span class="n">CMD_SPI_READ_STATUS</span><span class="p">);</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">SPI</span><span class="p">.</span><span class="n">transfer</span><span class="p">(</span><span class="mh">0x0</span><span class="p">);</span>
+
+    <span class="n">spi_flash_end_transfer</span><span class="p">();</span>
+
+    <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+
+<span class="p">}</span>
+
+
+<span class="k">static</span> <span class="kt">void</span> <span class="nf">spi_flash_send_byte</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">val</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="c1">// Send a single byte command</span>
+    <span class="n">spi_flash_start_transfer</span><span class="p">();</span>
+    <span class="n">SPI</span><span class="p">.</span><span class="n">transfer</span><span class="p">(</span><span class="n">val</span><span class="p">);</span>
+    <span class="n">spi_flash_end_transfer</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="k">static</span> <span class="kt">bool</span> <span class="nf">spi_flash_check_busy</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="kt">uint8_t</span> <span class="n">val</span> <span class="o">=</span> <span class="n">spi_flash_read_status_register</span><span class="p">();</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">val</span> <span class="o">&amp;</span> <span class="n">SPI_STATUS_BUSY</span><span class="p">)</span> <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="k">else</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="k">static</span> <span class="kt">void</span>    <span class="nf">spi_flash_erase_chip</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">Serial</span> <span class="o">&amp;&amp;</span> <span class="n">dmfx_debug_mode</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot; - Firmware update: erasing flash...&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">spi_flash_send_byte</span><span class="p">(</span><span class="n">CMD_SPI_WRITE_EN</span><span class="p">);</span>
+    <span class="n">spi_flash_send_byte</span><span class="p">(</span><span class="n">CMD_SPI_CHIP_ERASE</span><span class="p">);</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">spi_flash_check_busy</span><span class="p">());</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">Serial</span> <span class="o">&amp;&amp;</span> <span class="n">dmfx_debug_mode</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot; complete&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+
+<span class="k">static</span> <span class="kt">void</span>   <span class="nf">spi_flash_clear_protect</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="n">spi_flash_start_transfer</span><span class="p">();</span>
+    <span class="n">SPI</span><span class="p">.</span><span class="n">transfer</span><span class="p">(</span><span class="n">CMD_SPI_WRITE_EN_NV</span><span class="p">);</span>
+    <span class="n">spi_flash_end_transfer</span><span class="p">();</span>
+
+
+    <span class="n">spi_flash_start_transfer</span><span class="p">();</span>
+
+    <span class="n">SPI</span><span class="p">.</span><span class="n">transfer</span><span class="p">(</span><span class="n">CMD_SPI_WRITE_STATUS</span><span class="p">);</span>
+    <span class="n">SPI</span><span class="p">.</span><span class="n">transfer</span><span class="p">(</span><span class="mh">0x0</span><span class="p">);</span>
+
+    <span class="n">spi_flash_end_transfer</span><span class="p">();</span>
+
+<span class="p">}</span>
+
+
+<span class="k">static</span> <span class="kt">uint8_t</span> <span class="nf">flip_bit_order</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">num</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">reverse_num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">8</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span><span class="p">((</span><span class="n">num</span> <span class="o">&amp;</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">i</span><span class="p">)))</span>
+           <span class="n">reverse_num</span> <span class="o">|=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="p">((</span><span class="mi">8</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">i</span><span class="p">);</span>
+   <span class="p">}</span>
+   <span class="k">return</span> <span class="n">reverse_num</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">static</span> <span class="kt">bool</span>    <span class="nf">spi_flash_page_write</span><span class="p">(</span><span class="kt">uint32_t</span> <span class="n">address</span><span class="p">,</span> <span class="k">const</span> <span class="kt">uint8_t</span> <span class="o">*</span> <span class="n">vals</span><span class="p">,</span> <span class="kt">uint16_t</span> <span class="n">count</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">count</span> <span class="o">&gt;</span> <span class="mi">256</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="p">}</span>
+
+  <span class="k">static</span> <span class="kt">int</span> <span class="n">page_led_cntr</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">static</span> <span class="kt">int</span> <span class="n">led_cntr</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">page_led_cntr</span><span class="o">++</span> <span class="o">&gt;</span> <span class="mi">8</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">led_cntr</span><span class="o">++</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">turn_on_right_footsw_led</span><span class="p">();</span>
+      <span class="n">turn_off_left_footsw_led</span><span class="p">();</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="n">turn_on_right_footsw_led</span><span class="p">();</span>
+      <span class="n">turn_off_left_footsw_led</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="n">page_led_cntr</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="p">}</span>
+
+
+    <span class="kt">uint8_t</span> <span class="n">spi_block</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">CMD_SPI_PROG_PAGE</span><span class="p">};</span>
+
+    <span class="c1">// Load address</span>
+    <span class="n">spi_block</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">address</span> <span class="o">&gt;&gt;</span> <span class="mi">16</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xFF</span><span class="p">;</span>
+    <span class="n">spi_block</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">address</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xFF</span><span class="p">;</span>
+    <span class="n">spi_block</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">address</span> <span class="o">&gt;&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xFF</span><span class="p">;</span>
+
+
+    <span class="n">spi_flash_send_byte</span><span class="p">(</span><span class="n">CMD_SPI_WRITE_EN</span><span class="p">);</span>
+
+    <span class="n">spi_flash_start_transfer</span><span class="p">();</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">4</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+       <span class="n">SPI</span><span class="p">.</span><span class="n">transfer</span><span class="p">(</span><span class="n">spi_block</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+    <span class="p">}</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">count</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">SPI</span><span class="p">.</span><span class="n">transfer</span><span class="p">(</span><span class="n">flip_bit_order</span><span class="p">(</span><span class="n">vals</span><span class="p">[</span><span class="n">i</span><span class="p">]));</span>
+    <span class="p">}</span>
+    <span class="n">spi_flash_end_transfer</span><span class="p">();</span>
+
+    <span class="c1">// 3. Wait for transaction to complete</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">spi_flash_check_busy</span><span class="p">());</span>
+
+    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="k">const</span> <span class="n">PROGMEM</span> <span class="kt">uint8_t</span> <span class="n">firmware_image</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="cp">#include</span> <span class="cpf">&quot;dm_fx_dsp_firmware_image.h&quot;</span><span class="cp"></span>
+<span class="p">};</span>
+
+<span class="kt">bool</span> <span class="nf">dsp_update_firmware_image</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+
+  <span class="kt">uint8_t</span> <span class="o">*</span> <span class="n">vals</span> <span class="o">=</span> <span class="p">(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="p">)</span> <span class="n">firmware_image</span><span class="p">;</span>
+  <span class="kt">uint32_t</span> <span class="n">count</span> <span class="o">=</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">firmware_image</span><span class="p">);</span>
+
+  <span class="c1">// Set up SPI select pin</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">SPI_SHARC_SELECT</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">SPI_SHARC_SELECT</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">SPI_SHARC_RESET</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">SPI_SHARC_RESET</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+
+
+  <span class="c1">// Start SPI port</span>
+  <span class="n">SPI</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+
+  <span class="n">dsp_assert_reset</span><span class="p">();</span>
+
+  <span class="n">spi_flash_clear_protect</span><span class="p">();</span>
+  <span class="n">spi_flash_erase_chip</span><span class="p">();</span>
+
+  <span class="kt">uint32_t</span> <span class="n">page_count</span> <span class="o">=</span> <span class="p">(</span><span class="n">count</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="kt">uint32_t</span> <span class="n">address</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="n">Serial</span> <span class="o">&amp;&amp;</span> <span class="n">dmfx_debug_mode</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot; - Firmware update: programming...&quot;</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="n">turn_on_right_footsw_led</span><span class="p">();</span>
+  <span class="n">turn_off_left_footsw_led</span><span class="p">();</span>
+
+  <span class="kt">uint32_t</span> <span class="n">byte_cnt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">page_count</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">spi_flash_page_write</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">vals</span><span class="p">[</span><span class="n">address</span><span class="p">],</span> <span class="mi">256</span><span class="p">);</span>
+    <span class="n">address</span> <span class="o">+=</span> <span class="mi">256</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="n">turn_on_right_footsw_led</span><span class="p">();</span>
+  <span class="n">turn_on_left_footsw_led</span><span class="p">();</span>
+
+  <span class="c1">// Turn SPI select back into input so SHARC can boot</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">SPI_SHARC_SELECT</span><span class="p">,</span> <span class="n">INPUT</span><span class="p">);</span>
+  <span class="n">SPI</span><span class="p">.</span><span class="n">end</span><span class="p">();</span>
+
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">Serial</span> <span class="o">&amp;&amp;</span> <span class="n">dmfx_debug_mode</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot; complete&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+
+  <span class="n">turn_off_right_footsw_led</span><span class="p">();</span>
+  <span class="n">turn_off_left_footsw_led</span><span class="p">();</span>
+
+  <span class="n">dsp_deassert_reset</span><span class="p">();</span>
+
+  <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+
+<span class="p">}</span>
+
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Run Jump Labs
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

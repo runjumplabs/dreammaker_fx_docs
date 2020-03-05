@@ -1,0 +1,1903 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classfx__pedal" kind="class" language="C++" prot="public">
+    <compoundname>fx_pedal</compoundname>
+    <includes refid="dreammakerfx_8h" local="no">dreammakerfx.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classfx__pedal_1a947419017578343f8d09f023876b72bc" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool fx_pedal::initialized</definition>
+        <argsstring></argsstring>
+        <name>initialized</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="478" column="1" bodyfile="src/dreammakerfx.h" bodystart="478" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1abba68cfcad2670c3606b38605ddca129" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool fx_pedal::valid_audio_routes</definition>
+        <argsstring></argsstring>
+        <name>valid_audio_routes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="479" column="1" bodyfile="src/dreammakerfx.h" bodystart="479" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a53eafeedef47f300f5bfaf7f344bc750" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool fx_pedal::valid_control_routes</definition>
+        <argsstring></argsstring>
+        <name>valid_control_routes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="480" column="1" bodyfile="src/dreammakerfx.h" bodystart="480" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a2b6787f7565fee47764e5601d1c34e88" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool fx_pedal::debug_mode</definition>
+        <argsstring></argsstring>
+        <name>debug_mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="481" column="1" bodyfile="src/dreammakerfx.h" bodystart="481" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a746fe1486b557f8037bd48c853185093" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool fx_pedal::debug_dsp_telemetry</definition>
+        <argsstring></argsstring>
+        <name>debug_dsp_telemetry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="481" column="1" bodyfile="src/dreammakerfx.h" bodystart="481" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a3b211bcf0cfc3ae3ae4f943160f369c7" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool fx_pedal::debug_no_reset</definition>
+        <argsstring></argsstring>
+        <name>debug_no_reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="481" column="1" bodyfile="src/dreammakerfx.h" bodystart="481" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a731575557b0c84978bfce8408e1ad88b" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t fx_pedal::last_service_ts</definition>
+        <argsstring></argsstring>
+        <name>last_service_ts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="483" column="1" bodyfile="src/dreammakerfx.h" bodystart="483" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a10612ba20b4284e642122e75c6c391d5" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t fx_pedal::tap_history[16]</definition>
+        <argsstring>[16]</argsstring>
+        <name>tap_history</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="485" column="1" bodyfile="src/dreammakerfx.h" bodystart="485" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a99116eaf4ca79e97e1124241e4810d41" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t fx_pedal::tap_indx</definition>
+        <argsstring></argsstring>
+        <name>tap_indx</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="486" column="1" bodyfile="src/dreammakerfx.h" bodystart="486" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a4188d3db0bb63b28308438f3aa1ea1c9" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float fx_pedal::tap_interval_ms</definition>
+        <argsstring></argsstring>
+        <name>tap_interval_ms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="487" column="1" bodyfile="src/dreammakerfx.h" bodystart="487" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a655343f02a9c408a8192a95fc42dd2ab" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool fx_pedal::tap_locked</definition>
+        <argsstring></argsstring>
+        <name>tap_locked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="488" column="1" bodyfile="src/dreammakerfx.h" bodystart="488" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1af12aee328ab0a2f059d2910a4f29095a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool fx_pedal::tap_led_flash</definition>
+        <argsstring></argsstring>
+        <name>tap_led_flash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="489" column="1" bodyfile="src/dreammakerfx.h" bodystart="489" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1af3a94f92811f1efd210029cb58cd2e74" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t fx_pedal::tap_led_flash_cntr</definition>
+        <argsstring></argsstring>
+        <name>tap_led_flash_cntr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="490" column="1" bodyfile="src/dreammakerfx.h" bodystart="490" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1aa8b8c59ae90882c0b5c9e1cecf4523a7" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t fx_pedal::tap_last_tap</definition>
+        <argsstring></argsstring>
+        <name>tap_last_tap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="491" column="1" bodyfile="src/dreammakerfx.h" bodystart="491" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a527d9dd581fc9dee1628c5b7404af54f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool fx_pedal::tap_new_val</definition>
+        <argsstring></argsstring>
+        <name>tap_new_val</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="492" column="1" bodyfile="src/dreammakerfx.h" bodystart="492" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a48e81858a0595d89c82570f496f1b9e2" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool fx_pedal::footswitch_left_pressed</definition>
+        <argsstring></argsstring>
+        <name>footswitch_left_pressed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="494" column="1" bodyfile="src/dreammakerfx.h" bodystart="494" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a60a7c145cf9c7ea787dae82e1ff182be" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool fx_pedal::footswitch_right_pressed</definition>
+        <argsstring></argsstring>
+        <name>footswitch_right_pressed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="494" column="1" bodyfile="src/dreammakerfx.h" bodystart="494" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a0dc1959d22e23fdf52e21fec70fade0e" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool fx_pedal::footswitch_left_released</definition>
+        <argsstring></argsstring>
+        <name>footswitch_left_released</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="495" column="1" bodyfile="src/dreammakerfx.h" bodystart="495" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1acf3c36c9c3bb1f0740b5759f0a61fe36" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool fx_pedal::footswitch_right_released</definition>
+        <argsstring></argsstring>
+        <name>footswitch_right_released</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="495" column="1" bodyfile="src/dreammakerfx.h" bodystart="495" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1ad421de7dde2fb83c8e944cadb6757433" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool fx_pedal::footswitch_left_last_state</definition>
+        <argsstring></argsstring>
+        <name>footswitch_left_last_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="496" column="1" bodyfile="src/dreammakerfx.h" bodystart="496" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a31442f526aa6af72dcf5ed8244b03778" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool fx_pedal::footswitch_right_last_state</definition>
+        <argsstring></argsstring>
+        <name>footswitch_right_last_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="496" column="1" bodyfile="src/dreammakerfx.h" bodystart="496" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1ac52003f6322b069a101e796471298e7b" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_d_s_p___s_t_a_t_u_s" kindref="compound">DSP_STATUS</ref> *</type>
+        <definition>DSP_STATUS* fx_pedal::status</definition>
+        <argsstring></argsstring>
+        <name>status</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="498" column="1" bodyfile="src/dreammakerfx.h" bodystart="498" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a7ff81bd65d953449e2e4753688832754" prot="private" static="no" mutable="no">
+        <type>FX_INSTANCE</type>
+        <definition>FX_INSTANCE fx_pedal::instance_stack[MAX_INSTANCES]</definition>
+        <argsstring>[MAX_INSTANCES]</argsstring>
+        <name>instance_stack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="503" column="1" bodyfile="src/dreammakerfx.h" bodystart="503" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1af7811fd3dfc4243748fb0bdcfd8bfc43" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int fx_pedal::total_instances</definition>
+        <argsstring></argsstring>
+        <name>total_instances</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="504" column="1" bodyfile="src/dreammakerfx.h" bodystart="504" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a331204aa1cf1f856481032ef10c91ed1" prot="private" static="no" mutable="no">
+        <type>AUDIO_ROUTE</type>
+        <definition>AUDIO_ROUTE fx_pedal::audio_routing_stack[MAX_ROUTES]</definition>
+        <argsstring>[MAX_ROUTES]</argsstring>
+        <name>audio_routing_stack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="507" column="1" bodyfile="src/dreammakerfx.h" bodystart="507" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1aad5fe4f8432a082ed6cc6726de0b558a" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int fx_pedal::total_audio_routes</definition>
+        <argsstring></argsstring>
+        <name>total_audio_routes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="508" column="1" bodyfile="src/dreammakerfx.h" bodystart="508" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a3ef49c357d73a323eaa693274e409597" prot="private" static="no" mutable="no">
+        <type>CTRL_ROUTE</type>
+        <definition>CTRL_ROUTE fx_pedal::control_routing_stack[MAX_ROUTES]</definition>
+        <argsstring>[MAX_ROUTES]</argsstring>
+        <name>control_routing_stack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="511" column="1" bodyfile="src/dreammakerfx.h" bodystart="511" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a54fe2ce8124365c4c404fdf60cfd2f9f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int fx_pedal::total_control_routes</definition>
+        <argsstring></argsstring>
+        <name>total_control_routes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="512" column="1" bodyfile="src/dreammakerfx.h" bodystart="512" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a524e9dbf27519d2045434486f291f805" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool fx_pedal::valid_canvas</definition>
+        <argsstring></argsstring>
+        <name>valid_canvas</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="515" column="1" bodyfile="src/dreammakerfx.h" bodystart="515" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a28c96755b0ba4d5014b0072ee6fb468f" prot="private" static="no" mutable="no">
+        <type>fx_audio_node</type>
+        <definition>fx_audio_node fx_pedal::sys_input_instr_l</definition>
+        <argsstring></argsstring>
+        <name>sys_input_instr_l</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="518" column="1" bodyfile="src/dreammakerfx.h" bodystart="518" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1ad21f5d8d64cd28d5081d7f34235633c9" prot="private" static="no" mutable="no">
+        <type>fx_audio_node</type>
+        <definition>fx_audio_node fx_pedal::sys_input_instr_r</definition>
+        <argsstring></argsstring>
+        <name>sys_input_instr_r</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="519" column="1" bodyfile="src/dreammakerfx.h" bodystart="519" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1aa43e51926becacededefa1c15660ac01" prot="private" static="no" mutable="no">
+        <type>fx_audio_node</type>
+        <definition>fx_audio_node fx_pedal::sys_output_amp_l</definition>
+        <argsstring></argsstring>
+        <name>sys_output_amp_l</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="520" column="1" bodyfile="src/dreammakerfx.h" bodystart="520" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a9a3c143a73ae532ad32b707b09fd49f9" prot="private" static="no" mutable="no">
+        <type>fx_audio_node</type>
+        <definition>fx_audio_node fx_pedal::sys_output_amp_r</definition>
+        <argsstring></argsstring>
+        <name>sys_output_amp_r</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="521" column="1" bodyfile="src/dreammakerfx.h" bodystart="521" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a4ca893876a08837abeae3fed5e1d1592" prot="private" static="no" mutable="no">
+        <type>fx_audio_node</type>
+        <definition>fx_audio_node fx_pedal::sys_input_mic_l</definition>
+        <argsstring></argsstring>
+        <name>sys_input_mic_l</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="522" column="1" bodyfile="src/dreammakerfx.h" bodystart="522" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a43a4b20c0602ffea6bd833c46a10f43a" prot="private" static="no" mutable="no">
+        <type>fx_audio_node</type>
+        <definition>fx_audio_node fx_pedal::sys_input_mic_r</definition>
+        <argsstring></argsstring>
+        <name>sys_input_mic_r</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="523" column="1" bodyfile="src/dreammakerfx.h" bodystart="523" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1ae68914b04435fc508ce5b38a87ad078d" prot="private" static="no" mutable="no">
+        <type>fx_control_node</type>
+        <definition>fx_control_node fx_pedal::sys_current_frequency</definition>
+        <argsstring></argsstring>
+        <name>sys_current_frequency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="526" column="1" bodyfile="src/dreammakerfx.h" bodystart="526" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a33d37b1541dbaa5a52b9ae8675cfefdc" prot="private" static="no" mutable="no">
+        <type>fx_control_node</type>
+        <definition>fx_control_node fx_pedal::sys_note_duration_ms</definition>
+        <argsstring></argsstring>
+        <name>sys_note_duration_ms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="527" column="1" bodyfile="src/dreammakerfx.h" bodystart="527" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a225d7dd7f54c88e15d7cffae29885ded" prot="private" static="no" mutable="no">
+        <type>fx_control_node</type>
+        <definition>fx_control_node fx_pedal::sys_new_note</definition>
+        <argsstring></argsstring>
+        <name>sys_new_note</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="528" column="1" bodyfile="src/dreammakerfx.h" bodystart="528" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classfx__pedal_1a09870edaa6462260acd376f08a87f142" prot="protected" static="no" mutable="no">
+        <type>fx_audio_node *</type>
+        <definition>fx_audio_node* fx_pedal::audio_node_stack[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>audio_node_stack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="563" column="1" bodyfile="src/dreammakerfx.h" bodystart="563" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a6c540a4cb9f53b0607d01a6c7cabab2f" prot="protected" static="no" mutable="no">
+        <type>fx_control_node *</type>
+        <definition>fx_control_node* fx_pedal::control_node_stack[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>control_node_stack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="564" column="1" bodyfile="src/dreammakerfx.h" bodystart="564" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classfx__pedal_1ac663c7f4236dca2b131e3d42b37a1c98" prot="public" static="no" mutable="no">
+        <type>fx_audio_node *</type>
+        <definition>fx_audio_node* fx_pedal::instr_in</definition>
+        <argsstring></argsstring>
+        <name>instr_in</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="616" column="1" bodyfile="src/dreammakerfx.h" bodystart="616" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1af9224fc19efa6115d4fadf8c74b894bf" prot="public" static="no" mutable="no">
+        <type>fx_audio_node *</type>
+        <definition>fx_audio_node* fx_pedal::instr_in_l</definition>
+        <argsstring></argsstring>
+        <name>instr_in_l</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="617" column="1" bodyfile="src/dreammakerfx.h" bodystart="617" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a202ea144ad8fa3d7620a27b7916e1e36" prot="public" static="no" mutable="no">
+        <type>fx_audio_node *</type>
+        <definition>fx_audio_node* fx_pedal::instr_in_r</definition>
+        <argsstring></argsstring>
+        <name>instr_in_r</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="618" column="1" bodyfile="src/dreammakerfx.h" bodystart="618" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1af2c3f21279f9ed7ba8ce5a9bf42b50f8" prot="public" static="no" mutable="no">
+        <type>fx_audio_node *</type>
+        <definition>fx_audio_node* fx_pedal::amp_out</definition>
+        <argsstring></argsstring>
+        <name>amp_out</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="619" column="1" bodyfile="src/dreammakerfx.h" bodystart="619" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a2197f98cc5292da8b7eb60dca3dcecb1" prot="public" static="no" mutable="no">
+        <type>fx_audio_node *</type>
+        <definition>fx_audio_node* fx_pedal::amp_out_l</definition>
+        <argsstring></argsstring>
+        <name>amp_out_l</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="620" column="1" bodyfile="src/dreammakerfx.h" bodystart="620" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a7f9bf7fbdce7cd0878137576ea72a8d2" prot="public" static="no" mutable="no">
+        <type>fx_audio_node *</type>
+        <definition>fx_audio_node* fx_pedal::amp_out_r</definition>
+        <argsstring></argsstring>
+        <name>amp_out_r</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="621" column="1" bodyfile="src/dreammakerfx.h" bodystart="621" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a1f66e0252e5493bbe1dae78924385cf9" prot="public" static="no" mutable="no">
+        <type>fx_audio_node *</type>
+        <definition>fx_audio_node* fx_pedal::mic_in_l</definition>
+        <argsstring></argsstring>
+        <name>mic_in_l</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="622" column="1" bodyfile="src/dreammakerfx.h" bodystart="622" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a41247c0ad00c30ae6c889c87aeff1c7e" prot="public" static="no" mutable="no">
+        <type>fx_audio_node *</type>
+        <definition>fx_audio_node* fx_pedal::mic_in_r</definition>
+        <argsstring></argsstring>
+        <name>mic_in_r</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="623" column="1" bodyfile="src/dreammakerfx.h" bodystart="623" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a7d2e1a8979062862355f4f2699937652" prot="public" static="no" mutable="no">
+        <type>fx_control_node *</type>
+        <definition>fx_control_node* fx_pedal::note_frequency</definition>
+        <argsstring></argsstring>
+        <name>note_frequency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="625" column="1" bodyfile="src/dreammakerfx.h" bodystart="625" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1a7ec1d597a0beb9e0205f860b18c5e1ac" prot="public" static="no" mutable="no">
+        <type>fx_control_node *</type>
+        <definition>fx_control_node* fx_pedal::note_duration</definition>
+        <argsstring></argsstring>
+        <name>note_duration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="626" column="1" bodyfile="src/dreammakerfx.h" bodystart="626" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__pedal_1ae4ae206679e31a8e26c1fc1693f79691" prot="public" static="no" mutable="no">
+        <type>fx_control_node *</type>
+        <definition>fx_control_node* fx_pedal::new_note</definition>
+        <argsstring></argsstring>
+        <name>new_note</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="627" column="1" bodyfile="src/dreammakerfx.h" bodystart="627" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classfx__pedal_1aaf8e52834338fcd104d327787f400334" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* fx_pedal::get_effect_type</definition>
+        <argsstring>(EFFECT_TYPE t)</argsstring>
+        <name>get_effect_type</name>
+        <param>
+          <type>EFFECT_TYPE</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="500" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1a0719213cd261cb235bb6804d2bc3be7c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool fx_pedal::add_audio_route_to_stack</definition>
+        <argsstring>(uint8_t src_id, uint8_t src_node_indx, uint8_t dest_id, uint8_t dest_node_indx)</argsstring>
+        <name>add_audio_route_to_stack</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>src_id</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>src_node_indx</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>dest_id</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>dest_node_indx</declname>
+        </param>
+        <briefdescription>
+<para>Adds a new audio route. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">src_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source identifier </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">src_node_indx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source node indx </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dest_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The destination identifier </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dest_node_indx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The destination node indx</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if successful, false if not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="531" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="479" bodyend="490"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1a32006db11e4faa5908ef7973ad7b66c2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool fx_pedal::add_control_route_to_stack</definition>
+        <argsstring>(uint8_t src_id, uint8_t src_node_indx, uint8_t src_param_id, uint8_t dest_id, uint8_t dest_node_indx, uint8_t dest_param_id, float scale, float offset, CTRL_NODE_TYPE type)</argsstring>
+        <name>add_control_route_to_stack</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>src_id</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>src_node_indx</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>src_param_id</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>dest_id</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>dest_node_indx</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>dest_param_id</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>scale</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>CTRL_NODE_TYPE</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Adds a control route. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">src_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source identifier </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">src_node_indx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source node indx </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dest_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The destination identifier </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dest_node_indx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The destination node indx</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if successful, false if not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="532" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="502" bodyend="525"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1a7a8b6377141f3eff436a2d24c15bf7af" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_pedal::spi_get_status</definition>
+        <argsstring>(void)</argsstring>
+        <name>spi_get_status</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="543" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1a40f659bee3104ae06792b29b95f8caba" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_pedal::spi_service</definition>
+        <argsstring>(void)</argsstring>
+        <name>spi_service</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="544" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1a09dadc9cfe3b0afa152644c2598134d0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_pedal::spi_transmit_bypass</definition>
+        <argsstring>(uint16_t bypass_state)</argsstring>
+        <name>spi_transmit_bypass</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>bypass_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="545" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1a2f336e539e9ab173e3ba97afebcfcab3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_pedal::spi_transmit_all_params</definition>
+        <argsstring>(void)</argsstring>
+        <name>spi_transmit_all_params</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="546" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1a1efdd562365d660149fe1a316b9a63dd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_pedal::spi_transmit_params</definition>
+        <argsstring>(uint16_t node_index)</argsstring>
+        <name>spi_transmit_params</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>node_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="547" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1a9bb11697b3853d2ad34726153585597f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_pedal::spi_transmit_audio_routing_stack</definition>
+        <argsstring>(void)</argsstring>
+        <name>spi_transmit_audio_routing_stack</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="548" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1a458edf9bda4301c29119fde798c921f6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_pedal::spi_transmit_control_routing_stack</definition>
+        <argsstring>(void)</argsstring>
+        <name>spi_transmit_control_routing_stack</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="549" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1a62d6096e84d1b50881766e93655fb470" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_pedal::spi_transmit_instance_stack</definition>
+        <argsstring>(void)</argsstring>
+        <name>spi_transmit_instance_stack</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="550" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1a92cc196fb9d64fa209bc7b5fbbffdf99" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool fx_pedal::get_audio_node_index</definition>
+        <argsstring>(fx_audio_node *node, uint8_t *node_index)</argsstring>
+        <name>get_audio_node_index</name>
+        <param>
+          <type>fx_audio_node *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>node_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="553" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1a9d2ad0b3b22aa1f4e9f5fc5244414710" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool fx_pedal::get_control_node_index</definition>
+        <argsstring>(fx_control_node *node, uint8_t *node_index)</argsstring>
+        <name>get_control_node_index</name>
+        <param>
+          <type>fx_control_node *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>node_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="554" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1a97e3693a5dfd198ae3f484fc90960c3a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* fx_pedal::get_name</definition>
+        <argsstring>()</argsstring>
+        <name>get_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="556" column="1" bodyfile="src/dreammakerfx.h" bodystart="556" bodyend="558"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classfx__pedal_1aa7ec165e5660a0d484add96ec19cfb8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_pedal::init</definition>
+        <argsstring>(void)</argsstring>
+        <name>init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initializes the pedal object with default debug level (just warnings and errors) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="760" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="18" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1a9575fbfd47c4fcfed424c4a82ce84f1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_pedal::init</definition>
+        <argsstring>(DEBUG_MSG_LEVEL debug_level)</argsstring>
+        <name>init</name>
+        <param>
+          <type>DEBUG_MSG_LEVEL</type>
+          <declname>debug_level</declname>
+        </param>
+        <briefdescription>
+<para>Initializes the pedal object with user defined debug level. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">debug_level</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The debug level to display (MSG_DEBUG, MSG_INFO, MSG_WARN, MSG_ERROR) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="761" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="28" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1a579a8e9a697226ed755be972aa047887" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_pedal::init</definition>
+        <argsstring>(DEBUG_MSG_LEVEL debug_level, bool dsp_no_reset)</argsstring>
+        <name>init</name>
+        <param>
+          <type>DEBUG_MSG_LEVEL</type>
+          <declname>debug_level</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>dsp_no_reset</declname>
+        </param>
+        <briefdescription>
+<para>Initializes the pedal object with used defined debug level, bypasses DSP reset. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">debug_level</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The debug level to display (MSG_DEBUG, MSG_INFO, MSG_WARN, MSG_ERROR) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dsp_no_reset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The dsp no reset (set to true to bypass reset) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Next check to see if we need to do a firmware update</para>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="762" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="57" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1a4cfa12f479e0ab02f6e7be2e848cc2d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_pedal::init</definition>
+        <argsstring>(bool debug_enable)</argsstring>
+        <name>init</name>
+        <param>
+          <type>bool</type>
+          <declname>debug_enable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="765" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="34" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1ab7344a94319c473e6fe825bfd1ec6563" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_pedal::init</definition>
+        <argsstring>(bool debug_enable, bool dsp_telem)</argsstring>
+        <name>init</name>
+        <param>
+          <type>bool</type>
+          <declname>debug_enable</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>dsp_telem</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="766" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="43" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1a63cae666ada50e751c504f440d9c0d7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool fx_pedal::run</definition>
+        <argsstring>(void)</argsstring>
+        <name>run</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Runs the current canvas (i.e. compiles and downloads to the DSP) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if successful, false if not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="769" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1015" bodyend="1081"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1a9cf36229c478131fa67a57f34fd907dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_pedal::service</definition>
+        <argsstring>(void)</argsstring>
+        <name>service</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Pedal service function that should be called in the Arduino loop() function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="770" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="919" bodyend="996"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1a97423b3ef60a4a8c8986db1cb17b6be6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool fx_pedal::route_audio</definition>
+        <argsstring>(fx_audio_node *out, fx_audio_node *in)</argsstring>
+        <name>route_audio</name>
+        <param>
+          <type>fx_audio_node *</type>
+          <declname>out</declname>
+          <defname>src</defname>
+        </param>
+        <param>
+          <type>fx_audio_node *</type>
+          <declname>in</declname>
+          <defname>dest</defname>
+        </param>
+        <briefdescription>
+<para>Routes a source node (output) to a destination mode (input) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source / output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The destination / input</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True is successful, false if not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="775" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="536" bodyend="672"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1a0d3262d0d26edcfdc559193091991f32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool fx_pedal::route_control</definition>
+        <argsstring>(fx_control_node *src, fx_control_node *dest)</argsstring>
+        <name>route_control</name>
+        <param>
+          <type>fx_control_node *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>fx_control_node *</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+<para>Route a control source node (output) to a destination mode (input) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source node (should be an output) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The destination node (should be an input)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True is successful, false if not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="776" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="683" bodyend="685"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1a23e3239c2fe59fe105d7edeaa1141bce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool fx_pedal::route_control</definition>
+        <argsstring>(fx_control_node *src, fx_control_node *dest, float scale, float offset)</argsstring>
+        <name>route_control</name>
+        <param>
+          <type>fx_control_node *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>fx_control_node *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>scale</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+<para>Route a control source node (output) to a destination mode (input) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source node (should be an output) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The destination node (should be an input) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The scale to apply to the control value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The offset to apply to the control value</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True is successful, false if not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="777" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="697" bodyend="822"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1a20c19252b60841577d921c82da7a5526" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_pedal::add_bypass_button</definition>
+        <argsstring>(FOOTSWITCH footswitch)</argsstring>
+        <name>add_bypass_button</name>
+        <param>
+          <type>FOOTSWITCH</type>
+          <declname>footswitch</declname>
+        </param>
+        <briefdescription>
+<para>Set one of the footswitches to be a bypass button. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function will also set the corresponding LED to turn on and off when bypass is disabled / enabled.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">footswitch</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The footswitch (FOOTSWITCH_RIGHT, FOOTSWITCH_LEFT) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="780" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="833" bodyend="837"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1a57af6a51bd289393d1fcc3c20dfa80af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_pedal::add_tap_interval_button</definition>
+        <argsstring>(FOOTSWITCH footswitch, bool enable_led_flash)</argsstring>
+        <name>add_tap_interval_button</name>
+        <param>
+          <type>FOOTSWITCH</type>
+          <declname>footswitch</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enable_led_flash</declname>
+        </param>
+        <briefdescription>
+<para>Set one of the footswitches to be a tap tempo / length button. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">footswitch</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The footswitch (FOOTSWITCH_RIGHT, FOOTSWITCH_LEFT, FOOTSWITCH_BOTH) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">enable_led_flash</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set the corresponding LED to flash at tempo rate </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="781" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="845" bodyend="857"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1a957ee7e9cc84482790d7b2dd360457de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_pedal::bypass_fx</definition>
+        <argsstring>(void)</argsstring>
+        <name>bypass_fx</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="784" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="998" bodyend="1001"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1a22d9d469c49a435f03e3bcc349d570a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_pedal::enable_fx</definition>
+        <argsstring>(void)</argsstring>
+        <name>enable_fx</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="785" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1004" bodyend="1007"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1ab4e00784f9ba6b5a720d19bafa5c5988" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool fx_pedal::new_tap_interval</definition>
+        <argsstring>(void)</argsstring>
+        <name>new_tap_interval</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns true when a new tap interval has been tapped in by the user. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>{ description_of_the_return_value } </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="791" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1217" bodyend="1224"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1a0acead76c8c144c406d95029804d5164" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float fx_pedal::get_tap_interval_ms</definition>
+        <argsstring>(void)</argsstring>
+        <name>get_tap_interval_ms</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns the current tap interval in milliseconds. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The tap interval in milliseconds. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="792" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1232" bodyend="1238"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1a2be1ee8787cf3c949429eb6295432225" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float fx_pedal::get_tap_freq_hz</definition>
+        <argsstring>(void)</argsstring>
+        <name>get_tap_freq_hz</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns the current tap interval in Hertz (cycles / second) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The tap frequency in Hertz </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="793" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1245" bodyend="1251"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1a9afe97a2261468b36a870bdd14c4af28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_pedal::set_tap_blink_rate_hz</definition>
+        <argsstring>(float rate_hz)</argsstring>
+        <name>set_tap_blink_rate_hz</name>
+        <param>
+          <type>float</type>
+          <declname>rate_hz</declname>
+        </param>
+        <briefdescription>
+<para>Sets the LED blink rate for tap interval. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Use this if there is a pot that can also change the tempo / rate / duration to override what has been previously &quot;tapped&quot; in.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">rate_hz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new blink rate in Hertz </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="794" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1262" bodyend="1271"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1aa7da84fc35b770df37ddea35fcd1fa8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_pedal::set_tap_blink_rate_hz</definition>
+        <argsstring>(float rate_hz, FOOTSWITCH led)</argsstring>
+        <name>set_tap_blink_rate_hz</name>
+        <param>
+          <type>float</type>
+          <declname>rate_hz</declname>
+        </param>
+        <param>
+          <type>FOOTSWITCH</type>
+          <declname>led</declname>
+        </param>
+        <briefdescription>
+<para>Sets the LED blink rate for tap interval with LED control. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Use this if there is a pot that can also change the tempo / rate / duration to override what has been previously &quot;tapped&quot; in.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">rate_hz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new blink rate in Hertz </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">led</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Which LED to flash (FOOTSWITCH_LEFT, FOOTSWITCH_RIGHT) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="795" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1282" bodyend="1293"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1ab5f94f1197ebcd5be2200586bf730154" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_pedal::set_tap_blink_rate_ms</definition>
+        <argsstring>(float ms)</argsstring>
+        <name>set_tap_blink_rate_ms</name>
+        <param>
+          <type>float</type>
+          <declname>ms</declname>
+        </param>
+        <briefdescription>
+<para>Sets the LED blink rate in milliseconds. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Use this if there is a pot that can also change the tempo / rate / duration to override what has been previously &quot;tapped&quot; in.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ms</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The blink rate in milliseconds </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="796" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1304" bodyend="1313"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1af064f5cfc0fc2f5a439ec50b808a6e92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_pedal::set_tap_blink_rate_ms</definition>
+        <argsstring>(float ms, FOOTSWITCH led)</argsstring>
+        <name>set_tap_blink_rate_ms</name>
+        <param>
+          <type>float</type>
+          <declname>ms</declname>
+        </param>
+        <param>
+          <type>FOOTSWITCH</type>
+          <declname>led</declname>
+        </param>
+        <briefdescription>
+<para>Sets the LED blink rate for tap interval with LED control. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Use this if there is a pot that can also change the tempo / rate / duration to override what has been previously &quot;tapped&quot; in.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ms</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new blink period in milliseconds </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">led</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Which LED to flash (FOOTSWITCH_LEFT, FOOTSWITCH_RIGHT) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="797" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1324" bodyend="1334"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1a0b37d83e55eb57f01a21d1e82a65a962" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool fx_pedal::button_pressed</definition>
+        <argsstring>(FOOTSWITCH footswitch, bool enable_led)</argsstring>
+        <name>button_pressed</name>
+        <param>
+          <type>FOOTSWITCH</type>
+          <declname>footswitch</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enable_led</declname>
+        </param>
+        <briefdescription>
+<para>Checks if a button was just pressed and optionally turns on an LED when it is. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is used to create events when a button is held down and released to momentarily enable / disable functionality.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">footswitch</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The footswitch (FOOTSWITCH_LEFT, FOOTSWITCH_RIGHT, (FOOTSWITCH_LEFT, FOOTSWITCH_BOTH) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">enable_led</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If true, lights LED while button pressed</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if button is pressed, false if not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="800" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1349" bodyend="1374"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1a6846245fdae141df03fc96fd49e033c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool fx_pedal::button_released</definition>
+        <argsstring>(FOOTSWITCH footswitch, bool enable_led)</argsstring>
+        <name>button_released</name>
+        <param>
+          <type>FOOTSWITCH</type>
+          <declname>footswitch</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enable_led</declname>
+        </param>
+        <briefdescription>
+<para>Checks if a button was just released and optionally turns off an LED when it was. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is used to create events when a button is held down and released to momentarily enable / disable functionality.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">footswitch</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The footswitch (FOOTSWITCH_LEFT, FOOTSWITCH_RIGHT, (FOOTSWITCH_LEFT, FOOTSWITCH_BOTH) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">enable_led</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If true, turns off the LED when button is released</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>{ description_of_the_return_value } </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="801" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1387" bodyend="1407"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1aa591b730a9748432e6106275289bd525" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_pedal::print_instance_stack</definition>
+        <argsstring>(void)</argsstring>
+        <name>print_instance_stack</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Utility function to print the instance stack to the console. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="811" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1443" bodyend="1469"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1aafc924cc4d965716545368e4dfcf85c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_pedal::print_routing_table</definition>
+        <argsstring>(void)</argsstring>
+        <name>print_routing_table</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Utility function to print the routing table to the console. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="812" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1474" bodyend="1520"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1a9383c75a2dd8557f0bd4927846113836" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_pedal::print_param_tables</definition>
+        <argsstring>(void)</argsstring>
+        <name>print_param_tables</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Utility function to print the parameter tables. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="813" column="1" bodyfile="src/dreammakerfx.cpp" bodystart="1525" bodyend="1677"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__pedal_1ac28cbf7f885ce543abdf7484ef48de91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_pedal::print_processor_load</definition>
+        <argsstring>(int seconds)</argsstring>
+        <name>print_processor_load</name>
+        <param>
+          <type>int</type>
+          <declname>seconds</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dreammakerfx.h" line="814" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class describes an effects canvas. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/dreammakerfx.h" line="473" column="1" bodyfile="src/dreammakerfx.h" bodystart="473" bodyend="825"/>
+    <listofallmembers>
+      <member refid="classfx__pedal_1a0719213cd261cb235bb6804d2bc3be7c" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>add_audio_route_to_stack</name></member>
+      <member refid="classfx__pedal_1a20c19252b60841577d921c82da7a5526" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>add_bypass_button</name></member>
+      <member refid="classfx__pedal_1a32006db11e4faa5908ef7973ad7b66c2" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>add_control_route_to_stack</name></member>
+      <member refid="classfx__pedal_1a57af6a51bd289393d1fcc3c20dfa80af" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>add_tap_interval_button</name></member>
+      <member refid="classfx__pedal_1af2c3f21279f9ed7ba8ce5a9bf42b50f8" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>amp_out</name></member>
+      <member refid="classfx__pedal_1a2197f98cc5292da8b7eb60dca3dcecb1" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>amp_out_l</name></member>
+      <member refid="classfx__pedal_1a7f9bf7fbdce7cd0878137576ea72a8d2" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>amp_out_r</name></member>
+      <member refid="classfx__pedal_1a09870edaa6462260acd376f08a87f142" prot="protected" virt="non-virtual"><scope>fx_pedal</scope><name>audio_node_stack</name></member>
+      <member refid="classfx__pedal_1a331204aa1cf1f856481032ef10c91ed1" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>audio_routing_stack</name></member>
+      <member refid="classfx__pedal_1a0b37d83e55eb57f01a21d1e82a65a962" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>button_pressed</name></member>
+      <member refid="classfx__pedal_1a6846245fdae141df03fc96fd49e033c9" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>button_released</name></member>
+      <member refid="classfx__pedal_1a957ee7e9cc84482790d7b2dd360457de" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>bypass_fx</name></member>
+      <member refid="classfx__pedal_1a6c540a4cb9f53b0607d01a6c7cabab2f" prot="protected" virt="non-virtual"><scope>fx_pedal</scope><name>control_node_stack</name></member>
+      <member refid="classfx__pedal_1a3ef49c357d73a323eaa693274e409597" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>control_routing_stack</name></member>
+      <member refid="classfx__pedal_1a746fe1486b557f8037bd48c853185093" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>debug_dsp_telemetry</name></member>
+      <member refid="classfx__pedal_1a2b6787f7565fee47764e5601d1c34e88" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>debug_mode</name></member>
+      <member refid="classfx__pedal_1a3b211bcf0cfc3ae3ae4f943160f369c7" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>debug_no_reset</name></member>
+      <member refid="classfx__pedal_1a22d9d469c49a435f03e3bcc349d570a7" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>enable_fx</name></member>
+      <member refid="classfx__pedal_1ad421de7dde2fb83c8e944cadb6757433" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>footswitch_left_last_state</name></member>
+      <member refid="classfx__pedal_1a48e81858a0595d89c82570f496f1b9e2" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>footswitch_left_pressed</name></member>
+      <member refid="classfx__pedal_1a0dc1959d22e23fdf52e21fec70fade0e" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>footswitch_left_released</name></member>
+      <member refid="classfx__pedal_1a31442f526aa6af72dcf5ed8244b03778" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>footswitch_right_last_state</name></member>
+      <member refid="classfx__pedal_1a60a7c145cf9c7ea787dae82e1ff182be" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>footswitch_right_pressed</name></member>
+      <member refid="classfx__pedal_1acf3c36c9c3bb1f0740b5759f0a61fe36" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>footswitch_right_released</name></member>
+      <member refid="classfx__pedal_1a92cc196fb9d64fa209bc7b5fbbffdf99" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>get_audio_node_index</name></member>
+      <member refid="classfx__pedal_1a9d2ad0b3b22aa1f4e9f5fc5244414710" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>get_control_node_index</name></member>
+      <member refid="classfx__pedal_1aaf8e52834338fcd104d327787f400334" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>get_effect_type</name></member>
+      <member refid="classfx__pedal_1a97e3693a5dfd198ae3f484fc90960c3a" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>get_name</name></member>
+      <member refid="classfx__pedal_1a2be1ee8787cf3c949429eb6295432225" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>get_tap_freq_hz</name></member>
+      <member refid="classfx__pedal_1a0acead76c8c144c406d95029804d5164" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>get_tap_interval_ms</name></member>
+      <member refid="classfx__pedal_1aa7ec165e5660a0d484add96ec19cfb8d" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>init</name></member>
+      <member refid="classfx__pedal_1a9575fbfd47c4fcfed424c4a82ce84f1f" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>init</name></member>
+      <member refid="classfx__pedal_1a579a8e9a697226ed755be972aa047887" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>init</name></member>
+      <member refid="classfx__pedal_1a4cfa12f479e0ab02f6e7be2e848cc2d1" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>init</name></member>
+      <member refid="classfx__pedal_1ab7344a94319c473e6fe825bfd1ec6563" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>init</name></member>
+      <member refid="classfx__pedal_1a947419017578343f8d09f023876b72bc" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>initialized</name></member>
+      <member refid="classfx__pedal_1a7ff81bd65d953449e2e4753688832754" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>instance_stack</name></member>
+      <member refid="classfx__pedal_1ac663c7f4236dca2b131e3d42b37a1c98" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>instr_in</name></member>
+      <member refid="classfx__pedal_1af9224fc19efa6115d4fadf8c74b894bf" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>instr_in_l</name></member>
+      <member refid="classfx__pedal_1a202ea144ad8fa3d7620a27b7916e1e36" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>instr_in_r</name></member>
+      <member refid="classfx__pedal_1a731575557b0c84978bfce8408e1ad88b" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>last_service_ts</name></member>
+      <member refid="classfx__pedal_1a1f66e0252e5493bbe1dae78924385cf9" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>mic_in_l</name></member>
+      <member refid="classfx__pedal_1a41247c0ad00c30ae6c889c87aeff1c7e" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>mic_in_r</name></member>
+      <member refid="classfx__pedal_1ae4ae206679e31a8e26c1fc1693f79691" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>new_note</name></member>
+      <member refid="classfx__pedal_1ab4e00784f9ba6b5a720d19bafa5c5988" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>new_tap_interval</name></member>
+      <member refid="classfx__pedal_1a7ec1d597a0beb9e0205f860b18c5e1ac" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>note_duration</name></member>
+      <member refid="classfx__pedal_1a7d2e1a8979062862355f4f2699937652" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>note_frequency</name></member>
+      <member refid="classfx__pedal_1aa591b730a9748432e6106275289bd525" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>print_instance_stack</name></member>
+      <member refid="classfx__pedal_1a9383c75a2dd8557f0bd4927846113836" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>print_param_tables</name></member>
+      <member refid="classfx__pedal_1ac28cbf7f885ce543abdf7484ef48de91" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>print_processor_load</name></member>
+      <member refid="classfx__pedal_1aafc924cc4d965716545368e4dfcf85c4" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>print_routing_table</name></member>
+      <member refid="classfx__pedal_1a97423b3ef60a4a8c8986db1cb17b6be6" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>route_audio</name></member>
+      <member refid="classfx__pedal_1a0d3262d0d26edcfdc559193091991f32" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>route_control</name></member>
+      <member refid="classfx__pedal_1a23e3239c2fe59fe105d7edeaa1141bce" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>route_control</name></member>
+      <member refid="classfx__pedal_1a63cae666ada50e751c504f440d9c0d7c" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>run</name></member>
+      <member refid="classfx__pedal_1a9cf36229c478131fa67a57f34fd907dd" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>service</name></member>
+      <member refid="classfx__pedal_1a9afe97a2261468b36a870bdd14c4af28" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>set_tap_blink_rate_hz</name></member>
+      <member refid="classfx__pedal_1aa7da84fc35b770df37ddea35fcd1fa8f" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>set_tap_blink_rate_hz</name></member>
+      <member refid="classfx__pedal_1ab5f94f1197ebcd5be2200586bf730154" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>set_tap_blink_rate_ms</name></member>
+      <member refid="classfx__pedal_1af064f5cfc0fc2f5a439ec50b808a6e92" prot="public" virt="non-virtual"><scope>fx_pedal</scope><name>set_tap_blink_rate_ms</name></member>
+      <member refid="classfx__pedal_1a7a8b6377141f3eff436a2d24c15bf7af" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>spi_get_status</name></member>
+      <member refid="classfx__pedal_1a40f659bee3104ae06792b29b95f8caba" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>spi_service</name></member>
+      <member refid="classfx__pedal_1a2f336e539e9ab173e3ba97afebcfcab3" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>spi_transmit_all_params</name></member>
+      <member refid="classfx__pedal_1a9bb11697b3853d2ad34726153585597f" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>spi_transmit_audio_routing_stack</name></member>
+      <member refid="classfx__pedal_1a09dadc9cfe3b0afa152644c2598134d0" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>spi_transmit_bypass</name></member>
+      <member refid="classfx__pedal_1a458edf9bda4301c29119fde798c921f6" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>spi_transmit_control_routing_stack</name></member>
+      <member refid="classfx__pedal_1a62d6096e84d1b50881766e93655fb470" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>spi_transmit_instance_stack</name></member>
+      <member refid="classfx__pedal_1a1efdd562365d660149fe1a316b9a63dd" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>spi_transmit_params</name></member>
+      <member refid="classfx__pedal_1ac52003f6322b069a101e796471298e7b" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>status</name></member>
+      <member refid="classfx__pedal_1ae68914b04435fc508ce5b38a87ad078d" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>sys_current_frequency</name></member>
+      <member refid="classfx__pedal_1a28c96755b0ba4d5014b0072ee6fb468f" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>sys_input_instr_l</name></member>
+      <member refid="classfx__pedal_1ad21f5d8d64cd28d5081d7f34235633c9" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>sys_input_instr_r</name></member>
+      <member refid="classfx__pedal_1a4ca893876a08837abeae3fed5e1d1592" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>sys_input_mic_l</name></member>
+      <member refid="classfx__pedal_1a43a4b20c0602ffea6bd833c46a10f43a" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>sys_input_mic_r</name></member>
+      <member refid="classfx__pedal_1a225d7dd7f54c88e15d7cffae29885ded" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>sys_new_note</name></member>
+      <member refid="classfx__pedal_1a33d37b1541dbaa5a52b9ae8675cfefdc" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>sys_note_duration_ms</name></member>
+      <member refid="classfx__pedal_1aa43e51926becacededefa1c15660ac01" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>sys_output_amp_l</name></member>
+      <member refid="classfx__pedal_1a9a3c143a73ae532ad32b707b09fd49f9" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>sys_output_amp_r</name></member>
+      <member refid="classfx__pedal_1a10612ba20b4284e642122e75c6c391d5" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>tap_history</name></member>
+      <member refid="classfx__pedal_1a99116eaf4ca79e97e1124241e4810d41" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>tap_indx</name></member>
+      <member refid="classfx__pedal_1a4188d3db0bb63b28308438f3aa1ea1c9" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>tap_interval_ms</name></member>
+      <member refid="classfx__pedal_1aa8b8c59ae90882c0b5c9e1cecf4523a7" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>tap_last_tap</name></member>
+      <member refid="classfx__pedal_1af12aee328ab0a2f059d2910a4f29095a" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>tap_led_flash</name></member>
+      <member refid="classfx__pedal_1af3a94f92811f1efd210029cb58cd2e74" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>tap_led_flash_cntr</name></member>
+      <member refid="classfx__pedal_1a655343f02a9c408a8192a95fc42dd2ab" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>tap_locked</name></member>
+      <member refid="classfx__pedal_1a527d9dd581fc9dee1628c5b7404af54f" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>tap_new_val</name></member>
+      <member refid="classfx__pedal_1aad5fe4f8432a082ed6cc6726de0b558a" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>total_audio_routes</name></member>
+      <member refid="classfx__pedal_1a54fe2ce8124365c4c404fdf60cfd2f9f" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>total_control_routes</name></member>
+      <member refid="classfx__pedal_1af7811fd3dfc4243748fb0bdcfd8bfc43" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>total_instances</name></member>
+      <member refid="classfx__pedal_1abba68cfcad2670c3606b38605ddca129" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>valid_audio_routes</name></member>
+      <member refid="classfx__pedal_1a524e9dbf27519d2045434486f291f805" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>valid_canvas</name></member>
+      <member refid="classfx__pedal_1a53eafeedef47f300f5bfaf7f344bc750" prot="private" virt="non-virtual"><scope>fx_pedal</scope><name>valid_control_routes</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,270 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Introduction &mdash; DreamMaker FX Documentation  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Installation" href="install.html" />
+    <link rel="prev" title="DreamMaker FX Documentation" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> DreamMaker FX Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#option-1-no-programming-at-all">Option 1: No programming at all!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#option-2-start-building-your-own-creations-with-arduino">Option 2: Start building your own creations with Arduino</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-that-word-arduino">What is that word, Arduino?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="echo_basic.html">Building a Basic Echo Pedal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adding_effects.html">The basics of creating / adding effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="routing_audio.html">The basics of routing audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controlling_effects.html">The basics of controlling effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_api.html">Using the API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debugging.html">Debugging Sketches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">General troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Pedal Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__pedal.html">Pedal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__led.html">LEDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__pot.html">Pots/Knobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__switch.html">Switches</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Effect Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__adsr__envelope.html">ADSR Envelope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__amplitude__mod.html">Amplitude Modulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__compressor.html">Compressor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__delay.html">Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__destructor.html">Destructor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__envelope__tracker.html">Envelope Follower</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__gain.html">Gain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__instrument__synth.html">Instrument Synth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__looper.html">Looper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__multitap__delay.html">Multi-tap Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__oscillator.html">Oscillator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__phase__shifter.html">Phase Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__pitch__shift.html">Pitch Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__ring__mod.html">Ring Modulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__slicer.html">Slicer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__variable__delay.html">Variable Delay</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DreamMaker FX Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Introduction</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/markdown/intro.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>Welcome the DreamMaker FX!  This is an audio platform that designed to help musicians and effect designers to explore and create effects and synths that have never been heard before.</p>
+<p>It is designed to be accesible for experienced programmers and those who have done no programming.</p>
+<p>At its core, this platform consists of a microprocessor connected to a powerful SHARC DSP.  SHARC DSPs are specialized audio processors used in lots of high-end audio gear.  But we don’t need to worry about writing DSP code or dealing with the complexities of DSP system design.</p>
+<p>Beyond audio processing, the DreamMaker FX hardware offers lots of options for expanding the hardware.  External sensors can be easily wired and connected to various effect parameters.</p>
+<div class="section" id="option-1-no-programming-at-all">
+<h2>Option 1: No programming at all!<a class="headerlink" href="#option-1-no-programming-at-all" title="Permalink to this headline">¶</a></h2>
+<p>When you plug the DreamMakerFX pedal into your Mac or PC, it will show up as a mounted drive (DM_FX).  You can download a “UF2” file of the sketch right to that drive and it will start running.  This is a great option if you have no interest in programming and just wnat to start playing through some of the creations you find on this site!</p>
+</div>
+<div class="section" id="option-2-start-building-your-own-creations-with-arduino">
+<h2>Option 2: Start building your own creations with Arduino<a class="headerlink" href="#option-2-start-building-your-own-creations-with-arduino" title="Permalink to this headline">¶</a></h2>
+<p>Arduino is a programming platform that is designed to make programming easier and more accessible than it normally is.  With just a few lines of code, you can begin creating your own pedal creations.</p>
+<p>There are a few ways you can get started:</p>
+<ul class="simple">
+<li><p>Download a “pedal pack” from the Browse Pedals page and start playing with these</p></li>
+<li><p>Download a pedal design that someone else has created on this site.</p></li>
+<li><p>Start with the Basic echo pedal tutorial and start building from the ground up!</p></li>
+</ul>
+</div>
+<div class="section" id="what-is-that-word-arduino">
+<h2>What is that word, Arduino?<a class="headerlink" href="#what-is-that-word-arduino" title="Permalink to this headline">¶</a></h2>
+<p>Have you heard about <strong>Arduino</strong>?  If not, Arduino is this little circuit board created about 10 years ago which was designed to make programming hardware easy.  I won’t bore you with the details but that shit got huge.  Now lots of people make Arduino-compatible boards (that use their simple programming software) and accessory boards with sensors and other batshit crazy stuff.</p>
+<p>So rather than learning some arcane programming language and software tools, you’re using one of the easiest programming tools ever created.  And there are plenty of resources for learning and getting help out there.  Here’s a great set of tutorials to get started if you’re new to Arduino in general:</p>
+<p><a class="reference external" href="https://www.arduino.cc/en/Tutorial/HomePage?from=Main.Tutorials">https://www.arduino.cc/en/Tutorial/HomePage?from=Main.Tutorials</a></p>
+<p>Okay, so buckle in and get ready to blow some minds.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="install.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../index.html" class="btn btn-neutral float-left" title="DreamMaker FX Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Run Jump Labs
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

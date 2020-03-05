@@ -1,0 +1,324 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Struct DSP_STATUS &mdash; DreamMaker FX Documentation  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> DreamMaker FX Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/echo_basic.html">Building a Basic Echo Pedal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/adding_effects.html">The basics of creating / adding effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/routing_audio.html">The basics of routing audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/controlling_effects.html">The basics of controlling effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/using_api.html">Using the API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/debugging.html">Debugging Sketches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/troubleshooting.html">General troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Pedal Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__pedal.html">Pedal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__led.html">LEDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__pot.html">Pots/Knobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__switch.html">Switches</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Effect Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__adsr__envelope.html">ADSR Envelope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__amplitude__mod.html">Amplitude Modulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__compressor.html">Compressor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__delay.html">Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__destructor.html">Destructor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__envelope__tracker.html">Envelope Follower</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__gain.html">Gain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__instrument__synth.html">Instrument Synth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__looper.html">Looper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__multitap__delay.html">Multi-tap Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__oscillator.html">Oscillator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__phase__shifter.html">Phase Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__pitch__shift.html">Pitch Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__ring__mod.html">Ring Modulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__slicer.html">Slicer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__variable__delay.html">Variable Delay</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DreamMaker FX Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Struct DSP_STATUS</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/struct_d_s_p___s_t_a_t_u_s.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="struct-dsp-status">
+<span id="exhale-struct-struct-d-s-p-s-t-a-t-u-s"></span><h1>Struct DSP_STATUS<a class="headerlink" href="#struct-dsp-status" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_src_dm_fx_dsp.h.html#file-src-dm-fx-dsp-h"><span class="std std-ref">File dm_fx_dsp.h</span></a></p></li>
+</ul>
+<div class="section" id="struct-documentation">
+<h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv410DSP_STATUS">
+<span id="_CPPv310DSP_STATUS"></span><span id="_CPPv210DSP_STATUS"></span><span id="DSP_STATUS"></span><span class="target" id="struct_d_s_p___s_t_a_t_u_s"></span><em class="property">struct </em><code class="sig-name descname">DSP_STATUS</code><a class="headerlink" href="#_CPPv410DSP_STATUS" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Current state of the DSP </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv4N10DSP_STATUS14firmware_validE">
+<span id="_CPPv3N10DSP_STATUS14firmware_validE"></span><span id="_CPPv2N10DSP_STATUS14firmware_validE"></span><span id="DSP_STATUS::firmware_valid__b"></span><span class="target" id="struct_d_s_p___s_t_a_t_u_s_1a0588c0e9e6df64c438a91d0fb59f34dc"></span>bool <code class="sig-name descname">firmware_valid</code><a class="headerlink" href="#_CPPv4N10DSP_STATUS14firmware_validE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N10DSP_STATUS12firmware_verE">
+<span id="_CPPv3N10DSP_STATUS12firmware_verE"></span><span id="_CPPv2N10DSP_STATUS12firmware_verE"></span><span id="DSP_STATUS::firmware_ver__uint32_t"></span><span class="target" id="struct_d_s_p___s_t_a_t_u_s_1abde927f954fc6e5657d54f9c5286d556"></span>uint32_t <code class="sig-name descname">firmware_ver</code><a class="headerlink" href="#_CPPv4N10DSP_STATUS12firmware_verE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N10DSP_STATUS18loading_percentageE">
+<span id="_CPPv3N10DSP_STATUS18loading_percentageE"></span><span id="_CPPv2N10DSP_STATUS18loading_percentageE"></span><span id="DSP_STATUS::loading_percentage__float"></span><span class="target" id="struct_d_s_p___s_t_a_t_u_s_1acbbd3167aa4c56a723e42a1977128f97"></span>float <code class="sig-name descname">loading_percentage</code><a class="headerlink" href="#_CPPv4N10DSP_STATUS18loading_percentageE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N10DSP_STATUS9amplitudeE">
+<span id="_CPPv3N10DSP_STATUS9amplitudeE"></span><span id="_CPPv2N10DSP_STATUS9amplitudeE"></span><span id="DSP_STATUS::amplitude__float"></span><span class="target" id="struct_d_s_p___s_t_a_t_u_s_1ac9fed07d56ac0d72e0e12c4655acd299"></span>float <code class="sig-name descname">amplitude</code><a class="headerlink" href="#_CPPv4N10DSP_STATUS9amplitudeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N10DSP_STATUS5notesE">
+<span id="_CPPv3N10DSP_STATUS5notesE"></span><span id="_CPPv2N10DSP_STATUS5notesE"></span><span id="DSP_STATUS::notes__DSP_NOTE"></span><span class="target" id="struct_d_s_p___s_t_a_t_u_s_1a9af6e3602d6781960e1257682bbd37b1"></span><a class="reference internal" href="struct_d_s_p___n_o_t_e.html#_CPPv48DSP_NOTE" title="DSP_NOTE">DSP_NOTE</a> <code class="sig-name descname">notes</code><a class="headerlink" href="#_CPPv4N10DSP_STATUS5notesE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N10DSP_STATUS8new_noteE">
+<span id="_CPPv3N10DSP_STATUS8new_noteE"></span><span id="_CPPv2N10DSP_STATUS8new_noteE"></span><span id="DSP_STATUS::new_note__b"></span><span class="target" id="struct_d_s_p___s_t_a_t_u_s_1acf57b32d80ad8a8f0d3e524e2efb800f"></span>bool <code class="sig-name descname">new_note</code><a class="headerlink" href="#_CPPv4N10DSP_STATUS8new_noteE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N10DSP_STATUS12state_bootedE">
+<span id="_CPPv3N10DSP_STATUS12state_bootedE"></span><span id="_CPPv2N10DSP_STATUS12state_bootedE"></span><span id="DSP_STATUS::state_booted__b"></span><span class="target" id="struct_d_s_p___s_t_a_t_u_s_1aa35b1a1a2326c7566567aca123f46e7a"></span>bool <code class="sig-name descname">state_booted</code><a class="headerlink" href="#_CPPv4N10DSP_STATUS12state_bootedE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N10DSP_STATUS17state_initializedE">
+<span id="_CPPv3N10DSP_STATUS17state_initializedE"></span><span id="_CPPv2N10DSP_STATUS17state_initializedE"></span><span id="DSP_STATUS::state_initialized__b"></span><span class="target" id="struct_d_s_p___s_t_a_t_u_s_1a24dd22cba6d94d7452c44a8968a4e703"></span>bool <code class="sig-name descname">state_initialized</code><a class="headerlink" href="#_CPPv4N10DSP_STATUS17state_initializedE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N10DSP_STATUS22state_lf_audio_runningE">
+<span id="_CPPv3N10DSP_STATUS22state_lf_audio_runningE"></span><span id="_CPPv2N10DSP_STATUS22state_lf_audio_runningE"></span><span id="DSP_STATUS::state_lf_audio_running__b"></span><span class="target" id="struct_d_s_p___s_t_a_t_u_s_1a323305b39863692bdcf047a0cf093fd8"></span>bool <code class="sig-name descname">state_lf_audio_running</code><a class="headerlink" href="#_CPPv4N10DSP_STATUS22state_lf_audio_runningE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N10DSP_STATUS22state_hf_audio_runningE">
+<span id="_CPPv3N10DSP_STATUS22state_hf_audio_runningE"></span><span id="_CPPv2N10DSP_STATUS22state_hf_audio_runningE"></span><span id="DSP_STATUS::state_hf_audio_running__b"></span><span class="target" id="struct_d_s_p___s_t_a_t_u_s_1ab3781aceaf7cc9f2ff1370acc26c8ee2"></span>bool <code class="sig-name descname">state_hf_audio_running</code><a class="headerlink" href="#_CPPv4N10DSP_STATUS22state_hf_audio_runningE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N10DSP_STATUS20state_canvas_runningE">
+<span id="_CPPv3N10DSP_STATUS20state_canvas_runningE"></span><span id="_CPPv2N10DSP_STATUS20state_canvas_runningE"></span><span id="DSP_STATUS::state_canvas_running__b"></span><span class="target" id="struct_d_s_p___s_t_a_t_u_s_1a6f3b013116fec75e40bdfedb64736aa4"></span>bool <code class="sig-name descname">state_canvas_running</code><a class="headerlink" href="#_CPPv4N10DSP_STATUS20state_canvas_runningE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N10DSP_STATUS20state_err_allocationE">
+<span id="_CPPv3N10DSP_STATUS20state_err_allocationE"></span><span id="_CPPv2N10DSP_STATUS20state_err_allocationE"></span><span id="DSP_STATUS::state_err_allocation__b"></span><span class="target" id="struct_d_s_p___s_t_a_t_u_s_1a4e55cccf1a497f637bd6ce78922de800"></span>bool <code class="sig-name descname">state_err_allocation</code><a class="headerlink" href="#_CPPv4N10DSP_STATUS20state_err_allocationE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N10DSP_STATUS15state_err_paramE">
+<span id="_CPPv3N10DSP_STATUS15state_err_paramE"></span><span id="_CPPv2N10DSP_STATUS15state_err_paramE"></span><span id="DSP_STATUS::state_err_param__b"></span><span class="target" id="struct_d_s_p___s_t_a_t_u_s_1a73bd2618d1a5431a8ca55568f6edef10"></span>bool <code class="sig-name descname">state_err_param</code><a class="headerlink" href="#_CPPv4N10DSP_STATUS15state_err_paramE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N10DSP_STATUS17state_err_corruptE">
+<span id="_CPPv3N10DSP_STATUS17state_err_corruptE"></span><span id="_CPPv2N10DSP_STATUS17state_err_corruptE"></span><span id="DSP_STATUS::state_err_corrupt__b"></span><span class="target" id="struct_d_s_p___s_t_a_t_u_s_1af9930e9aeb0ba5ba10285305d9d15a83"></span>bool <code class="sig-name descname">state_err_corrupt</code><a class="headerlink" href="#_CPPv4N10DSP_STATUS17state_err_corruptE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N10DSP_STATUS15state_err_otherE">
+<span id="_CPPv3N10DSP_STATUS15state_err_otherE"></span><span id="_CPPv2N10DSP_STATUS15state_err_otherE"></span><span id="DSP_STATUS::state_err_other__b"></span><span class="target" id="struct_d_s_p___s_t_a_t_u_s_1a199976d7062a9440d657fb1dc5c08626"></span>bool <code class="sig-name descname">state_err_other</code><a class="headerlink" href="#_CPPv4N10DSP_STATUS15state_err_otherE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N10DSP_STATUS11state_flagsE">
+<span id="_CPPv3N10DSP_STATUS11state_flagsE"></span><span id="_CPPv2N10DSP_STATUS11state_flagsE"></span><span id="DSP_STATUS::state_flags__uint16_t"></span><span class="target" id="struct_d_s_p___s_t_a_t_u_s_1ad98b5ae30938dad710394bc628dce263"></span>uint16_t <code class="sig-name descname">state_flags</code><a class="headerlink" href="#_CPPv4N10DSP_STATUS11state_flagsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Run Jump Labs
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

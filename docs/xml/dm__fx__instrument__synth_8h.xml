@@ -1,0 +1,309 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dm__fx__instrument__synth_8h" kind="file" language="C++">
+    <compoundname>dm_fx_instrument_synth.h</compoundname>
+    <includedby refid="dreammakerfx_8h" local="yes">src/dreammakerfx.h</includedby>
+    <invincdepgraph>
+      <node id="296">
+        <label>src/dreammakerfx.h</label>
+        <link refid="dreammakerfx_8h_source"/>
+      </node>
+      <node id="295">
+        <label>src/effects/dm_fx_instrument_synth.h</label>
+        <link refid="dm__fx__instrument__synth_8h"/>
+        <childnode refid="296" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classfx__instrument__synth" prot="public">fx_instrument_synth</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2020<sp/>Run<sp/>Jump<sp/>Labs<sp/>LLC.<sp/><sp/>All<sp/>right<sp/>reserved.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>code<sp/>is<sp/>licensed<sp/>under<sp/>MIT<sp/>license<sp/>(see<sp/>license.txt<sp/>for<sp/>details)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DM_FX_INSTRUMENT_SYNTH_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DM_FX_INSTRUMENT_SYNTH_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="classfx__instrument__synth" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classfx__instrument__synth" kindref="compound">fx_instrument_synth</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classfx__effect" kindref="compound">fx_effect</ref><sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___enumerations_1gada898a149424188b3a23010c8fe89176" kindref="member">OSC_TYPES</ref><sp/>param_osc_type;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>param_freq_ratio;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___enumerations_1gada898a149424188b3a23010c8fe89176" kindref="member">OSC_TYPES</ref><sp/>param_fm_osc_type;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>param_fm_mod_freq_ratio;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>param_fm_mod_depth;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>param_attack_ms;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>param_filt_resonance;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>param_filt_response;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___enumerations_1gada898a149424188b3a23010c8fe89176" kindref="member">OSC_TYPES</ref><sp/>last_type;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___enumerations_1gada898a149424188b3a23010c8fe89176" kindref="member">OSC_TYPES</ref><sp/>last_type_fm_mod;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Control<sp/>nodes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>fx_control_node<sp/>node_ctrl_attack_ms;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>fx_control_node<sp/>node_ctrl_freq_ratio;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>fx_control_node<sp/>node_ctrl_dm_mod_freq_ratio;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>fx_control_node<sp/>node_ctrl_dm_mod_depth;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>fx_control_node<sp/>node_ctrl_filt_resonance;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>fx_control_node<sp/>node_ctrl_filt_response;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>class</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>type<sp/>=<sp/>FX_INSTRUMENT_SYNTH;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strcpy(effect_name,<sp/></highlight><highlight class="stringliteral">&quot;instrument<sp/>synth&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Assign<sp/>programmable<sp/>node<sp/>names</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfx__instrument__synth_1a387c4fe10b9769f714459a9910bc6b0a" kindref="member">output</ref><sp/>=<sp/>&amp;node_output;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>parameter<sp/>stack</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>indx<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_stack[indx]<sp/>=<sp/>&amp;param_osc_type;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_stack_types[indx++]<sp/>=<sp/>T_INT16;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_stack[indx]<sp/>=<sp/>&amp;param_fm_osc_type;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_stack_types[indx++]<sp/>=<sp/>T_INT16;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_stack[indx]<sp/>=<sp/>&amp;param_freq_ratio;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_stack_types[indx++]<sp/>=<sp/>T_FLOAT;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_stack[indx]<sp/>=<sp/>&amp;param_fm_mod_freq_ratio;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_stack_types[indx++]<sp/>=<sp/>T_FLOAT;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_stack[indx]<sp/>=<sp/>&amp;param_fm_mod_depth;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_stack_types[indx++]<sp/>=<sp/>T_FLOAT;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_stack[indx]<sp/>=<sp/>&amp;param_attack_ms;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_stack_types[indx++]<sp/>=<sp/>T_FLOAT;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_stack[indx]<sp/>=<sp/>&amp;param_filt_resonance;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_stack_types[indx++]<sp/>=<sp/>T_FLOAT;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_stack[indx]<sp/>=<sp/>&amp;param_filt_response;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_stack_types[indx++]<sp/>=<sp/>T_FLOAT;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>total_params<sp/>=<sp/>indx;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>addiitonal<sp/>notes<sp/>to<sp/>the<sp/>control<sp/>stack</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>control_node_stack[total_control_nodes++]<sp/>=<sp/>&amp;node_ctrl_freq_ratio;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>control_node_stack[total_control_nodes++]<sp/>=<sp/>&amp;node_ctrl_attack_ms;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>control_node_stack[total_control_nodes++]<sp/>=<sp/>&amp;node_ctrl_dm_mod_freq_ratio;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>control_node_stack[total_control_nodes++]<sp/>=<sp/>&amp;node_ctrl_dm_mod_depth;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>control_node_stack[total_control_nodes++]<sp/>=<sp/>&amp;node_ctrl_filt_resonance;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>control_node_stack[total_control_nodes++]<sp/>=<sp/>&amp;node_ctrl_filt_response;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfx__instrument__synth_1a16b004f6bab75a77269130519804278e" kindref="member">freq_ratio</ref><sp/>=<sp/>&amp;node_ctrl_freq_ratio;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfx__instrument__synth_1a23297f8bc394e1a6f566250ccb47a581" kindref="member">attack_ms</ref><sp/>=<sp/>&amp;node_ctrl_attack_ms;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfx__instrument__synth_1ad2b41752b892b7b735615883c3f09257" kindref="member">fm_mod_freq_ratio</ref><sp/>=<sp/>&amp;node_ctrl_dm_mod_freq_ratio;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfx__instrument__synth_1ab53c12e30548d5c65791ccb4bc968bb3" kindref="member">fm_mod_depth</ref><sp/>=<sp/>&amp;node_ctrl_dm_mod_depth;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfx__instrument__synth_1a88100b10543cb0fa7db1961bb18e6988" kindref="member">resonance</ref><sp/>=<sp/>&amp;node_ctrl_filt_resonance;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfx__instrument__synth_1a9c4c1a3f55ddeb3ce0e7d4dc3db0aeba" kindref="member">response</ref><sp/>=<sp/>&amp;node_ctrl_filt_response;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="classfx__instrument__synth_1a387c4fe10b9769f714459a9910bc6b0a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>fx_audio_node<sp/>*<sp/><ref refid="classfx__instrument__synth_1a387c4fe10b9769f714459a9910bc6b0a" kindref="member">output</ref>;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="classfx__instrument__synth_1a23297f8bc394e1a6f566250ccb47a581" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>fx_control_node<sp/>*<sp/><ref refid="classfx__instrument__synth_1a23297f8bc394e1a6f566250ccb47a581" kindref="member">attack_ms</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="classfx__instrument__synth_1a16b004f6bab75a77269130519804278e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>fx_control_node<sp/>*<sp/><ref refid="classfx__instrument__synth_1a16b004f6bab75a77269130519804278e" kindref="member">freq_ratio</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="classfx__instrument__synth_1ad2b41752b892b7b735615883c3f09257" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>fx_control_node<sp/>*<sp/><ref refid="classfx__instrument__synth_1ad2b41752b892b7b735615883c3f09257" kindref="member">fm_mod_freq_ratio</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="114" refid="classfx__instrument__synth_1ab53c12e30548d5c65791ccb4bc968bb3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>fx_control_node<sp/>*<sp/><ref refid="classfx__instrument__synth_1ab53c12e30548d5c65791ccb4bc968bb3" kindref="member">fm_mod_depth</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119" refid="classfx__instrument__synth_1a88100b10543cb0fa7db1961bb18e6988" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>fx_control_node<sp/>*<sp/><ref refid="classfx__instrument__synth_1a88100b10543cb0fa7db1961bb18e6988" kindref="member">resonance</ref>;<sp/></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="classfx__instrument__synth_1a9c4c1a3f55ddeb3ce0e7d4dc3db0aeba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>fx_control_node<sp/>*<sp/><ref refid="classfx__instrument__synth_1a9c4c1a3f55ddeb3ce0e7d4dc3db0aeba" kindref="member">response</ref>;<sp/></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="classfx__instrument__synth_1a5b336970da9ab37093bd71d07a7d8d39" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classfx__instrument__synth_1a5b336970da9ab37093bd71d07a7d8d39" kindref="member">fx_instrument_synth</ref>(<sp/><ref refid="group___enumerations_1gada898a149424188b3a23010c8fe89176" kindref="member">OSC_TYPES</ref><sp/>osc_type,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classfx__instrument__synth_1a23297f8bc394e1a6f566250ccb47a581" kindref="member">attack_ms</ref>,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>filter_resonance,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>filter_response)<sp/>:</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>node_ctrl_freq_ratio(NODE_IN,<sp/>NODE_FLOAT,<sp/></highlight><highlight class="stringliteral">&quot;node_ctrl_freq_ratio&quot;</highlight><highlight class="normal">,<sp/>this,<sp/>FX_INSTRUMENT_SYNTH_PARAM_ID_FREQ_RATIO),</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>node_ctrl_dm_mod_freq_ratio(NODE_IN,<sp/>NODE_FLOAT,<sp/></highlight><highlight class="stringliteral">&quot;node_ctrl_dm_mod_freq_ratio&quot;</highlight><highlight class="normal">,<sp/>this,<sp/>FX_INSTRUMENT_SYNTH_PARAM_ID_FM_MOD_RATIO),</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>node_ctrl_dm_mod_depth(NODE_IN,<sp/>NODE_FLOAT,<sp/></highlight><highlight class="stringliteral">&quot;node_ctrl_dm_mod_depth&quot;</highlight><highlight class="normal">,<sp/>this,<sp/>FX_INSTRUMENT_SYNTH_PARAM_ID_FM_MOD_DEPTH),</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>node_ctrl_attack_ms(NODE_IN,<sp/>NODE_FLOAT,<sp/></highlight><highlight class="stringliteral">&quot;node_ctrl_attack_ms&quot;</highlight><highlight class="normal">,<sp/>this,<sp/>FX_INSTRUMENT_SYNTH_PARAM_ID_ATTACK_MS),</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>node_ctrl_filt_resonance(NODE_IN,<sp/>NODE_FLOAT,<sp/></highlight><highlight class="stringliteral">&quot;node_ctrl_filt_resonance&quot;</highlight><highlight class="normal">,<sp/>this,<sp/>FX_INSTRUMENT_SYNTH_PARAM_ID_FILT_RESONANCE),</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>node_ctrl_filt_response(NODE_IN,<sp/>NODE_FLOAT,<sp/></highlight><highlight class="stringliteral">&quot;param_filt_response&quot;</highlight><highlight class="normal">,<sp/>this,<sp/>FX_INSTRUMENT_SYNTH_PARAM_ID_FILT_RESPONSE)<sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_osc_type<sp/>=<sp/>osc_type;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_attack_ms<sp/>=<sp/><ref refid="classfx__instrument__synth_1a23297f8bc394e1a6f566250ccb47a581" kindref="member">attack_ms</ref>;<sp/></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_filt_resonance<sp/>=<sp/>filter_resonance;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_filt_response<sp/>=<sp/>filter_response;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_fm_osc_type<sp/>=<sp/>OSC_NONE;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_fm_mod_depth<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_fm_mod_freq_ratio<sp/>=<sp/>1.0;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_freq_ratio<sp/>=<sp/>1.0;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>init();</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169" refid="classfx__instrument__synth_1ab14f46d3cf54b2fd6ea50acb427b9c36" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classfx__instrument__synth_1ab14f46d3cf54b2fd6ea50acb427b9c36" kindref="member">fx_instrument_synth</ref>(<sp/><ref refid="group___enumerations_1gada898a149424188b3a23010c8fe89176" kindref="member">OSC_TYPES</ref><sp/>osc_type,<sp/><ref refid="group___enumerations_1gada898a149424188b3a23010c8fe89176" kindref="member">OSC_TYPES</ref><sp/>fm_mod_osc_type,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classfx__instrument__synth_1ab53c12e30548d5c65791ccb4bc968bb3" kindref="member">fm_mod_depth</ref>,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classfx__instrument__synth_1a16b004f6bab75a77269130519804278e" kindref="member">freq_ratio</ref>,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>freq_ratio_fm_mod,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classfx__instrument__synth_1a23297f8bc394e1a6f566250ccb47a581" kindref="member">attack_ms</ref>,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>filter_resonance,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>filter_response)<sp/>:</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>node_ctrl_freq_ratio(NODE_IN,<sp/>NODE_FLOAT,<sp/></highlight><highlight class="stringliteral">&quot;node_ctrl_freq_ratio&quot;</highlight><highlight class="normal">,<sp/>this,<sp/>FX_INSTRUMENT_SYNTH_PARAM_ID_FREQ_RATIO),</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>node_ctrl_dm_mod_freq_ratio(NODE_IN,<sp/>NODE_FLOAT,<sp/></highlight><highlight class="stringliteral">&quot;node_ctrl_dm_mod_freq_ratio&quot;</highlight><highlight class="normal">,<sp/>this,<sp/>FX_INSTRUMENT_SYNTH_PARAM_ID_FM_MOD_RATIO),</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>node_ctrl_dm_mod_depth(NODE_IN,<sp/>NODE_FLOAT,<sp/></highlight><highlight class="stringliteral">&quot;node_ctrl_dm_mod_depth&quot;</highlight><highlight class="normal">,<sp/>this,<sp/>FX_INSTRUMENT_SYNTH_PARAM_ID_FM_MOD_DEPTH),</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>node_ctrl_attack_ms(NODE_IN,<sp/>NODE_FLOAT,<sp/></highlight><highlight class="stringliteral">&quot;node_ctrl_attack_ms&quot;</highlight><highlight class="normal">,<sp/>this,<sp/>FX_INSTRUMENT_SYNTH_PARAM_ID_ATTACK_MS),</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>node_ctrl_filt_resonance(NODE_IN,<sp/>NODE_FLOAT,<sp/></highlight><highlight class="stringliteral">&quot;node_ctrl_filt_resonance&quot;</highlight><highlight class="normal">,<sp/>this,<sp/>FX_INSTRUMENT_SYNTH_PARAM_ID_FILT_RESONANCE),</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>node_ctrl_filt_response(NODE_IN,<sp/>NODE_FLOAT,<sp/></highlight><highlight class="stringliteral">&quot;node_ctrl_filt_response&quot;</highlight><highlight class="normal">,<sp/>this,<sp/>FX_INSTRUMENT_SYNTH_PARAM_ID_FILT_RESPONSE)<sp/>{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_osc_type<sp/>=<sp/>osc_type;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_attack_ms<sp/>=<sp/><ref refid="classfx__instrument__synth_1a23297f8bc394e1a6f566250ccb47a581" kindref="member">attack_ms</ref>;<sp/></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_filt_resonance<sp/>=<sp/>filter_resonance;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_filt_response<sp/>=<sp/>filter_response;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_fm_osc_type<sp/>=<sp/>fm_mod_osc_type;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_fm_mod_depth<sp/>=<sp/><ref refid="classfx__instrument__synth_1ab53c12e30548d5c65791ccb4bc968bb3" kindref="member">fm_mod_depth</ref>;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_fm_mod_freq_ratio<sp/>=<sp/>freq_ratio_fm_mod;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_freq_ratio<sp/>=<sp/><ref refid="classfx__instrument__synth_1a16b004f6bab75a77269130519804278e" kindref="member">freq_ratio</ref>;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>init();</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194" refid="classfx__instrument__synth_1a41da953906c7f7f58dda6b2be5a7024a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classfx__instrument__synth_1a41da953906c7f7f58dda6b2be5a7024a" kindref="member">enable</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>CHECK_LAST_ENABLED();</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>param_enabled<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>parent_canvas-&gt;spi_transmit_param(FX_INSTRUMENT_SYNTH,<sp/>instance_id,<sp/>T_BOOL,<sp/>FX_INSTRUMENT_SYNTH_PARAM_ID_ENABLED,<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*)<sp/>&amp;param_enabled);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203" refid="classfx__instrument__synth_1aaad5ac6c80ae87d5ac806e6e5d6f7fdb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classfx__instrument__synth_1aaad5ac6c80ae87d5ac806e6e5d6f7fdb" kindref="member">bypass</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>CHECK_LAST_DISABLED();</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>param_enabled<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>parent_canvas-&gt;spi_transmit_param(FX_INSTRUMENT_SYNTH,<sp/>instance_id,<sp/>T_BOOL,<sp/>FX_INSTRUMENT_SYNTH_PARAM_ID_ENABLED,<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*)<sp/>&amp;param_enabled);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216" refid="classfx__instrument__synth_1a169e4d67c6fb713771fe05b15efc3e1f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classfx__instrument__synth_1a169e4d67c6fb713771fe05b15efc3e1f" kindref="member">set_freq_ratio</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>ratio)<sp/>{<sp/></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CHECK_LAST(ratio,<sp/>param_freq_ratio);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(node_ctrl_freq_ratio.connected)<sp/>{</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_freq_ratio<sp/>=<sp/>ratio;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parent_canvas-&gt;spi_transmit_param(FX_INSTRUMENT_SYNTH,<sp/>instance_id,<sp/>T_FLOAT,<sp/>FX_INSTRUMENT_SYNTH_PARAM_ID_FREQ_RATIO,<sp/>&amp;param_freq_ratio);</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><sp/></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233" refid="classfx__instrument__synth_1a890d30dd72d97561168bc08d881fea85" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classfx__instrument__synth_1a890d30dd72d97561168bc08d881fea85" kindref="member">set_fm_mod_ratio</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>fm_mod_ratio)<sp/>{</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CHECK_LAST(fm_mod_ratio,<sp/>param_fm_mod_freq_ratio);</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(node_ctrl_dm_mod_freq_ratio.connected)<sp/>{</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_fm_mod_freq_ratio<sp/>=<sp/>fm_mod_ratio;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parent_canvas-&gt;spi_transmit_param(FX_INSTRUMENT_SYNTH,<sp/>instance_id,<sp/>T_FLOAT,<sp/>FX_INSTRUMENT_SYNTH_PARAM_ID_FM_MOD_RATIO,<sp/>&amp;param_fm_mod_freq_ratio);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251" refid="classfx__instrument__synth_1a4ceac3270c94d828dd7a8273113735aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classfx__instrument__synth_1a4ceac3270c94d828dd7a8273113735aa" kindref="member">set_fm_mod_depth</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>depth)<sp/>{</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CHECK_LAST(depth,<sp/>param_fm_mod_depth);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(node_ctrl_dm_mod_depth.connected)<sp/>{</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_fm_mod_depth<sp/>=<sp/>depth;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parent_canvas-&gt;spi_transmit_param(FX_INSTRUMENT_SYNTH,<sp/>instance_id,<sp/>T_FLOAT,<sp/>FX_INSTRUMENT_SYNTH_PARAM_ID_FM_MOD_DEPTH,<sp/>&amp;param_fm_mod_depth);<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269" refid="classfx__instrument__synth_1a74dc57d4e7c73e64d607aa6de2aad544" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classfx__instrument__synth_1a74dc57d4e7c73e64d607aa6de2aad544" kindref="member">set_attack_ms</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classfx__instrument__synth_1a23297f8bc394e1a6f566250ccb47a581" kindref="member">attack_ms</ref>)<sp/>{<sp/></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CHECK_LAST(<ref refid="classfx__instrument__synth_1a23297f8bc394e1a6f566250ccb47a581" kindref="member">attack_ms</ref>,<sp/>param_attack_ms);</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(node_ctrl_attack_ms.connected)<sp/>{</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_attack_ms<sp/>=<sp/><ref refid="classfx__instrument__synth_1a23297f8bc394e1a6f566250ccb47a581" kindref="member">attack_ms</ref>;</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parent_canvas-&gt;spi_transmit_param(FX_INSTRUMENT_SYNTH,<sp/>instance_id,<sp/>T_FLOAT,<sp/>FX_INSTRUMENT_SYNTH_PARAM_ID_ATTACK_MS,<sp/>&amp;param_attack_ms);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286" refid="classfx__instrument__synth_1af0f1b3638f24fe05e20f53533c136fe2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classfx__instrument__synth_1af0f1b3638f24fe05e20f53533c136fe2" kindref="member">set_filter_resonance</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classfx__instrument__synth_1a88100b10543cb0fa7db1961bb18e6988" kindref="member">resonance</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CHECK_LAST(<ref refid="classfx__instrument__synth_1a88100b10543cb0fa7db1961bb18e6988" kindref="member">resonance</ref>,<sp/>param_filt_resonance);</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(node_ctrl_filt_resonance.connected)<sp/>{</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_filt_resonance<sp/>=<sp/><ref refid="classfx__instrument__synth_1a88100b10543cb0fa7db1961bb18e6988" kindref="member">resonance</ref>;</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parent_canvas-&gt;spi_transmit_param(FX_INSTRUMENT_SYNTH,<sp/>instance_id,<sp/>T_FLOAT,<sp/>FX_INSTRUMENT_SYNTH_PARAM_ID_FILT_RESONANCE,<sp/>&amp;param_filt_resonance);</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight></codeline>
+<codeline lineno="304" refid="classfx__instrument__synth_1adb694d7449a3ee7a5f0a9a50b4ea39e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classfx__instrument__synth_1adb694d7449a3ee7a5f0a9a50b4ea39e2" kindref="member">set_filter_response</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classfx__instrument__synth_1a9c4c1a3f55ddeb3ce0e7d4dc3db0aeba" kindref="member">response</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CHECK_LAST(<ref refid="classfx__instrument__synth_1a9c4c1a3f55ddeb3ce0e7d4dc3db0aeba" kindref="member">response</ref>,<sp/>param_filt_response);</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(node_ctrl_filt_response.connected)<sp/>{</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_filt_response<sp/>=<sp/><ref refid="classfx__instrument__synth_1a9c4c1a3f55ddeb3ce0e7d4dc3db0aeba" kindref="member">response</ref>;</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parent_canvas-&gt;spi_transmit_param(FX_INSTRUMENT_SYNTH,<sp/>instance_id,<sp/>T_FLOAT,<sp/>FX_INSTRUMENT_SYNTH_PARAM_ID_FILT_RESPONSE,<sp/>&amp;param_filt_response);</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322" refid="classfx__instrument__synth_1aa08097963447efb897fbea9a01ffb894" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classfx__instrument__synth_1aa08097963447efb897fbea9a01ffb894" kindref="member">set_oscillator_type</ref>(<ref refid="group___enumerations_1gada898a149424188b3a23010c8fe89176" kindref="member">OSC_TYPES</ref><sp/>new_type)<sp/>{</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CHECK_LAST(new_type,<sp/>param_osc_type);</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_osc_type<sp/>=<sp/>new_type;<sp/></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parent_canvas-&gt;spi_transmit_param(FX_INSTRUMENT_SYNTH,<sp/>instance_id,<sp/>T_INT16,<sp/>FX_INSTRUMENT_SYNTH_PARAM_ID_OSC_TYPE,<sp/>&amp;param_osc_type);</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"></highlight></codeline>
+<codeline lineno="336" refid="classfx__instrument__synth_1a9ca778d037d208bc764b6deadf5234bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classfx__instrument__synth_1a9ca778d037d208bc764b6deadf5234bf" kindref="member">set_oscillator_type_fm_mod</ref>(<ref refid="group___enumerations_1gada898a149424188b3a23010c8fe89176" kindref="member">OSC_TYPES</ref><sp/>new_type)<sp/>{</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"></highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CHECK_LAST(new_type,<sp/>param_fm_osc_type);</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_fm_osc_type<sp/>=<sp/>new_type;<sp/></highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parent_canvas-&gt;spi_transmit_param(FX_INSTRUMENT_SYNTH,<sp/>instance_id,<sp/>T_INT16,<sp/>FX_INSTRUMENT_SYNTH_PARAM_ID_OSC_FM_TYPE,<sp/>&amp;param_fm_osc_type);</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"></highlight></codeline>
+<codeline lineno="351" refid="classfx__instrument__synth_1afa5b73d3cdffb153cb4d660f0e4afcd3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><ref refid="classfx__instrument__synth_1afa5b73d3cdffb153cb4d660f0e4afcd3" kindref="member">print_params</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>void<sp/>print_parameter(<sp/>void<sp/>*<sp/>val,<sp/>char<sp/>*<sp/>name,<sp/>PARAM_TYPES<sp/>type)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;Parameters:&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>print_parameter(<sp/>&amp;param_enabled,<sp/></highlight><highlight class="stringliteral">&quot;Enabled&quot;</highlight><highlight class="normal">,<sp/>T_BOOL<sp/>);</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>print_parameter(<sp/>&amp;param_osc_type,<sp/></highlight><highlight class="stringliteral">&quot;OSC<sp/>type<sp/>(enumeration<sp/>index)&quot;</highlight><highlight class="normal">,<sp/>T_INT16<sp/>);</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>print_parameter(<sp/>&amp;param_fm_osc_type,<sp/></highlight><highlight class="stringliteral">&quot;FM<sp/>mod<sp/>OSC<sp/>type<sp/>(enumeration<sp/>index)&quot;</highlight><highlight class="normal">,<sp/>T_INT16<sp/>);</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>print_parameter(<sp/>&amp;param_freq_ratio,<sp/></highlight><highlight class="stringliteral">&quot;Synth<sp/>frequency<sp/>ratio&quot;</highlight><highlight class="normal">,<sp/>T_FLOAT);</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>print_parameter(<sp/>&amp;param_fm_mod_freq_ratio,<sp/></highlight><highlight class="stringliteral">&quot;FM<sp/>mod<sp/>frequency<sp/>ratio&quot;</highlight><highlight class="normal">,<sp/>T_FLOAT<sp/>);</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>print_parameter(<sp/>&amp;param_fm_mod_depth,<sp/></highlight><highlight class="stringliteral">&quot;FM<sp/>mod<sp/>depth&quot;</highlight><highlight class="normal">,<sp/>T_FLOAT<sp/>);</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>print_parameter(<sp/>&amp;param_attack_ms,<sp/></highlight><highlight class="stringliteral">&quot;Attack<sp/>(ms)&quot;</highlight><highlight class="normal">,<sp/>T_FLOAT<sp/>);</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>print_parameter(<sp/>&amp;param_filt_resonance,<sp/></highlight><highlight class="stringliteral">&quot;Filter<sp/>resonance&quot;</highlight><highlight class="normal">,<sp/>T_FLOAT<sp/>);</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>print_parameter(<sp/>&amp;param_filt_response,<sp/></highlight><highlight class="stringliteral">&quot;Filter<sp/>response&quot;</highlight><highlight class="normal">,<sp/>T_FLOAT<sp/>);</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"></highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;Control<sp/>Routing:&quot;</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>print_ctrl_node_status(&amp;node_ctrl_attack_ms);</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>print_ctrl_node_status(&amp;node_ctrl_freq_ratio);</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>print_ctrl_node_status(&amp;node_ctrl_dm_mod_freq_ratio);</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>print_ctrl_node_status(&amp;node_ctrl_dm_mod_depth);</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>print_ctrl_node_status(&amp;node_ctrl_filt_resonance);</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>print_ctrl_node_status(&amp;node_ctrl_filt_response);</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"></highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;Audio<sp/>Routing:&quot;</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>print_audio_node_status(&amp;node_output);</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"></highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Serial.println();</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="377"><highlight class="normal"></highlight></codeline>
+<codeline lineno="378"><highlight class="normal"></highlight></codeline>
+<codeline lineno="379"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"></highlight></codeline>
+<codeline lineno="381"><highlight class="normal"></highlight></codeline>
+<codeline lineno="382"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>DM_FX_INSTRUMENT_SYNTH_H</highlight></codeline>
+    </programlisting>
+    <location file="src/effects/dm_fx_instrument_synth.h"/>
+  </compounddef>
+</doxygen>

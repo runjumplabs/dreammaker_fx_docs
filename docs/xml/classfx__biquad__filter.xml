@@ -1,0 +1,751 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classfx__biquad__filter" kind="class" language="C++" prot="public">
+    <compoundname>fx_biquad_filter</compoundname>
+    <basecompoundref refid="classfx__effect" prot="public" virt="non-virtual">fx_effect</basecompoundref>
+    <includes refid="dm__fx__biquad__filter_8h" local="no">dm_fx_biquad_filter.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classfx__biquad__filter_1a90428cfb0d5312a028aaa98e291eb838" prot="private" static="no" mutable="no">
+        <type><ref refid="group___enumerations_1ga9b7d24918081e2a37ecbbe1521978296" kindref="member">BIQUAD_FILTER_TYPE</ref></type>
+        <definition>BIQUAD_FILTER_TYPE fx_biquad_filter::param_type</definition>
+        <argsstring></argsstring>
+        <name>param_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_biquad_filter.h" line="26" column="1" bodyfile="src/effects/dm_fx_biquad_filter.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__biquad__filter_1a9b30b36f372d82f6819612c6c0440e04" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float fx_biquad_filter::param_freq</definition>
+        <argsstring></argsstring>
+        <name>param_freq</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_biquad_filter.h" line="27" column="1" bodyfile="src/effects/dm_fx_biquad_filter.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__biquad__filter_1a283533cd21acdfd36eb874ce4542436e" prot="private" static="no" mutable="no">
+        <type><ref refid="group___enumerations_1ga618f7ad9198b8e9ff1c988f3d5eefefb" kindref="member">BIQUAD_FILTER_ORDER</ref></type>
+        <definition>BIQUAD_FILTER_ORDER fx_biquad_filter::param_order</definition>
+        <argsstring></argsstring>
+        <name>param_order</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_biquad_filter.h" line="28" column="1" bodyfile="src/effects/dm_fx_biquad_filter.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__biquad__filter_1ae394d47d757cd5181cedc60cb17bff4c" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float fx_biquad_filter::param_q</definition>
+        <argsstring></argsstring>
+        <name>param_q</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_biquad_filter.h" line="29" column="1" bodyfile="src/effects/dm_fx_biquad_filter.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__biquad__filter_1a43ff03e01c0423da3d97a630bcbd1ff0" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float fx_biquad_filter::param_gain</definition>
+        <argsstring></argsstring>
+        <name>param_gain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_biquad_filter.h" line="30" column="1" bodyfile="src/effects/dm_fx_biquad_filter.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__biquad__filter_1aa5929b311259240520df67950d21e86f" prot="private" static="no" mutable="no">
+        <type><ref refid="group___enumerations_1ga0292d9069ee59ac7258602ae1b1101d2" kindref="member">EFFECT_TRANSITION_SPEED</ref></type>
+        <definition>EFFECT_TRANSITION_SPEED fx_biquad_filter::param_speed</definition>
+        <argsstring></argsstring>
+        <name>param_speed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_biquad_filter.h" line="31" column="1" bodyfile="src/effects/dm_fx_biquad_filter.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__biquad__filter_1a6f1aeb20ddcfb9c453a9e417818df862" prot="private" static="no" mutable="no">
+        <type>fx_control_node</type>
+        <definition>fx_control_node fx_biquad_filter::node_ctrl_freq</definition>
+        <argsstring></argsstring>
+        <name>node_ctrl_freq</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_biquad_filter.h" line="34" column="1" bodyfile="src/effects/dm_fx_biquad_filter.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__biquad__filter_1a79e66a6247a30322008b35350989a6c6" prot="private" static="no" mutable="no">
+        <type>fx_control_node</type>
+        <definition>fx_control_node fx_biquad_filter::node_ctrl_q</definition>
+        <argsstring></argsstring>
+        <name>node_ctrl_q</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_biquad_filter.h" line="35" column="1" bodyfile="src/effects/dm_fx_biquad_filter.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__biquad__filter_1a1f762a0c60c48ceaaa69c74e2fee867b" prot="private" static="no" mutable="no">
+        <type>fx_control_node</type>
+        <definition>fx_control_node fx_biquad_filter::node_ctrl_gain</definition>
+        <argsstring></argsstring>
+        <name>node_ctrl_gain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_biquad_filter.h" line="36" column="1" bodyfile="src/effects/dm_fx_biquad_filter.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classfx__biquad__filter_1a4a9f3a5ff4eac9f44e1378ee23e3211c" prot="public" static="no" mutable="no">
+        <type>fx_audio_node *</type>
+        <definition>fx_audio_node* fx_biquad_filter::input</definition>
+        <argsstring></argsstring>
+        <name>input</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Audio routing node: primary audio input </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_biquad_filter.h" line="85" column="1" bodyfile="src/effects/dm_fx_biquad_filter.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__biquad__filter_1ac4fe4851b422f991882f0f47be3773ab" prot="public" static="no" mutable="no">
+        <type>fx_audio_node *</type>
+        <definition>fx_audio_node* fx_biquad_filter::output</definition>
+        <argsstring></argsstring>
+        <name>output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Audio routing node: primary audio output </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_biquad_filter.h" line="90" column="1" bodyfile="src/effects/dm_fx_biquad_filter.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__biquad__filter_1a3f44ee6d1f9dbc892a22cecbc63eddd4" prot="public" static="no" mutable="no">
+        <type>fx_control_node *</type>
+        <definition>fx_control_node* fx_biquad_filter::freq</definition>
+        <argsstring></argsstring>
+        <name>freq</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Control routing node: center/critical frequency of the filter in Hz (i.e. 800.0 for 800Hz) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_biquad_filter.h" line="95" column="1" bodyfile="src/effects/dm_fx_biquad_filter.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__biquad__filter_1a4a4821b7190483d41339969237612c04" prot="public" static="no" mutable="no">
+        <type>fx_control_node *</type>
+        <definition>fx_control_node* fx_biquad_filter::q</definition>
+        <argsstring></argsstring>
+        <name>q</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Control routing node: width of the filter </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_biquad_filter.h" line="101" column="1" bodyfile="src/effects/dm_fx_biquad_filter.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__biquad__filter_1a76aa6221915b88905f3b45f1cc0f7929" prot="public" static="no" mutable="no">
+        <type>fx_control_node *</type>
+        <definition>fx_control_node* fx_biquad_filter::gain</definition>
+        <argsstring></argsstring>
+        <name>gain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Control routing node: gain of the filter (used in shelving filters) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_biquad_filter.h" line="107" column="1" bodyfile="src/effects/dm_fx_biquad_filter.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classfx__biquad__filter_1ae9ce7661d36ffe62594d43e11efe7331" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_biquad_filter::init</definition>
+        <argsstring>(void)</argsstring>
+        <name>init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_biquad_filter.h" line="38" column="1" bodyfile="src/effects/dm_fx_biquad_filter.h" bodystart="38" bodyend="76"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classfx__biquad__filter_1aea807f35dde115fe6897cf96900d2926" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>fx_biquad_filter::fx_biquad_filter</definition>
+        <argsstring>(float filt_freq, float filt_resonance, BIQUAD_FILTER_TYPE filt_type)</argsstring>
+        <name>fx_biquad_filter</name>
+        <param>
+          <type>float</type>
+          <declname>filt_freq</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>filt_resonance</declname>
+        </param>
+        <param>
+          <type><ref refid="group___enumerations_1ga9b7d24918081e2a37ecbbe1521978296" kindref="member">BIQUAD_FILTER_TYPE</ref></type>
+          <declname>filt_type</declname>
+        </param>
+        <briefdescription>
+<para>Basic constructor for biquad filter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">filt_freq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filter critical/cutoff frequency </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">filt_resonance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filter resonance, 1.0 is standard resonance, &gt; 1.0 is more resonant, &lt; 1.0 is less resonant </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">filt_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filter type, see BIQUAD_FILTER_TYPE for options </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_biquad_filter.h" line="117" column="1" bodyfile="src/effects/dm_fx_biquad_filter.h" bodystart="117" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__biquad__filter_1a05c86bf75f906d74fb22d00c42f858e7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>fx_biquad_filter::fx_biquad_filter</definition>
+        <argsstring>(float filt_freq, float filt_resonance, BIQUAD_FILTER_TYPE filt_type, BIQUAD_FILTER_ORDER order)</argsstring>
+        <name>fx_biquad_filter</name>
+        <param>
+          <type>float</type>
+          <declname>filt_freq</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>filt_resonance</declname>
+        </param>
+        <param>
+          <type><ref refid="group___enumerations_1ga9b7d24918081e2a37ecbbe1521978296" kindref="member">BIQUAD_FILTER_TYPE</ref></type>
+          <declname>filt_type</declname>
+        </param>
+        <param>
+          <type><ref refid="group___enumerations_1ga618f7ad9198b8e9ff1c988f3d5eefefb" kindref="member">BIQUAD_FILTER_ORDER</ref></type>
+          <declname>order</declname>
+        </param>
+        <briefdescription>
+<para>Basic constructor for biquad filter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">filt_freq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filter critical/cutoff frequency </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">filt_resonance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filter resonance, 1.0 is standard resonance, &gt; 1.0 is more resonant, &lt; 1.0 is less resonant </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">filt_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filter type, see BIQUAD_FILTER_TYPE for options </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">order</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The order of the filter (higher = tighter) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_biquad_filter.h" line="147" column="1" bodyfile="src/effects/dm_fx_biquad_filter.h" bodystart="147" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__biquad__filter_1ae0b02c6616a737417bb0037cab6af05c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>fx_biquad_filter::fx_biquad_filter</definition>
+        <argsstring>(float filt_freq, float filt_resonance, float filter_gain, BIQUAD_FILTER_TYPE filt_type, EFFECT_TRANSITION_SPEED trans_speed)</argsstring>
+        <name>fx_biquad_filter</name>
+        <param>
+          <type>float</type>
+          <declname>filt_freq</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>filt_resonance</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>filter_gain</declname>
+        </param>
+        <param>
+          <type><ref refid="group___enumerations_1ga9b7d24918081e2a37ecbbe1521978296" kindref="member">BIQUAD_FILTER_TYPE</ref></type>
+          <declname>filt_type</declname>
+        </param>
+        <param>
+          <type><ref refid="group___enumerations_1ga0292d9069ee59ac7258602ae1b1101d2" kindref="member">EFFECT_TRANSITION_SPEED</ref></type>
+          <declname>trans_speed</declname>
+        </param>
+        <briefdescription>
+<para>Advanced constructor for biquad filter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">filt_freq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filter critical/cutoff frequency </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">filt_resonance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filter resonance, 1.0 is standard resonance (0.7071), &gt; 1.0 is more resonant, &lt; 1.0 is less resonant </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">filter_gain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filter gain in dB </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">filt_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filter type, see BIQUAD_FILTER_TYPE for options </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">trans_speed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The transaction speed when new filter parameters are suppliued, see EFFECT_TRANSITION_SPEED for options </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_biquad_filter.h" line="182" column="1" bodyfile="src/effects/dm_fx_biquad_filter.h" bodystart="182" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__biquad__filter_1ab8ff8e47928ea9a5df9063ef2686d4aa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>fx_biquad_filter::fx_biquad_filter</definition>
+        <argsstring>(float filt_freq, float filt_resonance, float filter_gain_db, BIQUAD_FILTER_TYPE filt_type, EFFECT_TRANSITION_SPEED trans_speed, BIQUAD_FILTER_ORDER order)</argsstring>
+        <name>fx_biquad_filter</name>
+        <param>
+          <type>float</type>
+          <declname>filt_freq</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>filt_resonance</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>filter_gain_db</declname>
+        </param>
+        <param>
+          <type><ref refid="group___enumerations_1ga9b7d24918081e2a37ecbbe1521978296" kindref="member">BIQUAD_FILTER_TYPE</ref></type>
+          <declname>filt_type</declname>
+        </param>
+        <param>
+          <type><ref refid="group___enumerations_1ga0292d9069ee59ac7258602ae1b1101d2" kindref="member">EFFECT_TRANSITION_SPEED</ref></type>
+          <declname>trans_speed</declname>
+        </param>
+        <param>
+          <type><ref refid="group___enumerations_1ga618f7ad9198b8e9ff1c988f3d5eefefb" kindref="member">BIQUAD_FILTER_ORDER</ref></type>
+          <declname>order</declname>
+        </param>
+        <briefdescription>
+<para>Advanced constructor for biquad filter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">filt_freq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filter critical/cutoff frequency </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">filt_resonance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filter resonance, 1.0 is standard resonance (0.7071), &gt; 1.0 is more resonant, &lt; 1.0 is less resonant </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">filter_gain_db</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filter gain in dB </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">filt_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filter type, see BIQUAD_FILTER_TYPE for options </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">trans_speed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The transaction speed when new filter parameters are suppliued, see EFFECT_TRANSITION_SPEED for options </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">order</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The order of the filter (higher = tighter) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_biquad_filter.h" line="217" column="1" bodyfile="src/effects/dm_fx_biquad_filter.h" bodystart="217" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__biquad__filter_1aaf296f748135cba4ec2dcb8eb72ae229" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_biquad_filter::enable</definition>
+        <argsstring>()</argsstring>
+        <name>enable</name>
+        <briefdescription>
+<para>Enable the biquad filter (it is enabled by default) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_biquad_filter.h" line="242" column="1" bodyfile="src/effects/dm_fx_biquad_filter.h" bodystart="242" bodyend="246"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__biquad__filter_1ae1df4e211ed2861d1dd1c11e88f7af7a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_biquad_filter::bypass</definition>
+        <argsstring>()</argsstring>
+        <name>bypass</name>
+        <briefdescription>
+<para>Bypass the biquad filter (will just pass clean audio through) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_biquad_filter.h" line="251" column="1" bodyfile="src/effects/dm_fx_biquad_filter.h" bodystart="251" bodyend="255"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__biquad__filter_1ad25d7d137c74ba15ff8aae13772f7691" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_biquad_filter::set_freq</definition>
+        <argsstring>(float freq)</argsstring>
+        <name>set_freq</name>
+        <param>
+          <type>float</type>
+          <declname>freq</declname>
+        </param>
+        <briefdescription>
+<para>Sets a new cutoff/critical frequency (Hz). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">freq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new center frequency for the filter in Hz (must be lower than 24000.0) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_biquad_filter.h" line="263" column="1" bodyfile="src/effects/dm_fx_biquad_filter.h" bodystart="263" bodyend="274"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__biquad__filter_1aac3600fefd3941a6d829647bdbdbb860" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_biquad_filter::set_q</definition>
+        <argsstring>(float q)</argsstring>
+        <name>set_q</name>
+        <param>
+          <type>float</type>
+          <declname>q</declname>
+        </param>
+        <briefdescription>
+<para>Sets a new Q factor for the filter. For more information on Q factor, read this: <ulink url="https://en.wikipedia.org/wiki/Q_factor">https://en.wikipedia.org/wiki/Q_factor</ulink>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">q</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Q factor (must be between 0.01 and 100.0) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_biquad_filter.h" line="282" column="1" bodyfile="src/effects/dm_fx_biquad_filter.h" bodystart="282" bodyend="292"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__biquad__filter_1a359396b823b55ba5d1f6311e354aaccd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_biquad_filter::set_resonance</definition>
+        <argsstring>(float filt_resonance)</argsstring>
+        <name>set_resonance</name>
+        <param>
+          <type>float</type>
+          <declname>filt_resonance</declname>
+        </param>
+        <briefdescription>
+<para>Sets the resonance; 1.0 is none (0.7071) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">resonance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The resonance (must be between 0.01 and 100.0) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_biquad_filter.h" line="299" column="1" bodyfile="src/effects/dm_fx_biquad_filter.h" bodystart="299" bodyend="318"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__biquad__filter_1acb0375ac0044f5938c79868ac0cd4b1d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_biquad_filter::set_gain</definition>
+        <argsstring>(float gain)</argsstring>
+        <name>set_gain</name>
+        <param>
+          <type>float</type>
+          <declname>gain</declname>
+        </param>
+        <briefdescription>
+<para>Sets the filter gain. This is only used in shelving filters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">gain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The gain in dB </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_biquad_filter.h" line="325" column="1" bodyfile="src/effects/dm_fx_biquad_filter.h" bodystart="325" bodyend="334"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__biquad__filter_1a50f5ec518d1656ebcc3bde26b2735a75" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_biquad_filter::print_params</definition>
+        <argsstring>(void)</argsstring>
+        <name>print_params</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Print the parameters for this effect. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_biquad_filter.h" line="339" column="1" bodyfile="src/effects/dm_fx_biquad_filter.h" bodystart="339" bodyend="359"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Effect: Biquad filter for implementing various types of filters (low pass, high pass, band pass, etc.) </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The biquad filter can be used to create static filters such as equalizers and dynamic filters such as auto-wahs and other interesting swept filtering effects.</para>
+<para>Here&apos;s a nice video about three different parameters of a biquad: f: cutoff/center frequency, q: filter width, and g: filter gain</para>
+<para>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/uTGU9jkkYwk&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;=&quot;&quot;&gt;&lt;/iframe&gt; </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="20">
+        <label>fx_biquad_filter</label>
+        <link refid="classfx__biquad__filter"/>
+        <childnode refid="21" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>fx_effect</label>
+        <link refid="classfx__effect"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="22">
+        <label>fx_biquad_filter</label>
+        <link refid="classfx__biquad__filter"/>
+        <childnode refid="23" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>fx_pedal</label>
+        <link refid="classfx__pedal"/>
+      </node>
+      <node id="23">
+        <label>fx_effect</label>
+        <link refid="classfx__effect"/>
+        <childnode refid="24" relation="usage">
+          <edgelabel>parent_canvas</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/effects/dm_fx_biquad_filter.h" line="20" column="1" bodyfile="src/effects/dm_fx_biquad_filter.h" bodystart="20" bodyend="360"/>
+    <listofallmembers>
+      <member refid="classfx__effect_1ab69ae64deecdbc5915de9b66b4f3e987" prot="protected" virt="non-virtual"><scope>fx_biquad_filter</scope><name>audio_node_stack</name></member>
+      <member refid="classfx__effect_1abdbbc884fc92a23af5ec5b351a972b97" prot="protected" virt="non-virtual"><scope>fx_biquad_filter</scope><name>bool_param_updated</name></member>
+      <member refid="classfx__biquad__filter_1ae1df4e211ed2861d1dd1c11e88f7af7a" prot="public" virt="non-virtual"><scope>fx_biquad_filter</scope><name>bypass</name></member>
+      <member refid="classfx__effect_1a700589ec8a30f3197cebce4eb955fa31" prot="protected" virt="non-virtual"><scope>fx_biquad_filter</scope><name>control_node_stack</name></member>
+      <member refid="classfx__effect_1af7d5319aca3b86b0e76418385d0478ea" prot="public" virt="non-virtual"><scope>fx_biquad_filter</scope><name>effect_name</name></member>
+      <member refid="classfx__biquad__filter_1aaf296f748135cba4ec2dcb8eb72ae229" prot="public" virt="non-virtual"><scope>fx_biquad_filter</scope><name>enable</name></member>
+      <member refid="classfx__effect_1a56eefdb5f90e991e3f31d855e87e9213" prot="protected" virt="non-virtual"><scope>fx_biquad_filter</scope><name>float_param_updated</name></member>
+      <member refid="classfx__biquad__filter_1a3f44ee6d1f9dbc892a22cecbc63eddd4" prot="public" virt="non-virtual"><scope>fx_biquad_filter</scope><name>freq</name></member>
+      <member refid="classfx__biquad__filter_1aea807f35dde115fe6897cf96900d2926" prot="public" virt="non-virtual"><scope>fx_biquad_filter</scope><name>fx_biquad_filter</name></member>
+      <member refid="classfx__biquad__filter_1a05c86bf75f906d74fb22d00c42f858e7" prot="public" virt="non-virtual"><scope>fx_biquad_filter</scope><name>fx_biquad_filter</name></member>
+      <member refid="classfx__biquad__filter_1ae0b02c6616a737417bb0037cab6af05c" prot="public" virt="non-virtual"><scope>fx_biquad_filter</scope><name>fx_biquad_filter</name></member>
+      <member refid="classfx__biquad__filter_1ab8ff8e47928ea9a5df9063ef2686d4aa" prot="public" virt="non-virtual"><scope>fx_biquad_filter</scope><name>fx_biquad_filter</name></member>
+      <member refid="classfx__effect_1aab2d00a6784612158e41606297952873" prot="public" virt="non-virtual"><scope>fx_biquad_filter</scope><name>fx_effect</name></member>
+      <member refid="classfx__effect_1ae5be756c63862665f422aa25a14d3bef" prot="protected" virt="non-virtual"><scope>fx_biquad_filter</scope><name>fx_pedal</name></member>
+      <member refid="classfx__biquad__filter_1a76aa6221915b88905f3b45f1cc0f7929" prot="public" virt="non-virtual"><scope>fx_biquad_filter</scope><name>gain</name></member>
+      <member refid="classfx__effect_1a551b61721aadaeccb3cd2ba9fc826609" prot="protected" virt="non-virtual"><scope>fx_biquad_filter</scope><name>get_audio_node_index</name></member>
+      <member refid="classfx__effect_1aba27ace404ab75a174892cb5908f58b3" prot="protected" virt="non-virtual"><scope>fx_biquad_filter</scope><name>get_control_node_index</name></member>
+      <member refid="classfx__effect_1a3ddd0473c4a01e858a17b51f14995c70" prot="public" virt="non-virtual"><scope>fx_biquad_filter</scope><name>get_name</name></member>
+      <member refid="classfx__effect_1a14e0cb29cd7e86d0b8f566b3066dbf32" prot="public" virt="non-virtual"><scope>fx_biquad_filter</scope><name>get_type</name></member>
+      <member refid="classfx__biquad__filter_1ae9ce7661d36ffe62594d43e11efe7331" prot="private" virt="non-virtual"><scope>fx_biquad_filter</scope><name>init</name></member>
+      <member refid="classfx__biquad__filter_1a4a9f3a5ff4eac9f44e1378ee23e3211c" prot="public" virt="non-virtual"><scope>fx_biquad_filter</scope><name>input</name></member>
+      <member refid="classfx__effect_1a35011b582dc3eb033f2174b404e15fd8" prot="protected" virt="non-virtual"><scope>fx_biquad_filter</scope><name>instance_id</name></member>
+      <member refid="classfx__biquad__filter_1a6f1aeb20ddcfb9c453a9e417818df862" prot="private" virt="non-virtual"><scope>fx_biquad_filter</scope><name>node_ctrl_freq</name></member>
+      <member refid="classfx__biquad__filter_1a1f762a0c60c48ceaaa69c74e2fee867b" prot="private" virt="non-virtual"><scope>fx_biquad_filter</scope><name>node_ctrl_gain</name></member>
+      <member refid="classfx__biquad__filter_1a79e66a6247a30322008b35350989a6c6" prot="private" virt="non-virtual"><scope>fx_biquad_filter</scope><name>node_ctrl_q</name></member>
+      <member refid="classfx__effect_1a69b60011be5fc3ade57b937405aa835d" prot="protected" virt="non-virtual"><scope>fx_biquad_filter</scope><name>node_enabled</name></member>
+      <member refid="classfx__effect_1a61f6f19f2cd7be8762758512e9cd5097" prot="protected" virt="non-virtual"><scope>fx_biquad_filter</scope><name>node_index</name></member>
+      <member refid="classfx__effect_1a66c709a96dd59fd1e21c3407a160a8e8" prot="protected" virt="non-virtual"><scope>fx_biquad_filter</scope><name>node_input</name></member>
+      <member refid="classfx__effect_1aabadf3d22b48bc21227f72d38bb0d5fe" prot="protected" virt="non-virtual"><scope>fx_biquad_filter</scope><name>node_output</name></member>
+      <member refid="classfx__biquad__filter_1ac4fe4851b422f991882f0f47be3773ab" prot="public" virt="non-virtual"><scope>fx_biquad_filter</scope><name>output</name></member>
+      <member refid="classfx__effect_1a0774058f9db052bfc8a68159f13031f2" prot="protected" virt="non-virtual"><scope>fx_biquad_filter</scope><name>param_enabled</name></member>
+      <member refid="classfx__biquad__filter_1a9b30b36f372d82f6819612c6c0440e04" prot="private" virt="non-virtual"><scope>fx_biquad_filter</scope><name>param_freq</name></member>
+      <member refid="classfx__biquad__filter_1a43ff03e01c0423da3d97a630bcbd1ff0" prot="private" virt="non-virtual"><scope>fx_biquad_filter</scope><name>param_gain</name></member>
+      <member refid="classfx__biquad__filter_1a283533cd21acdfd36eb874ce4542436e" prot="private" virt="non-virtual"><scope>fx_biquad_filter</scope><name>param_order</name></member>
+      <member refid="classfx__biquad__filter_1ae394d47d757cd5181cedc60cb17bff4c" prot="private" virt="non-virtual"><scope>fx_biquad_filter</scope><name>param_q</name></member>
+      <member refid="classfx__biquad__filter_1aa5929b311259240520df67950d21e86f" prot="private" virt="non-virtual"><scope>fx_biquad_filter</scope><name>param_speed</name></member>
+      <member refid="classfx__effect_1aaf455e34fced9667a8cf26cdb9fb6641" prot="protected" virt="non-virtual"><scope>fx_biquad_filter</scope><name>param_stack</name></member>
+      <member refid="classfx__effect_1a0ea0d3bfe30592895fa23d241a9baa38" prot="protected" virt="non-virtual"><scope>fx_biquad_filter</scope><name>param_stack_types</name></member>
+      <member refid="classfx__biquad__filter_1a90428cfb0d5312a028aaa98e291eb838" prot="private" virt="non-virtual"><scope>fx_biquad_filter</scope><name>param_type</name></member>
+      <member refid="classfx__effect_1a69bef0da54cedf8e558d65b755716999" prot="protected" virt="non-virtual"><scope>fx_biquad_filter</scope><name>parent_canvas</name></member>
+      <member refid="classfx__biquad__filter_1a50f5ec518d1656ebcc3bde26b2735a75" prot="public" virt="non-virtual"><scope>fx_biquad_filter</scope><name>print_params</name></member>
+      <member refid="classfx__biquad__filter_1a4a4821b7190483d41339969237612c04" prot="public" virt="non-virtual"><scope>fx_biquad_filter</scope><name>q</name></member>
+      <member refid="classfx__effect_1aaeececeee434ea76afdf649c3bed7698" prot="protected" virt="non-virtual"><scope>fx_biquad_filter</scope><name>serialize_params</name></member>
+      <member refid="classfx__effect_1a4c513243328d3b715822e74d21dffe99" prot="public" virt="non-virtual"><scope>fx_biquad_filter</scope><name>service</name></member>
+      <member refid="classfx__biquad__filter_1ad25d7d137c74ba15ff8aae13772f7691" prot="public" virt="non-virtual"><scope>fx_biquad_filter</scope><name>set_freq</name></member>
+      <member refid="classfx__biquad__filter_1acb0375ac0044f5938c79868ac0cd4b1d" prot="public" virt="non-virtual"><scope>fx_biquad_filter</scope><name>set_gain</name></member>
+      <member refid="classfx__biquad__filter_1aac3600fefd3941a6d829647bdbdbb860" prot="public" virt="non-virtual"><scope>fx_biquad_filter</scope><name>set_q</name></member>
+      <member refid="classfx__biquad__filter_1a359396b823b55ba5d1f6311e354aaccd" prot="public" virt="non-virtual"><scope>fx_biquad_filter</scope><name>set_resonance</name></member>
+      <member refid="classfx__effect_1a4f5dbb43e76ca1fa8b8a7c56aaa9f232" prot="protected" virt="non-virtual"><scope>fx_biquad_filter</scope><name>total_audio_nodes</name></member>
+      <member refid="classfx__effect_1a91d9c1dcd7542aaec7a969af78804caa" prot="protected" virt="non-virtual"><scope>fx_biquad_filter</scope><name>total_control_nodes</name></member>
+      <member refid="classfx__effect_1a140e1553b23532a2f09f12f94833713e" prot="protected" virt="non-virtual"><scope>fx_biquad_filter</scope><name>total_params</name></member>
+      <member refid="classfx__effect_1a5e78416b59c4a21367e58ffc09fcf137" prot="protected" virt="non-virtual"><scope>fx_biquad_filter</scope><name>type</name></member>
+      <member refid="classfx__effect_1a0b94adfa51991a989cd10f4122c9ac22" prot="protected" virt="non-virtual"><scope>fx_biquad_filter</scope><name>updated_parameters</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,392 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Class fx_oscillator &mdash; DreamMaker FX Documentation  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class fx_phase_shifter" href="classfx__phase__shifter.html" />
+    <link rel="prev" title="Class fx_multitap_delay" href="classfx__multitap__delay.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> DreamMaker FX Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/echo_basic.html">Building a Basic Echo Pedal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/adding_effects.html">The basics of creating / adding effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/routing_audio.html">The basics of routing audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/controlling_effects.html">The basics of controlling effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/using_api.html">Using the API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/debugging.html">Debugging Sketches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/troubleshooting.html">General troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Pedal Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__pedal.html">Pedal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__led.html">LEDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__pot.html">Pots/Knobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__switch.html">Switches</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Effect Reference:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="classfx__adsr__envelope.html">ADSR Envelope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__amplitude__mod.html">Amplitude Modulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__compressor.html">Compressor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__delay.html">Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__destructor.html">Destructor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__envelope__tracker.html">Envelope Follower</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__gain.html">Gain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__instrument__synth.html">Instrument Synth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__looper.html">Looper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__multitap__delay.html">Multi-tap Delay</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Oscillator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__phase__shifter.html">Phase Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__pitch__shift.html">Pitch Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__ring__mod.html">Ring Modulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__slicer.html">Slicer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__variable__delay.html">Variable Delay</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DreamMaker FX Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Class fx_oscillator</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/classfx__oscillator.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="class-fx-oscillator">
+<span id="exhale-class-classfx-oscillator"></span><h1>Class fx_oscillator<a class="headerlink" href="#class-fx-oscillator" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_src_effects_dm_fx_oscillators.h.html#file-src-effects-dm-fx-oscillators-h"><span class="std std-ref">File dm_fx_oscillators.h</span></a></p></li>
+</ul>
+<div class="section" id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="base-type">
+<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">fx_effect</span></code> (<a class="reference internal" href="classfx__effect.html#exhale-class-classfx-effect"><span class="std std-ref">Class fx_effect</span></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv413fx_oscillator">
+<span id="_CPPv313fx_oscillator"></span><span id="_CPPv213fx_oscillator"></span><span id="fx_oscillator"></span><span class="target" id="classfx__oscillator"></span><em class="property">class </em><code class="sig-name descname">fx_oscillator</code> : <em class="property">public</em> <a class="reference internal" href="classfx__effect.html#_CPPv49fx_effect" title="fx_effect">fx_effect</a><a class="headerlink" href="#_CPPv413fx_oscillator" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Utility: Oscillator that can has both audio and control outputs. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N13fx_oscillator13fx_oscillatorE9OSC_TYPESff">
+<span id="_CPPv3N13fx_oscillator13fx_oscillatorE9OSC_TYPESff"></span><span id="_CPPv2N13fx_oscillator13fx_oscillatorE9OSC_TYPESff"></span><span id="fx_oscillator::fx_oscillator__OSC_TYPES.float.float"></span><span class="target" id="classfx__oscillator_1af7cd903dc9cc687017083aa6abbd24d3"></span><code class="sig-name descname">fx_oscillator</code><span class="sig-paren">(</span><a class="reference internal" href="enum_group___enumerations_1gada898a149424188b3a23010c8fe89176.html#_CPPv49OSC_TYPES" title="OSC_TYPES">OSC_TYPES</a> <em>osc_type</em>, float <em>freq</em>, float <em>amplitude</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13fx_oscillator13fx_oscillatorE9OSC_TYPESff" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Basic constructor for an oscillator when used as an audio source. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">osc_type</span></code>: The osc type (see OSC_TYPES) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">freq</span></code>: The frequency in Hz </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">amplitude</span></code>: The amplitude (linear scale e.g. 0.0 -&gt; 1.0 typically) </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N13fx_oscillator13fx_oscillatorE9OSC_TYPESfff">
+<span id="_CPPv3N13fx_oscillator13fx_oscillatorE9OSC_TYPESfff"></span><span id="_CPPv2N13fx_oscillator13fx_oscillatorE9OSC_TYPESfff"></span><span id="fx_oscillator::fx_oscillator__OSC_TYPES.float.float.float"></span><span class="target" id="classfx__oscillator_1a6f60a4769a531aca7030a97586d8e6b4"></span><code class="sig-name descname">fx_oscillator</code><span class="sig-paren">(</span><a class="reference internal" href="enum_group___enumerations_1gada898a149424188b3a23010c8fe89176.html#_CPPv49OSC_TYPES" title="OSC_TYPES">OSC_TYPES</a> <em>osc_type</em>, float <em>freq</em>, float <em>amplitude</em>, float <em>initial_phase</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13fx_oscillator13fx_oscillatorE9OSC_TYPESfff" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Basic constructor for an oscillator used as a control source. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">osc_type</span></code>: The osc type (see OSC_TYPES) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">freq</span></code>: The frequency in Hz </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">amplitude</span></code>: The amplitude (linear scale e.g. 0.0 -&gt; 1.0 typically) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">initial</span></code>: phase The initial phase of the oscillator in degrees (0-360) </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N13fx_oscillator6enableEv">
+<span id="_CPPv3N13fx_oscillator6enableEv"></span><span id="_CPPv2N13fx_oscillator6enableEv"></span><span id="fx_oscillator::enable"></span><span class="target" id="classfx__oscillator_1af8097f269a5e90da896abd8f7e6ef5e2"></span>void <code class="sig-name descname">enable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13fx_oscillator6enableEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Enable the oscillator (it is enabled by default) </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N13fx_oscillator6bypassEv">
+<span id="_CPPv3N13fx_oscillator6bypassEv"></span><span id="_CPPv2N13fx_oscillator6bypassEv"></span><span id="fx_oscillator::bypass"></span><span class="target" id="classfx__oscillator_1a7af21ed9e597c2c00d85dac8d0fc7346"></span>void <code class="sig-name descname">bypass</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13fx_oscillator6bypassEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Bypass the oscillator (it will provide just a constant value) </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N13fx_oscillator13set_frequencyEf">
+<span id="_CPPv3N13fx_oscillator13set_frequencyEf"></span><span id="_CPPv2N13fx_oscillator13set_frequencyEf"></span><span id="fx_oscillator::set_frequency__float"></span><span class="target" id="classfx__oscillator_1a70f61ffee6744da72ecc8ea3cda9e1ad"></span>void <code class="sig-name descname">set_frequency</code><span class="sig-paren">(</span>float <em>freq</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13fx_oscillator13set_frequencyEf" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Upates the frequency in Hz of the current oscillator. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">freq</span></code>: The frequency in Hz </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N13fx_oscillator13set_amplitudeEf">
+<span id="_CPPv3N13fx_oscillator13set_amplitudeEf"></span><span id="_CPPv2N13fx_oscillator13set_amplitudeEf"></span><span id="fx_oscillator::set_amplitude__float"></span><span class="target" id="classfx__oscillator_1abd4b26763cbf698b21293ebff30d03a2"></span>void <code class="sig-name descname">set_amplitude</code><span class="sig-paren">(</span>float <em>amplitude</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13fx_oscillator13set_amplitudeEf" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Updates the amplitude for the current oscillator. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">amplitude</span></code>: The amplitude (linear) </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N13fx_oscillator19set_oscillator_typeE9OSC_TYPES">
+<span id="_CPPv3N13fx_oscillator19set_oscillator_typeE9OSC_TYPES"></span><span id="_CPPv2N13fx_oscillator19set_oscillator_typeE9OSC_TYPES"></span><span id="fx_oscillator::set_oscillator_type__OSC_TYPES"></span><span class="target" id="classfx__oscillator_1abf8c1deb5e5aebf8243f2712e2613115"></span>void <code class="sig-name descname">set_oscillator_type</code><span class="sig-paren">(</span><a class="reference internal" href="enum_group___enumerations_1gada898a149424188b3a23010c8fe89176.html#_CPPv49OSC_TYPES" title="OSC_TYPES">OSC_TYPES</a> <em>new_type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13fx_oscillator19set_oscillator_typeE9OSC_TYPES" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sets the oscillator type. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">new_type</span></code>: The new type of oscillator (OSC_TYPES) </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N13fx_oscillator12print_paramsEv">
+<span id="_CPPv3N13fx_oscillator12print_paramsEv"></span><span id="_CPPv2N13fx_oscillator12print_paramsEv"></span><span id="fx_oscillator::print_params__void"></span><span class="target" id="classfx__oscillator_1a630f9545124147322faea04790240e61"></span>void <code class="sig-name descname">print_params</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13fx_oscillator12print_paramsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Print the parameters for this effect. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv4N13fx_oscillator6outputE">
+<span id="_CPPv3N13fx_oscillator6outputE"></span><span id="_CPPv2N13fx_oscillator6outputE"></span><span id="fx_oscillator::output__fx_audio_nodeP"></span><span class="target" id="classfx__oscillator_1ad443f83c5e49e2a849e44fadef36bd9f"></span>fx_audio_node *<code class="sig-name descname">output</code><a class="headerlink" href="#_CPPv4N13fx_oscillator6outputE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Audio routing node: primary audio oscillator output </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N13fx_oscillator4freqE">
+<span id="_CPPv3N13fx_oscillator4freqE"></span><span id="_CPPv2N13fx_oscillator4freqE"></span><span id="fx_oscillator::freq__fx_control_nodeP"></span><span class="target" id="classfx__oscillator_1aeeb44f7cd3b37d8426de735d765ad992"></span>fx_control_node *<code class="sig-name descname">freq</code><a class="headerlink" href="#_CPPv4N13fx_oscillator4freqE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Control routing node: frequency of the oscillator in Hz </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N13fx_oscillator9amplitudeE">
+<span id="_CPPv3N13fx_oscillator9amplitudeE"></span><span id="_CPPv2N13fx_oscillator9amplitudeE"></span><span id="fx_oscillator::amplitude__fx_control_nodeP"></span><span class="target" id="classfx__oscillator_1aee2c66fe29de2ec4f47bce0ed77b2445"></span>fx_control_node *<code class="sig-name descname">amplitude</code><a class="headerlink" href="#_CPPv4N13fx_oscillator9amplitudeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Control routing node: amplitude of the oscillator (linear, typically between 0.0 and 1.0) </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N13fx_oscillator6offsetE">
+<span id="_CPPv3N13fx_oscillator6offsetE"></span><span id="_CPPv2N13fx_oscillator6offsetE"></span><span id="fx_oscillator::offset__fx_control_nodeP"></span><span class="target" id="classfx__oscillator_1a97089210c8bfbb4bbd1071699289ad76"></span>fx_control_node *<code class="sig-name descname">offset</code><a class="headerlink" href="#_CPPv4N13fx_oscillator6offsetE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Control routing node: The DC offset of the amplifier. Useful if you’re using this to control parameters in ranges not centered around 0.0. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N13fx_oscillator5valueE">
+<span id="_CPPv3N13fx_oscillator5valueE"></span><span id="_CPPv2N13fx_oscillator5valueE"></span><span id="fx_oscillator::value__fx_control_nodeP"></span><span class="target" id="classfx__oscillator_1a80c56e026c17bea6c0b00b83338e1982"></span>fx_control_node *<code class="sig-name descname">value</code><a class="headerlink" href="#_CPPv4N13fx_oscillator5valueE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Control routing node: The current value of the oscillator. Connect this node to external oscillator nodes for effects. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="classfx__phase__shifter.html" class="btn btn-neutral float-right" title="Class fx_phase_shifter" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="classfx__multitap__delay.html" class="btn btn-neutral float-left" title="Class fx_multitap_delay" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Run Jump Labs
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

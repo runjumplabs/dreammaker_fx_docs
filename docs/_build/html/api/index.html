@@ -1,0 +1,865 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>DreamMaker FX Documentation &mdash; DreamMaker FX Documentation  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> DreamMaker FX Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/echo_basic.html">Building a Basic Echo Pedal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/adding_effects.html">The basics of creating / adding effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/routing_audio.html">The basics of routing audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/controlling_effects.html">The basics of controlling effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/using_api.html">Using the API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/debugging.html">Debugging Sketches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/troubleshooting.html">General troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Pedal Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__pedal.html">Pedal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__led.html">LEDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__pot.html">Pots/Knobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__switch.html">Switches</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Effect Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__adsr__envelope.html">ADSR Envelope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__amplitude__mod.html">Amplitude Modulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__compressor.html">Compressor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__delay.html">Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__destructor.html">Destructor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__envelope__tracker.html">Envelope Follower</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__gain.html">Gain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__instrument__synth.html">Instrument Synth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__looper.html">Looper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__multitap__delay.html">Multi-tap Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__oscillator.html">Oscillator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__phase__shifter.html">Phase Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__pitch__shift.html">Pitch Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__ring__mod.html">Ring Modulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__slicer.html">Slicer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__variable__delay.html">Variable Delay</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DreamMaker FX Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>DreamMaker FX Documentation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="dreammaker-fx-documentation">
+<h1>DreamMaker FX Documentation<a class="headerlink" href="#dreammaker-fx-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="class-hierarchy">
+<h2>Class Hierarchy<a class="headerlink" href="#class-hierarchy" title="Permalink to this headline">¶</a></h2>
+<ul class="treeView" id="class-treeView">
+  <li>
+    <ul class="collapsibleList">
+      <li>Struct <a href="struct_d_s_p___n_o_t_e.html#exhale-struct-struct-d-s-p--n-o-t-e">DSP_NOTE</a></li><li>Struct <a href="struct_d_s_p___s_t_a_t_u_s.html#exhale-struct-struct-d-s-p--s-t-a-t-u-s">DSP_STATUS</a></li><li>Class <a href="classfx__adsr__envelope.html#exhale-class-classfx-adsr-envelope">fx_adsr_envelope</a></li><li>Class <a href="classfx__allpass__filter.html#exhale-class-classfx-allpass-filter">fx_allpass_filter</a></li><li>Class <a href="classfx__amplitude__mod.html#exhale-class-classfx-amplitude-mod">fx_amplitude_mod</a></li><li>Class <a href="classfx__biquad__filter.html#exhale-class-classfx-biquad-filter">fx_biquad_filter</a></li><li>Class <a href="classfx__compressor.html#exhale-class-classfx-compressor">fx_compressor</a></li><li>Class <a href="classfx__delay.html#exhale-class-classfx-delay">fx_delay</a></li><li>Class <a href="classfx__destructor.html#exhale-class-classfx-destructor">fx_destructor</a></li><li>Class <a href="classfx__effect.html#exhale-class-classfx-effect">fx_effect</a></li><li>Class <a href="classfx__envelope__tracker.html#exhale-class-classfx-envelope-tracker">fx_envelope_tracker</a></li><li>Class <a href="classfx__gain.html#exhale-class-classfx-gain">fx_gain</a></li><li>Class <a href="classfx__instrument__synth.html#exhale-class-classfx-instrument-synth">fx_instrument_synth</a></li><li>Class <a href="classfx__led.html#exhale-class-classfx-led">fx_led</a></li><li>Class <a href="classfx__looper.html#exhale-class-classfx-looper">fx_looper</a></li><li>Class <a href="classfx__mixer__2.html#exhale-class-classfx-mixer-2">fx_mixer_2</a></li><li>Class <a href="classfx__mixer__3.html#exhale-class-classfx-mixer-3">fx_mixer_3</a></li><li>Class <a href="classfx__mixer__4.html#exhale-class-classfx-mixer-4">fx_mixer_4</a></li><li>Class <a href="classfx__multitap__delay.html#exhale-class-classfx-multitap-delay">fx_multitap_delay</a></li><li>Class <a href="classfx__oscillator.html#exhale-class-classfx-oscillator">fx_oscillator</a></li><li>Class <a href="classfx__pedal.html#exhale-class-classfx-pedal">fx_pedal</a></li><li>Class <a href="classfx__phase__shifter.html#exhale-class-classfx-phase-shifter">fx_phase_shifter</a></li><li>Class <a href="classfx__pitch__shift.html#exhale-class-classfx-pitch-shift">fx_pitch_shift</a></li><li>Class <a href="classfx__pot.html#exhale-class-classfx-pot">fx_pot</a></li><li>Class <a href="classfx__ring__mod.html#exhale-class-classfx-ring-mod">fx_ring_mod</a></li><li>Class <a href="classfx__slicer.html#exhale-class-classfx-slicer">fx_slicer</a></li><li>Class <a href="classfx__switch.html#exhale-class-classfx-switch">fx_switch</a></li><li>Class <a href="classfx__variable__delay.html#exhale-class-classfx-variable-delay">fx_variable_delay</a></li><li>Enum <a href="enum_group___enumerations_1ga618f7ad9198b8e9ff1c988f3d5eefefb.html#exhale-enum-group--enumerations-1ga618f7ad9198b8e9ff1c988f3d5eefefb">BIQUAD_FILTER_ORDER</a></li><li>Enum <a href="enum_group___enumerations_1ga9b7d24918081e2a37ecbbe1521978296.html#exhale-enum-group--enumerations-1ga9b7d24918081e2a37ecbbe1521978296">BIQUAD_FILTER_TYPE</a></li><li>Enum <a href="enum_dm__fx__effects__defines_8h_1a6392d012dab7fb105fb2c1bf6151bbce.html#exhale-enum-dm-fx-effects-defines-8h-1a6392d012dab7fb105fb2c1bf6151bbce">BIQUAD_FILTER_WIDTH</a></li><li>Enum <a href="enum_dm__fx__debug_8h_1a8931d04af0ed6023a96a095a8f2b2c4d.html#exhale-enum-dm-fx-debug-8h-1a8931d04af0ed6023a96a095a8f2b2c4d">DEBUG_MSG_LEVEL</a></li><li>Enum <a href="enum_group___enumerations_1ga1b467688e64507632004453c05632b64.html#exhale-enum-group--enumerations-1ga1b467688e64507632004453c05632b64">DESTRUCTOR_TYPE</a></li><li>Enum <a href="enum_group___enumerations_1ga0292d9069ee59ac7258602ae1b1101d2.html#exhale-enum-group--enumerations-1ga0292d9069ee59ac7258602ae1b1101d2">EFFECT_TRANSITION_SPEED</a></li><li>Enum <a href="enum_dm__fx__effects__defines_8h_1ab011820ddf472a72050f800dcef94b7d.html#exhale-enum-dm-fx-effects-defines-8h-1ab011820ddf472a72050f800dcef94b7d">ENV_TRACKER_TYPE</a></li><li>Enum <a href="enum_dreammakerfx_8h_1a1f3289eeddfbcff1515a3786dc0518fa.html#exhale-enum-dreammakerfx-8h-1a1f3289eeddfbcff1515a3786dc0518fa">LED_COLOR</a></li><li>Enum <a href="enum_group___enumerations_1gada898a149424188b3a23010c8fe89176.html#exhale-enum-group--enumerations-1gada898a149424188b3a23010c8fe89176">OSC_TYPES</a></li><li class="lastChild">Enum <a href="enum_dreammakerfx_8h_1a3d7c3257df400de2c91753ba11c64ec7.html#exhale-enum-dreammakerfx-8h-1a3d7c3257df400de2c91753ba11c64ec7">SWITCH_POS</a></li>
+    </ul>
+  </li><!-- only tree view element -->
+</ul><!-- /treeView class-treeView --></div>
+<div class="section" id="file-hierarchy">
+<h2>File Hierarchy<a class="headerlink" href="#file-hierarchy" title="Permalink to this headline">¶</a></h2>
+<ul class="treeView" id="file-treeView">
+  <li>
+    <ul class="collapsibleList">
+      <li class="lastChild">Directory <a href="dir_src.html#dir-src">src</a><ul><li>Directory <a href="dir_src_effects.html#dir-src-effects">effects</a><ul><li>File <a href="file_src_effects_dm_fx_adsr_envelope.h.html#file-src-effects-dm-fx-adsr-envelope.h">dm_fx_adsr_envelope.h</a></li><li>File <a href="file_src_effects_dm_fx_allpass_filter.h.html#file-src-effects-dm-fx-allpass-filter.h">dm_fx_allpass_filter.h</a></li><li>File <a href="file_src_effects_dm_fx_amplitude_modulator.h.html#file-src-effects-dm-fx-amplitude-modulator.h">dm_fx_amplitude_modulator.h</a></li><li>File <a href="file_src_effects_dm_fx_biquad_filter.h.html#file-src-effects-dm-fx-biquad-filter.h">dm_fx_biquad_filter.h</a></li><li>File <a href="file_src_effects_dm_fx_compressor.h.html#file-src-effects-dm-fx-compressor.h">dm_fx_compressor.h</a></li><li>File <a href="file_src_effects_dm_fx_delay.h.html#file-src-effects-dm-fx-delay.h">dm_fx_delay.h</a></li><li>File <a href="file_src_effects_dm_fx_delay_multitap.h.html#file-src-effects-dm-fx-delay-multitap.h">dm_fx_delay_multitap.h</a></li><li>File <a href="file_src_effects_dm_fx_destructor.h.html#file-src-effects-dm-fx-destructor.h">dm_fx_destructor.h</a></li><li>File <a href="file_src_effects_dm_fx_effect_macros.h.html#file-src-effects-dm-fx-effect-macros.h">dm_fx_effect_macros.h</a></li><li>File <a href="file_src_effects_dm_fx_effects_defines.h.html#file-src-effects-dm-fx-effects-defines.h">dm_fx_effects_defines.h</a></li><li>File <a href="file_src_effects_dm_fx_envelope_tracker.h.html#file-src-effects-dm-fx-envelope-tracker.h">dm_fx_envelope_tracker.h</a></li><li>File <a href="file_src_effects_dm_fx_gain.h.html#file-src-effects-dm-fx-gain.h">dm_fx_gain.h</a></li><li>File <a href="file_src_effects_dm_fx_instrument_synth.h.html#file-src-effects-dm-fx-instrument-synth.h">dm_fx_instrument_synth.h</a></li><li>File <a href="file_src_effects_dm_fx_looper.h.html#file-src-effects-dm-fx-looper.h">dm_fx_looper.h</a></li><li>File <a href="file_src_effects_dm_fx_mixers.h.html#file-src-effects-dm-fx-mixers.h">dm_fx_mixers.h</a></li><li>File <a href="file_src_effects_dm_fx_oscillators.h.html#file-src-effects-dm-fx-oscillators.h">dm_fx_oscillators.h</a></li><li>File <a href="file_src_effects_dm_fx_phase_shifter.h.html#file-src-effects-dm-fx-phase-shifter.h">dm_fx_phase_shifter.h</a></li><li>File <a href="file_src_effects_dm_fx_pitch_shift.h.html#file-src-effects-dm-fx-pitch-shift.h">dm_fx_pitch_shift.h</a></li><li>File <a href="file_src_effects_dm_fx_ring_modulator.h.html#file-src-effects-dm-fx-ring-modulator.h">dm_fx_ring_modulator.h</a></li><li>File <a href="file_src_effects_dm_fx_slicer.h.html#file-src-effects-dm-fx-slicer.h">dm_fx_slicer.h</a></li><li class="lastChild">File <a href="file_src_effects_dm_fx_variable_delay.h.html#file-src-effects-dm-fx-variable-delay.h">dm_fx_variable_delay.h</a></li></ul></li><li>File <a href="file_src_dm_fx_codec.cpp.html#file-src-dm-fx-codec.cpp">dm_fx_codec.cpp</a></li><li>File <a href="file_src_dm_fx_codec.h.html#file-src-dm-fx-codec.h">dm_fx_codec.h</a></li><li>File <a href="file_src_dm_fx_debug.cpp.html#file-src-dm-fx-debug.cpp">dm_fx_debug.cpp</a></li><li>File <a href="file_src_dm_fx_debug.h.html#file-src-dm-fx-debug.h">dm_fx_debug.h</a></li><li>File <a href="file_src_dm_fx_dsp.cpp.html#file-src-dm-fx-dsp.cpp">dm_fx_dsp.cpp</a></li><li>File <a href="file_src_dm_fx_dsp.h.html#file-src-dm-fx-dsp.h">dm_fx_dsp.h</a></li><li>File <a href="file_src_dm_fx_dsp_firmware_image.h.html#file-src-dm-fx-dsp-firmware-image.h">dm_fx_dsp_firmware_image.h</a></li><li>File <a href="file_src_dm_fx_platform_constants.h.html#file-src-dm-fx-platform-constants.h">dm_fx_platform_constants.h</a></li><li>File <a href="file_src_dm_fx_spi_proto.cpp.html#file-src-dm-fx-spi-proto.cpp">dm_fx_spi_proto.cpp</a></li><li>File <a href="file_src_dm_fx_spi_proto.h.html#file-src-dm-fx-spi-proto.h">dm_fx_spi_proto.h</a></li><li>File <a href="file_src_dm_fx_ui.cpp.html#file-src-dm-fx-ui.cpp">dm_fx_ui.cpp</a></li><li>File <a href="file_src_dm_fx_ui.h.html#file-src-dm-fx-ui.h">dm_fx_ui.h</a></li><li>File <a href="file_src_dreammakerfx.cpp.html#file-src-dreammakerfx.cpp">dreammakerfx.cpp</a></li><li class="lastChild">File <a href="file_src_dreammakerfx.h.html#file-src-dreammakerfx.h">dreammakerfx.h</a></li></ul></li>
+    </ul>
+  </li><!-- only tree view element -->
+</ul><!-- /treeView file-treeView --></div>
+<div class="section" id="full-api">
+<h2>Full API<a class="headerlink" href="#full-api" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="classes-and-structs">
+<h3>Classes and Structs<a class="headerlink" href="#classes-and-structs" title="Permalink to this headline">¶</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="struct_d_s_p___n_o_t_e.html">Struct DSP_NOTE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="struct_d_s_p___n_o_t_e.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="struct_d_s_p___s_t_a_t_u_s.html">Struct DSP_STATUS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="struct_d_s_p___s_t_a_t_u_s.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__adsr__envelope.html">Class fx_adsr_envelope</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classfx__adsr__envelope.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classfx__adsr__envelope.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classfx__adsr__envelope.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__allpass__filter.html">Class fx_allpass_filter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classfx__allpass__filter.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classfx__allpass__filter.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classfx__allpass__filter.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__amplitude__mod.html">Class fx_amplitude_mod</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classfx__amplitude__mod.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classfx__amplitude__mod.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classfx__amplitude__mod.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__biquad__filter.html">Class fx_biquad_filter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classfx__biquad__filter.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classfx__biquad__filter.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classfx__biquad__filter.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__compressor.html">Class fx_compressor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classfx__compressor.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classfx__compressor.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classfx__compressor.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__delay.html">Class fx_delay</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classfx__delay.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classfx__delay.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classfx__delay.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__destructor.html">Class fx_destructor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classfx__destructor.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classfx__destructor.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classfx__destructor.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__effect.html">Class fx_effect</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classfx__effect.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classfx__effect.html#derived-types">Derived Types</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classfx__effect.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__envelope__tracker.html">Class fx_envelope_tracker</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classfx__envelope__tracker.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classfx__envelope__tracker.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classfx__envelope__tracker.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__gain.html">Class fx_gain</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classfx__gain.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classfx__gain.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classfx__gain.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__instrument__synth.html">Class fx_instrument_synth</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classfx__instrument__synth.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classfx__instrument__synth.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classfx__instrument__synth.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__led.html">Class fx_led</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classfx__led.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__looper.html">Class fx_looper</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classfx__looper.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classfx__looper.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classfx__looper.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__mixer__2.html">Class fx_mixer_2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classfx__mixer__2.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classfx__mixer__2.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classfx__mixer__2.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__mixer__3.html">Class fx_mixer_3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classfx__mixer__3.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classfx__mixer__3.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classfx__mixer__3.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__mixer__4.html">Class fx_mixer_4</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classfx__mixer__4.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classfx__mixer__4.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classfx__mixer__4.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__multitap__delay.html">Class fx_multitap_delay</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classfx__multitap__delay.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classfx__multitap__delay.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classfx__multitap__delay.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__oscillator.html">Class fx_oscillator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classfx__oscillator.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classfx__oscillator.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classfx__oscillator.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__pedal.html">Class fx_pedal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classfx__pedal.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__phase__shifter.html">Class fx_phase_shifter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classfx__phase__shifter.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classfx__phase__shifter.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classfx__phase__shifter.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__pitch__shift.html">Class fx_pitch_shift</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classfx__pitch__shift.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classfx__pitch__shift.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classfx__pitch__shift.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__pot.html">Class fx_pot</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classfx__pot.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__ring__mod.html">Class fx_ring_mod</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classfx__ring__mod.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classfx__ring__mod.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classfx__ring__mod.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__slicer.html">Class fx_slicer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classfx__slicer.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classfx__slicer.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classfx__slicer.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__switch.html">Class fx_switch</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classfx__switch.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__variable__delay.html">Class fx_variable_delay</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classfx__variable__delay.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classfx__variable__delay.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classfx__variable__delay.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="enums">
+<h3>Enums<a class="headerlink" href="#enums" title="Permalink to this headline">¶</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="enum_group___enumerations_1ga618f7ad9198b8e9ff1c988f3d5eefefb.html">Enum BIQUAD_FILTER_ORDER</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="enum_group___enumerations_1ga618f7ad9198b8e9ff1c988f3d5eefefb.html#enum-documentation">Enum Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="enum_group___enumerations_1ga9b7d24918081e2a37ecbbe1521978296.html">Enum BIQUAD_FILTER_TYPE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="enum_group___enumerations_1ga9b7d24918081e2a37ecbbe1521978296.html#enum-documentation">Enum Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="enum_dm__fx__effects__defines_8h_1a6392d012dab7fb105fb2c1bf6151bbce.html">Enum BIQUAD_FILTER_WIDTH</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="enum_dm__fx__effects__defines_8h_1a6392d012dab7fb105fb2c1bf6151bbce.html#enum-documentation">Enum Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="enum_dm__fx__debug_8h_1a8931d04af0ed6023a96a095a8f2b2c4d.html">Enum DEBUG_MSG_LEVEL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="enum_dm__fx__debug_8h_1a8931d04af0ed6023a96a095a8f2b2c4d.html#enum-documentation">Enum Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="enum_group___enumerations_1ga1b467688e64507632004453c05632b64.html">Enum DESTRUCTOR_TYPE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="enum_group___enumerations_1ga1b467688e64507632004453c05632b64.html#enum-documentation">Enum Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="enum_group___enumerations_1ga0292d9069ee59ac7258602ae1b1101d2.html">Enum EFFECT_TRANSITION_SPEED</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="enum_group___enumerations_1ga0292d9069ee59ac7258602ae1b1101d2.html#enum-documentation">Enum Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="enum_dm__fx__effects__defines_8h_1ab011820ddf472a72050f800dcef94b7d.html">Enum ENV_TRACKER_TYPE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="enum_dm__fx__effects__defines_8h_1ab011820ddf472a72050f800dcef94b7d.html#enum-documentation">Enum Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="enum_dreammakerfx_8h_1a1f3289eeddfbcff1515a3786dc0518fa.html">Enum LED_COLOR</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="enum_dreammakerfx_8h_1a1f3289eeddfbcff1515a3786dc0518fa.html#enum-documentation">Enum Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="enum_group___enumerations_1gada898a149424188b3a23010c8fe89176.html">Enum OSC_TYPES</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="enum_group___enumerations_1gada898a149424188b3a23010c8fe89176.html#enum-documentation">Enum Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="enum_dreammakerfx_8h_1a3d7c3257df400de2c91753ba11c64ec7.html">Enum SWITCH_POS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="enum_dreammakerfx_8h_1a3d7c3257df400de2c91753ba11c64ec7.html#enum-documentation">Enum Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_dm__fx__ui_8h_1ac99039b413f124d5e14d0ed424db126b.html">Function footswitch_left_pressed_isr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_dm__fx__ui_8h_1ac99039b413f124d5e14d0ed424db126b.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_dm__fx__ui_8h_1a764526590b8856229745fb8393e1248c.html">Function footswitch_right_pressed_isr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_dm__fx__ui_8h_1a764526590b8856229745fb8393e1248c.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_dreammakerfx_8cpp_1a828a4666622b7324037f54abb23b1936.html">Function print_processor_load</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_dreammakerfx_8cpp_1a828a4666622b7324037f54abb23b1936.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_dm__fx__ui_8h_1acd8fc185fe721e1ef2bd0221f624a60e.html">Function rgb_leds_init</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_dm__fx__ui_8h_1acd8fc185fe721e1ef2bd0221f624a60e.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_dm__fx__ui_8h_1a75ff64ee661b2a93f016ef720e5aacf2.html">Function rgb_write</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_dm__fx__ui_8h_1a75ff64ee661b2a93f016ef720e5aacf2.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_dm__fx__ui_8h_1afdd8c5aed53e4645c20a87d16ac28aed.html">Function turn_off_center_footsw_led</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_dm__fx__ui_8h_1afdd8c5aed53e4645c20a87d16ac28aed.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_dm__fx__ui_8h_1afa4ea6b691e7305008c578738d4b43c7.html">Function turn_off_left_footsw_led</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_dm__fx__ui_8h_1afa4ea6b691e7305008c578738d4b43c7.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_dm__fx__ui_8h_1adff720e04230609a952197a0e931f293.html">Function turn_off_right_footsw_led</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_dm__fx__ui_8h_1adff720e04230609a952197a0e931f293.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_dm__fx__ui_8h_1a24ffe3301339a0410fb67214e0bdeba4.html">Function turn_on_center_footsw_led</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_dm__fx__ui_8h_1a24ffe3301339a0410fb67214e0bdeba4.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_dm__fx__ui_8h_1a43e1b096bb4e86c506f9b32dcdd0c38a.html">Function turn_on_center_footsw_led_rgb</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_dm__fx__ui_8h_1a43e1b096bb4e86c506f9b32dcdd0c38a.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_dm__fx__ui_8h_1adba3d5061473a0b712d9f588b3d3a5b1.html">Function turn_on_left_footsw_led</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_dm__fx__ui_8h_1adba3d5061473a0b712d9f588b3d3a5b1.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_dm__fx__ui_8h_1a104a4c8bd1f6addfa344b4c61d6f741c.html">Function turn_on_left_footsw_led_rgb</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_dm__fx__ui_8h_1a104a4c8bd1f6addfa344b4c61d6f741c.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_dm__fx__ui_8h_1a3921ddfe5bd9f277208aded2176651be.html">Function turn_on_right_footsw_led</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_dm__fx__ui_8h_1a3921ddfe5bd9f277208aded2176651be.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_dm__fx__ui_8h_1a20b2f6f9e8582e455c32ddd31aab0649.html">Function turn_on_right_footsw_led_rgb</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_dm__fx__ui_8h_1a20b2f6f9e8582e455c32ddd31aab0649.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="variables">
+<h3>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_dm__fx__dsp_8h_1a7074f1bcf352d92565aa4794ae8fb5c6.html">Variable dsp_status</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_dm__fx__dsp_8h_1a7074f1bcf352d92565aa4794ae8fb5c6.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_dm__fx__ui_8h_1a5f751bf40d7b2df9025c809a9a4345de.html">Variable footswitch_left_pressed_event</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_dm__fx__ui_8h_1a5f751bf40d7b2df9025c809a9a4345de.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_dm__fx__ui_8h_1a7d9c2e3aa9446523b19f7ed1b26d9005.html">Variable footswitch_right_pressed_event</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_dm__fx__ui_8h_1a7d9c2e3aa9446523b19f7ed1b26d9005.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_dreammakerfx_8cpp_1a70973a9873c54dc81f4c826a5ab7f4fb.html">Variable pedal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_dreammakerfx_8cpp_1a70973a9873c54dc81f4c826a5ab7f4fb.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_dreammakerfx_8h_1a70973a9873c54dc81f4c826a5ab7f4fb.html">Variable pedal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_dreammakerfx_8h_1a70973a9873c54dc81f4c826a5ab7f4fb.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="defines">
+<h3>Defines<a class="headerlink" href="#defines" title="Permalink to this headline">¶</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_dreammakerfx_8h_1ad97188edfdd667de971027b35330fa41.html">Define API_VERSION</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_dreammakerfx_8h_1ad97188edfdd667de971027b35330fa41.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_dm__fx__effect__macros_8h_1a1a997ebb6d96097ebb8912eebe7b32fa.html">Define CHECK_LAST</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_dm__fx__effect__macros_8h_1a1a997ebb6d96097ebb8912eebe7b32fa.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_dm__fx__effect__macros_8h_1a613ac0499857cfb72669bb438f04b218.html">Define CHECK_LAST_DISABLED</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_dm__fx__effect__macros_8h_1a613ac0499857cfb72669bb438f04b218.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_dm__fx__effect__macros_8h_1ab20ed3c09b15c8373a7d9d69b3a8c676.html">Define CHECK_LAST_ENABLED</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_dm__fx__effect__macros_8h_1ab20ed3c09b15c8373a7d9d69b3a8c676.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_dm__fx__effect__macros_8h_1a9eb89bc7024105092c75f656648d4f1e.html">Define CHECK_LAST_RUN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_dm__fx__effect__macros_8h_1a9eb89bc7024105092c75f656648d4f1e.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_dreammakerfx_8h_1a620b130ff59eac1a13b71beead2367e3.html">Define POT_LONG_HIST_LEN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_dreammakerfx_8h_1a620b130ff59eac1a13b71beead2367e3.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_dreammakerfx_8h_1a05e30ed4888413f8259f427cb3dd1bf9.html">Define POT_SHORT_HIST_LEN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_dreammakerfx_8h_1a05e30ed4888413f8259f427cb3dd1bf9.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Run Jump Labs
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,369 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Building a Basic Echo Pedal &mdash; DreamMaker FX Documentation  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="The basics of creating / adding effects" href="adding_effects.html" />
+    <link rel="prev" title="Installation" href="install.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> DreamMaker FX Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Building a Basic Echo Pedal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#basic-arduino-anatomy">Basic Arduino anatomy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#add-the-effects-library-of-functions">1. Add the effects library of functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#add-any-effects-or-synthesis-objects">2. Add any effects or synthesis <em>objects</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#route-the-effect-into-our-pedal">3. Route the effect into our pedal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#add-service-function-to-our-loop">4. Add service function to our loop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bringing-it-all-together">Bringing it all together</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-the-effect-on-hardware">Running the effect on hardware</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="adding_effects.html">The basics of creating / adding effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="routing_audio.html">The basics of routing audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controlling_effects.html">The basics of controlling effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_api.html">Using the API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debugging.html">Debugging Sketches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">General troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Pedal Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__pedal.html">Pedal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__led.html">LEDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__pot.html">Pots/Knobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__switch.html">Switches</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Effect Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__adsr__envelope.html">ADSR Envelope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__amplitude__mod.html">Amplitude Modulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__compressor.html">Compressor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__delay.html">Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__destructor.html">Destructor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__envelope__tracker.html">Envelope Follower</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__gain.html">Gain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__instrument__synth.html">Instrument Synth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__looper.html">Looper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__multitap__delay.html">Multi-tap Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__oscillator.html">Oscillator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__phase__shifter.html">Phase Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__pitch__shift.html">Pitch Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__ring__mod.html">Ring Modulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__slicer.html">Slicer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__variable__delay.html">Variable Delay</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DreamMaker FX Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Building a Basic Echo Pedal</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/markdown/echo_basic.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="building-a-basic-echo-pedal">
+<h1>Building a Basic Echo Pedal<a class="headerlink" href="#building-a-basic-echo-pedal" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<p>As mentioned earlier, one doesn’t have to be an experienced programmer to use this platform.  The coding patterns for creating various effect and synth components, wiring them together and controlling their parameters is pretty straight forward.</p>
+<div class="section" id="basic-arduino-anatomy">
+<h2>Basic Arduino anatomy<a class="headerlink" href="#basic-arduino-anatomy" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>Let’s start by learning the anatomy of a basic Arduino “Sketch” (aka “program” in Arduino speak).</p>
+<p>With the Arduino app open, go to File-&gt;New.  You’ll see a new text editor window appear with a new “sketch”.  This sketch will come pre-populated with two <em>functions</em>. One is called <code class="docutils literal notranslate"><span class="pre">setup()</span></code> and another is called <code class="docutils literal notranslate"><span class="pre">loop()</span></code>.</p>
+<p>When the sketch is downloaded to our hardware, it will first run any commands in the <code class="docutils literal notranslate"><span class="pre">setup()</span></code> function once.  And then it will run the <code class="docutils literal notranslate"><span class="pre">loop()</span></code> function repeatidly.  Each time you power up the board, it goes through the same sequence (run <code class="docutils literal notranslate"><span class="pre">setup()</span></code> once and then run <code class="docutils literal notranslate"><span class="pre">loop()</span></code> indefinitely).</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// put your setup code here, to run once:</span>
+
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// put your main code here, to run repeatedly:</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>So when creating effects, we will define how the effects connect together in the <code class="docutils literal notranslate"><span class="pre">setup()</span></code> function and we will then (optionally) adjust the parameters for these effects in the <code class="docutils literal notranslate"><span class="pre">loop()</span></code> routine.</p>
+<p>Let’s start by creating a simple echo effect to see how the pieces fit together.</p>
+</div>
+<div class="section" id="add-the-effects-library-of-functions">
+<h2>1. Add the effects library of functions<a class="headerlink" href="#add-the-effects-library-of-functions" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>At the top of the file, we’ll add a line that will link in all of the functions, variables and objects that you’ll use to create your effects.  At the very top of the file, add <code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;dreammakerfx.h&gt;</span></code>.  You’ll add this line to the top of every Arduino sketch you create for this platform.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Include DreamMaker FX library of effects routines</span>
+<span class="cp">#include</span> <span class="cpf">&lt;dreammakerfx.h&gt;</span><span class="cp"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="add-any-effects-or-synthesis-objects">
+<h2>2. Add any effects or synthesis <em>objects</em><a class="headerlink" href="#add-any-effects-or-synthesis-objects" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>Above the setup routine, we will add (aka <em>declare</em>) any effect and synth <em>objects</em> that we’ll be using.  When we add an object, in many cases we will also provide the initial parameters.</p>
+<p>In this case, we are going to create a single echo / delay effect object and name it <code class="docutils literal notranslate"><span class="pre">my_echo_1</span></code>.  When we initialize an echo object, it takes two <em>arguments</em> or initial parameters.  The first is how long the echo is in milliseconds (1000th of a second).  And the second is the <em>feedback</em> ratio (between 0.0 and 1.0) which determines how much audio is fed back into the echo and thus how long the echo lasts.  If feedback is set to 1.0, it will echo forever.  And if feedback is set to 0.0, it won’t echo at all.  Let’s set the echo length to be 1 second (or 1000 milliseconds) and the feedback ratio at 0.7.</p>
+<p>Add the following code after your <code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;dreammakerfx.h&gt;</span></code> line.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Create/declare one echo effect and configure it</span>
+<span class="n">fx_delay</span>   <span class="nf">my_echo_1</span><span class="p">(</span><span class="mf">1000.0</span><span class="p">,</span>  <span class="c1">// 1 second echo</span>
+                     <span class="mf">0.7</span><span class="p">);</span>    <span class="c1">// 0.7 feedback ratio</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="route-the-effect-into-our-pedal">
+<h2>3. Route the effect into our pedal<a class="headerlink" href="#route-the-effect-into-our-pedal" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>Next, in the <code class="docutils literal notranslate"><span class="pre">setup()</span></code> routine, we need to initialize our effects <code class="docutils literal notranslate"><span class="pre">pedal</span></code> and route the audio from the pedal in and out jacks through the various effects and synth objects we’re using.</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+
+  <span class="n">pedal</span><span class="p">.</span><span class="n">init</span><span class="p">();</span> 
+
+  <span class="c1">// Connect our effect(s) to input and output jacks</span>
+  <span class="n">pedal</span><span class="p">.</span><span class="n">route_audio</span><span class="p">(</span><span class="n">pedal</span><span class="p">.</span><span class="n">instr_in</span><span class="p">,</span> <span class="n">my_echo_1</span><span class="p">.</span><span class="n">input</span><span class="p">);</span>		<span class="c1">// Instr in -&gt; echo in</span>
+  <span class="n">pedal</span><span class="p">.</span><span class="n">route_audio</span><span class="p">(</span><span class="n">my_echo_1</span><span class="p">.</span><span class="n">output</span><span class="p">,</span> <span class="n">pedal</span><span class="p">.</span><span class="n">amp_out</span><span class="p">);</span>		<span class="c1">// Echo out -&gt; Amp out</span>
+
+  <span class="n">pedal</span><span class="p">.</span><span class="n">run</span><span class="p">();</span>    <span class="c1">// Run the effect</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Let’s deconstruct what we just did here.</p>
+<p>First, we <em>called</em> the <code class="docutils literal notranslate"><span class="pre">pedal.init(true);</span></code> function to set up our system.</p>
+<p>Next, we connected the audio from the input jack of our pedal (aka <code class="docutils literal notranslate"><span class="pre">instr_in</span></code>) to the input of our echo object (aka <code class="docutils literal notranslate"><span class="pre">my_echo_1.input</span></code>) using the <code class="docutils literal notranslate"><span class="pre">route_audio()</span></code> function.</p>
+<p>Each effect and synthesis object has a set of input and outputs that can “routed” or virtually “wired” together.  There are also some inputs and outputs that are part of the pedal itself.  Presently, there is an <code class="docutils literal notranslate"><span class="pre">instr_in</span></code> input (audio in from our instrument) and <code class="docutils literal notranslate"><span class="pre">amp_out</span></code> output (audio out towards our amp).</p>
+<p>In this case, we just have one object.  We routed / wired the instr_in to the input of our <code class="docutils literal notranslate"><span class="pre">my_echo_1</span></code> object.  And then we routed / wired the output of our <code class="docutils literal notranslate"><span class="pre">my_echo_1</span></code> object to the pedal output.</p>
+<p>And finally, we call <code class="docutils literal notranslate"><span class="pre">pedal.run();</span></code> which takes our effect configuration, performs the magic, sends it over to the DSP where the effects are run.</p>
+</div>
+<div class="section" id="add-service-function-to-our-loop">
+<h2>4. Add service function to our loop<a class="headerlink" href="#add-service-function-to-our-loop" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>The last thing we need to do is add the <code class="docutils literal notranslate"><span class="pre">pedal.service();</span></code> function call in our <code class="docutils literal notranslate"><span class="pre">loop()</span></code> function.  This function basically checks in the with the DSP, updates any parameters that need to be updated, and retrieves information from the DSP.</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// put your main code here, to run repeatedly:</span>
+
+  <span class="c1">// sweet nothings to/from DSP</span>
+  <span class="n">pedal</span><span class="p">.</span><span class="n">service</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="bringing-it-all-together">
+<h2>Bringing it all together<a class="headerlink" href="#bringing-it-all-together" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>Let’s now look at the whole echo effect:</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="c1">// Include our library of effects routines</span>
+<span class="cp">#include</span> <span class="cpf">&lt;dreammakerfx.h&gt;</span><span class="cp"></span>
+
+<span class="c1">// Create/declare one echo effect and configure it</span>
+<span class="n">fx_delay</span>   <span class="nf">my_echo_1</span><span class="p">(</span><span class="mf">1000.0</span><span class="p">,</span>  <span class="c1">// 1 second echo</span>
+                     <span class="mf">0.7</span><span class="p">);</span>    <span class="c1">// 0.7 feedback ratio</span>
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+
+  <span class="n">pedal</span><span class="p">.</span><span class="n">init</span><span class="p">();</span>   <span class="c1">// Initialize the system </span>
+
+  <span class="c1">// Connect our effect(s) to input and output jacks</span>
+  <span class="n">pedal</span><span class="p">.</span><span class="n">route_audio</span><span class="p">(</span><span class="n">pedal</span><span class="p">.</span><span class="n">instr_in</span><span class="p">,</span> <span class="n">my_echo_1</span><span class="p">.</span><span class="n">input</span><span class="p">);</span>		<span class="c1">// Instr in -&gt; echo in</span>
+  <span class="n">pedal</span><span class="p">.</span><span class="n">route_audio</span><span class="p">(</span><span class="n">my_echo_1</span><span class="p">.</span><span class="n">output</span><span class="p">,</span> <span class="n">pedal</span><span class="p">.</span><span class="n">amp_out</span><span class="p">);</span>		<span class="c1">// Echo out -&gt; Amp out</span>
+
+  <span class="n">pedal</span><span class="p">.</span><span class="n">run</span><span class="p">();</span>    <span class="c1">// Run the effect</span>
+
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// put your main code here, to run repeatedly:</span>
+
+  <span class="c1">// sweet nothings to/from DSP</span>
+  <span class="n">pedal</span><span class="p">.</span><span class="n">service</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>So you’ve just created a basic echo stomp box - congratulations!</p>
+</div>
+<div class="section" id="running-the-effect-on-hardware">
+<h2>Running the effect on hardware<a class="headerlink" href="#running-the-effect-on-hardware" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>Navigate to Tools -&gt; Serial Monitor.  This will bring up the console log.  When your effect configuration is processed on the Arduino processor, some information will be sent to the console letting you know how things were routed and everything is okay.  You’ll also see the telemtry data from the DSP too so you can see if any effect failed to initialize or something went wrong.</p>
+<p>Click the <strong>Upload</strong> button in the upper-left hand side of the Arduino IDE (it’s the arrow pointing to the right).  Your code will compile and then download to the board.  After a second or two, you’ll hear the echo effect applied to any audio you send through the pedal!</p>
+<p>Once you have downloaded an effect, it is stored in memory on the pedal.  If you disconnect the pedal and plug it in later, it will start up running the same effect.  To overwrite the effect currently stored in the pedal, just press the reset button twice in quick success to upload a new effect.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="adding_effects.html" class="btn btn-neutral float-right" title="The basics of creating / adding effects" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="install.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Run Jump Labs
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

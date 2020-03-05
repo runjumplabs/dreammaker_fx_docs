@@ -1,0 +1,399 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Class fx_delay &mdash; DreamMaker FX Documentation  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class fx_destructor" href="classfx__destructor.html" />
+    <link rel="prev" title="Class fx_compressor" href="classfx__compressor.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> DreamMaker FX Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/echo_basic.html">Building a Basic Echo Pedal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/adding_effects.html">The basics of creating / adding effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/routing_audio.html">The basics of routing audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/controlling_effects.html">The basics of controlling effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/using_api.html">Using the API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/debugging.html">Debugging Sketches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/troubleshooting.html">General troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Pedal Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__pedal.html">Pedal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__led.html">LEDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__pot.html">Pots/Knobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__switch.html">Switches</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Effect Reference:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="classfx__adsr__envelope.html">ADSR Envelope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__amplitude__mod.html">Amplitude Modulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__compressor.html">Compressor</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Delay</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__destructor.html">Destructor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__envelope__tracker.html">Envelope Follower</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__gain.html">Gain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__instrument__synth.html">Instrument Synth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__looper.html">Looper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__multitap__delay.html">Multi-tap Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__oscillator.html">Oscillator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__phase__shifter.html">Phase Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__pitch__shift.html">Pitch Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__ring__mod.html">Ring Modulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__slicer.html">Slicer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__variable__delay.html">Variable Delay</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DreamMaker FX Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Class fx_delay</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/classfx__delay.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="class-fx-delay">
+<span id="exhale-class-classfx-delay"></span><h1>Class fx_delay<a class="headerlink" href="#class-fx-delay" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_src_effects_dm_fx_delay.h.html#file-src-effects-dm-fx-delay-h"><span class="std std-ref">File dm_fx_delay.h</span></a></p></li>
+</ul>
+<div class="section" id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="base-type">
+<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">fx_effect</span></code> (<a class="reference internal" href="classfx__effect.html#exhale-class-classfx-effect"><span class="std std-ref">Class fx_effect</span></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv48fx_delay">
+<span id="_CPPv38fx_delay"></span><span id="_CPPv28fx_delay"></span><span id="fx_delay"></span><span class="target" id="classfx__delay"></span><em class="property">class </em><code class="sig-name descname">fx_delay</code> : <em class="property">public</em> <a class="reference internal" href="classfx__effect.html#_CPPv49fx_effect" title="fx_effect">fx_effect</a><a class="headerlink" href="#_CPPv48fx_delay" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Effect: Delay/echo. </p>
+<p>This is basically an echo effect.</p>
+<p>&lt;iframe width=”560” height=”315” src=”https://www.youtube.com/embed/E36AkCAzGWo” frameborder=”0” allow=”accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture” allowfullscreen&gt;=””&gt;&lt;/iframe&gt;</p>
+<p>Example: ___delay_1.c___ </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N8fx_delay8fx_delayEff">
+<span id="_CPPv3N8fx_delay8fx_delayEff"></span><span id="_CPPv2N8fx_delay8fx_delayEff"></span><span id="fx_delay::fx_delay__float.float"></span><span class="target" id="classfx__delay_1aac7eb3b50aeb93b9938456ca659e7cd4"></span><code class="sig-name descname">fx_delay</code><span class="sig-paren">(</span>float <em>delay_len_ms</em>, float <em>feedback</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8fx_delay8fx_delayEff" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Basic constructor for delay effect. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">delay_len_ms</span></code>: The length of the delay in milliseconds (1/1000s of a second) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">feedback</span></code>: The feedback ration (between 0.0 and 1.0) </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N8fx_delay8fx_delayEfffffb">
+<span id="_CPPv3N8fx_delay8fx_delayEfffffb"></span><span id="_CPPv2N8fx_delay8fx_delayEfffffb"></span><span id="fx_delay::fx_delay__float.float.float.float.float.b"></span><span class="target" id="classfx__delay_1ae7412fb1c040a2b1b2b515d32cf3513a"></span><code class="sig-name descname">fx_delay</code><span class="sig-paren">(</span>float <em>delay_len_ms</em>, float <em>delay_len_max_ms</em>, float <em>feedback</em>, float <em>mix_dry</em>, float <em>mix_wet</em>, bool <em>enable_ext_fx</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8fx_delay8fx_delayEfffffb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Advanced constructor for delay effect. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">delay_len_ms</span></code>: The length of the delay in milliseconds (1/1000s of a second) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">delay_len_max_ms</span></code>: The maximum length of the delay (if the delay length is modified) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">feedback</span></code>: The feedback ration (between 0.0 and 1.0) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">feedthrough</span></code>: The delay feed through ratio (between 0.0 and 1.0) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">enable_ext_fx</span></code>: Enable the send/receive FX loop </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N8fx_delay6enableEv">
+<span id="_CPPv3N8fx_delay6enableEv"></span><span id="_CPPv2N8fx_delay6enableEv"></span><span id="fx_delay::enable"></span><span class="target" id="classfx__delay_1aa2b2f620ddfa1b85800aadc764a07f6f"></span>void <code class="sig-name descname">enable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8fx_delay6enableEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Enable the <strong>this_effect</strong> (it is enabled by default) </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N8fx_delay6bypassEv">
+<span id="_CPPv3N8fx_delay6bypassEv"></span><span id="_CPPv2N8fx_delay6bypassEv"></span><span id="fx_delay::bypass"></span><span class="target" id="classfx__delay_1a01012a63d6c8ea4536f6b3dfbab32e73"></span>void <code class="sig-name descname">bypass</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8fx_delay6bypassEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Bypass the <strong>this_effect</strong> (will just pass clean audio through) </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N8fx_delay13set_length_msEf">
+<span id="_CPPv3N8fx_delay13set_length_msEf"></span><span id="_CPPv2N8fx_delay13set_length_msEf"></span><span id="fx_delay::set_length_ms__float"></span><span class="target" id="classfx__delay_1ad2712b329a719dad80041f63cd5c39e1"></span>void <code class="sig-name descname">set_length_ms</code><span class="sig-paren">(</span>float <em>len_ms</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8fx_delay13set_length_msEf" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Update the length of the delay. </p>
+<p>Note, if you used the simple constructor, the length of the delay needs to be less than or equal to the initial delay value. If you want the ability to set a longer delay than the initial value, use the advanced constructor as this will allow you to also specify the total amount of delay space to allocate which is then the maximum length of a delay. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N8fx_delay12set_feedbackEf">
+<span id="_CPPv3N8fx_delay12set_feedbackEf"></span><span id="_CPPv2N8fx_delay12set_feedbackEf"></span><span id="fx_delay::set_feedback__float"></span><span class="target" id="classfx__delay_1a27d2959ee0ad5ec9abfce93df89c865c"></span>void <code class="sig-name descname">set_feedback</code><span class="sig-paren">(</span>float <em>feedback</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8fx_delay12set_feedbackEf" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Updates the feedback parameter of the delay. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N8fx_delay11set_dry_mixEf">
+<span id="_CPPv3N8fx_delay11set_dry_mixEf"></span><span id="_CPPv2N8fx_delay11set_dry_mixEf"></span><span id="fx_delay::set_dry_mix__float"></span><span class="target" id="classfx__delay_1a21441b57577d8996d5500a5d15a79afc"></span>void <code class="sig-name descname">set_dry_mix</code><span class="sig-paren">(</span>float <em>dry_mix</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8fx_delay11set_dry_mixEf" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Updates the dry / clean mix of the delay (0.0 to 1.0) </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N8fx_delay11set_wet_mixEf">
+<span id="_CPPv3N8fx_delay11set_wet_mixEf"></span><span id="_CPPv2N8fx_delay11set_wet_mixEf"></span><span id="fx_delay::set_wet_mix__float"></span><span class="target" id="classfx__delay_1a0e7a8f0f8276ff4b0c1cfad589bd30b5"></span>void <code class="sig-name descname">set_wet_mix</code><span class="sig-paren">(</span>float <em>wet_mix</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8fx_delay11set_wet_mixEf" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Updates the wet / delay mix of the delay (0.0 to 1.0) </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N8fx_delay12print_paramsEv">
+<span id="_CPPv3N8fx_delay12print_paramsEv"></span><span id="_CPPv2N8fx_delay12print_paramsEv"></span><span id="fx_delay::print_params__void"></span><span class="target" id="classfx__delay_1a0982e31da3096ac3d850e71eca18f6fc"></span>void <code class="sig-name descname">print_params</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8fx_delay12print_paramsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Prints the parameters for the delay effect. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv4N8fx_delay5inputE">
+<span id="_CPPv3N8fx_delay5inputE"></span><span id="_CPPv2N8fx_delay5inputE"></span><span id="fx_delay::input__fx_audio_nodeP"></span><span class="target" id="classfx__delay_1a07652b9b855e12f74705811f65670068"></span>fx_audio_node *<code class="sig-name descname">input</code><a class="headerlink" href="#_CPPv4N8fx_delay5inputE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Audio routing node [input]: primary audio input </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N8fx_delay6outputE">
+<span id="_CPPv3N8fx_delay6outputE"></span><span id="_CPPv2N8fx_delay6outputE"></span><span id="fx_delay::output__fx_audio_nodeP"></span><span class="target" id="classfx__delay_1aa247832fc523f7a1d82dcd94e0c46757"></span>fx_audio_node *<code class="sig-name descname">output</code><a class="headerlink" href="#_CPPv4N8fx_delay6outputE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Audio routing node [output]: primary audio output </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N8fx_delay7fx_sendE">
+<span id="_CPPv3N8fx_delay7fx_sendE"></span><span id="_CPPv2N8fx_delay7fx_sendE"></span><span id="fx_delay::fx_send__fx_audio_nodeP"></span><span class="target" id="classfx__delay_1a47d0604757c9fae775e9dc1d0c8e0c43"></span>fx_audio_node *<code class="sig-name descname">fx_send</code><a class="headerlink" href="#_CPPv4N8fx_delay7fx_sendE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Audio routing node [output]: effect loop send before entering delay line of this effect </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N8fx_delay10fx_receiveE">
+<span id="_CPPv3N8fx_delay10fx_receiveE"></span><span id="_CPPv2N8fx_delay10fx_receiveE"></span><span id="fx_delay::fx_receive__fx_audio_nodeP"></span><span class="target" id="classfx__delay_1a48f73cc2af7f37afde7a96e885961d4a"></span>fx_audio_node *<code class="sig-name descname">fx_receive</code><a class="headerlink" href="#_CPPv4N8fx_delay10fx_receiveE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Audio routing node [output]: effect loop return before entering delay line of this effect </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N8fx_delay9length_msE">
+<span id="_CPPv3N8fx_delay9length_msE"></span><span id="_CPPv2N8fx_delay9length_msE"></span><span id="fx_delay::length_ms__fx_control_nodeP"></span><span class="target" id="classfx__delay_1ab3ab27196c40eaae2fc8f874642eca50"></span>fx_control_node *<code class="sig-name descname">length_ms</code><a class="headerlink" href="#_CPPv4N8fx_delay9length_msE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Control routing node [input]: Length of delay line in milliseconds (1/1000s of a second) </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N8fx_delay8feedbackE">
+<span id="_CPPv3N8fx_delay8feedbackE"></span><span id="_CPPv2N8fx_delay8feedbackE"></span><span id="fx_delay::feedback__fx_control_nodeP"></span><span class="target" id="classfx__delay_1a632917c322f068445ab1772877b24661"></span>fx_control_node *<code class="sig-name descname">feedback</code><a class="headerlink" href="#_CPPv4N8fx_delay8feedbackE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Control routing node [input]: Feedback ratio (between 0.0 and 1.0) </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N8fx_delay7dry_mixE">
+<span id="_CPPv3N8fx_delay7dry_mixE"></span><span id="_CPPv2N8fx_delay7dry_mixE"></span><span id="fx_delay::dry_mix__fx_control_nodeP"></span><span class="target" id="classfx__delay_1a38c230d5672d588c699b514f2dcbac39"></span>fx_control_node *<code class="sig-name descname">dry_mix</code><a class="headerlink" href="#_CPPv4N8fx_delay7dry_mixE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Control routing node [input]: Dry mix (between 0.0 and 1.0) </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N8fx_delay7wet_mixE">
+<span id="_CPPv3N8fx_delay7wet_mixE"></span><span id="_CPPv2N8fx_delay7wet_mixE"></span><span id="fx_delay::wet_mix__fx_control_nodeP"></span><span class="target" id="classfx__delay_1a6f3bbdd01c6153ad211f12b122fe05bb"></span>fx_control_node *<code class="sig-name descname">wet_mix</code><a class="headerlink" href="#_CPPv4N8fx_delay7wet_mixE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Control routing node [input]: Wet mix (between 0.0 and 1.0) </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="classfx__destructor.html" class="btn btn-neutral float-right" title="Class fx_destructor" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="classfx__compressor.html" class="btn btn-neutral float-left" title="Class fx_compressor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Run Jump Labs
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

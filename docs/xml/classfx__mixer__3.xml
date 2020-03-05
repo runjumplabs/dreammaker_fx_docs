@@ -1,0 +1,220 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classfx__mixer__3" kind="class" language="C++" prot="public">
+    <compoundname>fx_mixer_3</compoundname>
+    <basecompoundref refid="classfx__effect" prot="public" virt="non-virtual">fx_effect</basecompoundref>
+    <includes refid="dm__fx__mixers_8h" local="no">dm_fx_mixers.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classfx__mixer__3_1a03a50b547aa266696731d09286c6bb2c" prot="private" static="no" mutable="no">
+        <type>fx_audio_node</type>
+        <definition>fx_audio_node fx_mixer_3::node_input_2</definition>
+        <argsstring></argsstring>
+        <name>node_input_2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_mixers.h" line="69" column="1" bodyfile="src/effects/dm_fx_mixers.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__mixer__3_1aab4c862a8566e838a1ab1e1b70c8cd96" prot="private" static="no" mutable="no">
+        <type>fx_audio_node</type>
+        <definition>fx_audio_node fx_mixer_3::node_input_3</definition>
+        <argsstring></argsstring>
+        <name>node_input_3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_mixers.h" line="70" column="1" bodyfile="src/effects/dm_fx_mixers.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__mixer__3_1ad48d13123a3616d57d0646b1a56b1980" prot="private" static="no" mutable="no">
+        <type>fx_audio_node</type>
+        <definition>fx_audio_node fx_mixer_3::node_dummy_output</definition>
+        <argsstring></argsstring>
+        <name>node_dummy_output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_mixers.h" line="71" column="1" bodyfile="src/effects/dm_fx_mixers.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classfx__mixer__3_1a517758169a6ef1e81720c9329503bb7a" prot="public" static="no" mutable="no">
+        <type>fx_audio_node *</type>
+        <definition>fx_audio_node* fx_mixer_3::input_1</definition>
+        <argsstring></argsstring>
+        <name>input_1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Audio routing node [input]: audio input (mixer channel 1) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_mixers.h" line="78" column="1" bodyfile="src/effects/dm_fx_mixers.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__mixer__3_1a4c5d017dc79d7a30be6600f4a07e5cac" prot="public" static="no" mutable="no">
+        <type>fx_audio_node *</type>
+        <definition>fx_audio_node* fx_mixer_3::input_2</definition>
+        <argsstring></argsstring>
+        <name>input_2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Audio routing node [input]: audio input (mixer channel 2) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_mixers.h" line="83" column="1" bodyfile="src/effects/dm_fx_mixers.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__mixer__3_1a189f7d11234f4f3954fdb95a1cafab0c" prot="public" static="no" mutable="no">
+        <type>fx_audio_node *</type>
+        <definition>fx_audio_node* fx_mixer_3::input_3</definition>
+        <argsstring></argsstring>
+        <name>input_3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Audio routing node [input]: audio input (mixer channel 3) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_mixers.h" line="88" column="1" bodyfile="src/effects/dm_fx_mixers.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__mixer__3_1aa2f1daf0e3add17a6fa64767842f6ce8" prot="public" static="no" mutable="no">
+        <type>fx_audio_node *</type>
+        <definition>fx_audio_node* fx_mixer_3::output</definition>
+        <argsstring></argsstring>
+        <name>output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Audio routing node [output]: mixer output </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_mixers.h" line="93" column="1" bodyfile="src/effects/dm_fx_mixers.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classfx__mixer__3_1ae66a67fdf041059f82b28bdd05235402" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>fx_mixer_3::fx_mixer_3</definition>
+        <argsstring>(void)</argsstring>
+        <name>fx_mixer_3</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Simple constructor takes no arguments. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_mixers.h" line="98" column="1" bodyfile="src/effects/dm_fx_mixers.h" bodystart="98" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__mixer__3_1a0593fdf1d54570a4b719151823e080a5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_mixer_3::print_params</definition>
+        <argsstring>(void)</argsstring>
+        <name>print_params</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Print the parameters for this effect. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_mixers.h" line="119" column="1" bodyfile="src/effects/dm_fx_mixers.h" bodystart="119" bodyend="125"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Utility: 3 channel mixer. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="91">
+        <label>fx_mixer_3</label>
+        <link refid="classfx__mixer__3"/>
+        <childnode refid="92" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="92">
+        <label>fx_effect</label>
+        <link refid="classfx__effect"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="93">
+        <label>fx_mixer_3</label>
+        <link refid="classfx__mixer__3"/>
+        <childnode refid="94" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="95">
+        <label>fx_pedal</label>
+        <link refid="classfx__pedal"/>
+      </node>
+      <node id="94">
+        <label>fx_effect</label>
+        <link refid="classfx__effect"/>
+        <childnode refid="95" relation="usage">
+          <edgelabel>parent_canvas</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/effects/dm_fx_mixers.h" line="65" column="1" bodyfile="src/effects/dm_fx_mixers.h" bodystart="65" bodyend="126"/>
+    <listofallmembers>
+      <member refid="classfx__effect_1ab69ae64deecdbc5915de9b66b4f3e987" prot="protected" virt="non-virtual"><scope>fx_mixer_3</scope><name>audio_node_stack</name></member>
+      <member refid="classfx__effect_1abdbbc884fc92a23af5ec5b351a972b97" prot="protected" virt="non-virtual"><scope>fx_mixer_3</scope><name>bool_param_updated</name></member>
+      <member refid="classfx__effect_1a659acc5bca268cb1ae1568cc4d48c2ac" prot="public" virt="non-virtual"><scope>fx_mixer_3</scope><name>bypass</name></member>
+      <member refid="classfx__effect_1a700589ec8a30f3197cebce4eb955fa31" prot="protected" virt="non-virtual"><scope>fx_mixer_3</scope><name>control_node_stack</name></member>
+      <member refid="classfx__effect_1af7d5319aca3b86b0e76418385d0478ea" prot="public" virt="non-virtual"><scope>fx_mixer_3</scope><name>effect_name</name></member>
+      <member refid="classfx__effect_1a84c05df07c1cd73de91d38e8ddfcc351" prot="public" virt="non-virtual"><scope>fx_mixer_3</scope><name>enable</name></member>
+      <member refid="classfx__effect_1a56eefdb5f90e991e3f31d855e87e9213" prot="protected" virt="non-virtual"><scope>fx_mixer_3</scope><name>float_param_updated</name></member>
+      <member refid="classfx__effect_1aab2d00a6784612158e41606297952873" prot="public" virt="non-virtual"><scope>fx_mixer_3</scope><name>fx_effect</name></member>
+      <member refid="classfx__mixer__3_1ae66a67fdf041059f82b28bdd05235402" prot="public" virt="non-virtual"><scope>fx_mixer_3</scope><name>fx_mixer_3</name></member>
+      <member refid="classfx__effect_1ae5be756c63862665f422aa25a14d3bef" prot="protected" virt="non-virtual"><scope>fx_mixer_3</scope><name>fx_pedal</name></member>
+      <member refid="classfx__effect_1a551b61721aadaeccb3cd2ba9fc826609" prot="protected" virt="non-virtual"><scope>fx_mixer_3</scope><name>get_audio_node_index</name></member>
+      <member refid="classfx__effect_1aba27ace404ab75a174892cb5908f58b3" prot="protected" virt="non-virtual"><scope>fx_mixer_3</scope><name>get_control_node_index</name></member>
+      <member refid="classfx__effect_1a3ddd0473c4a01e858a17b51f14995c70" prot="public" virt="non-virtual"><scope>fx_mixer_3</scope><name>get_name</name></member>
+      <member refid="classfx__effect_1a14e0cb29cd7e86d0b8f566b3066dbf32" prot="public" virt="non-virtual"><scope>fx_mixer_3</scope><name>get_type</name></member>
+      <member refid="classfx__mixer__3_1a517758169a6ef1e81720c9329503bb7a" prot="public" virt="non-virtual"><scope>fx_mixer_3</scope><name>input_1</name></member>
+      <member refid="classfx__mixer__3_1a4c5d017dc79d7a30be6600f4a07e5cac" prot="public" virt="non-virtual"><scope>fx_mixer_3</scope><name>input_2</name></member>
+      <member refid="classfx__mixer__3_1a189f7d11234f4f3954fdb95a1cafab0c" prot="public" virt="non-virtual"><scope>fx_mixer_3</scope><name>input_3</name></member>
+      <member refid="classfx__effect_1a35011b582dc3eb033f2174b404e15fd8" prot="protected" virt="non-virtual"><scope>fx_mixer_3</scope><name>instance_id</name></member>
+      <member refid="classfx__mixer__3_1ad48d13123a3616d57d0646b1a56b1980" prot="private" virt="non-virtual"><scope>fx_mixer_3</scope><name>node_dummy_output</name></member>
+      <member refid="classfx__effect_1a69b60011be5fc3ade57b937405aa835d" prot="protected" virt="non-virtual"><scope>fx_mixer_3</scope><name>node_enabled</name></member>
+      <member refid="classfx__effect_1a61f6f19f2cd7be8762758512e9cd5097" prot="protected" virt="non-virtual"><scope>fx_mixer_3</scope><name>node_index</name></member>
+      <member refid="classfx__effect_1a66c709a96dd59fd1e21c3407a160a8e8" prot="protected" virt="non-virtual"><scope>fx_mixer_3</scope><name>node_input</name></member>
+      <member refid="classfx__mixer__3_1a03a50b547aa266696731d09286c6bb2c" prot="private" virt="non-virtual"><scope>fx_mixer_3</scope><name>node_input_2</name></member>
+      <member refid="classfx__mixer__3_1aab4c862a8566e838a1ab1e1b70c8cd96" prot="private" virt="non-virtual"><scope>fx_mixer_3</scope><name>node_input_3</name></member>
+      <member refid="classfx__effect_1aabadf3d22b48bc21227f72d38bb0d5fe" prot="protected" virt="non-virtual"><scope>fx_mixer_3</scope><name>node_output</name></member>
+      <member refid="classfx__mixer__3_1aa2f1daf0e3add17a6fa64767842f6ce8" prot="public" virt="non-virtual"><scope>fx_mixer_3</scope><name>output</name></member>
+      <member refid="classfx__effect_1a0774058f9db052bfc8a68159f13031f2" prot="protected" virt="non-virtual"><scope>fx_mixer_3</scope><name>param_enabled</name></member>
+      <member refid="classfx__effect_1aaf455e34fced9667a8cf26cdb9fb6641" prot="protected" virt="non-virtual"><scope>fx_mixer_3</scope><name>param_stack</name></member>
+      <member refid="classfx__effect_1a0ea0d3bfe30592895fa23d241a9baa38" prot="protected" virt="non-virtual"><scope>fx_mixer_3</scope><name>param_stack_types</name></member>
+      <member refid="classfx__effect_1a69bef0da54cedf8e558d65b755716999" prot="protected" virt="non-virtual"><scope>fx_mixer_3</scope><name>parent_canvas</name></member>
+      <member refid="classfx__mixer__3_1a0593fdf1d54570a4b719151823e080a5" prot="public" virt="non-virtual"><scope>fx_mixer_3</scope><name>print_params</name></member>
+      <member refid="classfx__effect_1aaeececeee434ea76afdf649c3bed7698" prot="protected" virt="non-virtual"><scope>fx_mixer_3</scope><name>serialize_params</name></member>
+      <member refid="classfx__effect_1a4c513243328d3b715822e74d21dffe99" prot="public" virt="non-virtual"><scope>fx_mixer_3</scope><name>service</name></member>
+      <member refid="classfx__effect_1a4f5dbb43e76ca1fa8b8a7c56aaa9f232" prot="protected" virt="non-virtual"><scope>fx_mixer_3</scope><name>total_audio_nodes</name></member>
+      <member refid="classfx__effect_1a91d9c1dcd7542aaec7a969af78804caa" prot="protected" virt="non-virtual"><scope>fx_mixer_3</scope><name>total_control_nodes</name></member>
+      <member refid="classfx__effect_1a140e1553b23532a2f09f12f94833713e" prot="protected" virt="non-virtual"><scope>fx_mixer_3</scope><name>total_params</name></member>
+      <member refid="classfx__effect_1a5e78416b59c4a21367e58ffc09fcf137" prot="protected" virt="non-virtual"><scope>fx_mixer_3</scope><name>type</name></member>
+      <member refid="classfx__effect_1a0b94adfa51991a989cd10f4122c9ac22" prot="protected" virt="non-virtual"><scope>fx_mixer_3</scope><name>updated_parameters</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

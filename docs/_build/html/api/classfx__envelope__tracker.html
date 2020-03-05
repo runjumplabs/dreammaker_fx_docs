@@ -1,0 +1,364 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Class fx_envelope_tracker &mdash; DreamMaker FX Documentation  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class fx_gain" href="classfx__gain.html" />
+    <link rel="prev" title="Class fx_destructor" href="classfx__destructor.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> DreamMaker FX Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/echo_basic.html">Building a Basic Echo Pedal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/adding_effects.html">The basics of creating / adding effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/routing_audio.html">The basics of routing audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/controlling_effects.html">The basics of controlling effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/using_api.html">Using the API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/debugging.html">Debugging Sketches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/troubleshooting.html">General troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Pedal Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__pedal.html">Pedal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__led.html">LEDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__pot.html">Pots/Knobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__switch.html">Switches</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Effect Reference:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="classfx__adsr__envelope.html">ADSR Envelope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__amplitude__mod.html">Amplitude Modulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__compressor.html">Compressor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__delay.html">Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__destructor.html">Destructor</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Envelope Follower</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__gain.html">Gain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__instrument__synth.html">Instrument Synth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__looper.html">Looper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__multitap__delay.html">Multi-tap Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__oscillator.html">Oscillator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__phase__shifter.html">Phase Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__pitch__shift.html">Pitch Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__ring__mod.html">Ring Modulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__slicer.html">Slicer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__variable__delay.html">Variable Delay</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DreamMaker FX Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Class fx_envelope_tracker</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/classfx__envelope__tracker.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="class-fx-envelope-tracker">
+<span id="exhale-class-classfx-envelope-tracker"></span><h1>Class fx_envelope_tracker<a class="headerlink" href="#class-fx-envelope-tracker" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_src_effects_dm_fx_envelope_tracker.h.html#file-src-effects-dm-fx-envelope-tracker-h"><span class="std std-ref">File dm_fx_envelope_tracker.h</span></a></p></li>
+</ul>
+<div class="section" id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="base-type">
+<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">fx_effect</span></code> (<a class="reference internal" href="classfx__effect.html#exhale-class-classfx-effect"><span class="std std-ref">Class fx_effect</span></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv419fx_envelope_tracker">
+<span id="_CPPv319fx_envelope_tracker"></span><span id="_CPPv219fx_envelope_tracker"></span><span id="fx_envelope_tracker"></span><span class="target" id="classfx__envelope__tracker"></span><em class="property">class </em><code class="sig-name descname">fx_envelope_tracker</code> : <em class="property">public</em> <a class="reference internal" href="classfx__effect.html#_CPPv49fx_effect" title="fx_effect">fx_effect</a><a class="headerlink" href="#_CPPv419fx_envelope_tracker" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Effect: Envelope tracker. </p>
+<p>Here’s a nice tutorial on one effect that can be created with an envelope tracker</p>
+<p>&lt;iframe width=”560” height=”315” src=”https://www.youtube.com/embed/gFltSCZVqx0” frameborder=”0” allow=”accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture” allowfullscreen&gt;=””&gt;&lt;/iframe&gt; </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N19fx_envelope_tracker19fx_envelope_trackerEffb">
+<span id="_CPPv3N19fx_envelope_tracker19fx_envelope_trackerEffb"></span><span id="_CPPv2N19fx_envelope_tracker19fx_envelope_trackerEffb"></span><span id="fx_envelope_tracker::fx_envelope_tracker__float.float.b"></span><span class="target" id="classfx__envelope__tracker_1ae5d434f970e66fb028d6955e4feb5904"></span><code class="sig-name descname">fx_envelope_tracker</code><span class="sig-paren">(</span>float <em>attack_speed_ms</em>, float <em>decay_speed_ms</em>, bool <em>triggered</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19fx_envelope_tracker19fx_envelope_trackerEffb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Constructs a new envelope tracker instance. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">attack_speed_ms</span></code>: The attack speed milliseconds </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">decay_speed_ms</span></code>: The decay speed milliseconds </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">triggered</span></code>: Indicates if triggered (should envelope value drop down to zero when new note event is detected) </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N19fx_envelope_tracker19fx_envelope_trackerEffbff">
+<span id="_CPPv3N19fx_envelope_tracker19fx_envelope_trackerEffbff"></span><span id="_CPPv2N19fx_envelope_tracker19fx_envelope_trackerEffbff"></span><span id="fx_envelope_tracker::fx_envelope_tracker__float.float.b.float.float"></span><span class="target" id="classfx__envelope__tracker_1ab207d2e676545401ded75629f543a542"></span><code class="sig-name descname">fx_envelope_tracker</code><span class="sig-paren">(</span>float <em>attack_speed_ms</em>, float <em>decay_speed_ms</em>, bool <em>triggered</em>, float <em>ctrl_scale</em>, float <em>ctrl_offset</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19fx_envelope_tracker19fx_envelope_trackerEffbff" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N19fx_envelope_tracker19set_attack_speed_msEf">
+<span id="_CPPv3N19fx_envelope_tracker19set_attack_speed_msEf"></span><span id="_CPPv2N19fx_envelope_tracker19set_attack_speed_msEf"></span><span id="fx_envelope_tracker::set_attack_speed_ms__float"></span><span class="target" id="classfx__envelope__tracker_1adcb2549d59d71a39dff1b39854a3d045"></span>void <code class="sig-name descname">set_attack_speed_ms</code><span class="sig-paren">(</span>float <em>attack_speed_ms</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19fx_envelope_tracker19set_attack_speed_msEf" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N19fx_envelope_tracker18set_decay_speed_msEf">
+<span id="_CPPv3N19fx_envelope_tracker18set_decay_speed_msEf"></span><span id="_CPPv2N19fx_envelope_tracker18set_decay_speed_msEf"></span><span id="fx_envelope_tracker::set_decay_speed_ms__float"></span><span class="target" id="classfx__envelope__tracker_1a4d6f81bda9887bb96aaa14b974d5d19a"></span>void <code class="sig-name descname">set_decay_speed_ms</code><span class="sig-paren">(</span>float <em>decay_speed_ms</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19fx_envelope_tracker18set_decay_speed_msEf" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N19fx_envelope_tracker13set_env_scaleEf">
+<span id="_CPPv3N19fx_envelope_tracker13set_env_scaleEf"></span><span id="_CPPv2N19fx_envelope_tracker13set_env_scaleEf"></span><span id="fx_envelope_tracker::set_env_scale__float"></span><span class="target" id="classfx__envelope__tracker_1a33a671936b7277cfec0d85e421de4a86"></span>void <code class="sig-name descname">set_env_scale</code><span class="sig-paren">(</span>float <em>scale</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19fx_envelope_tracker13set_env_scaleEf" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sets the envelope scale. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">scale</span></code>: The scale value / multiplier </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N19fx_envelope_tracker14set_env_offsetEf">
+<span id="_CPPv3N19fx_envelope_tracker14set_env_offsetEf"></span><span id="_CPPv2N19fx_envelope_tracker14set_env_offsetEf"></span><span id="fx_envelope_tracker::set_env_offset__float"></span><span class="target" id="classfx__envelope__tracker_1a80dab9a18a9237477dd4f9a44272ec01"></span>void <code class="sig-name descname">set_env_offset</code><span class="sig-paren">(</span>float <em>offset</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19fx_envelope_tracker14set_env_offsetEf" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N19fx_envelope_tracker12print_paramsEv">
+<span id="_CPPv3N19fx_envelope_tracker12print_paramsEv"></span><span id="_CPPv2N19fx_envelope_tracker12print_paramsEv"></span><span id="fx_envelope_tracker::print_params__void"></span><span class="target" id="classfx__envelope__tracker_1a7b51364941f46e57860cfbaae1d315db"></span>void <code class="sig-name descname">print_params</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19fx_envelope_tracker12print_paramsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv4N19fx_envelope_tracker5inputE">
+<span id="_CPPv3N19fx_envelope_tracker5inputE"></span><span id="_CPPv2N19fx_envelope_tracker5inputE"></span><span id="fx_envelope_tracker::input__fx_audio_nodeP"></span><span class="target" id="classfx__envelope__tracker_1a90a1db3263c82aa7b59e7292b777bd82"></span>fx_audio_node *<code class="sig-name descname">input</code><a class="headerlink" href="#_CPPv4N19fx_envelope_tracker5inputE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N19fx_envelope_tracker14decay_speed_msE">
+<span id="_CPPv3N19fx_envelope_tracker14decay_speed_msE"></span><span id="_CPPv2N19fx_envelope_tracker14decay_speed_msE"></span><span id="fx_envelope_tracker::decay_speed_ms__fx_control_nodeP"></span><span class="target" id="classfx__envelope__tracker_1ae8aae7e2034e97ac804e26f7cfa9bfbe"></span>fx_control_node *<code class="sig-name descname">decay_speed_ms</code><a class="headerlink" href="#_CPPv4N19fx_envelope_tracker14decay_speed_msE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Control routing node: decay speed of envelope (milliseconds) </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N19fx_envelope_tracker15attack_speed_msE">
+<span id="_CPPv3N19fx_envelope_tracker15attack_speed_msE"></span><span id="_CPPv2N19fx_envelope_tracker15attack_speed_msE"></span><span id="fx_envelope_tracker::attack_speed_ms__fx_control_nodeP"></span><span class="target" id="classfx__envelope__tracker_1aecc2a5c2cb85119e7120e7e1c1dfa3e5"></span>fx_control_node *<code class="sig-name descname">attack_speed_ms</code><a class="headerlink" href="#_CPPv4N19fx_envelope_tracker15attack_speed_msE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Control routing node: attack speeed of envelope (milliseconds) </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N19fx_envelope_tracker8envelopeE">
+<span id="_CPPv3N19fx_envelope_tracker8envelopeE"></span><span id="_CPPv2N19fx_envelope_tracker8envelopeE"></span><span id="fx_envelope_tracker::envelope__fx_control_nodeP"></span><span class="target" id="classfx__envelope__tracker_1a067a4942058fd43727d9c3575bc44eb2"></span>fx_control_node *<code class="sig-name descname">envelope</code><a class="headerlink" href="#_CPPv4N19fx_envelope_tracker8envelopeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Control routing node: envelope signal </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N19fx_envelope_tracker5scaleE">
+<span id="_CPPv3N19fx_envelope_tracker5scaleE"></span><span id="_CPPv2N19fx_envelope_tracker5scaleE"></span><span id="fx_envelope_tracker::scale__fx_control_nodeP"></span><span class="target" id="classfx__envelope__tracker_1afc7b87142acdae8f5d16dd2ce0de7769"></span>fx_control_node *<code class="sig-name descname">scale</code><a class="headerlink" href="#_CPPv4N19fx_envelope_tracker5scaleE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Control routing node: scale of envelope signal </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N19fx_envelope_tracker6offsetE">
+<span id="_CPPv3N19fx_envelope_tracker6offsetE"></span><span id="_CPPv2N19fx_envelope_tracker6offsetE"></span><span id="fx_envelope_tracker::offset__fx_control_nodeP"></span><span class="target" id="classfx__envelope__tracker_1aacd0932233598dd5abe51f5459c174ea"></span>fx_control_node *<code class="sig-name descname">offset</code><a class="headerlink" href="#_CPPv4N19fx_envelope_tracker6offsetE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Control routing node: offset of envelope signal </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="classfx__gain.html" class="btn btn-neutral float-right" title="Class fx_gain" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="classfx__destructor.html" class="btn btn-neutral float-left" title="Class fx_destructor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Run Jump Labs
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

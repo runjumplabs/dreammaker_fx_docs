@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_191f852b87741474e2df76292b1f55c1" kind="dir">
+    <compoundname>src/effects</compoundname>
+    <innerfile refid="dm__fx__adsr__envelope_8h">dm_fx_adsr_envelope.h</innerfile>
+    <innerfile refid="dm__fx__allpass__filter_8h">dm_fx_allpass_filter.h</innerfile>
+    <innerfile refid="dm__fx__amplitude__modulator_8h">dm_fx_amplitude_modulator.h</innerfile>
+    <innerfile refid="dm__fx__biquad__filter_8h">dm_fx_biquad_filter.h</innerfile>
+    <innerfile refid="dm__fx__compressor_8h">dm_fx_compressor.h</innerfile>
+    <innerfile refid="dm__fx__delay_8h">dm_fx_delay.h</innerfile>
+    <innerfile refid="dm__fx__delay__multitap_8h">dm_fx_delay_multitap.h</innerfile>
+    <innerfile refid="dm__fx__destructor_8h">dm_fx_destructor.h</innerfile>
+    <innerfile refid="dm__fx__effect__macros_8h">dm_fx_effect_macros.h</innerfile>
+    <innerfile refid="dm__fx__effects__defines_8h">dm_fx_effects_defines.h</innerfile>
+    <innerfile refid="dm__fx__envelope__tracker_8h">dm_fx_envelope_tracker.h</innerfile>
+    <innerfile refid="dm__fx__gain_8h">dm_fx_gain.h</innerfile>
+    <innerfile refid="dm__fx__instrument__synth_8h">dm_fx_instrument_synth.h</innerfile>
+    <innerfile refid="dm__fx__looper_8h">dm_fx_looper.h</innerfile>
+    <innerfile refid="dm__fx__mixers_8h">dm_fx_mixers.h</innerfile>
+    <innerfile refid="dm__fx__oscillators_8h">dm_fx_oscillators.h</innerfile>
+    <innerfile refid="dm__fx__phase__shifter_8h">dm_fx_phase_shifter.h</innerfile>
+    <innerfile refid="dm__fx__pitch__shift_8h">dm_fx_pitch_shift.h</innerfile>
+    <innerfile refid="dm__fx__ring__modulator_8h">dm_fx_ring_modulator.h</innerfile>
+    <innerfile refid="dm__fx__slicer_8h">dm_fx_slicer.h</innerfile>
+    <innerfile refid="dm__fx__variable__delay_8h">dm_fx_variable_delay.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/effects/"/>
+  </compounddef>
+</doxygen>

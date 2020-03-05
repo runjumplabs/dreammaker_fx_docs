@@ -1,0 +1,313 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Using the API &mdash; DreamMaker FX Documentation  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Debugging Sketches" href="debugging.html" />
+    <link rel="prev" title="The basics of controlling effects" href="controlling_effects.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> DreamMaker FX Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="echo_basic.html">Building a Basic Echo Pedal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adding_effects.html">The basics of creating / adding effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="routing_audio.html">The basics of routing audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controlling_effects.html">The basics of controlling effects</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Using the API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#special-parameters-and-constants">Special parameters and constants</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="debugging.html">Debugging Sketches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">General troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Pedal Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__pedal.html">Pedal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__led.html">LEDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__pot.html">Pots/Knobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__switch.html">Switches</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Effect Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__adsr__envelope.html">ADSR Envelope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__amplitude__mod.html">Amplitude Modulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__compressor.html">Compressor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__delay.html">Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__destructor.html">Destructor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__envelope__tracker.html">Envelope Follower</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__gain.html">Gain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__instrument__synth.html">Instrument Synth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__looper.html">Looper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__multitap__delay.html">Multi-tap Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__oscillator.html">Oscillator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__phase__shifter.html">Phase Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__pitch__shift.html">Pitch Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__ring__mod.html">Ring Modulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__slicer.html">Slicer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__variable__delay.html">Variable Delay</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DreamMaker FX Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Using the API</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/markdown/using_api.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="using-the-api">
+<h1>Using the API<a class="headerlink" href="#using-the-api" title="Permalink to this headline">¶</a></h1>
+<p>There is an ever-growing list of effects and synth objects that can be routed and controlled in very interesting and novel ways.  These building blocks can be routed together and novel ways.  And, some building blocks and control the parameters of other building blocks.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">fx_amplitude_mod</span></code> - Amplitude modulation continuously changes the volume of the audio running through it and can be used to create tremelo effects and more advanced gating effects.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fx_biquad_filter</span></code> - A basic audio filter that filters out certain frequency ranges of audio.  This can be configured as a low-pass, high-pass, band-pass filter, etc.  This block can be  used for general EQ, wah pedals, auto-wahs and envelope filters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fx_clipper</span></code> - Provides soft and hard clipping functions that can be used to create a wide variety of distortions.  When combined with the <code class="docutils literal notranslate"><span class="pre">fx_biquad_filter</span></code>, a wide range of tones can be realized to recreate the sounds of tube-amps and distortion pedals.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fx_compressor</span></code> - A compressor/limiter block that provides dynamic volume control.  This can be used to create a longer <em>sustain</em> effect on guitars and basses.  It can also be used to keep our audio signals within range so we don’t end up with output distortion.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fx_delay</span></code> - Used to create delay-based effects like echoes and reverbs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fx_envelope_tracker</span></code> - Tracks the volume of the input signal and can be used to control other effects like <code class="docutils literal notranslate"><span class="pre">fx_biquad_filter</span></code> for creating an auto-wah / envelope filter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gain</span></code> - Increases or decreases the volume of the audio signal.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fx_instr_synth</span></code> - Basically a guitar/bass synth.  Generates synth tones based on the note that is being played.  Follows string bends too.  This will be vastly enhanced in next version of API to support polyphonic note tracking.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fx_looper</span></code> - A looper effect can capture a sample of audio and loop it indefinitely.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fx_mixer</span></code> - Provides a variety of mixers to mix multiple effect outputs into a single signal.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fx_oscillator</span></code> - Various oscillators that can be used to generate audio or control effects.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">phase</span> <span class="pre">shift</span></code> - A phase shifter connected to an LFO.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fx_pitch_shift</span></code> - Adjusts the pitch of the incoming signal.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fx_ring_mod</span></code> - This one is bananas.  It basically modulates the incoming signal with a sine wave to create wild harmonics.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fx_shaper</span></code> - Basically a synth that generates a wave at the same frequency, one octave below, and two octaves below.  Each of the three synthesized signals has their own output channel so they can either be mixed or sent through different effects.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fx_slicer</span></code> - Chops up audio in time domain and sends to differnt channels.  Great for making rhymthmic effects.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fx_variable_delay</span></code> - This is a short delay line that is varied in real time.  This is core building block for flanger, chorus, and vibrato effects.</p></li>
+</ul>
+<p>There are several other modules in development including reverbs, all-pass filter, automatic loop detector, etc.</p>
+<div class="section" id="special-parameters-and-constants">
+<h2>Special parameters and constants<a class="headerlink" href="#special-parameters-and-constants" title="Permalink to this headline">¶</a></h2>
+<p>Some objects take inputs that aren’t numbers but rather a constant that is chosen from a list.  Below is a list of the constants that may be used when initializing an effect.</p>
+<p><code class="docutils literal notranslate"><span class="pre">BIQUAD_FILTER_TYPE</span></code>: Types of filters that can be implemented with <code class="docutils literal notranslate"><span class="pre">fx_biquad_fiter</span></code></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">BIQUAD_TYPE_LPF</span></code> - low-pass filter (cuts out high frequencies)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BIQUAD_TYPE_HPF</span></code> - high-pass filter (cuts out low frequencies)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BIQUAD_TYPE_BPF</span></code> - band-pass filter (only lets a limited range of frequencies through)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BIQUAD_TYPE_NOTCH</span></code> - opposite of band-pass</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BIQUAD_TYPE_PEAKING</span></code> - don’t worry about it</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BIQUAD_TYPE_L_SHELF</span></code> - similar to low pass</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BIQUAD_TYPE_H_SHELF</span></code> - similar to high pass</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">BIQUAD_FILTER_WIDTH</span></code>: How “wide” a filter is for use with <code class="docutils literal notranslate"><span class="pre">fx_biquad_fiter</span></code></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">FILTER_WIDTH_VERY_NARROW</span></code> - very narrow indeed</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">FILTER_WIDTH_NARROW</span></code> - like a wah filter</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">FILTER_WIDTH_MEDIUM</span></code> - a bit narrow</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">FILTER_WIDTH_WIDE</span></code> - wide with flat response (q=0.7071)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">FILTER_WIDTH_VERY_WIDE</span></code> - very wide</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">ENV_TRACKER_TYPE</span></code>: Type of envelop tracking</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ENV_TRACK_PEAKS</span></code> - haha, there is only one option - rides the peaks like riding the lion</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">EFFECT_TRANSITION_SPEED</span></code>: How quickly to transition parameters when a parameter is modified (used in several effects)</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">TRANS_VERY_FAST</span></code> - rabbit</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">TRANS_FAST</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">TRANS_MED</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">TRANS_SLOW</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">TRANS_VERY_SLOW</span></code> - turtle</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">OSC_TYPES</span></code>: Types of oscillators (used in several effects)</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">OSC_SINE</span></code> - sine wave</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">OSC_TRI</span></code> - triangle wave</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">OSC_SQUARE</span></code> - square wave</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">OSC_PULSE</span></code> - pulse wave</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">OSC_RAMP</span></code> - ramp wave</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">POLY_CLIP_FUNC</span></code>: Various clipping functions for use with <code class="docutils literal notranslate"><span class="pre">fx_clipper</span></code></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">POLY_SMOOTHSTEP</span></code> - try it and see if you like it</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">POLY_SMOOTHERSTEP</span></code> - try it and see if you like it</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">POLY_SIMPLE_1</span></code> - try it and see if you like it</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">POLY_SIMPLE_2</span></code> - try it and see if you like it</p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="debugging.html" class="btn btn-neutral float-right" title="Debugging Sketches" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="controlling_effects.html" class="btn btn-neutral float-left" title="The basics of controlling effects" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Run Jump Labs
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

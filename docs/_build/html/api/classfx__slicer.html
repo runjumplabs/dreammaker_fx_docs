@@ -1,0 +1,386 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Class fx_slicer &mdash; DreamMaker FX Documentation  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class fx_variable_delay" href="classfx__variable__delay.html" />
+    <link rel="prev" title="Class fx_ring_mod" href="classfx__ring__mod.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> DreamMaker FX Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/echo_basic.html">Building a Basic Echo Pedal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/adding_effects.html">The basics of creating / adding effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/routing_audio.html">The basics of routing audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/controlling_effects.html">The basics of controlling effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/using_api.html">Using the API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/debugging.html">Debugging Sketches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/troubleshooting.html">General troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Pedal Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__pedal.html">Pedal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__led.html">LEDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__pot.html">Pots/Knobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__switch.html">Switches</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Effect Reference:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="classfx__adsr__envelope.html">ADSR Envelope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__amplitude__mod.html">Amplitude Modulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__compressor.html">Compressor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__delay.html">Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__destructor.html">Destructor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__envelope__tracker.html">Envelope Follower</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__gain.html">Gain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__instrument__synth.html">Instrument Synth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__looper.html">Looper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__multitap__delay.html">Multi-tap Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__oscillator.html">Oscillator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__phase__shifter.html">Phase Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__pitch__shift.html">Pitch Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__ring__mod.html">Ring Modulator</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Slicer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__variable__delay.html">Variable Delay</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DreamMaker FX Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Class fx_slicer</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/classfx__slicer.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="class-fx-slicer">
+<span id="exhale-class-classfx-slicer"></span><h1>Class fx_slicer<a class="headerlink" href="#class-fx-slicer" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_src_effects_dm_fx_slicer.h.html#file-src-effects-dm-fx-slicer-h"><span class="std std-ref">File dm_fx_slicer.h</span></a></p></li>
+</ul>
+<div class="section" id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="base-type">
+<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">fx_effect</span></code> (<a class="reference internal" href="classfx__effect.html#exhale-class-classfx-effect"><span class="std std-ref">Class fx_effect</span></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv49fx_slicer">
+<span id="_CPPv39fx_slicer"></span><span id="_CPPv29fx_slicer"></span><span id="fx_slicer"></span><span class="target" id="classfx__slicer"></span><em class="property">class </em><code class="sig-name descname">fx_slicer</code> : <em class="property">public</em> <a class="reference internal" href="classfx__effect.html#_CPPv49fx_effect" title="fx_effect">fx_effect</a><a class="headerlink" href="#_CPPv49fx_slicer" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Effect: Slicer - chops up audio in the time domain and pipes to different effects. </p>
+<p>Example: ___slicer_1.c___ </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N9fx_slicer9fx_slicerEf7int32_t">
+<span id="_CPPv3N9fx_slicer9fx_slicerEf7int32_t"></span><span id="_CPPv2N9fx_slicer9fx_slicerEf7int32_t"></span><span id="fx_slicer::fx_slicer__float.int32_t"></span><span class="target" id="classfx__slicer_1aa58475e7abee046901e228b6d6befdfe"></span><code class="sig-name descname">fx_slicer</code><span class="sig-paren">(</span>float <em>period_ms</em>, int32_t <em>channels</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9fx_slicer9fx_slicerEf7int32_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Basic constructor/initializer for the slicer. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">period_ms</span></code>: The period in milliseconds </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">channels</span></code>: The number of channels to slice between during the period </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N9fx_slicer6enableEv">
+<span id="_CPPv3N9fx_slicer6enableEv"></span><span id="_CPPv2N9fx_slicer6enableEv"></span><span id="fx_slicer::enable"></span><span class="target" id="classfx__slicer_1a0005ae49c5345637e329d5bdb9b59994"></span>void <code class="sig-name descname">enable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9fx_slicer6enableEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Enable the slicer (it is enabled by default) </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N9fx_slicer6bypassEv">
+<span id="_CPPv3N9fx_slicer6bypassEv"></span><span id="_CPPv2N9fx_slicer6bypassEv"></span><span id="fx_slicer::bypass"></span><span class="target" id="classfx__slicer_1a4c84f21952fb3830fb1b9e9cff115c6b"></span>void <code class="sig-name descname">bypass</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9fx_slicer6bypassEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Bypass the slicer (will just pass clean audio through) </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N9fx_slicer13set_period_msEf">
+<span id="_CPPv3N9fx_slicer13set_period_msEf"></span><span id="_CPPv2N9fx_slicer13set_period_msEf"></span><span id="fx_slicer::set_period_ms__float"></span><span class="target" id="classfx__slicer_1a67e16609c920a9ab8ca5cc08e5776d21"></span>void <code class="sig-name descname">set_period_ms</code><span class="sig-paren">(</span>float <em>period</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9fx_slicer13set_period_msEf" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Upates the period in milliseconds for the slicer. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">period</span></code>: The period in milliseconds (thousands of a second) </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N9fx_slicer12print_paramsEv">
+<span id="_CPPv3N9fx_slicer12print_paramsEv"></span><span id="_CPPv2N9fx_slicer12print_paramsEv"></span><span id="fx_slicer::print_params__void"></span><span class="target" id="classfx__slicer_1ab7bcfb6dbe69577d7a060ba2cfdf83a7"></span>void <code class="sig-name descname">print_params</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9fx_slicer12print_paramsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Print the parameters for this effect. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv4N9fx_slicer5inputE">
+<span id="_CPPv3N9fx_slicer5inputE"></span><span id="_CPPv2N9fx_slicer5inputE"></span><span id="fx_slicer::input__fx_audio_nodeP"></span><span class="target" id="classfx__slicer_1aea4aac4005bfc584929e4db2df9c9556"></span>fx_audio_node *<code class="sig-name descname">input</code><a class="headerlink" href="#_CPPv4N9fx_slicer5inputE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Audio routing node: primary audio input </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N9fx_slicer8output_1E">
+<span id="_CPPv3N9fx_slicer8output_1E"></span><span id="_CPPv2N9fx_slicer8output_1E"></span><span id="fx_slicer::output_1__fx_audio_nodeP"></span><span class="target" id="classfx__slicer_1ae4c1b8d328e228319cd19bff6332930c"></span>fx_audio_node *<code class="sig-name descname">output_1</code><a class="headerlink" href="#_CPPv4N9fx_slicer8output_1E" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Audio routing node: audio output for slicer channel 0 </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N9fx_slicer8output_2E">
+<span id="_CPPv3N9fx_slicer8output_2E"></span><span id="_CPPv2N9fx_slicer8output_2E"></span><span id="fx_slicer::output_2__fx_audio_nodeP"></span><span class="target" id="classfx__slicer_1aa8520e74bfd31d81ac4cdbcd916160c9"></span>fx_audio_node *<code class="sig-name descname">output_2</code><a class="headerlink" href="#_CPPv4N9fx_slicer8output_2E" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Audio routing node: audio output for slicer channel 1 </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N9fx_slicer8output_3E">
+<span id="_CPPv3N9fx_slicer8output_3E"></span><span id="_CPPv2N9fx_slicer8output_3E"></span><span id="fx_slicer::output_3__fx_audio_nodeP"></span><span class="target" id="classfx__slicer_1a83ee17093e2ddeb58dd4dbf7ec669f9d"></span>fx_audio_node *<code class="sig-name descname">output_3</code><a class="headerlink" href="#_CPPv4N9fx_slicer8output_3E" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Audio routing node: audio output for slicer channel 2 </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N9fx_slicer8output_4E">
+<span id="_CPPv3N9fx_slicer8output_4E"></span><span id="_CPPv2N9fx_slicer8output_4E"></span><span id="fx_slicer::output_4__fx_audio_nodeP"></span><span class="target" id="classfx__slicer_1ab1370ec62022c6e3c51a5aef4dfe50a1"></span>fx_audio_node *<code class="sig-name descname">output_4</code><a class="headerlink" href="#_CPPv4N9fx_slicer8output_4E" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Audio routing node: audio output for slicer channel 3 </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N9fx_slicer8output_5E">
+<span id="_CPPv3N9fx_slicer8output_5E"></span><span id="_CPPv2N9fx_slicer8output_5E"></span><span id="fx_slicer::output_5__fx_audio_nodeP"></span><span class="target" id="classfx__slicer_1a655bf347bcdf202b866aa3e0f68e9fb6"></span>fx_audio_node *<code class="sig-name descname">output_5</code><a class="headerlink" href="#_CPPv4N9fx_slicer8output_5E" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Audio routing node: audio output for slicer channel 4 </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N9fx_slicer8output_6E">
+<span id="_CPPv3N9fx_slicer8output_6E"></span><span id="_CPPv2N9fx_slicer8output_6E"></span><span id="fx_slicer::output_6__fx_audio_nodeP"></span><span class="target" id="classfx__slicer_1a39a01c6579266750f91aeac02f8f7acc"></span>fx_audio_node *<code class="sig-name descname">output_6</code><a class="headerlink" href="#_CPPv4N9fx_slicer8output_6E" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Audio routing node: audio output for slicer channel 5 </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N9fx_slicer8output_7E">
+<span id="_CPPv3N9fx_slicer8output_7E"></span><span id="_CPPv2N9fx_slicer8output_7E"></span><span id="fx_slicer::output_7__fx_audio_nodeP"></span><span class="target" id="classfx__slicer_1a45c086598cfae96f1b205e0cde1cb68f"></span>fx_audio_node *<code class="sig-name descname">output_7</code><a class="headerlink" href="#_CPPv4N9fx_slicer8output_7E" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Audio routing node: audio output for slicer channel 6 </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N9fx_slicer8output_8E">
+<span id="_CPPv3N9fx_slicer8output_8E"></span><span id="_CPPv2N9fx_slicer8output_8E"></span><span id="fx_slicer::output_8__fx_audio_nodeP"></span><span class="target" id="classfx__slicer_1a25eb7888a44e6766c518b916bc30f8a8"></span>fx_audio_node *<code class="sig-name descname">output_8</code><a class="headerlink" href="#_CPPv4N9fx_slicer8output_8E" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Audio routing node: audio output for slicer channel 7 </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N9fx_slicer6periodE">
+<span id="_CPPv3N9fx_slicer6periodE"></span><span id="_CPPv2N9fx_slicer6periodE"></span><span id="fx_slicer::period__fx_control_nodeP"></span><span class="target" id="classfx__slicer_1ac2267c3fca1786200fac8e1327cd13a7"></span>fx_control_node *<code class="sig-name descname">period</code><a class="headerlink" href="#_CPPv4N9fx_slicer6periodE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Control routing node: period in in milliseconds </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N9fx_slicer5startE">
+<span id="_CPPv3N9fx_slicer5startE"></span><span id="_CPPv2N9fx_slicer5startE"></span><span id="fx_slicer::start__fx_control_nodeP"></span><span class="target" id="classfx__slicer_1af5cf2dc9ab48852d390f4dab00b29b13"></span>fx_control_node *<code class="sig-name descname">start</code><a class="headerlink" href="#_CPPv4N9fx_slicer5startE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Control routing node: restarts the sequence at position 0 for triggering with a new note </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="classfx__variable__delay.html" class="btn btn-neutral float-right" title="Class fx_variable_delay" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="classfx__ring__mod.html" class="btn btn-neutral float-left" title="Class fx_ring_mod" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Run Jump Labs
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

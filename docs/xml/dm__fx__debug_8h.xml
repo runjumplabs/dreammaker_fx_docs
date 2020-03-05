@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dm__fx__debug_8h" kind="file" language="C++">
+    <compoundname>dm_fx_debug.h</compoundname>
+    <includedby refid="dreammakerfx_8h" local="yes">src/dreammakerfx.h</includedby>
+    <includedby refid="dm__fx__debug_8cpp" local="yes">src/dm_fx_debug.cpp</includedby>
+    <invincdepgraph>
+      <node id="73">
+        <label>src/dreammakerfx.h</label>
+        <link refid="dreammakerfx_8h_source"/>
+      </node>
+      <node id="72">
+        <label>src/dm_fx_debug.h</label>
+        <link refid="dm__fx__debug_8h"/>
+        <childnode refid="73" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="dm__fx__debug_8h_1a8931d04af0ed6023a96a095a8f2b2c4d" prot="public" static="no" strong="no">
+        <type></type>
+        <name>DEBUG_MSG_LEVEL</name>
+        <enumvalue id="dm__fx__debug_8h_1a8931d04af0ed6023a96a095a8f2b2c4da28aec242413d6eab32c014fd1cecc4f0" prot="public">
+          <name>MSG_ERROR</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Send only error messages to the console </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dm__fx__debug_8h_1a8931d04af0ed6023a96a095a8f2b2c4da26744ba2d7512da500888e67b798e085" prot="public">
+          <name>MSG_WARN</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Also send warning and error messages to the console </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dm__fx__debug_8h_1a8931d04af0ed6023a96a095a8f2b2c4dac0b16798f47a9d0c23cbe6a3dc242c0d" prot="public">
+          <name>MSG_INFO</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Also send information messages to the console in addition to warnings and errors </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dm__fx__debug_8h_1a8931d04af0ed6023a96a095a8f2b2c4da49fdf4fc5f69a8a95d62ecff1f0bc77d" prot="public">
+          <name>MSG_DEBUG</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Send internal debug messages to the console in addition to info, warnings and errors </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Serial console message level (MSG_DEBUG is most verbose, SG_ERROR only reports errors) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dm_fx_debug.h" line="17" column="1" bodyfile="src/dm_fx_debug.h" bodystart="17" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>DM_FX_DEBUG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DM_FX_DEBUG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DOXYGEN_SHOULD_SKIP_THIS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Error<sp/>codes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ERROR_CODE_ILLEGAL_ROUTING<sp/><sp/><sp/><sp/>(2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ERROR_CODE_FIRMWARE_MISMATCH<sp/><sp/>(3)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ERROR_CODE_DSP_NOT_BOOTING<sp/><sp/><sp/><sp/>(5)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ERROR_INTERNAL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(6)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/>MSG_ERROR<sp/>=<sp/>3,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>MSG_WARN<sp/>=<sp/>2,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>MSG_INFO<sp/>=<sp/>1,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>MSG_DEBUG<sp/>=<sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}<sp/>DEBUG_MSG_LEVEL;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DOXYGEN_SHOULD_SKIP_THIS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>debug_levels[4][6];</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DEBUG_MSG(msg,<sp/>level)<sp/><sp/>if<sp/>((int)<sp/>dmfx_debug_level<sp/>&lt;=<sp/>level)<sp/>{<sp/>Serial.print(debug_levels[level]);<sp/>Serial.print(&quot;:<sp/>&quot;);<sp/>Serial.print(__FUNCTION__);<sp/>Serial.print(&quot;():<sp/>&quot;);<sp/>Serial.println(msg);<sp/>}<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>DEBUG_MSG_LEVEL<sp/>dmfx_debug_level;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Global<sp/>debug<sp/>flags<sp/>accessible<sp/>outside<sp/>of<sp/>class<sp/>structure</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>dmfx_debug_mode;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>dmfx_dsp_telemetry_mode;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>dmfx_debug_no_reset;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/>display_error_status(uint8_t<sp/>error_number);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>reset_into_bootloader(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>DM_FX_DEBUG_H</highlight></codeline>
+    </programlisting>
+    <location file="src/dm_fx_debug.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,431 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classfx__ring__mod" kind="class" language="C++" prot="public">
+    <compoundname>fx_ring_mod</compoundname>
+    <basecompoundref refid="classfx__effect" prot="public" virt="non-virtual">fx_effect</basecompoundref>
+    <includes refid="dm__fx__ring__modulator_8h" local="no">dm_fx_ring_modulator.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classfx__ring__mod_1ac75ffafcb3ae0981f44e6dc4768aad72" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float fx_ring_mod::param_freq</definition>
+        <argsstring></argsstring>
+        <name>param_freq</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_ring_modulator.h" line="22" column="1" bodyfile="src/effects/dm_fx_ring_modulator.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__ring__mod_1a27234431d3a5714499d1bc4ad2ce883b" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float fx_ring_mod::param_depth</definition>
+        <argsstring></argsstring>
+        <name>param_depth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_ring_modulator.h" line="23" column="1" bodyfile="src/effects/dm_fx_ring_modulator.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__ring__mod_1aa50d2501edc03d5b9dafdcb1cb7bcf3f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool fx_ring_mod::param_enable_filter</definition>
+        <argsstring></argsstring>
+        <name>param_enable_filter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_ring_modulator.h" line="24" column="1" bodyfile="src/effects/dm_fx_ring_modulator.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__ring__mod_1a6dc3ea3fb7eafe943f6de42f16c4992b" prot="private" static="no" mutable="no">
+        <type>fx_control_node</type>
+        <definition>fx_control_node fx_ring_mod::node_ctrl_freq</definition>
+        <argsstring></argsstring>
+        <name>node_ctrl_freq</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_ring_modulator.h" line="26" column="1" bodyfile="src/effects/dm_fx_ring_modulator.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__ring__mod_1ad1c5c6d2aa4698ca82d3c5b80b47cdab" prot="private" static="no" mutable="no">
+        <type>fx_control_node</type>
+        <definition>fx_control_node fx_ring_mod::node_ctrl_depth</definition>
+        <argsstring></argsstring>
+        <name>node_ctrl_depth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_ring_modulator.h" line="27" column="1" bodyfile="src/effects/dm_fx_ring_modulator.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classfx__ring__mod_1aaca095dddcc3928c199203636a5a0b70" prot="public" static="no" mutable="no">
+        <type>fx_audio_node *</type>
+        <definition>fx_audio_node* fx_ring_mod::input</definition>
+        <argsstring></argsstring>
+        <name>input</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Audio routing node [input]: primary audio input </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_ring_modulator.h" line="70" column="1" bodyfile="src/effects/dm_fx_ring_modulator.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__ring__mod_1aef3f3aa115f4f9dc1e553c44c9acd0fd" prot="public" static="no" mutable="no">
+        <type>fx_audio_node *</type>
+        <definition>fx_audio_node* fx_ring_mod::output</definition>
+        <argsstring></argsstring>
+        <name>output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Audio routing node [output]: primary audio output </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_ring_modulator.h" line="75" column="1" bodyfile="src/effects/dm_fx_ring_modulator.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__ring__mod_1a852138ed03580c9783182ad97b203cdf" prot="public" static="no" mutable="no">
+        <type>fx_control_node *</type>
+        <definition>fx_control_node* fx_ring_mod::freq</definition>
+        <argsstring></argsstring>
+        <name>freq</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Control routing node [input]: the carrier frequency of the ring moduator (Hz) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_ring_modulator.h" line="80" column="1" bodyfile="src/effects/dm_fx_ring_modulator.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__ring__mod_1acccb5350e46d71105a62f7339af23c60" prot="public" static="no" mutable="no">
+        <type>fx_control_node *</type>
+        <definition>fx_control_node* fx_ring_mod::depth</definition>
+        <argsstring></argsstring>
+        <name>depth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Control routing node [input]: modulation depth </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_ring_modulator.h" line="85" column="1" bodyfile="src/effects/dm_fx_ring_modulator.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classfx__ring__mod_1a398e3b4034dd07364085a54239e668f4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_ring_mod::init</definition>
+        <argsstring>(void)</argsstring>
+        <name>init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_ring_modulator.h" line="29" column="1" bodyfile="src/effects/dm_fx_ring_modulator.h" bodystart="29" bodyend="62"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classfx__ring__mod_1ab06ae2bc1226aee0af243fdb94756d93" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>fx_ring_mod::fx_ring_mod</definition>
+        <argsstring>(float ring_mod_freq, float ring_mod_depth)</argsstring>
+        <name>fx_ring_mod</name>
+        <param>
+          <type>float</type>
+          <declname>ring_mod_freq</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ring_mod_depth</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a new instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ring_mod_freq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ring modifier frequency </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ring_mod_depth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ring modifier depth </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_ring_modulator.h" line="94" column="1" bodyfile="src/effects/dm_fx_ring_modulator.h" bodystart="94" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__ring__mod_1aa71bce421e1ee9d7ab3667cb552ce875" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>fx_ring_mod::fx_ring_mod</definition>
+        <argsstring>(float ring_mod_freq, float ring_mod_depth, bool enable_filter)</argsstring>
+        <name>fx_ring_mod</name>
+        <param>
+          <type>float</type>
+          <declname>ring_mod_freq</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ring_mod_depth</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enable_filter</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a new instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ring_mod_freq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ring modifier frequency </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ring_mod_depth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ring modifier depth </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">enable_filter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Removes lower harmonics and creates more of a pitch shifting effect (less crazy) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_ring_modulator.h" line="115" column="1" bodyfile="src/effects/dm_fx_ring_modulator.h" bodystart="115" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__ring__mod_1a10937c8528a0a03bd11bba5ec8589cd0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_ring_mod::enable</definition>
+        <argsstring>()</argsstring>
+        <name>enable</name>
+        <briefdescription>
+<para>Enable the ring modulator (it is enabled by default) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_ring_modulator.h" line="130" column="1" bodyfile="src/effects/dm_fx_ring_modulator.h" bodystart="130" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__ring__mod_1aa859265613b119a8c1a697ab31e674f5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_ring_mod::bypass</definition>
+        <argsstring>()</argsstring>
+        <name>bypass</name>
+        <briefdescription>
+<para>Bypass the ring modulator (will just pass clean audio through) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_ring_modulator.h" line="139" column="1" bodyfile="src/effects/dm_fx_ring_modulator.h" bodystart="139" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__ring__mod_1afeddeb6ba118f1fcf3b4387b07ef9e59" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_ring_mod::set_freq</definition>
+        <argsstring>(float new_freq)</argsstring>
+        <name>set_freq</name>
+        <param>
+          <type>float</type>
+          <declname>new_freq</declname>
+        </param>
+        <briefdescription>
+<para>Sets the carrier frequency of the ring moduator (Hz) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">new_freq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new frequency </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_ring_modulator.h" line="150" column="1" bodyfile="src/effects/dm_fx_ring_modulator.h" bodystart="150" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__ring__mod_1a960d140ad93acf973dd57e3fd5055b5e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_ring_mod::set_depth</definition>
+        <argsstring>(float new_depth)</argsstring>
+        <name>set_depth</name>
+        <param>
+          <type>float</type>
+          <declname>new_depth</declname>
+        </param>
+        <briefdescription>
+<para>Sets the depth of the ring modulator (0.0 -&gt; 1.0) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">new_depth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new depth </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_ring_modulator.h" line="165" column="1" bodyfile="src/effects/dm_fx_ring_modulator.h" bodystart="165" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__ring__mod_1a5fbb19b69e4fa7ebd16b22e541a664cd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_ring_mod::print_params</definition>
+        <argsstring>(void)</argsstring>
+        <name>print_params</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Prints the parameters for the delay effect. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_ring_modulator.h" line="183" column="1" bodyfile="src/effects/dm_fx_ring_modulator.h" bodystart="183" bodyend="223"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Effect: Ring modulator - frequency modulates the audio - crazy sounding. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The following example is a full ring modulator pedal with tone control, wet/dry mix and of course ring modulator.</para>
+<para>___ring_mod_1.c___ </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="125">
+        <label>fx_ring_mod</label>
+        <link refid="classfx__ring__mod"/>
+        <childnode refid="126" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="126">
+        <label>fx_effect</label>
+        <link refid="classfx__effect"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="127">
+        <label>fx_ring_mod</label>
+        <link refid="classfx__ring__mod"/>
+        <childnode refid="128" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="129">
+        <label>fx_pedal</label>
+        <link refid="classfx__pedal"/>
+      </node>
+      <node id="128">
+        <label>fx_effect</label>
+        <link refid="classfx__effect"/>
+        <childnode refid="129" relation="usage">
+          <edgelabel>parent_canvas</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/effects/dm_fx_ring_modulator.h" line="17" column="1" bodyfile="src/effects/dm_fx_ring_modulator.h" bodystart="17" bodyend="225"/>
+    <listofallmembers>
+      <member refid="classfx__effect_1ab69ae64deecdbc5915de9b66b4f3e987" prot="protected" virt="non-virtual"><scope>fx_ring_mod</scope><name>audio_node_stack</name></member>
+      <member refid="classfx__effect_1abdbbc884fc92a23af5ec5b351a972b97" prot="protected" virt="non-virtual"><scope>fx_ring_mod</scope><name>bool_param_updated</name></member>
+      <member refid="classfx__ring__mod_1aa859265613b119a8c1a697ab31e674f5" prot="public" virt="non-virtual"><scope>fx_ring_mod</scope><name>bypass</name></member>
+      <member refid="classfx__effect_1a700589ec8a30f3197cebce4eb955fa31" prot="protected" virt="non-virtual"><scope>fx_ring_mod</scope><name>control_node_stack</name></member>
+      <member refid="classfx__ring__mod_1acccb5350e46d71105a62f7339af23c60" prot="public" virt="non-virtual"><scope>fx_ring_mod</scope><name>depth</name></member>
+      <member refid="classfx__effect_1af7d5319aca3b86b0e76418385d0478ea" prot="public" virt="non-virtual"><scope>fx_ring_mod</scope><name>effect_name</name></member>
+      <member refid="classfx__ring__mod_1a10937c8528a0a03bd11bba5ec8589cd0" prot="public" virt="non-virtual"><scope>fx_ring_mod</scope><name>enable</name></member>
+      <member refid="classfx__effect_1a56eefdb5f90e991e3f31d855e87e9213" prot="protected" virt="non-virtual"><scope>fx_ring_mod</scope><name>float_param_updated</name></member>
+      <member refid="classfx__ring__mod_1a852138ed03580c9783182ad97b203cdf" prot="public" virt="non-virtual"><scope>fx_ring_mod</scope><name>freq</name></member>
+      <member refid="classfx__effect_1aab2d00a6784612158e41606297952873" prot="public" virt="non-virtual"><scope>fx_ring_mod</scope><name>fx_effect</name></member>
+      <member refid="classfx__effect_1ae5be756c63862665f422aa25a14d3bef" prot="protected" virt="non-virtual"><scope>fx_ring_mod</scope><name>fx_pedal</name></member>
+      <member refid="classfx__ring__mod_1ab06ae2bc1226aee0af243fdb94756d93" prot="public" virt="non-virtual"><scope>fx_ring_mod</scope><name>fx_ring_mod</name></member>
+      <member refid="classfx__ring__mod_1aa71bce421e1ee9d7ab3667cb552ce875" prot="public" virt="non-virtual"><scope>fx_ring_mod</scope><name>fx_ring_mod</name></member>
+      <member refid="classfx__effect_1a551b61721aadaeccb3cd2ba9fc826609" prot="protected" virt="non-virtual"><scope>fx_ring_mod</scope><name>get_audio_node_index</name></member>
+      <member refid="classfx__effect_1aba27ace404ab75a174892cb5908f58b3" prot="protected" virt="non-virtual"><scope>fx_ring_mod</scope><name>get_control_node_index</name></member>
+      <member refid="classfx__effect_1a3ddd0473c4a01e858a17b51f14995c70" prot="public" virt="non-virtual"><scope>fx_ring_mod</scope><name>get_name</name></member>
+      <member refid="classfx__effect_1a14e0cb29cd7e86d0b8f566b3066dbf32" prot="public" virt="non-virtual"><scope>fx_ring_mod</scope><name>get_type</name></member>
+      <member refid="classfx__ring__mod_1a398e3b4034dd07364085a54239e668f4" prot="private" virt="non-virtual"><scope>fx_ring_mod</scope><name>init</name></member>
+      <member refid="classfx__ring__mod_1aaca095dddcc3928c199203636a5a0b70" prot="public" virt="non-virtual"><scope>fx_ring_mod</scope><name>input</name></member>
+      <member refid="classfx__effect_1a35011b582dc3eb033f2174b404e15fd8" prot="protected" virt="non-virtual"><scope>fx_ring_mod</scope><name>instance_id</name></member>
+      <member refid="classfx__ring__mod_1ad1c5c6d2aa4698ca82d3c5b80b47cdab" prot="private" virt="non-virtual"><scope>fx_ring_mod</scope><name>node_ctrl_depth</name></member>
+      <member refid="classfx__ring__mod_1a6dc3ea3fb7eafe943f6de42f16c4992b" prot="private" virt="non-virtual"><scope>fx_ring_mod</scope><name>node_ctrl_freq</name></member>
+      <member refid="classfx__effect_1a69b60011be5fc3ade57b937405aa835d" prot="protected" virt="non-virtual"><scope>fx_ring_mod</scope><name>node_enabled</name></member>
+      <member refid="classfx__effect_1a61f6f19f2cd7be8762758512e9cd5097" prot="protected" virt="non-virtual"><scope>fx_ring_mod</scope><name>node_index</name></member>
+      <member refid="classfx__effect_1a66c709a96dd59fd1e21c3407a160a8e8" prot="protected" virt="non-virtual"><scope>fx_ring_mod</scope><name>node_input</name></member>
+      <member refid="classfx__effect_1aabadf3d22b48bc21227f72d38bb0d5fe" prot="protected" virt="non-virtual"><scope>fx_ring_mod</scope><name>node_output</name></member>
+      <member refid="classfx__ring__mod_1aef3f3aa115f4f9dc1e553c44c9acd0fd" prot="public" virt="non-virtual"><scope>fx_ring_mod</scope><name>output</name></member>
+      <member refid="classfx__ring__mod_1a27234431d3a5714499d1bc4ad2ce883b" prot="private" virt="non-virtual"><scope>fx_ring_mod</scope><name>param_depth</name></member>
+      <member refid="classfx__ring__mod_1aa50d2501edc03d5b9dafdcb1cb7bcf3f" prot="private" virt="non-virtual"><scope>fx_ring_mod</scope><name>param_enable_filter</name></member>
+      <member refid="classfx__effect_1a0774058f9db052bfc8a68159f13031f2" prot="protected" virt="non-virtual"><scope>fx_ring_mod</scope><name>param_enabled</name></member>
+      <member refid="classfx__ring__mod_1ac75ffafcb3ae0981f44e6dc4768aad72" prot="private" virt="non-virtual"><scope>fx_ring_mod</scope><name>param_freq</name></member>
+      <member refid="classfx__effect_1aaf455e34fced9667a8cf26cdb9fb6641" prot="protected" virt="non-virtual"><scope>fx_ring_mod</scope><name>param_stack</name></member>
+      <member refid="classfx__effect_1a0ea0d3bfe30592895fa23d241a9baa38" prot="protected" virt="non-virtual"><scope>fx_ring_mod</scope><name>param_stack_types</name></member>
+      <member refid="classfx__effect_1a69bef0da54cedf8e558d65b755716999" prot="protected" virt="non-virtual"><scope>fx_ring_mod</scope><name>parent_canvas</name></member>
+      <member refid="classfx__ring__mod_1a5fbb19b69e4fa7ebd16b22e541a664cd" prot="public" virt="non-virtual"><scope>fx_ring_mod</scope><name>print_params</name></member>
+      <member refid="classfx__effect_1aaeececeee434ea76afdf649c3bed7698" prot="protected" virt="non-virtual"><scope>fx_ring_mod</scope><name>serialize_params</name></member>
+      <member refid="classfx__effect_1a4c513243328d3b715822e74d21dffe99" prot="public" virt="non-virtual"><scope>fx_ring_mod</scope><name>service</name></member>
+      <member refid="classfx__ring__mod_1a960d140ad93acf973dd57e3fd5055b5e" prot="public" virt="non-virtual"><scope>fx_ring_mod</scope><name>set_depth</name></member>
+      <member refid="classfx__ring__mod_1afeddeb6ba118f1fcf3b4387b07ef9e59" prot="public" virt="non-virtual"><scope>fx_ring_mod</scope><name>set_freq</name></member>
+      <member refid="classfx__effect_1a4f5dbb43e76ca1fa8b8a7c56aaa9f232" prot="protected" virt="non-virtual"><scope>fx_ring_mod</scope><name>total_audio_nodes</name></member>
+      <member refid="classfx__effect_1a91d9c1dcd7542aaec7a969af78804caa" prot="protected" virt="non-virtual"><scope>fx_ring_mod</scope><name>total_control_nodes</name></member>
+      <member refid="classfx__effect_1a140e1553b23532a2f09f12f94833713e" prot="protected" virt="non-virtual"><scope>fx_ring_mod</scope><name>total_params</name></member>
+      <member refid="classfx__effect_1a5e78416b59c4a21367e58ffc09fcf137" prot="protected" virt="non-virtual"><scope>fx_ring_mod</scope><name>type</name></member>
+      <member refid="classfx__effect_1a0b94adfa51991a989cd10f4122c9ac22" prot="protected" virt="non-virtual"><scope>fx_ring_mod</scope><name>updated_parameters</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

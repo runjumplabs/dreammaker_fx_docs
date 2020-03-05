@@ -1,0 +1,13 @@
+.. _exhale_enum_group___enumerations_1ga1b467688e64507632004453c05632b64:
+
+Enum DESTRUCTOR_TYPE
+====================
+
+- Defined in :ref:`file_src_effects_dm_fx_effects_defines.h`
+
+
+Enum Documentation
+------------------
+
+
+.. doxygenenum:: DESTRUCTOR_TYPE

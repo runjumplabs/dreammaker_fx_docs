@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dm__fx__delay__multitap_8h" kind="file" language="C++">
+    <compoundname>dm_fx_delay_multitap.h</compoundname>
+    <includedby refid="dreammakerfx_8h" local="yes">src/dreammakerfx.h</includedby>
+    <invincdepgraph>
+      <node id="278">
+        <label>src/dreammakerfx.h</label>
+        <link refid="dreammakerfx_8h_source"/>
+      </node>
+      <node id="277">
+        <label>src/effects/dm_fx_delay_multitap.h</label>
+        <link refid="dm__fx__delay__multitap_8h"/>
+        <childnode refid="278" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classfx__multitap__delay" prot="public">fx_multitap_delay</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2020<sp/>Run<sp/>Jump<sp/>Labs<sp/>LLC.<sp/><sp/>All<sp/>right<sp/>reserved.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>code<sp/>is<sp/>licensed<sp/>under<sp/>MIT<sp/>license<sp/>(see<sp/>license.txt<sp/>for<sp/>details)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DM_FX_MULTITAP_DELAY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DM_FX_MULTITAP_DELAY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="classfx__multitap__delay" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classfx__multitap__delay" kindref="compound">fx_multitap_delay</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classfx__effect" kindref="compound">fx_effect</ref><sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>param_tap_1_ms;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>param_tap_2_ms;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>param_tap_3_ms;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>param_tap_4_ms;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>param_gain_1;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>param_gain_2;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>param_gain_3;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>param_gain_4;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>param_wet_mix;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>param_dry_mix;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>class</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>type<sp/>=<sp/>FX_DELAY_MULTITAP;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>strcpy(effect_name,<sp/></highlight><highlight class="stringliteral">&quot;multitap<sp/>delay&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>indx<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>param_stack[indx]<sp/>=<sp/>&amp;param_tap_1_ms;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>param_stack_types[indx++]<sp/>=<sp/>T_FLOAT;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>param_stack[indx]<sp/>=<sp/>&amp;param_gain_1;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>param_stack_types[indx++]<sp/>=<sp/>T_FLOAT;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>param_stack[indx]<sp/>=<sp/>&amp;param_tap_2_ms;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>param_stack_types[indx++]<sp/>=<sp/>T_FLOAT;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>param_stack[indx]<sp/>=<sp/>&amp;param_gain_2;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>param_stack_types[indx++]<sp/>=<sp/>T_FLOAT;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>param_stack[indx]<sp/>=<sp/>&amp;param_tap_3_ms;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>param_stack_types[indx++]<sp/>=<sp/>T_FLOAT;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>param_stack[indx]<sp/>=<sp/>&amp;param_gain_3;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>param_stack_types[indx++]<sp/>=<sp/>T_FLOAT;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>param_stack[indx]<sp/>=<sp/>&amp;param_tap_4_ms;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>param_stack_types[indx++]<sp/>=<sp/>T_FLOAT;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>param_stack[indx]<sp/>=<sp/>&amp;param_gain_4;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>param_stack_types[indx++]<sp/>=<sp/>T_FLOAT;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>param_stack[indx]<sp/>=<sp/>&amp;param_dry_mix;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>param_stack_types[indx++]<sp/>=<sp/>T_FLOAT;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>param_stack[indx]<sp/>=<sp/>&amp;param_wet_mix;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>param_stack_types[indx++]<sp/>=<sp/>T_FLOAT;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>total_params<sp/>=<sp/>indx;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Assign<sp/>programmable<sp/>node<sp/>names</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfx__multitap__delay_1ac252ec3a70f7c9820950d50f6a1cb991" kindref="member">input</ref><sp/>=<sp/>&amp;node_input;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfx__multitap__delay_1aa6053b67fc9a0804f066a462640f3a64" kindref="member">output</ref><sp/>=<sp/>&amp;node_output;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="classfx__multitap__delay_1ac252ec3a70f7c9820950d50f6a1cb991" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>fx_audio_node<sp/>*<sp/><ref refid="classfx__multitap__delay_1ac252ec3a70f7c9820950d50f6a1cb991" kindref="member">input</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="classfx__multitap__delay_1aa6053b67fc9a0804f066a462640f3a64" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>fx_audio_node<sp/>*<sp/><ref refid="classfx__multitap__delay_1aa6053b67fc9a0804f066a462640f3a64" kindref="member">output</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="classfx__multitap__delay_1ae8ff08968e330d40a7d7b2f8f9dbb89d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classfx__multitap__delay_1ae8ff08968e330d40a7d7b2f8f9dbb89d" kindref="member">fx_multitap_delay</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>tap_len_1_ms,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>gain_1,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>tap_len_2_ms,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>gain_2,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>tap_len_3_ms,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>gain_3,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>tap_len_4_ms,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>gain_4,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dry_mix,<sp/></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>wet_mix)<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_tap_1_ms<sp/>=<sp/>tap_len_1_ms;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_tap_2_ms<sp/>=<sp/>tap_len_2_ms;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_tap_3_ms<sp/>=<sp/>tap_len_3_ms;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_tap_4_ms<sp/>=<sp/>tap_len_4_ms;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_gain_1<sp/>=<sp/>gain_1;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_gain_2<sp/>=<sp/>gain_2;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_gain_3<sp/>=<sp/>gain_3;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_gain_4<sp/>=<sp/>gain_4;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_wet_mix<sp/>=<sp/>wet_mix;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param_dry_mix<sp/>=<sp/>dry_mix;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>init();</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="classfx__multitap__delay_1a6f756bd62a3711f1cac72c51c58650cd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classfx__multitap__delay_1a6f756bd62a3711f1cac72c51c58650cd" kindref="member">enable</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>CHECK_LAST_ENABLED();</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>param_enabled<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>parent_canvas-&gt;spi_transmit_param(FX_DELAY_MULTITAP,<sp/>instance_id,<sp/>T_BOOL,<sp/>FX_MULTITAP_DELAY_PARAM_ID_ENABLED,<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*)<sp/>&amp;param_enabled);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119" refid="classfx__multitap__delay_1ab9fb0da62896f1358eba754757e51006" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classfx__multitap__delay_1ab9fb0da62896f1358eba754757e51006" kindref="member">bypass</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>CHECK_LAST_DISABLED();</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>param_enabled<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>parent_canvas-&gt;spi_transmit_param(FX_DELAY_MULTITAP,<sp/>instance_id,<sp/>T_BOOL,<sp/>FX_MULTITAP_DELAY_PARAM_ID_ENABLED,<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*)<sp/>&amp;param_enabled);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="classfx__multitap__delay_1ae9a36df13c6aefeafce5699d3576f1f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classfx__multitap__delay_1ae9a36df13c6aefeafce5699d3576f1f7" kindref="member">set_dry_mix</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dry_mix)<sp/>{<sp/></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>CHECK_LAST(dry_mix,<sp/>param_dry_mix);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>param_dry_mix<sp/>=<sp/>dry_mix;<sp/></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>parent_canvas-&gt;spi_transmit_param(FX_DELAY_MULTITAP,<sp/>instance_id,<sp/>T_FLOAT,<sp/>FX_MULTITAP_DELAY_PARAM_ID_DRY_MIX,<sp/>&amp;param_dry_mix);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="classfx__multitap__delay_1a1545f1390ad3ffd4dc23114db10cf16c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classfx__multitap__delay_1a1545f1390ad3ffd4dc23114db10cf16c" kindref="member">set_wet_mix</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>wet_mix)<sp/>{<sp/></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>CHECK_LAST(wet_mix,<sp/>param_wet_mix);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>param_wet_mix<sp/>=<sp/>wet_mix;<sp/></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>parent_canvas-&gt;spi_transmit_param(FX_DELAY_MULTITAP,<sp/>instance_id,<sp/>T_FLOAT,<sp/>FX_MULTITAP_DELAY_PARAM_ID_WET_MIX,<sp/>&amp;param_wet_mix);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152" refid="classfx__multitap__delay_1a5a3a5de94e229f575762100e436eb618" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><ref refid="classfx__multitap__delay_1a5a3a5de94e229f575762100e436eb618" kindref="member">print_params</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;Parameters:&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>print_parameter(<sp/>&amp;param_enabled,<sp/></highlight><highlight class="stringliteral">&quot;Enabled&quot;</highlight><highlight class="normal">,<sp/>T_BOOL<sp/>);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>print_parameter(<sp/>&amp;param_tap_1_ms,<sp/></highlight><highlight class="stringliteral">&quot;Tap<sp/>1<sp/>length<sp/>(ms)&quot;</highlight><highlight class="normal">,<sp/>T_FLOAT<sp/>);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>print_parameter(<sp/>&amp;param_gain_1,<sp/></highlight><highlight class="stringliteral">&quot;Tap<sp/>1<sp/>gain&quot;</highlight><highlight class="normal">,<sp/>T_FLOAT<sp/>);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>print_parameter(<sp/>&amp;param_tap_2_ms,<sp/></highlight><highlight class="stringliteral">&quot;Tap<sp/>2<sp/>length<sp/>(ms)&quot;</highlight><highlight class="normal">,<sp/>T_FLOAT<sp/>);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>print_parameter(<sp/>&amp;param_gain_2,<sp/></highlight><highlight class="stringliteral">&quot;Tap<sp/>2<sp/>gain&quot;</highlight><highlight class="normal">,<sp/>T_FLOAT<sp/>);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>print_parameter(<sp/>&amp;param_tap_3_ms,<sp/></highlight><highlight class="stringliteral">&quot;Tap<sp/>3<sp/>length<sp/>(ms)&quot;</highlight><highlight class="normal">,<sp/>T_FLOAT<sp/>);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>print_parameter(<sp/>&amp;param_gain_3,<sp/></highlight><highlight class="stringliteral">&quot;Tap<sp/>3<sp/>gain&quot;</highlight><highlight class="normal">,<sp/>T_FLOAT<sp/>);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>print_parameter(<sp/>&amp;param_tap_4_ms,<sp/></highlight><highlight class="stringliteral">&quot;Tap<sp/>4<sp/>length<sp/>(ms)&quot;</highlight><highlight class="normal">,<sp/>T_FLOAT<sp/>);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>print_parameter(<sp/>&amp;param_gain_4,<sp/></highlight><highlight class="stringliteral">&quot;Tap<sp/>4<sp/>gain&quot;</highlight><highlight class="normal">,<sp/>T_FLOAT<sp/>);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>print_parameter(<sp/>&amp;param_dry_mix,<sp/></highlight><highlight class="stringliteral">&quot;Dry<sp/>mix&quot;</highlight><highlight class="normal">,<sp/>T_FLOAT<sp/>);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>print_parameter(<sp/>&amp;param_wet_mix,<sp/></highlight><highlight class="stringliteral">&quot;Wet<sp/>mix&quot;</highlight><highlight class="normal">,<sp/>T_FLOAT<sp/>);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;Audio<sp/>Routing:&quot;</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>print_audio_node_status(&amp;node_input);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>print_audio_node_status(&amp;node_output);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.println();</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/>}<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>DM_FX_MULTITAP_DELAY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/effects/dm_fx_delay_multitap.h"/>
+  </compounddef>
+</doxygen>

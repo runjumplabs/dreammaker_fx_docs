@@ -1,0 +1,362 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classfx__gain" kind="class" language="C++" prot="public">
+    <compoundname>fx_gain</compoundname>
+    <basecompoundref refid="classfx__effect" prot="public" virt="non-virtual">fx_effect</basecompoundref>
+    <includes refid="dm__fx__gain_8h" local="no">dm_fx_gain.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classfx__gain_1ae97742400a0741b0739c02753b716aa9" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t fx_gain::param_speed</definition>
+        <argsstring></argsstring>
+        <name>param_speed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_gain.h" line="18" column="1" bodyfile="src/effects/dm_fx_gain.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__gain_1aac9c20060a9e43738cdbac4fdf064111" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float fx_gain::param_gain</definition>
+        <argsstring></argsstring>
+        <name>param_gain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_gain.h" line="19" column="1" bodyfile="src/effects/dm_fx_gain.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__gain_1a33ecb1e638b0f717589a7ac66fed8e73" prot="private" static="no" mutable="no">
+        <type>fx_control_node</type>
+        <definition>fx_control_node fx_gain::node_ctrl_gain</definition>
+        <argsstring></argsstring>
+        <name>node_ctrl_gain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_gain.h" line="22" column="1" bodyfile="src/effects/dm_fx_gain.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classfx__gain_1a292efdc7356082aaacf2a79bef496390" prot="public" static="no" mutable="no">
+        <type>fx_audio_node *</type>
+        <definition>fx_audio_node* fx_gain::input</definition>
+        <argsstring></argsstring>
+        <name>input</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Audio routing node: primary audio input </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_gain.h" line="55" column="1" bodyfile="src/effects/dm_fx_gain.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__gain_1adac79db68119e32509a27ee24d1d7c6e" prot="public" static="no" mutable="no">
+        <type>fx_audio_node *</type>
+        <definition>fx_audio_node* fx_gain::output</definition>
+        <argsstring></argsstring>
+        <name>output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Audio routing node: primary audio output </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_gain.h" line="60" column="1" bodyfile="src/effects/dm_fx_gain.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__gain_1a68685d3f20555db915e64c8a869fcfa7" prot="public" static="no" mutable="no">
+        <type>fx_control_node *</type>
+        <definition>fx_control_node* fx_gain::gain</definition>
+        <argsstring></argsstring>
+        <name>gain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Control routing node: gain value input - you can then link the envelope filter to this to create slow swell effects </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_gain.h" line="65" column="1" bodyfile="src/effects/dm_fx_gain.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classfx__gain_1a258c260d830b492bd4ba66b55ed6960c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_gain::init</definition>
+        <argsstring>(void)</argsstring>
+        <name>init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_gain.h" line="25" column="1" bodyfile="src/effects/dm_fx_gain.h" bodystart="25" bodyend="49"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classfx__gain_1a2300b426bb620f6197ff600ff5745b00" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>fx_gain::fx_gain</definition>
+        <argsstring>(float gain_val)</argsstring>
+        <name>fx_gain</name>
+        <param>
+          <type>float</type>
+          <declname>gain_val</declname>
+        </param>
+        <briefdescription>
+<para>Basic constructor/initializer for gain. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">gain_val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The gain value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_gain.h" line="72" column="1" bodyfile="src/effects/dm_fx_gain.h" bodystart="72" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__gain_1ad1818cd57161ec431908add185673057" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>fx_gain::fx_gain</definition>
+        <argsstring>(float gain_val, EFFECT_TRANSITION_SPEED gain_trans_speed)</argsstring>
+        <name>fx_gain</name>
+        <param>
+          <type>float</type>
+          <declname>gain_val</declname>
+        </param>
+        <param>
+          <type><ref refid="group___enumerations_1ga0292d9069ee59ac7258602ae1b1101d2" kindref="member">EFFECT_TRANSITION_SPEED</ref></type>
+          <declname>gain_trans_speed</declname>
+        </param>
+        <briefdescription>
+<para>Advanced constructor for the gain. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">gain_val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The gain value (typically between 0.0-&gt;1.0 to make a signal quiter and &gt; 1.0 to make a signal louder) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">gain_trans_speed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The gain transaction speed based on <computeroutput>EFFECT_TRANSITION_SPEED</computeroutput> defined above (i.e. slow -&gt; fast) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_gain.h" line="89" column="1" bodyfile="src/effects/dm_fx_gain.h" bodystart="89" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__gain_1ac1432865de90f7dad9e5457c422058b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_gain::enable</definition>
+        <argsstring>()</argsstring>
+        <name>enable</name>
+        <briefdescription>
+<para>Enable the <bold>this_effect</bold> (it is enabled by default) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_gain.h" line="104" column="1" bodyfile="src/effects/dm_fx_gain.h" bodystart="104" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__gain_1a871e0d71dddc9000a26aea56caf2daf6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_gain::bypass</definition>
+        <argsstring>()</argsstring>
+        <name>bypass</name>
+        <briefdescription>
+<para>Bypass the <bold>this_effect</bold> (will just pass clean audio through) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_gain.h" line="113" column="1" bodyfile="src/effects/dm_fx_gain.h" bodystart="113" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__gain_1a889982b1829aeea799e2df228363fe81" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_gain::set_gain</definition>
+        <argsstring>(float new_gain)</argsstring>
+        <name>set_gain</name>
+        <param>
+          <type>float</type>
+          <declname>new_gain</declname>
+        </param>
+        <briefdescription>
+<para>Sets the gain multiplier. For example, a value of 2 will double the volume/amplitude and a value of 0.5 will halve the volume/amplitude. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">new_gain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new gain value (0.0 -&gt; 4.0) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_gain.h" line="126" column="1" bodyfile="src/effects/dm_fx_gain.h" bodystart="126" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__gain_1acd185cb59c54347a8dff85df08c5e749" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_gain::set_gain_db</definition>
+        <argsstring>(float new_gain_db)</argsstring>
+        <name>set_gain_db</name>
+        <param>
+          <type>float</type>
+          <declname>new_gain_db</declname>
+        </param>
+        <briefdescription>
+<para>Sets the gain multiplier using decibles. For example, a value of 0 will keep volume the same, a value of 6 will double the amplitude/volume, a value of -6 will halve the amplitude/volume. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">new_gain_db</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new gain value (dB) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_gain.h" line="147" column="1" bodyfile="src/effects/dm_fx_gain.h" bodystart="147" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__gain_1a6f25cf909faf42ab9b543be6abe780ca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_gain::print_params</definition>
+        <argsstring>(void)</argsstring>
+        <name>print_params</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Prints the parameters for the delay effect. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_gain.h" line="165" column="1" bodyfile="src/effects/dm_fx_gain.h" bodystart="165" bodyend="181"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Effect: Gain - used to increase or decrease the volume of an audio signal. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="70">
+        <label>fx_effect</label>
+        <link refid="classfx__effect"/>
+      </node>
+      <node id="69">
+        <label>fx_gain</label>
+        <link refid="classfx__gain"/>
+        <childnode refid="70" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="73">
+        <label>fx_pedal</label>
+        <link refid="classfx__pedal"/>
+      </node>
+      <node id="72">
+        <label>fx_effect</label>
+        <link refid="classfx__effect"/>
+        <childnode refid="73" relation="usage">
+          <edgelabel>parent_canvas</edgelabel>
+        </childnode>
+      </node>
+      <node id="71">
+        <label>fx_gain</label>
+        <link refid="classfx__gain"/>
+        <childnode refid="72" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/effects/dm_fx_gain.h" line="13" column="1" bodyfile="src/effects/dm_fx_gain.h" bodystart="13" bodyend="183"/>
+    <listofallmembers>
+      <member refid="classfx__effect_1ab69ae64deecdbc5915de9b66b4f3e987" prot="protected" virt="non-virtual"><scope>fx_gain</scope><name>audio_node_stack</name></member>
+      <member refid="classfx__effect_1abdbbc884fc92a23af5ec5b351a972b97" prot="protected" virt="non-virtual"><scope>fx_gain</scope><name>bool_param_updated</name></member>
+      <member refid="classfx__gain_1a871e0d71dddc9000a26aea56caf2daf6" prot="public" virt="non-virtual"><scope>fx_gain</scope><name>bypass</name></member>
+      <member refid="classfx__effect_1a700589ec8a30f3197cebce4eb955fa31" prot="protected" virt="non-virtual"><scope>fx_gain</scope><name>control_node_stack</name></member>
+      <member refid="classfx__effect_1af7d5319aca3b86b0e76418385d0478ea" prot="public" virt="non-virtual"><scope>fx_gain</scope><name>effect_name</name></member>
+      <member refid="classfx__gain_1ac1432865de90f7dad9e5457c422058b7" prot="public" virt="non-virtual"><scope>fx_gain</scope><name>enable</name></member>
+      <member refid="classfx__effect_1a56eefdb5f90e991e3f31d855e87e9213" prot="protected" virt="non-virtual"><scope>fx_gain</scope><name>float_param_updated</name></member>
+      <member refid="classfx__effect_1aab2d00a6784612158e41606297952873" prot="public" virt="non-virtual"><scope>fx_gain</scope><name>fx_effect</name></member>
+      <member refid="classfx__gain_1a2300b426bb620f6197ff600ff5745b00" prot="public" virt="non-virtual"><scope>fx_gain</scope><name>fx_gain</name></member>
+      <member refid="classfx__gain_1ad1818cd57161ec431908add185673057" prot="public" virt="non-virtual"><scope>fx_gain</scope><name>fx_gain</name></member>
+      <member refid="classfx__effect_1ae5be756c63862665f422aa25a14d3bef" prot="protected" virt="non-virtual"><scope>fx_gain</scope><name>fx_pedal</name></member>
+      <member refid="classfx__gain_1a68685d3f20555db915e64c8a869fcfa7" prot="public" virt="non-virtual"><scope>fx_gain</scope><name>gain</name></member>
+      <member refid="classfx__effect_1a551b61721aadaeccb3cd2ba9fc826609" prot="protected" virt="non-virtual"><scope>fx_gain</scope><name>get_audio_node_index</name></member>
+      <member refid="classfx__effect_1aba27ace404ab75a174892cb5908f58b3" prot="protected" virt="non-virtual"><scope>fx_gain</scope><name>get_control_node_index</name></member>
+      <member refid="classfx__effect_1a3ddd0473c4a01e858a17b51f14995c70" prot="public" virt="non-virtual"><scope>fx_gain</scope><name>get_name</name></member>
+      <member refid="classfx__effect_1a14e0cb29cd7e86d0b8f566b3066dbf32" prot="public" virt="non-virtual"><scope>fx_gain</scope><name>get_type</name></member>
+      <member refid="classfx__gain_1a258c260d830b492bd4ba66b55ed6960c" prot="private" virt="non-virtual"><scope>fx_gain</scope><name>init</name></member>
+      <member refid="classfx__gain_1a292efdc7356082aaacf2a79bef496390" prot="public" virt="non-virtual"><scope>fx_gain</scope><name>input</name></member>
+      <member refid="classfx__effect_1a35011b582dc3eb033f2174b404e15fd8" prot="protected" virt="non-virtual"><scope>fx_gain</scope><name>instance_id</name></member>
+      <member refid="classfx__gain_1a33ecb1e638b0f717589a7ac66fed8e73" prot="private" virt="non-virtual"><scope>fx_gain</scope><name>node_ctrl_gain</name></member>
+      <member refid="classfx__effect_1a69b60011be5fc3ade57b937405aa835d" prot="protected" virt="non-virtual"><scope>fx_gain</scope><name>node_enabled</name></member>
+      <member refid="classfx__effect_1a61f6f19f2cd7be8762758512e9cd5097" prot="protected" virt="non-virtual"><scope>fx_gain</scope><name>node_index</name></member>
+      <member refid="classfx__effect_1a66c709a96dd59fd1e21c3407a160a8e8" prot="protected" virt="non-virtual"><scope>fx_gain</scope><name>node_input</name></member>
+      <member refid="classfx__effect_1aabadf3d22b48bc21227f72d38bb0d5fe" prot="protected" virt="non-virtual"><scope>fx_gain</scope><name>node_output</name></member>
+      <member refid="classfx__gain_1adac79db68119e32509a27ee24d1d7c6e" prot="public" virt="non-virtual"><scope>fx_gain</scope><name>output</name></member>
+      <member refid="classfx__effect_1a0774058f9db052bfc8a68159f13031f2" prot="protected" virt="non-virtual"><scope>fx_gain</scope><name>param_enabled</name></member>
+      <member refid="classfx__gain_1aac9c20060a9e43738cdbac4fdf064111" prot="private" virt="non-virtual"><scope>fx_gain</scope><name>param_gain</name></member>
+      <member refid="classfx__gain_1ae97742400a0741b0739c02753b716aa9" prot="private" virt="non-virtual"><scope>fx_gain</scope><name>param_speed</name></member>
+      <member refid="classfx__effect_1aaf455e34fced9667a8cf26cdb9fb6641" prot="protected" virt="non-virtual"><scope>fx_gain</scope><name>param_stack</name></member>
+      <member refid="classfx__effect_1a0ea0d3bfe30592895fa23d241a9baa38" prot="protected" virt="non-virtual"><scope>fx_gain</scope><name>param_stack_types</name></member>
+      <member refid="classfx__effect_1a69bef0da54cedf8e558d65b755716999" prot="protected" virt="non-virtual"><scope>fx_gain</scope><name>parent_canvas</name></member>
+      <member refid="classfx__gain_1a6f25cf909faf42ab9b543be6abe780ca" prot="public" virt="non-virtual"><scope>fx_gain</scope><name>print_params</name></member>
+      <member refid="classfx__effect_1aaeececeee434ea76afdf649c3bed7698" prot="protected" virt="non-virtual"><scope>fx_gain</scope><name>serialize_params</name></member>
+      <member refid="classfx__effect_1a4c513243328d3b715822e74d21dffe99" prot="public" virt="non-virtual"><scope>fx_gain</scope><name>service</name></member>
+      <member refid="classfx__gain_1a889982b1829aeea799e2df228363fe81" prot="public" virt="non-virtual"><scope>fx_gain</scope><name>set_gain</name></member>
+      <member refid="classfx__gain_1acd185cb59c54347a8dff85df08c5e749" prot="public" virt="non-virtual"><scope>fx_gain</scope><name>set_gain_db</name></member>
+      <member refid="classfx__effect_1a4f5dbb43e76ca1fa8b8a7c56aaa9f232" prot="protected" virt="non-virtual"><scope>fx_gain</scope><name>total_audio_nodes</name></member>
+      <member refid="classfx__effect_1a91d9c1dcd7542aaec7a969af78804caa" prot="protected" virt="non-virtual"><scope>fx_gain</scope><name>total_control_nodes</name></member>
+      <member refid="classfx__effect_1a140e1553b23532a2f09f12f94833713e" prot="protected" virt="non-virtual"><scope>fx_gain</scope><name>total_params</name></member>
+      <member refid="classfx__effect_1a5e78416b59c4a21367e58ffc09fcf137" prot="protected" virt="non-virtual"><scope>fx_gain</scope><name>type</name></member>
+      <member refid="classfx__effect_1a0b94adfa51991a989cd10f4122c9ac22" prot="protected" virt="non-virtual"><scope>fx_gain</scope><name>updated_parameters</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

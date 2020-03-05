@@ -1,0 +1,888 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classfx__instrument__synth" kind="class" language="C++" prot="public">
+    <compoundname>fx_instrument_synth</compoundname>
+    <basecompoundref refid="classfx__effect" prot="public" virt="non-virtual">fx_effect</basecompoundref>
+    <includes refid="dm__fx__instrument__synth_8h" local="no">dm_fx_instrument_synth.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classfx__instrument__synth_1ac9cda76f040ff68adbd68ab2c100a9b4" prot="private" static="no" mutable="no">
+        <type><ref refid="group___enumerations_1gada898a149424188b3a23010c8fe89176" kindref="member">OSC_TYPES</ref></type>
+        <definition>OSC_TYPES fx_instrument_synth::param_osc_type</definition>
+        <argsstring></argsstring>
+        <name>param_osc_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_instrument_synth.h" line="21" column="1" bodyfile="src/effects/dm_fx_instrument_synth.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__instrument__synth_1aec5e8d3ad3913c7dab644526920d2018" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float fx_instrument_synth::param_freq_ratio</definition>
+        <argsstring></argsstring>
+        <name>param_freq_ratio</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_instrument_synth.h" line="22" column="1" bodyfile="src/effects/dm_fx_instrument_synth.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__instrument__synth_1a5ad15eb2bd4471f9827e2203ba56a957" prot="private" static="no" mutable="no">
+        <type><ref refid="group___enumerations_1gada898a149424188b3a23010c8fe89176" kindref="member">OSC_TYPES</ref></type>
+        <definition>OSC_TYPES fx_instrument_synth::param_fm_osc_type</definition>
+        <argsstring></argsstring>
+        <name>param_fm_osc_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_instrument_synth.h" line="23" column="1" bodyfile="src/effects/dm_fx_instrument_synth.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__instrument__synth_1a035cc62afeea93bc29afbdf9af818e72" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float fx_instrument_synth::param_fm_mod_freq_ratio</definition>
+        <argsstring></argsstring>
+        <name>param_fm_mod_freq_ratio</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_instrument_synth.h" line="24" column="1" bodyfile="src/effects/dm_fx_instrument_synth.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__instrument__synth_1a4c397642e74012c67f04ae36e0fe69b1" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float fx_instrument_synth::param_fm_mod_depth</definition>
+        <argsstring></argsstring>
+        <name>param_fm_mod_depth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_instrument_synth.h" line="25" column="1" bodyfile="src/effects/dm_fx_instrument_synth.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__instrument__synth_1ad3227ee1a13a1140cb1f637b253d1ec5" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float fx_instrument_synth::param_attack_ms</definition>
+        <argsstring></argsstring>
+        <name>param_attack_ms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_instrument_synth.h" line="26" column="1" bodyfile="src/effects/dm_fx_instrument_synth.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__instrument__synth_1a11fc9890e905c72461e7024326868647" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float fx_instrument_synth::param_filt_resonance</definition>
+        <argsstring></argsstring>
+        <name>param_filt_resonance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_instrument_synth.h" line="27" column="1" bodyfile="src/effects/dm_fx_instrument_synth.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__instrument__synth_1a4a1cc2f974806930e3880a134bb44dcc" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float fx_instrument_synth::param_filt_response</definition>
+        <argsstring></argsstring>
+        <name>param_filt_response</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_instrument_synth.h" line="28" column="1" bodyfile="src/effects/dm_fx_instrument_synth.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__instrument__synth_1af0f6c621e3c555e7cc7e048aac22f280" prot="private" static="no" mutable="no">
+        <type><ref refid="group___enumerations_1gada898a149424188b3a23010c8fe89176" kindref="member">OSC_TYPES</ref></type>
+        <definition>OSC_TYPES fx_instrument_synth::last_type</definition>
+        <argsstring></argsstring>
+        <name>last_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_instrument_synth.h" line="30" column="1" bodyfile="src/effects/dm_fx_instrument_synth.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__instrument__synth_1a7ebaa1ea9ba674f5ba966883171e7ef8" prot="private" static="no" mutable="no">
+        <type><ref refid="group___enumerations_1gada898a149424188b3a23010c8fe89176" kindref="member">OSC_TYPES</ref></type>
+        <definition>OSC_TYPES fx_instrument_synth::last_type_fm_mod</definition>
+        <argsstring></argsstring>
+        <name>last_type_fm_mod</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_instrument_synth.h" line="31" column="1" bodyfile="src/effects/dm_fx_instrument_synth.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__instrument__synth_1a84119325b2468175b8ff0fecc0789be8" prot="private" static="no" mutable="no">
+        <type>fx_control_node</type>
+        <definition>fx_control_node fx_instrument_synth::node_ctrl_attack_ms</definition>
+        <argsstring></argsstring>
+        <name>node_ctrl_attack_ms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_instrument_synth.h" line="34" column="1" bodyfile="src/effects/dm_fx_instrument_synth.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__instrument__synth_1aa1914fb226e8324c09f408e3a1cc085d" prot="private" static="no" mutable="no">
+        <type>fx_control_node</type>
+        <definition>fx_control_node fx_instrument_synth::node_ctrl_freq_ratio</definition>
+        <argsstring></argsstring>
+        <name>node_ctrl_freq_ratio</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_instrument_synth.h" line="35" column="1" bodyfile="src/effects/dm_fx_instrument_synth.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__instrument__synth_1a317e07831087d145f1e300a0276ff268" prot="private" static="no" mutable="no">
+        <type>fx_control_node</type>
+        <definition>fx_control_node fx_instrument_synth::node_ctrl_dm_mod_freq_ratio</definition>
+        <argsstring></argsstring>
+        <name>node_ctrl_dm_mod_freq_ratio</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_instrument_synth.h" line="36" column="1" bodyfile="src/effects/dm_fx_instrument_synth.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__instrument__synth_1a8f4b490a9b9e4b9e1200a7c5bdb38edd" prot="private" static="no" mutable="no">
+        <type>fx_control_node</type>
+        <definition>fx_control_node fx_instrument_synth::node_ctrl_dm_mod_depth</definition>
+        <argsstring></argsstring>
+        <name>node_ctrl_dm_mod_depth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_instrument_synth.h" line="37" column="1" bodyfile="src/effects/dm_fx_instrument_synth.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__instrument__synth_1a626525f519819ed3e6bafb207cece956" prot="private" static="no" mutable="no">
+        <type>fx_control_node</type>
+        <definition>fx_control_node fx_instrument_synth::node_ctrl_filt_resonance</definition>
+        <argsstring></argsstring>
+        <name>node_ctrl_filt_resonance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_instrument_synth.h" line="38" column="1" bodyfile="src/effects/dm_fx_instrument_synth.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__instrument__synth_1a48927efeaeeb12338a46354f12a4e114" prot="private" static="no" mutable="no">
+        <type>fx_control_node</type>
+        <definition>fx_control_node fx_instrument_synth::node_ctrl_filt_response</definition>
+        <argsstring></argsstring>
+        <name>node_ctrl_filt_response</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_instrument_synth.h" line="39" column="1" bodyfile="src/effects/dm_fx_instrument_synth.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classfx__instrument__synth_1a387c4fe10b9769f714459a9910bc6b0a" prot="public" static="no" mutable="no">
+        <type>fx_audio_node *</type>
+        <definition>fx_audio_node* fx_instrument_synth::output</definition>
+        <argsstring></argsstring>
+        <name>output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Audio routing node: primary audio output </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_instrument_synth.h" line="94" column="1" bodyfile="src/effects/dm_fx_instrument_synth.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__instrument__synth_1a23297f8bc394e1a6f566250ccb47a581" prot="public" static="no" mutable="no">
+        <type>fx_control_node *</type>
+        <definition>fx_control_node* fx_instrument_synth::attack_ms</definition>
+        <argsstring></argsstring>
+        <name>attack_ms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Control routing node: Attack (ms) - attack rate of the synth in milliseconds </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_instrument_synth.h" line="99" column="1" bodyfile="src/effects/dm_fx_instrument_synth.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__instrument__synth_1a16b004f6bab75a77269130519804278e" prot="public" static="no" mutable="no">
+        <type>fx_control_node *</type>
+        <definition>fx_control_node* fx_instrument_synth::freq_ratio</definition>
+        <argsstring></argsstring>
+        <name>freq_ratio</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Control routing node: Frequency ratio - Ratio of synthesized frequency to note playing. For example, a value of 1.0 would play the same note. A value of 0.5 would play a note an octave below. A value of 2.0 would play a note an octave above. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_instrument_synth.h" line="104" column="1" bodyfile="src/effects/dm_fx_instrument_synth.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__instrument__synth_1ad2b41752b892b7b735615883c3f09257" prot="public" static="no" mutable="no">
+        <type>fx_control_node *</type>
+        <definition>fx_control_node* fx_instrument_synth::fm_mod_freq_ratio</definition>
+        <argsstring></argsstring>
+        <name>fm_mod_freq_ratio</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Control routing node: Frequency ratio of fm modulator - Ratio of fm modulator frequency to synth frequency. A value of 1.0 would do fm mod at same frequency as note being synthesized. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_instrument_synth.h" line="109" column="1" bodyfile="src/effects/dm_fx_instrument_synth.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__instrument__synth_1ab53c12e30548d5c65791ccb4bc968bb3" prot="public" static="no" mutable="no">
+        <type>fx_control_node *</type>
+        <definition>fx_control_node* fx_instrument_synth::fm_mod_depth</definition>
+        <argsstring></argsstring>
+        <name>fm_mod_depth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Control routing node: Frequency mod depth </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_instrument_synth.h" line="114" column="1" bodyfile="src/effects/dm_fx_instrument_synth.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__instrument__synth_1a88100b10543cb0fa7db1961bb18e6988" prot="public" static="no" mutable="no">
+        <type>fx_control_node *</type>
+        <definition>fx_control_node* fx_instrument_synth::resonance</definition>
+        <argsstring></argsstring>
+        <name>resonance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Control routing node: Filter resonance - The resonance of the filter applied each synth voice. A value of 1.0 is no resonance, value higher than 1.0 increases resonance. Values below 1.0 (but higher than 0.0) further smooth out the filter. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_instrument_synth.h" line="119" column="1" bodyfile="src/effects/dm_fx_instrument_synth.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__instrument__synth_1a9c4c1a3f55ddeb3ce0e7d4dc3db0aeba" prot="public" static="no" mutable="no">
+        <type>fx_control_node *</type>
+        <definition>fx_control_node* fx_instrument_synth::response</definition>
+        <argsstring></argsstring>
+        <name>response</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Control routing node: Filter response - How far the filter sweeps with each played note </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_instrument_synth.h" line="124" column="1" bodyfile="src/effects/dm_fx_instrument_synth.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classfx__instrument__synth_1aa42a2539f7360f02796bd4c675dc027e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_instrument_synth::init</definition>
+        <argsstring>(void)</argsstring>
+        <name>init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_instrument_synth.h" line="41" column="1" bodyfile="src/effects/dm_fx_instrument_synth.h" bodystart="41" bodyend="87"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classfx__instrument__synth_1a5b336970da9ab37093bd71d07a7d8d39" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>fx_instrument_synth::fx_instrument_synth</definition>
+        <argsstring>(OSC_TYPES osc_type, float attack_ms, float filter_resonance, float filter_response)</argsstring>
+        <name>fx_instrument_synth</name>
+        <param>
+          <type><ref refid="group___enumerations_1gada898a149424188b3a23010c8fe89176" kindref="member">OSC_TYPES</ref></type>
+          <declname>osc_type</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>attack_ms</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>filter_resonance</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>filter_response</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a new instance of the instrument synth (basic constructor) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">osc_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of oscillator </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">attack_ms</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The attack milliseconds </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">filter_resonance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filter resonance (1.0 is normal, &gt; 1 increases resonance) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">filter_response</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>How much the filter sweeps (0.0 to 1.0) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_instrument_synth.h" line="134" column="1" bodyfile="src/effects/dm_fx_instrument_synth.h" bodystart="134" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__instrument__synth_1ab14f46d3cf54b2fd6ea50acb427b9c36" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>fx_instrument_synth::fx_instrument_synth</definition>
+        <argsstring>(OSC_TYPES osc_type, OSC_TYPES fm_mod_osc_type, float fm_mod_depth, float freq_ratio, float freq_ratio_fm_mod, float attack_ms, float filter_resonance, float filter_response)</argsstring>
+        <name>fx_instrument_synth</name>
+        <param>
+          <type><ref refid="group___enumerations_1gada898a149424188b3a23010c8fe89176" kindref="member">OSC_TYPES</ref></type>
+          <declname>osc_type</declname>
+        </param>
+        <param>
+          <type><ref refid="group___enumerations_1gada898a149424188b3a23010c8fe89176" kindref="member">OSC_TYPES</ref></type>
+          <declname>fm_mod_osc_type</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>fm_mod_depth</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>freq_ratio</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>freq_ratio_fm_mod</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>attack_ms</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>filter_resonance</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>filter_response</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a new instance of the instrument synth (advanced constructor) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">osc_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of oscillator </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">fm_mod</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of oscillator used for fm synthesis </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">fm_mod_depth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The depth of the fm synthesis (0.0 to 1.0) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">freq_ratio</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The frequency ratio of played note to synth note (e.g. 1.0 is same, 0.5 is octave down, 2.0 is octave up) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">freq_ratio_fm_mod</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The frequency ratio of the fm modulation to synthesized note </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">attack_ms</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The attack milliseconds </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">filter_resonance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filter resonance (1.0 is normal, &gt; 1 increases resonance) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">filter_response</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>How much the filter sweeps </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_instrument_synth.h" line="169" column="1" bodyfile="src/effects/dm_fx_instrument_synth.h" bodystart="169" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__instrument__synth_1a41da953906c7f7f58dda6b2be5a7024a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_instrument_synth::enable</definition>
+        <argsstring>()</argsstring>
+        <name>enable</name>
+        <briefdescription>
+<para>Enable the instrument synth (it is enabled by default) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_instrument_synth.h" line="194" column="1" bodyfile="src/effects/dm_fx_instrument_synth.h" bodystart="194" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__instrument__synth_1aaad5ac6c80ae87d5ac806e6e5d6f7fdb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_instrument_synth::bypass</definition>
+        <argsstring>()</argsstring>
+        <name>bypass</name>
+        <briefdescription>
+<para>Bypass the instrument synth (will just pass zero audio through) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_instrument_synth.h" line="203" column="1" bodyfile="src/effects/dm_fx_instrument_synth.h" bodystart="203" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__instrument__synth_1a169e4d67c6fb713771fe05b15efc3e1f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_instrument_synth::set_freq_ratio</definition>
+        <argsstring>(float ratio)</argsstring>
+        <name>set_freq_ratio</name>
+        <param>
+          <type>float</type>
+          <declname>ratio</declname>
+        </param>
+        <briefdescription>
+<para>Sets the frequency ratio of the synth. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ratio</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ratio of synthesized frequency to note playing. For example, a value of 1.0 would play the same note. A value of 0.5 would play a note an octave below. A value of 2.0 would play a note an octave above. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_instrument_synth.h" line="216" column="1" bodyfile="src/effects/dm_fx_instrument_synth.h" bodystart="216" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__instrument__synth_1a890d30dd72d97561168bc08d881fea85" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_instrument_synth::set_fm_mod_ratio</definition>
+        <argsstring>(float fm_mod_ratio)</argsstring>
+        <name>set_fm_mod_ratio</name>
+        <param>
+          <type>float</type>
+          <declname>fm_mod_ratio</declname>
+        </param>
+        <briefdescription>
+<para>Sets the fm modifier ratio. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">fm_mod_ratio</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fm modifier ratio relative to the frequency of the tone being played </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_instrument_synth.h" line="233" column="1" bodyfile="src/effects/dm_fx_instrument_synth.h" bodystart="233" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__instrument__synth_1a4ceac3270c94d828dd7a8273113735aa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_instrument_synth::set_fm_mod_depth</definition>
+        <argsstring>(float depth)</argsstring>
+        <name>set_fm_mod_depth</name>
+        <param>
+          <type>float</type>
+          <declname>depth</declname>
+        </param>
+        <briefdescription>
+<para>Sets the fm modifier depth. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">depth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The FM mod depth (0.0 -&gt; 1.0) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_instrument_synth.h" line="251" column="1" bodyfile="src/effects/dm_fx_instrument_synth.h" bodystart="251" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__instrument__synth_1a74dc57d4e7c73e64d607aa6de2aad544" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_instrument_synth::set_attack_ms</definition>
+        <argsstring>(float attack_ms)</argsstring>
+        <name>set_attack_ms</name>
+        <param>
+          <type>float</type>
+          <declname>attack_ms</declname>
+        </param>
+        <briefdescription>
+<para>Sets the attack milliseconds. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">attack_ms</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The attack milliseconds </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_instrument_synth.h" line="269" column="1" bodyfile="src/effects/dm_fx_instrument_synth.h" bodystart="269" bodyend="279"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__instrument__synth_1af0f1b3638f24fe05e20f53533c136fe2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_instrument_synth::set_filter_resonance</definition>
+        <argsstring>(float resonance)</argsstring>
+        <name>set_filter_resonance</name>
+        <param>
+          <type>float</type>
+          <declname>resonance</declname>
+        </param>
+        <briefdescription>
+<para>Sets the filter resonance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">resonance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The resonance of the filter </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_instrument_synth.h" line="286" column="1" bodyfile="src/effects/dm_fx_instrument_synth.h" bodystart="286" bodyend="297"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__instrument__synth_1adb694d7449a3ee7a5f0a9a50b4ea39e2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_instrument_synth::set_filter_response</definition>
+        <argsstring>(float response)</argsstring>
+        <name>set_filter_response</name>
+        <param>
+          <type>float</type>
+          <declname>response</declname>
+        </param>
+        <briefdescription>
+<para>Sets the filter responsiveness. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">response</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The response (0.0 is not responsive / static filter, 1.0 is very dynamic filter) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_instrument_synth.h" line="304" column="1" bodyfile="src/effects/dm_fx_instrument_synth.h" bodystart="304" bodyend="315"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__instrument__synth_1aa08097963447efb897fbea9a01ffb894" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_instrument_synth::set_oscillator_type</definition>
+        <argsstring>(OSC_TYPES new_type)</argsstring>
+        <name>set_oscillator_type</name>
+        <param>
+          <type><ref refid="group___enumerations_1gada898a149424188b3a23010c8fe89176" kindref="member">OSC_TYPES</ref></type>
+          <declname>new_type</declname>
+        </param>
+        <briefdescription>
+<para>Sets the the type of oscillator used as the primary synth. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">new_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new type of LFO (OSC_TYPES) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_instrument_synth.h" line="322" column="1" bodyfile="src/effects/dm_fx_instrument_synth.h" bodystart="322" bodyend="329"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__instrument__synth_1a9ca778d037d208bc764b6deadf5234bf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_instrument_synth::set_oscillator_type_fm_mod</definition>
+        <argsstring>(OSC_TYPES new_type)</argsstring>
+        <name>set_oscillator_type_fm_mod</name>
+        <param>
+          <type><ref refid="group___enumerations_1gada898a149424188b3a23010c8fe89176" kindref="member">OSC_TYPES</ref></type>
+          <declname>new_type</declname>
+        </param>
+        <briefdescription>
+<para>Sets the the type of oscillator used as the primary synth. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">new_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new type of LFO (OSC_TYPES) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_instrument_synth.h" line="336" column="1" bodyfile="src/effects/dm_fx_instrument_synth.h" bodystart="336" bodyend="343"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__instrument__synth_1afa5b73d3cdffb153cb4d660f0e4afcd3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_instrument_synth::print_params</definition>
+        <argsstring>(void)</argsstring>
+        <name>print_params</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Prints the parameters for the instrument synth. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_instrument_synth.h" line="351" column="1" bodyfile="src/effects/dm_fx_instrument_synth.h" bodystart="351" bodyend="376"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Effect: Polyphonic instrument synth. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The instrument synth is capable of reading polyphonic notes from a stringed instrument and playing synth notes in their place.</para>
+<para>The instrument synth does not have an input. It is hard-wired into the instrument in jack of the pedal. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="74">
+        <label>fx_instrument_synth</label>
+        <link refid="classfx__instrument__synth"/>
+        <childnode refid="75" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="75">
+        <label>fx_effect</label>
+        <link refid="classfx__effect"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="76">
+        <label>fx_instrument_synth</label>
+        <link refid="classfx__instrument__synth"/>
+        <childnode refid="77" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="78">
+        <label>fx_pedal</label>
+        <link refid="classfx__pedal"/>
+      </node>
+      <node id="77">
+        <label>fx_effect</label>
+        <link refid="classfx__effect"/>
+        <childnode refid="78" relation="usage">
+          <edgelabel>parent_canvas</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/effects/dm_fx_instrument_synth.h" line="16" column="1" bodyfile="src/effects/dm_fx_instrument_synth.h" bodystart="16" bodyend="379"/>
+    <listofallmembers>
+      <member refid="classfx__instrument__synth_1a23297f8bc394e1a6f566250ccb47a581" prot="public" virt="non-virtual"><scope>fx_instrument_synth</scope><name>attack_ms</name></member>
+      <member refid="classfx__effect_1ab69ae64deecdbc5915de9b66b4f3e987" prot="protected" virt="non-virtual"><scope>fx_instrument_synth</scope><name>audio_node_stack</name></member>
+      <member refid="classfx__effect_1abdbbc884fc92a23af5ec5b351a972b97" prot="protected" virt="non-virtual"><scope>fx_instrument_synth</scope><name>bool_param_updated</name></member>
+      <member refid="classfx__instrument__synth_1aaad5ac6c80ae87d5ac806e6e5d6f7fdb" prot="public" virt="non-virtual"><scope>fx_instrument_synth</scope><name>bypass</name></member>
+      <member refid="classfx__effect_1a700589ec8a30f3197cebce4eb955fa31" prot="protected" virt="non-virtual"><scope>fx_instrument_synth</scope><name>control_node_stack</name></member>
+      <member refid="classfx__effect_1af7d5319aca3b86b0e76418385d0478ea" prot="public" virt="non-virtual"><scope>fx_instrument_synth</scope><name>effect_name</name></member>
+      <member refid="classfx__instrument__synth_1a41da953906c7f7f58dda6b2be5a7024a" prot="public" virt="non-virtual"><scope>fx_instrument_synth</scope><name>enable</name></member>
+      <member refid="classfx__effect_1a56eefdb5f90e991e3f31d855e87e9213" prot="protected" virt="non-virtual"><scope>fx_instrument_synth</scope><name>float_param_updated</name></member>
+      <member refid="classfx__instrument__synth_1ab53c12e30548d5c65791ccb4bc968bb3" prot="public" virt="non-virtual"><scope>fx_instrument_synth</scope><name>fm_mod_depth</name></member>
+      <member refid="classfx__instrument__synth_1ad2b41752b892b7b735615883c3f09257" prot="public" virt="non-virtual"><scope>fx_instrument_synth</scope><name>fm_mod_freq_ratio</name></member>
+      <member refid="classfx__instrument__synth_1a16b004f6bab75a77269130519804278e" prot="public" virt="non-virtual"><scope>fx_instrument_synth</scope><name>freq_ratio</name></member>
+      <member refid="classfx__effect_1aab2d00a6784612158e41606297952873" prot="public" virt="non-virtual"><scope>fx_instrument_synth</scope><name>fx_effect</name></member>
+      <member refid="classfx__instrument__synth_1a5b336970da9ab37093bd71d07a7d8d39" prot="public" virt="non-virtual"><scope>fx_instrument_synth</scope><name>fx_instrument_synth</name></member>
+      <member refid="classfx__instrument__synth_1ab14f46d3cf54b2fd6ea50acb427b9c36" prot="public" virt="non-virtual"><scope>fx_instrument_synth</scope><name>fx_instrument_synth</name></member>
+      <member refid="classfx__effect_1ae5be756c63862665f422aa25a14d3bef" prot="protected" virt="non-virtual"><scope>fx_instrument_synth</scope><name>fx_pedal</name></member>
+      <member refid="classfx__effect_1a551b61721aadaeccb3cd2ba9fc826609" prot="protected" virt="non-virtual"><scope>fx_instrument_synth</scope><name>get_audio_node_index</name></member>
+      <member refid="classfx__effect_1aba27ace404ab75a174892cb5908f58b3" prot="protected" virt="non-virtual"><scope>fx_instrument_synth</scope><name>get_control_node_index</name></member>
+      <member refid="classfx__effect_1a3ddd0473c4a01e858a17b51f14995c70" prot="public" virt="non-virtual"><scope>fx_instrument_synth</scope><name>get_name</name></member>
+      <member refid="classfx__effect_1a14e0cb29cd7e86d0b8f566b3066dbf32" prot="public" virt="non-virtual"><scope>fx_instrument_synth</scope><name>get_type</name></member>
+      <member refid="classfx__instrument__synth_1aa42a2539f7360f02796bd4c675dc027e" prot="private" virt="non-virtual"><scope>fx_instrument_synth</scope><name>init</name></member>
+      <member refid="classfx__effect_1a35011b582dc3eb033f2174b404e15fd8" prot="protected" virt="non-virtual"><scope>fx_instrument_synth</scope><name>instance_id</name></member>
+      <member refid="classfx__instrument__synth_1af0f6c621e3c555e7cc7e048aac22f280" prot="private" virt="non-virtual"><scope>fx_instrument_synth</scope><name>last_type</name></member>
+      <member refid="classfx__instrument__synth_1a7ebaa1ea9ba674f5ba966883171e7ef8" prot="private" virt="non-virtual"><scope>fx_instrument_synth</scope><name>last_type_fm_mod</name></member>
+      <member refid="classfx__instrument__synth_1a84119325b2468175b8ff0fecc0789be8" prot="private" virt="non-virtual"><scope>fx_instrument_synth</scope><name>node_ctrl_attack_ms</name></member>
+      <member refid="classfx__instrument__synth_1a8f4b490a9b9e4b9e1200a7c5bdb38edd" prot="private" virt="non-virtual"><scope>fx_instrument_synth</scope><name>node_ctrl_dm_mod_depth</name></member>
+      <member refid="classfx__instrument__synth_1a317e07831087d145f1e300a0276ff268" prot="private" virt="non-virtual"><scope>fx_instrument_synth</scope><name>node_ctrl_dm_mod_freq_ratio</name></member>
+      <member refid="classfx__instrument__synth_1a626525f519819ed3e6bafb207cece956" prot="private" virt="non-virtual"><scope>fx_instrument_synth</scope><name>node_ctrl_filt_resonance</name></member>
+      <member refid="classfx__instrument__synth_1a48927efeaeeb12338a46354f12a4e114" prot="private" virt="non-virtual"><scope>fx_instrument_synth</scope><name>node_ctrl_filt_response</name></member>
+      <member refid="classfx__instrument__synth_1aa1914fb226e8324c09f408e3a1cc085d" prot="private" virt="non-virtual"><scope>fx_instrument_synth</scope><name>node_ctrl_freq_ratio</name></member>
+      <member refid="classfx__effect_1a69b60011be5fc3ade57b937405aa835d" prot="protected" virt="non-virtual"><scope>fx_instrument_synth</scope><name>node_enabled</name></member>
+      <member refid="classfx__effect_1a61f6f19f2cd7be8762758512e9cd5097" prot="protected" virt="non-virtual"><scope>fx_instrument_synth</scope><name>node_index</name></member>
+      <member refid="classfx__effect_1a66c709a96dd59fd1e21c3407a160a8e8" prot="protected" virt="non-virtual"><scope>fx_instrument_synth</scope><name>node_input</name></member>
+      <member refid="classfx__effect_1aabadf3d22b48bc21227f72d38bb0d5fe" prot="protected" virt="non-virtual"><scope>fx_instrument_synth</scope><name>node_output</name></member>
+      <member refid="classfx__instrument__synth_1a387c4fe10b9769f714459a9910bc6b0a" prot="public" virt="non-virtual"><scope>fx_instrument_synth</scope><name>output</name></member>
+      <member refid="classfx__instrument__synth_1ad3227ee1a13a1140cb1f637b253d1ec5" prot="private" virt="non-virtual"><scope>fx_instrument_synth</scope><name>param_attack_ms</name></member>
+      <member refid="classfx__effect_1a0774058f9db052bfc8a68159f13031f2" prot="protected" virt="non-virtual"><scope>fx_instrument_synth</scope><name>param_enabled</name></member>
+      <member refid="classfx__instrument__synth_1a11fc9890e905c72461e7024326868647" prot="private" virt="non-virtual"><scope>fx_instrument_synth</scope><name>param_filt_resonance</name></member>
+      <member refid="classfx__instrument__synth_1a4a1cc2f974806930e3880a134bb44dcc" prot="private" virt="non-virtual"><scope>fx_instrument_synth</scope><name>param_filt_response</name></member>
+      <member refid="classfx__instrument__synth_1a4c397642e74012c67f04ae36e0fe69b1" prot="private" virt="non-virtual"><scope>fx_instrument_synth</scope><name>param_fm_mod_depth</name></member>
+      <member refid="classfx__instrument__synth_1a035cc62afeea93bc29afbdf9af818e72" prot="private" virt="non-virtual"><scope>fx_instrument_synth</scope><name>param_fm_mod_freq_ratio</name></member>
+      <member refid="classfx__instrument__synth_1a5ad15eb2bd4471f9827e2203ba56a957" prot="private" virt="non-virtual"><scope>fx_instrument_synth</scope><name>param_fm_osc_type</name></member>
+      <member refid="classfx__instrument__synth_1aec5e8d3ad3913c7dab644526920d2018" prot="private" virt="non-virtual"><scope>fx_instrument_synth</scope><name>param_freq_ratio</name></member>
+      <member refid="classfx__instrument__synth_1ac9cda76f040ff68adbd68ab2c100a9b4" prot="private" virt="non-virtual"><scope>fx_instrument_synth</scope><name>param_osc_type</name></member>
+      <member refid="classfx__effect_1aaf455e34fced9667a8cf26cdb9fb6641" prot="protected" virt="non-virtual"><scope>fx_instrument_synth</scope><name>param_stack</name></member>
+      <member refid="classfx__effect_1a0ea0d3bfe30592895fa23d241a9baa38" prot="protected" virt="non-virtual"><scope>fx_instrument_synth</scope><name>param_stack_types</name></member>
+      <member refid="classfx__effect_1a69bef0da54cedf8e558d65b755716999" prot="protected" virt="non-virtual"><scope>fx_instrument_synth</scope><name>parent_canvas</name></member>
+      <member refid="classfx__instrument__synth_1afa5b73d3cdffb153cb4d660f0e4afcd3" prot="public" virt="non-virtual"><scope>fx_instrument_synth</scope><name>print_params</name></member>
+      <member refid="classfx__instrument__synth_1a88100b10543cb0fa7db1961bb18e6988" prot="public" virt="non-virtual"><scope>fx_instrument_synth</scope><name>resonance</name></member>
+      <member refid="classfx__instrument__synth_1a9c4c1a3f55ddeb3ce0e7d4dc3db0aeba" prot="public" virt="non-virtual"><scope>fx_instrument_synth</scope><name>response</name></member>
+      <member refid="classfx__effect_1aaeececeee434ea76afdf649c3bed7698" prot="protected" virt="non-virtual"><scope>fx_instrument_synth</scope><name>serialize_params</name></member>
+      <member refid="classfx__effect_1a4c513243328d3b715822e74d21dffe99" prot="public" virt="non-virtual"><scope>fx_instrument_synth</scope><name>service</name></member>
+      <member refid="classfx__instrument__synth_1a74dc57d4e7c73e64d607aa6de2aad544" prot="public" virt="non-virtual"><scope>fx_instrument_synth</scope><name>set_attack_ms</name></member>
+      <member refid="classfx__instrument__synth_1af0f1b3638f24fe05e20f53533c136fe2" prot="public" virt="non-virtual"><scope>fx_instrument_synth</scope><name>set_filter_resonance</name></member>
+      <member refid="classfx__instrument__synth_1adb694d7449a3ee7a5f0a9a50b4ea39e2" prot="public" virt="non-virtual"><scope>fx_instrument_synth</scope><name>set_filter_response</name></member>
+      <member refid="classfx__instrument__synth_1a4ceac3270c94d828dd7a8273113735aa" prot="public" virt="non-virtual"><scope>fx_instrument_synth</scope><name>set_fm_mod_depth</name></member>
+      <member refid="classfx__instrument__synth_1a890d30dd72d97561168bc08d881fea85" prot="public" virt="non-virtual"><scope>fx_instrument_synth</scope><name>set_fm_mod_ratio</name></member>
+      <member refid="classfx__instrument__synth_1a169e4d67c6fb713771fe05b15efc3e1f" prot="public" virt="non-virtual"><scope>fx_instrument_synth</scope><name>set_freq_ratio</name></member>
+      <member refid="classfx__instrument__synth_1aa08097963447efb897fbea9a01ffb894" prot="public" virt="non-virtual"><scope>fx_instrument_synth</scope><name>set_oscillator_type</name></member>
+      <member refid="classfx__instrument__synth_1a9ca778d037d208bc764b6deadf5234bf" prot="public" virt="non-virtual"><scope>fx_instrument_synth</scope><name>set_oscillator_type_fm_mod</name></member>
+      <member refid="classfx__effect_1a4f5dbb43e76ca1fa8b8a7c56aaa9f232" prot="protected" virt="non-virtual"><scope>fx_instrument_synth</scope><name>total_audio_nodes</name></member>
+      <member refid="classfx__effect_1a91d9c1dcd7542aaec7a969af78804caa" prot="protected" virt="non-virtual"><scope>fx_instrument_synth</scope><name>total_control_nodes</name></member>
+      <member refid="classfx__effect_1a140e1553b23532a2f09f12f94833713e" prot="protected" virt="non-virtual"><scope>fx_instrument_synth</scope><name>total_params</name></member>
+      <member refid="classfx__effect_1a5e78416b59c4a21367e58ffc09fcf137" prot="protected" virt="non-virtual"><scope>fx_instrument_synth</scope><name>type</name></member>
+      <member refid="classfx__effect_1a0b94adfa51991a989cd10f4122c9ac22" prot="protected" virt="non-virtual"><scope>fx_instrument_synth</scope><name>updated_parameters</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,548 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classfx__slicer" kind="class" language="C++" prot="public">
+    <compoundname>fx_slicer</compoundname>
+    <basecompoundref refid="classfx__effect" prot="public" virt="non-virtual">fx_effect</basecompoundref>
+    <includes refid="dm__fx__slicer_8h" local="no">dm_fx_slicer.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classfx__slicer_1a3e82d97c9f5360b84558ce651fbd5e4a" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t fx_slicer::param_channels</definition>
+        <argsstring></argsstring>
+        <name>param_channels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_slicer.h" line="18" column="1" bodyfile="src/effects/dm_fx_slicer.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__slicer_1acc7ef64ad0d470c0a77245ad49aca48a" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float fx_slicer::param_period</definition>
+        <argsstring></argsstring>
+        <name>param_period</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_slicer.h" line="19" column="1" bodyfile="src/effects/dm_fx_slicer.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__slicer_1ab292175ecaa22080aa2a4fd45a9be16c" prot="private" static="no" mutable="no">
+        <type>fx_audio_node</type>
+        <definition>fx_audio_node fx_slicer::node_output2</definition>
+        <argsstring></argsstring>
+        <name>node_output2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_slicer.h" line="22" column="1" bodyfile="src/effects/dm_fx_slicer.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__slicer_1ad9d7f17d90db946275a4bc34199176ab" prot="private" static="no" mutable="no">
+        <type>fx_audio_node</type>
+        <definition>fx_audio_node fx_slicer::node_output3</definition>
+        <argsstring></argsstring>
+        <name>node_output3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_slicer.h" line="23" column="1" bodyfile="src/effects/dm_fx_slicer.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__slicer_1a3667de30b5cc50a25a62070f7ddec27f" prot="private" static="no" mutable="no">
+        <type>fx_audio_node</type>
+        <definition>fx_audio_node fx_slicer::node_output4</definition>
+        <argsstring></argsstring>
+        <name>node_output4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_slicer.h" line="24" column="1" bodyfile="src/effects/dm_fx_slicer.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__slicer_1ab0a4f45143ce0e006200f35cb4fe93c0" prot="private" static="no" mutable="no">
+        <type>fx_audio_node</type>
+        <definition>fx_audio_node fx_slicer::node_output5</definition>
+        <argsstring></argsstring>
+        <name>node_output5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_slicer.h" line="25" column="1" bodyfile="src/effects/dm_fx_slicer.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__slicer_1adb4bb8975b61ef4701e446b109254d2d" prot="private" static="no" mutable="no">
+        <type>fx_audio_node</type>
+        <definition>fx_audio_node fx_slicer::node_output6</definition>
+        <argsstring></argsstring>
+        <name>node_output6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_slicer.h" line="26" column="1" bodyfile="src/effects/dm_fx_slicer.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__slicer_1aea62dee14658e776a1782d865498c07d" prot="private" static="no" mutable="no">
+        <type>fx_audio_node</type>
+        <definition>fx_audio_node fx_slicer::node_output7</definition>
+        <argsstring></argsstring>
+        <name>node_output7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_slicer.h" line="27" column="1" bodyfile="src/effects/dm_fx_slicer.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__slicer_1aba3dca975fff09a7b0a4ea79770fe8ef" prot="private" static="no" mutable="no">
+        <type>fx_audio_node</type>
+        <definition>fx_audio_node fx_slicer::node_output8</definition>
+        <argsstring></argsstring>
+        <name>node_output8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_slicer.h" line="28" column="1" bodyfile="src/effects/dm_fx_slicer.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__slicer_1ae53118e799a2c6aebf1f81e730d2e52f" prot="private" static="no" mutable="no">
+        <type>fx_audio_node</type>
+        <definition>fx_audio_node fx_slicer::node_dummy_input</definition>
+        <argsstring></argsstring>
+        <name>node_dummy_input</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_slicer.h" line="29" column="1" bodyfile="src/effects/dm_fx_slicer.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__slicer_1a8dd135ef581a9d97ad90a8e5551a2858" prot="private" static="no" mutable="no">
+        <type>fx_control_node</type>
+        <definition>fx_control_node fx_slicer::node_ctrl_period</definition>
+        <argsstring></argsstring>
+        <name>node_ctrl_period</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_slicer.h" line="32" column="1" bodyfile="src/effects/dm_fx_slicer.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__slicer_1a9982a7b7f752da609f1ff936dc7868e3" prot="private" static="no" mutable="no">
+        <type>fx_control_node</type>
+        <definition>fx_control_node fx_slicer::node_ctrl_start</definition>
+        <argsstring></argsstring>
+        <name>node_ctrl_start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_slicer.h" line="33" column="1" bodyfile="src/effects/dm_fx_slicer.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classfx__slicer_1aea4aac4005bfc584929e4db2df9c9556" prot="public" static="no" mutable="no">
+        <type>fx_audio_node *</type>
+        <definition>fx_audio_node* fx_slicer::input</definition>
+        <argsstring></argsstring>
+        <name>input</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Audio routing node: primary audio input </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_slicer.h" line="91" column="1" bodyfile="src/effects/dm_fx_slicer.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__slicer_1ae4c1b8d328e228319cd19bff6332930c" prot="public" static="no" mutable="no">
+        <type>fx_audio_node *</type>
+        <definition>fx_audio_node* fx_slicer::output_1</definition>
+        <argsstring></argsstring>
+        <name>output_1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Audio routing node: audio output for slicer channel 0 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_slicer.h" line="96" column="1" bodyfile="src/effects/dm_fx_slicer.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__slicer_1aa8520e74bfd31d81ac4cdbcd916160c9" prot="public" static="no" mutable="no">
+        <type>fx_audio_node *</type>
+        <definition>fx_audio_node* fx_slicer::output_2</definition>
+        <argsstring></argsstring>
+        <name>output_2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Audio routing node: audio output for slicer channel 1 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_slicer.h" line="101" column="1" bodyfile="src/effects/dm_fx_slicer.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__slicer_1a83ee17093e2ddeb58dd4dbf7ec669f9d" prot="public" static="no" mutable="no">
+        <type>fx_audio_node *</type>
+        <definition>fx_audio_node* fx_slicer::output_3</definition>
+        <argsstring></argsstring>
+        <name>output_3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Audio routing node: audio output for slicer channel 2 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_slicer.h" line="106" column="1" bodyfile="src/effects/dm_fx_slicer.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__slicer_1ab1370ec62022c6e3c51a5aef4dfe50a1" prot="public" static="no" mutable="no">
+        <type>fx_audio_node *</type>
+        <definition>fx_audio_node* fx_slicer::output_4</definition>
+        <argsstring></argsstring>
+        <name>output_4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Audio routing node: audio output for slicer channel 3 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_slicer.h" line="111" column="1" bodyfile="src/effects/dm_fx_slicer.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__slicer_1a655bf347bcdf202b866aa3e0f68e9fb6" prot="public" static="no" mutable="no">
+        <type>fx_audio_node *</type>
+        <definition>fx_audio_node* fx_slicer::output_5</definition>
+        <argsstring></argsstring>
+        <name>output_5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Audio routing node: audio output for slicer channel 4 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_slicer.h" line="116" column="1" bodyfile="src/effects/dm_fx_slicer.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__slicer_1a39a01c6579266750f91aeac02f8f7acc" prot="public" static="no" mutable="no">
+        <type>fx_audio_node *</type>
+        <definition>fx_audio_node* fx_slicer::output_6</definition>
+        <argsstring></argsstring>
+        <name>output_6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Audio routing node: audio output for slicer channel 5 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_slicer.h" line="121" column="1" bodyfile="src/effects/dm_fx_slicer.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__slicer_1a45c086598cfae96f1b205e0cde1cb68f" prot="public" static="no" mutable="no">
+        <type>fx_audio_node *</type>
+        <definition>fx_audio_node* fx_slicer::output_7</definition>
+        <argsstring></argsstring>
+        <name>output_7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Audio routing node: audio output for slicer channel 6 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_slicer.h" line="126" column="1" bodyfile="src/effects/dm_fx_slicer.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__slicer_1a25eb7888a44e6766c518b916bc30f8a8" prot="public" static="no" mutable="no">
+        <type>fx_audio_node *</type>
+        <definition>fx_audio_node* fx_slicer::output_8</definition>
+        <argsstring></argsstring>
+        <name>output_8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Audio routing node: audio output for slicer channel 7 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_slicer.h" line="131" column="1" bodyfile="src/effects/dm_fx_slicer.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__slicer_1ac2267c3fca1786200fac8e1327cd13a7" prot="public" static="no" mutable="no">
+        <type>fx_control_node *</type>
+        <definition>fx_control_node* fx_slicer::period</definition>
+        <argsstring></argsstring>
+        <name>period</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Control routing node: period in in milliseconds </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_slicer.h" line="137" column="1" bodyfile="src/effects/dm_fx_slicer.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__slicer_1af5cf2dc9ab48852d390f4dab00b29b13" prot="public" static="no" mutable="no">
+        <type>fx_control_node *</type>
+        <definition>fx_control_node* fx_slicer::start</definition>
+        <argsstring></argsstring>
+        <name>start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Control routing node: restarts the sequence at position 0 for triggering with a new note </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_slicer.h" line="143" column="1" bodyfile="src/effects/dm_fx_slicer.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classfx__slicer_1aa3cb1ccee54a347fac3498438cb62f13" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_slicer::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_slicer.h" line="35" column="1" bodyfile="src/effects/dm_fx_slicer.h" bodystart="35" bodyend="83"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classfx__slicer_1aa58475e7abee046901e228b6d6befdfe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>fx_slicer::fx_slicer</definition>
+        <argsstring>(float period_ms, int32_t channels)</argsstring>
+        <name>fx_slicer</name>
+        <param>
+          <type>float</type>
+          <declname>period_ms</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>channels</declname>
+        </param>
+        <briefdescription>
+<para>Basic constructor/initializer for the slicer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">period_ms</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The period in milliseconds </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">channels</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of channels to slice between during the period </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_slicer.h" line="154" column="1" bodyfile="src/effects/dm_fx_slicer.h" bodystart="154" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__slicer_1a0005ae49c5345637e329d5bdb9b59994" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_slicer::enable</definition>
+        <argsstring>()</argsstring>
+        <name>enable</name>
+        <briefdescription>
+<para>Enable the slicer (it is enabled by default) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_slicer.h" line="178" column="1" bodyfile="src/effects/dm_fx_slicer.h" bodystart="178" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__slicer_1a4c84f21952fb3830fb1b9e9cff115c6b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_slicer::bypass</definition>
+        <argsstring>()</argsstring>
+        <name>bypass</name>
+        <briefdescription>
+<para>Bypass the slicer (will just pass clean audio through) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_slicer.h" line="187" column="1" bodyfile="src/effects/dm_fx_slicer.h" bodystart="187" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__slicer_1a67e16609c920a9ab8ca5cc08e5776d21" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_slicer::set_period_ms</definition>
+        <argsstring>(float period)</argsstring>
+        <name>set_period_ms</name>
+        <param>
+          <type>float</type>
+          <declname>period</declname>
+        </param>
+        <briefdescription>
+<para>Upates the period in milliseconds for the slicer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">period</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The period in milliseconds (thousands of a second) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_slicer.h" line="199" column="1" bodyfile="src/effects/dm_fx_slicer.h" bodystart="199" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__slicer_1ab7bcfb6dbe69577d7a060ba2cfdf83a7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_slicer::print_params</definition>
+        <argsstring>(void)</argsstring>
+        <name>print_params</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Print the parameters for this effect. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_slicer.h" line="214" column="1" bodyfile="src/effects/dm_fx_slicer.h" bodystart="214" bodyend="238"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Effect: Slicer - chops up audio in the time domain and pipes to different effects. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Example: ___slicer_1.c___ </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="130">
+        <label>fx_slicer</label>
+        <link refid="classfx__slicer"/>
+        <childnode refid="131" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="131">
+        <label>fx_effect</label>
+        <link refid="classfx__effect"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="132">
+        <label>fx_slicer</label>
+        <link refid="classfx__slicer"/>
+        <childnode refid="133" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="134">
+        <label>fx_pedal</label>
+        <link refid="classfx__pedal"/>
+      </node>
+      <node id="133">
+        <label>fx_effect</label>
+        <link refid="classfx__effect"/>
+        <childnode refid="134" relation="usage">
+          <edgelabel>parent_canvas</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/effects/dm_fx_slicer.h" line="13" column="1" bodyfile="src/effects/dm_fx_slicer.h" bodystart="13" bodyend="239"/>
+    <listofallmembers>
+      <member refid="classfx__effect_1ab69ae64deecdbc5915de9b66b4f3e987" prot="protected" virt="non-virtual"><scope>fx_slicer</scope><name>audio_node_stack</name></member>
+      <member refid="classfx__effect_1abdbbc884fc92a23af5ec5b351a972b97" prot="protected" virt="non-virtual"><scope>fx_slicer</scope><name>bool_param_updated</name></member>
+      <member refid="classfx__slicer_1a4c84f21952fb3830fb1b9e9cff115c6b" prot="public" virt="non-virtual"><scope>fx_slicer</scope><name>bypass</name></member>
+      <member refid="classfx__effect_1a700589ec8a30f3197cebce4eb955fa31" prot="protected" virt="non-virtual"><scope>fx_slicer</scope><name>control_node_stack</name></member>
+      <member refid="classfx__effect_1af7d5319aca3b86b0e76418385d0478ea" prot="public" virt="non-virtual"><scope>fx_slicer</scope><name>effect_name</name></member>
+      <member refid="classfx__slicer_1a0005ae49c5345637e329d5bdb9b59994" prot="public" virt="non-virtual"><scope>fx_slicer</scope><name>enable</name></member>
+      <member refid="classfx__effect_1a56eefdb5f90e991e3f31d855e87e9213" prot="protected" virt="non-virtual"><scope>fx_slicer</scope><name>float_param_updated</name></member>
+      <member refid="classfx__effect_1aab2d00a6784612158e41606297952873" prot="public" virt="non-virtual"><scope>fx_slicer</scope><name>fx_effect</name></member>
+      <member refid="classfx__effect_1ae5be756c63862665f422aa25a14d3bef" prot="protected" virt="non-virtual"><scope>fx_slicer</scope><name>fx_pedal</name></member>
+      <member refid="classfx__slicer_1aa58475e7abee046901e228b6d6befdfe" prot="public" virt="non-virtual"><scope>fx_slicer</scope><name>fx_slicer</name></member>
+      <member refid="classfx__effect_1a551b61721aadaeccb3cd2ba9fc826609" prot="protected" virt="non-virtual"><scope>fx_slicer</scope><name>get_audio_node_index</name></member>
+      <member refid="classfx__effect_1aba27ace404ab75a174892cb5908f58b3" prot="protected" virt="non-virtual"><scope>fx_slicer</scope><name>get_control_node_index</name></member>
+      <member refid="classfx__effect_1a3ddd0473c4a01e858a17b51f14995c70" prot="public" virt="non-virtual"><scope>fx_slicer</scope><name>get_name</name></member>
+      <member refid="classfx__effect_1a14e0cb29cd7e86d0b8f566b3066dbf32" prot="public" virt="non-virtual"><scope>fx_slicer</scope><name>get_type</name></member>
+      <member refid="classfx__slicer_1aa3cb1ccee54a347fac3498438cb62f13" prot="private" virt="non-virtual"><scope>fx_slicer</scope><name>init</name></member>
+      <member refid="classfx__slicer_1aea4aac4005bfc584929e4db2df9c9556" prot="public" virt="non-virtual"><scope>fx_slicer</scope><name>input</name></member>
+      <member refid="classfx__effect_1a35011b582dc3eb033f2174b404e15fd8" prot="protected" virt="non-virtual"><scope>fx_slicer</scope><name>instance_id</name></member>
+      <member refid="classfx__slicer_1a8dd135ef581a9d97ad90a8e5551a2858" prot="private" virt="non-virtual"><scope>fx_slicer</scope><name>node_ctrl_period</name></member>
+      <member refid="classfx__slicer_1a9982a7b7f752da609f1ff936dc7868e3" prot="private" virt="non-virtual"><scope>fx_slicer</scope><name>node_ctrl_start</name></member>
+      <member refid="classfx__slicer_1ae53118e799a2c6aebf1f81e730d2e52f" prot="private" virt="non-virtual"><scope>fx_slicer</scope><name>node_dummy_input</name></member>
+      <member refid="classfx__effect_1a69b60011be5fc3ade57b937405aa835d" prot="protected" virt="non-virtual"><scope>fx_slicer</scope><name>node_enabled</name></member>
+      <member refid="classfx__effect_1a61f6f19f2cd7be8762758512e9cd5097" prot="protected" virt="non-virtual"><scope>fx_slicer</scope><name>node_index</name></member>
+      <member refid="classfx__effect_1a66c709a96dd59fd1e21c3407a160a8e8" prot="protected" virt="non-virtual"><scope>fx_slicer</scope><name>node_input</name></member>
+      <member refid="classfx__effect_1aabadf3d22b48bc21227f72d38bb0d5fe" prot="protected" virt="non-virtual"><scope>fx_slicer</scope><name>node_output</name></member>
+      <member refid="classfx__slicer_1ab292175ecaa22080aa2a4fd45a9be16c" prot="private" virt="non-virtual"><scope>fx_slicer</scope><name>node_output2</name></member>
+      <member refid="classfx__slicer_1ad9d7f17d90db946275a4bc34199176ab" prot="private" virt="non-virtual"><scope>fx_slicer</scope><name>node_output3</name></member>
+      <member refid="classfx__slicer_1a3667de30b5cc50a25a62070f7ddec27f" prot="private" virt="non-virtual"><scope>fx_slicer</scope><name>node_output4</name></member>
+      <member refid="classfx__slicer_1ab0a4f45143ce0e006200f35cb4fe93c0" prot="private" virt="non-virtual"><scope>fx_slicer</scope><name>node_output5</name></member>
+      <member refid="classfx__slicer_1adb4bb8975b61ef4701e446b109254d2d" prot="private" virt="non-virtual"><scope>fx_slicer</scope><name>node_output6</name></member>
+      <member refid="classfx__slicer_1aea62dee14658e776a1782d865498c07d" prot="private" virt="non-virtual"><scope>fx_slicer</scope><name>node_output7</name></member>
+      <member refid="classfx__slicer_1aba3dca975fff09a7b0a4ea79770fe8ef" prot="private" virt="non-virtual"><scope>fx_slicer</scope><name>node_output8</name></member>
+      <member refid="classfx__slicer_1ae4c1b8d328e228319cd19bff6332930c" prot="public" virt="non-virtual"><scope>fx_slicer</scope><name>output_1</name></member>
+      <member refid="classfx__slicer_1aa8520e74bfd31d81ac4cdbcd916160c9" prot="public" virt="non-virtual"><scope>fx_slicer</scope><name>output_2</name></member>
+      <member refid="classfx__slicer_1a83ee17093e2ddeb58dd4dbf7ec669f9d" prot="public" virt="non-virtual"><scope>fx_slicer</scope><name>output_3</name></member>
+      <member refid="classfx__slicer_1ab1370ec62022c6e3c51a5aef4dfe50a1" prot="public" virt="non-virtual"><scope>fx_slicer</scope><name>output_4</name></member>
+      <member refid="classfx__slicer_1a655bf347bcdf202b866aa3e0f68e9fb6" prot="public" virt="non-virtual"><scope>fx_slicer</scope><name>output_5</name></member>
+      <member refid="classfx__slicer_1a39a01c6579266750f91aeac02f8f7acc" prot="public" virt="non-virtual"><scope>fx_slicer</scope><name>output_6</name></member>
+      <member refid="classfx__slicer_1a45c086598cfae96f1b205e0cde1cb68f" prot="public" virt="non-virtual"><scope>fx_slicer</scope><name>output_7</name></member>
+      <member refid="classfx__slicer_1a25eb7888a44e6766c518b916bc30f8a8" prot="public" virt="non-virtual"><scope>fx_slicer</scope><name>output_8</name></member>
+      <member refid="classfx__slicer_1a3e82d97c9f5360b84558ce651fbd5e4a" prot="private" virt="non-virtual"><scope>fx_slicer</scope><name>param_channels</name></member>
+      <member refid="classfx__effect_1a0774058f9db052bfc8a68159f13031f2" prot="protected" virt="non-virtual"><scope>fx_slicer</scope><name>param_enabled</name></member>
+      <member refid="classfx__slicer_1acc7ef64ad0d470c0a77245ad49aca48a" prot="private" virt="non-virtual"><scope>fx_slicer</scope><name>param_period</name></member>
+      <member refid="classfx__effect_1aaf455e34fced9667a8cf26cdb9fb6641" prot="protected" virt="non-virtual"><scope>fx_slicer</scope><name>param_stack</name></member>
+      <member refid="classfx__effect_1a0ea0d3bfe30592895fa23d241a9baa38" prot="protected" virt="non-virtual"><scope>fx_slicer</scope><name>param_stack_types</name></member>
+      <member refid="classfx__effect_1a69bef0da54cedf8e558d65b755716999" prot="protected" virt="non-virtual"><scope>fx_slicer</scope><name>parent_canvas</name></member>
+      <member refid="classfx__slicer_1ac2267c3fca1786200fac8e1327cd13a7" prot="public" virt="non-virtual"><scope>fx_slicer</scope><name>period</name></member>
+      <member refid="classfx__slicer_1ab7bcfb6dbe69577d7a060ba2cfdf83a7" prot="public" virt="non-virtual"><scope>fx_slicer</scope><name>print_params</name></member>
+      <member refid="classfx__effect_1aaeececeee434ea76afdf649c3bed7698" prot="protected" virt="non-virtual"><scope>fx_slicer</scope><name>serialize_params</name></member>
+      <member refid="classfx__effect_1a4c513243328d3b715822e74d21dffe99" prot="public" virt="non-virtual"><scope>fx_slicer</scope><name>service</name></member>
+      <member refid="classfx__slicer_1a67e16609c920a9ab8ca5cc08e5776d21" prot="public" virt="non-virtual"><scope>fx_slicer</scope><name>set_period_ms</name></member>
+      <member refid="classfx__slicer_1af5cf2dc9ab48852d390f4dab00b29b13" prot="public" virt="non-virtual"><scope>fx_slicer</scope><name>start</name></member>
+      <member refid="classfx__effect_1a4f5dbb43e76ca1fa8b8a7c56aaa9f232" prot="protected" virt="non-virtual"><scope>fx_slicer</scope><name>total_audio_nodes</name></member>
+      <member refid="classfx__effect_1a91d9c1dcd7542aaec7a969af78804caa" prot="protected" virt="non-virtual"><scope>fx_slicer</scope><name>total_control_nodes</name></member>
+      <member refid="classfx__effect_1a140e1553b23532a2f09f12f94833713e" prot="protected" virt="non-virtual"><scope>fx_slicer</scope><name>total_params</name></member>
+      <member refid="classfx__effect_1a5e78416b59c4a21367e58ffc09fcf137" prot="protected" virt="non-virtual"><scope>fx_slicer</scope><name>type</name></member>
+      <member refid="classfx__effect_1a0b94adfa51991a989cd10f4122c9ac22" prot="protected" virt="non-virtual"><scope>fx_slicer</scope><name>updated_parameters</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

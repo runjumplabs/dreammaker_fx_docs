@@ -1,0 +1,625 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Class fx_pedal &mdash; DreamMaker FX Documentation  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class fx_led" href="classfx__led.html" />
+    <link rel="prev" title="General troubleshooting" href="../markdown/troubleshooting.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> DreamMaker FX Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/echo_basic.html">Building a Basic Echo Pedal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/adding_effects.html">The basics of creating / adding effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/routing_audio.html">The basics of routing audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/controlling_effects.html">The basics of controlling effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/using_api.html">Using the API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/debugging.html">Debugging Sketches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/troubleshooting.html">General troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Pedal Reference:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Pedal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__led.html">LEDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__pot.html">Pots/Knobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__switch.html">Switches</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Effect Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__adsr__envelope.html">ADSR Envelope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__amplitude__mod.html">Amplitude Modulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__compressor.html">Compressor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__delay.html">Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__destructor.html">Destructor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__envelope__tracker.html">Envelope Follower</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__gain.html">Gain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__instrument__synth.html">Instrument Synth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__looper.html">Looper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__multitap__delay.html">Multi-tap Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__oscillator.html">Oscillator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__phase__shifter.html">Phase Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__pitch__shift.html">Pitch Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__ring__mod.html">Ring Modulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__slicer.html">Slicer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__variable__delay.html">Variable Delay</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DreamMaker FX Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Class fx_pedal</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/classfx__pedal.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="class-fx-pedal">
+<span id="exhale-class-classfx-pedal"></span><h1>Class fx_pedal<a class="headerlink" href="#class-fx-pedal" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_src_dreammakerfx.h.html#file-src-dreammakerfx-h"><span class="std std-ref">File dreammakerfx.h</span></a></p></li>
+</ul>
+<div class="section" id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv48fx_pedal">
+<span id="_CPPv38fx_pedal"></span><span id="_CPPv28fx_pedal"></span><span id="fx_pedal"></span><span class="target" id="classfx__pedal"></span><em class="property">class </em><code class="sig-name descname">fx_pedal</code><a class="headerlink" href="#_CPPv48fx_pedal" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>This class describes an effects canvas. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N8fx_pedal4initEv">
+<span id="_CPPv3N8fx_pedal4initEv"></span><span id="_CPPv2N8fx_pedal4initEv"></span><span id="fx_pedal::init__void"></span><span class="target" id="classfx__pedal_1aa7ec165e5660a0d484add96ec19cfb8d"></span>void <code class="sig-name descname">init</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8fx_pedal4initEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Initializes the pedal object with default debug level (just warnings and errors) </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N8fx_pedal4initE15DEBUG_MSG_LEVEL">
+<span id="_CPPv3N8fx_pedal4initE15DEBUG_MSG_LEVEL"></span><span id="_CPPv2N8fx_pedal4initE15DEBUG_MSG_LEVEL"></span><span id="fx_pedal::init__DEBUG_MSG_LEVEL"></span><span class="target" id="classfx__pedal_1a9575fbfd47c4fcfed424c4a82ce84f1f"></span>void <code class="sig-name descname">init</code><span class="sig-paren">(</span><a class="reference internal" href="enum_dm__fx__debug_8h_1a8931d04af0ed6023a96a095a8f2b2c4d.html#_CPPv415DEBUG_MSG_LEVEL" title="DEBUG_MSG_LEVEL">DEBUG_MSG_LEVEL</a> <em>debug_level</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8fx_pedal4initE15DEBUG_MSG_LEVEL" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Initializes the pedal object with user defined debug level. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">debug_level</span></code>: The debug level to display (MSG_DEBUG, MSG_INFO, MSG_WARN, MSG_ERROR) </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N8fx_pedal4initE15DEBUG_MSG_LEVELb">
+<span id="_CPPv3N8fx_pedal4initE15DEBUG_MSG_LEVELb"></span><span id="_CPPv2N8fx_pedal4initE15DEBUG_MSG_LEVELb"></span><span id="fx_pedal::init__DEBUG_MSG_LEVEL.b"></span><span class="target" id="classfx__pedal_1a579a8e9a697226ed755be972aa047887"></span>void <code class="sig-name descname">init</code><span class="sig-paren">(</span><a class="reference internal" href="enum_dm__fx__debug_8h_1a8931d04af0ed6023a96a095a8f2b2c4d.html#_CPPv415DEBUG_MSG_LEVEL" title="DEBUG_MSG_LEVEL">DEBUG_MSG_LEVEL</a> <em>debug_level</em>, bool <em>dsp_no_reset</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8fx_pedal4initE15DEBUG_MSG_LEVELb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Initializes the pedal object with used defined debug level, bypasses DSP reset. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">debug_level</span></code>: The debug level to display (MSG_DEBUG, MSG_INFO, MSG_WARN, MSG_ERROR) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">dsp_no_reset</span></code>: The dsp no reset (set to true to bypass reset) </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N8fx_pedal4initEb">
+<span id="_CPPv3N8fx_pedal4initEb"></span><span id="_CPPv2N8fx_pedal4initEb"></span><span id="fx_pedal::init__b"></span><span class="target" id="classfx__pedal_1a4cfa12f479e0ab02f6e7be2e848cc2d1"></span>void <code class="sig-name descname">init</code><span class="sig-paren">(</span>bool <em>debug_enable</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8fx_pedal4initEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N8fx_pedal4initEbb">
+<span id="_CPPv3N8fx_pedal4initEbb"></span><span id="_CPPv2N8fx_pedal4initEbb"></span><span id="fx_pedal::init__b.b"></span><span class="target" id="classfx__pedal_1ab7344a94319c473e6fe825bfd1ec6563"></span>void <code class="sig-name descname">init</code><span class="sig-paren">(</span>bool <em>debug_enable</em>, bool <em>dsp_telem</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8fx_pedal4initEbb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N8fx_pedal3runEv">
+<span id="_CPPv3N8fx_pedal3runEv"></span><span id="_CPPv2N8fx_pedal3runEv"></span><span id="fx_pedal::run__void"></span><span class="target" id="classfx__pedal_1a63cae666ada50e751c504f440d9c0d7c"></span>bool <code class="sig-name descname">run</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8fx_pedal3runEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Runs the current canvas (i.e. compiles and downloads to the DSP) </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>True if successful, false if not </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N8fx_pedal7serviceEv">
+<span id="_CPPv3N8fx_pedal7serviceEv"></span><span id="_CPPv2N8fx_pedal7serviceEv"></span><span id="fx_pedal::service__void"></span><span class="target" id="classfx__pedal_1a9cf36229c478131fa67a57f34fd907dd"></span>void <code class="sig-name descname">service</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8fx_pedal7serviceEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Pedal service function that should be called in the Arduino loop() function. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N8fx_pedal11route_audioEP13fx_audio_nodeP13fx_audio_node">
+<span id="_CPPv3N8fx_pedal11route_audioEP13fx_audio_nodeP13fx_audio_node"></span><span id="_CPPv2N8fx_pedal11route_audioEP13fx_audio_nodeP13fx_audio_node"></span><span id="fx_pedal::route_audio__fx_audio_nodeP.fx_audio_nodeP"></span><span class="target" id="classfx__pedal_1a97423b3ef60a4a8c8986db1cb17b6be6"></span>bool <code class="sig-name descname">route_audio</code><span class="sig-paren">(</span>fx_audio_node *<em>out</em>, fx_audio_node *<em>in</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8fx_pedal11route_audioEP13fx_audio_nodeP13fx_audio_node" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Routes a source node (output) to a destination mode (input) </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>True is successful, false if not </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">src</span></code>: The source / output </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dest</span></code>: The destination / input</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N8fx_pedal13route_controlEP15fx_control_nodeP15fx_control_node">
+<span id="_CPPv3N8fx_pedal13route_controlEP15fx_control_nodeP15fx_control_node"></span><span id="_CPPv2N8fx_pedal13route_controlEP15fx_control_nodeP15fx_control_node"></span><span id="fx_pedal::route_control__fx_control_nodeP.fx_control_nodeP"></span><span class="target" id="classfx__pedal_1a0d3262d0d26edcfdc559193091991f32"></span>bool <code class="sig-name descname">route_control</code><span class="sig-paren">(</span>fx_control_node *<em>src</em>, fx_control_node *<em>dest</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8fx_pedal13route_controlEP15fx_control_nodeP15fx_control_node" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Route a control source node (output) to a destination mode (input) </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>True is successful, false if not </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">src</span></code>: The source node (should be an output) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dest</span></code>: The destination node (should be an input)</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N8fx_pedal13route_controlEP15fx_control_nodeP15fx_control_nodeff">
+<span id="_CPPv3N8fx_pedal13route_controlEP15fx_control_nodeP15fx_control_nodeff"></span><span id="_CPPv2N8fx_pedal13route_controlEP15fx_control_nodeP15fx_control_nodeff"></span><span id="fx_pedal::route_control__fx_control_nodeP.fx_control_nodeP.float.float"></span><span class="target" id="classfx__pedal_1a23e3239c2fe59fe105d7edeaa1141bce"></span>bool <code class="sig-name descname">route_control</code><span class="sig-paren">(</span>fx_control_node *<em>src</em>, fx_control_node *<em>dest</em>, float <em>scale</em>, float <em>offset</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8fx_pedal13route_controlEP15fx_control_nodeP15fx_control_nodeff" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Route a control source node (output) to a destination mode (input) </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>True is successful, false if not </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">src</span></code>: The source node (should be an output) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dest</span></code>: The destination node (should be an input) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">scale</span></code>: The scale to apply to the control value </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">offset</span></code>: The offset to apply to the control value</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N8fx_pedal17add_bypass_buttonE10FOOTSWITCH">
+<span id="_CPPv3N8fx_pedal17add_bypass_buttonE10FOOTSWITCH"></span><span id="_CPPv2N8fx_pedal17add_bypass_buttonE10FOOTSWITCH"></span><span id="fx_pedal::add_bypass_button__FOOTSWITCH"></span><span class="target" id="classfx__pedal_1a20c19252b60841577d921c82da7a5526"></span>void <code class="sig-name descname">add_bypass_button</code><span class="sig-paren">(</span>FOOTSWITCH <em>footswitch</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8fx_pedal17add_bypass_buttonE10FOOTSWITCH" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set one of the footswitches to be a bypass button. </p>
+<p>This function will also set the corresponding LED to turn on and off when bypass is disabled / enabled.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">footswitch</span></code>: The footswitch (FOOTSWITCH_RIGHT, FOOTSWITCH_LEFT) </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N8fx_pedal23add_tap_interval_buttonE10FOOTSWITCHb">
+<span id="_CPPv3N8fx_pedal23add_tap_interval_buttonE10FOOTSWITCHb"></span><span id="_CPPv2N8fx_pedal23add_tap_interval_buttonE10FOOTSWITCHb"></span><span id="fx_pedal::add_tap_interval_button__FOOTSWITCH.b"></span><span class="target" id="classfx__pedal_1a57af6a51bd289393d1fcc3c20dfa80af"></span>void <code class="sig-name descname">add_tap_interval_button</code><span class="sig-paren">(</span>FOOTSWITCH <em>footswitch</em>, bool <em>enable_led_flash</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8fx_pedal23add_tap_interval_buttonE10FOOTSWITCHb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set one of the footswitches to be a tap tempo / length button. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">footswitch</span></code>: The footswitch (FOOTSWITCH_RIGHT, FOOTSWITCH_LEFT, FOOTSWITCH_BOTH) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">enable_led_flash</span></code>: Set the corresponding LED to flash at tempo rate </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N8fx_pedal9bypass_fxEv">
+<span id="_CPPv3N8fx_pedal9bypass_fxEv"></span><span id="_CPPv2N8fx_pedal9bypass_fxEv"></span><span id="fx_pedal::bypass_fx__void"></span><span class="target" id="classfx__pedal_1a957ee7e9cc84482790d7b2dd360457de"></span>void <code class="sig-name descname">bypass_fx</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8fx_pedal9bypass_fxEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N8fx_pedal9enable_fxEv">
+<span id="_CPPv3N8fx_pedal9enable_fxEv"></span><span id="_CPPv2N8fx_pedal9enable_fxEv"></span><span id="fx_pedal::enable_fx__void"></span><span class="target" id="classfx__pedal_1a22d9d469c49a435f03e3bcc349d570a7"></span>void <code class="sig-name descname">enable_fx</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8fx_pedal9enable_fxEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N8fx_pedal16new_tap_intervalEv">
+<span id="_CPPv3N8fx_pedal16new_tap_intervalEv"></span><span id="_CPPv2N8fx_pedal16new_tap_intervalEv"></span><span id="fx_pedal::new_tap_interval__void"></span><span class="target" id="classfx__pedal_1ab4e00784f9ba6b5a720d19bafa5c5988"></span>bool <code class="sig-name descname">new_tap_interval</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8fx_pedal16new_tap_intervalEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns true when a new tap interval has been tapped in by the user. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>{ description_of_the_return_value } </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N8fx_pedal19get_tap_interval_msEv">
+<span id="_CPPv3N8fx_pedal19get_tap_interval_msEv"></span><span id="_CPPv2N8fx_pedal19get_tap_interval_msEv"></span><span id="fx_pedal::get_tap_interval_ms__void"></span><span class="target" id="classfx__pedal_1a0acead76c8c144c406d95029804d5164"></span>float <code class="sig-name descname">get_tap_interval_ms</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8fx_pedal19get_tap_interval_msEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns the current tap interval in milliseconds. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The tap interval in milliseconds. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N8fx_pedal15get_tap_freq_hzEv">
+<span id="_CPPv3N8fx_pedal15get_tap_freq_hzEv"></span><span id="_CPPv2N8fx_pedal15get_tap_freq_hzEv"></span><span id="fx_pedal::get_tap_freq_hz__void"></span><span class="target" id="classfx__pedal_1a2be1ee8787cf3c949429eb6295432225"></span>float <code class="sig-name descname">get_tap_freq_hz</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8fx_pedal15get_tap_freq_hzEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns the current tap interval in Hertz (cycles / second) </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The tap frequency in Hertz </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N8fx_pedal21set_tap_blink_rate_hzEf">
+<span id="_CPPv3N8fx_pedal21set_tap_blink_rate_hzEf"></span><span id="_CPPv2N8fx_pedal21set_tap_blink_rate_hzEf"></span><span id="fx_pedal::set_tap_blink_rate_hz__float"></span><span class="target" id="classfx__pedal_1a9afe97a2261468b36a870bdd14c4af28"></span>void <code class="sig-name descname">set_tap_blink_rate_hz</code><span class="sig-paren">(</span>float <em>rate_hz</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8fx_pedal21set_tap_blink_rate_hzEf" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sets the LED blink rate for tap interval. </p>
+<p>Use this if there is a pot that can also change the tempo / rate / duration to override what has been previously “tapped” in.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">rate_hz</span></code>: The new blink rate in Hertz </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N8fx_pedal21set_tap_blink_rate_hzEf10FOOTSWITCH">
+<span id="_CPPv3N8fx_pedal21set_tap_blink_rate_hzEf10FOOTSWITCH"></span><span id="_CPPv2N8fx_pedal21set_tap_blink_rate_hzEf10FOOTSWITCH"></span><span id="fx_pedal::set_tap_blink_rate_hz__float.FOOTSWITCH"></span><span class="target" id="classfx__pedal_1aa7da84fc35b770df37ddea35fcd1fa8f"></span>void <code class="sig-name descname">set_tap_blink_rate_hz</code><span class="sig-paren">(</span>float <em>rate_hz</em>, FOOTSWITCH <em>led</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8fx_pedal21set_tap_blink_rate_hzEf10FOOTSWITCH" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sets the LED blink rate for tap interval with LED control. </p>
+<p>Use this if there is a pot that can also change the tempo / rate / duration to override what has been previously “tapped” in.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">rate_hz</span></code>: The new blink rate in Hertz </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">led</span></code>: Which LED to flash (FOOTSWITCH_LEFT, FOOTSWITCH_RIGHT) </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N8fx_pedal21set_tap_blink_rate_msEf">
+<span id="_CPPv3N8fx_pedal21set_tap_blink_rate_msEf"></span><span id="_CPPv2N8fx_pedal21set_tap_blink_rate_msEf"></span><span id="fx_pedal::set_tap_blink_rate_ms__float"></span><span class="target" id="classfx__pedal_1ab5f94f1197ebcd5be2200586bf730154"></span>void <code class="sig-name descname">set_tap_blink_rate_ms</code><span class="sig-paren">(</span>float <em>ms</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8fx_pedal21set_tap_blink_rate_msEf" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sets the LED blink rate in milliseconds. </p>
+<p>Use this if there is a pot that can also change the tempo / rate / duration to override what has been previously “tapped” in.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">ms</span></code>: The blink rate in milliseconds </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N8fx_pedal21set_tap_blink_rate_msEf10FOOTSWITCH">
+<span id="_CPPv3N8fx_pedal21set_tap_blink_rate_msEf10FOOTSWITCH"></span><span id="_CPPv2N8fx_pedal21set_tap_blink_rate_msEf10FOOTSWITCH"></span><span id="fx_pedal::set_tap_blink_rate_ms__float.FOOTSWITCH"></span><span class="target" id="classfx__pedal_1af064f5cfc0fc2f5a439ec50b808a6e92"></span>void <code class="sig-name descname">set_tap_blink_rate_ms</code><span class="sig-paren">(</span>float <em>ms</em>, FOOTSWITCH <em>led</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8fx_pedal21set_tap_blink_rate_msEf10FOOTSWITCH" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sets the LED blink rate for tap interval with LED control. </p>
+<p>Use this if there is a pot that can also change the tempo / rate / duration to override what has been previously “tapped” in.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">ms</span></code>: The new blink period in milliseconds </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">led</span></code>: Which LED to flash (FOOTSWITCH_LEFT, FOOTSWITCH_RIGHT) </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N8fx_pedal14button_pressedE10FOOTSWITCHb">
+<span id="_CPPv3N8fx_pedal14button_pressedE10FOOTSWITCHb"></span><span id="_CPPv2N8fx_pedal14button_pressedE10FOOTSWITCHb"></span><span id="fx_pedal::button_pressed__FOOTSWITCH.b"></span><span class="target" id="classfx__pedal_1a0b37d83e55eb57f01a21d1e82a65a962"></span>bool <code class="sig-name descname">button_pressed</code><span class="sig-paren">(</span>FOOTSWITCH <em>footswitch</em>, bool <em>enable_led</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8fx_pedal14button_pressedE10FOOTSWITCHb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Checks if a button was just pressed and optionally turns on an LED when it is. </p>
+<p>This function is used to create events when a button is held down and released to momentarily enable / disable functionality.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>true if button is pressed, false if not </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">footswitch</span></code>: The footswitch (FOOTSWITCH_LEFT, FOOTSWITCH_RIGHT, (FOOTSWITCH_LEFT, FOOTSWITCH_BOTH) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">enable_led</span></code>: If true, lights LED while button pressed</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N8fx_pedal15button_releasedE10FOOTSWITCHb">
+<span id="_CPPv3N8fx_pedal15button_releasedE10FOOTSWITCHb"></span><span id="_CPPv2N8fx_pedal15button_releasedE10FOOTSWITCHb"></span><span id="fx_pedal::button_released__FOOTSWITCH.b"></span><span class="target" id="classfx__pedal_1a6846245fdae141df03fc96fd49e033c9"></span>bool <code class="sig-name descname">button_released</code><span class="sig-paren">(</span>FOOTSWITCH <em>footswitch</em>, bool <em>enable_led</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8fx_pedal15button_releasedE10FOOTSWITCHb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Checks if a button was just released and optionally turns off an LED when it was. </p>
+<p>This function is used to create events when a button is held down and released to momentarily enable / disable functionality.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>{ description_of_the_return_value } </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">footswitch</span></code>: The footswitch (FOOTSWITCH_LEFT, FOOTSWITCH_RIGHT, (FOOTSWITCH_LEFT, FOOTSWITCH_BOTH) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">enable_led</span></code>: If true, turns off the LED when button is released</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N8fx_pedal20print_instance_stackEv">
+<span id="_CPPv3N8fx_pedal20print_instance_stackEv"></span><span id="_CPPv2N8fx_pedal20print_instance_stackEv"></span><span id="fx_pedal::print_instance_stack__void"></span><span class="target" id="classfx__pedal_1aa591b730a9748432e6106275289bd525"></span>void <code class="sig-name descname">print_instance_stack</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8fx_pedal20print_instance_stackEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Utility function to print the instance stack to the console. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N8fx_pedal19print_routing_tableEv">
+<span id="_CPPv3N8fx_pedal19print_routing_tableEv"></span><span id="_CPPv2N8fx_pedal19print_routing_tableEv"></span><span id="fx_pedal::print_routing_table__void"></span><span class="target" id="classfx__pedal_1aafc924cc4d965716545368e4dfcf85c4"></span>void <code class="sig-name descname">print_routing_table</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8fx_pedal19print_routing_tableEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Utility function to print the routing table to the console. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N8fx_pedal18print_param_tablesEv">
+<span id="_CPPv3N8fx_pedal18print_param_tablesEv"></span><span id="_CPPv2N8fx_pedal18print_param_tablesEv"></span><span id="fx_pedal::print_param_tables__void"></span><span class="target" id="classfx__pedal_1a9383c75a2dd8557f0bd4927846113836"></span>void <code class="sig-name descname">print_param_tables</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8fx_pedal18print_param_tablesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Utility function to print the parameter tables. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N8fx_pedal20print_processor_loadEi">
+<span id="_CPPv3N8fx_pedal20print_processor_loadEi"></span><span id="_CPPv2N8fx_pedal20print_processor_loadEi"></span><span id="fx_pedal::print_processor_load__i"></span><span class="target" id="classfx__pedal_1ac28cbf7f885ce543abdf7484ef48de91"></span>void <code class="sig-name descname">print_processor_load</code><span class="sig-paren">(</span>int <em>seconds</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8fx_pedal20print_processor_loadEi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv4N8fx_pedal8instr_inE">
+<span id="_CPPv3N8fx_pedal8instr_inE"></span><span id="_CPPv2N8fx_pedal8instr_inE"></span><span id="fx_pedal::instr_in__fx_audio_nodeP"></span><span class="target" id="classfx__pedal_1ac663c7f4236dca2b131e3d42b37a1c98"></span>fx_audio_node *<code class="sig-name descname">instr_in</code><a class="headerlink" href="#_CPPv4N8fx_pedal8instr_inE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N8fx_pedal10instr_in_lE">
+<span id="_CPPv3N8fx_pedal10instr_in_lE"></span><span id="_CPPv2N8fx_pedal10instr_in_lE"></span><span id="fx_pedal::instr_in_l__fx_audio_nodeP"></span><span class="target" id="classfx__pedal_1af9224fc19efa6115d4fadf8c74b894bf"></span>fx_audio_node *<code class="sig-name descname">instr_in_l</code><a class="headerlink" href="#_CPPv4N8fx_pedal10instr_in_lE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N8fx_pedal10instr_in_rE">
+<span id="_CPPv3N8fx_pedal10instr_in_rE"></span><span id="_CPPv2N8fx_pedal10instr_in_rE"></span><span id="fx_pedal::instr_in_r__fx_audio_nodeP"></span><span class="target" id="classfx__pedal_1a202ea144ad8fa3d7620a27b7916e1e36"></span>fx_audio_node *<code class="sig-name descname">instr_in_r</code><a class="headerlink" href="#_CPPv4N8fx_pedal10instr_in_rE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N8fx_pedal7amp_outE">
+<span id="_CPPv3N8fx_pedal7amp_outE"></span><span id="_CPPv2N8fx_pedal7amp_outE"></span><span id="fx_pedal::amp_out__fx_audio_nodeP"></span><span class="target" id="classfx__pedal_1af2c3f21279f9ed7ba8ce5a9bf42b50f8"></span>fx_audio_node *<code class="sig-name descname">amp_out</code><a class="headerlink" href="#_CPPv4N8fx_pedal7amp_outE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N8fx_pedal9amp_out_lE">
+<span id="_CPPv3N8fx_pedal9amp_out_lE"></span><span id="_CPPv2N8fx_pedal9amp_out_lE"></span><span id="fx_pedal::amp_out_l__fx_audio_nodeP"></span><span class="target" id="classfx__pedal_1a2197f98cc5292da8b7eb60dca3dcecb1"></span>fx_audio_node *<code class="sig-name descname">amp_out_l</code><a class="headerlink" href="#_CPPv4N8fx_pedal9amp_out_lE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N8fx_pedal9amp_out_rE">
+<span id="_CPPv3N8fx_pedal9amp_out_rE"></span><span id="_CPPv2N8fx_pedal9amp_out_rE"></span><span id="fx_pedal::amp_out_r__fx_audio_nodeP"></span><span class="target" id="classfx__pedal_1a7f9bf7fbdce7cd0878137576ea72a8d2"></span>fx_audio_node *<code class="sig-name descname">amp_out_r</code><a class="headerlink" href="#_CPPv4N8fx_pedal9amp_out_rE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N8fx_pedal8mic_in_lE">
+<span id="_CPPv3N8fx_pedal8mic_in_lE"></span><span id="_CPPv2N8fx_pedal8mic_in_lE"></span><span id="fx_pedal::mic_in_l__fx_audio_nodeP"></span><span class="target" id="classfx__pedal_1a1f66e0252e5493bbe1dae78924385cf9"></span>fx_audio_node *<code class="sig-name descname">mic_in_l</code><a class="headerlink" href="#_CPPv4N8fx_pedal8mic_in_lE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N8fx_pedal8mic_in_rE">
+<span id="_CPPv3N8fx_pedal8mic_in_rE"></span><span id="_CPPv2N8fx_pedal8mic_in_rE"></span><span id="fx_pedal::mic_in_r__fx_audio_nodeP"></span><span class="target" id="classfx__pedal_1a41247c0ad00c30ae6c889c87aeff1c7e"></span>fx_audio_node *<code class="sig-name descname">mic_in_r</code><a class="headerlink" href="#_CPPv4N8fx_pedal8mic_in_rE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N8fx_pedal14note_frequencyE">
+<span id="_CPPv3N8fx_pedal14note_frequencyE"></span><span id="_CPPv2N8fx_pedal14note_frequencyE"></span><span id="fx_pedal::note_frequency__fx_control_nodeP"></span><span class="target" id="classfx__pedal_1a7d2e1a8979062862355f4f2699937652"></span>fx_control_node *<code class="sig-name descname">note_frequency</code><a class="headerlink" href="#_CPPv4N8fx_pedal14note_frequencyE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N8fx_pedal13note_durationE">
+<span id="_CPPv3N8fx_pedal13note_durationE"></span><span id="_CPPv2N8fx_pedal13note_durationE"></span><span id="fx_pedal::note_duration__fx_control_nodeP"></span><span class="target" id="classfx__pedal_1a7ec1d597a0beb9e0205f860b18c5e1ac"></span>fx_control_node *<code class="sig-name descname">note_duration</code><a class="headerlink" href="#_CPPv4N8fx_pedal13note_durationE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N8fx_pedal8new_noteE">
+<span id="_CPPv3N8fx_pedal8new_noteE"></span><span id="_CPPv2N8fx_pedal8new_noteE"></span><span id="fx_pedal::new_note__fx_control_nodeP"></span><span class="target" id="classfx__pedal_1ae4ae206679e31a8e26c1fc1693f79691"></span>fx_control_node *<code class="sig-name descname">new_note</code><a class="headerlink" href="#_CPPv4N8fx_pedal8new_noteE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Protected Attributes</p>
+<dl class="member">
+<dt id="_CPPv4N8fx_pedal16audio_node_stackE">
+<span id="_CPPv3N8fx_pedal16audio_node_stackE"></span><span id="_CPPv2N8fx_pedal16audio_node_stackE"></span><span id="fx_pedal::audio_node_stack__fx_audio_nodePA"></span><span class="target" id="classfx__pedal_1a09870edaa6462260acd376f08a87f142"></span>fx_audio_node *<code class="sig-name descname">audio_node_stack</code>[4]<a class="headerlink" href="#_CPPv4N8fx_pedal16audio_node_stackE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N8fx_pedal18control_node_stackE">
+<span id="_CPPv3N8fx_pedal18control_node_stackE"></span><span id="_CPPv2N8fx_pedal18control_node_stackE"></span><span id="fx_pedal::control_node_stack__fx_control_nodePA"></span><span class="target" id="classfx__pedal_1a6c540a4cb9f53b0607d01a6c7cabab2f"></span>fx_control_node *<code class="sig-name descname">control_node_stack</code>[4]<a class="headerlink" href="#_CPPv4N8fx_pedal18control_node_stackE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="classfx__led.html" class="btn btn-neutral float-right" title="Class fx_led" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../markdown/troubleshooting.html" class="btn btn-neutral float-left" title="General troubleshooting" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Run Jump Labs
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

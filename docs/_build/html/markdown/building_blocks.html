@@ -1,0 +1,253 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Building Blocks &mdash; DreamMaker FX Documentation  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> DreamMaker FX Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="echo_basic.html">Building a Basic Echo Pedal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adding_effects.html">The basics of creating / adding effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="routing_audio.html">The basics of routing audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controlling_effects.html">The basics of controlling effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_api.html">Using the API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debugging.html">Debugging Sketches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">General troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Pedal Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__pedal.html">Pedal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__led.html">LEDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__pot.html">Pots/Knobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__switch.html">Switches</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Effect Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__adsr__envelope.html">ADSR Envelope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__amplitude__mod.html">Amplitude Modulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__compressor.html">Compressor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__delay.html">Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__destructor.html">Destructor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__envelope__tracker.html">Envelope Follower</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__gain.html">Gain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__instrument__synth.html">Instrument Synth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__looper.html">Looper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__multitap__delay.html">Multi-tap Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__oscillator.html">Oscillator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__phase__shifter.html">Phase Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__pitch__shift.html">Pitch Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__ring__mod.html">Ring Modulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__slicer.html">Slicer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__variable__delay.html">Variable Delay</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DreamMaker FX Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Building Blocks</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/markdown/building_blocks.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="building-blocks">
+<h1>Building Blocks<a class="headerlink" href="#building-blocks" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<p>There are several effect “modules” that can be used and combined in a pedal.</p>
+<p>Each module name has an <code class="docutils literal notranslate"><span class="pre">fx_</span></code> prefix such as <code class="docutils literal notranslate"><span class="pre">fx_delay</span></code> and <code class="docutils literal notranslate"><span class="pre">fx_phaser</span></code>.  A sketch can contain multiple “instances” of a module and multiple modes.</p>
+<p>Each module also has a combination of audio nodes and control nodes.  More complete documentation for each module can be found in the cheatsheet, a lighter weight reference, or the full API documentation.  Both of these are available on API Documentation page in the menu above.</p>
+<p>Below is a brief summary of the available modules:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">fx_adsr_envelope</span></code> - An “envelope” or volume control functon that determines how the volume of a signal changes over time after a new note/pluck is detected.  ADSR stands for Attack, Decay, Sustain, Release.  Here’s a nice video explaining the basics of ADSRs: https://www.youtube.com/watch?v=JT6rixgu4s4.  The ADSR can also control things other than volume.  For example, it could be connected to a filter to sweep the filter over the incoming instrument signal.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fx_amplitude_modulator</span></code> - Varies the volume of the signal over time using a low frequency oscillator (LFO).  Amplitude modulation is what creates the tremelo sound (varying the volume of an instrument signal using a sine wave function).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fx_biquad_filter</span></code> - Provides various common types of audio filters such as low-pass, high-pass, band-pass, parametric and several others.  Audio filters can be static (not changing) or dynamic (changing).  The frequency and resonance of a filter can be tied to several different types of control sources such as pot on the pedal, or an oscillator, or the volume of the incoming signal.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fx_compressor</span></code> - Provides “dynamic” gain control.  In essence when the volume of the incoming signal exceeds a threshold, the compressor will dynamically adjust the volume down.  It can create long sustaining sounds rather than a pluck followed by a quickly diminishing signal.  Here is a nice video explaining the basics of compression: https://www.youtube.com/embed/8nM5GsNNbyA.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fx_delay</span></code> - A basic echo effect with lots of adjustable parameters and a send/receive loop to inject additional effects into the echo loop.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fx_destructor</span></code> - A variety of distortion functions including soft, polynomial tube-amp-like distortion, fuzz, bit-crushing, sample-rate crushing, shaping, digital distortion and more.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fx_envelope_tracker</span></code> - An input-only module that tracks the volume of the incoming signal.  Its control output can be connected to other modules to create dynamic, volume controlled effects like envelope filters and auto-wahs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fx_gain</span></code> - A basic volume control element.  This element is also useful when mixing between different branches of an effect or turning on/off different aspects of an effect.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fx_looper</span></code> - A very flexible looper that supports variable playback rate and reverse playback.  Multiple loopers can be used to create multi-layer loopers.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fx_mixer</span></code> - A collection of mixer modules for mixing signals together.  Presently available in 2-&gt;1, 3-&gt;1 and 4-&gt;1 configurations.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fx_octave</span></code> - A synth octave generator that creates a synth note at the current frequncy, one octave down, and two octaves down.  Synth mix and synth waveforms are configurable.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fx_oscillator</span></code> - A collection of oscillators that can be used either for audio synthesis or control</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fx_phase_shifter</span></code> - A phase shifter</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fx_pitch_shift</span></code> - A pitch shifter</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fx_ring_mod</span></code> - A ring modulator / analog pitch shifter</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fx_slicer</span></code> - Rhymically sequences incoming audio through different effects.  Great for creating interesting rhytmic effects.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fx_variable_delay</span></code> - A super useful building block that can be used to create flange and chorus effects, vibrato, and general modulation.  Fun to use in feedback loops and fx send/receive loops.</p></li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Run Jump Labs
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

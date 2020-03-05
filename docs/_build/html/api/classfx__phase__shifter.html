@@ -1,0 +1,407 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Class fx_phase_shifter &mdash; DreamMaker FX Documentation  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class fx_pitch_shift" href="classfx__pitch__shift.html" />
+    <link rel="prev" title="Class fx_oscillator" href="classfx__oscillator.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> DreamMaker FX Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/echo_basic.html">Building a Basic Echo Pedal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/adding_effects.html">The basics of creating / adding effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/routing_audio.html">The basics of routing audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/controlling_effects.html">The basics of controlling effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/using_api.html">Using the API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/debugging.html">Debugging Sketches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/troubleshooting.html">General troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Pedal Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__pedal.html">Pedal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__led.html">LEDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__pot.html">Pots/Knobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__switch.html">Switches</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Effect Reference:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="classfx__adsr__envelope.html">ADSR Envelope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__amplitude__mod.html">Amplitude Modulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__compressor.html">Compressor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__delay.html">Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__destructor.html">Destructor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__envelope__tracker.html">Envelope Follower</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__gain.html">Gain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__instrument__synth.html">Instrument Synth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__looper.html">Looper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__multitap__delay.html">Multi-tap Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__oscillator.html">Oscillator</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Phase Shifter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__pitch__shift.html">Pitch Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__ring__mod.html">Ring Modulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__slicer.html">Slicer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__variable__delay.html">Variable Delay</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DreamMaker FX Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Class fx_phase_shifter</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/classfx__phase__shifter.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="class-fx-phase-shifter">
+<span id="exhale-class-classfx-phase-shifter"></span><h1>Class fx_phase_shifter<a class="headerlink" href="#class-fx-phase-shifter" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_src_effects_dm_fx_phase_shifter.h.html#file-src-effects-dm-fx-phase-shifter-h"><span class="std std-ref">File dm_fx_phase_shifter.h</span></a></p></li>
+</ul>
+<div class="section" id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="base-type">
+<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">fx_effect</span></code> (<a class="reference internal" href="classfx__effect.html#exhale-class-classfx-effect"><span class="std std-ref">Class fx_effect</span></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv416fx_phase_shifter">
+<span id="_CPPv316fx_phase_shifter"></span><span id="_CPPv216fx_phase_shifter"></span><span id="fx_phase_shifter"></span><span class="target" id="classfx__phase__shifter"></span><em class="property">class </em><code class="sig-name descname">fx_phase_shifter</code> : <em class="property">public</em> <a class="reference internal" href="classfx__effect.html#_CPPv49fx_effect" title="fx_effect">fx_effect</a><a class="headerlink" href="#_CPPv416fx_phase_shifter" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Effect: Phase shifter for creating rich phase shifts. </p>
+<p>Example: <strong>phase_shifter_1.c</strong> </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N16fx_phase_shifter16fx_phase_shifterEfff">
+<span id="_CPPv3N16fx_phase_shifter16fx_phase_shifterEfff"></span><span id="_CPPv2N16fx_phase_shifter16fx_phase_shifterEfff"></span><span id="fx_phase_shifter::fx_phase_shifter__float.float.float"></span><span class="target" id="classfx__phase__shifter_1a3a121772ae94e0f4821bbc67349881d3"></span><code class="sig-name descname">fx_phase_shifter</code><span class="sig-paren">(</span>float <em>rate_hz</em>, float <em>depth</em>, float <em>feedback</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16fx_phase_shifter16fx_phase_shifterEfff" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Basic constructor/initializer for the phase shifter. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">rate_hz</span></code>: The rate hz of the LFO modulating the phase shifter </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">depth</span></code>: The depth of the phase shifter </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">feedback</span></code>: The feedback of the phase shifter </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N16fx_phase_shifter16fx_phase_shifterEffff9OSC_TYPES">
+<span id="_CPPv3N16fx_phase_shifter16fx_phase_shifterEffff9OSC_TYPES"></span><span id="_CPPv2N16fx_phase_shifter16fx_phase_shifterEffff9OSC_TYPES"></span><span id="fx_phase_shifter::fx_phase_shifter__float.float.float.float.OSC_TYPES"></span><span class="target" id="classfx__phase__shifter_1a4acc2b17739a801a72623dd645b1b32c"></span><code class="sig-name descname">fx_phase_shifter</code><span class="sig-paren">(</span>float <em>rate_hz</em>, float <em>depth</em>, float <em>feedback</em>, float <em>inital_phase</em>, <a class="reference internal" href="enum_group___enumerations_1gada898a149424188b3a23010c8fe89176.html#_CPPv49OSC_TYPES" title="OSC_TYPES">OSC_TYPES</a> <em>mod_type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16fx_phase_shifter16fx_phase_shifterEffff9OSC_TYPES" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Constructs a new instance. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">rate_hz</span></code>: The rate hz of the LFO modulating the phase shifter </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">depth</span></code>: The depth of the phase shifter (0.0 -&gt; 1.0) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">feedback</span></code>: The feedback of the phase shifter (-1.0 -&gt; 1.0) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">inital_phase</span></code>: The inital phase in degrees of the LFO </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">mod_type</span></code>: The modifier type (OSC_TYPES) </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N16fx_phase_shifter6enableEv">
+<span id="_CPPv3N16fx_phase_shifter6enableEv"></span><span id="_CPPv2N16fx_phase_shifter6enableEv"></span><span id="fx_phase_shifter::enable"></span><span class="target" id="classfx__phase__shifter_1a02b925c2b19530efcda28486ff7d286a"></span>void <code class="sig-name descname">enable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16fx_phase_shifter6enableEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Enable the phase shifter (it is enabled by default) </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N16fx_phase_shifter6bypassEv">
+<span id="_CPPv3N16fx_phase_shifter6bypassEv"></span><span id="_CPPv2N16fx_phase_shifter6bypassEv"></span><span id="fx_phase_shifter::bypass"></span><span class="target" id="classfx__phase__shifter_1a361a5bd72a429333d3e1a0120332c19f"></span>void <code class="sig-name descname">bypass</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16fx_phase_shifter6bypassEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Bypass the phase shifter (will just pass clean audio through) </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N16fx_phase_shifter9set_depthEf">
+<span id="_CPPv3N16fx_phase_shifter9set_depthEf"></span><span id="_CPPv2N16fx_phase_shifter9set_depthEf"></span><span id="fx_phase_shifter::set_depth__float"></span><span class="target" id="classfx__phase__shifter_1a5775686b16e0adf4f44cfc7701a02b68"></span>void <code class="sig-name descname">set_depth</code><span class="sig-paren">(</span>float <em>depth</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16fx_phase_shifter9set_depthEf" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sets the depth of the phase shifter. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">depth</span></code>: The depth fom 0.0 -&gt; 1.0. 0.0 is no modulation at all, 1.0 is full modulation. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N16fx_phase_shifter11set_rate_hzEf">
+<span id="_CPPv3N16fx_phase_shifter11set_rate_hzEf"></span><span id="_CPPv2N16fx_phase_shifter11set_rate_hzEf"></span><span id="fx_phase_shifter::set_rate_hz__float"></span><span class="target" id="classfx__phase__shifter_1acfdf8c4124e0e95cbaa3e5fbf6b23a9f"></span>void <code class="sig-name descname">set_rate_hz</code><span class="sig-paren">(</span>float <em>rate_hz</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16fx_phase_shifter11set_rate_hzEf" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sets the rate of the phase shifter in Hertz (cycles per second) </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">rate_hz</span></code>: The rate hz </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N16fx_phase_shifter12set_feedbackEf">
+<span id="_CPPv3N16fx_phase_shifter12set_feedbackEf"></span><span id="_CPPv2N16fx_phase_shifter12set_feedbackEf"></span><span id="fx_phase_shifter::set_feedback__float"></span><span class="target" id="classfx__phase__shifter_1a48317de95377711857ba1d660bbc4bd7"></span>void <code class="sig-name descname">set_feedback</code><span class="sig-paren">(</span>float <em>feedback</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16fx_phase_shifter12set_feedbackEf" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sets the feedback of the phase shifter. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">feedback</span></code>: Feedback value (between -1.0 and 1.0) </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N16fx_phase_shifter12set_lfo_typeE9OSC_TYPES">
+<span id="_CPPv3N16fx_phase_shifter12set_lfo_typeE9OSC_TYPES"></span><span id="_CPPv2N16fx_phase_shifter12set_lfo_typeE9OSC_TYPES"></span><span id="fx_phase_shifter::set_lfo_type__OSC_TYPES"></span><span class="target" id="classfx__phase__shifter_1a7089c1b4c3fc15c7f274835c345d3abc"></span>void <code class="sig-name descname">set_lfo_type</code><span class="sig-paren">(</span><a class="reference internal" href="enum_group___enumerations_1gada898a149424188b3a23010c8fe89176.html#_CPPv49OSC_TYPES" title="OSC_TYPES">OSC_TYPES</a> <em>new_type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16fx_phase_shifter12set_lfo_typeE9OSC_TYPES" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sets the the type of oscillator used as the LFO. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">new_type</span></code>: The new type of LFO (OSC_TYPES) </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N16fx_phase_shifter12print_paramsEv">
+<span id="_CPPv3N16fx_phase_shifter12print_paramsEv"></span><span id="_CPPv2N16fx_phase_shifter12print_paramsEv"></span><span id="fx_phase_shifter::print_params__void"></span><span class="target" id="classfx__phase__shifter_1a4bd5e5a813c8b07fba88fb1b689fc25f"></span>void <code class="sig-name descname">print_params</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16fx_phase_shifter12print_paramsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Print the parameters for this effect. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv4N16fx_phase_shifter5inputE">
+<span id="_CPPv3N16fx_phase_shifter5inputE"></span><span id="_CPPv2N16fx_phase_shifter5inputE"></span><span id="fx_phase_shifter::input__fx_audio_nodeP"></span><span class="target" id="classfx__phase__shifter_1a6b3c2e7b30e37e8f39f4ea74edcc1da8"></span>fx_audio_node *<code class="sig-name descname">input</code><a class="headerlink" href="#_CPPv4N16fx_phase_shifter5inputE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Audio routing node: primary audio input </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N16fx_phase_shifter6outputE">
+<span id="_CPPv3N16fx_phase_shifter6outputE"></span><span id="_CPPv2N16fx_phase_shifter6outputE"></span><span id="fx_phase_shifter::output__fx_audio_nodeP"></span><span class="target" id="classfx__phase__shifter_1a1516ae9bc8081a37bd4b587cc8cbdbdf"></span>fx_audio_node *<code class="sig-name descname">output</code><a class="headerlink" href="#_CPPv4N16fx_phase_shifter6outputE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Audio routing node: primary audio output </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N16fx_phase_shifter5depthE">
+<span id="_CPPv3N16fx_phase_shifter5depthE"></span><span id="_CPPv2N16fx_phase_shifter5depthE"></span><span id="fx_phase_shifter::depth__fx_control_nodeP"></span><span class="target" id="classfx__phase__shifter_1a09af8400b1ee18ceb91eb0def1d6d58d"></span>fx_control_node *<code class="sig-name descname">depth</code><a class="headerlink" href="#_CPPv4N16fx_phase_shifter5depthE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Control routing node: phase shifter depth (should be between 0.0 and 1.0) </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N16fx_phase_shifter7rate_hzE">
+<span id="_CPPv3N16fx_phase_shifter7rate_hzE"></span><span id="_CPPv2N16fx_phase_shifter7rate_hzE"></span><span id="fx_phase_shifter::rate_hz__fx_control_nodeP"></span><span class="target" id="classfx__phase__shifter_1aee41f77d8694d6267ae46aff7bafe052"></span>fx_control_node *<code class="sig-name descname">rate_hz</code><a class="headerlink" href="#_CPPv4N16fx_phase_shifter7rate_hzE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Control routing node: phase shifter rate (Hz) (i.e. 1.0 = once per second) </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N16fx_phase_shifter8feedbackE">
+<span id="_CPPv3N16fx_phase_shifter8feedbackE"></span><span id="_CPPv2N16fx_phase_shifter8feedbackE"></span><span id="fx_phase_shifter::feedback__fx_control_nodeP"></span><span class="target" id="classfx__phase__shifter_1ad024eec3755afff22c3d79899a443370"></span>fx_control_node *<code class="sig-name descname">feedback</code><a class="headerlink" href="#_CPPv4N16fx_phase_shifter8feedbackE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Control routing node: phase shifter feedback (should be between -1.0 and 1.0) </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="classfx__pitch__shift.html" class="btn btn-neutral float-right" title="Class fx_pitch_shift" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="classfx__oscillator.html" class="btn btn-neutral float-left" title="Class fx_oscillator" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Run Jump Labs
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

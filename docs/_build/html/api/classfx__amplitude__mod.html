@@ -1,0 +1,395 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Class fx_amplitude_mod &mdash; DreamMaker FX Documentation  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class fx_compressor" href="classfx__compressor.html" />
+    <link rel="prev" title="Class fx_adsr_envelope" href="classfx__adsr__envelope.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> DreamMaker FX Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/echo_basic.html">Building a Basic Echo Pedal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/adding_effects.html">The basics of creating / adding effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/routing_audio.html">The basics of routing audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/controlling_effects.html">The basics of controlling effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/using_api.html">Using the API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/debugging.html">Debugging Sketches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/troubleshooting.html">General troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Pedal Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classfx__pedal.html">Pedal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__led.html">LEDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__pot.html">Pots/Knobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__switch.html">Switches</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Effect Reference:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="classfx__adsr__envelope.html">ADSR Envelope</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Amplitude Modulator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__compressor.html">Compressor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__delay.html">Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__destructor.html">Destructor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__envelope__tracker.html">Envelope Follower</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__gain.html">Gain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__instrument__synth.html">Instrument Synth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__looper.html">Looper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__multitap__delay.html">Multi-tap Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__oscillator.html">Oscillator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__phase__shifter.html">Phase Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__pitch__shift.html">Pitch Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__ring__mod.html">Ring Modulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__slicer.html">Slicer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classfx__variable__delay.html">Variable Delay</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DreamMaker FX Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Class fx_amplitude_mod</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/classfx__amplitude__mod.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="class-fx-amplitude-mod">
+<span id="exhale-class-classfx-amplitude-mod"></span><h1>Class fx_amplitude_mod<a class="headerlink" href="#class-fx-amplitude-mod" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_src_effects_dm_fx_amplitude_modulator.h.html#file-src-effects-dm-fx-amplitude-modulator-h"><span class="std std-ref">File dm_fx_amplitude_modulator.h</span></a></p></li>
+</ul>
+<div class="section" id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="base-type">
+<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">fx_effect</span></code> (<a class="reference internal" href="classfx__effect.html#exhale-class-classfx-effect"><span class="std std-ref">Class fx_effect</span></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv416fx_amplitude_mod">
+<span id="_CPPv316fx_amplitude_mod"></span><span id="_CPPv216fx_amplitude_mod"></span><span id="fx_amplitude_mod"></span><span class="target" id="classfx__amplitude__mod"></span><em class="property">class </em><code class="sig-name descname">fx_amplitude_mod</code> : <em class="property">public</em> <a class="reference internal" href="classfx__effect.html#_CPPv49fx_effect" title="fx_effect">fx_effect</a><a class="headerlink" href="#_CPPv416fx_amplitude_mod" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Effect: Amplitude modulator for creating tremelo-like effects. </p>
+<p>An amplitude modulator will change the volume or “amplitude” of the audio to create various types of tremelo effects.</p>
+<p>Here’s a video demonstrating how amplitude modulators work: YTIDAxZVMyIFqcADITY</p>
+<p>Code example: ___amp_mod_1.c___ </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N16fx_amplitude_mod16fx_amplitude_modEff">
+<span id="_CPPv3N16fx_amplitude_mod16fx_amplitude_modEff"></span><span id="_CPPv2N16fx_amplitude_mod16fx_amplitude_modEff"></span><span id="fx_amplitude_mod::fx_amplitude_mod__float.float"></span><span class="target" id="classfx__amplitude__mod_1acfe6780b005b6b34ba58e82b9b64cf50"></span><code class="sig-name descname">fx_amplitude_mod</code><span class="sig-paren">(</span>float <em>rate_hz</em>, float <em>depth</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16fx_amplitude_mod16fx_amplitude_modEff" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Basic constructor/initializer for amplitude modulator. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">modulation_rate</span></code>: The amp modifier rate in Hertz (cycles / second) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">modulation_depth</span></code>: The amp modifier depth (0.0 is no modulation -&gt; 1.0 is full modulation) </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N16fx_amplitude_mod16fx_amplitude_modEfff9OSC_TYPESb">
+<span id="_CPPv3N16fx_amplitude_mod16fx_amplitude_modEfff9OSC_TYPESb"></span><span id="_CPPv2N16fx_amplitude_mod16fx_amplitude_modEfff9OSC_TYPESb"></span><span id="fx_amplitude_mod::fx_amplitude_mod__float.float.float.OSC_TYPES.b"></span><span class="target" id="classfx__amplitude__mod_1a354b528d3a59d766b7fc3e1ed74427f9"></span><code class="sig-name descname">fx_amplitude_mod</code><span class="sig-paren">(</span>float <em>rate_hz</em>, float <em>depth</em>, float <em>initial_phase_deg</em>, <a class="reference internal" href="enum_group___enumerations_1gada898a149424188b3a23010c8fe89176.html#_CPPv49OSC_TYPES" title="OSC_TYPES">OSC_TYPES</a> <em>modulation_type</em>, bool <em>use_ext_modulator</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16fx_amplitude_mod16fx_amplitude_modEfff9OSC_TYPESb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Advanced constructor for the amplitude modulator. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">rate_hz</span></code>: The amp modifier rate in Hertz (cycles / second) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">depth</span></code>: The amp modifier depth (0.0 is no modulation -&gt; 1.0 is full modulation) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">initial_phase_deg</span></code>: The initial phase of the oscillator in degrees (0-360)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">modulation_type</span></code>: The amp modifier type - see the definition of OSC_TYPES to see the different waveform options </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">use_ext_modulator</span></code>: Whether or not to use an externally generated waveform as the modulation source </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N16fx_amplitude_mod6enableEv">
+<span id="_CPPv3N16fx_amplitude_mod6enableEv"></span><span id="_CPPv2N16fx_amplitude_mod6enableEv"></span><span id="fx_amplitude_mod::enable"></span><span class="target" id="classfx__amplitude__mod_1a4c21c0e9725c1dd515a2bf0b2fb8f99e"></span>void <code class="sig-name descname">enable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16fx_amplitude_mod6enableEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Enable the amplitude modululator (it is enabled by default) </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N16fx_amplitude_mod6bypassEv">
+<span id="_CPPv3N16fx_amplitude_mod6bypassEv"></span><span id="_CPPv2N16fx_amplitude_mod6bypassEv"></span><span id="fx_amplitude_mod::bypass"></span><span class="target" id="classfx__amplitude__mod_1a5d5ef5ff79e9c553a9ee5116c3dfa516"></span>void <code class="sig-name descname">bypass</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16fx_amplitude_mod6bypassEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Bypass the amplitude modululator (will just pass clean audio through) </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N16fx_amplitude_mod9set_depthEf">
+<span id="_CPPv3N16fx_amplitude_mod9set_depthEf"></span><span id="_CPPv2N16fx_amplitude_mod9set_depthEf"></span><span id="fx_amplitude_mod::set_depth__float"></span><span class="target" id="classfx__amplitude__mod_1ac0c2c2ab77761c961cd569d36e26ab17"></span>void <code class="sig-name descname">set_depth</code><span class="sig-paren">(</span>float <em>depth</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16fx_amplitude_mod9set_depthEf" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sets the depth of the amplitude modululator. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">depth</span></code>: The depth fom 0.0 -&gt; 1.0. 0.0 is no modulation at all, 1.0 is full modulation. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N16fx_amplitude_mod11set_rate_hzEf">
+<span id="_CPPv3N16fx_amplitude_mod11set_rate_hzEf"></span><span id="_CPPv2N16fx_amplitude_mod11set_rate_hzEf"></span><span id="fx_amplitude_mod::set_rate_hz__float"></span><span class="target" id="classfx__amplitude__mod_1a90b19e7b942c13979bddeba8579813a4"></span>void <code class="sig-name descname">set_rate_hz</code><span class="sig-paren">(</span>float <em>rate_hz</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16fx_amplitude_mod11set_rate_hzEf" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sets the rate of the modulator in Hertz (cycles per second) </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">rate_hz</span></code>: The rate hz </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N16fx_amplitude_mod12set_lfo_typeE9OSC_TYPES">
+<span id="_CPPv3N16fx_amplitude_mod12set_lfo_typeE9OSC_TYPES"></span><span id="_CPPv2N16fx_amplitude_mod12set_lfo_typeE9OSC_TYPES"></span><span id="fx_amplitude_mod::set_lfo_type__OSC_TYPES"></span><span class="target" id="classfx__amplitude__mod_1a2561e4ad01e6a629409b59d73a86caf3"></span>void <code class="sig-name descname">set_lfo_type</code><span class="sig-paren">(</span><a class="reference internal" href="enum_group___enumerations_1gada898a149424188b3a23010c8fe89176.html#_CPPv49OSC_TYPES" title="OSC_TYPES">OSC_TYPES</a> <em>new_type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16fx_amplitude_mod12set_lfo_typeE9OSC_TYPES" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sets the the type of oscillator used as the LFO. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">new_type</span></code>: The new type of LFO (OSC_TYPES) </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N16fx_amplitude_mod12print_paramsEv">
+<span id="_CPPv3N16fx_amplitude_mod12print_paramsEv"></span><span id="_CPPv2N16fx_amplitude_mod12print_paramsEv"></span><span id="fx_amplitude_mod::print_params__void"></span><span class="target" id="classfx__amplitude__mod_1a62563870f85a17142b545e1e8b718fdf"></span>void <code class="sig-name descname">print_params</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16fx_amplitude_mod12print_paramsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Print the parameters for this effect. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv4N16fx_amplitude_mod5inputE">
+<span id="_CPPv3N16fx_amplitude_mod5inputE"></span><span id="_CPPv2N16fx_amplitude_mod5inputE"></span><span id="fx_amplitude_mod::input__fx_audio_nodeP"></span><span class="target" id="classfx__amplitude__mod_1a52c5dce1e56a9efbceb9f0aa572e35d4"></span>fx_audio_node *<code class="sig-name descname">input</code><a class="headerlink" href="#_CPPv4N16fx_amplitude_mod5inputE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Audio routing node: primary audio input </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N16fx_amplitude_mod6outputE">
+<span id="_CPPv3N16fx_amplitude_mod6outputE"></span><span id="_CPPv2N16fx_amplitude_mod6outputE"></span><span id="fx_amplitude_mod::output__fx_audio_nodeP"></span><span class="target" id="classfx__amplitude__mod_1a3ffb0f78f55a24d56ad40ed71b9c3655"></span>fx_audio_node *<code class="sig-name descname">output</code><a class="headerlink" href="#_CPPv4N16fx_amplitude_mod6outputE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Audio routing node: primary audio output </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N16fx_amplitude_mod10ext_mod_inE">
+<span id="_CPPv3N16fx_amplitude_mod10ext_mod_inE"></span><span id="_CPPv2N16fx_amplitude_mod10ext_mod_inE"></span><span id="fx_amplitude_mod::ext_mod_in__fx_audio_nodeP"></span><span class="target" id="classfx__amplitude__mod_1aeedd96b1c4e5e8e1cbf93fb4e134362b"></span>fx_audio_node *<code class="sig-name descname">ext_mod_in</code><a class="headerlink" href="#_CPPv4N16fx_amplitude_mod10ext_mod_inE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Audio routing node: external modulator audio input </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N16fx_amplitude_mod5depthE">
+<span id="_CPPv3N16fx_amplitude_mod5depthE"></span><span id="_CPPv2N16fx_amplitude_mod5depthE"></span><span id="fx_amplitude_mod::depth__fx_control_nodeP"></span><span class="target" id="classfx__amplitude__mod_1a25ef00aa85c14e895710a505a9c6e0bd"></span>fx_control_node *<code class="sig-name descname">depth</code><a class="headerlink" href="#_CPPv4N16fx_amplitude_mod5depthE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Control routing node: amplifude modulator depth (should be between 0.0 and 1.0) </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N16fx_amplitude_mod7rate_hzE">
+<span id="_CPPv3N16fx_amplitude_mod7rate_hzE"></span><span id="_CPPv2N16fx_amplitude_mod7rate_hzE"></span><span id="fx_amplitude_mod::rate_hz__fx_control_nodeP"></span><span class="target" id="classfx__amplitude__mod_1ad85024759667cd9decc11e4fb24461ef"></span>fx_control_node *<code class="sig-name descname">rate_hz</code><a class="headerlink" href="#_CPPv4N16fx_amplitude_mod7rate_hzE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Control routing node: amplitide modulator rate (Hz) (i.e. 1.0 = once per second) </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="classfx__compressor.html" class="btn btn-neutral float-right" title="Class fx_compressor" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="classfx__adsr__envelope.html" class="btn btn-neutral float-left" title="Class fx_adsr_envelope" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Run Jump Labs
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

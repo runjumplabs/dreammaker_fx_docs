@@ -1,0 +1,533 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classfx__envelope__tracker" kind="class" language="C++" prot="public">
+    <compoundname>fx_envelope_tracker</compoundname>
+    <basecompoundref refid="classfx__effect" prot="public" virt="non-virtual">fx_effect</basecompoundref>
+    <includes refid="dm__fx__envelope__tracker_8h" local="no">dm_fx_envelope_tracker.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classfx__envelope__tracker_1a391c038c35f020db4528091c9a4c9ab9" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float fx_envelope_tracker::param_decay_ms</definition>
+        <argsstring></argsstring>
+        <name>param_decay_ms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_envelope_tracker.h" line="20" column="1" bodyfile="src/effects/dm_fx_envelope_tracker.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__envelope__tracker_1a604016a2aec89bfb9895d79030034d67" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float fx_envelope_tracker::param_attack_ms</definition>
+        <argsstring></argsstring>
+        <name>param_attack_ms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_envelope_tracker.h" line="21" column="1" bodyfile="src/effects/dm_fx_envelope_tracker.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__envelope__tracker_1acd1cdada1962af840f746336d72b8674" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool fx_envelope_tracker::param_triggered</definition>
+        <argsstring></argsstring>
+        <name>param_triggered</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_envelope_tracker.h" line="22" column="1" bodyfile="src/effects/dm_fx_envelope_tracker.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__envelope__tracker_1a7b7104066117441072749e36c130520e" prot="private" static="no" mutable="no">
+        <type>ENV_TRACKER_TYPE</type>
+        <definition>ENV_TRACKER_TYPE fx_envelope_tracker::param_type</definition>
+        <argsstring></argsstring>
+        <name>param_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_envelope_tracker.h" line="23" column="1" bodyfile="src/effects/dm_fx_envelope_tracker.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__envelope__tracker_1a1f5961aeba4863df302e144b6bee4acf" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float fx_envelope_tracker::param_scale</definition>
+        <argsstring></argsstring>
+        <name>param_scale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_envelope_tracker.h" line="24" column="1" bodyfile="src/effects/dm_fx_envelope_tracker.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__envelope__tracker_1a49e5cf84f6ab00c78262eed00f4d7e07" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float fx_envelope_tracker::param_offset</definition>
+        <argsstring></argsstring>
+        <name>param_offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_envelope_tracker.h" line="25" column="1" bodyfile="src/effects/dm_fx_envelope_tracker.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__envelope__tracker_1a03ef9db8c6b3b0d0f52f3392cd78492b" prot="private" static="no" mutable="no">
+        <type>fx_control_node</type>
+        <definition>fx_control_node fx_envelope_tracker::node_ctrl_attack_ms</definition>
+        <argsstring></argsstring>
+        <name>node_ctrl_attack_ms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_envelope_tracker.h" line="28" column="1" bodyfile="src/effects/dm_fx_envelope_tracker.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__envelope__tracker_1a611706bb3127484c9738023bedb7efc1" prot="private" static="no" mutable="no">
+        <type>fx_control_node</type>
+        <definition>fx_control_node fx_envelope_tracker::node_ctrl_decay_ms</definition>
+        <argsstring></argsstring>
+        <name>node_ctrl_decay_ms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_envelope_tracker.h" line="29" column="1" bodyfile="src/effects/dm_fx_envelope_tracker.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__envelope__tracker_1a82dfa60ba8ee1f39dabd9499be752cf8" prot="private" static="no" mutable="no">
+        <type>fx_control_node</type>
+        <definition>fx_control_node fx_envelope_tracker::node_ctrl_envelope</definition>
+        <argsstring></argsstring>
+        <name>node_ctrl_envelope</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_envelope_tracker.h" line="30" column="1" bodyfile="src/effects/dm_fx_envelope_tracker.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__envelope__tracker_1ab4d0d2c8f2fe73ba2e1d9c4bab8cdc73" prot="private" static="no" mutable="no">
+        <type>fx_control_node</type>
+        <definition>fx_control_node fx_envelope_tracker::node_ctrl_scale</definition>
+        <argsstring></argsstring>
+        <name>node_ctrl_scale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_envelope_tracker.h" line="31" column="1" bodyfile="src/effects/dm_fx_envelope_tracker.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__envelope__tracker_1a2c0bdf5849d40e65e0aefec86a7349e0" prot="private" static="no" mutable="no">
+        <type>fx_control_node</type>
+        <definition>fx_control_node fx_envelope_tracker::node_ctrl_offset</definition>
+        <argsstring></argsstring>
+        <name>node_ctrl_offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_envelope_tracker.h" line="32" column="1" bodyfile="src/effects/dm_fx_envelope_tracker.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classfx__envelope__tracker_1a90a1db3263c82aa7b59e7292b777bd82" prot="public" static="no" mutable="no">
+        <type>fx_audio_node *</type>
+        <definition>fx_audio_node* fx_envelope_tracker::input</definition>
+        <argsstring></argsstring>
+        <name>input</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_envelope_tracker.h" line="79" column="1" bodyfile="src/effects/dm_fx_envelope_tracker.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__envelope__tracker_1ae8aae7e2034e97ac804e26f7cfa9bfbe" prot="public" static="no" mutable="no">
+        <type>fx_control_node *</type>
+        <definition>fx_control_node* fx_envelope_tracker::decay_speed_ms</definition>
+        <argsstring></argsstring>
+        <name>decay_speed_ms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Control routing node: decay speed of envelope (milliseconds) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_envelope_tracker.h" line="86" column="1" bodyfile="src/effects/dm_fx_envelope_tracker.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__envelope__tracker_1aecc2a5c2cb85119e7120e7e1c1dfa3e5" prot="public" static="no" mutable="no">
+        <type>fx_control_node *</type>
+        <definition>fx_control_node* fx_envelope_tracker::attack_speed_ms</definition>
+        <argsstring></argsstring>
+        <name>attack_speed_ms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Control routing node: attack speeed of envelope (milliseconds) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_envelope_tracker.h" line="91" column="1" bodyfile="src/effects/dm_fx_envelope_tracker.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__envelope__tracker_1a067a4942058fd43727d9c3575bc44eb2" prot="public" static="no" mutable="no">
+        <type>fx_control_node *</type>
+        <definition>fx_control_node* fx_envelope_tracker::envelope</definition>
+        <argsstring></argsstring>
+        <name>envelope</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Control routing node: envelope signal </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_envelope_tracker.h" line="96" column="1" bodyfile="src/effects/dm_fx_envelope_tracker.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__envelope__tracker_1afc7b87142acdae8f5d16dd2ce0de7769" prot="public" static="no" mutable="no">
+        <type>fx_control_node *</type>
+        <definition>fx_control_node* fx_envelope_tracker::scale</definition>
+        <argsstring></argsstring>
+        <name>scale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Control routing node: scale of envelope signal </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_envelope_tracker.h" line="101" column="1" bodyfile="src/effects/dm_fx_envelope_tracker.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__envelope__tracker_1aacd0932233598dd5abe51f5459c174ea" prot="public" static="no" mutable="no">
+        <type>fx_control_node *</type>
+        <definition>fx_control_node* fx_envelope_tracker::offset</definition>
+        <argsstring></argsstring>
+        <name>offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Control routing node: offset of envelope signal </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_envelope_tracker.h" line="106" column="1" bodyfile="src/effects/dm_fx_envelope_tracker.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classfx__envelope__tracker_1ae59e4ff8c356e127a8fc02b6f27c11f7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_envelope_tracker::init</definition>
+        <argsstring>(void)</argsstring>
+        <name>init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_envelope_tracker.h" line="35" column="1" bodyfile="src/effects/dm_fx_envelope_tracker.h" bodystart="35" bodyend="74"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classfx__envelope__tracker_1ae5d434f970e66fb028d6955e4feb5904" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>fx_envelope_tracker::fx_envelope_tracker</definition>
+        <argsstring>(float attack_speed_ms, float decay_speed_ms, bool triggered)</argsstring>
+        <name>fx_envelope_tracker</name>
+        <param>
+          <type>float</type>
+          <declname>attack_speed_ms</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>decay_speed_ms</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>triggered</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a new envelope tracker instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">attack_speed_ms</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The attack speed milliseconds </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">decay_speed_ms</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The decay speed milliseconds </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">triggered</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Indicates if triggered (should envelope value drop down to zero when new note event is detected) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_envelope_tracker.h" line="115" column="1" bodyfile="src/effects/dm_fx_envelope_tracker.h" bodystart="115" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__envelope__tracker_1ab207d2e676545401ded75629f543a542" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>fx_envelope_tracker::fx_envelope_tracker</definition>
+        <argsstring>(float attack_speed_ms, float decay_speed_ms, bool triggered, float ctrl_scale, float ctrl_offset)</argsstring>
+        <name>fx_envelope_tracker</name>
+        <param>
+          <type>float</type>
+          <declname>attack_speed_ms</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>decay_speed_ms</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>triggered</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ctrl_scale</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ctrl_offset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_envelope_tracker.h" line="132" column="1" bodyfile="src/effects/dm_fx_envelope_tracker.h" bodystart="132" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__envelope__tracker_1adcb2549d59d71a39dff1b39854a3d045" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_envelope_tracker::set_attack_speed_ms</definition>
+        <argsstring>(float attack_speed_ms)</argsstring>
+        <name>set_attack_speed_ms</name>
+        <param>
+          <type>float</type>
+          <declname>attack_speed_ms</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_envelope_tracker.h" line="150" column="1" bodyfile="src/effects/dm_fx_envelope_tracker.h" bodystart="150" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__envelope__tracker_1a4d6f81bda9887bb96aaa14b974d5d19a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_envelope_tracker::set_decay_speed_ms</definition>
+        <argsstring>(float decay_speed_ms)</argsstring>
+        <name>set_decay_speed_ms</name>
+        <param>
+          <type>float</type>
+          <declname>decay_speed_ms</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_envelope_tracker.h" line="163" column="1" bodyfile="src/effects/dm_fx_envelope_tracker.h" bodystart="163" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__envelope__tracker_1a33a671936b7277cfec0d85e421de4a86" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_envelope_tracker::set_env_scale</definition>
+        <argsstring>(float scale)</argsstring>
+        <name>set_env_scale</name>
+        <param>
+          <type>float</type>
+          <declname>scale</declname>
+        </param>
+        <briefdescription>
+<para>Sets the envelope scale. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The scale value / multiplier </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_envelope_tracker.h" line="181" column="1" bodyfile="src/effects/dm_fx_envelope_tracker.h" bodystart="181" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__envelope__tracker_1a80dab9a18a9237477dd4f9a44272ec01" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_envelope_tracker::set_env_offset</definition>
+        <argsstring>(float offset)</argsstring>
+        <name>set_env_offset</name>
+        <param>
+          <type>float</type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_envelope_tracker.h" line="194" column="1" bodyfile="src/effects/dm_fx_envelope_tracker.h" bodystart="194" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__envelope__tracker_1a7b51364941f46e57860cfbaae1d315db" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_envelope_tracker::print_params</definition>
+        <argsstring>(void)</argsstring>
+        <name>print_params</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_envelope_tracker.h" line="208" column="1" bodyfile="src/effects/dm_fx_envelope_tracker.h" bodystart="208" bodyend="229"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Effect: Envelope tracker. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Here&apos;s a nice tutorial on one effect that can be created with an envelope tracker</para>
+<para>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/gFltSCZVqx0&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;=&quot;&quot;&gt;&lt;/iframe&gt; </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="64">
+        <label>fx_envelope_tracker</label>
+        <link refid="classfx__envelope__tracker"/>
+        <childnode refid="65" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="65">
+        <label>fx_effect</label>
+        <link refid="classfx__effect"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="66">
+        <label>fx_envelope_tracker</label>
+        <link refid="classfx__envelope__tracker"/>
+        <childnode refid="67" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>fx_pedal</label>
+        <link refid="classfx__pedal"/>
+      </node>
+      <node id="67">
+        <label>fx_effect</label>
+        <link refid="classfx__effect"/>
+        <childnode refid="68" relation="usage">
+          <edgelabel>parent_canvas</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/effects/dm_fx_envelope_tracker.h" line="15" column="1" bodyfile="src/effects/dm_fx_envelope_tracker.h" bodystart="15" bodyend="232"/>
+    <listofallmembers>
+      <member refid="classfx__envelope__tracker_1aecc2a5c2cb85119e7120e7e1c1dfa3e5" prot="public" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>attack_speed_ms</name></member>
+      <member refid="classfx__effect_1ab69ae64deecdbc5915de9b66b4f3e987" prot="protected" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>audio_node_stack</name></member>
+      <member refid="classfx__effect_1abdbbc884fc92a23af5ec5b351a972b97" prot="protected" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>bool_param_updated</name></member>
+      <member refid="classfx__effect_1a659acc5bca268cb1ae1568cc4d48c2ac" prot="public" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>bypass</name></member>
+      <member refid="classfx__effect_1a700589ec8a30f3197cebce4eb955fa31" prot="protected" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>control_node_stack</name></member>
+      <member refid="classfx__envelope__tracker_1ae8aae7e2034e97ac804e26f7cfa9bfbe" prot="public" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>decay_speed_ms</name></member>
+      <member refid="classfx__effect_1af7d5319aca3b86b0e76418385d0478ea" prot="public" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>effect_name</name></member>
+      <member refid="classfx__effect_1a84c05df07c1cd73de91d38e8ddfcc351" prot="public" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>enable</name></member>
+      <member refid="classfx__envelope__tracker_1a067a4942058fd43727d9c3575bc44eb2" prot="public" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>envelope</name></member>
+      <member refid="classfx__effect_1a56eefdb5f90e991e3f31d855e87e9213" prot="protected" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>float_param_updated</name></member>
+      <member refid="classfx__effect_1aab2d00a6784612158e41606297952873" prot="public" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>fx_effect</name></member>
+      <member refid="classfx__envelope__tracker_1ae5d434f970e66fb028d6955e4feb5904" prot="public" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>fx_envelope_tracker</name></member>
+      <member refid="classfx__envelope__tracker_1ab207d2e676545401ded75629f543a542" prot="public" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>fx_envelope_tracker</name></member>
+      <member refid="classfx__effect_1ae5be756c63862665f422aa25a14d3bef" prot="protected" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>fx_pedal</name></member>
+      <member refid="classfx__effect_1a551b61721aadaeccb3cd2ba9fc826609" prot="protected" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>get_audio_node_index</name></member>
+      <member refid="classfx__effect_1aba27ace404ab75a174892cb5908f58b3" prot="protected" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>get_control_node_index</name></member>
+      <member refid="classfx__effect_1a3ddd0473c4a01e858a17b51f14995c70" prot="public" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>get_name</name></member>
+      <member refid="classfx__effect_1a14e0cb29cd7e86d0b8f566b3066dbf32" prot="public" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>get_type</name></member>
+      <member refid="classfx__envelope__tracker_1ae59e4ff8c356e127a8fc02b6f27c11f7" prot="private" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>init</name></member>
+      <member refid="classfx__envelope__tracker_1a90a1db3263c82aa7b59e7292b777bd82" prot="public" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>input</name></member>
+      <member refid="classfx__effect_1a35011b582dc3eb033f2174b404e15fd8" prot="protected" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>instance_id</name></member>
+      <member refid="classfx__envelope__tracker_1a03ef9db8c6b3b0d0f52f3392cd78492b" prot="private" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>node_ctrl_attack_ms</name></member>
+      <member refid="classfx__envelope__tracker_1a611706bb3127484c9738023bedb7efc1" prot="private" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>node_ctrl_decay_ms</name></member>
+      <member refid="classfx__envelope__tracker_1a82dfa60ba8ee1f39dabd9499be752cf8" prot="private" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>node_ctrl_envelope</name></member>
+      <member refid="classfx__envelope__tracker_1a2c0bdf5849d40e65e0aefec86a7349e0" prot="private" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>node_ctrl_offset</name></member>
+      <member refid="classfx__envelope__tracker_1ab4d0d2c8f2fe73ba2e1d9c4bab8cdc73" prot="private" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>node_ctrl_scale</name></member>
+      <member refid="classfx__effect_1a69b60011be5fc3ade57b937405aa835d" prot="protected" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>node_enabled</name></member>
+      <member refid="classfx__effect_1a61f6f19f2cd7be8762758512e9cd5097" prot="protected" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>node_index</name></member>
+      <member refid="classfx__effect_1a66c709a96dd59fd1e21c3407a160a8e8" prot="protected" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>node_input</name></member>
+      <member refid="classfx__effect_1aabadf3d22b48bc21227f72d38bb0d5fe" prot="protected" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>node_output</name></member>
+      <member refid="classfx__envelope__tracker_1aacd0932233598dd5abe51f5459c174ea" prot="public" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>offset</name></member>
+      <member refid="classfx__envelope__tracker_1a604016a2aec89bfb9895d79030034d67" prot="private" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>param_attack_ms</name></member>
+      <member refid="classfx__envelope__tracker_1a391c038c35f020db4528091c9a4c9ab9" prot="private" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>param_decay_ms</name></member>
+      <member refid="classfx__effect_1a0774058f9db052bfc8a68159f13031f2" prot="protected" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>param_enabled</name></member>
+      <member refid="classfx__envelope__tracker_1a49e5cf84f6ab00c78262eed00f4d7e07" prot="private" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>param_offset</name></member>
+      <member refid="classfx__envelope__tracker_1a1f5961aeba4863df302e144b6bee4acf" prot="private" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>param_scale</name></member>
+      <member refid="classfx__effect_1aaf455e34fced9667a8cf26cdb9fb6641" prot="protected" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>param_stack</name></member>
+      <member refid="classfx__effect_1a0ea0d3bfe30592895fa23d241a9baa38" prot="protected" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>param_stack_types</name></member>
+      <member refid="classfx__envelope__tracker_1acd1cdada1962af840f746336d72b8674" prot="private" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>param_triggered</name></member>
+      <member refid="classfx__envelope__tracker_1a7b7104066117441072749e36c130520e" prot="private" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>param_type</name></member>
+      <member refid="classfx__effect_1a69bef0da54cedf8e558d65b755716999" prot="protected" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>parent_canvas</name></member>
+      <member refid="classfx__envelope__tracker_1a7b51364941f46e57860cfbaae1d315db" prot="public" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>print_params</name></member>
+      <member refid="classfx__envelope__tracker_1afc7b87142acdae8f5d16dd2ce0de7769" prot="public" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>scale</name></member>
+      <member refid="classfx__effect_1aaeececeee434ea76afdf649c3bed7698" prot="protected" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>serialize_params</name></member>
+      <member refid="classfx__effect_1a4c513243328d3b715822e74d21dffe99" prot="public" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>service</name></member>
+      <member refid="classfx__envelope__tracker_1adcb2549d59d71a39dff1b39854a3d045" prot="public" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>set_attack_speed_ms</name></member>
+      <member refid="classfx__envelope__tracker_1a4d6f81bda9887bb96aaa14b974d5d19a" prot="public" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>set_decay_speed_ms</name></member>
+      <member refid="classfx__envelope__tracker_1a80dab9a18a9237477dd4f9a44272ec01" prot="public" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>set_env_offset</name></member>
+      <member refid="classfx__envelope__tracker_1a33a671936b7277cfec0d85e421de4a86" prot="public" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>set_env_scale</name></member>
+      <member refid="classfx__effect_1a4f5dbb43e76ca1fa8b8a7c56aaa9f232" prot="protected" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>total_audio_nodes</name></member>
+      <member refid="classfx__effect_1a91d9c1dcd7542aaec7a969af78804caa" prot="protected" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>total_control_nodes</name></member>
+      <member refid="classfx__effect_1a140e1553b23532a2f09f12f94833713e" prot="protected" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>total_params</name></member>
+      <member refid="classfx__effect_1a5e78416b59c4a21367e58ffc09fcf137" prot="protected" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>type</name></member>
+      <member refid="classfx__effect_1a0b94adfa51991a989cd10f4122c9ac22" prot="protected" virt="non-virtual"><scope>fx_envelope_tracker</scope><name>updated_parameters</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,348 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>The basics of controlling effects &mdash; DreamMaker FX Documentation  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Using the API" href="using_api.html" />
+    <link rel="prev" title="The basics of routing audio" href="routing_audio.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> DreamMaker FX Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="echo_basic.html">Building a Basic Echo Pedal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adding_effects.html">The basics of creating / adding effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="routing_audio.html">The basics of routing audio</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">The basics of controlling effects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#option-1-using-effect-control-nodes">Option 1: Using effect control nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#option-2-directly-controlling-parameters">Option 2: Directly controlling parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#option-3-controlling-effects-with-external-sensors">Option 3: Controlling effects with external sensors</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="using_api.html">Using the API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debugging.html">Debugging Sketches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">General troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Pedal Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__pedal.html">Pedal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__led.html">LEDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__pot.html">Pots/Knobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__switch.html">Switches</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Effect Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__adsr__envelope.html">ADSR Envelope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__amplitude__mod.html">Amplitude Modulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__compressor.html">Compressor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__delay.html">Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__destructor.html">Destructor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__envelope__tracker.html">Envelope Follower</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__gain.html">Gain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__instrument__synth.html">Instrument Synth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__looper.html">Looper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__multitap__delay.html">Multi-tap Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__oscillator.html">Oscillator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__phase__shifter.html">Phase Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__pitch__shift.html">Pitch Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__ring__mod.html">Ring Modulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__slicer.html">Slicer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__variable__delay.html">Variable Delay</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DreamMaker FX Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>The basics of controlling effects</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/markdown/controlling_effects.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="the-basics-of-controlling-effects">
+<h1>The basics of controlling effects<a class="headerlink" href="#the-basics-of-controlling-effects" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<p>We’ve been talking a lot about getting effects set up and running.  Now let’s talk about how to change the proverbial knobs on the effects once they’re running.</p>
+<p>Now, take a deep breath and get comfortable because this next sentence is important.  There are two ways we can control effects:</p>
+<ol class="simple">
+<li><p>we can use other effects that generate control signals (like the envelope tracker) to control the parameters of other effects or…</p></li>
+<li><p>we can control the parameters directly from our Arduino program.</p></li>
+</ol>
+<div class="section" id="option-1-using-effect-control-nodes">
+<h2>Option 1: Using effect control nodes<a class="headerlink" href="#option-1-using-effect-control-nodes" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>Similar to our audio nodes, all effects have several <em>control nodes</em> that are inputs for controlling their individual parameters (like delay length and feedback).  Some effects have <em>control node</em> outputs like the envelop filter which are control signals based on the audio going through these effects.</p>
+<p>Remember when you read “an envelope tracker is just measuring an audio signal and may just have an audio <code class="docutils literal notranslate"><span class="pre">input</span></code> node but no audio <code class="docutils literal notranslate"><span class="pre">output</span></code> node”?  Well, the envelop tracker has an <em>audio</em> <code class="docutils literal notranslate"><span class="pre">input</span></code> node and a <em>control</em> <code class="docutils literal notranslate"><span class="pre">output</span></code> node.  Similarly, a synth have a <em>control</em> <code class="docutils literal notranslate"><span class="pre">input</span></code> node (like a musical node to play) but have an <em>audio</em> <code class="docutils literal notranslate"><span class="pre">output</span></code> node where the synthesized audio is sent.</p>
+<p>We can route these control signals just like we do audio signals using the <code class="docutils literal notranslate"><span class="pre">route_control</span></code> function.</p>
+<p>For example, let’s say we wanted to create a sweet envelope filter.  Essentially what an envelope filter is a bandpass filter that changes frequency based on how loud you are playing.  So what we want to do is take the output of the envelop tracker (which tracks how loud the notes we play are) and send this to the center frequency control parameter of a bandbass filter.</p>
+<p>Before we get into building this effect, here’s one important detail about how we use the <code class="docutils literal notranslate"><span class="pre">route_control</span></code> function: The <code class="docutils literal notranslate"><span class="pre">route_control()</span></code> function takes two additional values beyond the input and output node: an offset and a scale factor.  Here’s what that means.  The envelop tracker will generate a control signal between 0 and 1.0 indicating the current volume of the notes we’re playing.  However, we want to sweep our filter from say 600Hz to 1400Hz (typical range of a wah pedal).  So we want to scale our signal that goes from 0 to 1 to one that goes from 600 to 1400.  So we’ll use an offset of 600.0 and then the signal by 800.0.  Here’s the equation to keep in the back of your brain:</p>
+<p><code class="docutils literal notranslate"><span class="pre">output</span> <span class="pre">=</span> <span class="pre">(input</span> <span class="pre">x</span> <span class="pre">scale_factor)</span> <span class="pre">+</span> <span class="pre">offset_factor</span></code></p>
+<p>So let’s create our envelop filter:</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="n">fx_biquad_filter</span>    <span class="nf">auto_wah_filter</span><span class="p">(</span><span class="mf">800.0</span><span class="p">,</span>               <span class="c1">// Initial frequency is</span>
+                                    <span class="n">FILTER_WIDTH_NARROW</span><span class="p">,</span> <span class="c1">// Filter is narrow</span>
+                                    <span class="n">BIQUAD_TYPE_BPF</span><span class="p">);</span>    <span class="c1">// Filter type is bandpass</span>
+
+<span class="n">fx_envelope_tracker</span> <span class="nf">vol_tracker</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span>       <span class="c1">// 10ms attack </span>
+                                <span class="mi">1000</span><span class="p">);</span>    <span class="c1">// 1000ms / 1s release                   </span>
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">edal</span><span class="p">.</span><span class="n">init</span><span class="p">();</span>   <span class="c1">// Initialize the system</span>
+
+  <span class="c1">// input -&gt; filter -&gt; output</span>
+  <span class="n">pedal</span><span class="p">.</span><span class="n">route_audio</span><span class="p">(</span><span class="n">pedal</span><span class="p">.</span><span class="n">instr_in</span><span class="p">,</span> <span class="n">auto_wah_filter</span><span class="p">.</span><span class="n">input</span><span class="p">);</span>
+  <span class="n">pedal</span><span class="p">.</span><span class="n">route_audio</span><span class="p">(</span><span class="n">auto_wah_filter</span><span class="p">.</span><span class="n">output</span><span class="p">,</span> <span class="n">pedal</span><span class="p">.</span><span class="n">amp_out</span><span class="p">);</span>
+
+  <span class="c1">// Also send audio in to our envelope tracker to measure the signal</span>
+  <span class="n">pedal</span><span class="p">.</span><span class="n">route_audio</span><span class="p">(</span><span class="n">pedal</span><span class="p">.</span><span class="n">instr_in</span><span class="p">,</span> <span class="n">vol_tracker</span><span class="p">.</span><span class="n">input</span><span class="p">);</span>
+
+  <span class="c1">// Finally, route the control signals so the envelope tracker can control</span>
+  <span class="c1">// the filter with scale and offset values</span>
+  <span class="n">pedal</span><span class="p">.</span><span class="n">route_control</span><span class="p">(</span><span class="n">vol_tracker</span><span class="p">.</span><span class="n">envelope</span><span class="p">,</span> <span class="n">auto_wah_filter</span><span class="p">.</span><span class="n">freq</span><span class="p">,</span> <span class="mf">800.0</span><span class="p">,</span> <span class="mf">600.0</span><span class="p">);</span>
+
+  <span class="n">pedal</span><span class="p">.</span><span class="n">run</span><span class="p">();</span>    <span class="c1">// Run the effect</span>
+<span class="p">}</span>                                 
+</pre></div>
+</div>
+</div>
+<div class="section" id="option-2-directly-controlling-parameters">
+<h2>Option 2: Directly controlling parameters<a class="headerlink" href="#option-2-directly-controlling-parameters" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>All effects also include dedicated routines for controlling their parameters.  When these routines are called, the effects running on the DSP are immediately updated so these happen in real time.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">loop()</span></code> function is where we can make these modifications.</p>
+<p>Now the question is what value would we use to modify these effects.  We happen to have three knobs or “pots” as they’re known (short for potentiometer which is a variable resistor).  In our loop function, we can check if these knobs have changed and updated parameters accordingly.</p>
+<p>Let’s return to our delay effect.  We want our first knob (aka pot0) to control the length of the delay and the second knob to control the feedback.  The pot values vary from 0.0 (all the way left) to 1.0 (all the way right).</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Include our library of effects routines</span>
+<span class="cp">#include</span> <span class="cpf">&quot;dm_fx.h&quot;</span><span class="cp"></span>
+
+<span class="c1">// Create/declare one echo effect and configure it</span>
+<span class="n">fx_delay</span>   <span class="nf">my_echo_1</span><span class="p">(</span><span class="mf">1000.0</span><span class="p">,</span>  <span class="c1">// 1 second echo</span>
+                     <span class="mf">0.7</span><span class="p">);</span>    <span class="c1">// 0.7 feedback ratio</span>
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+
+  <span class="n">pedal</span><span class="p">.</span><span class="n">init</span><span class="p">();</span>   <span class="c1">// Initialize the system</span>
+
+  <span class="c1">// Connect our effect(s) to input and output jacks</span>
+  <span class="n">pedal</span><span class="p">.</span><span class="n">route_audio</span><span class="p">(</span><span class="n">pedal</span><span class="p">.</span><span class="n">instr_in</span><span class="p">,</span> <span class="n">my_echo_1</span><span class="p">.</span><span class="n">input</span><span class="p">);</span>
+  <span class="n">pedal</span><span class="p">.</span><span class="n">route_audio</span><span class="p">(</span><span class="n">my_echo_1</span><span class="p">.</span><span class="n">output</span><span class="p">,</span> <span class="n">pedal</span><span class="p">.</span><span class="n">amp_out</span><span class="p">);</span>
+
+  <span class="n">pedal</span><span class="p">.</span><span class="n">run</span><span class="p">();</span>    <span class="c1">// Run the effect</span>
+
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// put your main code here, to run repeatedly:</span>
+
+  <span class="c1">// Control delay length with pot0</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">pedal</span><span class="p">.</span><span class="n">pot_left</span><span class="p">.</span><span class="n">has_changed</span><span class="p">())</span> <span class="p">{</span>
+    <span class="n">my_echo_1</span><span class="p">.</span><span class="n">set_length_ms</span><span class="p">(</span><span class="n">pedal</span><span class="p">.</span><span class="n">pot_left</span><span class="p">.</span><span class="n">val</span> <span class="o">*</span> <span class="mf">1000.0</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="c1">// Control delay feedback with pot1</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">pedal</span><span class="p">.</span><span class="n">pot_right</span><span class="p">.</span><span class="n">has_changed</span><span class="p">())</span> <span class="p">{</span>
+    <span class="n">my_echo_1</span><span class="p">.</span><span class="n">set_length_ms</span><span class="p">(</span><span class="n">pedal</span><span class="p">.</span><span class="n">pot_right</span><span class="p">.</span><span class="n">val</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="c1">// sweet nothings to/from DSP</span>
+  <span class="n">pedal</span><span class="p">.</span><span class="n">service</span><span class="p">();</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The next section has more details on how to use the knobs and pots.</p>
+</div>
+<div class="section" id="option-3-controlling-effects-with-external-sensors">
+<h2>Option 3: Controlling effects with external sensors<a class="headerlink" href="#option-3-controlling-effects-with-external-sensors" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>Where things get really cool is when we begin using sensors and other sources outside the pedal to set parameters.  We could use a motion sensor to control a parameter like so</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">my_echo_1</span><span class="p">.</span><span class="n">set_length_ms</span><span class="p">(</span><span class="n">motion_sensor_position</span><span class="p">);</span>
+
+  <span class="c1">// sweet nothings to/from DSP</span>
+  <span class="n">pedal</span><span class="p">.</span><span class="n">service</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="using_api.html" class="btn btn-neutral float-right" title="Using the API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="routing_audio.html" class="btn btn-neutral float-left" title="The basics of routing audio" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Run Jump Labs
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

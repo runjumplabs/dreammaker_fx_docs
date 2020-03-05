@@ -1,0 +1,553 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classfx__amplitude__mod" kind="class" language="C++" prot="public">
+    <compoundname>fx_amplitude_mod</compoundname>
+    <basecompoundref refid="classfx__effect" prot="public" virt="non-virtual">fx_effect</basecompoundref>
+    <includes refid="dm__fx__amplitude__modulator_8h" local="no">dm_fx_amplitude_modulator.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classfx__amplitude__mod_1ac838449643c49ef7280dcd156bcf751d" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float fx_amplitude_mod::param_depth</definition>
+        <argsstring></argsstring>
+        <name>param_depth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_amplitude_modulator.h" line="25" column="1" bodyfile="src/effects/dm_fx_amplitude_modulator.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__amplitude__mod_1a8f74c02a9c2d41bbaf04fb938f1abf46" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float fx_amplitude_mod::param_rate_hz</definition>
+        <argsstring></argsstring>
+        <name>param_rate_hz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_amplitude_modulator.h" line="26" column="1" bodyfile="src/effects/dm_fx_amplitude_modulator.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__amplitude__mod_1a2d22ceaafb3094d01c821a817da25ce0" prot="private" static="no" mutable="no">
+        <type><ref refid="group___enumerations_1gada898a149424188b3a23010c8fe89176" kindref="member">OSC_TYPES</ref></type>
+        <definition>OSC_TYPES fx_amplitude_mod::param_type</definition>
+        <argsstring></argsstring>
+        <name>param_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_amplitude_modulator.h" line="27" column="1" bodyfile="src/effects/dm_fx_amplitude_modulator.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__amplitude__mod_1a1a899d06d1d124c4ff0d2015bb64174c" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float fx_amplitude_mod::param_phase_deg</definition>
+        <argsstring></argsstring>
+        <name>param_phase_deg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_amplitude_modulator.h" line="28" column="1" bodyfile="src/effects/dm_fx_amplitude_modulator.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__amplitude__mod_1ade4fe8382efd5314880733a1c844a6f3" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool fx_amplitude_mod::param_ext_modulator</definition>
+        <argsstring></argsstring>
+        <name>param_ext_modulator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_amplitude_modulator.h" line="29" column="1" bodyfile="src/effects/dm_fx_amplitude_modulator.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__amplitude__mod_1a145ba8b6e22bf26bd912733727ea4ba7" prot="private" static="no" mutable="no">
+        <type><ref refid="group___enumerations_1gada898a149424188b3a23010c8fe89176" kindref="member">OSC_TYPES</ref></type>
+        <definition>OSC_TYPES fx_amplitude_mod::last_type</definition>
+        <argsstring></argsstring>
+        <name>last_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_amplitude_modulator.h" line="31" column="1" bodyfile="src/effects/dm_fx_amplitude_modulator.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__amplitude__mod_1ac0d49744d9a917e98ad1893741751f39" prot="private" static="no" mutable="no">
+        <type>fx_audio_node</type>
+        <definition>fx_audio_node fx_amplitude_mod::node_loop_ext_mod</definition>
+        <argsstring></argsstring>
+        <name>node_loop_ext_mod</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_amplitude_modulator.h" line="73" column="1" bodyfile="src/effects/dm_fx_amplitude_modulator.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__amplitude__mod_1a736b74052717cb3c702f519fa847167a" prot="private" static="no" mutable="no">
+        <type>fx_control_node</type>
+        <definition>fx_control_node fx_amplitude_mod::node_ctrl_depth</definition>
+        <argsstring></argsstring>
+        <name>node_ctrl_depth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_amplitude_modulator.h" line="76" column="1" bodyfile="src/effects/dm_fx_amplitude_modulator.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__amplitude__mod_1a373451a1280550b1583333fc982c75df" prot="private" static="no" mutable="no">
+        <type>fx_control_node</type>
+        <definition>fx_control_node fx_amplitude_mod::node_ctrl_rate_hz</definition>
+        <argsstring></argsstring>
+        <name>node_ctrl_rate_hz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_amplitude_modulator.h" line="77" column="1" bodyfile="src/effects/dm_fx_amplitude_modulator.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classfx__amplitude__mod_1a52c5dce1e56a9efbceb9f0aa572e35d4" prot="public" static="no" mutable="no">
+        <type>fx_audio_node *</type>
+        <definition>fx_audio_node* fx_amplitude_mod::input</definition>
+        <argsstring></argsstring>
+        <name>input</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Audio routing node: primary audio input </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_amplitude_modulator.h" line="86" column="1" bodyfile="src/effects/dm_fx_amplitude_modulator.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__amplitude__mod_1a3ffb0f78f55a24d56ad40ed71b9c3655" prot="public" static="no" mutable="no">
+        <type>fx_audio_node *</type>
+        <definition>fx_audio_node* fx_amplitude_mod::output</definition>
+        <argsstring></argsstring>
+        <name>output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Audio routing node: primary audio output </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_amplitude_modulator.h" line="90" column="1" bodyfile="src/effects/dm_fx_amplitude_modulator.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__amplitude__mod_1aeedd96b1c4e5e8e1cbf93fb4e134362b" prot="public" static="no" mutable="no">
+        <type>fx_audio_node *</type>
+        <definition>fx_audio_node* fx_amplitude_mod::ext_mod_in</definition>
+        <argsstring></argsstring>
+        <name>ext_mod_in</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Audio routing node: external modulator audio input </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_amplitude_modulator.h" line="94" column="1" bodyfile="src/effects/dm_fx_amplitude_modulator.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__amplitude__mod_1a25ef00aa85c14e895710a505a9c6e0bd" prot="public" static="no" mutable="no">
+        <type>fx_control_node *</type>
+        <definition>fx_control_node* fx_amplitude_mod::depth</definition>
+        <argsstring></argsstring>
+        <name>depth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Control routing node: amplifude modulator depth (should be between 0.0 and 1.0) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_amplitude_modulator.h" line="100" column="1" bodyfile="src/effects/dm_fx_amplitude_modulator.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfx__amplitude__mod_1ad85024759667cd9decc11e4fb24461ef" prot="public" static="no" mutable="no">
+        <type>fx_control_node *</type>
+        <definition>fx_control_node* fx_amplitude_mod::rate_hz</definition>
+        <argsstring></argsstring>
+        <name>rate_hz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Control routing node: amplitide modulator rate (Hz) (i.e. 1.0 = once per second) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_amplitude_modulator.h" line="104" column="1" bodyfile="src/effects/dm_fx_amplitude_modulator.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classfx__amplitude__mod_1a98f6a0c935658ea1aafdc76826c5c7ef" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_amplitude_mod::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_amplitude_modulator.h" line="33" column="1" bodyfile="src/effects/dm_fx_amplitude_modulator.h" bodystart="33" bodyend="70"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classfx__amplitude__mod_1acfe6780b005b6b34ba58e82b9b64cf50" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>fx_amplitude_mod::fx_amplitude_mod</definition>
+        <argsstring>(float rate_hz, float depth)</argsstring>
+        <name>fx_amplitude_mod</name>
+        <param>
+          <type>float</type>
+          <declname>rate_hz</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>depth</declname>
+        </param>
+        <briefdescription>
+<para>Basic constructor/initializer for amplitude modulator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">modulation_rate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The amp modifier rate in Hertz (cycles / second) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">modulation_depth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The amp modifier depth (0.0 is no modulation -&gt; 1.0 is full modulation) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_amplitude_modulator.h" line="114" column="1" bodyfile="src/effects/dm_fx_amplitude_modulator.h" bodystart="114" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__amplitude__mod_1a354b528d3a59d766b7fc3e1ed74427f9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>fx_amplitude_mod::fx_amplitude_mod</definition>
+        <argsstring>(float rate_hz, float depth, float initial_phase_deg, OSC_TYPES modulation_type, bool use_ext_modulator)</argsstring>
+        <name>fx_amplitude_mod</name>
+        <param>
+          <type>float</type>
+          <declname>rate_hz</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>depth</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>initial_phase_deg</declname>
+        </param>
+        <param>
+          <type><ref refid="group___enumerations_1gada898a149424188b3a23010c8fe89176" kindref="member">OSC_TYPES</ref></type>
+          <declname>modulation_type</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>use_ext_modulator</declname>
+        </param>
+        <briefdescription>
+<para>Advanced constructor for the amplitude modulator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">rate_hz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The amp modifier rate in Hertz (cycles / second) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">depth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The amp modifier depth (0.0 is no modulation -&gt; 1.0 is full modulation) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">initial_phase_deg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The initial phase of the oscillator in degrees (0-360)</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">modulation_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The amp modifier type - see the definition of OSC_TYPES to see the different waveform options </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">use_ext_modulator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whether or not to use an externally generated waveform as the modulation source </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_amplitude_modulator.h" line="143" column="1" bodyfile="src/effects/dm_fx_amplitude_modulator.h" bodystart="143" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__amplitude__mod_1a4c21c0e9725c1dd515a2bf0b2fb8f99e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_amplitude_mod::enable</definition>
+        <argsstring>()</argsstring>
+        <name>enable</name>
+        <briefdescription>
+<para>Enable the amplitude modululator (it is enabled by default) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_amplitude_modulator.h" line="161" column="1" bodyfile="src/effects/dm_fx_amplitude_modulator.h" bodystart="161" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__amplitude__mod_1a5d5ef5ff79e9c553a9ee5116c3dfa516" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_amplitude_mod::bypass</definition>
+        <argsstring>()</argsstring>
+        <name>bypass</name>
+        <briefdescription>
+<para>Bypass the amplitude modululator (will just pass clean audio through) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_amplitude_modulator.h" line="170" column="1" bodyfile="src/effects/dm_fx_amplitude_modulator.h" bodystart="170" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__amplitude__mod_1ac0c2c2ab77761c961cd569d36e26ab17" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_amplitude_mod::set_depth</definition>
+        <argsstring>(float depth)</argsstring>
+        <name>set_depth</name>
+        <param>
+          <type>float</type>
+          <declname>depth</declname>
+        </param>
+        <briefdescription>
+<para>Sets the depth of the amplitude modululator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">depth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The depth fom 0.0 -&gt; 1.0. 0.0 is no modulation at all, 1.0 is full modulation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_amplitude_modulator.h" line="183" column="1" bodyfile="src/effects/dm_fx_amplitude_modulator.h" bodystart="183" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__amplitude__mod_1a90b19e7b942c13979bddeba8579813a4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_amplitude_mod::set_rate_hz</definition>
+        <argsstring>(float rate_hz)</argsstring>
+        <name>set_rate_hz</name>
+        <param>
+          <type>float</type>
+          <declname>rate_hz</declname>
+        </param>
+        <briefdescription>
+<para>Sets the rate of the modulator in Hertz (cycles per second) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">rate_hz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rate hz </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_amplitude_modulator.h" line="200" column="1" bodyfile="src/effects/dm_fx_amplitude_modulator.h" bodystart="200" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__amplitude__mod_1a2561e4ad01e6a629409b59d73a86caf3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_amplitude_mod::set_lfo_type</definition>
+        <argsstring>(OSC_TYPES new_type)</argsstring>
+        <name>set_lfo_type</name>
+        <param>
+          <type><ref refid="group___enumerations_1gada898a149424188b3a23010c8fe89176" kindref="member">OSC_TYPES</ref></type>
+          <declname>new_type</declname>
+        </param>
+        <briefdescription>
+<para>Sets the the type of oscillator used as the LFO. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">new_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new type of LFO (OSC_TYPES) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_amplitude_modulator.h" line="217" column="1" bodyfile="src/effects/dm_fx_amplitude_modulator.h" bodystart="217" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="classfx__amplitude__mod_1a62563870f85a17142b545e1e8b718fdf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx_amplitude_mod::print_params</definition>
+        <argsstring>(void)</argsstring>
+        <name>print_params</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Print the parameters for this effect. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/effects/dm_fx_amplitude_modulator.h" line="232" column="1" bodyfile="src/effects/dm_fx_amplitude_modulator.h" bodystart="232" bodyend="253"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Effect: Amplitude modulator for creating tremelo-like effects. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>An amplitude modulator will change the volume or &quot;amplitude&quot; of the audio to create various types of tremelo effects.</para>
+<para>Here&apos;s a video demonstrating how amplitude modulators work: YTIDAxZVMyIFqcADITY</para>
+<para>Code example: ___amp_mod_1.c___ </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="15">
+        <label>fx_amplitude_mod</label>
+        <link refid="classfx__amplitude__mod"/>
+        <childnode refid="16" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>fx_effect</label>
+        <link refid="classfx__effect"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="17">
+        <label>fx_amplitude_mod</label>
+        <link refid="classfx__amplitude__mod"/>
+        <childnode refid="18" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>fx_pedal</label>
+        <link refid="classfx__pedal"/>
+      </node>
+      <node id="18">
+        <label>fx_effect</label>
+        <link refid="classfx__effect"/>
+        <childnode refid="19" relation="usage">
+          <edgelabel>parent_canvas</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/effects/dm_fx_amplitude_modulator.h" line="20" column="1" bodyfile="src/effects/dm_fx_amplitude_modulator.h" bodystart="20" bodyend="255"/>
+    <listofallmembers>
+      <member refid="classfx__effect_1ab69ae64deecdbc5915de9b66b4f3e987" prot="protected" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>audio_node_stack</name></member>
+      <member refid="classfx__effect_1abdbbc884fc92a23af5ec5b351a972b97" prot="protected" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>bool_param_updated</name></member>
+      <member refid="classfx__amplitude__mod_1a5d5ef5ff79e9c553a9ee5116c3dfa516" prot="public" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>bypass</name></member>
+      <member refid="classfx__effect_1a700589ec8a30f3197cebce4eb955fa31" prot="protected" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>control_node_stack</name></member>
+      <member refid="classfx__amplitude__mod_1a25ef00aa85c14e895710a505a9c6e0bd" prot="public" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>depth</name></member>
+      <member refid="classfx__effect_1af7d5319aca3b86b0e76418385d0478ea" prot="public" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>effect_name</name></member>
+      <member refid="classfx__amplitude__mod_1a4c21c0e9725c1dd515a2bf0b2fb8f99e" prot="public" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>enable</name></member>
+      <member refid="classfx__amplitude__mod_1aeedd96b1c4e5e8e1cbf93fb4e134362b" prot="public" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>ext_mod_in</name></member>
+      <member refid="classfx__effect_1a56eefdb5f90e991e3f31d855e87e9213" prot="protected" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>float_param_updated</name></member>
+      <member refid="classfx__amplitude__mod_1acfe6780b005b6b34ba58e82b9b64cf50" prot="public" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>fx_amplitude_mod</name></member>
+      <member refid="classfx__amplitude__mod_1a354b528d3a59d766b7fc3e1ed74427f9" prot="public" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>fx_amplitude_mod</name></member>
+      <member refid="classfx__effect_1aab2d00a6784612158e41606297952873" prot="public" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>fx_effect</name></member>
+      <member refid="classfx__effect_1ae5be756c63862665f422aa25a14d3bef" prot="protected" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>fx_pedal</name></member>
+      <member refid="classfx__effect_1a551b61721aadaeccb3cd2ba9fc826609" prot="protected" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>get_audio_node_index</name></member>
+      <member refid="classfx__effect_1aba27ace404ab75a174892cb5908f58b3" prot="protected" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>get_control_node_index</name></member>
+      <member refid="classfx__effect_1a3ddd0473c4a01e858a17b51f14995c70" prot="public" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>get_name</name></member>
+      <member refid="classfx__effect_1a14e0cb29cd7e86d0b8f566b3066dbf32" prot="public" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>get_type</name></member>
+      <member refid="classfx__amplitude__mod_1a98f6a0c935658ea1aafdc76826c5c7ef" prot="private" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>init</name></member>
+      <member refid="classfx__amplitude__mod_1a52c5dce1e56a9efbceb9f0aa572e35d4" prot="public" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>input</name></member>
+      <member refid="classfx__effect_1a35011b582dc3eb033f2174b404e15fd8" prot="protected" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>instance_id</name></member>
+      <member refid="classfx__amplitude__mod_1a145ba8b6e22bf26bd912733727ea4ba7" prot="private" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>last_type</name></member>
+      <member refid="classfx__amplitude__mod_1a736b74052717cb3c702f519fa847167a" prot="private" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>node_ctrl_depth</name></member>
+      <member refid="classfx__amplitude__mod_1a373451a1280550b1583333fc982c75df" prot="private" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>node_ctrl_rate_hz</name></member>
+      <member refid="classfx__effect_1a69b60011be5fc3ade57b937405aa835d" prot="protected" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>node_enabled</name></member>
+      <member refid="classfx__effect_1a61f6f19f2cd7be8762758512e9cd5097" prot="protected" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>node_index</name></member>
+      <member refid="classfx__effect_1a66c709a96dd59fd1e21c3407a160a8e8" prot="protected" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>node_input</name></member>
+      <member refid="classfx__amplitude__mod_1ac0d49744d9a917e98ad1893741751f39" prot="private" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>node_loop_ext_mod</name></member>
+      <member refid="classfx__effect_1aabadf3d22b48bc21227f72d38bb0d5fe" prot="protected" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>node_output</name></member>
+      <member refid="classfx__amplitude__mod_1a3ffb0f78f55a24d56ad40ed71b9c3655" prot="public" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>output</name></member>
+      <member refid="classfx__amplitude__mod_1ac838449643c49ef7280dcd156bcf751d" prot="private" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>param_depth</name></member>
+      <member refid="classfx__effect_1a0774058f9db052bfc8a68159f13031f2" prot="protected" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>param_enabled</name></member>
+      <member refid="classfx__amplitude__mod_1ade4fe8382efd5314880733a1c844a6f3" prot="private" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>param_ext_modulator</name></member>
+      <member refid="classfx__amplitude__mod_1a1a899d06d1d124c4ff0d2015bb64174c" prot="private" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>param_phase_deg</name></member>
+      <member refid="classfx__amplitude__mod_1a8f74c02a9c2d41bbaf04fb938f1abf46" prot="private" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>param_rate_hz</name></member>
+      <member refid="classfx__effect_1aaf455e34fced9667a8cf26cdb9fb6641" prot="protected" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>param_stack</name></member>
+      <member refid="classfx__effect_1a0ea0d3bfe30592895fa23d241a9baa38" prot="protected" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>param_stack_types</name></member>
+      <member refid="classfx__amplitude__mod_1a2d22ceaafb3094d01c821a817da25ce0" prot="private" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>param_type</name></member>
+      <member refid="classfx__effect_1a69bef0da54cedf8e558d65b755716999" prot="protected" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>parent_canvas</name></member>
+      <member refid="classfx__amplitude__mod_1a62563870f85a17142b545e1e8b718fdf" prot="public" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>print_params</name></member>
+      <member refid="classfx__amplitude__mod_1ad85024759667cd9decc11e4fb24461ef" prot="public" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>rate_hz</name></member>
+      <member refid="classfx__effect_1aaeececeee434ea76afdf649c3bed7698" prot="protected" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>serialize_params</name></member>
+      <member refid="classfx__effect_1a4c513243328d3b715822e74d21dffe99" prot="public" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>service</name></member>
+      <member refid="classfx__amplitude__mod_1ac0c2c2ab77761c961cd569d36e26ab17" prot="public" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>set_depth</name></member>
+      <member refid="classfx__amplitude__mod_1a2561e4ad01e6a629409b59d73a86caf3" prot="public" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>set_lfo_type</name></member>
+      <member refid="classfx__amplitude__mod_1a90b19e7b942c13979bddeba8579813a4" prot="public" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>set_rate_hz</name></member>
+      <member refid="classfx__effect_1a4f5dbb43e76ca1fa8b8a7c56aaa9f232" prot="protected" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>total_audio_nodes</name></member>
+      <member refid="classfx__effect_1a91d9c1dcd7542aaec7a969af78804caa" prot="protected" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>total_control_nodes</name></member>
+      <member refid="classfx__effect_1a140e1553b23532a2f09f12f94833713e" prot="protected" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>total_params</name></member>
+      <member refid="classfx__effect_1a5e78416b59c4a21367e58ffc09fcf137" prot="protected" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>type</name></member>
+      <member refid="classfx__effect_1a0b94adfa51991a989cd10f4122c9ac22" prot="protected" virt="non-virtual"><scope>fx_amplitude_mod</scope><name>updated_parameters</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,337 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>The basics of routing audio &mdash; DreamMaker FX Documentation  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="The basics of controlling effects" href="controlling_effects.html" />
+    <link rel="prev" title="The basics of creating / adding effects" href="adding_effects.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> DreamMaker FX Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="echo_basic.html">Building a Basic Echo Pedal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adding_effects.html">The basics of creating / adding effects</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">The basics of routing audio</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#effect-audio-nodes">Effect audio nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#system-audio-nodes">System audio nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#connecting-nodes">Connecting nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#a-few-routing-rules">A few routing rules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="controlling_effects.html">The basics of controlling effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_api.html">Using the API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debugging.html">Debugging Sketches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">General troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Pedal Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__pedal.html">Pedal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__led.html">LEDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__pot.html">Pots/Knobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__switch.html">Switches</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Effect Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__adsr__envelope.html">ADSR Envelope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__amplitude__mod.html">Amplitude Modulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__compressor.html">Compressor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__delay.html">Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__destructor.html">Destructor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__envelope__tracker.html">Envelope Follower</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__gain.html">Gain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__instrument__synth.html">Instrument Synth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__looper.html">Looper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__multitap__delay.html">Multi-tap Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__oscillator.html">Oscillator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__phase__shifter.html">Phase Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__pitch__shift.html">Pitch Shifter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__ring__mod.html">Ring Modulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__slicer.html">Slicer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/classfx__variable__delay.html">Variable Delay</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DreamMaker FX Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>The basics of routing audio</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/markdown/routing_audio.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="the-basics-of-routing-audio">
+<h1>The basics of routing audio<a class="headerlink" href="#the-basics-of-routing-audio" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<p>Get ready because we’re going to start using the word <em>node</em> a lot.  I hope that’s okay.  A node is what it sounds like: it’s a <em>node</em>.  Or a point of connection.</p>
+<div class="section" id="effect-audio-nodes">
+<h2>Effect audio nodes<a class="headerlink" href="#effect-audio-nodes" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>Each effect has one or more <em>nodes</em> that can pipe audio into it or out of it.  All effects that process audio have both an <code class="docutils literal notranslate"><span class="pre">input</span></code> node and an <code class="docutils literal notranslate"><span class="pre">output</span></code> node.  Things like an envelope tracker that are just measuring an audio signal may just have an audio <code class="docutils literal notranslate"><span class="pre">input</span></code> node but no audio <code class="docutils literal notranslate"><span class="pre">output</span></code> node.  Also, some effects have additional nodes beyond <code class="docutils literal notranslate"><span class="pre">input</span></code> and <code class="docutils literal notranslate"><span class="pre">output</span></code> and this is where shit gets real.  Did you see the movie Inception?  That question will make sense eventually.</p>
+<p>Details on the nodes that each effect has can be found in Appendix A.</p>
+</div>
+<div class="section" id="system-audio-nodes">
+<h2>System audio nodes<a class="headerlink" href="#system-audio-nodes" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>And the system has <em>nodes</em> for input from instrument and output to amp.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pedal.instr_in</span></code> is the input jack of the pedal.  This might blow your mind, but this is actually an output jack in the sense that it is outputting audio that we can send to the inputs of other effects.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pedal.amp_out</span></code> is the output hack of the pedal.  This might blow your mind again, but this is actually an input jack in the sense that it is receiving audio from other effects (and then sending to the amp).</p></li>
+</ul>
+</div>
+<div class="section" id="connecting-nodes">
+<h2>Connecting nodes<a class="headerlink" href="#connecting-nodes" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>As we just saw in the echo example, there is a function called <code class="docutils literal notranslate"><span class="pre">route_audio</span></code> that we use to connect our effects to the input and output jacks of the pedal and also to each other.  The first <em>argument</em> of this function is an output node and the second <em>argument</em> is an input node.</p>
+<p>Let’s use it in a (programming) sentence.  In this example, we’re going to have a tremelo that then feeds into a delay.  It’ll be like having your guitar plugged into a tremelo pedal that then plugs into a delay pedal that then plugs into your amp.</p>
+<p>(<em>note: if it’s not yet obvious, you can call each effect you create just about whatever you want</em>).</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="c1">// Create objects for these effects</span>
+<span class="n">fx_amplitude_mod</span>  <span class="nf">happy_tremelo</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">);</span>      <span class="c1">// 1Hz rate, 0.5 depth</span>
+<span class="n">fx_delay</span>          <span class="nf">sweet_baby_echo</span><span class="p">(</span><span class="mf">1000.0</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">);</span> <span class="c1">// 1000ms, 0.7 feedback  </span>
+
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">pedal</span><span class="p">.</span><span class="n">init</span><span class="p">();</span>   <span class="c1">// Initialize the system</span>
+
+  <span class="c1">// Route tremelo through echo/delay effect</span>
+  <span class="n">pedal</span><span class="p">.</span><span class="n">route_audio</span><span class="p">(</span><span class="n">pedal</span><span class="p">.</span><span class="n">instr_in</span><span class="p">,</span> <span class="n">happy_tremelo</span><span class="p">.</span><span class="n">input</span><span class="p">);</span>
+  <span class="n">pedal</span><span class="p">.</span><span class="n">route_audio</span><span class="p">(</span><span class="n">happy_tremelo</span><span class="p">.</span><span class="n">output</span><span class="p">,</span> <span class="n">sweet_baby_echo</span><span class="p">.</span><span class="n">input</span><span class="p">);</span>
+  <span class="n">pedal</span><span class="p">.</span><span class="n">route_audio</span><span class="p">(</span><span class="n">sweet_baby_echo</span><span class="p">.</span><span class="n">output</span><span class="p">,</span> <span class="n">pedal</span><span class="p">.</span><span class="n">amp_out</span><span class="p">);</span>
+
+  <span class="n">pedal</span><span class="p">.</span><span class="n">run</span><span class="p">();</span>    <span class="c1">// Run the effect</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Or let’s get more crazy.  Let’s say we have a delay pedal and each time through the delay, we’re going to pitch shift up.  So it would sound like this: ECHO Echo echo echo (where each time you say ‘echo’ you say it in a lower pitch voice).</p>
+<p>The fx_delay has two additional nodes called <code class="docutils literal notranslate"><span class="pre">fx_send</span></code> and <code class="docutils literal notranslate"><span class="pre">fx_receive</span></code>.  We’re going to run these through our handy-dandy pitch shifter.  For this, we’re going to use the more advanced delay setup function that allows us to pass a few additional parameters (more info in Appendix A on this):</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="c1">// Create objects for these effects</span>
+<span class="n">fx_delay</span>          <span class="nf">echoey_snail</span><span class="p">(</span><span class="mf">1000.0</span><span class="p">,</span>     <span class="c1">// Delay length: 1000ms</span>
+                              <span class="mf">1000.0</span><span class="p">,</span>     <span class="c1">// Max delay length: 1000ms</span>
+                              <span class="mf">0.7</span><span class="p">,</span>        <span class="c1">// Feedback: 0.7</span>
+                              <span class="mf">1.0</span><span class="p">,</span>        <span class="c1">// Feedthrough: 1.0</span>
+                              <span class="nb">true</span><span class="p">);</span>      <span class="c1">// Enable delay fx loop</span>
+<span class="n">fx_pitch_shift</span>    <span class="nf">shift_down</span><span class="p">(</span><span class="mf">0.85</span><span class="p">);</span>       <span class="c1">// Pitch shift down 0.85 x current pitch</span>
+
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">pedal</span><span class="p">.</span><span class="n">init</span><span class="p">();</span>   <span class="c1">// Initialize the system</span>
+
+  <span class="c1">// input -&gt; delay -&gt; output</span>
+  <span class="n">pedal</span><span class="p">.</span><span class="n">route_audio</span><span class="p">(</span><span class="n">pedal</span><span class="p">.</span><span class="n">instr_in</span><span class="p">,</span> <span class="n">echoey_snail</span><span class="p">.</span><span class="n">input</span><span class="p">);</span>
+  <span class="n">pedal</span><span class="p">.</span><span class="n">route_audio</span><span class="p">(</span><span class="n">echoey_snail</span><span class="p">.</span><span class="n">output</span><span class="p">,</span> <span class="n">pedal</span><span class="p">.</span><span class="n">amp_out</span><span class="p">);</span>
+
+  <span class="c1">// Now patch in pitch shifter into delay fx loop</span>
+  <span class="n">pedal</span><span class="p">.</span><span class="n">route_audio</span><span class="p">(</span><span class="n">echoey_snail</span><span class="p">.</span><span class="n">fx_send</span><span class="p">,</span> <span class="n">shift_down</span><span class="p">.</span><span class="n">input</span><span class="p">);</span>
+  <span class="n">pedal</span><span class="p">.</span><span class="n">route_audio</span><span class="p">(</span><span class="n">shift_down</span><span class="p">.</span><span class="n">output</span><span class="p">,</span> <span class="n">echoey_snail</span><span class="p">.</span><span class="n">fx_receive</span><span class="p">);</span>
+
+  <span class="n">pedal</span><span class="p">.</span><span class="n">run</span><span class="p">();</span>    <span class="c1">// Run the effect</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Pretty cool, right?</p>
+</div>
+<div class="section" id="a-few-routing-rules">
+<h2>A few routing rules<a class="headerlink" href="#a-few-routing-rules" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>Obey these rules to avoid humiliation and sadness:</p>
+<ol class="simple">
+<li><p>An output node can be routed to multiple input nodes</p></li>
+</ol>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="n">pedal</span><span class="p">.</span><span class="n">route_audio</span><span class="p">(</span><span class="n">pedal</span><span class="p">.</span><span class="n">instr_in</span><span class="p">,</span> <span class="n">delay_1</span><span class="p">.</span><span class="n">input</span><span class="p">);</span>
+<span class="n">pedal</span><span class="p">.</span><span class="n">route_audio</span><span class="p">(</span><span class="n">pedal</span><span class="p">.</span><span class="n">instr_in</span><span class="p">,</span> <span class="n">delay_2</span><span class="p">.</span><span class="n">input</span><span class="p">);</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>An input node can only have one input.  However, you can use the <code class="docutils literal notranslate"><span class="pre">fx_mixer</span></code> nodes if you want to send multiple outputs to an input.</p></li>
+</ol>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="n">pedal</span><span class="p">.</span><span class="n">route_audio</span><span class="p">(</span><span class="n">delay_1</span><span class="p">.</span><span class="n">output</span><span class="p">,</span> <span class="n">my_mixer_2</span><span class="p">.</span><span class="n">input_1</span><span class="p">);</span>
+<span class="n">pedal</span><span class="p">.</span><span class="n">route_audio</span><span class="p">(</span><span class="n">delay_2</span><span class="p">.</span><span class="n">output</span><span class="p">,</span> <span class="n">my_mixer_2</span><span class="p">.</span><span class="n">input_2</span><span class="p">);</span>
+<span class="n">pedal</span><span class="p">.</span><span class="n">route_audio</span><span class="p">(</span><span class="n">my_mixer_2</span><span class="p">,</span> <span class="n">pedal</span><span class="p">.</span><span class="n">amp_out</span><span class="p">);</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>And you can’t route input nodes to other input nodes, or output nodes to other output nodes.  It’s always output-&gt;input.</p></li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="controlling_effects.html" class="btn btn-neutral float-right" title="The basics of controlling effects" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="adding_effects.html" class="btn btn-neutral float-left" title="The basics of creating / adding effects" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Run Jump Labs
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
