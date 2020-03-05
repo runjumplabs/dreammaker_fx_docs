@@ -8,10 +8,7 @@
  * 
  * Here's a nice summary of clipping using polynomials to create various types of distortions
  * topic: http://sites.music.columbia.edu/cmc/music-dsp/FAQs/guitar_distortion_FAQ.html
- * 
- * 
- *  Example:
- *   ___destructor_1.c___
+ *
  */
 class fx_destructor: public fx_effect {
 

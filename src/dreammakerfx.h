@@ -556,7 +556,43 @@ class fx_pot {
  *********************************************************************/
 
 /**
- * @brief      This class describes an effects canvas.
+ * @brief      The pedal
+ * 
+ * The `pedal` object is the root of all functionality on DreamMakerFx.
+ * We reference this object when wiring effects together and controlling
+ * the various knobs, buttons, lights, etc.
+ * 
+ * An effect will always have a few common elements:
+ * 
+ * ``` C 
+ * #include <dreammakerfx.h>
+ * 
+ * void setup() {
+ * 
+ *   // Initialize the pedal hardware
+ *   pedal.init();    
+ *   
+ *   // Route audio through the pedal to any effects modules
+ *   pedal.route_audio(pedal.instr_in, pedal.amp_out);
+ *   
+ *   
+ *   // Run the effect on the DSP
+ *   pedal.run();
+ * 
+ * }
+ * 
+ * void loop() {
+ * 
+ *   // Exchange information wiht the DSP
+ *   pedal.service();
+ * 
+ * }
+ * 
+ *
+ * ```
+ * 
+ * There are several other functions that control the buttons, lights/LEDs, knobs/pots and toggle switches. 
+ * 
  */
 class fx_pedal {
 
@@ -889,11 +925,11 @@ class fx_pedal {
     bool    button_released(FOOTSWITCH footswitch, bool enable_led);
   
     // Register a tap for tap reading
-    #ifndef DOXYGEN_SHOULD_SKIP_THIS
+#ifndef DOXYGEN_SHOULD_SKIP_THIS
       void    register_tap(void);
       void    button_press_check(void);
       void    service_button_events(void);
-    #endif  // DOXYGEN_SHOULD_SKIP_THIS
+#endif  // DOXYGEN_SHOULD_SKIP_THIS
 
     // Utility functions to print the instance and routing stack
     void    print_instance_stack(void);

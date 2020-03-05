@@ -56,6 +56,21 @@ A cool, multi-layer delay effect created by Joe Dougherty.  Consists of a variab
 
 -----
 
+
+Stereo Reverb
+#############
+
+With the immense amount of processing power and on-board RAM, we can create very rich, intricate reverbs using a few of the building blocks (multi-tap delays, all-pass filters, biquad filters, variable delays, and regular delays).
+
+Here's an example of a stereo reverb that consumes about 10% of the available processing resources on the SHARC DSP.
+
+.. raw:: html
+
+
+	<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/766499380&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+
+-----
+
 Polyphonic Guitar Synth 
 #######################
 
