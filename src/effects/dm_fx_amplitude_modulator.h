@@ -272,6 +272,7 @@ class fx_amplitude_mod: public fx_effect {
 
   }
 
+#ifndef DOXYGEN_SHOULD_SKIP_THIS
   /**
    * @brief      Print the parameters for this effect
    */
@@ -297,7 +298,7 @@ class fx_amplitude_mod: public fx_effect {
 
     Serial.println();
   }
-
+#endif
 };
 
 #endif 	// DM_FX_AMP_MOD_H

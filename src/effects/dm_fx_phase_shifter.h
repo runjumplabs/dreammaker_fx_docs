@@ -7,8 +7,63 @@
 /**
  * @brief      Effect: Phase shifter for creating rich phase shifts
  * 
- * Example:
- *   __phase_shifter_1.c__
+ * These create a series of phase shifts connected to an LFO.  Phase shifters were pioneered probably in the 1960s and 1970s and create a familiar effect.  Search for phase shifter pedals on youtube for some examples of what they sound like.  
+ * 
+ * Internally, the phase shifter relies on eight notch filters that are swept with frequencies at  100.0, 330.0, 500.0, 700.0, 900.0, 1500.0, 2000.0, 2500.0Hz.  These location of these filters and depth of modulation for each is programmable and will be exposed in an upcoming release.
+ * 
+ * Phase shifters create a particularly pronounced effect when the audio running through them has higher frequency components.  They sound pretty interesting after a distortion or a synth sound.
+ * 
+ * Here's an example that creates a basic phase shifter pedal.
+ * 
+ * ```CPP
+ * #include <dreammakerfx.h>
+ * 
+ * fx_phase_shifter    phase_shift(1.0,    // 1Hz
+ *                                 0.7,    // 0.7 depth
+ *                                 0.4,    // 0.4 feedback
+ *                                 0.0,    // 0 degrees initial phase
+ *                                 OSC_TRIANGLE);  // Modulated with triangle wave
+ * 
+ * void setup() {
+ *   // put your setup code here, to run once:
+ * 
+ *   // Initialize the pedal!
+ *   pedal.init();
+ * 
+ *   // Route audio from instrument -> pitch_shift -> amp
+ *   pedal.route_audio(pedal.instr_in, phase_shift.input); 
+ *   pedal.route_audio(phase_shift.output, pedal.amp_out);
+ * 
+ *   // left footswitch is bypass
+ *   pedal.add_bypass_button(FOOTSWITCH_LEFT);
+ * 
+ *    // Run this effect
+ *   pedal.run();
+ * }
+ * 
+ * void loop() {
+ * 
+ *   // Left pot changes the depth
+ *   if (pedal.pot_left.has_changed()) {
+ *     phase_shift.set_depth(pedal.pot_left.val);
+ *   }
+ *   
+ *   // Center pot changes the modulation rate
+ *   if (pedal.pot_center.has_changed()) {
+ *      phase_shift.set_rate_hz(0.5+pedal.pot_center.val*4);
+ *   }
+ * 
+ *   // Right pot changes the feedback
+ *   if (pedal.pot_right.has_changed()) {
+ *     phase_shift.set_feedback(2.0*pedal.pot_right.val-1.0);   
+ *   }    
+ *   
+ *   // Service pedal
+ *   pedal.service();
+ * }
+ *  
+ * ```
+ * 
  */
 class fx_phase_shifter: public fx_effect {
 
@@ -227,7 +282,7 @@ class fx_phase_shifter: public fx_effect {
     }
 
 
-
+#ifndef DOXYGEN_SHOULD_SKIP_THIS
   /**
    * @brief      Print the parameters for this effect
    */
@@ -251,7 +306,7 @@ class fx_phase_shifter: public fx_effect {
 
     Serial.println();
   }    
-
+#endif
 };
 
 #endif // DM_FX_PHASE_SHIFTER_H

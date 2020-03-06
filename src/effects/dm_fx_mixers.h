@@ -47,7 +47,7 @@ class fx_mixer_2: public fx_effect {
       // Add additional nodes to the audio stack
       audio_node_stack[total_audio_nodes++] = &node_input_2;
 		}
-
+#ifndef DOXYGEN_SHOULD_SKIP_THIS
     /**
      * @brief      Print the parameters for this effect
      */    
@@ -57,6 +57,7 @@ class fx_mixer_2: public fx_effect {
       print_audio_node_status(&node_input_2);
       print_audio_node_status(&node_output);
 		}		
+#endif    
 };
 
 /**
@@ -113,6 +114,7 @@ class fx_mixer_3: public fx_effect {
       audio_node_stack[total_audio_nodes++] = &node_input_3;
 		}
 
+#ifndef DOXYGEN_SHOULD_SKIP_THIS
     /**
      * @brief      Print the parameters for this effect
      */
@@ -123,6 +125,7 @@ class fx_mixer_3: public fx_effect {
       print_audio_node_status(&node_input_3);
       print_audio_node_status(&node_output);
 		}
+#endif    
 };
 
 /**
@@ -190,6 +193,7 @@ class fx_mixer_4: public fx_effect {
       audio_node_stack[total_audio_nodes++] = &node_input_4;
 	 }
 
+#ifndef DOXYGEN_SHOULD_SKIP_THIS
    /**
      * @brief      Print the parameters for this effect
      */  
@@ -201,6 +205,7 @@ class fx_mixer_4: public fx_effect {
       print_audio_node_status(&node_input_4);
       print_audio_node_status(&node_output);
 		}	
+#endif    
 };
 
 

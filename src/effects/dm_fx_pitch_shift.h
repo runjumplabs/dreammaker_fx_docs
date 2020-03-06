@@ -7,6 +7,87 @@
 
 /**
  * @brief      Effect: Pitch shifter - shifts audio up or down in pitch
+ * 
+ * 
+ * These shift the pitch of the audio by a relative amount.  A value of 2.0 will shift the pitch up one octave.  A value of 0.5 will shift the pitch down an octave.  A value of 1.5 will shift the pitch up a fifth, and 0.75 will shift it down a fifth.  And 1.189207 will shift it up a minor third.  
+ * 
+ * Follow this link for a list of pitch shift values for other common intervals: https://en.wikipedia.org/wiki/Equal_temperament#Comparison_with_Just_Intonation 
+ * 
+ * Note that pitch shifters are somewhat processor intensive. At the moment, the platform can support "a few" pitch shifters.
+ * 
+ * Here's an example that uses the center to pot to select between different pitch shift ranges.  The left and right pots set the mix of the clean signal and the pitch shifted signal.
+ * 
+ * ```CPP
+ * #include <dreammakerfx.h>
+ * 
+ * fx_pitch_shift    pitch_shift(1.0);     
+ * 
+ * fx_mixer_2    mix2;
+ * fx_gain       clean_mix(1.0), pitch_shift_mix(1.0);
+ * 
+ * void setup() {
+ *   // put your setup code here, to run once:
+ * 
+ *   // Initialize the pedal!
+ *   pedal.init();
+ * 
+ *   // Route audio from instrument -> pitch_shift -> amp
+ *   pedal.route_audio(pedal.instr_in, pitch_shift.input);
+ *   pedal.route_audio(pitch_shift.output, pitch_shift_mix.input);
+ *   pedal.route_audio(pitch_shift_mix.output, mix2.input_1);
+ *   
+ *   pedal.route_audio(pedal.instr_in, clean_mix.input);
+ *   pedal.route_audio(clean_mix.output, mix2.input_2);
+ *   
+ *   pedal.route_audio(mix2.output, pedal.amp_out);
+ * 
+ *   // left footswitch is bypass
+ *   pedal.add_bypass_button(FOOTSWITCH_LEFT);
+ * 
+ *    // Run this effect
+ *   pedal.run();
+ * }
+ * 
+ * void loop() {
+ * 
+ *   // Left pot changes dry signal gain
+ *   if (pedal.pot_left.has_changed()) {
+ *     clean_mix.set_gain(pedal.pot_left.val);
+ *   }
+ *   
+ *   // Center pot changes pitch shift amount
+ *   if (pedal.pot_center.has_changed()) {
+ *     if (pedal.pot_center.val < 0.15) {
+ *        // full octave down
+ *        pitch_shift.set_freq_shift(0.5);
+ *     } else if (pedal.pot_center.val < 0.3) {
+ *       // Fifth down
+ *       pitch_shift.set_freq_shift(0.75);
+ *     } else if (pedal.pot_center.val < 0.5) {
+ *       // Third down
+ *       pitch_shift.set_freq_shift(0.84);
+ *     } else if (pedal.pot_center.val < 0.7) {
+ *       // Third up
+ *       pitch_shift.set_freq_shift(1.1891);
+ *     } else if (pedal.pot_center.val < 0.9) {
+ *       // Fifth up
+ *       pitch_shift.set_freq_shift(1.5);
+ *     } else {
+ *       // Octave up
+ *       pitch_shift.set_freq_shift(2.0);
+ *     }
+ *   }  
+ *   
+ *   // Right pot changes mix gain
+ *   if (pedal.pot_center.has_changed()) {
+ *     pitch_shift_mix.set_gain(pedal.pot_left.val);   
+ *   }    
+ *   
+ *   // Service pedal
+ *   pedal.service();
+ * }
+ *  * 
+ * ```
  */
 class fx_pitch_shift: public fx_effect {
 
@@ -34,7 +115,11 @@ class fx_pitch_shift: public fx_effect {
     // Control node names that users will be using
     fx_control_node * freq_shift;
 
-    // Constructor
+    /**
+     * @brief      Bsaic constructor for the pitch shifter
+     *
+     * @param[in]  pitch_shift_freq  The amount of relative pitch shift to apply as described above.  A freq_shift of 0.5 will drop down one octave.  A value of 2.0 will go up one octave.  A value of 1.0 will play at current pitch (no shift). 
+     */
     fx_pitch_shift(float pitch_shift_freq) : 
         node_ctrl_freq_shift(NODE_IN, NODE_FLOAT, "node_ctrl_freq_shift", this, FX_PITCH_SHIFT_PARAM_ID_FREQ_SHIFT) {
       
@@ -104,7 +189,7 @@ class fx_pitch_shift: public fx_effect {
       parent_canvas->spi_transmit_param(FX_PITCH_SHIFT, instance_id, T_FLOAT, FX_PITCH_SHIFT_PARAM_ID_FREQ_SHIFT, (void *) &param_freq_shift);
     }
 
-
+#ifndef DOXYGEN_SHOULD_SKIP_THIS
     /**
      * @brief      Print the parameters for this effect
      */
@@ -141,6 +226,7 @@ class fx_pitch_shift: public fx_effect {
 
       Serial.println();
     }
+#endif     
 };
 
 #endif 	// DM_FX_PITCH_SHIFT_H

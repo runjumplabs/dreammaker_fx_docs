@@ -383,6 +383,7 @@ class fx_biquad_filter: public fx_effect {
     parent_canvas->spi_transmit_param(FX_BIQUAD_FILTER, instance_id, T_FLOAT, FX_BIQUAD_PARAM_ID_GAIN, &param_gain);
   }   
 
+#ifndef DOXYGEN_SHOULD_SKIP_THIS
   /**
    * @brief      Print the parameters for this effect
    */
@@ -407,5 +408,6 @@ class fx_biquad_filter: public fx_effect {
 
     Serial.println();
   }    
+  #endif
 };
 #endif 	// DM_FX_BIQUAD_FILTER_H

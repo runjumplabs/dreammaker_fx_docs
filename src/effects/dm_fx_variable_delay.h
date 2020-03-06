@@ -14,9 +14,67 @@
  * blocks:
  * https://www.dsprelated.com/freebooks/pasp/Time_Varying_Delay_Effects.html
  * 
- * Example:
- *    ___var_del_1.c___
- *    
+ * Here's an example of using a variable delay to create a flanger pedal.
+ * 
+ * ``` CPP
+ * #include <dreammakerfx.h>
+ * 
+ * fx_variable_delay flangey(1.0,            // Initial oscillator rate of 1Hz (1 cycle / second)
+ *                           0.5,            // Initial depth of 0.5
+ *                           0.4,            // Initial feedback of 0.4
+ *                           OSC_TRIANGLE);  // Use a triangle oscillator
+ * 
+ * void setup() {
+ *   
+ *   // Initialize the pedal!
+ *   pedal.init();
+ * 
+ *   // Route audio from instrument -> my_variable_delay -> amp
+ *   pedal.route_audio(pedal.instr_in, flangey.input);
+ *   pedal.route_audio(flangey.output, pedal.amp_out);  
+ * 
+ *   // left footswitch is bypass
+ *   pedal.add_bypass_button(FOOTSWITCH_LEFT);
+ * 
+ *   // Right foot switch is tap loop length
+ *   pedal.add_tap_interval_button(FOOTSWITCH_RIGHT, true);
+ * 
+ *   // Run this effect
+ *   pedal.run();
+ * 
+ * }
+ * 
+ * 
+ * void loop() {
+ * 
+ *   // If new tempo has been tapped in, use that to control flange rate
+ *   if (pedal.new_tap_interval()) { 
+ *     flangey.set_rate_hz(pedal.get_tap_freq_hz());
+ *   } 
+ * 
+ *   // Left pot controls depth of the effect
+ *   if (pedal.pot_left.has_changed()) { 
+ *     flangey.set_depth(pedal.pot_left.val);     
+ *   } 
+ * 
+ *   // Center pot controls rate
+ *   if (pedal.pot_center.has_changed()) { 
+ *     float rate_hz = pedal.pot_center.val* 6.0;
+ *     pedal.set_tap_blink_rate_hz(rate_hz);
+ *     flangey.set_rate_hz(rate_hz);     
+ *   } 
+ * 
+ *   // Right pot controls the feedback (-1.0 to 1.0)
+ *   if (pedal.pot_right.has_changed()) {
+ *    flangey.set_feedback(1.0 - pedal.pot_right.val*2.0);
+ *   }
+ * 
+ *    // Run pedal service to take care of stuff
+ *   pedal.service();  
+ * }
+ * ```   
+ * 
+ * Here are some other cool things to try with a variable delay: Variable delays can be used to create all sorts of pitch modulations; put one in the feedback path of a delay pedal, run several in parallel or series to create exotic effects.
  */
 class fx_variable_delay: public fx_effect {
 
@@ -207,10 +265,7 @@ class fx_variable_delay: public fx_effect {
      *                          ->1.0)
      * @param[in]  buf_size_ms  The size of the audio in milliseconds
      *                          (start wtih a value around 30)
-     * @param[in]  mix_clean    The clean mix.  If this is set to 0.0,
-     *                          then you'll just get the pitch changing
-     *                          aspect of the wave that can used for
-     *                          tape delay simulators, etc.
+     * @param[in]  mix_clean    The clean mix.  If this is set to 0.0, then you'll just get the pitch changing aspect of the wave that can used for tape delay simulators, etc.  When the delayed signal is mixed with the clean signal (i.e. mix_gain and mix_delayed are both above zero), this produces flanger / phaser / chorus effect depending.  
      * @param[in]  mix_delayed  The delayed signal mix. 
      * @param[in]  mod_type     The shape of the waveform used to modulate (e.g. OSC_SINE, OSC_TRI, etc.)
      * @param[in]  ext_mod      whether to use an external modulation source (set to true or false)
@@ -248,10 +303,7 @@ class fx_variable_delay: public fx_effect {
      *                          ->1.0)
      * @param[in]  buf_size_ms  The size of the audio in milliseconds
      *                          (start wtih a value around 30)
-     * @param[in]  mix_clean    The clean mix.  If this is set to 0.0,
-     *                          then you'll just get the pitch changing
-     *                          aspect of the wave that can used for
-     *                          tape delay simulators, etc.
+     * @param[in]  mix_clean    The clean mix.  If this is set to 0.0, then you'll just get the pitch changing aspect of the wave that can used for tape delay simulators, etc.  When the delayed signal is mixed with the clean signal (i.e. mix_gain and mix_delayed are both above zero), this produces flanger / phaser / chorus effect depending.  
      * @param[in]  mix_delayed  The delayed signal mix. 
      * @param[in]  mod_type     The shape of the waveform used to modulate (e.g. OSC_SINE, OSC_TRI, etc.)
      * @param[in]  ext_mod      whether to use an external modulation source (set to true or false)
@@ -403,6 +455,8 @@ class fx_variable_delay: public fx_effect {
 
     }
 
+
+#ifndef DOXYGEN_SHOULD_SKIP_THIS
    /**
    * @brief  Prints the parameters for this effect
    */
@@ -432,6 +486,7 @@ class fx_variable_delay: public fx_effect {
 
     Serial.println();
   }
+  #endif 
     
 };
 

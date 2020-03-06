@@ -6,6 +6,12 @@
 
 /**
  * @brief      Utility: Oscillator that can has both audio and control outputs
+ * 
+ * These are basically waveform generators that can be used as audio sources (for creating tones, etc.) or control sources (for controlling other effects). 
+ * 
+ * When using this as a control source (such as an LFO), use the .value control node.
+ * 
+ * 
  */
 class fx_oscillator: public fx_effect {
 
@@ -103,9 +109,9 @@ class fx_oscillator: public fx_effect {
   /**
    * @brief      Basic constructor for an oscillator when used as an audio source
    *
-   * @param[in]  osc_type   The osc type (see OSC_TYPES)
-   * @param[in]  freq       The frequency in Hz
-   * @param[in]  amplitude  The amplitude (linear scale e.g. 0.0 -> 1.0 typically)
+   * @param[in]  osc_type   This is the type of waveform that is generated (sine, square wave, triangle wave, ramp, etc.).  See the appendix for a full list of options
+   * @param[in]  freq       The frequency of the waveform in Hertz (Hz).
+   * @param[in]  amplitude  The (linear) volume of the waveform.  Should be between 0.0 and 1.0 (full volume) when used to generate audio.  And it can be any value when generating control signals.
    */
   fx_oscillator(OSC_TYPES osc_type, float freq, float amplitude ) : 
     node_ctrl_freq(NODE_IN, NODE_FLOAT, "node_ctrl_freq", this, FX_OSCILLATOR_PARAM_ID_FREQ),
@@ -130,9 +136,9 @@ class fx_oscillator: public fx_effect {
   /**
    * @brief      Basic constructor for an oscillator used as a control source
    *
-   * @param[in]  osc_type         The osc type (see OSC_TYPES)
-   * @param[in]  freq             The frequency in Hz
-   * @param[in]  amplitude        The amplitude (linear scale e.g. 0.0 -> 1.0 typically)
+   * @param[in]  osc_type         This is the type of waveform that is generated (sine, square wave, triangle wave, ramp, etc.).  See the appendix for a full list of options
+   * @param[in]  freq             The frequency of the waveform in Hertz (Hz).
+   * @param[in]  amplitude        The (linear) volume of the waveform.  Should be between 0.0 and 1.0 (full volume) when used to generate audio.  And it can be any value when generating control signals.
    * @param[in]  initial phase    The initial phase of the oscillator in degrees (0-360)
    */
   fx_oscillator(OSC_TYPES	osc_type, float freq, float amplitude, float initial_phase ) : 
@@ -225,7 +231,7 @@ class fx_oscillator: public fx_effect {
 
     }
 
-
+#ifndef DOXYGEN_SHOULD_SKIP_THIS
     /**
      * @brief      Print the parameters for this effect
      */
@@ -251,7 +257,7 @@ class fx_oscillator: public fx_effect {
 
       Serial.println();
     }    
-
+#endif
 };
 
 

@@ -113,6 +113,7 @@ private:
     parent_canvas->spi_transmit_param(FX_ALLPASS_FILTER, instance_id, T_FLOAT, FX_ALLPASS_PARAM_ID_GAIN, &param_gain);
   }
 
+#ifndef DOXYGEN_SHOULD_SKIP_THIS
   /**
    * @brief  Prints the parameters for the delay effect
    */
@@ -134,6 +135,9 @@ private:
 
     Serial.println();
   }
+
+#endif 
+
 };
 
 
