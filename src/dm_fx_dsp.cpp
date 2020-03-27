@@ -95,6 +95,7 @@ bool wait_for_canvas_to_start(void) {
   }
   if (!timeout_cntr_1s) {
     DEBUG_MSG("Canvas never started running", MSG_ERROR); 
+    display_error_status(ERROR_CODE_DSP_NOT_BOOTING);
   }
 
   DEBUG_MSG("Complete", MSG_DEBUG); 
@@ -231,15 +232,19 @@ void  wait_for_dsp_to_be_ready(void) {
 void report_canvas_errors(void) {
   if (dsp_status.state_err_allocation) {
     DEBUG_MSG("Allocation error encountered while initializing effects", MSG_ERROR);
+    display_error_status(ERROR_INTERNAL);
   }
   if (dsp_status.state_err_param) {
     DEBUG_MSG("Parameter error encountered while initializing effects", MSG_ERROR);
+    display_error_status(ERROR_INTERNAL);
   }
   if (dsp_status.state_err_corrupt) {
     DEBUG_MSG("Corruption error encountered while initializing effects", MSG_ERROR);
+    display_error_status(ERROR_INTERNAL);
   }
   if (dsp_status.state_err_other) {
     DEBUG_MSG("Other error encountered while initializing effects", MSG_ERROR);
+    display_error_status(ERROR_INTERNAL);
   }
 }
 

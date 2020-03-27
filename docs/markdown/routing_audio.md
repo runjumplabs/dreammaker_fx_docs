@@ -79,15 +79,15 @@ Pretty cool, right?
 ------
 Obey these rules to avoid humiliation and sadness:
 
-1. An output node can be routed to multiple input nodes
+An output node can be routed to multiple input nodes
 ``` C
 pedal.route_audio(pedal.instr_in, delay_1.input);
 pedal.route_audio(pedal.instr_in, delay_2.input);
 ```
-2. An input node can only have one input.  However, you can use the `fx_mixer` nodes if you want to send multiple outputs to an input.
+An input node can only have one input.  However, you can use the `fx_mixer` nodes if you want to send multiple outputs to an input.
 ``` C
 pedal.route_audio(delay_1.output, my_mixer_2.input_1);
 pedal.route_audio(delay_2.output, my_mixer_2.input_2);
 pedal.route_audio(my_mixer_2, pedal.amp_out);
 ```
-3. And you can't route input nodes to other input nodes, or output nodes to other output nodes.  It's always output->input.
+And you can't route input nodes to other input nodes, or output nodes to other output nodes.  It's always output->input.

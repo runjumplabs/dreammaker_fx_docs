@@ -274,7 +274,7 @@ class fx_compressor: public fx_effect {
       parent_canvas->spi_transmit_param(FX_COMPRESSOR, instance_id, T_FLOAT, FX_COMPRESSOR_PARAM_ID_OUT_GAIN, &param_gain_out);
     }  
 
-#ifndef DOXYGEN_SHOULD_SKIP_THIS
+
     void  print_params(void) {
 
   		// void print_parameter( void * val, char * name, PARAM_TYPES type)
@@ -299,7 +299,7 @@ class fx_compressor: public fx_effect {
 
       Serial.println();
     }    
-#endif
+
 };
 
 #endif 	// DM_FX_COMPRESSOR_H

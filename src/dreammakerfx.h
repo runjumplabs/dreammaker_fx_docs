@@ -14,11 +14,12 @@
 #include "dm_fx_ui.h"
 #include "dm_fx_debug.h"
 #include "dm_fx_platform_constants.h"
+#include "dm_fx_semitones.h"
 
 #include "effects/dm_fx_effects_defines.h"
 
 
-#define API_VERSION         10504
+#define API_VERSION         10602
 
 
 class fx_effect;
@@ -186,6 +187,7 @@ class fx_control_node {
  * LED colors for pedals with RGB LEDs
  */
 typedef enum {
+  BLACK   = 0x0,
   RED     = 0x800000,
   GREEN   = 0x008000,
   BLUE    = 0x000080,
@@ -505,7 +507,7 @@ class fx_pot {
 
         float v_long = pot_variance(pot_history_long, POT_LONG_HIST_LEN);
         
-        if (v_long > 0.00005) {
+        if (v_long > 0.0001) {
           changed = true;
           float v_short= pot_variance(pot_history_short, POT_SHORT_HIST_LEN);
           if (v_short < 0.00005) {
@@ -518,7 +520,7 @@ class fx_pot {
       #if defined (DM_FX_TWO)
         val = 1.0 - val;
       #endif 
-      val_inv = -val;
+      val_inv = 1.0-val;
       val_log = log10(1.0 + (val*9.0));
       val_log_inv = 1.0 - log10(1.0 + ((1.0-val)*9.0));
     }
@@ -712,8 +714,8 @@ class fx_pedal {
       fx_pot  pot_center;
       fx_pot  pot_left;
 
-      fx_led  left_led;
-      fx_led  right_led;
+      fx_led  led_left;
+      fx_led  led_right;
 
     #elif defined (DM_FX_TWO)
       fx_pot  pot_top_left;
@@ -1103,6 +1105,7 @@ class fx_effect {
 #include "effects/dm_fx_adsr_envelope.h"
 #include "effects/dm_fx_allpass_filter.h"
 #include "effects/dm_fx_amplitude_modulator.h"
+#include "effects/dm_fx_arpeggiator.h"
 #include "effects/dm_fx_biquad_filter.h"
 #include "effects/dm_fx_destructor.h"
 #include "effects/dm_fx_compressor.h"
@@ -1110,6 +1113,8 @@ class fx_effect {
 #include "effects/dm_fx_delay_multitap.h"
 #include "effects/dm_fx_envelope_tracker.h"
 #include "effects/dm_fx_gain.h"
+#include "effects/dm_fx_harmonizer.h"
+#include "effects/dm_fx_impulse_response.h"
 #include "effects/dm_fx_instrument_synth.h"
 #include "effects/dm_fx_looper.h"
 #include "effects/dm_fx_mixers.h"
@@ -1118,6 +1123,7 @@ class fx_effect {
 #include "effects/dm_fx_pitch_shift.h"
 #include "effects/dm_fx_ring_modulator.h"
 #include "effects/dm_fx_slicer.h"
+#include "effects/dm_fx_spectralizer.h"
 #include "effects/dm_fx_variable_delay.h"
 
 

@@ -7,85 +7,9 @@
 /**
  * @brief      Effect: Slicer - chops up audio in the time domain and pipes to different effects
  * 
- * Think of a slicer like a robot at a mixer that is send the incoming audio through multiple effects in a time sequenced manner.  For example, if 2 channels are used and the period is set to 1000 ms (or 1 second), for the first half second, the audio is routed to output_1 and for the second half second, the audio is routed to output_2.  These two outputs can run through different effects  so the result is a cool, rhythmic effect.
- * 
- * Here's an example where the slicer is sending audio through a distortion and through four different filters to create a "nee-naa-noo-nuu nee-naa-noo-nuu nee-naa-noo-nuu" sound?
- * 
- * ```CPP 
- * #include <dreammakerfx.h>
- * 
- * fx_slicer       slice4(750.0, 4);     
- * 
- * fx_mixer_4      mix4;
- * fx_destructor   tube_clip(0.1,           // Clipping level (from 0 to 1.0) - lower is heavier distortion
- *                           16.0,           // Input drive 
- *                           SMOOTH_CLIP);  // Distortion function = fuzz
- * 
- * fx_biquad_filter  filt1(200, 3.0, BIQUAD_TYPE_LPF);
- * fx_biquad_filter  filt2(800, 3.0, BIQUAD_TYPE_LPF);
- * fx_biquad_filter  filt3(1100, 3.0, BIQUAD_TYPE_LPF);
- * fx_biquad_filter  filt4(1800, 3.0, BIQUAD_TYPE_LPF);
- * 
- * 
- * void setup() {
- *   // put your setup code here, to run once:
- * 
- *   // Initialize the pedal!
- *   pedal.init();
- *    
- *   pedal.route_audio(pedal.instr_in, tube_clip.input);
- *   pedal.route_audio(tube_clip.output, slice4.input);
- *  
- *   pedal.route_audio(slice4.output_1, filt1.input);
- *   pedal.route_audio(slice4.output_2, filt2.input);
- *   pedal.route_audio(slice4.output_3, filt3.input);
- *   pedal.route_audio(slice4.output_4, filt4.input);
- * 
- *   pedal.route_audio(filt1.output, mix4.input_1);
- *   pedal.route_audio(filt2.output, mix4.input_2);
- *   pedal.route_audio(filt3.output, mix4.input_3);
- *   pedal.route_audio(filt4.output, mix4.input_4);
- *   
- *   pedal.route_audio(mix4.output, pedal.amp_out);
- * 
- *   // Reset the slicer position when a new note is played
- *   pedal.route_control(pedal.new_note, slice4.start);
- *   
- *   // left footswitch is bypass
- *   pedal.add_bypass_button(FOOTSWITCH_LEFT);
- * 
- *    // Run this effect
- *   pedal.run();
- * }
- * 
- * void loop() {
- * 
- *   // Left pot changes filter resonance
- *   if (pedal.pot_left.has_changed()) {
- *     filt1.set_resonance(1.0 + pedal.pot_left.val * 5.0);
- *     filt2.set_resonance(1.0 + pedal.pot_left.val * 5.0);
- *     filt3.set_resonance(1.0 + pedal.pot_left.val * 5.0);
- *     filt4.set_resonance(1.0 + pedal.pot_left.val * 5.0);
- *   }
- *   
- *   // Center pot changes drive 
- *   if (pedal.pot_center.has_changed()) {
- *     tube_clip.set_input_drive(2.0 + pedal.pot_center.val * 32);
- *   }  
- *   
- *   // Right pot changes slicer period
- *   if (pedal.pot_right.has_changed()) {
- *     slice4.set_period_ms(500.0 + 1000 * (1.0 - pedal.pot_right.val));
- *   }    
- *   
- *   // Service pedal
- *   pedal.service();
- * }
- *  
- * ```
+ *  Example:
+ *   ___slicer_1.c___ 
  */
-
-
 class fx_slicer: public fx_effect {
 
 private:
@@ -284,7 +208,6 @@ private:
     parent_canvas->spi_transmit_param(FX_AMPLITUDE_MODULATOR, instance_id, T_FLOAT, FX_SLICER_PARAM_ID_PERIOD, &param_period);
   }
 
-#ifndef DOXYGEN_SHOULD_SKIP_THIS
   /**
    * @brief      Print the parameters for this effect
    */
@@ -313,8 +236,6 @@ private:
 
     Serial.println();
   }
-#endif 
-
 };
 
 

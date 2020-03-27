@@ -13,12 +13,14 @@ DreamMaker FX Documentation
 
    markdown/intro.md
    rst/examples.rst
+   rst/hardware.rst
    markdown/install.md
+   markdown/arduino_anatomy.md
    markdown/echo_basic.md
    markdown/adding_effects.md
    markdown/routing_audio.md
    markdown/controlling_effects.md
-   markdown/butttons_and_knobs.md
+   markdown/buttons_and_knobs.md
    markdown/using_api.md
    markdown/debugging.md
    markdown/troubleshooting.md
@@ -44,6 +46,7 @@ DreamMaker FX Documentation
 
    ADSR Envelope<api/classfx__adsr__envelope.rst>
    Amplitude Modulator<api/classfx__amplitude__mod.rst>
+   Arpeggiator<api/classfx__arpeggiator.rst>
    Biquad Filter<api/classfx__biquad__filter.rst>
    Compressor<api/classfx__compressor.rst>
    Delay<api/classfx__delay.rst>
@@ -56,6 +59,7 @@ DreamMaker FX Documentation
    Oscillator<api/classfx__oscillator.rst>
    Phase Shifter<api/classfx__phase__shifter.rst>
    Pitch Shifter<api/classfx__pitch__shift.rst>
+   Pitch Shifter (Freq Domain)<api/classfx__pitch__shift__fd.rst>
    Ring Modulator<api/classfx__ring__mod.rst>
    Slicer<api/classfx__slicer.rst>
    Variable Delay<api/classfx__variable__delay.rst>

@@ -7,9 +7,12 @@
 /**
  * @brief      Effect: Envelope tracker
  * 
- * Here's a nice tutorial on one effect that can be created with an envelope tracker
+ * An envelope tracker creates a control signal that follows the volume of the audio running into it.
  * 
- * <iframe width="560" height="315" src="https://www.youtube.com/embed/gFltSCZVqx0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ * There is also a control signal built into the pedal itself that can be used for current volume.
+ * However, the envelope tracker also provides discrete control for attack and release.
+ * 
+ * For more advanced envelope control, see the ADSR Envelope function.
  * 
  */
 class fx_envelope_tracker:public fx_effect {

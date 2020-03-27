@@ -268,8 +268,6 @@ class fx_destructor: public fx_effect {
     parent_canvas->spi_transmit_param(FX_DESTRUCTOR, instance_id, T_FLOAT, FX_DESTRUCTOR_PARAM_ID_OUT_GAIN, &param_output_gain);
   }    
 
-
-#ifndef DOXYGEN_SHOULD_SKIP_THIS
   /**
    * @brief      Print the parameters for this effect
    */
@@ -291,7 +289,6 @@ class fx_destructor: public fx_effect {
 
     Serial.println();
   }    
-  #endif 
 };
 #endif  // DM_FX_DESTRUCTOR_H
 

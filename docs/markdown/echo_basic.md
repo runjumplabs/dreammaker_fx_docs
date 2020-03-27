@@ -1,4 +1,4 @@
-# Building a Basic Echo Pedal
+# Tutorial #1: Basic Delay Pedal
 ------
 
 As mentioned earlier, one doesn't have to be an experienced programmer to use this platform.  The coding patterns for creating various effect and synth components, wiring them together and controlling their parameters is pretty straight forward.
@@ -6,25 +6,6 @@ As mentioned earlier, one doesn't have to be an experienced programmer to use th
 
 ## Basic Arduino anatomy
 ------
-Let's start by learning the anatomy of a basic Arduino "Sketch" (aka "program" in Arduino speak).
-
-With the Arduino app open, go to File->New.  You'll see a new text editor window appear with a new "sketch".  This sketch will come pre-populated with two *functions*. One is called `setup()` and another is called `loop()`.  
-
-When the sketch is downloaded to our hardware, it will first run any commands in the `setup()` function once.  And then it will run the `loop()` function repeatidly.  Each time you power up the board, it goes through the same sequence (run `setup()` once and then run `loop()` indefinitely).
-
-``` C
-void setup() {
-  // put your setup code here, to run once:
-
-}
-
-void loop() {
-  // put your main code here, to run repeatedly:
-
-}
-```
-
-So when creating effects, we will define how the effects connect together in the `setup()` function and we will then (optionally) adjust the parameters for these effects in the `loop()` routine.
 
 Let's start by creating a simple echo effect to see how the pieces fit together.
 
@@ -75,7 +56,7 @@ void setup() {
 
 Let's deconstruct what we just did here.
 
-First, we *called* the `pedal.init(true);` function to set up our system. 
+First, we *called* the `pedal.init();` function to set up our system. 
 
 Next, we connected the audio from the input jack of our pedal (aka `instr_in`) to the input of our echo object (aka `my_echo_1.input`) using the `route_audio()` function.  
 

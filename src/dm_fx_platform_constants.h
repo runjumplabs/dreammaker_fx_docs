@@ -8,10 +8,10 @@
 #define PI2 (3.14159265358979323846*2)
 #endif 
 
-#define MAX_INSTANCES                 (40)
-#define MAX_ROUTES                    (60)
+#define MAX_INSTANCES                 (100)
+#define MAX_ROUTES                    (100)
 #define MAX_NODES_PER_FX              (10)
-#define MAX_PARMS_PER_FX              (64)
+#define MAX_PARMS_PER_FX              (256)
 #define MAX_NODE_NAME                 (32)
 #define UNDEFINED                     (0xff)
 

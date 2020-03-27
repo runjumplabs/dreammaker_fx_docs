@@ -14,7 +14,7 @@ We then provide a name for our effect object (which in the example above is `my_
 
 And finally, we provide the initial parameters for that effect (i.e. where the knobs are set initially).
 
-Again, the The API docs contain more details on this.
+Again, the Effect Blocks section on the left contains documentation for each of the various effect blocks that are available.
 
 What's neat is that this *object* then becomes its own stand-alone effect.  We can create multiple objects of the same type in our program (i.e. multiple delays in this case) that each have their own parameters and which are each wired-in in their own ways.
  

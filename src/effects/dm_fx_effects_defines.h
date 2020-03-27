@@ -14,7 +14,9 @@
 /// Types of effects
 typedef enum {
     FX_NONE,
+    FX_ADSR_ENVELOPE,
     FX_ALLPASS_FILTER,
+    FX_ARPEGGIATOR,
     FX_AMPLITUDE_MODULATOR,
     FX_BIQUAD_FILTER,
     FX_COMPRESSOR,
@@ -23,7 +25,8 @@ typedef enum {
     FX_DESTRUCTOR,
     FX_ENVELOPE_TRACKER,
     FX_GAIN,
-    FX_ADSR,
+    FX_HARMONIZER,
+    FX_IMPULSE_RESPONSE,
     FX_LOOPER,
     FX_MIXER_2,
     FX_MIXER_3,
@@ -34,8 +37,8 @@ typedef enum {
     FX_PITCH_SHIFT,
     FX_RING_MOD,
     FX_SLICER,
+    FX_SPECTRALIZER,
     FX_VARIABLE_DELAY,
-    FX_ADSR_ENVELOPE,
     FX_CANVAS = (254),
     FX_UNDEFINED = (255),
 } EFFECT_TYPE;
@@ -51,7 +54,65 @@ typedef enum {
   NODE_NOTE
 } CTRL_NODE_TYPE;
 
-#endif 
+#define ARP_MAX_STEPS   (16)
+
+#endif
+
+typedef enum {
+    IR_SPRING_LONG,
+    IR_SPRING_MED,
+    IR_HF_SPRING,
+    IR_PLATE_1,
+    IR_MAX
+} IMPULSE;
+
+/**
+ * @brief: A step of the arpeggiator.  Set values not used to zero.
+ * \ingroup Enumerations
+ */
+typedef struct {
+    float   freq;       /**< Control frequency (for note or filter) */
+    float   vol;        /**< Control volume */
+    float   dur;        /**< Duration of this event */
+    float   param_1;    /**< Auxiliary parameter #1 */
+    float   param_2;    /**< Auxiliary parameter #2 */
+} ARP_STEP;
+
+
+/**
+ * @brief: Music keys
+ * \ingroup Enumerations
+ */
+typedef enum {
+    KEY_C,
+    KEY_CS,
+    KEY_D,
+    KEY_DS,
+    KEY_E,
+    KEY_F,
+    KEY_FS,
+    KEY_G,
+    KEY_GS,
+    KEY_A,
+    KEY_AS,
+    KEY_B,
+    KEY_MAX
+} MUSIC_KEY;
+
+/**
+ * @brief: Music modes
+ * \ingroup Enumerations
+ */
+typedef enum {
+    IONIAN,
+    DORIAN,
+    PHRYGIAN,
+    LYDIAN,
+    MIXOLYDIAN,
+    AEOLIAN,
+    LOCRIAN,
+    MODE_MAX
+} MUSIC_MODE;
 
 /**
  * @brief: Types of oscillators
@@ -75,7 +136,7 @@ typedef enum {
 #ifndef DOXYGEN_SHOULD_SKIP_THIS
 // Legacy
 #define OSC_TRI OSC_TRIANGLE
-#endif 
+#endif
 
 /**
  * @brief: Transition time when new parameters are loaded
@@ -209,6 +270,7 @@ typedef enum {
 #define  FX_CANVAS_PARAM_ID_NOTE_FREQ                1
 #define  FX_CANVAS_PARAM_ID_NOTE_DURATION            2
 #define  FX_CANVAS_PARAM_ID_NOTE_NEW_NOTE            3
+#define  FX_CANVAS_PARAM_ID_NEW_FREQ_LOCK            4
 
 
 /*********************************************************
@@ -251,7 +313,7 @@ typedef enum {
 #define  FX_ADSR_OFFSET_RATIO_PEAK             9
 #define  FX_ADSR_OFFSET_RATIO_SUSTAIN          11
 #define  FX_ADSR_OFFSET_VOL_OUT                13
-
+#define  FX_ADSR_OFFSET_LOOKAHEAD              15
 
 
 /*********************************************************
@@ -273,6 +335,26 @@ typedef enum {
 #define  FX_AMP_MOD_OFFSET_MOD_DEPTH                 5
 #define  FX_AMP_MOD_OFFSET_MOD_TYPE                  7
 #define  FX_AMP_MOD_OFFSET_EXT_MOD                   8
+
+
+/*********************************************************
+ * ARPEGGIATOR
+ ********************************************************/
+
+#define FX_ARPEGGIATOR_PARAM_ID_ENABLE              0
+#define FX_ARPEGGIATOR_PARAM_ID_TIME_SCALE          1
+#define FX_ARPEGGIATOR_PARAM_ID_PERIOD              2
+#define FX_ARPEGGIATOR_PARAM_ID_FREQ                3
+#define FX_ARPEGGIATOR_PARAM_ID_VOL                 4
+#define FX_ARPEGGIATOR_PARAM_ID_PARAM_1             5
+#define FX_ARPEGGIATOR_PARAM_ID_PARAM_2             6
+#define FX_ARPEGGIATOR_PARAM_ID_RESTART             7
+
+
+#define FX_ARPEGGIATOR_OFFSET_EN                    0
+#define FX_ARPEGGIATOR_OFFSET_TOTAL_STEPS           1
+#define FX_ARPEGGIATOR_OFFSET_STEPS                 2
+
 
 /*********************************************************
  * BIQUAD
@@ -422,6 +504,40 @@ typedef enum {
 
 
 /*********************************************************
+ * HARMONIZER
+ ********************************************************/
+
+// Parameters
+#define FX_HARMONIZER_PARAM_ID_ENABLED          0
+#define FX_HARMONIZER_PARAM_ID_FREQ_OUT         1
+#define FX_HARMONIZER_PARAM_ID_VOL_OUT          2
+#define FX_HARMONIZER_PARAM_ID_KEY              3
+#define FX_HARMONIZER_PARAM_ID_MODE             4
+#define FX_HARMONIZER_PARAM_ID_OFFSET           5
+#define FX_HARMONIZER_PARAM_ID_VOL              6
+
+
+// Offsets
+#define  FX_HARMONIZER_OFFSET_ENABLED           0
+#define  FX_HARMONIZER_OFFSET_KEY               1
+#define  FX_HARMONIZER_OFFSET_MODE              2
+#define  FX_HARMONIZER_OFFSET_NOTE_OFFSET       3
+#define  FX_HARMONIZER_OFFSET_VOL               4
+
+/*********************************************************
+ * IMPULSE RESPONSE
+ ********************************************************/
+
+// Parameters
+#define FX_IMPULSE_RESPONSE_PARAM_ID_ENABLED        0
+#define FX_IMPULSE_RESPONSE_PARAM_ID_IMPULSE_RESP   1
+
+// Offsets
+#define  FX_IMPULSE_RESPONSE_OFFSET_ENABLED         0
+#define  FX_IMPULSE_RESPONSE_OFFSET_IMPULSE_RESP    1
+
+
+/*********************************************************
  * INSTRUMENT_SYNTH
  ********************************************************/
 
@@ -536,10 +652,11 @@ typedef enum {
 #define     FX_PHASE_SHIFTER_PARAM_OFFSET_INITIAL_PHASE   7
 #define     FX_PHASE_SHIFTER_PARAM_OFFSET_MOD_TYPE        9
 
-/*********************************************************
- * PITCH SHIFT / PHASE VOCODER
- ********************************************************/
 
+
+/*********************************************************
+ * PITCH SHIFTER
+ ********************************************************/
 // Parameters
 #define  FX_PITCH_SHIFT_PARAM_ID_ENABLED              0
 #define  FX_PITCH_SHIFT_PARAM_ID_FREQ_SHIFT           1
@@ -547,6 +664,7 @@ typedef enum {
 // Offsets
 #define  FX_PITCH_SHIFT_PARAM_OFFSET_OFFSET_EN        0
 #define  FX_PITCH_SHIFT_PARAM_OFFSET_FREQ_SHIFT       1
+
 
 
 /*********************************************************
@@ -581,6 +699,28 @@ typedef enum {
 #define     FX_SLICER_PARAM_OFFSET_EN                0
 #define     FX_SLICER_PARAM_OFFSET_PERIOD            1
 #define     FX_SLICER_PARAM_OFFSET_CHANNELS          3
+
+
+/*********************************************************
+ * SPECTRALIZER
+ ********************************************************/
+
+// Parameters
+#define  FX_SPECTRALIZER_PARAM_OFFSET_OFFSET_EN         0
+#define  FX_SPECTRALIZER_PARAM_OFFSET_FREQ_SHIFT_1      1
+#define  FX_SPECTRALIZER_PARAM_OFFSET_FREQ_SHIFT_2      3
+#define  FX_SPECTRALIZER_PARAM_OFFSET_VOL_1             5
+#define  FX_SPECTRALIZER_PARAM_OFFSET_VOL_2             7
+#define  FX_SPECTRALIZER_PARAM_OFFSET_VOL_CLEAN         9
+
+// Offsets
+#define  FX_SPECTRALIZER_PARAM_ID_ENABLED               0
+#define  FX_SPECTRALIZER_PARAM_ID_FREQ_SHIFT_1          1
+#define  FX_SPECTRALIZER_PARAM_ID_FREQ_SHIFT_2          2
+#define  FX_SPECTRALIZER_PARAM_ID_VOL_1                 3
+#define  FX_SPECTRALIZER_PARAM_ID_VOL_2                 4
+#define  FX_SPECTRALIZER_PARAM_ID_VOL_CLEAN             5
+
 
 /*********************************************************
  * VARIABLE DELAY

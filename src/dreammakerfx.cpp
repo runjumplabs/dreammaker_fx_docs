@@ -64,8 +64,8 @@ void fx_pedal::init(DEBUG_MSG_LEVEL debug_level, bool dsp_no_reset) {
     pinMode(PIN_FOOTSW_LED_1, OUTPUT);
     pinMode(PIN_FOOTSW_LED_2, OUTPUT);
     pinMode(PIN_ARD_LED, OUTPUT);
-    pinMode(PIN_USR_PB, INPUT);
-    attachInterrupt(digitalPinToInterrupt(PIN_USR_PB), user_pb_pressed, FALLING);
+    //pinMode(PIN_USR_PB, INPUT);
+    //attachInterrupt(digitalPinToInterrupt(PIN_USR_PB), user_pb_pressed, FALLING);
 
   #elif defined (DM_FX_TWO)
     pinMode(PIN_ARD_LED_G, OUTPUT);
@@ -95,6 +95,7 @@ void fx_pedal::init(DEBUG_MSG_LEVEL debug_level, bool dsp_no_reset) {
   }
 
   // Initialize the RGB LEDs if present
+
   rgb_leds_init();
   turn_on_left_footsw_led_rgb(0, 0, 200);
   turn_on_center_footsw_led_rgb(0, 0, 200);
@@ -108,6 +109,17 @@ void fx_pedal::init(DEBUG_MSG_LEVEL debug_level, bool dsp_no_reset) {
     }
   }
 
+    // Set up telemetry link to SHARC
+  Serial1.begin(115200);
+  // Set up Serial USB link
+  Serial.begin(115200);
+  Serial.print("DreamMaker FX By Run Jump Labs");
+  Serial.print(" (version: ");
+  String package_str = String(API_VERSION);
+  package_str.replace("0",".");
+  Serial.print(package_str);    
+  Serial.println(")");
+
   #if defined (DM_FX)
     // Initialize the WM8731
     wm8731_initialize();
@@ -116,24 +128,22 @@ void fx_pedal::init(DEBUG_MSG_LEVEL debug_level, bool dsp_no_reset) {
     adau1761_initialize();
   #endif 
 
+
   turn_on_left_footsw_led_rgb(100, 0, 100);
   turn_on_center_footsw_led_rgb(100, 0, 100);
   turn_on_right_footsw_led_rgb(100, 0, 100);
 
-  // Set up telemetry link to SHARC
-  Serial1.begin(115200);
-  // Set up Serial USB link
-  Serial.begin(115200);
 
   attachInterrupt(digitalPinToInterrupt(PIN_FOOTSW_1), footswitch_right_pressed_isr, FALLING);
   attachInterrupt(digitalPinToInterrupt(PIN_FOOTSW_2), footswitch_left_pressed_isr, FALLING);
-
-
-  if (!debug_no_reset) {
+  
+  if (!dsp_no_reset) {
     // Reset the DSP
+    DEBUG_MSG("Resetting DSP", MSG_DEBUG);
     dsp_reset();
   } else {
     // If we're not resetting DSP, at least make sure it's not still using the SPI port to boot
+    DEBUG_MSG("Bypassing DSP reset", MSG_DEBUG);
     wait_for_dsp_spi_flash_access_to_cease();
   }
   
@@ -141,14 +151,12 @@ void fx_pedal::init(DEBUG_MSG_LEVEL debug_level, bool dsp_no_reset) {
   turn_on_center_footsw_led_rgb(100, 100, 0);
   turn_on_right_footsw_led_rgb(100, 100, 0);
 
-  
-  Serial.print("DreamMaker FX By Run Jump Labs");
 
-  Serial.print(" (version: ");
-  String package_str = String(API_VERSION);
-  package_str.replace("0",".");
-  Serial.print(package_str);    
-  Serial.println(")");
+
+  
+
+
+
 
   // Wait for the DSP to boot and report firmware
   wait_for_dsp_to_boot();
@@ -180,6 +188,7 @@ void fx_pedal::init(DEBUG_MSG_LEVEL debug_level, bool dsp_no_reset) {
   turn_off_right_footsw_led();
 
   initialized = true;
+
 
 }
 
@@ -374,7 +383,7 @@ void fx_pedal::spi_transmit_params(uint16_t node_index) {
 
   DEBUG_MSG("Starting", MSG_DEBUG);  
   
-  uint16_t param_block[64];
+  uint16_t param_block[MAX_PARMS_PER_FX];
   uint16_t size;
 
   if (!node_index) {
@@ -414,7 +423,7 @@ void fx_pedal::spi_transmit_all_params(void) {
 
   DEBUG_MSG("Starting", MSG_DEBUG);  
 
-  uint16_t param_block[64];
+  uint16_t param_block[MAX_PARMS_PER_FX];
   uint16_t size;
 
   param_block[0] = HEADER_PARAMETER_BLOCK;
@@ -435,6 +444,21 @@ void fx_pedal::spi_transmit_all_params(void) {
 
       // Copy to SPI transmit block
       spi_fifo_insert_block(param_block, size);
+
+      if (dmfx_debug_level == MSG_DEBUG) {
+        Serial.print("  Type: ");
+        Serial.print(instance_stack[i].type);
+        Serial.print(", ID: ");
+        Serial.print(instance_stack[i].id);
+        Serial.print(", Size: ");
+        Serial.println(size);
+        #if 0
+          for (int i=0;i<size;i++) {
+            Serial.print("    0x");
+            Serial.println(param_block[i], HEX);
+          }
+        #endif 
+      }
 
     }
   }
@@ -539,6 +563,7 @@ bool fx_pedal::route_audio(fx_audio_node * src, fx_audio_node * dest) {
   // Ensure inputs and outputs are valid
   if (src->node_direction != NODE_OUT || dest->node_direction != NODE_IN) {
     DEBUG_MSG("Source node is not an output, or destination node is not an input", MSG_ERROR);
+    display_error_status(ERROR_CODE_ILLEGAL_ROUTING);
     return false;
   }
 
@@ -619,6 +644,7 @@ bool fx_pedal::route_audio(fx_audio_node * src, fx_audio_node * dest) {
     res = src->parent_effect->get_audio_node_index(src, &src_node_indx);
     if (!res) {
       DEBUG_MSG("Couldn't find this source node in the effect!", MSG_ERROR);
+      display_error_status(ERROR_CODE_ILLEGAL_ROUTING);
       return false;
     }
   }
@@ -626,6 +652,7 @@ bool fx_pedal::route_audio(fx_audio_node * src, fx_audio_node * dest) {
     res = src->parent_canvas->get_audio_node_index(src, &src_node_indx);
     if (!res) {
       DEBUG_MSG("Couldn't find this source node in the canvas!", MSG_ERROR);
+      display_error_status(ERROR_CODE_ILLEGAL_ROUTING);
       return false;
     }
   }
@@ -635,6 +662,7 @@ bool fx_pedal::route_audio(fx_audio_node * src, fx_audio_node * dest) {
     res = dest->parent_effect->get_audio_node_index(dest, &dest_node_indx);
     if (!res) {
       DEBUG_MSG("Couldn't find this destination node in the effect!", MSG_ERROR);
+      display_error_status(ERROR_CODE_ILLEGAL_ROUTING);
       return false;
     }
   }
@@ -642,6 +670,7 @@ bool fx_pedal::route_audio(fx_audio_node * src, fx_audio_node * dest) {
     res = dest->parent_canvas->get_audio_node_index(dest, &dest_node_indx);
     if (!res) {
       DEBUG_MSG("Couldn't find this destination node in the canvas!", MSG_ERROR);
+      display_error_status(ERROR_CODE_ILLEGAL_ROUTING);
       return false;
     }
   }
@@ -702,6 +731,7 @@ bool fx_pedal::route_control(fx_control_node * src, fx_control_node * dest, floa
 // Ensure inputs and outputs are valid
   if (src->node_direction != NODE_OUT || dest->node_direction != NODE_IN) {
     DEBUG_MSG("Source must be output, dest must be input", MSG_ERROR);
+    display_error_status(ERROR_CODE_ILLEGAL_ROUTING);
     return false;
   }
 
@@ -721,6 +751,7 @@ bool fx_pedal::route_control(fx_control_node * src, fx_control_node * dest, floa
       instance_stack[total_instances].type = src->parent_effect->get_type(); 
       instance_stack[total_instances].id = total_instances; 
       src_id = total_instances;
+      src->parent_effect->instance_id = total_instances;
       total_instances++;
 
       #if 0
@@ -744,6 +775,7 @@ bool fx_pedal::route_control(fx_control_node * src, fx_control_node * dest, floa
       instance_stack[total_instances].type = dest->parent_effect->get_type(); 
       instance_stack[total_instances].id = total_instances; 
       dest_id = total_instances;
+      dest->parent_effect->instance_id = total_instances;
       total_instances++;
     }
   } else if (src->parent_canvas != NULL) {
@@ -765,6 +797,7 @@ bool fx_pedal::route_control(fx_control_node * src, fx_control_node * dest, floa
     res = src->parent_effect->get_control_node_index(src, &src_node_indx);
     if (!res) {
       DEBUG_MSG("Couldn't find the source node in an effect", MSG_ERROR);
+      display_error_status(ERROR_CODE_ILLEGAL_ROUTING);
       return false;
     }
   }
@@ -773,6 +806,7 @@ bool fx_pedal::route_control(fx_control_node * src, fx_control_node * dest, floa
     res = src->parent_canvas->get_control_node_index(src, &src_node_indx);
     if (!res) {
       DEBUG_MSG("Couldn't find the source node in the canvas", MSG_ERROR);
+      display_error_status(ERROR_CODE_ILLEGAL_ROUTING);
       return false;
     }
   }
@@ -782,6 +816,7 @@ bool fx_pedal::route_control(fx_control_node * src, fx_control_node * dest, floa
     res = dest->parent_effect->get_control_node_index(dest, &dest_node_indx);
     if (!res) {
       DEBUG_MSG("Couldn't find the dest node in an effect", MSG_ERROR);
+      display_error_status(ERROR_CODE_ILLEGAL_ROUTING);
       return false;
     }
   }
@@ -790,6 +825,7 @@ bool fx_pedal::route_control(fx_control_node * src, fx_control_node * dest, floa
     res = dest->parent_canvas->get_control_node_index(dest, &dest_node_indx);
     if (!res) {
       DEBUG_MSG("Couldn't find the dest node in the canvas", MSG_ERROR);
+      display_error_status(ERROR_CODE_ILLEGAL_ROUTING);
       return false;
     }
   }
@@ -952,6 +988,12 @@ void fx_pedal::service(void) {
     }
   }
 
+  if (dsp_status.state_err_other) {
+    DEBUG_MSG("Internal error detected on DSP - try resetting", MSG_WARN);
+    dsp_status.state_err_other = false;
+    delay(1000);
+  }
+
   // Service LEDs
   led_left.service();
   #if defined (DM_FX_TWO)
@@ -1047,13 +1089,6 @@ bool fx_pedal::run(void) {
     spi_transmit_all_params();
     display_data_from_sharc();
 
-    // Wait for DSP to send message that canvas is running
-    wait_for_canvas_to_start();
-    int now = millis();
-    while (millis() < now + 50) {
-      display_data_from_sharc();
-    }
-
     // If we've added bypass controls, start effect bypassed
     if (bypass_control_enabled) {
       pedal.bypassed = true;
@@ -1062,6 +1097,15 @@ bool fx_pedal::run(void) {
       pedal.bypassed = false;
       enable_fx();
     }
+
+    // Wait for DSP to send message that canvas is running
+    wait_for_canvas_to_start();
+    int now = millis();
+    while (millis() < now + 50) {
+      display_data_from_sharc();
+    }
+
+
 
     if (dsp_status.state_canvas_running) {
       DEBUG_MSG("Canvas is running", MSG_INFO);
@@ -1420,7 +1464,7 @@ bool fx_pedal::button_released(FOOTSWITCH footswitch, bool enable_led) {
  *
  * @param[in]  seconds  How many seconds to wait before displaying the loading again
  */
-void print_processor_load(int seconds) {
+void fx_pedal::print_processor_load(int seconds) {
   if (seconds < 1) {
     seconds = 1;
   }
@@ -1480,7 +1524,7 @@ void fx_pedal::print_routing_table() {
 
   if (total_audio_routes > 0) {
     for (int i=0;i<total_audio_routes;i++) {
-      if (audio_routing_stack[i].src_id != UNDEFINED) {
+      if (audio_routing_stack[i].src_id != UNDEFINED) {        
         Serial.print(" Src ID: ");
         Serial.println((int) audio_routing_stack[i].src_id, HEX);
         Serial.print("  Src Node Indx: ");
@@ -1544,131 +1588,149 @@ void fx_pedal::print_param_tables() {
         effect->print_params();
       }
 
-      if (instance_stack[i].type == FX_ADSR_ENVELOPE) {
+      else if (instance_stack[i].type == FX_ADSR_ENVELOPE) {
         sprintf(buf, "ADSR Envelope (instance %d)", i); Serial.println(buf);
         fx_adsr_envelope * effect = (fx_adsr_envelope *) instance_stack[i].address; 
         effect->print_params();
       }
 
-
-      if (instance_stack[i].type == FX_AMPLITUDE_MODULATOR) {
+      else if (instance_stack[i].type == FX_AMPLITUDE_MODULATOR) {
         sprintf(buf, "AMP MODULATOR (instance %d)", i); Serial.println(buf);
         fx_amplitude_mod * effect = (fx_amplitude_mod *) instance_stack[i].address; 
         effect->print_params();
       }
 
-      if (instance_stack[i].type == FX_BIQUAD_FILTER) {
+      else if (instance_stack[i].type == FX_ARPEGGIATOR) {
+        sprintf(buf, "Arpeggiator (instance %d)", i); Serial.println(buf);
+        fx_arpeggiator * effect = (fx_arpeggiator *) instance_stack[i].address; 
+        effect->print_params();
+      }
+
+      else if (instance_stack[i].type == FX_BIQUAD_FILTER) {
         sprintf(buf, "BIQUAD (instance %d)", i); Serial.println(buf);
         fx_biquad_filter * effect = (fx_biquad_filter *) instance_stack[i].address; 
         effect->print_params();
       }
 
-      if (instance_stack[i].type == FX_DESTRUCTOR) {
+      else if (instance_stack[i].type == FX_DESTRUCTOR) {
         sprintf(buf, "Destructor (instance %d)", i); Serial.println(buf);
         fx_destructor * effect = (fx_destructor *) instance_stack[i].address; 
         effect->print_params();
       }
 
-      if (instance_stack[i].type == FX_COMPRESSOR) {
+      else if (instance_stack[i].type == FX_COMPRESSOR) {
         sprintf(buf, "Compressor (instance %d)", i); Serial.println(buf);
         fx_compressor * effect = (fx_compressor *) instance_stack[i].address; 
         effect->print_params();
       }
 
-
-      if (instance_stack[i].type == FX_DELAY) {
+      else if (instance_stack[i].type == FX_DELAY) {
         sprintf(buf, "DELAY (instance %d)", i); Serial.println(buf);
         fx_delay * effect = (fx_delay *) instance_stack[i].address; 
         effect->print_params();
       }
 
-      if (instance_stack[i].type == FX_DELAY_MULTITAP) {
+      else if (instance_stack[i].type == FX_DELAY_MULTITAP) {
         sprintf(buf, "MULTITAP DELAY (instance %d)", i); Serial.println(buf);
         fx_multitap_delay * effect = (fx_multitap_delay *) instance_stack[i].address; 
         effect->print_params();
       }
 
-      if (instance_stack[i].type == FX_ENVELOPE_TRACKER) {
+      else if (instance_stack[i].type == FX_ENVELOPE_TRACKER) {
         sprintf(buf, "ENVELOPE TRACKER (instance %d)", i); Serial.println(buf);
         fx_envelope_tracker * effect = (fx_envelope_tracker *) instance_stack[i].address; 
         effect->print_params();
       }
 
 
-      if (instance_stack[i].type == FX_GAIN) {
+      else if (instance_stack[i].type == FX_GAIN) {
         sprintf(buf, "GAIN (instance %d)", i); Serial.println(buf);
         fx_gain * effect = (fx_gain *) instance_stack[i].address; 
         effect->print_params();
       }
 
-      if (instance_stack[i].type == FX_MIXER_2) {
+      else if (instance_stack[i].type == FX_HARMONIZER) {
+        sprintf(buf, "HARMONIZER (instance %d)", i); Serial.println(buf);
+        fx_harmonizer * effect = (fx_harmonizer *) instance_stack[i].address; 
+        effect->print_params();
+      }
+
+      else if (instance_stack[i].type == FX_IMPULSE_RESPONSE) {
+        sprintf(buf, "IMPULSE RESPONSE (instance %d)", i); Serial.println(buf);
+        fx_impulse_response * effect = (fx_impulse_response *) instance_stack[i].address; 
+        effect->print_params();
+      }
+
+
+      else if (instance_stack[i].type == FX_MIXER_2) {
         sprintf(buf, "MIXER x 2 (instance %d)", i); Serial.println(buf);
         fx_mixer_2 * effect = (fx_mixer_2 *) instance_stack[i].address; 
         effect->print_params();
       }      
   
-      if (instance_stack[i].type == FX_MIXER_3) {
+      else if (instance_stack[i].type == FX_MIXER_3) {
         sprintf(buf, "MIXER x 3 (instance %d)", i); Serial.println(buf);
         fx_mixer_3 * effect = (fx_mixer_3 *) instance_stack[i].address; 
         effect->print_params();
       }      
 
-      if (instance_stack[i].type == FX_MIXER_4) {
+     else  if (instance_stack[i].type == FX_MIXER_4) {
         sprintf(buf, "MIXER x 4 (instance %d)", i); Serial.println(buf);
         fx_mixer_4 * effect = (fx_mixer_4 *) instance_stack[i].address; 
         effect->print_params();
       }      
 
-      if (instance_stack[i].type == FX_PHASE_SHIFTER) {
+      else if (instance_stack[i].type == FX_PHASE_SHIFTER) {
         sprintf(buf, "PHASE SHIFTER (instance %d)", i); Serial.println(buf);
         fx_phase_shifter * effect = (fx_phase_shifter *) instance_stack[i].address; 
         effect->print_params();
       }
 
-      if (instance_stack[i].type == FX_PITCH_SHIFT) {
+      else if (instance_stack[i].type == FX_PITCH_SHIFT) {
         sprintf(buf, "PITCH SHIFT (instance %d)", i); Serial.println(buf);
         fx_pitch_shift * effect = (fx_pitch_shift *) instance_stack[i].address; 
         effect->print_params();
       }
 
-      if (instance_stack[i].type == FX_RING_MOD) {
+      else if (instance_stack[i].type == FX_RING_MOD) {
         sprintf(buf, "RING MODULATOR (instance %d)", i); Serial.println(buf);
         fx_ring_mod * effect = (fx_ring_mod *) instance_stack[i].address; 
         effect->print_params();
       }
 
-      if (instance_stack[i].type == FX_SLICER) {
+      else if (instance_stack[i].type == FX_SLICER) {
         sprintf(buf, "SLICER (instance %d)", i); Serial.println(buf);
         fx_slicer * effect = (fx_slicer *) instance_stack[i].address; 
         effect->print_params();
       }
 
-      if (instance_stack[i].type == FX_LOOPER) {
+      else if (instance_stack[i].type == FX_LOOPER) {
         sprintf(buf, "LOOPER (instance %d)", i); Serial.println(buf);
         fx_looper * effect = (fx_looper *) instance_stack[i].address; 
         effect->print_params();
       }
 
-      if (instance_stack[i].type == FX_INSTRUMENT_SYNTH) {
+      else if (instance_stack[i].type == FX_INSTRUMENT_SYNTH) {
         sprintf(buf, "INSTRUMENT SYNTH (instance %d)", i); Serial.println(buf);
         fx_instrument_synth * effect = (fx_instrument_synth *) instance_stack[i].address; 
         effect->print_params();
       }      
 
-      if (instance_stack[i].type == FX_OSCILLATOR) {
+      else if (instance_stack[i].type == FX_OSCILLATOR) {
         sprintf(buf, "OSCILLATOR (instance %d)", i); Serial.println(buf);
         fx_oscillator * effect = (fx_oscillator *) instance_stack[i].address; 
         effect->print_params();
       }
 
 
-      if (instance_stack[i].type == FX_VARIABLE_DELAY) {
+      else if (instance_stack[i].type == FX_VARIABLE_DELAY) {
         sprintf(buf, "VARIABLE DELAY (instance %d)", i); Serial.println(buf);
         fx_variable_delay * effect = (fx_variable_delay *) instance_stack[i].address; 
         effect->print_params();
       }
 
       else {
+        sprintf(buf, "UNKNOWN (instance %d)", i); Serial.println(buf);
         fx_effect * effect = (fx_effect *) instance_stack[i].address;
         effect->print_params();
       }
@@ -1687,26 +1749,33 @@ void fx_pedal::print_param_tables() {
  */
 char * fx_pedal::get_effect_type(EFFECT_TYPE t) {
   if (t == FX_NONE) return "none";
+  else if (t == FX_ADSR_ENVELOPE) return "adsr envelope";
+  else if (t == FX_ALLPASS_FILTER) return "allpass filter";
   else if (t == FX_AMPLITUDE_MODULATOR) return "amplitude modulator";
+  else if (t == FX_ARPEGGIATOR) return "arpeggiator";
   else if (t == FX_BIQUAD_FILTER) return "biquad filter";
   else if (t == FX_DESTRUCTOR) return "destructor";
   else if (t == FX_COMPRESSOR) return "compressor";
   else if (t == FX_DELAY) return "delay";
+  else if (t == FX_DELAY_MULTITAP) return "multitap delay";
   else if (t == FX_ENVELOPE_TRACKER) return "envelope tracker";
   else if (t == FX_GAIN) return "gain";  
+  else if (t == FX_IMPULSE_RESPONSE) return "impulse response";
   else if (t == FX_INSTRUMENT_SYNTH) return "instrument synth";
+  else if (t == FX_LOOPER) return "looper";
   else if (t == FX_MIXER_2) return "mixer x 2";  
   else if (t == FX_MIXER_3) return "mixer x 3";  
   else if (t == FX_MIXER_4) return "mixer x 4";  
-  else if (t == FX_RING_MOD) return "ring modulator";
-  else if (t == FX_LOOPER) return "looper";
-  else if (t == FX_OSCILLATOR) return "oscillator";
+  else if (t == FX_OSCILLATOR) return "oscillator";  
   else if (t == FX_PHASE_SHIFTER) return "phase shifter";
   else if (t == FX_PITCH_SHIFT) return "pitch shift";
+  else if (t == FX_RING_MOD) return "ring modulator";
   else if (t == FX_SLICER) return "slicer";
+  else if (t == FX_SPECTRALIZER) return "spectralizer";
   else if (t == FX_VARIABLE_DELAY) return "variable delay";
   else if (t == FX_UNDEFINED) return "undefined";
   else if (t == FX_CANVAS) return "canvas";
+  else return "unknown";
 }
 
 #endif 
@@ -1779,11 +1848,6 @@ bool fx_effect::get_control_node_index(fx_control_node * node, uint8_t * local_n
 
 uint16_t * fx_effect::serialize_params(uint16_t * serialized_params, uint16_t * size) {
 
-  char buf[64];
-
-#if 0
-  sprintf(buf,"Serializing parameters for : %s", effect_name); Serial.println(buf);
-#endif 
   // serialize instance data
   int indx = 0;
 
@@ -1815,6 +1879,13 @@ uint16_t * fx_effect::serialize_params(uint16_t * serialized_params, uint16_t * 
       serialized_params[indx++] = (uint16_t) (part_32 >> 16);
       serialized_params[indx++] = (uint16_t) (part_32 & 0xFFFF);
     }   
+
+    if (indx > MAX_PARMS_PER_FX-5) {
+      Serial.print("Error with ");
+      Serial.println(effect_name); 
+      DEBUG_MSG("Maximum parameter limit (MAX_PARMS_PER_FX) exceeded", MSG_ERROR); 
+      display_error_status(ERROR_INTERNAL);
+    }
 
     //sprintf(buf,"  %#08x - %d", param_stack[i], (int) param_stack_types[i]); Serial.println(buf);
 
@@ -1974,7 +2045,7 @@ void  fx_led::turn_on(uint8_t red, uint8_t green, uint8_t blue) {
  * @param[in]  rgb   The color from LED_COLOR type
  */
 void  fx_led::turn_on(LED_COLOR rgb) {
-  set_rgb((uint32_t) rgb);
+  set_rgb(rgb);
 }
 
 

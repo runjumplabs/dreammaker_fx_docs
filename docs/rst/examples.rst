@@ -1,10 +1,10 @@
  .. _examples:
 
-********
-Examples
-********
+*****************
+Hear it in action
+*****************
 
- Here are a few examples of effects created on the DreamMaker FX Platform.
+Here are a few examples of effects created on the DreamMaker FX Platform.
 
 
 Perpetuity

@@ -6,55 +6,13 @@
 
 
 /**
- * @brief      Effect: Ring modulator - frequency modulates the audio - crazy sounding
- *             
- * One of the weirder effects out there, a ring modulator multiplies the incoming audio signal by a sine wave at a certain carrier frequency (typically between 10.0 and 1000.0).  This shifts the harmonics creating some very “interesting” sounds.
- * 
- * At full depth, the effect can be very bizarre, but many musicians have tastefully used these in more subtle ways.
- * 
- * ```CPP
- * #include <dreammakerfx.h>
- * 
- * fx_ring_mod ring_mod(220.0,   // Freq
- *                       1.0,    // Depth        
- *                       true);  // Enable filter
- * 
- * void setup() {
- *   
- *   // put your setup code here, to run once:
- *   pedal.init();
- * 
- *   // Route audio
- *   pedal.route_audio(pedal.instr_in, ring_mod.input);
- *   pedal.route_audio(ring_mod.output, pedal.amp_out);  
- * 
- *   // left footswitch is bypass
- *   pedal.add_bypass_button(FOOTSWITCH_LEFT);
- * 
- *   // Run this effect
- *   pedal.run();
- * 
- * }
- * 
- * 
- * void loop() {
- * 
- *   // Left pot controls modulation frequency of ring modulator
- *   if (pedal.pot_left.has_changed()) { 
- *     ring_mod.set_freq(20 + 980*pedal.pot_left.val); 
- *   }  
- * 
- *   // Center pot controls depth of modulation
- *   if (pedal.pot_center.has_changed()) { 
- *       ring_mod.set_depth(pedal.pot_center.val);
- *   } 
- * 
- *   // Run pedal service to take care of stuff
- *   pedal.service();  
- * 
- * }
- * ```
- * 
+ * @brief      Effect: Ring modulator - frequency modulates the audio - crazy
+ *             sounding
+ *
+ *             The following example is a full ring modulator pedal with tone
+ *             control, wet/dry mix and of course ring modulator.  
+ *
+ *             ___ring_mod_1.c___
  */
 class fx_ring_mod: public fx_effect {
 
@@ -128,7 +86,7 @@ class fx_ring_mod: public fx_effect {
 
 
     /**
-     * @brief      Constructs a new instance.
+     * @brief       Basic constructor/initializer for the ring modulator
      *
      * @param[in]  ring_mod_freq   The ring modifier frequency
      * @param[in]  ring_mod_depth  The ring modifier depth
@@ -148,7 +106,7 @@ class fx_ring_mod: public fx_effect {
 
 
     /**
-     * @brief      Constructs a new instance.
+     * @brief       Advanced constructor/initializer for the ring modulator
      *
      * @param[in]  ring_mod_freq   The ring modifier frequency
      * @param[in]  ring_mod_depth  The ring modifier depth
@@ -218,7 +176,7 @@ class fx_ring_mod: public fx_effect {
 
    
   
-#ifndef DOXYGEN_SHOULD_SKIP_THIS
+
     /**
      * @brief  Prints the parameters for the delay effect
      */
@@ -263,7 +221,6 @@ class fx_ring_mod: public fx_effect {
 
       Serial.println();
     }
-    #endif 
 
 };
 

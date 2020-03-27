@@ -7,13 +7,52 @@
  * @brief      Effect: Envelope generator
  *
  * An envelope generator creates a volume envelope that can applied to either the audio 
- * from the instrument or an oscillator.  
+ * from the instrument or an oscillator.  The volume envelope has four components:
+ * (A)ttack, (D)ecay, (S)ustain, (R)elease.  These parameters can be adjusted to make
+ * short tight notes or long swells.
  * 
- * Here's a good explanation of what ADSR means:
- * .. raw:: html
+ * Here's more information about how these work: https://en.wikipedia.org/wiki/Envelope_(music)
  * 
- *     <iframe width="560" height="315" src="https://www.youtube.com/embed/JT6rixgu4s4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ * The ADSR envelope is triggered / kicked-off with an event.  This is typically a
+ * new note event from the pedal.
+ * 
+ * 
+ * ``` CPP
+ * #include <dreammakerfx.h>
+ * 
+ * // Add your fx module declarations here
+ * fx_adsr_envelope  env(250.0,  // Attack is 250ms
+ *                       10.0,   // Decay is 10ms
+ *                       10.0,   // Sustain is 10ms
+ *                       500.0,  // Release is 500ms 
+ *                       1.0,    // Sustain ratio
+ *                       1.0,    // Full volume
+ *                       true);  // Enable look-ahead buffer to suppress initial plucks
+ * 
+ * void setup() {
+ *   // put your setup code here, to run once:
+ *   
+ *   // Initialize the pedal!
+ *   pedal.init(MSG_INFO, true);
+ * 
+ *   // Route audio through effects from pedal.instr_in to pedal.amp_out
+ *   pedal.route_audio(pedal.instr_in, env.input);
+ *   pedal.route_audio(env.output, pedal.amp_out);  
+ * 
+ *   // IMPORTANT!  route the new note event from the pedal to the start node of the ADSR
+ *   pedal.route_control(pedal.new_note, env.start);
+ * 
+ *   // left footswitch is bypass
+ *   pedal.add_bypass_button(FOOTSWITCH_LEFT);
+ * 
+ *   // Run this effect
+ *   pedal.run();
+ * 
+ * }
+ * ```
+ * 
  */
+
 
 class fx_adsr_envelope: public fx_effect {
 
@@ -29,6 +68,7 @@ private:
     float param_peak_ratio;
     float param_sustain_ratio;
     float param_out_vol;
+    bool  param_look_ahead;
 
     // Control nodes
     fx_control_node node_ctrl_attack_ms;
@@ -70,6 +110,10 @@ private:
 
       param_stack[indx] = &param_out_vol;
       param_stack_types[indx++] = T_FLOAT;
+
+      param_stack[indx] = &param_look_ahead;
+      param_stack_types[indx++] = T_INT16;
+
 
       total_params = indx;
 
@@ -154,7 +198,18 @@ private:
     fx_control_node * value;       
 
     /**
-     * @brief      Constructs a new instance of the envelope 
+     * @brief      constructor/initializer for the ADSR envelope
+     *
+     * ``` CPP
+     * // Add your fx module declarations here
+     *  fx_adsr_envelope  env(250.0,  // Attack is 250ms
+     *                        10.0,   // Decay is 10ms
+     *                        10.0,   // Sustain is 10ms
+     *                        500.0,  // Release is 500ms 
+     *                        1.0,    // Sustain ratio
+     *                        1.0,    // Full volume
+     *                        true);  // Enable look-ahead buffer 
+     * ```
      *
      * @param[in]  attack_ms   The attack in milliseconds
      * @param[in]  decay_ms    The decay in milliseconds
@@ -162,8 +217,9 @@ private:
      * @param[in]  release_ms  The release in milliseconds
      * @param[in]  sustain_ratio Ratio of sustain volume to peak volume between attack / decay
      * @param[in]  gain_out    The gain out (linear: 0.0 to 1.0)
+     * @param[in]  look_ahead     When set to true, a small look-ahead buffer is used such that the initial impulse of a plucked note is suppressed
      */
-    fx_adsr_envelope(float attack_ms, float decay_ms, float sustain_ms, float release_ms, float sustain_ratio, float gain_out) : 
+    fx_adsr_envelope(float attack_ms, float decay_ms, float sustain_ms, float release_ms, float sustain_ratio, float gain_out, bool look_ahead) : 
       node_ctrl_attack_ms(NODE_IN, NODE_FLOAT, "node_ctrl_attack_ms", this, FX_ADSR_PARAM_ID_ATK_MS),
       node_ctrl_decay_ms(NODE_IN, NODE_FLOAT, "node_ctrl_decay_ms", this, FX_ADSR_PARAM_ID_DEC_MS),
       node_ctrl_sustain_ms(NODE_IN, NODE_FLOAT, "node_ctrl_sustain_ms", this, FX_ADSR_PARAM_ID_SUS_MS),
@@ -181,6 +237,7 @@ private:
       param_decay_ms = decay_ms;
       param_sustain_ms = sustain_ms;
       param_release_ms = release_ms;
+      param_look_ahead = look_ahead;
 
       param_peak_ratio = 1.0;
       param_sustain_ratio = sustain_ratio;

@@ -18,11 +18,11 @@ class fx_instrument_synth: public fx_effect {
   private:
 
     // Parameters
-    OSC_TYPES param_osc_type;
     float param_freq_ratio;
     OSC_TYPES param_fm_osc_type;
     float param_fm_mod_freq_ratio;
     float param_fm_mod_depth;
+    OSC_TYPES param_osc_type;
     float param_attack_ms;
     float param_filt_resonance;
     float param_filt_response;

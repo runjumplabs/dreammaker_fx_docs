@@ -8,10 +8,8 @@
  * @brief      Effect: Looper - capture and playback loops
  * 
  * Here's a nice tutorial on how looper pedals work in general
- * <iframe width="560" height="315" src="https://www.youtube.com/embed/Gd0NhglZWtw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ * https://en.wikipedia.org/wiki/Live_looping
  * 
- *  Example:
- *   ___looper_1.c___
  * 
  */
 class fx_looper: public fx_effect {
@@ -103,6 +101,15 @@ class fx_looper: public fx_effect {
 
     /**
      * @brief      Constructor/initializer for amplitude modulator
+     *
+     * ``` CPP
+     * 
+     * fx_looper looper1(1.0,        // Dry mix set to full 
+     *                   1.0,        // Wet mix set to full
+     *                   10,         // Max loop length set to 10 seconds (can be way more)
+     *                   false);     // Do not use fx send/receive when recording loop
+     * 
+     * ```
      *
      * @param[in]  looper_dry_mix                    The looper dry mix
      * @param[in]  looper_loop_mix                   The looper loop mix
