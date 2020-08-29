@@ -16,7 +16,7 @@ First order of business, let's go download some free software and get rolling.
     * If you're running OS X Catalina, make sure you're using Arduino v1.8.10 or later.
     * Click `Finish` when the installs are complete.
 
- * Plug the Dream Lemur into an outlet, and connect to a USB port on your computer with a MicroUSB cable.  Make sure the USB cable you are using is not a charging cable.  There are lots of microUSB charging cables out there that just have wires for power and ground and no data!  If you don't see the `DM_FX` drive/volume show up on your computer, you may need to put your pedal into bootloader mode.  See the [Troubleshooting section](https://www.dreammakerfx.com/troubleshooting) for details on how to do this.
+ * Plug the Dream Lemur into an outlet, and connect to a USB port on your computer with a MicroUSB cable.  Make sure the USB cable you are using is not a charging cable.  There are lots of microUSB charging cables out there that just have wires for power and ground and no data!  If you don't see the `DM_FX` drive/volume show up on your computer, you may need to put your pedal into bootloader mode.  See the [Placing the pedal in bootloader mode](https://dreammaker-fx-arduino.readthedocs.io/en/latest/markdown/troubleshooting.html#placing-the-pedal-in-bootloader-mode) section of [General Troubleshooting](https://dreammaker-fx-arduino.readthedocs.io/en/latest/markdown/troubleshooting.html) for details.
 
  * Install the DreamMaker FX Arduino board package In the Arduino IDE:
     * Navigate to either `File` -> `Preferences` on Windows, or `Arduino` -> `Preferences` on Mac. If you're using Linux, we assume you're enough of a bad ass to figure out what to do.
